@@ -6,9 +6,8 @@ history — and asking what else any of it could have been.
 A collaboration between the [Stimpunks Foundation](https://stimpunks.org/) and
 [More Realms](https://morerealms.com/). Sibling site to [Star Stuff](https://starstuff.earth/).
 
-**Live at [queering-earth.netlify.app](https://queering-earth.netlify.app/)** while
-`queering.earth` is still unregistered (checked 2026-09-07). Pushing to `main` deploys;
-pull requests get their own preview URL.
+**Live at [queering.earth](https://queering.earth/).** Pushing to `main` deploys; pull
+requests get their own preview URL.
 
 ## Running it locally
 

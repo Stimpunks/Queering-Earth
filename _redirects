@@ -1,22 +1,19 @@
 # Netlify redirect rules.
 #
-# NOTHING IS ENABLED HERE YET, ON PURPOSE.
+# One job so far: send the .netlify.app hostname to the custom domain.
 #
-# Star Stuff learned on 2026-08-15 that Netlify does not send the .netlify.app
-# hostname to the custom domain on its own: four addresses answered HTTP 200 with
-# byte-identical documents. The fix is a forced host redirect, and this file will
-# carry the same one.
+# Netlify does not do this on its own. Star Stuff found on 2026-08-15 that all four
+# of its addresses answered HTTP 200 with the same ETag — byte-identical documents
+# at four URLs, which is a duplicate-content problem and an ambiguity about which
+# address is the real one. This site had the same shape the moment queering.earth
+# went live: both hostnames answered 200.
 #
-# It cannot be turned on yet. As of 2026-09-07 `queering.earth` is not registered
-# — whois.nic.earth returns "No Data Found" — so the only address this site has is
-# the .netlify.app one. Enabling the rule below now would redirect the live site
-# to a domain that does not resolve, which is a site that is simply down.
+# Enabled 2026-09-07, the day the domain was attached. Before that it stayed
+# commented out on purpose: redirecting the only working hostname to one that did
+# not resolve would have been a site that was simply down.
 #
-# ENABLE THIS the same day the custom domain is attached in Netlify, and not before:
-#
-# http://queering-earth.netlify.app/*   https://queering.earth/:splat  301!
-# https://queering-earth.netlify.app/*  https://queering.earth/:splat  301!
-#
-# The hostname above is confirmed: the Netlify project is `queering-earth`
-# (id 4115815c-5811-4df6-8f6f-9598e85d2d72, Stimpunks team), serving
-# https://queering-earth.netlify.app since 2026-09-07.
+# The project is `queering-earth` (id 4115815c-5811-4df6-8f6f-9598e85d2d72,
+# Stimpunks team).
+
+https://queering-earth.netlify.app/*  https://queering.earth/:splat  301!
+http://queering-earth.netlify.app/*   https://queering.earth/:splat  301!

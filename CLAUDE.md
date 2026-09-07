@@ -31,15 +31,15 @@ held to the same standard as anything on Star Stuff, and arguably a stricter one
 
 - **This git repo IS the source of truth.** Cloned at `~/Documents/GitHub/Queering-Earth`.
 - Pushing to `main` deploys via **Netlify** — project `queering-earth` on the Stimpunks
-  team, serving https://queering-earth.netlify.app. Static files, **no build step**, no
-  publish subdirectory: the repo root is the site.
+  team, serving **https://queering.earth/**. Static files, **no build step**, no publish
+  subdirectory: the repo root is the site. The `.netlify.app` hostname 301s to the custom
+  domain via `_redirects`; cite the custom domain, never the Netlify one.
 - **Pull requests get their own preview URL.** That is the review path for anyone editing
   through the GitHub web editor rather than a Claude session — the real page at a real
   address before it reaches `main`.
-- **`queering.earth` is not registered yet** (checked 2026-09-07, `whois.nic.earth` returns
-  "No Data Found"). Until it is, the site's only address is its `.netlify.app` hostname. Two
-  things wait on the domain and must not be switched on early: the host redirect in
-  `_redirects`, and adding this domain to the SKS site mirror.
+- **`queering.earth` went live 2026-09-07.** Both things that were waiting on it are done:
+  the host redirect in `_redirects` is enabled, and the domain is in the SKS site mirror's
+  `SITES` map, so `sync-site --all` mirrors this site into `site/queering.earth/`.
 - **After editing files, always finish by giving the user the git commands** to ship:
 
   ```bash
