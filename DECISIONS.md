@@ -76,38 +76,40 @@ a real URL before anything reaches `main`.
 
 `.netlify/` is git-ignored — it holds the local link state, not configuration.
 
-**Creating the project through the API does not wire the GitHub webhook, and the failure is
-silent.** Netlify's `createSiteInTeam` with an `installation_id` produces correct build
-settings and a working first deploy — Netlify clones through the GitHub App fine — but it
-never installs a webhook on the repo, so the second push and the third do nothing. The
-dashboard keeps showing a green light and "Auto publishing is on" above a stale commit,
-which is the worst shape a failure can take: it looks exactly like success.
+**Creating the project through the Netlify API does not wire continuous deployment, and
+nothing you can do from the API fixes it.** `createSiteInTeam` with an `installation_id`
+produces correct build settings and a working first deploy — Netlify clones through the
+GitHub App fine — and then no webhook, no deploy key, and no Netlify-side
+`github_app_checks` hooks. Pushes are ignored while the dashboard shows a green light and
+"Auto publishing is on" above a commit several pushes stale. It looks exactly like success.
 
-The fix that worked was creating the webhook by hand, matching Star Stuff's:
-`https://api.netlify.com/hooks/github`, JSON, seven events (`create`, `delete`,
-`issue_comment`, `pull_request`, `pull_request_review`, `pull_request_review_comment`,
-`push`), no secret. Netlify honours it and builds.
+Three things were tried and none of them work:
 
-**Netlify's deploy queue lags the webhook, and that lag once cost us the hook.** A push
-delivered at 23:24 did not appear in `listSiteDeploys` until 23:26. A polling loop gave up
-inside that window, the hook was declared dead, and it was deleted — while it was working.
-**Wait at least three minutes, or just watch the dashboard, before concluding a push was
-ignored.** `netlify api listSiteDeploys` is not immediately consistent with reality.
+1. **`updateSite` with the repo block again.** Leaves `deploy_key_id: None` and zero
+   Netlify-side hooks. It *does* kick a one-off build of current `HEAD`, which is a trap of
+   its own — that stray deploy looks like the link repairing itself.
+2. **A hand-made GitHub webhook** pointed at `https://api.netlify.com/hooks/github`, matching
+   Star Stuff's exactly (JSON, seven events, no secret). GitHub delivers, Netlify answers
+   **204 OK**, and builds nothing. Verified twice: a push delivered at 23:29:59 had produced
+   no deploy six minutes later. Netlify only honours a hook it created and recorded on its
+   own side.
+3. Concluding anything from a short poll of `netlify api listSiteDeploys`. It lags, and it
+   lags by minutes. Give it three before calling a push ignored.
 
-Two things Netlify's own linking flow would also create that this project still lacks: a
-**deploy key** (`build_settings.deploy_key_id` is `None`) and its **Netlify-side
-`github_app_checks` hooks**, which post build status back onto pull requests. Neither is
-needed to deploy from `main` — that is proven working — but if PR deploy previews or PR
-status checks turn out not to fire, run `netlify init --force` in this repo and authorize
-through app.netlify.com. That is the canonical path; it needs a browser OAuth grant.
+**The only fix is `netlify init --force` in this repo**, answering *Authorize with GitHub
+through app.netlify.com*, then an empty build command and `.` as the deploy directory. It
+provisions the webhook, the deploy key, and the status-check hooks together. It needs a
+browser OAuth grant, so a human runs it once.
 
-**How to tell a wired project from a deaf one:**
+**How to tell a wired project from a deaf one** — the dashboard will not tell you:
 
 ```bash
-gh api repos/Stimpunks/Queering-Earth/hooks --jq 'length'   # 1 = wired, 0 = deaf
+gh api repos/Stimpunks/Queering-Earth/hooks --jq 'length'
+netlify api getSite --data '{"site_id":"4115815c-5811-4df6-8f6f-9598e85d2d72"}' \
+  | python3 -c 'import sys,json; print(json.load(sys.stdin)["build_settings"]["deploy_key_id"])'
 ```
 
-Zero means pushes are being ignored, whatever the dashboard says.
+Star Stuff answers `1` and a key id. A `0` and a `None` mean pushes are going nowhere.
 
 ### The look: daylight herbarium, not green Star Stuff (2026-09-07)
 
