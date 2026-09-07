@@ -76,35 +76,38 @@ a real URL before anything reaches `main`.
 
 `.netlify/` is git-ignored — it holds the local link state, not configuration.
 
-**Creating the project through the API does NOT wire continuous deployment, and it fails
-silently.** Netlify's `createSiteInTeam` with an `installation_id` produces correct-looking
-build settings, and the first deploy succeeds because Netlify can clone through the GitHub
-App. But it never runs the provisioning step, so the project has **no GitHub webhook and no
-deploy key** — and every push after the first does nothing. The dashboard keeps showing a
-green light and "Auto publishing is on", above a commit that is three pushes stale. That is
-the worst shape a failure can take here: it looks exactly like success.
+**Creating the project through the API does not wire the GitHub webhook, and the failure is
+silent.** Netlify's `createSiteInTeam` with an `installation_id` produces correct build
+settings and a working first deploy — Netlify clones through the GitHub App fine — but it
+never installs a webhook on the repo, so the second push and the third do nothing. The
+dashboard keeps showing a green light and "Auto publishing is on" above a stale commit,
+which is the worst shape a failure can take: it looks exactly like success.
 
-Two API routes were tried and neither provisions it — a second `createSiteInTeam`-shaped
-`updateSite` with the repo block leaves `deploy_key_id: None` and zero Netlify-side hooks. A
-hand-made GitHub webhook pointed at `https://api.netlify.com/hooks/github` is worse than
-nothing: GitHub delivers the push, Netlify answers **204 OK**, and builds nothing, because
-Netlify only honours a hook it created and recorded on its own side. It was deleted rather
-than left to look like a working link.
+The fix that worked was creating the webhook by hand, matching Star Stuff's:
+`https://api.netlify.com/hooks/github`, JSON, seven events (`create`, `delete`,
+`issue_comment`, `pull_request`, `pull_request_review`, `pull_request_review_comment`,
+`push`), no secret. Netlify honours it and builds.
 
-**The fix is `netlify init --force` in this repo**, which asks for GitHub authorization
-through app.netlify.com and then creates both the webhook and the deploy key. It needs a
-browser OAuth grant, so it is a human's to run once.
+**Netlify's deploy queue lags the webhook, and that lag once cost us the hook.** A push
+delivered at 23:24 did not appear in `listSiteDeploys` until 23:26. A polling loop gave up
+inside that window, the hook was declared dead, and it was deleted — while it was working.
+**Wait at least three minutes, or just watch the dashboard, before concluding a push was
+ignored.** `netlify api listSiteDeploys` is not immediately consistent with reality.
 
-**How to tell the difference, in one command each:**
+Two things Netlify's own linking flow would also create that this project still lacks: a
+**deploy key** (`build_settings.deploy_key_id` is `None`) and its **Netlify-side
+`github_app_checks` hooks**, which post build status back onto pull requests. Neither is
+needed to deploy from `main` — that is proven working — but if PR deploy previews or PR
+status checks turn out not to fire, run `netlify init --force` in this repo and authorize
+through app.netlify.com. That is the canonical path; it needs a browser OAuth grant.
+
+**How to tell a wired project from a deaf one:**
 
 ```bash
-gh api repos/Stimpunks/Queering-Earth/hooks --jq 'length'        # expect 1, not 0
-netlify api getSite --data '{"site_id":"4115815c-5811-4df6-8f6f-9598e85d2d72"}' \
-  | python3 -c 'import sys,json; print(json.load(sys.stdin)["build_settings"]["deploy_key_id"])'
+gh api repos/Stimpunks/Queering-Earth/hooks --jq 'length'   # 1 = wired, 0 = deaf
 ```
 
-A `0` and a `None` mean pushes are being ignored, whatever the dashboard says. Compare
-against Star Stuff, which has one webhook and a `deploy_key_id`.
+Zero means pushes are being ignored, whatever the dashboard says.
 
 ### The look: daylight herbarium, not green Star Stuff (2026-09-07)
 
