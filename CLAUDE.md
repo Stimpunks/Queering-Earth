@@ -30,7 +30,12 @@ held to the same standard as anything on Star Stuff, and arguably a stricter one
 ## Source of truth & deployment
 
 - **This git repo IS the source of truth.** Cloned at `~/Documents/GitHub/Queering-Earth`.
-- Pushing to `main` deploys via **Netlify**. Static files, **no build step**.
+- Pushing to `main` deploys via **Netlify** — project `queering-earth` on the Stimpunks
+  team, serving https://queering-earth.netlify.app. Static files, **no build step**, no
+  publish subdirectory: the repo root is the site.
+- **Pull requests get their own preview URL.** That is the review path for anyone editing
+  through the GitHub web editor rather than a Claude session — the real page at a real
+  address before it reaches `main`.
 - **`queering.earth` is not registered yet** (checked 2026-09-07, `whois.nic.earth` returns
   "No Data Found"). Until it is, the site's only address is its `.netlify.app` hostname. Two
   things wait on the domain and must not be switched on early: the host redirect in

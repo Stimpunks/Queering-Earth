@@ -17,4 +17,6 @@
 # http://queering-earth.netlify.app/*   https://queering.earth/:splat  301!
 # https://queering-earth.netlify.app/*  https://queering.earth/:splat  301!
 #
-# (The site name is a guess until the Netlify site exists. Check it first.)
+# The hostname above is confirmed: the Netlify project is `queering-earth`
+# (id 4115815c-5811-4df6-8f6f-9598e85d2d72, Stimpunks team), serving
+# https://queering-earth.netlify.app since 2026-09-07.

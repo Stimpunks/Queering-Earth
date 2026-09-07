@@ -3,3 +3,6 @@
 
 # Claude Code — machine-local settings (shared skills stay tracked)
 .claude/settings.local.json
+
+# Local Netlify folder
+.netlify

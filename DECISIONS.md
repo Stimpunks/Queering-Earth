@@ -62,6 +62,20 @@ later.
 simply down. And adding this domain to the SKS mirror's `SITES` map would fail that sync,
 because the mirror fetches over the network.
 
+### Netlify: continuous deployment from the repo, matching Star Stuff (2026-09-07)
+
+Project `queering-earth` on the Stimpunks team (id `4115815c-5811-4df6-8f6f-9598e85d2d72`),
+wired to `Stimpunks/Queering-Earth` on `main` through the same GitHub App installation Star
+Stuff and Cavendish Cards use. No build command, no publish subdirectory — the repo root is
+the site, exactly as Star Stuff is configured.
+
+**Deploy previews on pull requests are left on**, and that is the point rather than a
+default: it is the review path for anyone editing through the GitHub web editor, and it is
+the reason the CMS question above can stay deferred. A pull request produces the real page at
+a real URL before anything reaches `main`.
+
+`.netlify/` is git-ignored — it holds the local link state, not configuration.
+
 ### The look: daylight herbarium, not green Star Stuff (2026-09-07)
 
 The strongest differentiation from a night-sky site is not the same site in green — it is the
