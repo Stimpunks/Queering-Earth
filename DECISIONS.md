@@ -76,6 +76,15 @@ a real URL before anything reaches `main`.
 
 `.netlify/` is git-ignored — it holds the local link state, not configuration.
 
+**One trap, paid for here.** Creating the project through the Netlify API with an
+`installation_id` gives it working build settings *and no GitHub webhook*, so the first
+deploy succeeds — Netlify clones the repo through the App just fine — and every push after
+it does nothing at all. A project that deployed once and then silently stopped listening
+looks exactly like a project that is working. The webhook was created by hand to match Star
+Stuff's (`https://api.netlify.com/hooks/github`, JSON, seven events, no secret). **If a
+future push does not produce a deploy, check `gh api repos/<org>/<repo>/hooks` before
+anything else.**
+
 ### The look: daylight herbarium, not green Star Stuff (2026-09-07)
 
 The strongest differentiation from a night-sky site is not the same site in green — it is the
