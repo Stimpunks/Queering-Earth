@@ -1,0 +1,5 @@
+# Everything here is meant to be read, quoted, and reused (CC BY-SA 4.0).
+User-agent: *
+Allow: /
+
+Sitemap: https://queering.earth/sitemap.xml

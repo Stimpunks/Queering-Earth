@@ -1,0 +1,391 @@
+/* queering.css — the shared sheet for queering.earth.
+ *
+ * THE PALETTE LIVES HERE AND ONLY HERE.
+ * Every recurring colour is a --qe-* token defined in this file. A page that wants
+ * a colour aliases a token; it does not write a hex. This is not tidiness — Star
+ * Stuff shipped 44 of 46 pages that printed blank because they hardcoded hexes
+ * instead of aliasing tokens, and the print stylesheet had nothing to reach.
+ *
+ * THE GROUND IS PAPER, NOT VOID.
+ * Star Stuff is a night sky. This is the other thing: a herbarium sheet in daylight.
+ * Warm vellum, ink, moss, rust — a Victorian specimen plate, not a dark theme with
+ * green in it. Keeping the two sites unmistakable is a design requirement.
+ *
+ * CONTRAST TARGET IS 7:1, NOT 4.5:1.
+ * The house style guide asks for 7:1 and every text token here is chosen to clear it
+ * against --qe-paper. tools/check-contrast.mjs measures it on screen and on paper.
+ *
+ * PLAIN VIEW IS A STYLESHEET, NEVER A SECOND DOCUMENT.
+ * Everything decorative — the wonk, the rotation, the botanical art, the paper wash —
+ * is switched off by `.plain` on <html>. There is one copy of the words. Two copies
+ * drift, and the accessible one is always the copy that rots.
+ */
+
+/* ─────────────────────────────────────────────── tokens */
+
+:root {
+  /* Ground. Warm vellum, and one step deeper for pressed panels. */
+  --qe-paper: #f5efe2;
+  --qe-paper-deep: #ece1cd;
+  --qe-card: #fbf7ed;
+
+  /* Ink. All three clear 7:1 on --qe-paper. */
+  --qe-ink: #241f1a;         /* 14.3:1 — body text */
+  --qe-moss: #37502f;        /*  7.8:1 — secondary text, headings */
+  --qe-rust: #8a3520;        /*  7.0:1 — links, emphasis */
+
+  /* Decoration only. NOT for text — none of these clear 7:1 on paper.
+     Botanical line art, rules, and the specimen marks use these. */
+  --qe-lichen: #9caa86;
+  --qe-verdigris: #4e8c7a;
+  --qe-marigold: #c9922e;
+  --qe-coral: #c4553c;
+  --qe-violet: #7a5c9e;
+
+  /* Structure */
+  --qe-rule: #cdbfa4;
+  --qe-measure: 34rem;       /* ~66 characters at the body size */
+  --qe-gutter: clamp(1.25rem, 5vw, 3rem);
+
+  /* Type. Fraunces carries a WONK axis — letterforms that deviate from the
+     norm on purpose. Using it for the display face is not a coincidence. */
+  --qe-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --qe-body: "Newsreader", "Iowan Old Style", Georgia, serif;
+}
+
+/* Plain view swaps the faces for the reader's own, and nothing else about the
+   words changes. Colours stay: they already clear 7:1. */
+html.plain {
+  --qe-display: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --qe-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ─────────────────────────────────────────────── base */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  /* 200% zoom has to keep working, so every size below is relative to this. */
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--qe-paper);
+  color: var(--qe-ink);
+  font-family: var(--qe-body);
+  font-size: 1.19rem;          /* ~19px */
+  line-height: 1.65;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The foxed-paper wash: four soft, off-centre stains, no image and no noise.
+   Switched off in plain view and never painted on paper. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(58rem 42rem at 12% 8%, rgba(154, 132, 92, 0.10), transparent 70%),
+    radial-gradient(46rem 38rem at 92% 22%, rgba(120, 140, 100, 0.09), transparent 72%),
+    radial-gradient(52rem 40rem at 78% 96%, rgba(160, 120, 80, 0.08), transparent 70%),
+    radial-gradient(40rem 34rem at 4% 82%, rgba(110, 130, 110, 0.07), transparent 74%);
+}
+html.plain body::before { display: none; }
+
+/* ─────────────────────────────────────────────── skip link */
+
+.qe-skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 20;
+  padding: 0.75rem 1.25rem;
+  background: var(--qe-ink);
+  color: var(--qe-paper);
+  font-family: var(--qe-body);
+  text-decoration: none;
+}
+.qe-skip:focus { left: 0.5rem; top: 0.5rem; }
+
+/* ─────────────────────────────────────────────── plain-view control */
+
+.qe-controls {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.9rem var(--qe-gutter) 0;
+}
+
+.qe-plain-toggle {
+  font-family: var(--qe-body);
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: var(--qe-moss);
+  background: transparent;
+  border: 1px solid var(--qe-rule);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+}
+.qe-plain-toggle:hover { border-color: var(--qe-moss); }
+.qe-plain-toggle:focus-visible {
+  outline: 3px solid var(--qe-rust);
+  outline-offset: 2px;
+}
+
+/* ─────────────────────────────────────────────── layout */
+
+main {
+  display: block;
+  max-width: var(--qe-measure);
+  margin: 0 auto;
+  padding: 0 var(--qe-gutter) 4rem;
+}
+
+/* Two blocks are allowed to break the measure: the masthead and the provocation.
+   Everything that is read line by line stays inside it. */
+.qe-wide {
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─────────────────────────────────────────────── masthead */
+
+.qe-masthead {
+  text-align: center;
+  padding: clamp(2rem, 7vw, 4.5rem) 0 0;
+}
+
+.qe-wordmark {
+  font-family: var(--qe-display);
+  font-weight: 600;
+  font-size: clamp(2.6rem, 11vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: var(--qe-ink);
+  /* The wonk axis, on the wordmark, at its full extent. The typeface's own
+     deviation-from-the-norm setting is doing the site's argument. */
+  font-variation-settings: "SOFT" 60, "WONK" 1;
+}
+html.plain .qe-wordmark { font-variation-settings: normal; font-weight: 700; }
+
+.qe-wordmark .qe-dot { color: var(--qe-rust); }
+
+.qe-tagline {
+  font-family: var(--qe-body);
+  font-style: italic;
+  font-size: clamp(1.05rem, 3.4vw, 1.35rem);
+  line-height: 1.45;
+  color: var(--qe-moss);
+  margin: 0.9rem auto 0;
+  max-width: 26rem;
+}
+
+/* ─────────────────────────────────────────────── botanical art */
+
+.qe-botanical {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.75rem auto 0.5rem;
+}
+.qe-botanical .stem,
+.qe-botanical .rib {
+  fill: none;
+  stroke: var(--qe-moss);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.qe-botanical .leaf { fill: var(--qe-lichen); stroke: var(--qe-moss); stroke-width: 1.1; }
+.qe-botanical .bloom { fill: var(--qe-marigold); stroke: var(--qe-moss); stroke-width: 1.1; }
+.qe-botanical .bloom-alt { fill: var(--qe-coral); stroke: var(--qe-moss); stroke-width: 1.1; }
+.qe-botanical .wing { fill: var(--qe-violet); stroke: var(--qe-ink); stroke-width: 1; opacity: 0.92; }
+.qe-botanical .wing-alt { fill: var(--qe-verdigris); stroke: var(--qe-ink); stroke-width: 1; opacity: 0.92; }
+.qe-botanical .body { fill: var(--qe-ink); }
+.qe-botanical .antenna { fill: none; stroke: var(--qe-ink); stroke-width: 1; stroke-linecap: round; }
+
+/* Growth, not twinkle: the stems draw themselves on, the leaves and wings open
+   after. Gated on prefers-reduced-motion — the reduced state is the finished
+   drawing, never a missing one. */
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.plain) .qe-botanical .stem {
+    stroke-dasharray: var(--len, 400);
+    stroke-dashoffset: var(--len, 400);
+    animation: qe-draw 2.2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+  /* One animation per sprout GROUP, never per shape. A butterfly is six paths;
+     animating each one separately scales six pieces apart from each other. */
+  html:not(.plain) .qe-botanical .sprout {
+    opacity: 0;
+    animation: qe-unfurl 0.9s ease-out forwards;
+    animation-delay: calc(0.55s + var(--i, 0) * 0.075s);
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  /* A leaf opens from where it meets the stem, not from its own middle. Its base
+     is the left edge of its own box, because that is where the path starts. */
+  html:not(.plain) .qe-botanical .sprout-leaf { transform-origin: 0 50%; }
+}
+
+@keyframes qe-draw { to { stroke-dashoffset: 0; } }
+@keyframes qe-unfurl {
+  from { opacity: 0; transform: scale(0.55) rotate(-6deg); }
+  to   { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+/* Plain view keeps the drawing and drops the motion. */
+html.plain .qe-botanical { opacity: 0.85; }
+
+/* ─────────────────────────────────────────────── the provocation */
+
+.qe-provocation {
+  margin: clamp(2.5rem, 8vw, 4.5rem) auto;
+  text-align: center;
+  font-family: var(--qe-display);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 7.5vw, 3.4rem);
+  line-height: 1.12;
+  color: var(--qe-moss);
+}
+.qe-provocation p { margin: 0.35em 0; }
+
+/* The queered word. Each instance of "normal" leans differently — the type
+   refusing to sit on the line is the page making its own argument. */
+.qe-provocation .qe-off {
+  display: inline-block;
+  color: var(--qe-rust);
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  font-style: italic;
+}
+.qe-provocation .qe-off-a { transform: rotate(-3.5deg) translateY(0.04em); }
+.qe-provocation .qe-off-b { transform: rotate(2.5deg) translateY(-0.03em); }
+
+html.plain .qe-provocation .qe-off {
+  transform: none;
+  font-variation-settings: normal;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* ─────────────────────────────────────────────── prose */
+
+h2 {
+  font-family: var(--qe-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 4.6vw, 2rem);
+  line-height: 1.2;
+  color: var(--qe-moss);
+  margin: 2.75rem 0 0.85rem;
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+}
+html.plain h2 { font-variation-settings: normal; }
+
+p { margin: 0 0 1.35rem; }
+
+a {
+  color: var(--qe-rust);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible {
+  outline: 3px solid var(--qe-rust);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+strong { font-weight: 700; }
+
+/* A first line that opens the page like a plate caption. */
+.qe-lede {
+  font-size: 1.24em;
+  line-height: 1.55;
+  color: var(--qe-ink);
+}
+
+/* ─────────────────────────────────────────────── the specimen quotation */
+
+.qe-specimen {
+  margin: 2.75rem 0;
+  padding: 1.75rem 1.5rem 1.25rem;
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-radius: 2px;
+  box-shadow: 0 1px 0 var(--qe-paper-deep);
+  position: relative;
+}
+
+/* The herbarium label: a small ruled slip pinned to the corner of the sheet. */
+.qe-specimen-label {
+  display: inline-block;
+  font-family: var(--qe-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  border-bottom: 1px solid var(--qe-rule);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.qe-specimen blockquote {
+  margin: 0;
+  font-family: var(--qe-display);
+  font-size: 1.16em;
+  line-height: 1.5;
+  color: var(--qe-ink);
+  font-variation-settings: "SOFT" 30, "WONK" 0;
+}
+html.plain .qe-specimen blockquote { font-variation-settings: normal; }
+
+.qe-specimen figcaption {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--qe-moss);
+}
+
+/* ─────────────────────────────────────────────── footer */
+
+.qe-footer {
+  border-top: 1px solid var(--qe-rule);
+  margin: 0 auto;
+  max-width: 46rem;
+  padding: 2rem var(--qe-gutter) 3.5rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--qe-moss);
+  text-align: center;
+}
+.qe-footer p { margin: 0 0 0.75rem; }
+.qe-footer a { color: var(--qe-rust); }
+
+/* ─────────────────────────────────────────────── paper */
+
+@media print {
+  /* Readers print with "Background graphics" off by default, so nothing here may
+     depend on a painted background. Ink on the bare sheet, and that is all. */
+  body { background: #fff; color: #000; font-size: 11.5pt; line-height: 1.5; }
+  body::before { display: none; }
+  .qe-controls, .qe-skip { display: none; }
+  main { max-width: none; padding: 0; }
+  .qe-wordmark, .qe-provocation, h2, .qe-specimen blockquote { color: #000; }
+  .qe-tagline, .qe-footer, .qe-specimen figcaption, .qe-specimen-label { color: #222; }
+  .qe-provocation .qe-off { color: #000; transform: none; }
+  .qe-specimen { background: none; border: 1pt solid #666; box-shadow: none; }
+  .qe-botanical .leaf, .qe-botanical .bloom, .qe-botanical .bloom-alt,
+  .qe-botanical .wing, .qe-botanical .wing-alt { fill: none; stroke: #444; }
+  .qe-botanical .stem, .qe-botanical .rib, .qe-botanical .antenna { stroke: #444; }
+  .qe-botanical .body { fill: #444; }
+  a { color: #000; }
+}
