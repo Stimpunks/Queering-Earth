@@ -215,7 +215,7 @@ og_card(REPO/"images"/"og-coming-to-terms.png", "Coming to Terms", "Sheet · an 
 og_card(REPO/"images"/"og-promises-like-pie-crust.png", "The Die Uncast", "Sheet · a reading",
         "Christina Rossetti, Promises like Pie-crust, written 20 April 1861.", CORAL)
 og_card(REPO/"images"/"og-invention-of-normal.png", "Wyrd, Weird, and the Invention of Normal",
-        "Sheet · an essay",
+        "Sheet · a reading",
         "Before it meant strange, it meant fate.",
         MARIGOLD)
 og_card(REPO/"images"/"og-design.png", "How this site is made", "Colophon",

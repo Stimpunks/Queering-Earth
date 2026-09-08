@@ -438,14 +438,33 @@ More Realms, July 2026.
 SKS mirror at `site/morerealms-com/posts/becoming-weird-wyrd-normality.md` was the finding
 step and is not the authority; the live page is.
 
-**The thing to be careful about here is the byline, not the quotations.** The sheet carries
-Helen's name because Ryan asked for it, and the essay is built out of her argument, her
-sources, and her reading. But most of the sentences on the sheet were not written by her.
-The label says so in the `This text` row — *Helen's published sentences appear as
-quotations, marked and linked; the sheet around them is new, and hers to sign* — and that
-row is load-bearing. **It must not be trimmed for tidiness.** A byline plus unmarked new
-prose is the same failure as a tightened quotation: somebody's name on words that are not
-theirs. The sheet should not ship to `main` without Helen having read it.
+**The byline was wrong, it shipped, and Helen corrected it. 2026-09-08.**
+
+The sheet first went out with a `Written by — Helen Edgar` row, on Ryan's instruction, because
+the argument, the sources, and the reading list are all hers. The draft flagged the risk at the
+time — a byline plus unmarked new prose is the same failure as a tightened quotation, somebody's
+name on words that are not theirs — and shipped anyway, with a caveat row instead of a fix.
+
+Helen read it and declined:
+
+> do you think we should have these as Sourced from Helen Written by Ryan …? I can't take any
+> credit beyond you reading my weird stuff
+
+**She is right, and the site had already written the answer down before the sheet was made.**
+`design.html` defines the label as carrying "the date of the reading, and who read it," and says
+"a specimen is collected, not written." Queering Earth does not have bylines; it has Maker and
+Read by, on separate rows. The Woolf and Rossetti sheets use that grammar. This one reached for
+`Written by` and broke it.
+
+**Corrected to:** `Specimen` — Helen's essay. `Maker` — Helen Edgar. `Read by` — Ryan Boren. The
+`This text` row now reads *the argument is hers; the sentences around her quotations are ours,
+and this label is where we say so.* Nothing about the quotations themselves changed; they were
+always marked and linked.
+
+**The general rule, now recorded in `DECISIONS.md`: a living person gets a `Maker` row for what
+they made and a `Read by` row for what they read, and never a `Written by` row for prose they
+did not write.** A caveat row underneath a wrong byline is not a fix. It is the wrong byline
+with a footnote, which is exactly the shape of every other failure in this file.
 
 ----
 

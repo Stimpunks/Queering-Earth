@@ -634,17 +634,59 @@ If a plate is added later, it wants to go in *The child they said was swapped* a
 fungi — a fairy ring is a mushroom ring — and it should be picked off the BHL stream the way the
 others were rather than hunted to fit the argument.
 
-### The Wyrd sheet's byline is Helen's, and the label carries the caveat (2026-09-08)
+### Sheets have labels, not bylines — settled (2026-09-08)
 
-Ryan: *"Give the byline for this essay to Helen."* The sheet does. But most of the sentences on
-it were not written by her — it is built out from her More Realms essay, with her published
-sentences quoted and linked and the rest new.
+**Superseding the entry that stood here for about an hour**, which said the Wyrd sheet's byline
+was Helen's and the `This text` row carried the caveat. It shipped that way, Helen read it and
+declined the credit, and the correction is worth keeping in full because the answer was already
+written down in our own colophon before the sheet was made.
 
-**So the `This text` row of the label is not decoration.** It reads: *Helen's published
-sentences appear as quotations, marked and linked; the sheet around them is new, and hers to
-sign.* A byline plus unmarked new prose is exactly the paraphrase-as-quotation failure at page
-scale, and this row is the thing that keeps it honest. See `ATTRIBUTIONS.md`. **The sheet wants
-Helen's read before it reaches `main`.**
+`design.html` defines a label as *"subject, maker, the date of the original, the date of the
+reading, and who read it,"* and adds *"a specimen is collected, not written."* **That is an
+authorship model, not a glossary entry.** A sheet is a reading. The person who made the thing
+being read goes on `Maker`; the person answerable for the reading goes on `Read by`. The Woolf
+and Rossetti sheets do this correctly. The Wyrd sheet reached for a `Written by` row and broke
+it, and no caveat underneath a wrong byline fixes a wrong byline.
+
+**The rule, for every sheet from here:**
+
+- A **living person gets `Maker` for what they made and `Read by` for what they read.** Never
+  `Written by` for prose they did not write.
+- `Written by` is legitimate on exactly one kind of sheet: one that republishes somebody's own
+  finished text, like `coming-to-terms`, where Ryan's words are unchanged and the label says so.
+- **Crediting the institution instead is worse, not better.** "By Queering Earth" was on the
+  table and was rejected: naming a house where a person belongs is the same elision as naming a
+  person where a house belongs, and this site does not do it anywhere else.
+
+Helen's own words for it, which are better than ours: *"I can't take any credit beyond you
+reading my weird stuff."* That sentence is the `Read by` row.
+
+**Knock-on, applied the same day.** The sheet's kind changed from *essay* to *reading* — kicker,
+plate card, three sibling navs, the social card's kicker — because under this grammar that is
+what it is. `on-being-ill`'s `Read by` row went from Helen alone to Helen and Ryan, on Ryan's
+word. The sheet keeps Helen's title rather than taking one of its own, which is the one place
+this is untidy: every other reading has its own name (*The Army of the Upright*, *The Die
+Uncast*) with the specimen's title on the label. **If a session wants to tidy that, the title is
+the change and the address can stay** — `/invention-of-normal` does not have to match.
+
+### How the drafting is disclosed: the colophon, not the label (2026-09-08)
+
+These sheets are drafted in Claude Code sessions and edited by whoever is on the `Read by` row.
+Ryan's call, asked and answered: **one honest section in `design.html`, and nothing in the
+labels.**
+
+The argument for a per-sheet row was that this site treats provenance as a correctness
+requirement and publishes an attribution ledger, so leaving a link in the chain unstated is the
+one thing that would undercut the ledger if it surfaced later. The argument that won is that
+**the label is about the reading, not the tooling** — a tool does not get a row, because a
+byline is responsibility and a tool cannot carry any — and that the colophon is where this site
+already explains how it is made.
+
+So the disclosure is a section, *Who reads, and who writes*, and it is not buried or hedged: it
+names the drafting, names who directs and edits it, and points at the public ledger. **The
+reason it exists at all is written into it** — a site that keeps a ledger of everyone else's
+words owes an account of where its own came from. If a future session is tempted to trim that
+section for length, that sentence is the one to keep.
 
 ### Bek-Pedersen's conclusion stayed on the sheet (2026-09-08)
 
