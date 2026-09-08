@@ -729,6 +729,47 @@ narrowed to what is not.
 
 ----
 
+### Two paintings on the Wyrd sheet, chosen by Helen Edgar
+
+**Mounted on:** `invention-of-normal.html`
+
+- **Edward Robert Hughes (1851–1914), *Midsummer Eve*, c. 1908.** Watercolour with gouache,
+  114.3 × 76.2 cm; private collection.
+  [Commons file](https://commons.wikimedia.org/wiki/File:Midsummer_Eve_-_Edward_Robert_Hughes_(1908).jpg).
+- **John William Waterhouse (1849–1917), *Miranda — The Tempest*, 1916.** Oil on canvas,
+  100.4 × 137.8 cm; private collection.
+  [Commons file](https://commons.wikimedia.org/wiki/File:Miranda_-_The_Tempest_JWW.jpg).
+
+**Verified:** 2026-09-08. Artist dates, titles, dates, media, dimensions and collection read off
+the Commons file pages; the Hughes medium and dimensions cross-checked against the Wikipedia
+article on the painting, because the Commons record says only "Painting" and a caption that
+says *watercolour* has to be able to point at something.
+
+**Public domain, and the reason is the artist, not the scan.** Hughes died in 1914 and Waterhouse
+in 1917, so both works are out of copyright everywhere the term is life plus 100 or fewer, and
+both were published before 1 January 1931. The photographs come from third parties — a Birmingham
+Museums image for the Hughes, a Sotheby's catalogue image for the Waterhouse — and **a faithful
+photographic reproduction of a flat public-domain work attracts no new copyright**, which is the
+same basis on which the Biodiversity Heritage Library plates on this site are used. The captions
+credit the digitiser and say the work is public domain; they do not claim the scan is ours.
+
+**"Chosen by Helen Edgar" is in both captions and belongs there.** She picked them, and on this
+site that is a named contribution — see the byline entry above for how nearly the record lost
+track of what she actually did.
+
+**Two claims in the Waterhouse caption were checked against the play, not against the painting.**
+The caption quotes Miranda's "the third man that e'er I saw" (*The Tempest* I.ii, confirmed
+against the Project Gutenberg text) and places the brave-new-world line "in the last act" (V.i).
+An earlier draft said she had *never seen anybody but her father and Caliban* — wrong, she also
+half-remembers "four or five women once that tended me" — and dated the later speech "four scenes
+later", which is four *acts*. **A caption is a claim like any other and gets checked like one.**
+
+**Alt text was written from looking at the images**, not from the Commons description, which is
+why it describes the fallen unlit lantern and the pink flowers in the rocks. Descriptions
+inherited from a catalogue record describe the catalogue record.
+
+----
+
 ## Open
 
 Nothing.

@@ -622,17 +622,49 @@ grid shipped at 14rem, already recorded above. Found the same way, by reading th
 `grid-template-columns` in the browser. It is now 12.5rem, the same number the plate grid landed
 on, for the same arithmetic.
 
-### The Wyrd sheet mounts no plate (2026-09-08)
+### The Wyrd sheet mounts two plates, and Helen picked them (2026-09-08)
 
-Every sheet so far carries at least one BHL chromolithograph. This one carries none, and that is
-a choice rather than an omission. **The paste-up is the image.** A Victorian botanical plate
-dropped into a page whose argument is being made by tilted paper slips and cut-out words would
-be competing with it, and "colour over subject matter" (above) is a rule about which plate to
-pick, not a requirement that every sheet have one.
+**Superseding the entry that stood here**, which said this sheet carried no plate because the
+paste-up was the image, and guessed that if one were ever added it would want to be fungi in
+the changeling section.
 
-If a plate is added later, it wants to go in *The child they said was swapped* and it wants to be
-fungi — a fairy ring is a mushroom ring — and it should be picked off the BHL stream the way the
-others were rather than hunted to fit the argument.
+Half right. A plate did want to go in the changeling section. It is not fungi:
+
+- **Edward Robert Hughes, *Midsummer Eve* (c. 1908)** — watercolour and gouache, a woman bent
+  over a ring of lantern-carrying fairies in a dark wood. Opens *The child they said was
+  swapped*.
+- **John William Waterhouse, *Miranda — The Tempest* (1916)** — oil, a woman on a rocky shore
+  watching a ship founder. Sits in *That which does not belong*, next to Fisher.
+
+**Both were chosen by Helen Edgar, and the captions say so.** That is not politeness. On a sheet
+whose whole credit question was settled two entries down, "chosen by" is a real contribution
+with a real name on it, and it is the kind of thing that evaporates from a page if nobody writes
+it down.
+
+They vindicate the rule they were picked under: **colour first, subject second.** Neither had to
+be justified before it earned its place. Both happen to be apt as well, which is a bonus and not
+the criterion.
+
+**Placement was changed once, and the reason is worth keeping.** The Hughes plate first sat
+between *He was convicted of manslaughter* and *So: no romanticising the fae on this sheet* —
+which split two sentences that answer each other, and made a charming fairy painting the
+punchline to Bridget Cleary's murder. It now opens the section instead: fairy country, then what
+the belief actually did, then the refusal. **Where a plate sits is an argument, not a layout
+preference.**
+
+### `.qe-plate-wide` came back, exactly as the note said it would (2026-09-08)
+
+The entry above records adding and removing `.qe-plate-wide` the same day, and closes: *"If a
+landscape plate ever lands here again, the rule is one line: `.qe-plate-wide { max-width:
+var(--qe-measure); }`."*
+
+One landed. Waterhouse's *Miranda* is 138cm across, and inside `.qe-plate`'s 23rem cap the
+foundering ship was a smudge in the corner. The class is back, and it is that line, plus a
+`5in` cap on paper so a wide plate still cannot take a sheet of its own.
+
+**This is the decision log paying for itself**, and it is the argument against deleting entries
+about things that got removed. The removal note took thirty seconds to write and saved the next
+session from re-deriving the cap, re-arguing the case, and probably picking a different number.
 
 ### Sheets have labels, not bylines — settled (2026-09-08)
 

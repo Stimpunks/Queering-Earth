@@ -600,11 +600,19 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
   text-align: left;
 }
 
+/* A landscape plate. 23rem is right for a portrait plate and starves a wide one —
+   Waterhouse's Miranda is 138cm across and at 23rem the foundering ship is a smudge
+   in the corner. This class was added and removed on 2026-09-08 for the Rossetti
+   sheet, with a note in DECISIONS.md saying that when a landscape plate landed here
+   again the fix was one line. It landed, and this is the line. */
+.qe-plate-wide { max-width: var(--qe-measure); }
+
 
 @media print {
   /* The plate prints. Capped so it cannot take a sheet of its own, and the frame
      goes: a printed border around a printed scan is two borders. */
   .qe-plate { max-width: 3.4in; }
+  .qe-plate-wide { max-width: 5in; }
   .qe-plate img { border: none; padding: 0; background: none; box-shadow: none; max-height: 5in; width: auto; }
   .qe-plate figcaption { color: #222; }
   /* New blooms need the same ink-only treatment as the old ones. A fill that the
