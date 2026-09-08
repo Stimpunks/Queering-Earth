@@ -389,3 +389,120 @@ html.plain .qe-specimen blockquote { font-variation-settings: normal; }
   .qe-botanical .body { fill: #444; }
   a { color: #000; }
 }
+
+/* ─────────────────────────────────────────────── a sheet
+ *
+ * A sheet mounts a specimen and carries our label. The specimen is somebody
+ * else's — Woolf's essay, the painting, the word. The label is where we speak.
+ * See DECISIONS.md; the split is the site's attribution discipline drawn in the
+ * layout instead of left to a reader's good faith.
+ */
+
+h1 {
+  font-family: var(--qe-display);
+  font-weight: 600;
+  font-size: clamp(2.1rem, 8vw, 3.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.012em;
+  margin: 0;
+  color: var(--qe-ink);
+  font-variation-settings: "SOFT" 55, "WONK" 1;
+}
+html.plain h1 { font-variation-settings: normal; font-weight: 700; }
+
+/* The line above the title: what this sheet is, in small caps. */
+.qe-kicker {
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  margin: 0 0 0.9rem;
+}
+
+/* The mounting label. A ruled slip, read as pairs, never as a table — the
+   fields are a description of one object, which is what <dl> is for. */
+.qe-label {
+  margin: 2rem 0 2.5rem;
+  padding: 1.1rem 1.25rem 0.6rem;
+  border: 1px solid var(--qe-rule);
+  border-left: 3px solid var(--qe-moss);
+  border-radius: 2px;
+  background: var(--qe-card);
+  font-size: 0.97rem;
+  line-height: 1.5;
+}
+.qe-label dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(7.5rem, auto) 1fr;
+  gap: 0.15rem 1rem;
+}
+.qe-label dt {
+  font-size: 0.76rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  padding-top: 0.28em;
+}
+.qe-label dd { margin: 0 0 0.55rem; color: var(--qe-ink); }
+
+/* Narrow screens: the two columns stop being two columns rather than squeezing. */
+@media (max-width: 30rem) {
+  .qe-label dl { grid-template-columns: 1fr; gap: 0; }
+  .qe-label dt { padding-top: 0.5em; }
+  .qe-label dd { margin-bottom: 0.7rem; }
+}
+
+/* An unset field. Deliberately loud: a placeholder that reads as finished text
+   is how a placeholder ships. */
+.qe-tk { color: var(--qe-rust); font-style: italic; }
+
+/* The edition table. Wide content scrolls inside its own box; the page body
+   never scrolls sideways. */
+.qe-editions-scroll { overflow-x: auto; margin: 1.5rem 0 2rem; }
+.qe-editions {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 30rem;
+  font-size: 0.97rem;
+  line-height: 1.45;
+}
+.qe-editions caption {
+  text-align: left;
+  font-size: 0.82rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  padding-bottom: 0.6rem;
+}
+.qe-editions th, .qe-editions td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.55rem 0.9rem 0.55rem 0;
+  border-bottom: 1px solid var(--qe-rule);
+}
+.qe-editions th { color: var(--qe-moss); font-weight: 600; }
+.qe-editions td em { font-style: italic; color: var(--qe-rust); }
+
+/* Back to the plate. */
+.qe-home { font-size: 0.95rem; margin: 0 0 0.4rem; }
+
+@media print {
+  h1 { color: #000; }
+  .qe-kicker, .qe-label dt, .qe-editions caption, .qe-editions th { color: #222; }
+  .qe-label {
+    background: none;
+    border: 1pt solid #666;
+    border-left: 2pt solid #000;
+  }
+  .qe-label dd, .qe-editions td { color: #000; }
+  .qe-tk { color: #000; }
+  .qe-editions td em { color: #000; font-weight: 700; }
+  .qe-editions th, .qe-editions td { border-bottom: 0.5pt solid #999; }
+  .qe-editions-scroll { overflow-x: visible; }
+  .qe-home { display: none; }
+}
+
+/* A sheet's masthead is left-ranged: the plate is the centred thing, a reading is
+   not. Same element as the index masthead, different alignment. */
+.qe-masthead-sheet { text-align: left; }

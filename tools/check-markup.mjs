@@ -574,7 +574,25 @@ for (const file of targets) {
     );
   }
 
-  if (exempt(file)) {
+  if (!collectionFiles.length) {
+    /* Queering Earth has no collection pages, by decision rather than by omission:
+       DECISIONS.md defers the first run until a third sheet shares a lens, because
+       Helen names her runs retroactively and a collection declared at n=1 is a
+       promise with nothing written to keep it. With no collection pages on disk
+       there is no membership to derive and nothing here to check, so this rule
+       stands down the same way the collection-name check above does when it cannot
+       verify a name — an unverifiable claim is not a failing one.
+
+       It re-arms by itself the moment a collection-*.html page lands, which is the
+       moment the invariant becomes real. Do NOT convert this into a per-page
+       exemption list: that would need a new line for every sheet forever, and the
+       thing it is protecting would rot behind it. */
+    if (badge) {
+      problems.push(
+        `collection badge at line ${badge.line} on a site with no collection pages — nothing can card this page, so the badge points at a collection that does not exist`
+      );
+    }
+  } else if (exempt(file)) {
     if (badge) {
       problems.push(
         `collection badge at line ${badge.line} on a page that carries none by decision — index, search and the collection pages themselves are outside the scheme`
