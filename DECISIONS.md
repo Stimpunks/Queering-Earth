@@ -41,62 +41,78 @@ the same sections in the same order. Then Sveltia CMS, and not before.
 **The question still worth asking Helen:** is the friction *publishing*, or *authoring*? If
 she writes prose and a session builds the artifact around it, no CMS touches that problem.
 
-### What belongs here rather than on More Realms
+### Which edition a sheet reads, when the work was revised
 
-The content model is settled below. This is the question that settling it exposed, and the
-one it cannot answer on its own.
+Opened by the Woolf verification below, and it is a real design question rather than a
+pedantic one.
 
-Helen has already published at least four pieces on morerealms.com that are dead-on this
-site's remit: [Wuthering Heights read through an Autistic lens](https://morerealms.com/i-cannot-live-without-my-soul-an-autistic-exploration-of-wuthering-heights/),
-[*polytropos* and the *Odyssey*](https://morerealms.com/its-complicated-polytropos-odysseus-and-homers-odyssey/),
-[Rothko](https://morerealms.com/bathing-in-colour-mark-rothko-monotropism-and-neuroqueering-the-body-without-organs/),
-and [wyrd, weird, and the invention of normal](https://morerealms.com/becoming-weird-wyrd-normality/).
-Until we can say what makes a reading belong here instead of there, Queering Earth is either
-a duplicate of More Realms or a graveyard for pieces Helen would rather have posted on her
-own site.
+*On Being Ill* exists in two authorial states. Woolf published it in *The New Criterion* in
+January 1926 and revised it for the Hogarth Press edition of 1930, which she and Leonard
+printed and hand-set themselves. The revisions are not typographical. In the first paragraph
+alone she changed "brings to **light**" to "brings to **view**," "uprooted in us **in** the
+act of sickness" to "**by** the act of sickness," cut "**and infinitely more**," and opened
+out two lists from commas into her own *and…and…and*:
 
-Two candidate answers, and neither is ours alone to pick:
+| 1926, *The New Criterion* | 1930, Hogarth Press |
+|---|---|
+| with love, battle, and jealousy | with love and battle and jealousy |
+| is null, negligible and non-existent | is null, and negligible and non-existent |
 
-1. **Artifact, not prose.** More Realms is where Helen thinks in prose. Queering Earth is
-   where a reading becomes an artifact — the sheet interprets its own subject, which is the
-   one thing a WordPress template structurally cannot do and a hand-built page can.
-2. **Joint, not solo.** Queering Earth is the Stimpunks × More Realms work. More Realms is
-   hers alone.
+**So the label's "date of the original" is not one field for a revised work.** A sheet that
+mounts *On Being Ill* is mounting one of two texts, and the date, the wording, and the
+publisher move together. Three ways to handle it and none is obviously right yet:
 
-**This blocks the second sheet, not the first.** Woolf can ship while it is open.
+1. **Name the edition on the label** and quote only from it — the cheapest, and it makes the
+   choice visible instead of silent.
+2. **Read the revision itself as the subject.** A writer opening her commas into *and…and…and*
+   between one printing and the next, four years later, in type she set with her own hands, is
+   a queering of her own sentence. That is a sheet, not a footnote.
+3. **Show both**, side by side, and let the reader do the work. Riskiest to lay out, most
+   honest to the material, and the most "no hard facts for everything" of the three.
 
-### Whose voice a sheet is in
+Worth settling with Helen, because it decides what the Woolf sheet *is*.
 
-Helen writes "I". Star Stuff writes "we". The house voice asks us to name whose "we" we are
-centering, and a site that is a collaboration between two organizations cannot leave that to
-inference. Proposal: a byline on every label, so the question is answered in the type rather
-than in a policy nobody reads. Not yet decided.
+### Woolf's "resonant and porous" line, on More Realms
 
-### Two attribution traps waiting on the Woolf sheet
-
-Found while settling the content model. Neither is fixable from this repo — recorded here so
-the first sheet does not walk into them.
-
-1. **The SKS note is OCR-garbled.** `notes/Resources/Unsorted/2025/On Being Ill.md` holds the
-   famous sentence plus a passage rendered as "the b o d y is a sheet o f plain glass". Quoting
-   from that note ships the garbling. *On Being Ill* is **not** in `library/` — the primary has
-   to be read before anything is quoted, not searched for.
-2. **A primary cited to a secondary, on Helen's own site.** [Monotropa Uniflora and Monotropism](https://morerealms.com/monotropa-uniflora-and-monotropism/)
-   quotes Woolf's mind as "resonant and porous… naturally creative, incandescent and undivided"
-   attributed to Woolf 1929 *as cited in* Popova 2021, rather than to *A Room of One's Own*
-   itself. That is the exact shape `ATTRIBUTIONS.md` exists to catch, and it is hers to fix, not
-   ours to edit. Worth passing to her before the sheet reuses the quotation.
-
-### Whether the label carries the date of the reading
-
-A site about re-reading probably wants to show that a reading happened on a day, and that
-another day would have produced another one. It is one line on the label either way. Decide
-it **before the first label exists** — retrofitting a date to a sheet nobody dated means
-guessing.
+Still open, and still not ours to fix. [Monotropa Uniflora and Monotropism](https://morerealms.com/monotropa-uniflora-and-monotropism/)
+quotes Woolf's mind as "resonant and porous… naturally creative, incandescent and undivided,"
+attributed to Woolf 1929 *as cited in* Popova 2021 rather than to *A Room of One's Own*
+itself. A primary cited to a secondary is the exact shape `ATTRIBUTIONS.md` exists to catch.
+Hers to correct on her own site; ours to check against the book before any sheet reuses it.
 
 ----
 
 ## Settled
+
+### What Queering Earth is for: a reading becomes an artifact (2026-09-07)
+
+**More Realms is where Helen thinks in prose. Queering Earth is where a reading becomes an
+artifact** — the sheet interprets its own subject, which is the one thing a WordPress
+template structurally cannot do and a hand-built page can.
+
+Ryan's call, and explicitly provisional: *at least to start, and we are not sure of the shape
+yet.* Recorded because it unblocks the second sheet, not because it is final. If it turns out
+that the artifact-making is not what distinguishes the two sites, this is the entry to come
+back and overturn.
+
+### The label carries a byline, and the byline names who read it (2026-09-07)
+
+Helen's voice and Ryan's voice, individually, and occasionally both. So the byline is
+per-sheet and it is a name, not an institution — "Helen Edgar," "Ryan Boren," or both, on the
+label of the sheet they read.
+
+This is the house voice's rule applied in the type rather than in a policy: name whose "we"
+you are centering. It also means a sheet may be written in the first person singular, which
+Star Stuff never is, and that difference is a feature of this site rather than a lapse.
+
+### The label carries dates — starting with the date of the reading (2026-09-07)
+
+Undecided in principle, decided in practice: **start with the date in the label.** A date is
+one line to add now and a guess to retrofit later, so the cheap direction is to have it.
+
+A site about re-reading should show that a reading happened on a day, and that another day
+would have produced a different one. What the label does about the *original's* date when a
+work was revised is a separate and now-open question — see above.
 
 ### The content model: a sheet mounts a specimen and carries our label (2026-09-07)
 
