@@ -600,11 +600,6 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
   text-align: left;
 }
 
-/* A landscape plate at 23rem is a postage stamp — Darwin's Bryonia tendril is
-   1000px of fine woodcut line across 520px of height, and at 350px wide the
-   spirals close up into a smudge. Wide plates take the full measure and not one
-   pixel more: the reading column is still the limit on this site. */
-.qe-plate-wide { max-width: var(--qe-measure); }
 
 @media print {
   /* The plate prints. Capped so it cannot take a sheet of its own, and the frame

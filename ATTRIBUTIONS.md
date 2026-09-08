@@ -295,13 +295,11 @@ turns up, it goes in this entry — do not infer one from a sitemap or a feed.
 
 ----
 
-### Charles and George Darwin — the tendril woodcuts
+### Charles and George Darwin — *Climbing Plants*, quoted but no longer mounted
 
-**Used on:** `promises-like-pie-crust.html` — two figures, mounted as plates.
-
-- **Fig. 8**, a leaf-tendril of *Corydalis claviculata* at natural size, page 123.
-- **Fig. 13**, "A caught tendril of *Bryonia dioica*, spirally contracted in reversed
-  directions", page 165.
+**Quoted on:** `promises-like-pie-crust.html` — Fig. 13's printed caption, and Darwin's sentence
+about tendrils torn free. **No image of either is on the sheet any more**; see the note at the
+end of this entry.
 
 **Source:** Charles Darwin, *The Movements and Habits of Climbing Plants*, **second edition,
 revised** (New York: D. Appleton and Company, 1876) — the essay first appeared in the
@@ -311,31 +309,76 @@ copy scanned for the Biodiversity Heritage Library:
 scan's own front matter states "There are no known copyright restrictions in the United
 States on the use of the text"; the work is **public domain** on its date regardless.
 
-**The artist is George Darwin, and the credit came out of the preface.** Darwin's own
+**Quoted, both from printed page 165 (leaf n178), read off the page image and not the OCR:**
+
+> A caught tendril of *Bryonia dioica*, spirally contracted in reversed directions.
+
+> …never occurs with uncaught tendrils; and when this appears to have occurred, it will be
+> found that the tendril had originally seized some object and had afterwards been torn free.
+
+**The artist was George Darwin, and the credit came out of the preface.** Darwin's own
 sentence, on the page after the title:
 
 > The illustrations were drawn by my son, George Darwin.
 
-**This is the case the "read the corner" rule was written for, with the corner empty.** These
-are woodcuts and carry **no signature at all** — nothing in the block, nothing under the
-caption, and nothing in the IA or BHL metadata, which names only Charles Darwin as creator.
-Credited off the metadata alone the drawings would have gone up as his father's. The credit
-existed in one sentence of prose four pages earlier. **When the object has no corner to read,
-read the preface.**
+**Keep this paragraph even though the figures are gone.** These are woodcuts and carry **no
+signature at all** — nothing in the block, nothing under the caption, and nothing in the IA or
+BHL metadata, which names only Charles Darwin as creator. Credited off the metadata alone the
+drawings would have gone up as his father's. The credit existed in one sentence of prose four
+pages earlier. **When the object has no corner to read, read the preface.** If anybody ever
+mounts a figure from this book again, that is the sentence to cite.
 
-**Verified:** 2026-09-08. Both figures were located by parsing the scan's `_djvu.xml` to the
-leaf, then the leaf images were fetched and read: leaf n136 for Fig. 8 (printed page 123,
-running head FUMARIACEÆ) and leaf n178 for Fig. 13 (printed page 165, running head SPIRAL
-CONTRACTION). The captions on the sheet are transcribed from those images, not from the OCR.
-
-**The sheet's use of Fig. 13 is flagged on the sheet as ours.** Darwin is explaining a
+**The sheet's reading of Fig. 13 is flagged on the sheet as ours.** Darwin is explaining a
 mechanical necessity — a tendril fixed at both ends cannot coil in one direction without
 unwinding itself. Reading the reversed spiral as a picture of two people keeping their own
-liberties is our move and the page says so in the same breath. The sheet also quotes his
-qualifier from the same page — that a reversed spiral "never occurs with uncaught tendrils",
-and where it seems to, "the tendril had originally seized some object and had afterwards been
-torn free" — because leaving it out would have made the figure mean something tidier than it
-does.
+liberties is our move and the page says so in the same breath. His qualifier about tendrils
+torn free is quoted too, because leaving it out would make the figure mean something tidier
+than it does.
+
+**Removed from the sheet 2026-09-08, for looks and not for accuracy.** Both woodcuts were
+mounted as plates and then taken off at Ryan's note that they were "a little underwhelming" in
+black and white on a colour sheet. The verification above stands and nothing about it was
+wrong; the images are gone from `images/` and the quotations remain. See `DECISIONS.md`.
+
+----
+
+### *Annales Musei Botanici Lugduno-Batavi*, volume 1 (1863) — three chromolithographs
+
+**Used on:** `promises-like-pie-crust.html` — three plates, chosen by Ryan from the
+Biodiversity Heritage Library's Flickr stream.
+
+| Plate | Species, as printed on it | Signed |
+|---|---|---|
+| Tab. IV — [BHL p. 652124](https://www.biodiversitylibrary.org/page/652124) | GONYSTYLUS MIQUELIANUS, T. ET B. | van Aken et Bernecker, ad viv. del. |
+| Tab. V — [BHL p. 652159](https://www.biodiversitylibrary.org/page/652159) | TECOMA CERAMENSIS T. & B. | A. Bernecker. del. |
+| Tab. IX — [BHL p. 652299](https://www.biodiversitylibrary.org/page/652299) | WORMIA SUBSESSILIS MIQ. | Th. Rocke, del. |
+
+**Source:** *Annales Musei Botanici Lugduno-Batavi*, **volume 1** (Amsterdam: Apud C. G. van
+der Post, 1863). All three chromolithographed by **Emrik & Binger of Haarlem**, whose imprint
+is printed in the lower right of each plate. **Public domain** — so marked by BHL on all three,
+and settled by the date. Scanned from the **Missouri Botanical Garden, Peter H. Raven Library**
+copy; also at [archive.org/details/mobot31753002764873](https://archive.org/details/mobot31753002764873).
+
+**Verified:** 2026-09-08. Species names, Tab numbers, draughtsman signatures and the
+lithographer's imprint were each read off the plate at full scan resolution — the signatures
+are small and were cropped and enlarged to be sure of them. `Th. Rocke` in particular is set
+tight and small and was checked twice.
+
+**The volume was pinned by matching a leaf, not by trusting a caption.** The Flickr descriptions
+give only the serial title, which ran to four volumes between 1863 and 1869 with the plate
+numbering restarting each time — so "Tab. IV" alone identifies nothing. The Flickr photo titles
+(`n145`, `n180`, `n320`) are Internet Archive **leaf numbers**, so leaf n145 was fetched from
+each of the four volumes in turn and compared: only volume 1's is the Gonystylus plate.
+
+**A metadata error, found the same way as the last one.** BHL's Flickr tags on Tab. IV carry
+`taxonomy:binomial=Gonystylus macrophyllus`. **The plate itself says GONYSTYLUS MIQUELIANUS,
+T. ET B.**, and that is what the sheet cites. The two names may well be synonyms in current
+taxonomy — that is a question for a botanist and not for us — but the object's own printed name
+is the object's own printed name. This is the third time a digitiser's metadata has disagreed
+with the corner of the plate on this site: see the Fitch note under Plate 511 above, and the
+Darwin woodcuts, where the metadata named the wrong Darwin.
+
+**Standing note, now with three cases behind it: read the corner. Every time.**
 
 ----
 

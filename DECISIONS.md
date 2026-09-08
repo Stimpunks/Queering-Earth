@@ -521,11 +521,36 @@ the dash into a repeating pattern and the vine draws on with gaps in it — thre
 short on the first pass and it is invisible in the finished state, only in the animation. **If
 you edit a `d`, re-measure that path.**
 
-### Landscape plates get `.qe-plate-wide` (2026-09-08)
+### Landscape plates wanted `.qe-plate-wide`, and then did not (2026-09-08)
 
-`.qe-plate` is capped at 23rem, which is right for a portrait plate and useless for a
-landscape one: Darwin's Bryonia tendril is 1000px of fine woodcut line across 520px of height,
-and at 350px wide its two counter-turning spirals close up into a smudge. `.qe-plate-wide`
-raises the cap to `var(--qe-measure)` and no further — the reading column stays the limit on
-this site, and a plate that wants more than the measure wants to be a different kind of page.
+Added and removed the same day, and worth recording because the next landscape plate will want
+it back. `.qe-plate` caps at 23rem, which is right for a portrait plate and useless for a
+landscape one: Darwin's Bryonia tendril was 1000px of fine woodcut across 520px of height, and
+at 350px wide its two counter-turning spirals closed into a smudge. `.qe-plate-wide` raised the
+cap to `var(--qe-measure)` and no further — the reading column stays the limit on this site.
 
+Then the two black-and-white Darwin woodcuts came off the sheet (see below) and it had no users
+left. **A CSS modifier nobody applies is dead code, the same way a guard that cannot fail is a
+check nobody reads**, so it went. If a landscape plate ever lands here again, the rule is one
+line: `.qe-plate-wide { max-width: var(--qe-measure); }`.
+
+### Colour over subject matter for mounted plates (2026-09-08)
+
+The Rossetti sheet first mounted two Darwin tendril woodcuts, chosen because the sheet's
+argument is about holding on without merging. Ryan: *"The black and white tendril illustrations
+are a little underwhelming. Let's drop the tendril requirement and go for colour."* He is right
+about the page. A herbarium sheet in daylight is a **colour** object, and two grey rectangles of
+1876 line-block sat on it like photocopies — the site's own model was arguing against them, and
+no amount of subject-matter aptness fixes that.
+
+**What replaced them:** three chromolithographs from *Annales Musei Botanici Lugduno-Batavi*
+volume 1 (1863), picked by Ryan off the BHL Flickr stream. All three are Emrik & Binger of
+Haarlem, each with a different draughtsman, and they sit on the vellum as if they were always
+meant to.
+
+**The lesson generalises, so it is written down here rather than left in a commit message:**
+on this site the plate is chosen for how it looks on the sheet first and for what it depicts
+second. An illustration that has to be explained before it earns its place is not earning its
+place. **The idea can survive as prose** — Darwin's reversed spiral is still on the sheet, still
+credited, still doing the same work, quoted and linked instead of mounted, and the section reads
+no worse for it.
