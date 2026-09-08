@@ -1434,3 +1434,257 @@ html.plain .qe-accession h2 { font-variation-settings: normal; font-weight: 700;
   .qe-entry, .qe-accession { break-inside: avoid; }
   .qe-legend { display: none; }
 }
+
+/* ─────────────────────────────────────────────── the restaging
+ *
+ * Built for Sheet No. 5, Miranda, whose layout came from Helen Edgar's own
+ * Claude session. Her Claude's typographic choices are kept and the hexes are
+ * not: every colour below aliases a --qe-* token, which is the whole reason
+ * this file exists. Four devices arrived with that draft and are worth keeping.
+ *
+ * THE TITLE LEANS AND THE HEADINGS WOBBLE. Elsewhere on this site the type's
+ * refusal to sit on the line is carried by Fraunces' WONK axis. Here it is
+ * carried by rotation as well, because the sheet's subject is a person restaged
+ * by six different hands over four hundred years and never once standing
+ * straight. Same argument, one more turn of it.
+ *
+ * THE CHAIN IS AN <ol>, not a row of spans. It is a sequence, the order is the
+ * content, and the arrows are drawn by CSS with an empty alt string so the
+ * sequence reaches a screen reader as a numbered list rather than as the word
+ * "right arrow" five times. See the ::marker note in the register section.
+ *
+ * THE CORRECTION USES <del> AND <ins>, which is what an editor reassigning a
+ * speech actually did. A line-through drawn on a <span> is invisible to a screen
+ * reader, so the one device on this sheet that IS an argument about erasure
+ * would have been erased for the readers most likely to care.
+ *
+ * THE STRUCK NAME IS MOSS WITH A CORAL RULE THROUGH IT, not coral letters at
+ * 0.65 opacity, which is how the draft had it and which fails 7:1 twice over.
+ * The colour goes on the strike, never on the letters — same rule as the tags.
+ */
+
+/* ── the title, leaning. --rot per instance, the idiom the slips already use. */
+h1 .qe-lean {
+  display: inline-block;
+  transform: rotate(var(--rot, -2.2deg)) translateY(var(--dy, 0));
+}
+h1 .qe-lean-accent { color: var(--qe-rust); }
+html.plain h1 .qe-lean { transform: none; }
+
+/* Under about 30rem the measure is too narrow for a rotated word to clear its
+   neighbours, and a leaning title starts colliding rather than leaning. */
+@media (max-width: 30rem) {
+  h1 .qe-lean { transform: none; }
+}
+
+/* ── the sheet's own second line. Not .qe-lede: that is a first paragraph at
+      prose scale, and this is a subtitle that belongs to the title. */
+.qe-sheet-sub {
+  font-size: 1.06rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--qe-moss);
+  max-width: 44ch;
+  margin: 0.85rem 0 0;
+}
+
+/* ── a ruled section head. Rust rather than the house moss, and a hairline
+      under it, both of which came with the draft. Rust is a text token (7.0:1);
+      the rule is --qe-rule and carries no meaning. */
+h2.qe-section {
+  color: var(--qe-rust);
+  border-bottom: 1px solid var(--qe-rule);
+  padding-bottom: 0.4rem;
+}
+h2 .qe-wobble { display: inline-block; transform: rotate(-1deg); }
+html.plain h2 .qe-wobble { transform: none; }
+
+/* ── a staging label. The small letterspaced slug that names a panel, in the
+      same idiom as .qe-specimen-label and .qe-register-note-label. It is NOT
+      .qe-label, which is the mounting label and a <dl>. */
+.qe-block-label {
+  font-size: 0.74rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  margin: 2rem 0 0.55rem;
+}
+
+/* ── the chain of stagers. Chips in the tag idiom, in sequence. */
+.qe-chain {
+  list-style: none;
+  margin: 1.6rem 0 2.4rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0;
+}
+.qe-chain > li {
+  margin: 0;
+  font-size: 0.74rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0.24rem 0.55rem 0.18rem;
+  color: var(--qe-moss);
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-bottom: 2px solid var(--qe-lichen);
+  border-radius: 1px;
+}
+/* The arrow between two links. Drawn, with an empty alt string, because the
+   <ol> already carries the order and a repeated glyph in the tree does not. */
+.qe-chain > li:not(:last-child)::after {
+  content: "\2192" / "";
+  display: inline-block;
+  margin: 0 -0.3rem 0 0.75rem;
+  color: var(--qe-lichen);
+  letter-spacing: 0;
+}
+/* The reader, and us. The two links that are not history yet. */
+.qe-chain > li.qe-chain-now {
+  color: var(--qe-rust);
+  border-bottom-color: var(--qe-rust);
+}
+
+/* ── the correction. A speaker prefix struck out and another written over it,
+      which is the editorial history rather than an illustration of it. */
+.qe-correction {
+  margin: 1.75rem 0 0.5rem;
+  padding: 1.2rem 1.3rem 1rem;
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-left: 3px solid var(--qe-coral);
+  border-radius: 2px;
+}
+.qe-correction-speaker {
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin: 0 0 0.7rem;
+}
+/* Moss letters, coral strike. The colour is on the rule and never on the word. */
+.qe-correction-speaker del {
+  color: var(--qe-moss);
+  text-decoration: line-through;
+  text-decoration-color: var(--qe-coral);
+  text-decoration-thickness: 2px;
+}
+.qe-correction-speaker ins {
+  display: inline-block;
+  margin-left: 0.55rem;
+  transform: rotate(-1.5deg);
+  color: var(--qe-rust);
+  font-family: var(--qe-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  text-decoration: none;
+  border-bottom: 1px solid var(--qe-rust);
+  padding: 0 0.15em;
+  font-variation-settings: "SOFT" 60, "WONK" 1;
+}
+html.plain .qe-correction-speaker ins {
+  transform: none;
+  font-variation-settings: normal;
+}
+.qe-correction blockquote {
+  margin: 0;
+  font-family: var(--qe-display);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-variation-settings: "SOFT" 60, "WONK" 1;
+}
+html.plain .qe-correction blockquote { font-variation-settings: normal; }
+/* Verse inside the correction wants the specimen's own device: one line per
+   block, hanging, so a wrap on a 375px screen is never mistakable for a line
+   break Shakespeare wrote. The rules for .qe-lines are scoped to .qe-specimen,
+   and the correction is not one — a blockquote here would have wrapped flat. */
+.qe-correction .qe-lines { font-size: 0.92em; }
+.qe-correction .qe-lines .l {
+  display: block;
+  text-indent: -1.1em;
+  margin-left: 1.1em;
+}
+
+.qe-correction-note {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--qe-moss);
+  margin: 0.85rem 0 0;
+}
+
+/* ── what a sheet will not tidy. Dashed on purpose: a panel that reads as
+      provisional, because its contents are the parts that stayed unresolved. */
+.qe-untidy {
+  margin: 2.75rem 0;
+  padding: 1.35rem 1.4rem 1.1rem;
+  border: 1px dashed var(--qe-rule);
+  border-radius: 2px;
+  background: var(--qe-card);
+}
+.qe-untidy .qe-block-label { margin-top: 0; }
+.qe-untidy ul { margin: 0; padding-left: 1.25rem; }
+.qe-untidy li { margin: 0 0 0.7rem; line-height: 1.6; }
+.qe-untidy li:last-child { margin-bottom: 0; }
+.qe-untidy li::marker { color: var(--qe-coral); }
+
+/* ── the closing panel: the chain again, with the reader on the end of it. */
+.qe-restaged {
+  margin: 3rem 0 1rem;
+  padding: 1.35rem 1.4rem 1.2rem;
+  border: 1px solid var(--qe-rule);
+  border-radius: 2px;
+  background: var(--qe-card);
+  box-shadow: 0 1px 0 var(--qe-paper-deep);
+}
+.qe-restaged .qe-block-label { margin-top: 0; }
+.qe-restaged .qe-chain { margin: 0 0 1.1rem; }
+.qe-restaged p:last-child { margin-bottom: 0; }
+
+/* ── the reference list. A hanging indent, which is what a bibliography is. */
+.qe-references {
+  margin: 3rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--qe-rule);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.qe-references .qe-block-label { margin-top: 0; }
+.qe-references p {
+  margin: 0 0 0.85rem 1.4em;
+  text-indent: -1.4em;
+  color: var(--qe-moss);
+}
+.qe-references p a { overflow-wrap: anywhere; }
+
+@media print {
+  h1 .qe-lean, h2 .qe-wobble { transform: none; }
+  h1 .qe-lean-accent { color: #000; }
+  h2.qe-section { color: #000; border-bottom: 0.5pt solid #999; }
+  .qe-sheet-sub, .qe-block-label, .qe-correction-note,
+  .qe-references p { color: #222; }
+  .qe-correction, .qe-untidy, .qe-restaged {
+    background: none;
+    box-shadow: none;
+    border: 0.5pt solid #999;
+  }
+  .qe-correction { border-left: 2pt solid #555; }
+  .qe-untidy { border-style: dashed; }
+  /* The chips are meaningful text on paper — same reasoning as .qe-tag. */
+  .qe-chain > li {
+    color: #000;
+    background: none;
+    border: 0.5pt solid #555;
+    border-bottom: 1pt solid #555;
+  }
+  .qe-chain > li.qe-chain-now { border-bottom-width: 2pt; }
+  .qe-chain > li:not(:last-child)::after { color: #555; }
+  .qe-correction-speaker del { color: #000; text-decoration-color: #555; }
+  .qe-correction-speaker ins { color: #000; border-bottom-color: #000; }
+  .qe-untidy li::marker { color: #555; }
+  .qe-correction, .qe-untidy, .qe-restaged { break-inside: avoid; }
+  .qe-references p { break-inside: avoid; }
+}

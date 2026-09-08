@@ -729,6 +729,128 @@ narrowed to what is not.
 
 ----
 
+### *The Tempest* on the Miranda sheet, and the speech Theobald moved
+
+**Quoted on:** `the-tempest.html`
+
+Six passages, all from the play: Miranda's "If by your art" / "O, I have suffered" (I.ii),
+Prospero's "Be collected. / No more amazement." (I.ii), "Abhorred slave" (I.ii), Caliban's
+"I had peopled else / This isle with Calibans" (I.ii), Prospero's virgin-knot warning (IV.i),
+Miranda's proposal "I am your wife, if you will marry me" (III.i), and "O, wonder! … O brave
+new world" with Prospero's "'Tis new to thee" (V.i).
+
+**Source:** cited on the sheet as *The Tempest* (V. M. Vaughan & A. T. Vaughan, eds), Arden
+Shakespeare, 2004; original work 1611.
+
+**Verified:** 2026-09-08, against the
+[Folger Shakespeare Library's text of I.ii](https://www.folger.edu/explore/shakespeares-works/the-tempest/read/1/2/).
+Speaker prefixes, wording and act/scene attributions all match. The Folger prints "Abhorrèd
+slave" with a grave accent to mark the metre; the sheet prints "Abhorred", which is the Folio
+spelling and the one the draft used.
+
+**The editorial claim is the load-bearing one on this sheet, and it is confirmed twice.** The
+sheet's central device strikes out PROSPERO and writes Miranda over it, so the claim *"the
+Folio gives this speech to Miranda and Theobald moved it"* is doing more work than any single
+quotation. Both halves check out independently:
+
+- The Folger edition prints the speech with the speaker prefix **MIRANDA**.
+- The [Shakespeare Navigators note to I.ii line 351](https://shakespeare-navigators.ewu.edu/tempest/Tempest_Note_Act_1_Scene_2_line_351.html)
+  states it directly: *"In the First Folio the speech beginning 'Abhorred slave' [lines
+  351-362] is assigned to Miranda, not Prospero. However, Lewis Theobald (1688-1744), the
+  first thoughtful editor of Shakespeare, assigned the speech to Prospero, for the good reason
+  that it does not seem credible that Miranda as a three-year old child … would have been one
+  who taught Caliban to speak."*
+
+**One thing that note does *not* say is the date.** It identifies Theobald by his lifespan and
+gives no year for the change. The sheet dates it 1733, which is the date of Theobald's *Works
+of William Shakespeare* — already cited on `invention-of-normal.html`, volume 5, for his
+substitution of *weird* for *weyward* in *Macbeth*. **Same editor, same edition, two sheets.**
+The 1733 date is therefore the edition's, not a claim found in the Navigators note, and
+anybody re-checking this should check it against Theobald's edition rather than against that
+note.
+
+**Butler is quoted, not paraphrased.** "a stylized repetition of acts" is Butler's phrase from
+*Gender Trouble* (Routledge, 1990) and sits in quotation marks on the sheet. The sentence
+around it — gender as "a performative accomplishment that both the audience and the performer
+come to believe in the doing of it" — is **ours**, and is unquoted for that reason. Ahmed,
+Kafer, Slights, Thompson and Kathman are all **described rather than quoted** on this sheet;
+none of their sentences appears in quotation marks, and no wording is attributed to them.
+
+**"She has never seen a woman other than her own reflection, by her own account."** That hedge
+is doing real work and must not be removed. Miranda says in III.i that she does not know one
+of her own sex and remembers "no woman's face … Save, from my glass, mine own" — but in I.ii
+she half-remembers "four or five women once that tended me", which is the claim this repo
+already corrected once in the Waterhouse caption on `invention-of-normal.html` (see the entry
+below). **The two speeches contradict each other, and the sheet is citing the later one as
+hers rather than asserting it as fact.** An editor tidying "by her own account" out of that
+sentence would re-commit the error the register apologises for.
+
+----
+
+### Two citations that arrived wrong in the Miranda draft
+
+**Corrected on:** `the-tempest.html`, before it shipped.
+
+The sheet's layout and reference list came from Helen Edgar's own Claude session and were
+adopted as sent. Two entries did not survive checking, and one was an attribution error rather
+than a typo.
+
+- **Kathman.** The draft read *Shakespeare Survey, **59**, 220–246*. The article is in volume
+  **58** (2005), pages 220–46 — confirmed against Cambridge's own listing for
+  [*How Old Were Shakespeare's Boy Actors?*](https://www.cambridge.org/core/books/shakespeare-survey/how-old-were-shakespeares-boy-actors/4291C87665570106298E6FB11CD72568).
+  The pages were right, which is what makes this one easy to miss.
+- **Chedgzoy.** The draft credited Thompson's chapter to *K. **Chedzoy***. The editor is **Kate
+  Chedgzoy**; the surname had lost its *g*. Volume, chapter and pages (46–69) were right.
+- **Edgar.** The draft cited Helen Edgar's *Wyrd, weird, and the invention of normal* with
+  **Queering Earth** as the publisher, at `queering.earth/wyrd-weird-and-the-invention-of-normal`
+  — an address that does not exist here. Her essay was published at
+  [More Realms](https://morerealms.com/becoming-weird-wyrd-normality/) in July 2026; this site
+  published a *reading* of it at `/invention-of-normal`. The reference now names More Realms.
+  **This is the byline rule applied to a bibliography.** Putting our name in the publisher
+  field of prose Helen wrote is the same elision, running the other way, as the
+  Written-by row she declined on Sheet No. 4.
+
+**Verified:** 2026-09-08. Slights (SEL 41:2, 357–79) and the Thompson page range were checked
+at the same time and were correct as sent.
+
+**Left as sent, and flagged rather than fixed:** Chapman's *Empire of Normality* is in the
+reference list and is not cited anywhere in the sheet's text. It is not an error — the
+argument it supports is carried by `invention-of-normal.html`, which quotes Chapman twice —
+but it is an entry with nothing pointing at it. Removing it would be an edit to Helen's list
+rather than a correction to it, so it stays and this note exists instead.
+
+----
+
+### Waterhouse's *Miranda* mounted a second time
+
+**Mounted on:** `the-tempest.html` — the same file as on `invention-of-normal.html`.
+
+Provenance, public-domain reasoning, medium, dimensions and alt text are all in the
+**"Two paintings on the Wyrd sheet"** entry below and are not restated here. Nothing about the
+image or its verification changed; it is the same scan, at the same address, with the same alt
+text, which was written from looking at the picture.
+
+**"Chosen by Helen Edgar" is not repeated on this sheet, and that is deliberate.** She picked
+the plate for the Wyrd sheet, where the credit belongs and where it stays. Repeating it on a
+second sheet would extend a named contribution to a decision she did not make: mounting it
+here was ours.
+
+**What the draft asked for instead.** It hot-linked the Wikimedia file with a JavaScript
+`onerror` fallback reading *"Plate to be inserted … Reference held at Sotheby's / private
+collection. Source a high-resolution scan before publishing — see note to Helen."* The scan
+had already been sourced and verified that morning for Sheet No. 4, so the sheet mounts the
+local file and the placeholder is gone.
+
+**One new claim in the caption, checked.** The draft's caption calls it *"forty-one years
+after his first, gentler Miranda of 1875."* Waterhouse did exhibit a *Miranda* in 1875 — his
+second Royal Academy exhibit — and 1916 − 1875 = 41. He died in 1917, so "the year before
+Waterhouse's death" holds. Verified 2026-09-08 against the
+[Wikipedia article on the painting](https://en.wikipedia.org/wiki/Miranda_(Waterhouse_painting)).
+**A caption is a claim like any other and gets checked like one** — the same sentence this
+ledger already carries one entry down.
+
+----
+
 ### Two paintings on the Wyrd sheet, chosen by Helen Edgar
 
 **Mounted on:** `invention-of-normal.html`
@@ -772,4 +894,38 @@ inherited from a catalogue record describe the catalogue record.
 
 ## Open
 
-Nothing.
+### Two sentences on the Miranda sheet claim a little more than their source does
+
+**On:** `the-tempest.html`, second paragraph. **Found:** 2026-09-08, while verifying the
+draft. **Left as sent** — fixing either means changing Helen's words, which is not this
+session's call.
+
+Neither is an invented source. Both are the failure `CLAUDE.md` names as this site's
+characteristic one: **a source tightened rather than fabricated, with the attribution left
+attached.**
+
+**1. "the first recorded use of it as a person's name in English (Wikipedia contributors, n.d.)"**
+
+[The cited article](https://en.wikipedia.org/wiki/Miranda_(given_name)) says Shakespeare
+"originated use of the name as a **forename**", and says in the same breath that Miranda
+existed as a **surname** before him. A surname is a person's name. So the sheet's sentence is
+a step wider than the source it credits, and the source contains the counter-example.
+
+The narrower claim — that Shakespeare coined it as a *given* name — is what Wikipedia
+supports and is the interesting claim anyway. **Suggested fix, for Helen and Ryan:** "the
+first recorded use of it as a given name in English." One word, and the citation becomes
+true.
+
+**2. "He built it from the Latin gerundive of *mirari*, to wonder at"**
+
+The gerundive derivation is **correct Latin** — *mirandus, -a, -um* is the gerundive of
+*mirari*, and "she who is to be wondered at" is a fair rendering of it. It is simply not in
+the cited source: Wikipedia says only "from the Latin word *mirandus*" and never mentions the
+gerundive or *mirari*. **So the Latin is ours, and it is standing inside a sentence that
+reads as Wikipedia's.** It wants either a Latin dictionary behind it or a sentence break that
+puts the citation on the half it actually covers.
+
+**Why this is worth an entry rather than a quiet edit.** The sheet's title turns on this
+etymology — *To Be Wondered With* is a one-preposition move on *to be wondered at* — so the
+gerundive is not a decorative aside, it is the load-bearing claim of the whole sheet, and it
+is the one claim on the page with nothing verified under it.

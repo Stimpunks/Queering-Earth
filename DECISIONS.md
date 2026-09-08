@@ -798,3 +798,94 @@ pages do not carry that nav.
 **Keeping it up is now part of shipping a sheet.** A sheet that lands without a register entry
 is the same omission as a sheet that lands without a social card, and it is worth the same
 line in `CLAUDE.md`: mount it, card it, log it.
+
+### The Miranda sheet's address names the play, not the phrase (2026-09-08)
+
+`the-tempest.html` is "Miranda: To Be Wondered With", which follows the convention set out
+above: **the filename is the address a reader searching for the source will guess, and the
+title is what the sheet found in it.** A reader who wants this sheet is looking for the play.
+
+**The title is Helen's, kept verbatim, and it is not lifted from the specimen.** Sheet No. 4
+left exactly this untidy on purpose, with a note saying a later session could tidy it. This
+sheet makes the same choice for a better reason: *To Be Wondered With* is a deliberate
+one-preposition turn on Shakespeare's own coinage, which the sheet's second paragraph
+explains. It is a reading of the specimen rather than a quotation from it, and swapping in a
+phrase of the play's would delete the argument the title is making.
+
+### Helen's Claude laid out Sheet No. 5, and we kept the typography and threw away the hexes (2026-09-08)
+
+The Miranda sheet arrived as a finished self-contained page from Helen Edgar's own Claude
+session — its own `:root` palette in hex, its own dark-mode block, its own toggle script. The
+instruction was to adopt the text as written and keep the heading typography and the staging
+labels. What that meant in practice:
+
+**Kept.** The leaning title (`h1 .qe-lean`, one word tilted left and one tilted right in
+rust), the wobbling section heads (`h2 .qe-wobble`), rust section heads with a hairline under
+them, the small letterspaced staging labels (`.qe-block-label`), the chain of everybody who
+has staged Miranda, the dashed "will not tidy" panel, and the struck-and-rewritten speaker
+prefix. All of it is in a *restaging* section of `queering.css` and every colour aliases a
+`--qe-*` token.
+
+**Dropped.** The hexes, the `prefers-color-scheme` block, and the per-page toggle script.
+This site has one ground and it is paper: a dark mode is not a missing feature here, it is the
+other site. The draft's `body.plain` became `html.plain`, which is where the class actually
+goes.
+
+**Three things the draft got wrong, all of them accessibility rather than taste:**
+
+- **The chain was a row of spans with `→` between them.** Five decorative arrows in the
+  accessibility tree, read aloud as words, on a device whose whole content is *the order*. It
+  is an `<ol>` now and the arrows are drawn with `content: "→" / ""`.
+- **The correction was `text-decoration: line-through` on a `<span>`.** A screen reader gets
+  nothing from that, so the one device on the sheet that *is* an argument about a woman's words
+  being erased would have been erased for exactly the readers most likely to care. `<del>` and
+  `<ins>` are what an editor reassigning a speech actually did.
+- **The struck name was coral at `opacity: 0.65`.** That fails 7:1 twice over. It is moss
+  letters with a coral `text-decoration-color` now — the colour on the rule and never on the
+  word, which is the rule the register's tags already follow.
+
+**The plate was a hot-link with a placeholder under it.** The draft pointed at Wikimedia's
+`Special:FilePath` with a JavaScript `onerror` fallback reading "Plate to be inserted … source
+a high-resolution scan before publishing." Waterhouse's *Miranda* had been mounted on Sheet
+No. 4 that same morning, so the scan, the alt text and the provenance already existed and the
+sheet mounts the local file. **A draft that ships a placeholder is a draft that ships a
+placeholder** — the fallback text reads as finished furniture and would have gone live saying
+"see note to Helen."
+
+**Two citation errors and one attribution error came in with the draft** and are recorded in
+`ATTRIBUTIONS.md` and in the register: Kathman's volume (59 → 58), Chedgzoy's surname
+(Chedzoy → Chedgzoy), and Helen's own essay cited with *Queering Earth* as its publisher at a
+URL that does not resolve. The last is the byline rule from Sheet No. 4 running in the other
+direction, and it is the one worth remembering: **an attribution can be wrong by claiming too
+much for us, not only by claiming too much for somebody else.**
+
+### The header art is wind, and the first wave was clipped (2026-09-08)
+
+Sea holly on a ledge, every stem, leaf and tendril bent the same way. The subject is a person
+bent by other people's weather, so the drawing leans rather than standing up straight; three
+heads on one crown are the household of three.
+
+Two things were rebuilt. The plant was first drawn at about half the scale it needed and sat
+in the lower right of the frame with two thirds of the viewBox empty. And a breaking wave in
+the lower left **curled down to y 252 in a viewBox that ends at 238** — the crest, which was
+the entire point of it, was silently clipped off the bottom and the remainder read as a stray
+squiggle sitting on the ground line. It is two tendrils out of the same crown now, running
+low along the ledge and curling at the ends, which is Helen's "squiggles and swirly bits"
+note and the same device the Wyrd sheet uses. **An SVG that overruns its viewBox does not
+error; it just quietly stops drawing.**
+
+### Not ported: a check for citation fields (2026-09-08)
+
+Two of the three attribution errors on this sheet were **wrong numbers and a dropped letter
+inside a reference list** — a volume number and a surname. That is now twice the register has
+carried a citation handed to us with the wrong issue. It is tempting to write
+`check-references.mjs`.
+
+**Not yet, and the reason is the standing rule:** port a check when the failure it catches
+becomes possible to catch mechanically. Nothing on disk knows that Kathman is volume 58; the
+only way to find that is to read Cambridge's listing, which is a human or a web fetch and not
+a gate. A check could plausibly verify that every `.qe-references` entry is *shaped* like a
+citation and that every URL in one resolves — the Edgar URL would have been caught by the
+second half of that. **If a third bad citation ships, write the link-resolver half.** A check
+that cannot fail is a check nobody reads, and a check that can only verify punctuation is
+worse: it would have passed all three of these.

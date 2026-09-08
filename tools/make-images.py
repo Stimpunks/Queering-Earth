@@ -218,6 +218,10 @@ og_card(REPO/"images"/"og-invention-of-normal.png", "Wyrd, Weird, and the Invent
         "Sheet · a reading",
         "Before it meant strange, it meant fate.",
         MARIGOLD)
+og_card(REPO/"images"/"og-the-tempest.png", "Miranda: To Be Wondered With",
+        "Sheet · a reading",
+        "Her name means she who is to be wondered at. This reading turns one preposition.",
+        LICHEN)
 og_card(REPO/"images"/"og-design.png", "How this site is made", "Colophon",
         "A Victorian herbarium sheet as the model: the palette, the type, the drawings.", MARIGOLD)
 og_card(REPO/"images"/"og-changelog.png", "The accession register", "Register · the changelog",
@@ -226,6 +230,7 @@ og_card(REPO/"images"/"og-changelog.png", "The accession register", "Register ·
 for p in ("favicon.ico", "apple-touch-icon.png", "images/icon-512.png",
           "images/og-index.png", "images/og-on-being-ill.png", "images/og-coming-to-terms.png",
           "images/og-design.png", "images/og-promises-like-pie-crust.png",
-          "images/og-invention-of-normal.png", "images/og-changelog.png"):
+          "images/og-invention-of-normal.png", "images/og-the-tempest.png",
+          "images/og-changelog.png"):
     f = REPO / p
     print("  %-34s %7d bytes" % (p, f.stat().st_size))

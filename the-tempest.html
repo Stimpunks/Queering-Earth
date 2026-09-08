@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miranda: To Be Wondered With — Queering Earth</title>
+<meta name="description" content="Shakespeare coined Miranda's name from the Latin for wonder at. A reading of The Tempest and Waterhouse's 1916 canvas: a boy actor, an editor who moved her hardest speech into her father's mouth, and who a story lets be difficult.">
+<link rel="canonical" href="https://queering.earth/the-tempest">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5efe2">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Queering Earth">
+<meta property="og:title" content="Miranda: To Be Wondered With">
+<meta property="og:description" content="Her name means she who is to be wondered at. This reading turns one preposition.">
+<meta property="og:url" content="https://queering.earth/the-tempest">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://queering.earth/images/og-the-tempest.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sheet, a reading: Miranda, To Be Wondered With. Shakespeare's The Tempest, read for Queering Earth.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Miranda: To Be Wondered With">
+<meta name="twitter:description" content="Her name means she who is to be wondered at. This reading turns one preposition.">
+<meta name="twitter:image" content="https://queering.earth/images/og-the-tempest.png">
+<meta name="twitter:image:alt" content="Sheet, a reading: Miranda, To Be Wondered With. Shakespeare's The Tempest, read for Queering Earth.">
+
+<!-- The mark is a pressed leaf pinned with the wordmark's rust dot. SVG first for
+     anything that takes it; the .ico carries 16/32/48/64 for everything else.
+     All of them are drawn by tools/make-images.py — do not hand-edit the rasters. -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;display=swap">
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's plain-view choice BEFORE first paint. Deferred to
+     queering.js it would flash the decorated page at someone who turned it off. -->
+<script>try{if(localStorage.getItem('qe-plain')==='1')document.documentElement.classList.add('plain')}catch(e){}</script>
+</head>
+<body>
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+</div>
+
+<main id="main">
+
+  <header class="qe-masthead qe-masthead-sheet">
+    <p class="qe-home"><a href="/">Queering Earth</a></p>
+    <p class="qe-kicker">Sheet &middot; a reading</p>
+    <h1><span class="qe-lean" style="--rot:-2.2deg">Miranda:</span> To Be <span class="qe-lean qe-lean-accent" style="--rot:1.4deg; --dy:2px">Wondered</span> With</h1>
+
+    <!-- Sea holly on a cliff edge in a wind off the water. Every stem leans the
+         same way, because that is what a shore plant does and because the sheet
+         is about a person bent by other people's weather; three heads on one
+         crown for the household of three; the curls at the base are the wave.
+         Positioning on the outer <g>, animation on the inner .sprout — a CSS
+         transform on the same element overrides the SVG transform attribute and
+         collapses every sprout onto the origin. -->
+    <svg class="qe-botanical" viewBox="112 26 396 212" role="img" aria-label="A shore plant growing from a rocky ledge, every stem, leaf and tendril bent to the left by wind off the sea: three flower heads of three different colours nodding away from the weather, and two long tendrils running out along the ledge and curling at their ends." focusable="false">
+      <path class="stem" style="--len:370" stroke-width="1.6" d="M140 212 C 230 204, 330 210, 496 202"/>
+
+      <!-- Two tendrils out of the same crown, running low along the ledge and
+           curling at the ends. Helen's note on the Rossetti header asked for
+           "squiggles and swirly bits so it isn't all linear", and a tendril
+           carries no new class here either: it is a stem.
+           An earlier draft drew a breaking wave instead, curling down to y 252
+           in a viewBox that ends at 238 — the crest, which was the whole point
+           of it, was silently clipped off the bottom. -->
+      <path class="stem" style="--len:250" stroke-width="1.6" d="M420 206 C 372 198, 296 192, 246 182 C 214 176, 188 184, 186 200 C 184 213, 202 220, 208 209 C 212 201, 203 195, 198 201"/>
+      <path class="stem" style="--len:170" stroke-width="1.4" d="M420 206 C 386 210, 330 212, 292 205 C 268 200, 250 208, 252 222"/>
+
+      <path class="stem" style="--len:170" stroke-width="2.5" d="M420 206 C 414 156, 392 104, 354 58"/>
+      <path class="stem" style="--len:190" stroke-width="2.2" d="M420 206 C 404 162, 348 120, 284 90"/>
+      <path class="stem" style="--len:200" stroke-width="2.1" d="M420 206 C 400 176, 328 146, 242 132"/>
+      <path class="stem" style="--len:70"  stroke-width="1.5" d="M420 206 C 442 194, 464 188, 486 190"/>
+
+      <g transform="translate(400 146) rotate(202)"><g class="sprout sprout-leaf" style="--i:1"><path class="leaf" d="M0 0 C 6.6 -8.6, 20 -9.1, 26 0 C 20 9.1, 6.6 8.6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 25 0"/></g></g>
+      <g transform="translate(378 100) rotate(214)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" d="M0 0 C 6.6 -8.6, 20 -9.1, 26 0 C 20 9.1, 6.6 8.6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 25 0"/></g></g>
+      <g transform="translate(384 148) rotate(176)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" d="M0 0 C 6.6 -8.6, 20 -9.1, 26 0 C 20 9.1, 6.6 8.6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 25 0"/></g></g>
+      <g transform="translate(334 110) rotate(192)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf" d="M0 0 C 5.4 -7, 16.5 -7.4, 21.4 0 C 16.5 7.4, 5.4 7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 20.5 0"/></g></g>
+      <g transform="translate(378 180) rotate(158)"><g class="sprout sprout-leaf" style="--i:5"><path class="leaf" d="M0 0 C 5.4 -7, 16.5 -7.4, 21.4 0 C 16.5 7.4, 5.4 7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 20.5 0"/></g></g>
+      <g transform="translate(310 146) rotate(172)"><g class="sprout sprout-leaf" style="--i:6"><path class="leaf" d="M0 0 C 5.4 -7, 16.5 -7.4, 21.4 0 C 16.5 7.4, 5.4 7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 20.5 0"/></g></g>
+      <g transform="translate(466 188) rotate(-12)"><g class="sprout sprout-leaf" style="--i:7"><path class="leaf" d="M0 0 C 5.4 -7, 16.5 -7.4, 21.4 0 C 16.5 7.4, 5.4 7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 20.5 0"/></g></g>
+
+      <!-- Three heads on one crown, all nodding away from the weather. -->
+      <g transform="translate(354 58) rotate(44) scale(1.3)"><g class="sprout" style="--i:9">
+        <path class="bloom-verdigris" stroke-width="1.1" d="M0 0 C -9 3, -12.5 13, -7.5 20.5 C -3.5 26, 3.5 26, 7.5 20.5 C 12.5 13, 9 3, 0 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M-4.5 20 C -3 15, -2 8, -2 1"/>
+        <path class="rib" stroke-width="0.8" d="M4.5 20 C 3 15, 2 8, 2 1"/>
+        <circle class="body" cx="0" cy="1.5" r="2"/>
+      </g></g>
+      <g transform="translate(284 90) rotate(62) scale(1.25)"><g class="sprout" style="--i:10">
+        <path class="bloom-alt" stroke-width="1.1" d="M0 0 C -8 2.6, -11 11.5, -6.6 18 C -3 23, 3 23, 6.6 18 C 11 11.5, 8 2.6, 0 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M-4 17.5 C -2.6 13, -1.8 7, -1.8 1"/>
+        <circle class="body" cx="0" cy="1.5" r="1.8"/>
+      </g></g>
+      <g transform="translate(242 132) rotate(78) scale(1.2)"><g class="sprout" style="--i:11">
+        <path class="bloom-violet" stroke-width="1.1" d="M0 0 C -8 2.6, -11 11.5, -6.6 18 C -3 23, 3 23, 6.6 18 C 11 11.5, 8 2.6, 0 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M4 17.5 C 2.6 13, 1.8 7, 1.8 1"/>
+        <circle class="body" cx="0" cy="1.5" r="1.8"/>
+      </g></g>
+    </svg>
+
+    <p class="qe-sheet-sub">On Shakespeare&rsquo;s <em>The Tempest</em>, Waterhouse&rsquo;s 1916 canvas, and who a story lets be difficult. Helen Edgar and Ryan Boren neuroqueer the play by reading it this way.</p>
+  </header>
+
+  <div class="qe-label">
+    <dl>
+      <dt>Specimen</dt>
+      <dd>William Shakespeare, <cite>The Tempest</cite></dd>
+      <dt>Maker</dt>
+      <dd>William Shakespeare (1564&ndash;1616)</dd>
+      <dt>First performed</dt>
+      <dd>1611. First printed in the First Folio, 1623</dd>
+      <dt>This text</dt>
+      <dd>The play, the editorial history of one speech in it, and John William Waterhouse&rsquo;s 1916 canvas, read together. The quotations are the play&rsquo;s and the editors&rsquo;; the sentences around them are ours, and this label is where we say so.</dd>
+      <dt>Read</dt>
+      <dd>8 September 2026</dd>
+      <dt>Read by</dt>
+      <dd><a href="https://morerealms.com/">Helen Edgar</a> and Ryan Boren</dd>
+      <dt>Terms</dt>
+      <dd><a href="https://stimpunks.org/glossary/neuronormativity/">Neuronormativity</a> &middot; <a href="https://stimpunks.org/glossary/masking/">Masking</a> &middot; <a href="https://stimpunks.org/glossary/normal/">Normal</a> &middot; <a href="https://stimpunks.org/glossary/shared-air-space/">Shared-air space</a></dd>
+    </dl>
+  </div>
+
+  <ol class="qe-chain" aria-label="Who has staged her, so far">
+    <li>Shakespeare, 1611</li>
+    <li>a boy actor, 1611</li>
+    <li>Theobald, 1733</li>
+    <li>Waterhouse, 1916</li>
+    <li>Huxley, 1932</li>
+    <li class="qe-chain-now">Helen &amp; Ryan, 2026</li>
+  </ol>
+
+  <figure class="qe-plate qe-plate-wide">
+    <img src="images/waterhouse-1916-miranda-the-tempest.jpg" width="1280" height="921" loading="lazy" decoding="async"
+         alt="A rocky shore under a grey storm sky. A woman in a deep teal-blue dress stands with her back mostly to us on the pebbles, long red hair streaming sideways in the wind, one hand raised to hold it clear of her face as she watches the sea. Out to the left a three-masted ship is going over in heavy green-white breakers. Dark cliffs close the scene on the right; a broken spar and small pink flowers lie among the stones in the foreground.">
+    <figcaption>John William Waterhouse (1849&ndash;1917). <a href="https://commons.wikimedia.org/wiki/File:Miranda_-_The_Tempest_JWW.jpg"><cite>Miranda &ndash; The Tempest</cite></a>, 1916, oil on canvas. Painted the year before Waterhouse&rsquo;s death, forty-one years after his first, gentler Miranda of 1875. Public domain.</figcaption>
+  </figure>
+
+  <p class="qe-lede">Her face is turned away from us. One hand is pressed to her heart. Behind her a ship is coming apart on the rocks in cold, storm-grey light, and Waterhouse gives us none of Miranda&rsquo;s expression to tell us how to feel about it, only the shape of a body absorbing someone else&rsquo;s disaster as though it were happening inside her own chest. It is, art historians agree, the most emotionally exposed of his two attempts at her (DailyArt Magazine, n.d.). It is also, we want to argue, exactly the pose the play keeps putting her in: turned from us, feeling everything, granted almost none of the words that would let her account for what she feels.</p>
+
+  <p>Miranda&rsquo;s name is Shakespeare&rsquo;s own coinage, the first recorded use of it as a person&rsquo;s name in English (Wikipedia contributors, n.d.). He built it from the Latin gerundive of <em>mirari</em>, to wonder at: <em>miranda</em>, she who is to be wondered at, worthy of admiration. It is a lovely name and a loaded one, because wonder runs both ways. To wonder at something can mean to marvel at it with your whole, undivided attention. It can also mean to make of a person a spectacle: something looked at, remarked upon, held up as a curiosity, never quite the one doing the looking. This reading takes Shakespeare&rsquo;s word and turns one preposition: not wondered at, which the play already does to her constantly, but wondered with, the way she herself wonders with the drowning sailors before anyone tells her to. We follow Miranda through all three, because the play cannot decide between them either, and because that argument, staged on one small island four hundred years before anyone invented the statistically normal person, is still the argument this whole project keeps having.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">Assembled, not born</span></h2>
+
+  <p>Before any of that, one fact underneath the whole play. When The Tempest was first staged in 1611, Miranda would not have been played by a woman. English theatre would not permit that for another fifty years. She would have been played by a boy player, part of a company apprenticeship system in which performers of female roles were, on the surviving evidence, teenagers rather than children, commonly in their mid-to-late teens, cast for frame and voice and drilled in the gait, gesture, and vocal register that stood in for femininity on that stage (Kathman, 2005). Her modesty, her wonder, her compliant softness: every trait the play offers as Miranda&rsquo;s nature was, at the moment of its first performance, a rehearsed construction laid onto a body the role needed nobody in the audience to think twice about.</p>
+
+  <p>This is not a trivia footnote. It is Judith Butler&rsquo;s argument about gender arriving three hundred and eighty years early and without ever citing Shakespeare: identity is not an interior truth that gesture and costume merely express, but <q>a stylized repetition of acts,</q> a performative accomplishment that both the audience and the performer come to believe in the doing of it (Butler, 1990). There was never a natural woman underneath Miranda for the boy actor to reveal. There was only the performance, repeated eight times a week until it read as nature. Waterhouse restages her in oil in 1916. This sheet restages her again in 2026. Nobody in this whole four-hundred-year chain ever got to meet an un-staged Miranda, including, arguably, Miranda.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">A household of three</span></h2>
+
+  <p>Prospero was put to sea with his daughter when she was three years old, and for twelve years afterward their whole society is an island the size of a single household: a father, a daughter, and Caliban, with Ariel felt everywhere and seen by no one but Prospero. Miranda grows up with almost no comparison class. She has never seen a woman other than her own reflection, by her own account, and no man but her father, until Ferdinand. In the vocabulary Stimpunks&rsquo; own glossary uses, this is a <a href="https://stimpunks.org/glossary/shared-air-space/">shared-air space</a> (Stimpunks Foundation, n.d.): physical, co-located presence, three bodies breathing the same weather for twelve years, rather than the digitally networked togetherness the term was coined to stand alongside. Twelve years on an island with three people is the household Miranda knows, and it is the only one she has ever had the chance to learn.</p>
+
+  <p>None of this should read as an argument that isolation was secretly a gift. Alison Kafer&rsquo;s work on crip time is useful precisely because it refuses to romanticise a slower or smaller world on principle, and instead keeps asking who gets to set its pace and shape (Kafer, 2013). Miranda did not choose the island and could not have left it. Prospero controlled the only boat, the only magic, and, for twelve years, the only company. Describing her household is not the same as approving of it, and the play never actually lets her answer that question on her own terms.</p>
+
+  <p>The play, and four centuries of criticism after it, mostly cannot see this as anything but a wound waiting to be corrected by re-entry into the wider world. That correction has a name by the end of Act 5. We want to sit with the household of three a little longer before the crowd arrives.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">O, I have suffered with those that I saw suffer</span></h2>
+
+  <p>The very first thing Miranda does on stage, before Prospero has told her anything, before she knows the wrecked men are staged, before she knows her own history, is feel the shipwreck in her body as though it were happening to her.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; Act 1, Scene 2</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">If by your art, my dearest father, you have</span><span class="l">Put the wild waters in this roar, allay them.</span><span class="l">&hellip; O, I have suffered</span><span class="l">With those that I saw suffer: a brave vessel,</span><span class="l">Who had, no doubt, some noble creature in her,</span><span class="l">Dash&rsquo;d all to pieces.</span></p>
+    </blockquote>
+    <figcaption><cite>The Tempest</cite>, Act 1, Scene 2 (Shakespeare, 1611/2004)</figcaption>
+  </figure>
+
+  <p>She has not been asked to imagine their suffering. She has not calculated, from social cues, that suffering is the appropriate response. She simply reports it as a fact about her own body: I have suffered with those that I saw suffer. It is a strange verb tense for a play that has not shown her the wreck happening more than a moment before, and it reads less like sympathy performed for an audience than like attunement that runs ahead of explanation, feeling arriving before the story that would justify it. Waterhouse&rsquo;s canvas, four hundred years later, paints exactly this line and nothing else: not Miranda deciding to care, but Miranda already, wordlessly, mid-suffering.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">Be collected. No more amazement.</span></h2>
+
+  <p>And then, within a dozen lines, her father tells her to stop.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; Act 1, Scene 2</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">Be collected.</span><span class="l">No more amazement. Tell your piteous heart</span><span class="l">There&rsquo;s no harm done.</span></p>
+    </blockquote>
+    <figcaption><cite>The Tempest</cite>, Act 1, Scene 2 (Shakespeare, 1611/2004)</figcaption>
+  </figure>
+
+  <p>This is not comfort so much as instruction. Prospero does not ask what she feels; he specifies what she is now permitted to feel, and issues it as a command in the imperative mood, before he has explained a single thing that would actually justify the reassurance. It is the same regulatory gesture the masque scene will later perform on her body, staged here first on her interior state: an outside authority deciding the correct amount and duration of someone else&rsquo;s feeling. Reading this as an autistic reader might recognise it immediately, because it is the shape of every <q>you&rsquo;re fine</q> delivered to a person who is, from the inside, plainly not being asked what fine would mean to them. <a href="https://stimpunks.org/glossary/neuronormativity/">Neuronormativity</a> does not only police what a body does. It polices what a body is allowed to still be feeling once the socially appropriate window for feeling it has closed.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">Abhorred slave</span></h2>
+
+  <p>A few dozen lines later Miranda is given, in the First Folio of 1623, the hardest speech in the scene. Here is what four centuries of editing did to it.</p>
+
+  <div class="qe-correction">
+    <p class="qe-correction-speaker"><del>PROSPERO</del><ins>Miranda, First Folio, 1623</ins></p>
+    <blockquote>
+      <p class="qe-lines"><span class="l">Abhorred slave,</span><span class="l">Which any print of goodness wilt not take,</span><span class="l">Being capable of all ill! I pitied thee,</span><span class="l">Took pains to make thee speak, taught thee each hour</span><span class="l">One thing or other&hellip;</span></p>
+    </blockquote>
+    <p class="qe-correction-note">Reassigned to Prospero by editor Lewis Theobald, 1733, restored to Miranda in the Folger edition and others since (Folger Shakespeare Library, n.d.; Shakespeare Navigators, n.d.).</p>
+  </div>
+
+  <p>It is a speech of real authority: an accusation, a claim to have been Caliban&rsquo;s teacher, a judgment about who deserves what. Theobald moved it to Prospero&rsquo;s mouth on the reasoning that it did not seem credible that a girl, taught language herself as a small child on the island, could plausibly have been the one who taught Caliban to speak (Shakespeare Navigators, n.d.). Many editions followed him for the better part of three centuries. The strikethrough above is not decoration. It is the actual editorial history: a name crossed out and a different name written over it, silently, in edition after edition, until it needed a restoration to notice it had happened at all.</p>
+
+  <p>Notice what that eighteenth-century edit actually does. It is not a correction of a printing error; it is a decision about which register of speech a young woman is allowed to hold. Compassion, wonder, suffering-with: those stay hers without dispute. Judgment, command, the claim to have been someone&rsquo;s teacher and to be entitled to be angry about the return on that labour: those get quietly reassigned to her father, because an editor two hundred years ago found her difficulty, her spikiness, less credible coming from her than from him. It is the same reflex this collection has already traced at the level of a whole language, the nineteenth-century invention of the statistically normal person against which everyone else became a deviation (Edgar, 2026). Here it happens a century earlier, at the level of a single attribution line in a single scene: whose hardness gets to be plausible, and whose has to be softened into someone else&rsquo;s.</p>
+
+  <p>It is also not an isolated case. Ann Thompson&rsquo;s survey of Shakespeare&rsquo;s editorial history finds the same reflex recurring across the canon, editors softening, reglossing, or reassigning a woman character&rsquo;s harder or more sexually frank lines whenever those lines strained what the editor thought she should plausibly say. Adriana&rsquo;s self-accusation in The Comedy of Errors has been glossed by more than one editor as her belatedly admitting a fault she never actually confesses to. The Quarto Othello&rsquo;s more physically frank Desdemona was set aside by editors reaching for the Folio&rsquo;s softer wording instead (Thompson, 2001). Theobald moving Miranda&rsquo;s hardest speech into her father&rsquo;s mouth is not one eccentric decision. It is a single instance of a pattern with a three-hundred-year paper trail, editors deciding, play after play, which register of speech a woman is allowed to be caught using.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">Before all sanctimonious ceremonies</span></h2>
+
+  <p>Miranda&rsquo;s courtship is not something that happens to her so much as something staged around her. Prospero engineers the shipwreck, times Ferdinand&rsquo;s arrival, watches the two of them fall in love from a distance he has arranged, and later, at the betrothal masque, delivers a warning to his future son-in-law about his daughter&rsquo;s body that Miranda is not recorded as hearing:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; Act 4, Scene 1</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">If thou dost break her virgin-knot before</span><span class="l">All sanctimonious ceremonies may</span><span class="l">With full and holy rite be minister&rsquo;d&hellip;</span></p>
+    </blockquote>
+    <figcaption><cite>The Tempest</cite>, Act 4, Scene 1 (Shakespeare, 1611/2004)</figcaption>
+  </figure>
+
+  <p>This is heteronormativity staged as literal stagecraft: a father choreographing, timing, and finally verbally contracting his daughter&rsquo;s marriage and its sexual terms, with magic standing in for all the ordinary social machinery that does the same work off an island. Caliban&rsquo;s own line about Miranda, spoken earlier in the same scene of the play, makes plain what the stakes of that policing actually were:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; Act 1, Scene 2</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">O ho, O ho! would&rsquo;t had been done!</span><span class="l">Thou didst prevent me; I had peopled else</span><span class="l">This isle with Calibans.</span></p>
+    </blockquote>
+    <figcaption><cite>The Tempest</cite>, Act 1, Scene 2 (Shakespeare, 1611/2004)</figcaption>
+  </figure>
+
+  <p>Miranda&rsquo;s safety, in other words, was never secured by her own consent. It was secured by Prospero&rsquo;s control of Caliban&rsquo;s body, just as her marriage is secured by Prospero&rsquo;s control of the entire scene Ferdinand walks into. Postcolonial readings of the play have long noted that Miranda&rsquo;s own kindness toward Caliban, teaching him language, trying to civilise rather than simply subjugate him, is not an escape from her father&rsquo;s colonial logic but a softer version of it: the missionary rather than the whip, aimed at the same outcome (see, broadly, the postcolonial critical tradition summarised in Lie, n.d.). We do not want to resolve that into either condemnation or credit. We want to leave it exactly as uncomfortable as it is: gentleness is not automatically outside empire&rsquo;s reach.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">I&rsquo;ll die your maid</span></h2>
+
+  <p>And yet inside all that staging, Miranda does something the plot did not strictly require of her. She proposes.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; Act 3, Scene 1</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">I am your wife, if you will marry me;</span><span class="l">If not, I&rsquo;ll die your maid: to be your fellow</span><span class="l">You may deny me; but I&rsquo;ll be your servant,</span><span class="l">Whether you will or no.</span></p>
+    </blockquote>
+    <figcaption><cite>The Tempest</cite>, Act 3, Scene 1 (Shakespeare, 1611/2004)</figcaption>
+  </figure>
+
+  <p>Read this against the boy actor and Butler&rsquo;s stylized repetition of acts, and the moment gets sharper. Normative courtship in Miranda&rsquo;s period had its own choreography of delay, indirection, and coyness, a script she has had no occasion to rehearse, because the only society available to rehearse it in was a household of three. What the scene reads as her innocence may be better read as a failure to perform the expected femininity correctly, and a failure that, instead of shaming her, becomes its own kind of honesty. She asks first. She names the terms herself. This is not a woman gracefully declining to know the rules. It is a directness the normative script has no room for, arriving anyway because nobody successfully installed the script in the first place. The scholar Jessica Slights has made a related case against reading Miranda as simply obedient and pliant, arguing that a girl raised entirely outside conventional courtship norms has no particular reason to have absorbed them, and that her willingness to ask first reads as a kind of independence her upbringing made possible rather than prevented (Slights, 2001). Both readings can be true at once. A person can be staged within someone else&rsquo;s normativity and still, inside that staging, refuse to perform it correctly.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">O, brave new world</span></h2>
+
+  <p>By Act 5, Miranda has spent twelve years in a household of three. Then Prospero&rsquo;s magic delivers a dozen strangers onto the same small stage, and she says the line the whole play has been saving for her:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; Act 5, Scene 1</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">O, wonder!</span><span class="l">How many goodly creatures are there here!</span><span class="l">How beauteous mankind is! O brave new world,</span><span class="l">That has such people in&rsquo;t!</span></p>
+    </blockquote>
+    <figcaption><cite>The Tempest</cite>, Act 5, Scene 1 (Shakespeare, 1611/2004)</figcaption>
+  </figure>
+
+  <p>Prospero&rsquo;s reply is four words long and does not share her wonder: <q>&rsquo;Tis new to thee.</q> He knows, and the audience knows, that the goodly creatures in front of her include the brother who usurped him and the men who set them both adrift. The wider world being sold to Miranda as liberation is not new or brave at all; it is the same court politics that exiled her in the first place, now standing on her island in wet clothes. Sara Ahmed&rsquo;s account of orientation is useful here: a body raised inside one small, particular arrangement of the world is not neutral before a bigger one, it has already been shaped by what it was given to reach toward, and a <q>new world</q> can bring a body up short exactly where that body was never built to fit (Ahmed, 2006). Miranda&rsquo;s wonder is the sound of that arrival. It is not evidence that the wider world was actually the better one. Three centuries later Aldous Huxley took Miranda&rsquo;s line, unedited and entirely straight-faced, as the title for a novel about a civilisation engineered for frictionless normality, and gave the same words, with the same devastating irony, to his own outsider character on first meeting that world (Huxley, 1932). The line has been doing this exact work for four hundred years: naming the gap between the crowded, normal world normativity promises and the narrower, stranger, more honestly peopled world it is actually asking you to trade away.</p>
+
+  <p>Nothing in the text tells us whether Miranda&rsquo;s household of three was worth less than the brave new world she is about to enter. It only tells us that nobody thought to ask her which she would have chosen. Nobody asked before the shipwreck. Nobody asked before the masque. Nobody asked before Theobald moved her hardest speech into her father&rsquo;s mouth. Wonder, in the end, is the one register the play always lets her keep. It is worth noticing how much of everything else got quietly kept from her instead.</p>
+
+  <div class="qe-untidy">
+    <p class="qe-block-label">What this reading will not tidy</p>
+    <ul>
+      <li>The Folio attribution of <q>Abhorred slave</q> to Miranda is the choice this sheet leans on, but it is a live editorial crux, not a settled fact; readers should hold the Theobald tradition in view rather than treat the Folio as simply correct.</li>
+      <li>Reading Miranda&rsquo;s education of Caliban as a <q>softer</q> colonialism is a critique of her kindness, not a defence of Prospero&rsquo;s cruelty by comparison. Neither is offered here as the more forgivable option.</li>
+      <li>Wonder is not evidence of freedom. A person can be genuinely delighted by a new world and still have had no say in whether they were delivered into it.</li>
+      <li>We are the latest people to stage her. Nothing here is a neutral account of what the play <q>really</q> means; it is Helen and Ryan doing, deliberately and on the record, the thing the chain below has always been doing.</li>
+      <li>This reading is built from a canonical, largely English, largely male lineage: Shakespeare, an Eton-educated novelist, a Royal Academy painter, and now two more writers. Neuroqueer theory&rsquo;s own roots lie mostly outside that lineage, in mad studies and disability justice traditions that owe it little. Naming that we are one more link in this particular chain is not the same as having answered why this chain, rather than another, is the one worth extending.</li>
+    </ul>
+  </div>
+
+  <div class="qe-restaged">
+    <p class="qe-block-label">Restaged by</p>
+    <ol class="qe-chain" aria-label="Restaged by">
+      <li>Shakespeare, 1611</li>
+      <li>a boy actor, 1611</li>
+      <li>Theobald, 1733</li>
+      <li>Waterhouse, 1916</li>
+      <li>Huxley, 1932</li>
+      <li class="qe-chain-now">Helen &amp; Ryan, 2026</li>
+      <li class="qe-chain-now">you, reading this</li>
+    </ol>
+    <p>Every entry in that chain believed it was the one finally looking at Miranda clearly. This is not an exemption from that pattern. It is a piece of neuroqueering, done on purpose, by two named people, in the sense Nick Walker gives the word: not a property the play or its heroine possesses, but a practice we are choosing to perform on it (Walker, 2021). The next person who restages her gets to do the same.</p>
+  </div>
+
+  <div class="qe-references">
+    <p class="qe-block-label">References</p>
+    <p>Ahmed, S. (2006). <em>Queer phenomenology: Orientations, objects, others</em>. Duke University Press.</p>
+    <p>Butler, J. (1990). <em>Gender trouble: Feminism and the subversion of identity</em>. Routledge.</p>
+    <p>Chapman, R. (2023). <em>Empire of normality: Neurodiversity and capitalism</em>. Pluto Press.</p>
+    <p>DailyArt Magazine. (n.d.). <em>Painting of the week: John William Waterhouse, Miranda</em>. Retrieved September 2026, from <a href="https://www.dailyartmagazine.com/painting-of-the-week-john-william-waterhouse-miranda/">https://www.dailyartmagazine.com/painting-of-the-week-john-william-waterhouse-miranda/</a></p>
+    <p>Edgar, H. (2026). <em>Wyrd, weird, and the invention of normal</em>. More Realms. <a href="https://morerealms.com/becoming-weird-wyrd-normality/">https://morerealms.com/becoming-weird-wyrd-normality/</a></p>
+    <p>Folger Shakespeare Library. (n.d.). <em>The Tempest</em>, Act 1, Scene 2. Retrieved September 2026, from <a href="https://www.folger.edu/explore/shakespeares-works/the-tempest/read/1/2/">https://www.folger.edu/explore/shakespeares-works/the-tempest/read/1/2/</a></p>
+    <p>Huxley, A. (1932). <em>Brave new world</em>. Chatto &amp; Windus.</p>
+    <p>Kafer, A. (2013). <em>Feminist, queer, crip</em>. Indiana University Press.</p>
+    <p>Kathman, D. (2005). How old were Shakespeare&rsquo;s boy actors? <em>Shakespeare Survey, 58</em>, 220&ndash;246.</p>
+    <p>Lie, N. (n.d.). <em>Translation studies and the other Caliban: On the English version of Fern&aacute;ndez Retamar&rsquo;s &ldquo;Caliban.&rdquo;</em> EnterText. Brunel University.</p>
+    <p>Shakespeare, W. (2004). <em>The Tempest</em> (V. M. Vaughan &amp; A. T. Vaughan, Eds.). Arden Shakespeare. (Original work published 1611)</p>
+    <p>Shakespeare Navigators. (n.d.). <em>Note to The Tempest, Act 1, Scene 2, line 351</em>. Eastern Washington University. <a href="https://shakespeare-navigators.ewu.edu/tempest/Tempest_Note_Act_1_Scene_2_line_351.html">https://shakespeare-navigators.ewu.edu/tempest/Tempest_Note_Act_1_Scene_2_line_351.html</a></p>
+    <p>Slights, J. (2001). Rape and the romanticization of Shakespeare&rsquo;s Miranda. <em>SEL Studies in English Literature 1500&ndash;1900, 41</em>(2), 357&ndash;379.</p>
+    <p>Stimpunks Foundation. (n.d.). <em>Glossary: Shared-air space</em>. <a href="https://stimpunks.org/glossary/shared-air-space/">https://stimpunks.org/glossary/shared-air-space/</a></p>
+    <p>Thompson, A. (2001). Feminist theory and the editing of Shakespeare: The Taming of the Shrew revisited. In K. Chedgzoy (Ed.), <em>Shakespeare, feminism and gender</em> (pp. 46&ndash;69). Palgrave Macmillan.</p>
+    <p>Walker, N. (2021). <em>Neuroqueer heresies: Notes on the neurodiversity paradigm, autistic empowerment, and postnormal possibilities</em>. Autonomous Press.</p>
+    <p>Waterhouse, J. W. (1916). <em>Miranda &ndash; The Tempest</em> [Painting]. Oil on canvas.</p>
+    <p>Wikipedia contributors. (n.d.). <em>Miranda (given name)</em>. Wikipedia. <a href="https://en.wikipedia.org/wiki/Miranda_(given_name)">https://en.wikipedia.org/wiki/Miranda_(given_name)</a></p>
+  </div>
+
+</main>
+
+<!-- Elsewhere on the plate. OUTSIDE <main> on purpose: the SKS mirror takes page
+     content from the <main> landmark and nowhere else, so navigation placed inside
+     it would be indexed as this sheet's own content. See CLAUDE.md. -->
+<nav class="qe-elsewhere" aria-labelledby="qe-elsewhere-h">
+  <h2 id="qe-elsewhere-h">Elsewhere on the plate</h2>
+  <ul class="qe-elsewhere-grid">
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-marigold)">
+        <a class="card" href="/invention-of-normal">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;4</span>
+          </span>
+          <span class="qe-card-title">Wyrd, Weird, and the Invention of Normal</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/on-being-ill">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;1</span>
+          </span>
+          <span class="qe-card-title">The Army of the Upright</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-violet)">
+        <a class="card" href="/coming-to-terms">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Essay</span>
+            <span class="qe-card-no">No.&nbsp;2</span>
+          </span>
+          <span class="qe-card-title">Coming to Terms</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-coral)">
+        <a class="card" href="/promises-like-pie-crust">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;3</span>
+          </span>
+          <span class="qe-card-title">The Die Uncast</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<footer class="qe-footer">
+  <p><a href="/">Queering Earth</a> is a collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+  <p>Every quotation on this sheet was read at its source and is logged in the site&rsquo;s attribution ledger. The play is quoted in the Arden text; the speaker prefix struck through above is the editorial history, not a device.</p>
+  <p>Our words licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Everyone else&rsquo;s belong to them, or to nobody.</p>
+  <p><a href="/design">How this site is made</a> &mdash; the herbarium sheet, the palette, the type, and the borrowed plates.</p>
+  <p><a href="/changelog">The accession register</a> &mdash; every sheet as it was mounted, and every label we corrected.</p>
+</footer>
+
+<script src="queering.js"></script>
+</body>
+</html>
