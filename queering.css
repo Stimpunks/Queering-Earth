@@ -571,3 +571,128 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
   margin: 0.45rem auto 0;
 }
 @media print { .qe-tagline-credit { color: #222; } }
+
+/* ─────────────────────────────────────────────── the plate
+ *
+ * The index is a plate: the sheets laid out and numbered the way specimens are
+ * mounted and numbered on a Victorian sheet. The box is `.card-wrap` and the
+ * link is `.card`, which are Star Stuff's names on purpose — tools/check-markup.mjs
+ * already guards that pairing, and adopting the guarded convention is cheaper than
+ * writing a lookalike the guard cannot see. It checks that every wrap holds exactly
+ * one direct card, which is the failure that shipped twice over there.
+ */
+
+.qe-plate-grid {
+  list-style: none;
+  margin: 1.75rem 0 2.25rem;
+  padding: 0;
+  display: grid;
+  /* 12.5rem, not 14: the measure leaves 452px inside the gutters, and two 14rem
+     tracks plus the gap need 466. At 14rem the plate silently collapsed to a single
+     column at every window size — a stack of cards, which is a list, not a plate. */
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: 1.1rem;
+}
+
+.card-wrap {
+  --card-color: var(--qe-lichen);
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-top: 3px solid var(--card-color);
+  border-radius: 2px;
+  box-shadow: 0 1px 0 var(--qe-paper-deep);
+  height: 100%;
+}
+
+a.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem 1.1rem 1.15rem;
+  text-decoration: none;
+  color: var(--qe-ink);
+}
+a.card:hover { background: var(--qe-paper-deep); }
+a.card:focus-visible {
+  outline: 3px solid var(--qe-rust);
+  outline-offset: -3px;
+  border-radius: 2px;
+}
+
+/* The accession line: what it is on the left, its number on the right, one rule
+   under both. Two separate blocks sitting on different baselines read as a
+   mistake; a herbarium label puts them on the same line because it is one line. */
+.qe-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--qe-rule);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.qe-card-kind {
+  font-size: 0.74rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+}
+
+.qe-card-no {
+  font-family: var(--qe-display);
+  font-size: 0.85rem;
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+  color: var(--qe-moss);
+  white-space: nowrap;
+}
+html.plain .qe-card-no { font-variation-settings: normal; }
+
+.qe-card-title {
+  font-family: var(--qe-display);
+  font-weight: 600;
+  font-size: 1.32rem;
+  line-height: 1.14;
+  color: var(--qe-ink);
+  font-variation-settings: "SOFT" 45, "WONK" 1;
+}
+html.plain .qe-card-title { font-variation-settings: normal; font-weight: 700; }
+
+.qe-card-sub {
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--qe-moss);
+  margin-top: 0.4rem;
+}
+
+.qe-card-note {
+  font-size: 0.97rem;
+  line-height: 1.5;
+  color: var(--qe-ink);
+  margin-top: 0.75rem;
+}
+
+/* The card is a link, so it wants the affordance a link has — but underlining
+   five stacked spans is noise. The title carries it, on hover and on focus both. */
+a.card:hover .qe-card-title,
+a.card:focus-visible .qe-card-title {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.16em;
+  text-decoration-color: var(--qe-rust);
+}
+
+@media print {
+  .qe-plate-grid { display: block; }
+  .card-wrap {
+    background: none;
+    box-shadow: none;
+    border: 0.5pt solid #999;
+    border-top: 1.5pt solid #444;
+    margin-bottom: 0.6rem;
+    break-inside: avoid;
+  }
+  a.card { color: #000; }
+  .qe-card-no, .qe-card-kind, .qe-card-sub { color: #222; }
+  .qe-card-title, .qe-card-note { color: #000; }
+}

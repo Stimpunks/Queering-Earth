@@ -85,6 +85,33 @@ Hers to correct on her own site; ours to check against the book before any sheet
 
 ## Settled
 
+### The plate uses Star Stuff's card class names, on purpose (2026-09-07)
+
+`index.html` now mounts the sheets as numbered cards. The box is `<div class="card-wrap">`
+and the link is `<a class="card">` — **Star Stuff's names, deliberately adopted**, which
+reverses this repo's standing default of not importing its habits.
+
+The reason is narrow and it is the same test `CLAUDE.md` sets for porting a check: the failure
+became possible here. `tools/check-markup.mjs` already carries a card-wrap rule — it came over
+with the file — and until this commit it could not fire, because there were no cards. It
+guards the failure that shipped twice on Star Stuff: a new wrap opened before the previous one
+closed, so the second card renders *inside* the first card's box, sharing one border. Valid
+markup, invisible to every other check.
+
+Writing our own class names would have produced a lookalike the guard cannot see, and the
+guard is `div`-and-class-specific by design. **Verified live rather than assumed**: nesting
+the second wrap made `check-markup` fail with both the nested-wrap message and an unclosed-wrap
+message, and restoring it went quiet. A check nobody has seen fail is a check nobody trusts.
+
+Two smaller things settled with it:
+
+- **The cards are a `<ul>`**, with the guarded `div.card-wrap` inside each `<li>`. Screen
+  readers announce "list, 2 items"; the guard counts divs and is indifferent to the list.
+- **`minmax(12.5rem, 1fr)`, not 14rem.** The measure leaves 452px inside the gutters and two
+  14rem tracks plus the gap need 466, so at 14rem the plate silently collapsed to one column at
+  *every* window size — a stack, which is a list, not a plate. It looked deliberate. Found by
+  reading the computed `grid-template-columns` in the browser rather than by looking at it.
+
 ### The masthead credits Nick Walker for the phrase (2026-09-07)
 
 Our tagline is **"Post-normal possibilities."** Walker's book is *Neuroqueer Heresies: Notes
