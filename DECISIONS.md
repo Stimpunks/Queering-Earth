@@ -13,13 +13,43 @@ The masthead currently reads **Queering.Earth** with **"Post-normal possibilitie
 it. Both are provisional.
 
 The tagline is Helen Edgar's own phrase from the founding brainstorm, chosen because it is
-short, it is ours, and it carries no attribution risk. It replaced the working tagline
+short and it is ours. **The claim originally recorded here — that it "carries no attribution
+risk" — was wrong, and is corrected below.** It replaced the working tagline
 — "Subverting, defying, disrupting, and liberating oneself from all forms of normativity
 (props Nick Walker)" — which is a **paraphrase of Walker wearing his name**. See
 `ATTRIBUTIONS.md` for the full reasoning and for how the page handles Walker now.
 
 Changing either is one line in `index.html`. Whatever replaces them, the paraphrase problem
 does not come back: quote him exactly, or write our own line.
+
+### The tagline is one hyphen from Nick Walker's book subtitle
+
+Found on 2026-09-07 while building the *Coming to Terms* sheet, in our own glossary entry for
+*neuroqueer*, and then verified against neuroqueer.com.
+
+Walker's book is *Neuroqueer Heresies: Notes on the Neurodiversity Paradigm, Autistic
+Empowerment, and **Postnormal Possibilities***. Our masthead reads **Post-normal
+possibilities.** One hyphen apart, on a site whose home page quotes Walker, about the subject
+of Walker's book.
+
+That is not proof of borrowing. Helen wrote the phrase in the founding brainstorm, and
+*post-normal* has its own separate lineage in post-normal science — Funtowicz and Ravetz,
+early 1990s — which is worth checking properly before anyone leans on it. But "it carries no
+attribution risk" is not a sentence this file can keep. The risk is the one `ATTRIBUTIONS.md`
+was written for: our phrase, somebody else's book, and no line on the page saying which is
+which.
+
+**Three ways out, and the choice is Helen's and Ryan's, not a session's:**
+
+1. **Keep it and credit the resonance** — a line somewhere that Walker got there first, which
+   costs nothing and closes the question permanently.
+2. **Keep it and say nothing**, on the grounds that Helen arrived at it independently and
+   post-normal predates them both. Defensible, and it stays defensible only for as long as
+   nobody notices the subtitle.
+3. **Change it.**
+
+What is *not* available is leaving the file asserting there is no risk here. That part is now
+fixed regardless of what happens to the tagline.
 
 ### Whether Helen gets a static CMS
 
@@ -83,6 +113,31 @@ Hers to correct on her own site; ours to check against the book before any sheet
 ----
 
 ## Settled
+
+### A sheet is a reading or an essay, and the label flexes (2026-09-07)
+
+The model settled below assumed the specimen is somebody else's — Woolf's essay, a painting, a
+word. *Coming to Terms* is Ryan's own essay, so there is no external specimen to mount, and the
+question is whether that needs a second page type.
+
+**It does not.** It needs the label to flex, which a description list does for free:
+
+| a reading | an essay |
+|---|---|
+| Specimen, Maker, This text | Written by, Written, First published |
+| Read / Read by | This text / Terms |
+
+The kicker above the title says which — "Sheet · a reading" or "Sheet · an essay" — and that
+is the whole distinction. Both are sheets, both carry a label, both keep our words and other
+people's visibly apart. On an essay the specimen is simply the terms it is about, which for a
+herbarium site is the right shape anyway: a word collected, pressed, and compared against
+others until one of them fits.
+
+**One rule the essay case adds.** When a sheet reprints something published elsewhere, the
+label says what was changed. *Coming to Terms* drops the block quotations from other writers
+that the original carries, so its label says so and says the author's own words are unchanged.
+An unmarked edit of our own published text is the same failure as an unmarked edit of somebody
+else's — the site just happens to be the injured party.
 
 ### What Queering Earth is for: a reading becomes an artifact (2026-09-07)
 

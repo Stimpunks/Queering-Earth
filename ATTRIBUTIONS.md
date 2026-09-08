@@ -95,8 +95,52 @@ library. The note in SKS at `notes/Resources/Unsorted/2025/On Being Ill.md` carr
 wording under a title that does not name an edition, and its body text is OCR-mangled
 ("the b o d y is a sheet o f plain glass"). It is a pointer. It is not quotable.
 
+### Plate 511, *The Floral Magazine* v.9 (1870)
+
+**Used on:** `coming-to-terms.html`
+
+A hand-coloured lithograph of two orchid blooms, mounted as the sheet's plate.
+
+**Source:** [*The Floral Magazine*, volume 9](https://www.biodiversitylibrary.org/page/50241086),
+London: L. Reeve & Co., 1870, plate 511. Drawn and lithographed by **Worthington G. Smith**;
+printed by Vincent Brooks, Day & Son. **Public domain**, so marked by the Biodiversity
+Heritage Library, which digitised it.
+
+**Verified:** 2026-09-07. Public-domain status read from BHL's own statement on the item.
+
+**The artist's name was read off the plate, not out of the metadata**, and that turned out to
+matter. BHL's Flickr tags on a neighbouring Curtis's plate credit `artist:name=Walter Wood
+Fitch`; the signature on that plate reads *W. Fitch*, and the illustrator of Curtis's in that
+period was **Walter Hood Fitch**. BHL's tag is wrong. The Floral Magazine plate we did use is
+signed *Worthington G. Smith, F.L.S. del et lith* in the bottom-left corner, and that
+signature — not the catalogue record — is what this credit is based on.
+
+**Standing note for any future plate.** A digitiser's metadata is a finding aid, exactly like
+an SKS hit. The object carries its own attribution in the corner. Read the corner.
+
+----
+
+### Nick Walker — *Postnormal Possibilities*, and our masthead
+
+**OPEN.** Not a quotation we made, a collision we found.
+
+The site's tagline is **"Post-normal possibilities."** The subtitle of Walker's book is
+*Notes on the Neurodiversity Paradigm, Autistic Empowerment, and **Postnormal Possibilities***
+— verified 2026-09-07 against [neuroqueer.com](https://neuroqueer.com/neuroqueer-heresies/).
+One hyphen apart, on a site that quotes Walker on its home page, about the subject of his book.
+
+Helen Edgar wrote the phrase in the founding brainstorm and may well have arrived at it
+herself; *post-normal* also has a separate lineage in post-normal science (Funtowicz and
+Ravetz, early 1990s) which nobody here has yet checked against the primary. So this is not a
+finding of borrowing. It is a finding that `DECISIONS.md` was asserting there was no risk here
+when there plainly is one, and that assertion has been corrected.
+
+**What happens to the tagline is Helen's and Ryan's call.** What this ledger needs is for the
+question to stop being invisible. It is logged, it is open, and it stays open until they close
+it.
+
 ----
 
 ## Open
 
-Nothing yet.
+The Walker tagline collision, immediately above.

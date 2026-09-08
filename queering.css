@@ -506,3 +506,55 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
 /* A sheet's masthead is left-ranged: the plate is the centred thing, a reading is
    not. Same element as the index masthead, different alignment. */
 .qe-masthead-sheet { text-align: left; }
+
+/* ─────────────────────────────────────────────── more blooms
+ *
+ * One plant, several colours. The decorative tokens exist for exactly this and
+ * are never allowed near text. Added for the "Coming to Terms" header, where the
+ * variation along a single stem is the argument the drawing is making.
+ */
+.qe-botanical .bloom-violet    { fill: var(--qe-violet);    stroke: var(--qe-moss); stroke-width: 1.1; }
+.qe-botanical .bloom-verdigris { fill: var(--qe-verdigris); stroke: var(--qe-moss); stroke-width: 1.1; }
+.qe-botanical .bloom-lichen    { fill: var(--qe-lichen);    stroke: var(--qe-moss); stroke-width: 1.1; }
+
+/* ─────────────────────────────────────────────── a mounted plate
+ *
+ * A scanned illustration, mounted the way a specimen is mounted: pinned to the
+ * sheet with its provenance under it. The caption is not decoration — a plate we
+ * did not draw carries somebody's name, a book, and a year, or it does not go on
+ * the page. See ATTRIBUTIONS.md.
+ */
+.qe-plate {
+  margin: 2.75rem auto;
+  max-width: 23rem;
+  text-align: center;
+}
+.qe-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--qe-rule);
+  background: var(--qe-card);
+  padding: 0.55rem;
+  box-shadow: 0 1px 0 var(--qe-paper-deep);
+}
+.qe-plate figcaption {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--qe-moss);
+  text-align: left;
+}
+
+@media print {
+  /* The plate prints. Capped so it cannot take a sheet of its own, and the frame
+     goes: a printed border around a printed scan is two borders. */
+  .qe-plate { max-width: 3.4in; }
+  .qe-plate img { border: none; padding: 0; background: none; box-shadow: none; max-height: 5in; width: auto; }
+  .qe-plate figcaption { color: #222; }
+  /* New blooms need the same ink-only treatment as the old ones. A fill that the
+     print sheet cannot reach is how Star Stuff printed 44 blank pages. */
+  .qe-botanical .bloom-violet,
+  .qe-botanical .bloom-verdigris,
+  .qe-botanical .bloom-lichen { fill: none; stroke: #444; }
+}
