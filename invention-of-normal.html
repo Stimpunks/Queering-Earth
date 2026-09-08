@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wyrd, Weird, and the Invention of Normal — Queering Earth</title>
+<meta name="description" content="Wyrd was Old English for fate. It became weird, and then weird became a diagnosis. A sheet on the demotion of a word, the Weird Sisters, changelings, refusal, and an idea of normal barely two centuries old.">
+<link rel="canonical" href="https://queering.earth/invention-of-normal">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5efe2">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Queering Earth">
+<meta property="og:title" content="Wyrd, Weird, and the Invention of Normal">
+<meta property="og:description" content="Before it meant strange, it meant fate. The demotion of a word, and the two-century-old idea that replaced it.">
+<meta property="og:url" content="https://queering.earth/invention-of-normal">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://queering.earth/images/og-invention-of-normal.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sheet, an essay: Wyrd, Weird, and the Invention of Normal. Helen Edgar on the word before it meant strange.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wyrd, Weird, and the Invention of Normal">
+<meta name="twitter:description" content="Before it meant strange, it meant fate. The demotion of a word, and the two-century-old idea that replaced it.">
+<meta name="twitter:image" content="https://queering.earth/images/og-invention-of-normal.png">
+<meta name="twitter:image:alt" content="Sheet, an essay: Wyrd, Weird, and the Invention of Normal. Helen Edgar on the word before it meant strange.">
+
+<!-- The mark is a pressed leaf pinned with the wordmark's rust dot. SVG first for
+     anything that takes it; the .ico carries 16/32/48/64 for everything else.
+     All of them are drawn by tools/make-images.py — do not hand-edit the rasters. -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;display=swap">
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's plain-view choice BEFORE first paint. Deferred to
+     queering.js it would flash the decorated page at someone who turned it off. -->
+<script>try{if(localStorage.getItem('qe-plain')==='1')document.documentElement.classList.add('plain')}catch(e){}</script>
+</head>
+<body>
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+</div>
+
+<main id="main">
+
+  <header class="qe-masthead qe-masthead-sheet">
+    <p class="qe-home"><a href="/">Queering Earth</a></p>
+    <p class="qe-kicker">Sheet &middot; an essay</p>
+    <h1>Wyrd, Weird, and the Invention of Normal</h1>
+
+    <!-- Three at the well. One root, one trunk, three stems, three heads that do
+         not match — Urðr, Verðandi and Skuld drawn as a plant rather than as
+         three women, because this site draws specimens. The curls are Helen's
+         note on the Rossetti header ("squiggles and swirly bits so it isn't all
+         linear"), and they are .stem so they draw themselves on with everything
+         else. Positioning on the outer <g>, animation on the inner .sprout: a
+         CSS transform on the same element overrides the SVG transform attribute
+         and collapses every sprout onto the origin. -->
+    <svg class="qe-botanical" viewBox="112 26 396 212" role="img" aria-label="A plant rising out of a shallow well: three stems from one crown, three flower heads of three different colours, roots reaching down into the water, and small mushrooms ringed around the rim." focusable="false">
+      <path class="stem" style="--len:150" stroke-width="1.6" d="M242 194 C 250 226, 370 226, 378 194"/>
+      <path class="stem" style="--len:44"  stroke-width="1.5" d="M310 198 C 302 206, 296 212, 294 220"/>
+      <path class="stem" style="--len:44"  stroke-width="1.5" d="M310 198 C 318 206, 324 212, 326 220"/>
+
+      <path class="stem" style="--len:118" stroke-width="2.4" d="M310 198 C 305 164, 315 126, 310 88"/>
+      <path class="stem" style="--len:152" stroke-width="2.2" d="M310 198 C 276 170, 238 144, 200 124"/>
+      <path class="stem" style="--len:152" stroke-width="2.2" d="M310 198 C 344 170, 382 144, 420 124"/>
+
+      <!-- The curls. A tendril carries no new class; it is a stem. -->
+      <path class="stem" style="--len:104" stroke-width="1.5" d="M200 124 C 178 114, 156 120, 152 136 C 149 148, 162 154, 168 146 C 172 140, 165 134, 161 139"/>
+      <path class="stem" style="--len:104" stroke-width="1.5" d="M420 124 C 442 114, 464 120, 468 136 C 471 148, 458 154, 452 146 C 448 140, 455 134, 459 139"/>
+
+      <g transform="translate(288 156) rotate(-120)"><g class="sprout sprout-leaf" style="--i:1"><path class="leaf" d="M0 0 C 6.6 -8.6, 20 -9.1, 26 0 C 20 9.1, 6.6 8.6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 25 0"/></g></g>
+      <g transform="translate(332 156) rotate(-60)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" d="M0 0 C 6.6 -8.6, 20 -9.1, 26 0 C 20 9.1, 6.6 8.6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 25 0"/></g></g>
+      <g transform="translate(252 158) rotate(-150)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" d="M0 0 C 5.4 -7, 16.5 -7.4, 21.4 0 C 16.5 7.4, 5.4 7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 20.5 0"/></g></g>
+      <g transform="translate(368 158) rotate(-30)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf" d="M0 0 C 5.4 -7, 16.5 -7.4, 21.4 0 C 16.5 7.4, 5.4 7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 20.5 0"/></g></g>
+
+      <!-- Verðandi at the top, in the middle, because she is the one that is happening. -->
+      <g transform="translate(310 88) rotate(-5)"><g class="sprout" style="--i:6">
+        <path class="bloom" stroke-width="1.1" d="M0 0 C -9 3, -12.5 13, -7.5 20.5 C -3.5 26, 3.5 26, 7.5 20.5 C 12.5 13, 9 3, 0 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M-4.5 20 C -3 15, -2 8, -2 1"/>
+        <path class="rib" stroke-width="0.8" d="M4.5 20 C 3 15, 2 8, 2 1"/>
+        <circle class="body" cx="0" cy="1.5" r="2"/>
+      </g></g>
+      <g transform="translate(200 124) rotate(-28)"><g class="sprout" style="--i:7">
+        <path class="bloom-verdigris" stroke-width="1.1" d="M0 0 C -8 2.6, -11 11.5, -6.6 18 C -3 23, 3 23, 6.6 18 C 11 11.5, 8 2.6, 0 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M-4 17.5 C -2.6 13, -1.8 7, -1.8 1"/>
+        <circle class="body" cx="0" cy="1.5" r="1.8"/>
+      </g></g>
+      <g transform="translate(420 124) rotate(26)"><g class="sprout" style="--i:8">
+        <path class="bloom-violet" stroke-width="1.1" d="M0 0 C -8 2.6, -11 11.5, -6.6 18 C -3 23, 3 23, 6.6 18 C 11 11.5, 8 2.6, 0 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M4 17.5 C 2.6 13, 1.8 7, 1.8 1"/>
+        <circle class="body" cx="0" cy="1.5" r="1.8"/>
+      </g></g>
+
+      <!-- A ring of them, which is what a fairy ring is. -->
+      <g transform="translate(206 204) scale(0.72)"><g class="sprout" style="--i:10">
+        <path class="stipe" d="M-2.6 0 C -3.8 -5, -3.2 -10, -1.8 -14.6 C -0.6 -15.1, 0.9 -15.1, 2.1 -14.6 C 3.1 -10, 2.7 -5, 2.7 0 C 1 0.9, -1.1 0.9, -2.6 0 Z"/>
+        <path class="cap" stroke-width="1.1" d="M-11.6 -14.6 C -13.2 -22.4, -7 -28, 0 -28 C 7 -28, 13.2 -22.4, 11.6 -14.6 C 8.6 -13.1, 6.4 -15.7, 3.6 -14.2 C 1.2 -12.9, -1.2 -12.9, -3.6 -14.2 C -6.4 -15.7, -8.6 -13.1, -11.6 -14.6 Z"/>
+        <path class="rib" stroke-width="0.7" d="M-6.2 -25.8 C -4.4 -20.4, -3.8 -16.8, -4 -14.6"/>
+        <path class="rib" stroke-width="0.7" d="M6.2 -25.8 C 4.4 -20.4, 3.8 -16.8, 4 -14.6"/>
+      </g></g>
+      <g transform="translate(224 207) scale(0.46)"><g class="sprout" style="--i:11">
+        <path class="stipe" d="M-2.6 0 C -3.8 -5, -3.2 -10, -1.8 -14.6 C -0.6 -15.1, 0.9 -15.1, 2.1 -14.6 C 3.1 -10, 2.7 -5, 2.7 0 C 1 0.9, -1.1 0.9, -2.6 0 Z"/>
+        <path class="cap-alt" stroke-width="1.1" d="M-11.6 -14.6 C -13.2 -22.4, -7 -28, 0 -28 C 7 -28, 13.2 -22.4, 11.6 -14.6 C 8.6 -13.1, 6.4 -15.7, 3.6 -14.2 C 1.2 -12.9, -1.2 -12.9, -3.6 -14.2 C -6.4 -15.7, -8.6 -13.1, -11.6 -14.6 Z"/>
+        <path class="rib" stroke-width="0.7" d="M-6.2 -25.8 C -4.4 -20.4, -3.8 -16.8, -4 -14.6"/>
+      </g></g>
+      <g transform="translate(400 207) scale(0.56)"><g class="sprout" style="--i:12">
+        <path class="stipe" d="M-2.6 0 C -3.8 -5, -3.2 -10, -1.8 -14.6 C -0.6 -15.1, 0.9 -15.1, 2.1 -14.6 C 3.1 -10, 2.7 -5, 2.7 0 C 1 0.9, -1.1 0.9, -2.6 0 Z"/>
+        <path class="cap-alt" stroke-width="1.1" d="M-11.6 -14.6 C -13.2 -22.4, -7 -28, 0 -28 C 7 -28, 13.2 -22.4, 11.6 -14.6 C 8.6 -13.1, 6.4 -15.7, 3.6 -14.2 C 1.2 -12.9, -1.2 -12.9, -3.6 -14.2 C -6.4 -15.7, -8.6 -13.1, -11.6 -14.6 Z"/>
+        <path class="rib" stroke-width="0.7" d="M6.2 -25.8 C 4.4 -20.4, 3.8 -16.8, 4 -14.6"/>
+      </g></g>
+      <g transform="translate(418 204) scale(0.78)"><g class="sprout" style="--i:13">
+        <path class="stipe" d="M-2.6 0 C -3.8 -5, -3.2 -10, -1.8 -14.6 C -0.6 -15.1, 0.9 -15.1, 2.1 -14.6 C 3.1 -10, 2.7 -5, 2.7 0 C 1 0.9, -1.1 0.9, -2.6 0 Z"/>
+        <path class="cap" stroke-width="1.1" d="M-11.6 -14.6 C -13.2 -22.4, -7 -28, 0 -28 C 7 -28, 13.2 -22.4, 11.6 -14.6 C 8.6 -13.1, 6.4 -15.7, 3.6 -14.2 C 1.2 -12.9, -1.2 -12.9, -3.6 -14.2 C -6.4 -15.7, -8.6 -13.1, -11.6 -14.6 Z"/>
+        <path class="rib" stroke-width="0.7" d="M-6.2 -25.8 C -4.4 -20.4, -3.8 -16.8, -4 -14.6"/>
+        <path class="rib" stroke-width="0.7" d="M6.2 -25.8 C 4.4 -20.4, 3.8 -16.8, 4 -14.6"/>
+      </g></g>
+    </svg>
+  </header>
+
+  <div class="qe-label">
+    <dl>
+      <dt>Written by</dt>
+      <dd><a href="https://morerealms.com/">Helen Edgar</a></dd>
+      <dt>After</dt>
+      <dd><a href="https://morerealms.com/becoming-weird-wyrd-normality/"><cite>Wyrd, Weird, and the Invention of Normal</cite></a>, More Realms, July 2026</dd>
+      <dt>This text</dt>
+      <dd>A sheet built out from that essay for Queering Earth. Helen&rsquo;s published sentences appear as quotations, marked and linked; the sheet around them is new, and hers to sign.</dd>
+      <dt>Mounted</dt>
+      <dd>8 September 2026</dd>
+      <dt>Terms</dt>
+      <dd><a href="https://stimpunks.org/glossary/weird/">Weird</a> &middot; <a href="https://stimpunks.org/glossary/normal/">Normal</a> &middot; <a href="https://stimpunks.org/glossary/neuronormativity/">Neuronormativity</a> &middot; <a href="https://stimpunks.org/glossary/ethodiversity/">Ethodiversity</a> &middot; <a href="https://stimpunks.org/glossary/autistic-joy/">Autistic Joy</a></dd>
+    </dl>
+  </div>
+
+  <p class="qe-lede">There is a demotion inside the word <em>weird</em>. It began as <span lang="ang">wyrd</span> &mdash; Old English for fate, for the thing that has power over you &mdash; and it ended up as the thing that is wrong with you. This sheet follows the drop, and asks who was standing at the bottom of it holding the new definition.</p>
+
+  <div class="qe-provocation qe-wide">
+    <p>Before it meant <span class="qe-off qe-off-a">strange</span>,</p>
+    <p>it meant <span class="qe-off qe-off-b">fate</span>.</p>
+  </div>
+
+  <ol class="qe-drift" aria-label="One word in three states">
+    <li style="--rot:-1.6deg; --slip-color: var(--qe-verdigris)">
+      <p class="qe-drift-word" lang="ang" style="--soft:0; --wonk:0">wyrd</p>
+      <p class="qe-drift-when">Old English</p>
+      <p class="qe-drift-gloss">Fate; that which comes to pass. Built on <span lang="ang">weorþan</span>, to become. Kin to <span lang="ang">weorþ</span>, the ancestor of <em>worth</em>. A force you answer to.</p>
+    </li>
+    <li style="--rot:1.1deg; --slip-color: var(--qe-marigold)">
+      <p class="qe-drift-word" style="--soft:100; --wonk:1">weird</p>
+      <p class="qe-drift-when">c. 1400 onward</p>
+      <p class="qe-drift-gloss">Having power to control fate &mdash; and then, by way of three women on a Scottish heath and an eighteenth-century stage, uncanny. A quality you carry.</p>
+    </li>
+    <li style="--rot:-0.7deg; --slip-color: var(--qe-coral)">
+      <p class="qe-drift-word qe-drift-word--flat">weird</p>
+      <p class="qe-drift-when">From about 1820</p>
+      <p class="qe-drift-gloss">Odd-looking, strange, disturbingly different. A deviation you are corrected for. Set here in the institution&rsquo;s own typeface, because by this point the institution is the one saying it.</p>
+    </li>
+  </ol>
+
+  <p>The dates are from the <a href="https://www.etymonline.com/word/weird">Online Etymology Dictionary</a>, which puts the sense <q>odd-looking, strange, disturbingly different</q> at 1820. Everything above that third slip is more than a thousand years long. The sense that most people now think <em>is</em> the word is about two centuries old, and it arrived at almost exactly the same moment as <em>normal</em> did. That coincidence is the argument of this sheet.</p>
+
+  <h2>A force you answer to</h2>
+
+  <p>Helen opens her essay at the root:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the older fate</span>
+    <blockquote>
+      <p>In Old English, <em>wyrd</em> meant fate, but not necessarily the fixed, predetermined fate the word often suggests today.</p>
+    </blockquote>
+    <figcaption>Helen Edgar, <a href="https://morerealms.com/becoming-weird-wyrd-normality/"><cite>Wyrd, Weird, and the Invention of Normal</cite></a>, More Realms, July 2026.</figcaption>
+  </figure>
+
+  <p>Not fixed, because the verb underneath it is a verb of motion. <span lang="ang">Wyrd</span> is formed on <span lang="ang">weorþan</span>, to come to pass, to become. And the same Germanic root gives <span lang="ang">weorþ</span>, which becomes modern English <em>worth</em>. Alby Stone, whose short book on the subject has been in print in one form or another since 1989, puts the three senses together in one line:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; worth, death, and what will come</span>
+    <blockquote>
+      <p>Old English <span lang="ang">wyrd</span> combines all the qualities found in the names of the three nornir: it means &lsquo;worth&rsquo;; &lsquo;death&rsquo;; and that which will happen or come to be.</p>
+    </blockquote>
+    <figcaption>Alby Stone, <cite>Wyrd: Fate and Destiny in North European Paganism</cite>, corrected edition (Loughborough: Heart of Albion Press, 2022), p.&nbsp;37. First published 1989.</figcaption>
+  </figure>
+
+  <p>Worth and death and becoming, held in one syllable. Not a sentence handed down, but a running account of what a life has come to be worth by the end of it. Stone is blunt that the popular picture is the wrong one: what the sources actually describe, he writes, is <q>something much more flexible and worthwhile than the rigid, impersonal and implacable force that fate is commonly expected to be.</q></p>
+
+  <p>The Old English poets did use it the hard way too. The Exeter Book&rsquo;s <cite>Wanderer</cite> ends its opening sentence on a half-line that has been carried into English a hundred different ways:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the half-line</span>
+    <blockquote>
+      <p class="qe-orig" lang="ang">wyrd bið ful ārǣd</p>
+      <p>Fate is wholly fixed &mdash; or wholly decreed, or wholly inexorable, depending on whose English you read it in.</p>
+    </blockquote>
+    <figcaption><cite>The Wanderer</cite>, line 5b, Exeter Book, tenth century. Old English as printed in <a href="https://en.wikisource.org/wiki/Bright%27s_Anglo-Saxon_Reader/The_Wanderer">Bright&rsquo;s Anglo-Saxon Reader</a>. The English line is ours, and it is a gloss rather than a translation: <span lang="ang">ārǣd</span> is exactly the word translators cannot agree on.</figcaption>
+  </figure>
+
+  <p>Hold both. <span lang="ang">Wyrd</span> was heavy. It was the thing you did not get to argue with, and an Anglo-Saxon audience would not have heard anything cosy in it. <strong>That is the point of the reclamation, not an obstacle to it.</strong> The word did not start out as a compliment and get insulted. It started out as a <em>power</em>, and it was demoted into a defect.</p>
+
+  <h2>Three at the well</h2>
+
+  <p>Where does a power like that live? In the Norse telling, at the foot of the world tree, in the hands of three women with a bucket. The <cite>Poetic Edda</cite> introduces them in six lines:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; V&ouml;lusp&aacute; 20</span>
+    <blockquote>
+      <p class="qe-orig qe-lines" lang="non"><span class="l">&THORN;a&eth;an koma meyiar, margs vitandi,</span><span class="l">&thorn;ri&aacute;r, &oacute;r &thorn;eim sal, er und &thorn;olli stendr;</span><span class="l">Ur&eth; h&eacute;to eina, a&eth;ra Ver&eth;andi,</span><span class="l">&mdash;skaro &aacute; sk&iacute;&eth;i&mdash; Skuld ina &thorn;ri&eth;io;</span><span class="l">&thorn;&aelig;r l&#491;g l&#491;g&eth;o, &thorn;&aelig;r l&iacute;f kuro</span><span class="l">alda b&#491;rnum, &oslash;rl&#491;g seggia.</span></p>
+      <p class="qe-lines"><span class="l">Thence come the maidens mighty in wisdom,</span><span class="l">Three from the dwelling down &rsquo;neath the tree;</span><span class="l">Urth is one named, Verthandi the next, &mdash;</span><span class="l">On the wood they scored, &mdash; and Skuld the third.</span><span class="l">Laws they made there, and life allotted</span><span class="l">To the sons of men, and set their fates.</span></p>
+    </blockquote>
+    <figcaption><cite>V&ouml;lusp&aacute;</cite>, stanza 20. Old Norse after Gustav Neckel&rsquo;s 1914 edition; English from Henry Adams Bellows, <cite>The Poetic Edda</cite> (New York: The American-Scandinavian Foundation, 1923). Both texts as set out at <a href="https://www.mimisbrunnr.info/cv-st-19-21">Mimisbrunnr.info</a>.</figcaption>
+  </figure>
+
+  <p>Popular retellings hand the three of them out as past, present, and future, and Helen is right to say the names suggest something more interesting than a timeline. Ur&eth; is what has come to pass. Ver&eth;andi is the present participle of <span lang="non">ver&eth;a</span> &mdash; to happen, to become &mdash; the same verb that <span lang="ang">wyrd</span> descends from. Skuld is debt: what is owed, what falls due. Stone reads the trio as an accounting of worth rather than a clock, and the last word of the stanza, <span lang="non">&oslash;rl&#491;g</span>, is not <q>fate</q> in the sense of a script but something closer to <em>that which is of the law</em> &mdash; the particular conditions under which one particular life has to be lived.</p>
+
+  <p>So the middle sister is a verb in the continuous tense. She is not the present moment. She is <em>becoming</em>, ongoing, unfinished, still being carved. If you were going to build an idea of a person on any of the three, that is the one to build it on.</p>
+
+  <h2>Four hands on the same three women</h2>
+
+  <p>The word survived into Scots as a plain, unremarkable term for the Fates, and it is in Scottish chronicle that Macbeth meets them. Then four different people get hold of the same encounter over four hundred and thirty-five years, and each one leaves fingerprints:</p>
+
+  <ul class="qe-wall" aria-label="Four transcriptions of the Weird Sisters, 1587 to 2022">
+    <li><figure class="qe-slip" style="--rot:-1.7deg; --tape:-4deg; --slip-color: var(--qe-verdigris)">
+      <blockquote><p>&hellip;either the weird sisters, that is (as ye would say) the goddesses of destinie, or else some nymphs or feiries, indued with knowledge of prophesie by their necromanticall science&hellip;</p></blockquote>
+      <figcaption>Raphael Holinshed, <cite>Chronicles</cite>, 1587 (1808 reprint, p.&nbsp;269), transcribed in Bek-Pedersen (2022), p.&nbsp;64.</figcaption>
+    </figure></li>
+    <li><figure class="qe-slip" style="--rot:1.4deg; --tape:3deg; --slip-color: var(--qe-marigold)">
+      <blockquote><p>The weyward Sisters, hand in hand,<br>Posters of the Sea and Land,</p></blockquote>
+      <figcaption>Shakespeare, <cite>Macbeth</cite> I.iii, First Folio, 1623. The Folio never prints <em>weird</em>: it prints <em>weyward</em> and, later in the play, <em>weyard</em>, six times in all. Text from the Furness Variorum via Bek-Pedersen (2022), p.&nbsp;73.</figcaption>
+    </figure></li>
+    <li><figure class="qe-slip" style="--rot:-0.9deg; --tape:5deg; --slip-color: var(--qe-coral)">
+      <blockquote><p>This word, in general, signifies perverse, froward, moody, obstinate, intractable etc. and is everywhere so used by our Shakespeare</p></blockquote>
+      <figcaption>Lewis Theobald on <em>wayward</em>, <cite>The Works of William Shakespeare</cite>, volume&nbsp;5 (London, 1733), p.&nbsp;392 &mdash; explaining why he was replacing it with <em>weird</em>. Quoted in Bek-Pedersen (2022), p.&nbsp;73.</figcaption>
+    </figure></li>
+    <li><figure class="qe-slip" style="--rot:2deg; --tape:-6deg; --slip-color: var(--qe-violet)">
+      <blockquote><p>Theobald may in one sense revert the picture back to the Scottish tradition of the &lsquo;weird sisters&rsquo; by substituting &lsquo;weyward&rsquo; with &lsquo;weird&rsquo;, but in doing so he bypasses Shakespeare altogether.</p></blockquote>
+      <figcaption>Karen Bek-Pedersen, <a href="https://doi.org/10.2218/ss.v39.7159"><cite>Scottish Studies</cite> 39 (2022)</a>, p.&nbsp;76.</figcaption>
+    </figure></li>
+  </ul>
+
+  <p>Read the four slips in order and you can watch it happen. Holinshed cannot decide what the three of them are &mdash; goddesses, or nymphs, or fairies, or necromancers &mdash; and reaches for all four at once. Shakespeare, writing during the witch trials, for a king who had written a book on witchcraft, resolves the confusion by making them witches and calling them <em>weyward</em>: perverse, self-willed, contrary. Theobald, a hundred and ten years later, decides that must have been a copyist&rsquo;s error and puts <em>weird</em> back. And the Weird Sisters that everybody knows &mdash; the ones with the cauldron, the ones in every school edition &mdash; are Theobald&rsquo;s.</p>
+
+  <p><strong>Which is a complication for the reclamation, and this sheet is not going to smooth it out.</strong> Bek-Pedersen&rsquo;s conclusion is that Shakespeare wrote witches on purpose and that Theobald misread him. If she is right, then reclaiming the Weird Sisters as figures of fate is reclaiming an editor&rsquo;s Shakespeare rather than Shakespeare&rsquo;s. That is worth saying out loud, because the alternative is a nice story with a footnote quietly removed from it. It also does not damage the argument much: the drift from fate to wickedness to oddness happened whoever spelled what. The interesting thing is not that one editor got it wrong. It is that <em>weyward</em> and <em>weird</em> could be confused for each other at all &mdash; that self-willed and fated were already close enough on the page to swap places.</p>
+
+  <h2>That which does not belong</h2>
+
+  <p>Mark Fisher, writing about the weird as a mode rather than a genre, gives it a definition that does not mention strangeness of appearance at all:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the definition</span>
+    <blockquote>
+      <p>&hellip;the weird is that which does not belong. The weird brings to the familiar something which ordinarily lies beyond it, and which cannot be reconciled with the &ldquo;homely&rdquo; (even as its negation).</p>
+    </blockquote>
+    <figcaption>Mark Fisher, <cite>The Weird and the Eerie</cite> (London: Repeater Books, 2016), introduction. Quoted from the ebook, which carries no page numbers.</figcaption>
+  </figure>
+
+  <p>That is a relation, not a property. Nothing is weird by itself; a thing is weird <em>with respect to a frame</em>, and the frame is somebody&rsquo;s. Which means the sentence <q>you are weird</q> is always, on inspection, the sentence <q>you are outside the arrangement I was expecting</q> &mdash; and it says at least as much about the arrangement as about you.</p>
+
+  <p>Fisher goes further, and this is the part the neurodiversity movement has been living inside for thirty years without necessarily citing him for it. The feeling of wrongness that the weird produces, he writes, <q>is often a sign that we are in the presence of the new. The weird here is a signal that the concepts and frameworks which we have previously employed are now obsolete.</q> The discomfort is data. It is the frame reporting its own limits.</p>
+
+  <h2>The child they said was swapped</h2>
+
+  <p>There is an older and much worse version of being read as not-belonging, and it is worth putting on the same sheet as the Weird Sisters, because it comes out of the same fairy country.</p>
+
+  <p>Across Northern Europe, when a child did not develop the way a family expected, one available explanation was that the child had been taken and something else left in the cradle. Susan Schoon Eberly, working in a hospital developmental disabilities department, went through the fairy literature and read it as a body of folk diagnosis: changeling stories, she argues, are the folk record of children born with conditions that had no other name. Her article is called <a href="https://doi.org/10.1080/0015587X.1988.9716425"><cite>Fairies and the Folklore of Disability: Changelings, Hybrids and the Solitary Fairy</cite></a>, and it is not a charming read. The remedies attached to changeling belief were exposure, immersion, beating, and fire. In March 1895, at Ballyvadlea in County Tipperary, Bridget Cleary was burned at her own hearth by her husband, who had spent days insisting that the woman in the house was not his wife but a changeling. Nine people were charged over her death. He was convicted of manslaughter.</p>
+
+  <p><strong>So: no romanticising the fae on this sheet.</strong> Being called a changeling was not a compliment about your interesting inner life. It was the first draft of <q>this child is wrong,</q> and it had a body count.</p>
+
+  <p>What the same tradition also holds, though, is the other half of the story &mdash; the one where somebody refuses to let go. In the Scots ballad of Tam Lin, Janet is told exactly what the fairy host will do to the man she is trying to get back. They will change him in her arms, over and over, into things designed to make her drop him:</p>
+
+  <figure class="qe-poem">
+    <blockquote>
+      <div class="qe-stanza" lang="sco">
+        <span class="l">&lsquo;They&rsquo;ll turn me in your arms, lady,</span>
+        <span class="l l-in">Into an esk and adder;</span>
+        <span class="l">But hold me fast, and fear me not,</span>
+        <span class="l l-in">I am your bairn&rsquo;s father.</span>
+      </div>
+      <div class="qe-stanza" lang="sco">
+        <span class="l">&lsquo;They&rsquo;ll turn me to a bear sae grim,</span>
+        <span class="l l-in">And then a lion bold;</span>
+        <span class="l">But hold me fast, and fear me not,</span>
+        <span class="l l-in">As ye shall love your child.</span>
+      </div>
+      <div class="qe-stanza" lang="sco">
+        <span class="l">&lsquo;Again they&rsquo;ll turn me in your arms</span>
+        <span class="l l-in">To a red het gaud of airn;</span>
+        <span class="l">But hold me fast, and fear me not,</span>
+        <span class="l l-in">I&rsquo;ll do to you nae harm.</span>
+      </div>
+    </blockquote>
+    <figcaption><cite>Tam Lin</cite>, stanzas 31&ndash;33 of version A, from Francis James Child, <cite>The English and Scottish Popular Ballads</cite> (Boston, 1882&ndash;98), ballad 39. <em>Esk</em> is a newt; a <em>red het gaud of airn</em> is a red-hot bar of iron.</figcaption>
+  </figure>
+
+  <p><em>Hold me fast, and fear me not.</em> Three times, once per transformation, and the instruction never changes. The ballad is completely clear that the shapes are not the problem &mdash; the shapes are a test of whether the person holding on will keep holding on. Janet does not fix him, and she is not asked to. She is asked to stay, through the adder and the bear and the bar of iron, and to know the whole time that the thing in her arms is the person she came for.</p>
+
+  <p>Set beside a hundred years of therapy aimed at making a child hold still, that is a startling piece of advice to find in a ballad. It is also, more or less exactly, what every Autistic adult writing about meltdown says they needed and did not get.</p>
+
+  <p>And the other half of the fae bargain, the one where the child is glad to go, is the poem everybody knows:</p>
+
+  <figure class="qe-poem">
+    <blockquote>
+      <div class="qe-stanza">
+        <span class="l">Come away, O human child!</span>
+        <span class="l">To the waters and the wild</span>
+        <span class="l">With a faery, hand in hand,</span>
+        <span class="l">For the world&rsquo;s more full of weeping than you can understand.</span>
+      </div>
+    </blockquote>
+    <figcaption>W. B. Yeats, <a href="https://en.wikisource.org/wiki/The_Wanderings_of_Oisin_and_Other_Poems/The_Stolen_Child">&lsquo;The Stolen Child&rsquo;</a>, from <cite>The Wanderings of Oisin and Other Poems</cite> (1889). In the last stanza the refrain turns around: <q>For he comes, the human child, / To the waters and the wild&hellip; / From a world more full of weeping than he can understand.</q></figcaption>
+  </figure>
+
+  <p>Yeats knew what he was doing with that switch. Three times it is an invitation; the fourth time it is a report, and the child has gone. Read it as a poem about leaving a world that will not have you and it is unbearable. Read it as a poem about finding the other people who are also leaving, and it is the founding document of every weird scene there has ever been.</p>
+
+  <h2>Refusal is not a no</h2>
+
+  <p>Which brings up the thing that gets called withdrawal, or non-compliance, or refusal to engage, and is usually none of those.</p>
+
+  <p>Eve Tuck and K.&nbsp;Wayne Yang, building on Audra Simpson&rsquo;s account of the Kahnaw&agrave;:ke Mohawk community declining to be made legible to anthropology, argue that a refusal is not an absence. It is a position:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; a generative form</span>
+    <blockquote>
+      <p>Refusal is not just a &ldquo;no,&rdquo; but a redirection to ideas otherwise unacknowledged or unquestioned.</p>
+    </blockquote>
+    <figcaption>Eve Tuck and K. Wayne Yang, <q>R-Words: Refusing Research</q>, in Django Paris and Maisha T. Winn (eds), <cite>Humanizing Research: Decolonizing Qualitative Inquiry with Youth and Communities</cite> (Thousand Oaks: Sage, 2014), p.&nbsp;239. They are drawing on Audra Simpson, <q>On Ethnographic Refusal: Indigeneity, &lsquo;Voice&rsquo; and Colonial Citizenship</q>, <cite>Junctures</cite> 9 (2007), 67&ndash;80.</figcaption>
+  </figure>
+
+  <p>Two pages later they put it flatly: <q>refusal is not a prohibition but a generative form.</q> A refusal sets a limit on what the powerful get to know, and a methodology of refusal treats that limit <q>as productive, as indeed a good thing.</q></p>
+
+  <p><strong>The transposition here is ours, and it needs saying plainly.</strong> Tuck and Yang are writing about settler colonialism, Indigenous sovereignty, and the research apparatus, and their argument is grounded in that and not offered as a general theory of saying no. Lifting it onto <a href="https://stimpunks.org/glossary/masking/">masking</a> is a move we are making, not one they made. What survives the move is the structure: that declining to render yourself legible on somebody else&rsquo;s terms is a stance with content, and that the demand for legibility was never neutral. The unmasked Autistic person who stops performing fluency is not failing to communicate. They are declining a translation, and the translation was always in one direction.</p>
+
+  <h2>Joy is not a coping strategy</h2>
+
+  <p>The other thing that gets misread as a symptom is delight.</p>
+
+  <p>Elliot Wassell&rsquo;s study of Autistic joy put a questionnaire to eighty-six Autistic people, most of them women, girls, or non-binary, asking whether they experience joy and what it is made of. Sixty-seven per cent said they often do; ninety-four per cent said they actively enjoy aspects of being Autistic. The paper&rsquo;s finding is not that Autistic people cope well. It is that the joy is native, and the obstacle is other people.</p>
+
+  <ul class="qe-wall" aria-label="Three findings on Autistic and queercrip joy">
+    <li><figure class="qe-slip" style="--rot:-1.5deg; --tape:4deg; --slip-color: var(--qe-marigold)">
+      <blockquote><p>&hellip;the key barrier to joyful experience is not autism itself but other people&rsquo;s lack of acceptance of authentic autistic behaviours such as stimming and pursuit of special interests.</p></blockquote>
+      <figcaption>Elliot Wassell, <a href="https://doi.org/10.1080/09687599.2025.2498417"><q>Experiences of autistic joy</q></a>, <cite>Disability &amp; Society</cite> 41:1 (2026), 236&ndash;261, from the abstract.</figcaption>
+    </figure></li>
+    <li><figure class="qe-slip" style="--rot:1.8deg; --tape:-3deg; --slip-color: var(--qe-verdigris)">
+      <blockquote><p>No matter how &lsquo;weird&rsquo;, &lsquo;age inappropriate&rsquo;, or &lsquo;useless&rsquo; our passions might seem to them, for us, this is what makes life worth living.</p></blockquote>
+      <figcaption>Participant&nbsp;28, quoted in Wassell (2026), p.&nbsp;249.</figcaption>
+    </figure></li>
+    <li><figure class="qe-slip" style="--rot:-0.6deg; --tape:6deg; --slip-color: var(--qe-violet)">
+      <blockquote><p>Queercrip joy is more than finding new happy objects&mdash;it is refusing to collapse &lsquo;positive&rsquo; affects and &lsquo;negative&rsquo; affects into a mutually exclusive binary.</p></blockquote>
+      <figcaption>Megan Ingram and Kai Jacobsen, <a href="https://doi.org/10.1177/13634607241264319"><q>Both because of and in spite of: Towards the reclamation of queercrip joy</q></a>, <cite>Sexualities</cite> 28:3 (2025), 795&ndash;810, at p.&nbsp;804.</figcaption>
+    </figure></li>
+  </ul>
+
+  <p>Note where Participant&nbsp;28 puts the scare quotes. Not around <em>passions</em>. Around <em>weird</em> &mdash; the word arriving from outside, in somebody else&rsquo;s voice, to be held at arm&rsquo;s length while the sentence carries on.</p>
+
+  <p>Ingram and Jacobsen supply the guard rail that stops any of this becoming a slogan. Queercrip joy, they argue, exists <em>both because of and in spite of</em> pain: it is not the opposite of suffering, not a replacement for it, and not evidence that everything is fine. Joy and grief are simultaneous and co-constitutive, and a joy that has to pretend otherwise is just cheerfulness with a quota. That is the difference between celebrating <a href="https://stimpunks.org/glossary/autistic-joy/">Autistic joy</a> and using it to change the subject.</p>
+
+  <h2>Where the whimsy gets policed out</h2>
+
+  <p>None of this is subtle in practice. There is a whole apparatus for training play, <a href="https://stimpunks.org/glossary/stimming/">stimming</a>, and delight out of people, and most of us went through it before we were ten.</p>
+
+  <!-- No aria-label here. The words ARE the content, and an aria-label on a <p>
+       replaces its text for some screen readers instead of introducing it. -->
+  <p class="qe-cutup">
+    <span class="w" style="--rot:-3deg; --sz:0.85em; --soft:20">odd</span>
+    <span class="w" style="--rot:2.5deg; --sz:1.05em">difficult</span>
+    <span class="w" style="--rot:-1.5deg; --sz:0.78em; --soft:100">immature</span>
+    <span class="w w-quiet" style="--rot:3.5deg; --sz:0.95em">too much</span>
+    <span class="w" style="--rot:-2deg; --sz:0.8em; --wonk:0">attention-seeking</span>
+    <span class="w" style="--rot:1.5deg; --sz:0.9em; --soft:0; --wonk:0">non-compliant</span>
+    <span class="w w-loud" style="--rot:-4deg; --sz:1.5em; --soft:100">weird</span>
+  </p>
+
+  <p>Those are the words, and behind them is <a href="https://stimpunks.org/glossary/behaviorism/">behaviourism</a> in the classroom, <a href="https://stimpunks.org/glossary/deficit-ideology/">deficit ideology</a> in the paperwork, and professionalism at work &mdash; the last of which is mostly a dress code for affect, requiring legible seriousness at all times and reading enthusiasm as a lapse. The Stimpunks glossary has the structural name for the whole arrangement: <a href="https://stimpunks.org/glossary/neuronormativity/">neuronormativity</a>, a set of norms and expectations that centre one way of functioning as the right way, then treat everything else as a disorder. Wassell&rsquo;s participants describe its effects in one line each. Less pressure to always be doing. Not being forced to mask so long we lose touch with ourselves.</p>
+
+  <h2>Where it gets let back in</h2>
+
+  <p>The counter-image is not a slogan either; it is a set of rooms. Stimpunks builds and describes them: <a href="https://stimpunks.org/glossary/caves-campfires-watering-holes/">caves, campfires, and watering holes</a> as the three spatial modes a mixed group of humans actually needs, and <a href="https://stimpunks.org/glossary/cavendish-space/">Cavendish Space</a> as the name for a place designed around monotropic attention and sensory reality instead of around compliance. The Campfire Learn Together sessions are the working example &mdash; including <a href="https://stimpunks.org/2026/07/08/campfire-learn-together-the-mycelial-worldview-is-punk/">the one on the mycelial worldview</a>, which is about fungi and is therefore about distributed intelligence with no commanding centre, decomposition as a form of care, and mischief as a method.</p>
+
+  <p>What all of those spaces have in common is that nobody in them is managing your weirdness. That is the entire specification. Everything else &mdash; the lighting, the seating, the option to leave &mdash; follows from it.</p>
+
+  <h2>Normal is younger than the railways</h2>
+
+  <p>Here is the part that reframes everything above. <span lang="ang">Wyrd</span> is more than a thousand years old. <em>Normal</em>, as a thing a person can be, is about two hundred.</p>
+
+  <p>Robert Chapman&rsquo;s <cite>Empire of Normality</cite> tells the story through Adolphe Quetelet, a Belgian astronomer who turned the statistical tools built for tracking stars onto human beings, and published <cite>l&rsquo;homme moyen</cite> &mdash; the average man &mdash; in 1835. Quetelet did not stop at describing the average. He recommended it:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the type of perfection</span>
+    <blockquote>
+      <p>If the average man were completely determined&hellip; we might consider him as the type of perfection; and everything differing from his proportions or condition, would constitute&hellip; a monstrosity.</p>
+    </blockquote>
+    <figcaption>Adolphe Quetelet, quoted in Robert Chapman, <cite>Empire of Normality: Neurodiversity and Capitalism</cite> (London: Pluto Press, 2023), chapter&nbsp;2. Chapman&rsquo;s sentence carries the quotation in three pieces, broken by <q>he wrote</q> and <q>he went on</q>; the ellipses here mark those breaks and nothing else.</figcaption>
+  </figure>
+
+  <p>Chapman&rsquo;s own line on what happened next is the one to keep:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; a mistake of nature</span>
+    <blockquote>
+      <p>The error curve developed to predict the course of stars now applied to human normativity, and to be abnormal was to be a mistake of nature.</p>
+    </blockquote>
+    <figcaption>Robert Chapman, <cite>Empire of Normality</cite> (London: Pluto Press, 2023), chapter&nbsp;2, <q>The invention of normality</q>. Quoted from the ebook, which carries no page numbers.</figcaption>
+  </figure>
+
+  <p>The word for a deviation, in the mathematics Quetelet borrowed, was <em>error</em>. It meant a measurement that had missed the star. Transferred onto people, with the average recast as the ideal, it meant a person who had missed being right. And Chapman&rsquo;s larger argument is that this was not a discovery that happened to have consequences: the Empire of Normality is <q>an apparatus of material relations, social practices, scientific research programmes, bureaucratic mechanisms, economic compulsions, and administrative procedures,</q> and it tightens the acceptable range because a system organised around productivity has a use for a narrow one.</p>
+
+  <p>Set the two clocks side by side, which is Helen&rsquo;s move and the best sentence in her essay:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the exchange</span>
+    <blockquote>
+      <p>Somewhere along the way, worth got redefined as fitting in, while being different stopped being something we valued at all.</p>
+    </blockquote>
+    <figcaption>Helen Edgar, <a href="https://morerealms.com/becoming-weird-wyrd-normality/"><cite>Wyrd, Weird, and the Invention of Normal</cite></a>, More Realms, July 2026.</figcaption>
+  </figure>
+
+  <p>That is the whole demotion in one sentence, and it is exact. <span lang="ang">Weorþ</span> and <span lang="ang">wyrd</span> came from the same root: worth was what a life turned out to be, measured at the end, in its own terms. The bell curve replaced that with worth as proximity to a mean &mdash; measurable at any moment, against everybody else, in somebody else&rsquo;s units.</p>
+
+  <h2>Wider than neuro</h2>
+
+  <p>One more frame, because <a href="https://stimpunks.org/glossary/neuronormativity/">neuronormativity</a> is not the only normativity in the room and the neurodiversity paradigm is not the widest available lens.</p>
+
+  <p>Ombre Tarragnat proposes <a href="https://stimpunks.org/glossary/ethodiversity/">ethodiversity</a> &mdash; <q>short for ethological diversity,</q> referring to <q>the intra- and inter-specific variabilities and differences in behavioural or existential styles in (human and nonhuman) animals</q>. The term, Tarragnat writes, <q>parallels &lsquo;biodiversity&rsquo; and &lsquo;neurodiversity&rsquo;</q>, and contains neurodiversity without being limited to it: it takes in the somatic and the behavioural as well as the neurological, and it learns from the range of ways animals are.</p>
+
+  <p>Which is a paradigm with room in it for whimsy. Not whimsy as a therapeutic technique or a wellbeing intervention or a strength to be leveraged, but as one existential style among many &mdash; no more in need of a justification than a heron&rsquo;s way of standing in a river. Chapman notes in passing that neuroqueering, in Nick Walker and Remi Yergeau&rsquo;s sense, <q>focuses on embracing weird potentials within one&rsquo;s neurocognitive space</q>. Weird potentials. The word is doing its oldest job in that phrase: not <em>defective</em>, and not even <em>strange</em>, but <em>what this life might still turn out to be</em>.</p>
+
+  <h2>What this sheet will not tidy</h2>
+
+  <p>Three things, left standing.</p>
+
+  <p><strong>An etymology is not an argument.</strong> That <span lang="ang">wyrd</span> once meant fate does not make weirdness good, any more than the Latin in <em>disability</em> settles anything about Disabled people. Words drift; that is what words do. The reason to tell this particular drift is not that the old meaning was true and the new one is false. It is that the new one arrived on a specific date, in specific company, doing a specific job &mdash; and a meaning with a birth certificate can be argued with in a way that a timeless fact cannot.</p>
+
+  <p><strong>The Weird Sisters were probably witches.</strong> See the wall above. The best scholarship on the question says Shakespeare wrote <em>weyward</em> and meant it, and that the Fates were put back into the play by an editor in 1733. Anyone reclaiming those three women as figures of fate is reclaiming Theobald&rsquo;s text. It is still a good reclamation. It is not the one the First Folio supports.</p>
+
+  <p><strong>Nobody chooses to be read as weird.</strong> Weird Pride is a reclamation, and reclamations are for people who already carry the word whether they want it or not. The people who can put weirdness on and take it off again are not the ones the word costs anything. <a href="https://stimpunks.org/glossary/weirdwashing/">Weirdwashing</a> is the failure mode: the aesthetic of deviance, adopted by an institution that will still send the same child out of the same room.</p>
+
+  <h2>Still taking shape</h2>
+
+  <p>Helen ends her essay by putting worth back where she found it:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the close</span>
+    <blockquote>
+      <p>I think this is what wyrd actually means, human worth that was never about being static, never about being plotted somewhere along someone else&rsquo;s bell curve, but about always moving, always still taking shape.</p>
+      <p>Let&rsquo;s embrace our wyrd, weirdness, and everyone else&rsquo;s too.</p>
+    </blockquote>
+    <figcaption>Helen Edgar, <a href="https://morerealms.com/becoming-weird-wyrd-normality/"><cite>Wyrd, Weird, and the Invention of Normal</cite></a>, More Realms, July 2026.</figcaption>
+  </figure>
+
+  <p>The middle sister is the one holding the bucket. Not what has come to pass, and not what is owed &mdash; the one whose name is a verb still running. <span lang="non">Ver&eth;andi</span>: becoming. A life is not a point on a distribution. It is a thing being carved, in the present participle, and nobody has finished reading it yet.</p>
+
+  <p>Find out more about <a href="https://weirdpride.day/">Weird Pride</a>, which falls on 4 March, and which Helen observes in July on the grounds that every day is one.</p>
+
+</main>
+
+<!-- Elsewhere on the plate. OUTSIDE <main> on purpose: the SKS mirror takes page
+     content from the <main> landmark and nowhere else, so navigation placed inside
+     it would be indexed as this sheet's own content. See CLAUDE.md. -->
+<nav class="qe-elsewhere" aria-labelledby="qe-elsewhere-h">
+  <h2 id="qe-elsewhere-h">Elsewhere on the plate</h2>
+  <ul class="qe-elsewhere-grid">
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/on-being-ill">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;1</span>
+          </span>
+          <span class="qe-card-title">The Army of the Upright</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-violet)">
+        <a class="card" href="/coming-to-terms">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Essay</span>
+            <span class="qe-card-no">No.&nbsp;2</span>
+          </span>
+          <span class="qe-card-title">Coming to Terms</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-coral)">
+        <a class="card" href="/promises-like-pie-crust">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;3</span>
+          </span>
+          <span class="qe-card-title">The Die Uncast</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<footer class="qe-footer">
+  <p><a href="/">Queering Earth</a> is a collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+  <p>Every quotation on this sheet was read at its source and is logged in the site&rsquo;s attribution ledger. Old spellings are the originals&rsquo;, including where they differ from ours; the Old English gloss is marked as ours.</p>
+  <p>Our words licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Everyone else&rsquo;s belong to them, or to nobody.</p>
+  <p><a href="/design">How this site is made</a> &mdash; the herbarium sheet, the palette, the type, and the borrowed plates.</p>
+</footer>
+
+<script src="queering.js"></script>
+</body>
+</html>

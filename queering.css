@@ -998,3 +998,254 @@ html.plain .qe-poem .qe-stanza { font-variation-settings: normal; }
      thing this component must not do on paper. */
   .qe-poem .qe-stanza { break-inside: avoid; }
 }
+
+/* ─────────────────────────────────────────────── the paste-up
+ *
+ * A ZINE WALL, IN A HERBARIUM REGISTER.
+ *
+ * The flyposted wall and the specimen sheet are the same object seen twice:
+ * things cut out, laid down at an angle, and taped where they overlap. So this
+ * section is not a new visual language — it is the furniture already here (the
+ * card, the rule, the tape-coloured accent) pushed toward the wall, so that the
+ * page can be a zine without stopping being a herbarium sheet. "The same site
+ * with photocopier grain on it" is the failure mode, the way "the same site in
+ * green" is the failure mode for the palette.
+ *
+ * IT IS STILL A STYLESHEET OVER SEMANTIC HTML. Every slip is a <figure> with a
+ * <blockquote> in it; the drift rail is an <ol>; the cut-out line is a <p> whose
+ * words are <span>s. There is no image of text on this page and no accessible
+ * second copy. html.plain removes every rotation, every wonk axis, every tape
+ * strip and every shadow, and leaves an ordinary list and an ordinary quotation
+ * in the reader's own face.
+ *
+ * ROTATION IS STATED IN THE MARKUP, as `--rot` on the element. A slip's angle is
+ * a fact about that slip, the way the 1896 indent is a fact about a line of
+ * Rossetti — and for the same reason as the poem's `.l-in`: an nth-child rule
+ * re-angles the whole wall the moment a slip is added or removed, silently.
+ *
+ * WHITESPACE IS LOAD-BEARING IN .qe-cutup. The words are inline-block, not flex
+ * items, so the spaces between them are real text nodes. Laid out with flex they
+ * look identical and copy out — and get mirrored into SKS — as onelongword.
+ */
+
+/* ── the wall: slips pasted up, overlapping, each at its own angle */
+
+.qe-wall {
+  list-style: none;
+  margin: 2.5rem 0 3rem;
+  padding: 0;
+  display: grid;
+  /* 12.5rem, not 13.5, and the arithmetic is the point: the measure leaves 448px
+     inside the gutters, and two 13.5rem tracks plus the 1.25rem gap need 452. At
+     13.5rem the wall silently collapsed to one column at every window size — a
+     stack of slips, which is a list, not a wall. Exactly the failure the plate
+     grid already shipped once; see DECISIONS.md. */
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: 1.6rem 1.25rem;
+}
+
+.qe-slip {
+  --slip-color: var(--qe-lichen);
+  position: relative;
+  margin: 0;
+  padding: 1.2rem 1.05rem 0.95rem;
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-radius: 1px;
+  box-shadow: 0 1px 0 var(--qe-paper-deep), 0 8px 16px -12px rgba(36, 31, 26, 0.55);
+  transform: rotate(var(--rot, 0deg));
+}
+
+/* The tape. A decorative token, and only ever behind nothing — it sits above the
+   slip's top edge, on the paper, so no text is ever composited against it. */
+.qe-slip::before {
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  width: 4.4rem;
+  height: 1.05rem;
+  margin-left: -2.2rem;
+  background: var(--slip-color);
+  opacity: 0.5;
+  transform: rotate(var(--tape, -2.5deg));
+}
+
+.qe-slip blockquote {
+  margin: 0;
+  font-family: var(--qe-display);
+  font-size: 1.04rem;
+  line-height: 1.42;
+  color: var(--qe-ink);
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+}
+.qe-slip blockquote p { margin: 0 0 0.6rem; }
+.qe-slip blockquote p:last-child { margin-bottom: 0; }
+
+.qe-slip figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--qe-moss);
+}
+
+html.plain .qe-slip {
+  transform: none;
+  box-shadow: none;
+}
+html.plain .qe-slip::before { display: none; }
+html.plain .qe-slip blockquote { font-variation-settings: normal; }
+
+/* ── the drift rail: one word, three states, three centuries apart
+ *
+ * The third slip is set in the reader's system face on purpose. When the word
+ * stops meaning fate and starts meaning deviation it is being spoken by an
+ * institution, and the institution's typeface is whatever the form was printed
+ * in. The joke disappears in plain view, where every face is that face — which
+ * is correct: plain view drops the decoration, and this is decoration.
+ */
+
+.qe-drift {
+  list-style: none;
+  margin: 2.75rem 0 3rem;
+  padding: 0;
+  display: grid;
+  /* 16rem, which inside the 448px measure is always ONE column, deliberately.
+     Three states across a 448px row give 136px each, and the gloss under each
+     word needs more than that; two across gives an orphan. So the rail runs down
+     the sheet instead, and it is still a sequence — that is what the <ol> is for. */
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem 1.1rem;
+}
+
+.qe-drift > li {
+  position: relative;
+  padding: 1.1rem 1rem 1.05rem;
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-top: 3px solid var(--slip-color, var(--qe-lichen));
+  border-radius: 1px;
+  box-shadow: 0 1px 0 var(--qe-paper-deep);
+  transform: rotate(var(--rot, 0deg));
+}
+
+.qe-drift-word {
+  margin: 0;
+  font-family: var(--qe-display);
+  font-size: clamp(2rem, 8vw, 2.75rem);
+  line-height: 1.05;
+  color: var(--qe-ink);
+  font-variation-settings: "SOFT" var(--soft, 40), "WONK" var(--wonk, 1);
+}
+.qe-drift-word--flat {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-variation-settings: normal;
+  font-weight: 600;
+  font-size: clamp(1.7rem, 6.4vw, 2.2rem);
+  letter-spacing: -0.01em;
+}
+
+.qe-drift-when {
+  margin: 0.55rem 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  border-top: 1px solid var(--qe-rule);
+  padding-top: 0.5rem;
+}
+
+.qe-drift-gloss {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--qe-ink);
+}
+
+html.plain .qe-drift > li { transform: none; box-shadow: none; }
+html.plain .qe-drift-word { font-variation-settings: normal; font-weight: 700; }
+
+/* ── the cut-out line: words scissored out and pasted back in a row */
+
+.qe-cutup {
+  margin: clamp(2.25rem, 7vw, 3.5rem) auto;
+  max-width: 32rem;
+  text-align: center;
+  font-family: var(--qe-display);
+  font-size: 1.5rem;
+  line-height: 2.1;
+  color: var(--qe-ink);
+}
+
+.qe-cutup .w {
+  display: inline-block;
+  transform: rotate(var(--rot, 0deg));
+  font-size: var(--sz, 1em);
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  padding: 0.06em 0.3em;
+  font-variation-settings: "SOFT" var(--soft, 60), "WONK" var(--wonk, 1);
+}
+.qe-cutup .w-loud { color: var(--qe-rust); }
+.qe-cutup .w-quiet { color: var(--qe-moss); }
+
+html.plain .qe-cutup .w {
+  transform: none;
+  font-variation-settings: normal;
+  font-weight: 600;
+}
+
+/* ── a line in the language it was written in
+ *
+ * Sits above its translation inside a .qe-specimen. It carries a `lang` in the
+ * markup — Old English, Old Norse, Scots — because a screen reader that reads
+ * `wyrd bið ful aræd` with English phonetics is reading a different sentence.
+ */
+
+/* Verse inside a specimen wants the poem's device: one line per block, hanging,
+   so a wrap on a 375px screen is never mistakable for a line break the poet
+   wrote. Six lines of Völuspá wrapped into nine before this existed. */
+.qe-specimen .qe-lines {
+  /* One step down from the specimen's 1.16em. Bellows sets Völuspá in six long
+     half-line pairs and three of the six wrapped inside the measure; at 1.07em
+     (about 20px, still over the 18px floor) only one does. */
+  font-size: 0.92em;
+}
+.qe-specimen .qe-lines .l {
+  display: block;
+  text-indent: -1.1em;
+  margin-left: 1.1em;
+}
+
+.qe-orig {
+  margin: 0 0 0.7rem;
+  font-family: var(--qe-display);
+  font-size: 1.02em;
+  line-height: 1.5;
+  color: var(--qe-moss);
+  font-variation-settings: "SOFT" 10, "WONK" 0;
+}
+html.plain .qe-orig { font-variation-settings: normal; }
+
+@media print {
+  .qe-wall, .qe-drift { display: block; }
+  .qe-slip, .qe-drift > li {
+    transform: none;
+    background: none;
+    box-shadow: none;
+    border: 0.5pt solid #999;
+    margin-bottom: 0.6rem;
+    break-inside: avoid;
+  }
+  .qe-drift > li { border-top: 1.5pt solid #444; }
+  .qe-slip::before { display: none; }
+  .qe-slip blockquote, .qe-drift-word, .qe-drift-gloss, .qe-cutup { color: #000; }
+  .qe-slip figcaption, .qe-drift-when, .qe-orig { color: #222; }
+  .qe-cutup .w {
+    transform: none;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .qe-cutup .w-loud, .qe-cutup .w-quiet { color: #000; font-weight: 700; }
+}

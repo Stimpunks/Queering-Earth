@@ -214,6 +214,10 @@ og_card(REPO/"images"/"og-coming-to-terms.png", "Coming to Terms", "Sheet · an 
         "Ryan Boren on a lifetime of seeking a word that fits.", VIOLET)
 og_card(REPO/"images"/"og-promises-like-pie-crust.png", "The Die Uncast", "Sheet · a reading",
         "Christina Rossetti, Promises like Pie-crust, written 20 April 1861.", CORAL)
+og_card(REPO/"images"/"og-invention-of-normal.png", "Wyrd, Weird, and the Invention of Normal",
+        "Sheet · an essay",
+        "Before it meant strange, it meant fate.",
+        MARIGOLD)
 og_card(REPO/"images"/"og-design.png", "How this site is made", "Colophon",
         "A Victorian herbarium sheet as the model: the palette, the type, the drawings.", MARIGOLD)
 

@@ -415,6 +415,301 @@ automatically the right credit for any given plate in it.** Check the corner of 
 
 ----
 
+### Helen Edgar — *Wyrd, Weird, and the Invention of Normal*, and a byline that is not a transcript
+
+**Quoted on:** `invention-of-normal.html`
+
+Three sentences are quoted verbatim from Helen's More Realms essay:
+
+> In Old English, *wyrd* meant fate, but not necessarily the fixed, predetermined fate the
+> word often suggests today.
+
+> Somewhere along the way, worth got redefined as fitting in, while being different stopped
+> being something we valued at all.
+
+> I think this is what wyrd actually means, human worth that was never about being static,
+> never about being plotted somewhere along someone else's bell curve, but about always
+> moving, always still taking shape.
+
+**Source:** Helen Edgar, [*Wyrd, Weird, and the Invention of Normal*](https://morerealms.com/becoming-weird-wyrd-normality/),
+More Realms, July 2026.
+
+**Verified:** 2026-09-08, by fetching the live page and reading each sentence in place. The
+SKS mirror at `site/morerealms-com/posts/becoming-weird-wyrd-normality.md` was the finding
+step and is not the authority; the live page is.
+
+**The thing to be careful about here is the byline, not the quotations.** The sheet carries
+Helen's name because Ryan asked for it, and the essay is built out of her argument, her
+sources, and her reading. But most of the sentences on the sheet were not written by her.
+The label says so in the `This text` row — *Helen's published sentences appear as
+quotations, marked and linked; the sheet around them is new, and hers to sign* — and that
+row is load-bearing. **It must not be trimmed for tidiness.** A byline plus unmarked new
+prose is the same failure as a tightened quotation: somebody's name on words that are not
+theirs. The sheet should not ship to `main` without Helen having read it.
+
+----
+
+### Alby Stone — *Wyrd*, and the worth in the word
+
+**Quoted on:** `invention-of-normal.html`
+
+> Old English wyrd combines all the qualities found in the names of the three nornir: it
+> means 'worth'; 'death'; and that which will happen or come to be.
+
+and
+
+> something much more flexible and worthwhile than the rigid, impersonal and implacable
+> force that fate is commonly expected to be
+
+**Source:** Alby Stone, *Wyrd: Fate and Destiny in North European Paganism*, corrected
+edition (Heart of Albion Press, 2022; first published 1989), pp. 37 and 45.
+
+**Verified:** 2026-09-08, against the extracted text of the PDF held in the SKS library
+(`raw/WYRD-FATE-AND-DESTINY-IN-NORTH-EUROPEAN-PAGANISM.pdf`), reading the surrounding pages
+rather than the search snippet. **Page numbers in that book sit at the foot of the page,
+not the head** — the extracted stream prints `36` *before* the text of page 37, and reading
+the marker as a header puts every citation one page early.
+
+----
+
+### Karen Bek-Pedersen (2022) — Holinshed, the First Folio, and Theobald
+
+**Quoted on:** `invention-of-normal.html`, in the paste-up wall
+
+Three quotations reach the sheet **through** Bek-Pedersen's article rather than from the
+originals: Holinshed's "goddesses of destinie… nymphs or feiries" (Holinshed 1808: 269),
+the First Folio's "The weyward Sisters, hand in hand, / Posters of the Sea and Land"
+(Furness Variorum), and Theobald's gloss on *wayward* (Theobald 1733: 392). Each caption on
+the sheet says so, with her page number, because **a secondary source that says it is
+quoting is still a secondary source** and the reader is owed the chain.
+
+Her own conclusion is quoted directly:
+
+> Theobald may in one sense revert the picture back to the Scottish tradition of the 'weird
+> sisters' by substituting 'weyward' with 'weird', but in doing so he bypasses Shakespeare
+> altogether.
+
+**Source:** Karen Bek-Pedersen, "Macbeth and 'the Weird Sisters' – on Fates and Witches",
+[*Scottish Studies* 39 (2022), 58–80](https://doi.org/10.2218/ss.v39.7159), at pp. 64, 73, 76.
+
+**Verified:** 2026-09-08, from the PDF in the SKS inbox, reading the full article.
+
+**The finding that cuts against us, kept on the page.** Bek-Pedersen argues that Shakespeare
+wrote *weyward* deliberately, that his three women are witches rather than Fates, and that
+Theobald's 1733 emendation "bypasses Shakespeare altogether." That is inconvenient for a
+reclamation of the Weird Sisters, and the sheet says so twice — once in the section and once
+in *What this sheet will not tidy* — rather than quoting her transcriptions and dropping her
+argument. **Quoting a scholar's evidence while suppressing her conclusion is the worst
+version of the paraphrase-as-quotation failure, because every individual quotation is exact.**
+
+----
+
+### Mark Fisher — the weird as that which does not belong
+
+**Quoted on:** `invention-of-normal.html`
+
+> …the weird is that which does not belong. The weird brings to the familiar something which
+> ordinarily lies beyond it, and which cannot be reconciled with the "homely" (even as its
+> negation).
+
+and, from a later paragraph of the same introduction:
+
+> is often a sign that we are in the presence of the new. The weird here is a signal that the
+> concepts and frameworks which we have previously employed are now obsolete.
+
+**Source:** Mark Fisher, *The Weird and the Eerie* (Repeater Books, 2016), introduction.
+
+**Verified:** 2026-09-08, from the epub held in the SKS inbox.
+
+**No page number, on purpose.** The circulating citation for the first sentence is "p. 8",
+and the epub has no pagination to confirm it against. The sheet cites the introduction and
+says the ebook carries no page numbers, rather than repeating a page it cannot see. **A page
+number copied from somebody else's citation is an unverified claim wearing a footnote.**
+
+----
+
+### Tuck and Yang (2014) — refusal, and a transposition that is ours
+
+**Quoted on:** `invention-of-normal.html`
+
+> Refusal is not just a "no," but a redirection to ideas otherwise unacknowledged or
+> unquestioned.
+
+(p. 239) and
+
+> refusal is not a prohibition but a generative form
+
+(p. 241).
+
+**Source:** Eve Tuck and K. Wayne Yang, "R-Words: Refusing Research", in Django Paris and
+Maisha T. Winn (eds), *Humanizing Research: Decolonizing Qualitative Inquiry with Youth and
+Communities* (Sage, 2014), 223–248. They are explicating Audra Simpson, "On Ethnographic
+Refusal: Indigeneity, 'Voice' and Colonial Citizenship", *Junctures* 9 (2007), 67–80, and the
+sheet credits her too.
+
+**Verified:** 2026-09-08, from the PDF in the SKS inbox. Page numbers were pinned by
+splitting the extracted text on form feeds and reading the running head of each page, not by
+guessing from the position of a page number in the text stream.
+
+**The object was changed, so the sheet says whose move that is.** Tuck and Yang are writing
+about settler colonialism, Indigenous sovereignty, and the research apparatus. Applying
+refusal to masking and compliance culture is our extension, and the sheet states it in a
+bolded sentence — *The transposition here is ours, and it needs saying plainly* — instead of
+letting their authority quietly cover our argument. Same discipline as the Walker entry at
+the top of this file: **credit the concept, quote the original exactly, and own the move.**
+
+----
+
+### Elliot Wassell (2026) — *Experiences of autistic joy*, and a citation that was wrong
+
+**Quoted on:** `invention-of-normal.html`
+
+> …the key barrier to joyful experience is not autism itself but other people's lack of
+> acceptance of authentic autistic behaviours such as stimming and pursuit of special
+> interests.
+
+(abstract) and, from Participant 28:
+
+> No matter how 'weird', 'age inappropriate', or 'useless' our passions might seem to them,
+> for us, this is what makes life worth living.
+
+(p. 249).
+
+**Source:** Elliot Wassell, "Experiences of autistic joy",
+[*Disability & Society* 41:1 (2026), 236–261](https://doi.org/10.1080/09687599.2025.2498417).
+Open access, CC BY.
+
+**Verified:** 2026-09-08, from the PDF in the SKS inbox.
+
+**The citation we were handed was wrong and is corrected here.** The brief for the sheet gave
+it as "Wassell, E. (2025). *Disability & Society*, 41(3), 1–26." The article's own first page
+gives volume 41, **issue 1**, pages **236–261**, dated **2026** — 2025 is the online-first
+date. Both the issue number and the page range were wrong, and "1–26" is the give-away of a
+citation taken from an online-first PDF before pagination. **Anywhere else this citation
+appears in Stimpunks material, it needs the same correction.**
+
+Demographics quoted on the sheet come from the same paper: 86 participants, 86% female, 10%
+non-binary, 4% male; 67% report often experiencing joy; 94% actively enjoy aspects of being
+Autistic.
+
+----
+
+### Ingram and Jacobsen (2025) — queercrip joy
+
+**Quoted on:** `invention-of-normal.html`
+
+> Queercrip joy is more than finding new happy objects—it is refusing to collapse 'positive'
+> affects and 'negative' affects into a mutually exclusive binary.
+
+**Source:** Megan Ingram and Kai Jacobsen, "Both because of and in spite of: Towards the
+reclamation of queercrip joy", [*Sexualities* 28:3 (2025), 795–810](https://doi.org/10.1177/13634607241264319),
+at p. 804.
+
+**Verified:** 2026-09-08, from the PDF in the SKS inbox; the page was pinned from the running
+head of the page the sentence sits on.
+
+----
+
+### Robert Chapman (2023) — *Empire of Normality*, and Quetelet at one remove
+
+**Quoted on:** `invention-of-normal.html`
+
+Chapman's own sentence:
+
+> The error curve developed to predict the course of stars now applied to human normativity,
+> and to be abnormal was to be a mistake of nature.
+
+and his definition of the Empire of Normality as "an apparatus of material relations, social
+practices, scientific research programmes, bureaucratic mechanisms, economic compulsions, and
+administrative procedures".
+
+**Source:** Robert Chapman, *Empire of Normality: Neurodiversity and Capitalism* (Pluto Press,
+2023), introduction and chapter 2, "The invention of normality".
+
+**Verified:** 2026-09-08, from the epub held in the SKS inbox. No page numbers: the epub has
+none, and the sheet says so rather than inventing them.
+
+**Quetelet is quoted at one remove, and the ellipses are structural.** The sheet mounts:
+
+> If the average man were completely determined… we might consider him as the type of
+> perfection; and everything differing from his proportions or condition, would constitute…
+> a monstrosity.
+
+Chapman prints that sentence in three pieces, interrupted by "he wrote" and "he went on".
+The two ellipses mark **exactly those interruptions and nothing else**, and the caption on
+the sheet says so, because an unexplained ellipsis inside a quotation of a nineteenth-century
+statistician is the shape a trimmed quotation takes.
+
+----
+
+### Ombre Tarragnat — ethodiversity
+
+**Quoted on:** `invention-of-normal.html`
+
+> Ethodiversity, short for ethological diversity, refers to the intra- and inter-specific
+> variabilities and differences in behavioural or existential styles in (human and nonhuman)
+> animals.
+
+and
+
+> The term 'ethodiversity' parallels 'biodiversity' and 'neurodiversity'.
+
+**Source:** Ombre Tarragnat, [*What is ethodiversity?*](https://ombretarragnat.com/2025/02/25/what-is-ethodiversity/),
+25 February 2025.
+
+**Verified:** 2026-09-08, against Tarragnat's own site. The
+[Stimpunks glossary entry](https://stimpunks.org/glossary/ethodiversity/) was the finding
+step; the primary is the authority.
+
+----
+
+### Public-domain texts on the Wyrd sheet
+
+**Quoted on:** `invention-of-normal.html`
+
+- ***The Wanderer*, line 5b** — `wyrd bið ful ārǣd`, Old English as printed in
+  [Bright's *Anglo-Saxon Reader*](https://en.wikisource.org/wiki/Bright%27s_Anglo-Saxon_Reader/The_Wanderer).
+  **The English on the sheet is ours and is labelled as ours**, because translators do not
+  agree on *ārǣd* and picking one rendering silently would be picking a reading.
+- ***Völuspá* 20** — Old Norse after Neckel (1914) and the English of Henry Adams Bellows,
+  *The Poetic Edda* (The American-Scandinavian Foundation, 1923), both as set out at
+  [Mimisbrunnr.info](https://www.mimisbrunnr.info/cv-st-19-21), which prints them side by side
+  with five other translations.
+- ***Tam Lin*, Child 39A, stanzas 31–33** — Francis James Child, *The English and Scottish
+  Popular Ballads* (Boston, 1882–98). Transcription cross-checked against two independent
+  online editions of Child; they differ in OCR only (*a red het gaud of airn* is right,
+  *aim* is a scan error). **The sheet makes no claim about the ballad's date**, because the
+  earliest attestation of the tale and the date of the A text are different questions and
+  neither was settled here.
+- **W. B. Yeats, 'The Stolen Child'** — *The Wanderings of Oisin and Other Poems* (1889).
+  The last stanza's altered refrain is noted in the caption, because quoting the invitation
+  and calling it the ending would misreport the poem.
+
+**Verified:** 2026-09-08.
+
+----
+
+### Susan Schoon Eberly (1988) — changelings, described and not quoted
+
+**Cited on:** `invention-of-normal.html`
+
+**Source:** Susan Schoon Eberly, "Fairies and the Folklore of Disability: Changelings, Hybrids
+and the Solitary Fairy", [*Folklore* 99:1 (1988), 58–77](https://doi.org/10.1080/0015587X.1988.9716425).
+
+**Verified:** 2026-09-08 — bibliographic details only. The full text is paywalled and was not
+read here, **so the sheet describes her thesis and quotes nothing.** If a future session gets
+the article, a quotation may be added; until then the absence of quotation marks is the
+honest signal.
+
+The Bridget Cleary paragraph on the same sheet is a separate claim and was checked separately:
+died 15 March 1895 at Ballyvadlea, County Tipperary; her husband Michael Cleary maintained she
+was a changeling; nine people were charged; he was convicted of manslaughter. **The earlier
+draft said "burned to death by her own husband and relatives" and named no verdict** — the
+relatives' role and the cause of death are both contested in the record, and the sentence was
+narrowed to what is not.
+
+----
+
 ## Open
 
 Nothing.

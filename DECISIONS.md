@@ -554,3 +554,116 @@ second. An illustration that has to be explained before it earns its place is no
 place. **The idea can survive as prose** — Darwin's reversed spiral is still on the sheet, still
 credited, still doing the same work, quoted and linked instead of mounted, and the section reads
 no worse for it.
+
+### The paste-up: a zine wall in a herbarium register (2026-09-08)
+
+Ryan, briefing the Wyrd sheet: *"For this piece, play with the typography. Take inspiration
+from Zine walls."* The risk in that brief is obvious — a photocopied flyposted wall and a
+Victorian specimen sheet are not the same object, and grafting one onto the other gets you
+Star Stuff with grain on it, which is the palette rule's failure mode wearing a different hat.
+
+**What made it work was noticing they are the same object.** A zine wall and a herbarium sheet
+are both things cut out, laid down at an angle, and fixed where they overlap. One uses masking
+tape and the other uses gummed linen strips. So the new section in `queering.css` builds the
+wall out of furniture the site already owns — the card, the rule, the accent colour that is
+already the tape on a plate card — rather than importing a second visual language.
+
+Three components, all of them CSS over ordinary semantic HTML:
+
+- **`.qe-wall` / `.qe-slip`** — a grid of tilted `<figure>`s, each a short quotation with its
+  citation, with a tape strip in an accent token. Used twice: four hands on the Weird Sisters
+  across 435 years, and three findings on Autistic joy.
+- **`.qe-drift`** — an `<ol>` of three states of one word. It is the essay's spine as an
+  object.
+- **`.qe-cutup`** — a ransom-note line of scissored words, used once, for the labels that get
+  pasted onto people who do not fit.
+
+**Rotation is stated per element in the markup as `--rot`.** Same reasoning as `.qe-poem .l-in`:
+an `nth-child` rule silently re-angles the whole wall the moment a slip is added or removed, and
+a slip's angle is a fact about that slip.
+
+**`.qe-cutup` uses inline-block, not flex, and that is load-bearing.** With flex items the
+words look identical and copy out — and get mirrored into SKS — as `oddifficultimmature`.
+Inline-block keeps the whitespace between them as real text nodes.
+
+**No new motion.** The site's one motion idiom is growth, and slips settling onto a wall is a
+different idiom. The header drawing animates; the wall does not. Adding a second motion
+vocabulary for one page is how a design system starts to have dialects.
+
+### The third slip is set in the reader's system face (2026-09-08)
+
+In `.qe-drift`, the two older states of the word are Fraunces with the WONK axis on. The third
+— *weird* meaning "odd-looking, strange, disturbingly different", from about 1820 — is
+`.qe-drift-word--flat`, set in `system-ui`. When the word stops meaning fate and starts meaning
+deviation, it is being spoken by an institution, and an institution's typeface is whatever the
+form was printed in.
+
+It is the one place on the site where a hardcoded font stack is deliberate rather than a
+mistake. The joke disappears in plain view, where every face is that face, and **that is
+correct**: plain view drops decoration, and this is decoration. The slip's own gloss says out
+loud what the typography is doing, so a reader who cannot see it is not missing the argument.
+
+### The measure held, and the drift rail became a column (2026-09-08)
+
+The rail wants to be read across, as a timeline. Three states across the 448px measure give
+136px each, which is not enough for the gloss under each word; two across gives an orphan.
+
+The tempting fix was a third exception to the measure — `main` is capped at `--qe-measure`, and
+only the masthead and the provocation break it today. **It was not taken.** The rail runs down
+the sheet instead, at `minmax(16rem, 1fr)`, which inside 448px is always one column. It is still
+a sequence; that is what the `<ol>` is for. One fewer exception is worth more than one better
+timeline.
+
+**Related, and caught by measuring rather than by looking:** `.qe-wall` first shipped at
+`minmax(13.5rem, 1fr)`. Two 13.5rem tracks plus the 1.25rem gap need 452px and the measure gives
+448, so the wall silently collapsed to **one column at every window size** — a stack of slips,
+which is a list, not a wall, and it looked deliberate. This is the identical failure the plate
+grid shipped at 14rem, already recorded above. Found the same way, by reading the computed
+`grid-template-columns` in the browser. It is now 12.5rem, the same number the plate grid landed
+on, for the same arithmetic.
+
+### The Wyrd sheet mounts no plate (2026-09-08)
+
+Every sheet so far carries at least one BHL chromolithograph. This one carries none, and that is
+a choice rather than an omission. **The paste-up is the image.** A Victorian botanical plate
+dropped into a page whose argument is being made by tilted paper slips and cut-out words would
+be competing with it, and "colour over subject matter" (above) is a rule about which plate to
+pick, not a requirement that every sheet have one.
+
+If a plate is added later, it wants to go in *The child they said was swapped* and it wants to be
+fungi — a fairy ring is a mushroom ring — and it should be picked off the BHL stream the way the
+others were rather than hunted to fit the argument.
+
+### The Wyrd sheet's byline is Helen's, and the label carries the caveat (2026-09-08)
+
+Ryan: *"Give the byline for this essay to Helen."* The sheet does. But most of the sentences on
+it were not written by her — it is built out from her More Realms essay, with her published
+sentences quoted and linked and the rest new.
+
+**So the `This text` row of the label is not decoration.** It reads: *Helen's published
+sentences appear as quotations, marked and linked; the sheet around them is new, and hers to
+sign.* A byline plus unmarked new prose is exactly the paraphrase-as-quotation failure at page
+scale, and this row is the thing that keeps it honest. See `ATTRIBUTIONS.md`. **The sheet wants
+Helen's read before it reaches `main`.**
+
+### Bek-Pedersen's conclusion stayed on the sheet (2026-09-08)
+
+The Weird Sisters section quotes Karen Bek-Pedersen's transcriptions of Holinshed, the First
+Folio and Theobald. Her own argument is that Shakespeare wrote *weyward* on purpose, that his
+three women are witches rather than Fates, and that Theobald's 1733 emendation "bypasses
+Shakespeare altogether" — which is inconvenient for a sheet about reclaiming the Weird Sisters.
+
+It is quoted anyway, twice, and it gets its own item in *What this sheet will not tidy*.
+**Taking a scholar's evidence and leaving her conclusion behind is the worst version of the
+paraphrase failure, because every individual quotation is exact and the page still lies.**
+
+### An open item for a session in the SKS repo (2026-09-08)
+
+Not to be fixed from here. The brief for this sheet carried the citation *Wassell, E. (2025).
+Experiences of autistic joy. Disability & Society, 41(3), 1–26.* The article's own first page
+gives **41(1), 236–261, 2026**; 2025 is the online-first date and "1–26" is the page range of
+an unpaginated online-first PDF. Both the issue and the pages are wrong.
+
+Queering Earth's own copy is corrected. If that citation is sitting in SKS notes, on
+stimpunks.org, or in anything of Helen's, it wants the same correction — from a session in that
+repo.
