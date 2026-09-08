@@ -295,6 +295,83 @@ turns up, it goes in this entry — do not infer one from a sitemap or a feed.
 
 ----
 
+### Charles and George Darwin — the tendril woodcuts
+
+**Used on:** `promises-like-pie-crust.html` — two figures, mounted as plates.
+
+- **Fig. 8**, a leaf-tendril of *Corydalis claviculata* at natural size, page 123.
+- **Fig. 13**, "A caught tendril of *Bryonia dioica*, spirally contracted in reversed
+  directions", page 165.
+
+**Source:** Charles Darwin, *The Movements and Habits of Climbing Plants*, **second edition,
+revised** (New York: D. Appleton and Company, 1876) — the essay first appeared in the
+*Journal of the Linnean Society* vol. IX, 1865. Read from the **Cornell University Library**
+copy scanned for the Biodiversity Heritage Library:
+[archive.org/details/cu31924024538922](https://archive.org/details/cu31924024538922). The
+scan's own front matter states "There are no known copyright restrictions in the United
+States on the use of the text"; the work is **public domain** on its date regardless.
+
+**The artist is George Darwin, and the credit came out of the preface.** Darwin's own
+sentence, on the page after the title:
+
+> The illustrations were drawn by my son, George Darwin.
+
+**This is the case the "read the corner" rule was written for, with the corner empty.** These
+are woodcuts and carry **no signature at all** — nothing in the block, nothing under the
+caption, and nothing in the IA or BHL metadata, which names only Charles Darwin as creator.
+Credited off the metadata alone the drawings would have gone up as his father's. The credit
+existed in one sentence of prose four pages earlier. **When the object has no corner to read,
+read the preface.**
+
+**Verified:** 2026-09-08. Both figures were located by parsing the scan's `_djvu.xml` to the
+leaf, then the leaf images were fetched and read: leaf n136 for Fig. 8 (printed page 123,
+running head FUMARIACEÆ) and leaf n178 for Fig. 13 (printed page 165, running head SPIRAL
+CONTRACTION). The captions on the sheet are transcribed from those images, not from the OCR.
+
+**The sheet's use of Fig. 13 is flagged on the sheet as ours.** Darwin is explaining a
+mechanical necessity — a tendril fixed at both ends cannot coil in one direction without
+unwinding itself. Reading the reversed spiral as a picture of two people keeping their own
+liberties is our move and the page says so in the same breath. The sheet also quotes his
+qualifier from the same page — that a reversed spiral "never occurs with uncaught tendrils",
+and where it seems to, "the tendril had originally seized some object and had afterwards been
+torn free" — because leaving it out would have made the figure mean something tidier than it
+does.
+
+----
+
+### M. C. Cooke — *Illustrations of British Fungi*, plate 85
+
+**Used on:** `promises-like-pie-crust.html`
+
+A hand-coloured plate on grey ground carrying **two species**: group *A* is
+*Agaricus (Lepiota) sistratus*, Fries, "in Gardens"; group *B* is *Agaricus (Lepiota)
+mesomorphus*, Bull., "in woods. New Forest." Both captions are printed on the plate and are
+transcribed from it.
+
+**Source:** Mordecai Cubitt Cooke, *Illustrations of British Fungi (Hymenomycetes), to serve
+as an atlas to the "Handbook of British Fungi"*, volume 1 (London: Williams and Norgate,
+1881–91), plate 85. Read from the **University of Toronto** copy scanned for the Biodiversity
+Heritage Library: [archive.org/details/illustrationsofb01cookuoft](https://archive.org/details/illustrationsofb01cookuoft),
+leaf n112. **Public domain** — the Internet Archive record carries
+`possible-copyright-status: NOT_IN_COPYRIGHT`, and the date settles it anyway.
+
+**The artist was read off the corner, and then confirmed from the preface.** The plate is
+signed **M.C.C.** in the lower left. The initials were checked at full scan resolution rather
+than guessed from a thumbnail. Cooke's own preface, on printed page 3 of the same volume,
+explains the convention:
+
+> Their initials are attached to the copies of their drawings.
+
+— written of the contributors he thanks by name and initial (M.J.B., R.E.B., C.E.B., C.B.,
+H.G.B., T.H., G.M., W.P., C.B.P., W.G.S. and Rev. John Stevenson). Other plates in the volume
+are signed with those initials instead, and plate 85's are Cooke's own. **So the volume is a
+multi-artist book in which the plate tells you who drew it, and "Cooke, 1881" is not
+automatically the right credit for any given plate in it.** Check the corner of each one.
+
+**Verified:** 2026-09-08, from the scan of the plate itself and of the preface page.
+
+----
+
 ## Open
 
 Nothing.

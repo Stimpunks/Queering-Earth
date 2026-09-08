@@ -58,48 +58,136 @@
     <p class="qe-kicker">Sheet &middot; a reading</p>
     <h1>The Die Uncast</h1>
 
-    <!-- Five plants, five flowers, five separate stems, and not one of them
-         touching another. This is deliberately the "Coming to Terms" drawing
-         turned inside out: there, six heads in six colours share one stem, and
-         the variation along the stem is the argument. Here the variation is the
-         same and the stem is not — each plant is rooted on its own, keeping its
-         own liberty, standing near the others in the same ground. The two moths
-         cross the gaps in opposite directions: free to come as free to go. -->
-    <svg class="qe-botanical" viewBox="62 40 456 160" role="img" aria-label="Five separate plants standing apart in a row, each with its own leaves and its own flower in its own colour, none of them touching. Two moths fly in the open spaces between them, going opposite ways." focusable="false">
-      <path class="stem" style="--len:60" stroke-width="2" d="M90 190 C 88 168, 86 152, 84 132"/>
-      <path class="stem" style="--len:76" stroke-width="2.1" d="M185 190 C 187 162, 189 140, 191 116"/>
-      <path class="stem" style="--len:108" stroke-width="2.4" d="M290 190 C 288 156, 292 122, 289 84"/>
-      <path class="stem" style="--len:80" stroke-width="2.1" d="M395 190 C 397 164, 400 140, 402 112"/>
-      <path class="stem" style="--len:54" stroke-width="2" d="M490 190 C 492 170, 494 156, 496 138"/>
+    <!-- ART NOUVEAU, ASYMMETRICAL, NOTHING STRAIGHT. Helen's third note and her
+         most specific: "ornate swirling botanical style, with flowing curved
+         vines, spiraling tendrils, and organic scrollwork instead of straight or
+         geometric lines… asymmetrical, flowing composition… delicate
+         filigree-like branches winding around… Soft, hand-drawn linework,
+         natural movement, no rigid or angular shapes. Not linear — alive,
+         sprouting in all directions with flow."
 
-      <!-- Positioning on the OUTER g, animation on the inner .sprout. A CSS
-           transform animation overrides an SVG transform attribute on the same
-           element, which collapses every sprout onto the origin. See CLAUDE.md. -->
-      <g transform="translate(87 164) rotate(-158)"><g class="sprout sprout-leaf" style="--i:1"><path class="leaf" d="M0 0 C 4.4 -5.7, 13.4 -6, 17.4 0 C 13.4 6, 4.4 5.7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 16.5 0"/></g></g>
-      <g transform="translate(85 146) rotate(-18)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" d="M0 0 C 3.6 -4.7, 11 -4.9, 14.2 0 C 11 4.9, 3.6 4.7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 13.5 0"/></g></g>
+         What that changed structurally, so nobody undoes it by accident:
 
-      <g transform="translate(187 166) rotate(-160)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" d="M0 0 C 5.4 -7, 16.5 -7.4, 21.4 0 C 16.5 7.4, 5.4 7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 20.5 0"/></g></g>
-      <g transform="translate(190 138) rotate(-20)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" d="M0 0 C 4.4 -5.7, 13.4 -6, 17.4 0 C 13.4 6, 4.4 5.7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 16.5 0"/></g></g>
+         1. NO BASELINE AND NO ROOTS. The earlier versions stood specimens on a
+            ground line. This one has a single whiplash vine entering at the lower
+            left and sweeping up across to the right, throwing everything else off
+            itself. There is no bottom edge to stand on.
+         2. WEIGHT LOW LEFT, VOID UPPER LEFT AND RIGHT. The asymmetry is the
+            composition, not an accident of placement. The empty quarters are
+            where the moths are, and they are meant to stay empty otherwise.
+         3. EVERY TERMINAL CURLS. Each vine, tendril and volute ends in a spiral
+            that turns back on itself — the whiplash. A curve that just stops is
+            the thing this drawing is not.
+         4. A TALLER CANVAS. 560x260 instead of the old 434x156. Filigree needs
+            vertical room; at the old ratio the curls closed up into blobs.
 
-      <g transform="translate(289 160) rotate(-162)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" d="M0 0 C 6.6 -8.6, 20 -9.1, 26 0 C 20 9.1, 6.6 8.6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 25 0"/></g></g>
-      <g transform="translate(291 130) rotate(-16)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf" d="M0 0 C 5.4 -7, 16.5 -7.4, 21.4 0 C 16.5 7.4, 5.4 7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 20.5 0"/></g></g>
-      <g transform="translate(290 106) rotate(-156)"><g class="sprout sprout-leaf" style="--i:5"><path class="leaf" d="M0 0 C 3.6 -4.7, 11 -4.9, 14.2 0 C 11 4.9, 3.6 4.7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 13.5 0"/></g></g>
+         The motion model suits this far better than it suited the row of stems it
+         replaced: every vine, tendril and scroll is a `.stem`, so it DRAWS ITSELF
+         ON, and a long S-curve unrolling is the whole point of that animation.
+         Leaves, flowers, fungi and moths are `.sprout` groups that open after.
+         Under prefers-reduced-motion the finished drawing is what you get; there
+         is no `opacity: 0` outside that query.
 
-      <g transform="translate(398 168) rotate(-158)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf" d="M0 0 C 5.4 -7, 16.5 -7.4, 21.4 0 C 16.5 7.4, 5.4 7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 20.5 0"/></g></g>
-      <g transform="translate(401 138) rotate(-22)"><g class="sprout sprout-leaf" style="--i:5"><path class="leaf" d="M0 0 C 4.4 -5.7, 13.4 -6, 17.4 0 C 13.4 6, 4.4 5.7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 16.5 0"/></g></g>
+         Positioning goes on the OUTER g and the animation on the inner .sprout: a
+         CSS transform animation overrides an SVG transform attribute on the same
+         element and collapses every sprout onto the origin. See CLAUDE.md.
 
-      <g transform="translate(492 170) rotate(-156)"><g class="sprout sprout-leaf" style="--i:5"><path class="leaf" d="M0 0 C 4.4 -5.7, 13.4 -6, 17.4 0 C 13.4 6, 4.4 5.7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 16.5 0"/></g></g>
+         `--len` on each path is its MEASURED length, read out of the live DOM with
+         getTotalLength(). A declared length shorter than the real one turns the
+         dash into a repeating pattern and the vine draws on with gaps in it. If
+         you edit a `d`, re-measure that path. -->
+    <svg class="qe-botanical" viewBox="0 0 560 260" role="img" aria-label="An ornate Art Nouveau botanical panel. One long vine enters at the lower left and sweeps in a flowing S-curve up and across to the right, ending in a tight spiral. Smaller vines, scrolls and thread-fine tendrils wind off it in every direction, each one curling back on itself at the tip, with curved sickle-shaped leaves along their lengths and five flowers, each a different colour, opening at the ends. A cluster of mushrooms sits low on the left beneath the vine and one more on the right. Two moths fly in the open upper corners, and a few spores drift between them. The composition is deliberately lopsided and there are no straight lines in it." focusable="false">
 
-      <!-- One head per plant, and no two alike. The decorative tokens exist for
-           exactly this and never go near text. -->
-      <g transform="translate(84 132) scale(1.15)"><g class="sprout" style="--i:7"><ellipse class="bloom-lichen" cx="4.8" cy="0" rx="3.6" ry="2.4" transform="rotate(0 4.8 0)"/><ellipse class="bloom-lichen" cx="2.4" cy="4.2" rx="3.6" ry="2.4" transform="rotate(60 2.4 4.2)"/><ellipse class="bloom-lichen" cx="-2.4" cy="4.2" rx="3.6" ry="2.4" transform="rotate(120 -2.4 4.2)"/><ellipse class="bloom-lichen" cx="-4.8" cy="0" rx="3.6" ry="2.4" transform="rotate(180 -4.8 0)"/><ellipse class="bloom-lichen" cx="-2.4" cy="-4.2" rx="3.6" ry="2.4" transform="rotate(240 -2.4 -4.2)"/><ellipse class="bloom-lichen" cx="2.4" cy="-4.2" rx="3.6" ry="2.4" transform="rotate(300 2.4 -4.2)"/><circle class="body" cx="0" cy="0" r="2.2"/></g></g>
-      <g transform="translate(191 116) scale(1.15)"><g class="sprout" style="--i:8"><ellipse class="bloom-alt" cx="4.8" cy="0" rx="3.6" ry="2.4" transform="rotate(0 4.8 0)"/><ellipse class="bloom-alt" cx="2.4" cy="4.2" rx="3.6" ry="2.4" transform="rotate(60 2.4 4.2)"/><ellipse class="bloom-alt" cx="-2.4" cy="4.2" rx="3.6" ry="2.4" transform="rotate(120 -2.4 4.2)"/><ellipse class="bloom-alt" cx="-4.8" cy="0" rx="3.6" ry="2.4" transform="rotate(180 -4.8 0)"/><ellipse class="bloom-alt" cx="-2.4" cy="-4.2" rx="3.6" ry="2.4" transform="rotate(240 -2.4 -4.2)"/><ellipse class="bloom-alt" cx="2.4" cy="-4.2" rx="3.6" ry="2.4" transform="rotate(300 2.4 -4.2)"/><circle class="body" cx="0" cy="0" r="2.2"/></g></g>
-      <g transform="translate(289 84) scale(1.3)"><g class="sprout" style="--i:9"><ellipse class="bloom-violet" cx="4.8" cy="0" rx="3.6" ry="2.4" transform="rotate(0 4.8 0)"/><ellipse class="bloom-violet" cx="2.4" cy="4.2" rx="3.6" ry="2.4" transform="rotate(60 2.4 4.2)"/><ellipse class="bloom-violet" cx="-2.4" cy="4.2" rx="3.6" ry="2.4" transform="rotate(120 -2.4 4.2)"/><ellipse class="bloom-violet" cx="-4.8" cy="0" rx="3.6" ry="2.4" transform="rotate(180 -4.8 0)"/><ellipse class="bloom-violet" cx="-2.4" cy="-4.2" rx="3.6" ry="2.4" transform="rotate(240 -2.4 -4.2)"/><ellipse class="bloom-violet" cx="2.4" cy="-4.2" rx="3.6" ry="2.4" transform="rotate(300 2.4 -4.2)"/><circle class="body" cx="0" cy="0" r="2.2"/></g></g>
-      <g transform="translate(402 112) scale(1.15)"><g class="sprout" style="--i:10"><ellipse class="bloom" cx="4.8" cy="0" rx="3.6" ry="2.4" transform="rotate(0 4.8 0)"/><ellipse class="bloom" cx="2.4" cy="4.2" rx="3.6" ry="2.4" transform="rotate(60 2.4 4.2)"/><ellipse class="bloom" cx="-2.4" cy="4.2" rx="3.6" ry="2.4" transform="rotate(120 -2.4 4.2)"/><ellipse class="bloom" cx="-4.8" cy="0" rx="3.6" ry="2.4" transform="rotate(180 -4.8 0)"/><ellipse class="bloom" cx="-2.4" cy="-4.2" rx="3.6" ry="2.4" transform="rotate(240 -2.4 -4.2)"/><ellipse class="bloom" cx="2.4" cy="-4.2" rx="3.6" ry="2.4" transform="rotate(300 2.4 -4.2)"/><circle class="body" cx="0" cy="0" r="2.2"/></g></g>
-      <g transform="translate(496 138) scale(1.15)"><g class="sprout" style="--i:11"><ellipse class="bloom-verdigris" cx="4.8" cy="0" rx="3.6" ry="2.4" transform="rotate(0 4.8 0)"/><ellipse class="bloom-verdigris" cx="2.4" cy="4.2" rx="3.6" ry="2.4" transform="rotate(60 2.4 4.2)"/><ellipse class="bloom-verdigris" cx="-2.4" cy="4.2" rx="3.6" ry="2.4" transform="rotate(120 -2.4 4.2)"/><ellipse class="bloom-verdigris" cx="-4.8" cy="0" rx="3.6" ry="2.4" transform="rotate(180 -4.8 0)"/><ellipse class="bloom-verdigris" cx="-2.4" cy="-4.2" rx="3.6" ry="2.4" transform="rotate(240 -2.4 -4.2)"/><ellipse class="bloom-verdigris" cx="2.4" cy="-4.2" rx="3.6" ry="2.4" transform="rotate(300 2.4 -4.2)"/><circle class="body" cx="0" cy="0" r="2.2"/></g></g>
+      <!-- ── the whiplash. One vine, the length of the panel, and its terminal curl -->
+      <path class="stem" style="--len:705" stroke-width="2.6" d="M10 236 C 66 234, 104 212, 126 178 C 148 144, 142 104, 170 80 C 200 54, 254 58, 280 88 C 308 120, 298 166, 332 186 C 368 208, 424 190, 448 156 C 468 128, 462 96, 484 74"/>
+      <path class="stem" style="--len:130" stroke-width="2" d="M484 74 C 500 56, 526 58, 530 78 C 534 96, 516 106, 506 94 C 498 84, 506 74, 513 80"/>
 
-      <!-- Free to come as free to go. -->
-      <g transform="translate(238 68) rotate(-10) scale(0.7)"><g class="sprout" style="--i:13">
+      <!-- ── the counter-sweep, low and to the right, ending in a volute -->
+      <path class="stem" style="--len:306" stroke-width="2.1" d="M22 240 C 86 250, 152 246, 208 228 C 258 212, 292 218, 314 240"/>
+      <path class="stem" style="--len:82" stroke-width="1.7" d="M314 240 C 330 250, 350 244, 348 228 C 346 214, 330 212, 328 224"/>
+
+      <!-- ── an offshoot climbing back up to the left, against the main sweep -->
+      <path class="stem" style="--len:138" stroke-width="1.9" d="M128 172 C 112 148, 118 120, 140 104 C 158 91, 176 96, 174 112"/>
+      <path class="stem" style="--len:45" stroke-width="1.5" d="M174 112 C 172 124, 160 128, 156 119 C 153 112, 161 107, 164 113"/>
+
+      <!-- ── filigree rising out of the apex -->
+      <path class="stem" style="--len:136" stroke-width="1.6" d="M282 90 C 278 66, 288 44, 308 34 C 324 26, 340 34, 336 48 C 333 58, 320 58, 320 48"/>
+
+      <!-- ── spiralling tendrils, one at every scale, none of them ending straight -->
+      <path class="stem" style="--len:85" stroke-width="1.3" d="M150 120 C 130 116, 116 122, 118 134 C 120 145, 134 146, 134 136 C 134 129, 127 128, 126 133"/>
+      <path class="stem" style="--len:92" stroke-width="1.3" d="M300 140 C 320 146, 332 158, 326 170 C 320 181, 306 178, 308 168 C 310 160, 318 161, 317 166"/>
+      <path class="stem" style="--len:82" stroke-width="1.2" d="M196 232 C 208 244, 224 248, 232 240 C 239 233, 232 224, 224 228 C 218 231, 220 238, 226 237"/>
+      <path class="stem" style="--len:93" stroke-width="1.3" d="M420 176 C 442 178, 456 190, 450 202 C 445 212, 430 209, 432 199 C 434 191, 442 192, 441 197"/>
+      <path class="stem" style="--len:95" stroke-width="1.2" d="M336 100 C 356 92, 372 96, 374 110 C 376 122, 362 128, 358 118 C 355 110, 363 106, 366 112"/>
+      <path class="stem" style="--len:84" stroke-width="1.1" d="M462 118 C 480 112, 496 118, 496 130 C 496 140, 483 143, 482 134 C 481 127, 489 125, 490 131"/>
+
+      <!-- ── scrollwork. Ornament, doing no botanical work at all, which is the
+               most Art Nouveau thing on the panel -->
+      <path class="stem" style="--len:109" stroke-width="1.5" d="M240 200 C 258 190, 276 196, 274 212 C 272 226, 254 228, 250 216 C 247 206, 258 200, 264 208"/>
+      <path class="stem" style="--len:97" stroke-width="1.5" d="M78 208 C 62 200, 46 208, 48 222 C 50 234, 66 236, 70 226 C 73 218, 62 213, 58 220"/>
+      <path class="stem" style="--len:101" stroke-width="1.3" d="M384 74 C 400 62, 418 68, 416 84 C 414 97, 398 98, 396 86 C 394 76, 404 72, 408 80"/>
+
+      <!-- ── curling sickle leaves, alternating sides along every vine. A leaf
+               opens from where it meets the stem: .sprout-leaf sets that origin. -->
+      <g transform="translate(72 230) rotate(196)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" d="M0 0 C 7 -12, 26 -16, 37 -8 C 41 -5, 40 0.4, 36 0.4 C 33 0.4, 33 -3, 35 -5 C 26 -1.6, 12 6.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 11 -4, 24 -8, 34 -7"/></g></g>
+      <g transform="translate(118 196) rotate(128)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" d="M0 0 C 6 -10, 21 -13, 30 -6.4 C 33.4 -4, 32.6 0.4, 29 0.4 C 26.6 0.4, 26.6 -2.4, 28.4 -4 C 21 -1.2, 10 5.2, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 9 -3, 20 -6, 27.6 -5.6"/></g></g>
+      <g transform="translate(140 146) rotate(-58)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf" d="M0 0 C 7 -12, 26 -16, 37 -8 C 41 -5, 40 0.4, 36 0.4 C 33 0.4, 33 -3, 35 -5 C 26 -1.6, 12 6.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 11 -4, 24 -8, 34 -7"/></g></g>
+      <g transform="translate(188 66) rotate(-36)"><g class="sprout sprout-leaf" style="--i:5"><path class="leaf" d="M0 0 C 6 -10, 21 -13, 30 -6.4 C 33.4 -4, 32.6 0.4, 29 0.4 C 26.6 0.4, 26.6 -2.4, 28.4 -4 C 21 -1.2, 10 5.2, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 9 -3, 20 -6, 27.6 -5.6"/></g></g>
+      <g transform="translate(252 62) rotate(14)"><g class="sprout sprout-leaf" style="--i:6"><path class="leaf" d="M0 0 C 7 -12, 26 -16, 37 -8 C 41 -5, 40 0.4, 36 0.4 C 33 0.4, 33 -3, 35 -5 C 26 -1.6, 12 6.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 11 -4, 24 -8, 34 -7"/></g></g>
+      <g transform="translate(296 128) rotate(96)"><g class="sprout sprout-leaf" style="--i:7"><path class="leaf" d="M0 0 C 6 -10, 21 -13, 30 -6.4 C 33.4 -4, 32.6 0.4, 29 0.4 C 26.6 0.4, 26.6 -2.4, 28.4 -4 C 21 -1.2, 10 5.2, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 9 -3, 20 -6, 27.6 -5.6"/></g></g>
+      <g transform="translate(352 192) rotate(28)"><g class="sprout sprout-leaf" style="--i:8"><path class="leaf" d="M0 0 C 7 -12, 26 -16, 37 -8 C 41 -5, 40 0.4, 36 0.4 C 33 0.4, 33 -3, 35 -5 C 26 -1.6, 12 6.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 11 -4, 24 -8, 34 -7"/></g></g>
+      <g transform="translate(412 194) rotate(152)"><g class="sprout sprout-leaf" style="--i:9"><path class="leaf" d="M0 0 C 6 -10, 21 -13, 30 -6.4 C 33.4 -4, 32.6 0.4, 29 0.4 C 26.6 0.4, 26.6 -2.4, 28.4 -4 C 21 -1.2, 10 5.2, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 9 -3, 20 -6, 27.6 -5.6"/></g></g>
+      <g transform="translate(452 148) rotate(-64)"><g class="sprout sprout-leaf" style="--i:10"><path class="leaf" d="M0 0 C 7 -12, 26 -16, 37 -8 C 41 -5, 40 0.4, 36 0.4 C 33 0.4, 33 -3, 35 -5 C 26 -1.6, 12 6.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 11 -4, 24 -8, 34 -7"/></g></g>
+      <g transform="translate(168 238) rotate(48)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf" d="M0 0 C 6 -10, 21 -13, 30 -6.4 C 33.4 -4, 32.6 0.4, 29 0.4 C 26.6 0.4, 26.6 -2.4, 28.4 -4 C 21 -1.2, 10 5.2, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 9 -3, 20 -6, 27.6 -5.6"/></g></g>
+      <g transform="translate(228 224) rotate(-142)"><g class="sprout sprout-leaf" style="--i:5"><path class="leaf" d="M0 0 C 6 -10, 21 -13, 30 -6.4 C 33.4 -4, 32.6 0.4, 29 0.4 C 26.6 0.4, 26.6 -2.4, 28.4 -4 C 21 -1.2, 10 5.2, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 9 -3, 20 -6, 27.6 -5.6"/></g></g>
+      <g transform="translate(122 108) rotate(-104)"><g class="sprout sprout-leaf" style="--i:6"><path class="leaf" d="M0 0 C 5 -8, 16 -10, 23 -5 C 25.6 -3.2, 25 0.4, 22.2 0.4 C 20.4 0.4, 20.4 -1.8, 21.8 -3.2 C 16 -1, 8 4, 0 0 Z"/><path class="rib" stroke-width="0.7" d="M0 0 C 7 -2, 16 -4, 21 -4.4"/></g></g>
+
+      <!-- Five blooms, two forms, no two the same size, colour or angle. The
+           petals are sinuous and there are five of them at uneven spacings:
+           a six-ellipse daisy is the geometric shape this drawing rejects. -->
+      <g transform="translate(513 80) rotate(-18) scale(1.15)"><g class="sprout" style="--i:16"><path class="bloom" stroke-width="1" transform="rotate(0)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom" stroke-width="1" transform="rotate(76)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom" stroke-width="1" transform="rotate(138)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom" stroke-width="1" transform="rotate(216)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom" stroke-width="1" transform="rotate(281)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="rib" stroke-width="0.7" d="M0 0 C 4 -2, 8 -3, 11 -2.6"/><path class="rib" stroke-width="0.7" d="M0 0 C -2 -4, -4 -7, -7 -8.4"/><circle class="body" cx="0" cy="0" r="2.1"/></g></g>
+      <g transform="translate(320 48) rotate(34) scale(0.95)"><g class="sprout" style="--i:15"><path class="bloom-verdigris" stroke-width="1" transform="rotate(5)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-verdigris" stroke-width="1" transform="rotate(64)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-verdigris" stroke-width="1" transform="rotate(150)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-verdigris" stroke-width="1" transform="rotate(208)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-verdigris" stroke-width="1" transform="rotate(291)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="rib" stroke-width="0.7" d="M0 0 C 4 -2, 8 -3, 11 -2.6"/><path class="rib" stroke-width="0.7" d="M0 0 C -2 -4, -4 -7, -7 -8.4"/><circle class="body" cx="0" cy="0" r="2.1"/></g></g>
+      <g transform="translate(164 113) rotate(128) scale(0.85)"><g class="sprout" style="--i:14"><path class="bloom-lichen" stroke-width="1" transform="rotate(-4)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-lichen" stroke-width="1" transform="rotate(75)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-lichen" stroke-width="1" transform="rotate(137)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-lichen" stroke-width="1" transform="rotate(218)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-lichen" stroke-width="1" transform="rotate(285)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="rib" stroke-width="0.7" d="M0 0 C 4 -2, 8 -3, 11 -2.6"/><path class="rib" stroke-width="0.7" d="M0 0 C -2 -4, -4 -7, -7 -8.4"/><circle class="body" cx="0" cy="0" r="2.1"/></g></g>
+      <g transform="translate(408 82) rotate(-62) scale(0.8)"><g class="sprout" style="--i:15"><path class="bloom-alt" stroke-width="1" transform="rotate(6)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-alt" stroke-width="1" transform="rotate(67)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-alt" stroke-width="1" transform="rotate(147)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-alt" stroke-width="1" transform="rotate(205)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-alt" stroke-width="1" transform="rotate(293)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="rib" stroke-width="0.7" d="M0 0 C 4 -2, 8 -3, 11 -2.6"/><path class="rib" stroke-width="0.7" d="M0 0 C -2 -4, -4 -7, -7 -8.4"/><circle class="body" cx="0" cy="0" r="2.1"/></g></g>
+      <!-- the nodding one, hanging off the apex of the whiplash -->
+      <g transform="translate(280 88) rotate(172) scale(1.0)"><g class="sprout" style="--i:13">
+        <path class="bloom-violet" stroke-width="1.1" d="M0 0 C -8 2, -13.2 10, -12 18 C -11.4 23, -7.6 25.2, -5.6 22.6 C -3.4 25.6, -0.4 26, 0 22.4 C 0.6 26, 3.8 25.6, 5.8 22.6 C 7.8 25.2, 11.4 23, 12 18 C 13.2 10, 8 2, 0 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M-6.6 21.4 C -5 15, -3.4 8, -2.4 1.4"/>
+        <path class="rib" stroke-width="0.8" d="M0 22.6 C 0 15, 0 8, 0 1.4"/>
+        <path class="rib" stroke-width="0.8" d="M6.6 21.4 C 5 15, 3.4 8, 2.4 1.4"/>
+        <circle class="body" cx="0" cy="1.6" r="1.9"/>
+      </g></g>
+      <!-- Fungi, tucked into the heavy corner where the vine doubles back.
+           Undulating cap margin, tapering bent stipe, no straight lines: the
+           flat dome on a stick with one horizontal gill rule was the other
+           rigid shape on the panel. -->
+      <g transform="translate(96 246) scale(0.92)"><g class="sprout" style="--i:1">
+        <path class="stipe" d="M-2.6 0 C -3.8 -5, -3.2 -10, -1.8 -14.6 C -0.6 -15.1, 0.9 -15.1, 2.1 -14.6 C 3.1 -10, 2.7 -5, 2.7 0 C 1 0.9, -1.1 0.9, -2.6 0 Z"/>
+        <path class="cap" stroke-width="1.1" d="M-11.6 -14.6 C -13.2 -22.4, -7 -28, 0 -28 C 7 -28, 13.2 -22.4, 11.6 -14.6 C 8.6 -13.1, 6.4 -15.7, 3.6 -14.2 C 1.2 -12.9, -1.2 -12.9, -3.6 -14.2 C -6.4 -15.7, -8.6 -13.1, -11.6 -14.6 Z"/>
+        <path class="rib" stroke-width="0.7" d="M-6.2 -25.8 C -4.4 -20.4, -3.8 -16.8, -4 -14.6"/>
+        <path class="rib" stroke-width="0.7" d="M6.2 -25.8 C 4.4 -20.4, 3.8 -16.8, 4 -14.6"/>
+      </g></g>
+      <g transform="translate(114 250) scale(0.58)"><g class="sprout" style="--i:2">
+        <path class="stipe" d="M-2.6 0 C -3.8 -5, -3.2 -10, -1.8 -14.6 C -0.6 -15.1, 0.9 -15.1, 2.1 -14.6 C 3.1 -10, 2.7 -5, 2.7 0 C 1 0.9, -1.1 0.9, -2.6 0 Z"/>
+        <path class="cap-alt" stroke-width="1.1" d="M-11.6 -14.6 C -13.2 -22.4, -7 -28, 0 -28 C 7 -28, 13.2 -22.4, 11.6 -14.6 C 8.6 -13.1, 6.4 -15.7, 3.6 -14.2 C 1.2 -12.9, -1.2 -12.9, -3.6 -14.2 C -6.4 -15.7, -8.6 -13.1, -11.6 -14.6 Z"/>
+        <path class="rib" stroke-width="0.7" d="M-6.2 -25.8 C -4.4 -20.4, -3.8 -16.8, -4 -14.6"/>
+        <path class="rib" stroke-width="0.7" d="M6.2 -25.8 C 4.4 -20.4, 3.8 -16.8, 4 -14.6"/>
+      </g></g>
+      <g transform="translate(126 251) scale(0.4)"><g class="sprout" style="--i:3">
+        <path class="stipe" d="M-2.6 0 C -3.8 -5, -3.2 -10, -1.8 -14.6 C -0.6 -15.1, 0.9 -15.1, 2.1 -14.6 C 3.1 -10, 2.7 -5, 2.7 0 C 1 0.9, -1.1 0.9, -2.6 0 Z"/>
+        <path class="cap" stroke-width="1.1" d="M-11.6 -14.6 C -13.2 -22.4, -7 -28, 0 -28 C 7 -28, 13.2 -22.4, 11.6 -14.6 C 8.6 -13.1, 6.4 -15.7, 3.6 -14.2 C 1.2 -12.9, -1.2 -12.9, -3.6 -14.2 C -6.4 -15.7, -8.6 -13.1, -11.6 -14.6 Z"/>
+        <path class="rib" stroke-width="0.7" d="M-6.2 -25.8 C -4.4 -20.4, -3.8 -16.8, -4 -14.6"/>
+        <path class="rib" stroke-width="0.7" d="M6.2 -25.8 C 4.4 -20.4, 3.8 -16.8, 4 -14.6"/>
+      </g></g>
+      <g transform="translate(388 248) scale(0.52)"><g class="sprout" style="--i:6">
+        <path class="stipe" d="M-2.6 0 C -3.8 -5, -3.2 -10, -1.8 -14.6 C -0.6 -15.1, 0.9 -15.1, 2.1 -14.6 C 3.1 -10, 2.7 -5, 2.7 0 C 1 0.9, -1.1 0.9, -2.6 0 Z"/>
+        <path class="cap-alt" stroke-width="1.1" d="M-11.6 -14.6 C -13.2 -22.4, -7 -28, 0 -28 C 7 -28, 13.2 -22.4, 11.6 -14.6 C 8.6 -13.1, 6.4 -15.7, 3.6 -14.2 C 1.2 -12.9, -1.2 -12.9, -3.6 -14.2 C -6.4 -15.7, -8.6 -13.1, -11.6 -14.6 Z"/>
+        <path class="rib" stroke-width="0.7" d="M-6.2 -25.8 C -4.4 -20.4, -3.8 -16.8, -4 -14.6"/>
+        <path class="rib" stroke-width="0.7" d="M6.2 -25.8 C 4.4 -20.4, 3.8 -16.8, 4 -14.6"/>
+      </g></g>
+
+      <!-- ── the empty quarters. Free to come as free to go. -->
+      <g transform="translate(66 58) rotate(-16) scale(0.72)"><g class="sprout" style="--i:19">
         <path class="wing" d="M0 -2 C -10 -20, -28 -22, -24 -6 C -22 3, -8 6, 0 -2 Z"/>
         <path class="wing" d="M0 0 C -9 4, -19 12, -14 19 C -9 24, -1 12, 0 0 Z"/>
         <path class="wing-alt" d="M0 -2 C 10 -20, 28 -22, 24 -6 C 22 3, 8 6, 0 -2 Z"/>
@@ -108,7 +196,7 @@
         <path class="antenna" d="M-0.8 -8 C -3 -13, -6 -15, -8.5 -16"/>
         <path class="antenna" d="M0.8 -8 C 3 -13, 6 -15, 8.5 -16"/>
       </g></g>
-      <g transform="translate(452 62) rotate(14) scale(0.5)"><g class="sprout" style="--i:15">
+      <g transform="translate(496 202) rotate(22) scale(0.48)"><g class="sprout" style="--i:21">
         <path class="wing-alt" d="M0 -2 C -10 -20, -28 -22, -24 -6 C -22 3, -8 6, 0 -2 Z"/>
         <path class="wing-alt" d="M0 0 C -9 4, -19 12, -14 19 C -9 24, -1 12, 0 0 Z"/>
         <path class="wing" d="M0 -2 C 10 -20, 28 -22, 24 -6 C 22 3, 8 6, 0 -2 Z"/>
@@ -117,6 +205,13 @@
         <path class="antenna" d="M-0.8 -8 C -3 -13, -6 -15, -8.5 -16"/>
         <path class="antenna" d="M0.8 -8 C 3 -13, 6 -15, 8.5 -16"/>
       </g></g>
+
+      <!-- ── spores, drifting through the void -->
+      <g transform="translate(120 44)"><g class="sprout" style="--i:20"><circle class="body" cx="0" cy="0" r="1.5"/></g></g>
+      <g transform="translate(138 30)"><g class="sprout" style="--i:21"><circle class="body" cx="0" cy="0" r="1.1"/></g></g>
+      <g transform="translate(370 130)"><g class="sprout" style="--i:22"><circle class="body" cx="0" cy="0" r="1.3"/></g></g>
+      <g transform="translate(214 156)"><g class="sprout" style="--i:22"><circle class="body" cx="0" cy="0" r="1.2"/></g></g>
+      <g transform="translate(466 240)"><g class="sprout" style="--i:22"><circle class="body" cx="0" cy="0" r="1.1"/></g></g>
     </svg>
   </header>
 
@@ -220,6 +315,12 @@
 
   <p><a href="https://stimpunks.org/glossary/shared-air-space/">Shared-air space</a> relationships of any sort are <a href="https://boren.blog/2021/04/24/the-intensive-pattern-dance-of-meatspace-relationships-patterns-sensory-overwhelm-and-solo-polyamory/">intensive pattern dances</a> done at the terrifying tempo of synchronous, full-sensory real-time. I need daily doses of solitude and regular hibernation intervals to sustainably withstand any other human being. Only in solitude do I have the space to unfurl my patterns, un-beset by the outside, and recline into their regulated peace.</p>
 
+  <figure class="qe-plate">
+    <img src="images/darwin-1876-climbing-plants-fig8-corydalis-leaf-tendril.jpg" width="700" height="1002" loading="lazy" decoding="async"
+         alt="A woodcut of a slender climbing stem, drawn at natural size and lettered a to l. The stem arches over at the top, and where its upper leaves should be there are only bare thread-like tips, curved and hooked, reaching into empty space. Lower down the same stem carries ordinary five-part leaves.">
+    <figcaption>Fig.&nbsp;8, a leaf-tendril of <cite>Corydalis claviculata</cite> at natural size, from Charles Darwin, <a href="https://archive.org/details/cu31924024538922"><cite>The Movements and Habits of Climbing Plants</cite></a>, second edition (New York: D. Appleton, 1876), page 123. Drawn by <strong>George Darwin</strong>, credited by his father in the book&rsquo;s preface. Public domain; scanned from the Cornell University Library copy for the <a href="https://www.biodiversitylibrary.org/">Biodiversity Heritage Library</a>.</figcaption>
+  </figure>
+
   <p>I need my <q>own rhythms and temporalities</q> &mdash; and that phrase is the paper&rsquo;s, describing exactly this:</p>
 
   <figure class="qe-specimen">
@@ -262,6 +363,16 @@
 
   <p>Let us <a href="https://stimpunks.org/glossary/co-regulation/">co-regulate</a> together, and let us regulate apart pursuing our passions.</p>
 
+  <p>Darwin drew the thing itself, without meaning to. A tendril of white bryony, caught on a twig at one end and its own stem at the other, contracts into a spiral &mdash; and the spiral runs <em>one way</em> from one end and <em>the other way</em> from the other, with a short straight stretch in the middle where the two turns meet:</p>
+
+  <figure class="qe-plate qe-plate-wide">
+    <img src="images/darwin-1876-climbing-plants-fig13-bryonia-tendril.jpg" width="1000" height="520" loading="lazy" decoding="async"
+         alt="A woodcut of a forked twig on the left and an upright twig on the right, with a long thin tendril stretched between them. The tendril is coiled into tight corkscrew spirals along its whole length, but the coils near the left twig wind one way and the coils near the right twig wind the other, with a short straight section between the two sets of turns.">
+    <figcaption>Fig.&nbsp;13, <q>A caught tendril of <cite>Bryonia dioica</cite>, spirally contracted in reversed directions</q>, from Charles Darwin, <a href="https://archive.org/details/cu31924024538922"><cite>The Movements and Habits of Climbing Plants</cite></a>, second edition (New York: D. Appleton, 1876), page 165. Drawn by <strong>George Darwin</strong>. Public domain; scanned from the Cornell University Library copy for the <a href="https://www.biodiversitylibrary.org/">Biodiversity Heritage Library</a>.</figcaption>
+  </figure>
+
+  <p>One attachment, holding. Two ends, each turning its own way. <strong>The straight bit in the middle is where neither one gave in.</strong> Darwin is explaining a mechanical necessity &mdash; a tendril fixed at both ends cannot coil in a single direction without unwinding itself &mdash; and reading it as a diagram of anything else is entirely our doing. But it is the best picture of <q>keep we both our liberties</q> that anybody has drawn, and its author thought he was describing a weed.</p>
+
   <figure class="qe-specimen">
     <span class="qe-specimen-label">Specimen &mdash; there are concepts for this</span>
     <blockquote cite="https://doi.org/10.1177/09593535261422510">
@@ -285,6 +396,14 @@
   <h2>Not alone in needing to be alone</h2>
 
   <p>I&rsquo;m not alone in my need to be, sometimes, alone. I&rsquo;m not alone in my need for multiple different people with different ways of being to fill my life when it needs filling, to co-regulate me when I need to be with someone in a meaningful way to help balance and recharge the sensory system and bodymind.</p>
+
+  <figure class="qe-plate">
+    <img src="images/cooke-1881-british-fungi-plate-85.jpg" width="740" height="1339" loading="lazy" decoding="async"
+         alt="A hand-coloured plate on grey paper showing two groups of small mushrooms. The upper group is six pale cream ones, including two tiny unopened buttons; the lower group is seven brown-capped ones. In both groups every specimen stands on its own tuft of earth, at a different size, angle and stage of opening, with clear space between each one and the next.">
+    <figcaption>Plate&nbsp;85 from Mordecai Cubitt Cooke, <a href="https://archive.org/details/illustrationsofb01cookuoft"><cite>Illustrations of British Fungi (Hymenomycetes)</cite></a>, volume&nbsp;1 (London: Williams and Norgate, 1881&ndash;91). Two species on one plate: <em>A</em> is <cite>Agaricus (Lepiota) sistratus</cite>, <q>in Gardens</q>; <em>B</em> is <cite>Agaricus (Lepiota) mesomorphus</cite>, <q>in woods. New Forest.</q> Signed <strong>M.C.C.</strong> in the lower-left corner &mdash; Cooke&rsquo;s own initials; his preface says the contributors&rsquo; initials are attached to their drawings. Public domain; scanned from the University of Toronto copy for the <a href="https://www.biodiversitylibrary.org/">Biodiversity Heritage Library</a>.</figcaption>
+  </figure>
+
+  <p>One plate, two species, and not one specimen on it touching another. Every one at its own size, its own angle, its own stage of opening, on its own tuft of earth &mdash; one group found in gardens, the other in the New Forest, and arranged together on one sheet anyway.</p>
 
   <p>The paper&rsquo;s participants over fifty say the not-knowing out loud, and it is the hardest part of it to read.</p>
 
@@ -383,6 +502,8 @@
   <p><strong>And the poem&rsquo;s own bargain is not the one I am describing.</strong> <q>Let us be the friends we were, nothing more but nothing less</q> keeps the liberty by giving up the intimacy. What I want, and what the paper&rsquo;s participants want, is the opposite trade: keep the intimacy, several of them, and give up the ownership. Rossetti hands back the whole thing. I am borrowing her terms for a deal she did not offer.</p>
 
   <p><strong>The title is borrowed too, and we cannot say from whom.</strong> <q>Promises and pie-crust are made to be broken</q> was already proverbial when she used it. The attribution in circulation runs to Jonathan Swift&rsquo;s <cite>Polite Conversation</cite> of 1738, which we have not read in a primary, and there are recorded uses earlier still. So this sheet names no owner for the saying rather than repeating one it has not checked.</p>
+
+  <p><strong>And the tendril above has a second half to it that the sheet has so far left out.</strong> Darwin says, on the same page, that the reversed spiral <q>never occurs with uncaught tendrils; and when this appears to have occurred, it will be found that the tendril had originally seized some object and had afterwards been torn free.</q> A coil is evidence of a hold. A coil on something holding nothing is evidence of a hold that ended. Nothing in the poem, and nothing on this sheet, makes that costless &mdash; a life of coming and going leaves a shape behind either way, and <q>free to go</q> and <q>torn free</q> are not the same event described twice.</p>
 
   <p><strong>Independence is not automatically a happy ending, and the paper does not pretend it is.</strong> Set against every quotation above, from the same study, is this one:</p>
 

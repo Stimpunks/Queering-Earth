@@ -471,3 +471,61 @@ searching for the source will guess, and the title is what the sheet found in it
 written by us is titled by us — `coming-to-terms.html` is "Coming to Terms" — so the convention
 only applies to a reading.
 
+### The header art is Art Nouveau, and it took Helen three notes (2026-09-08)
+
+The Rossetti sheet's drawing was rebuilt twice after review, and the reasons are worth keeping
+because the first version looked *fine* and was wrong.
+
+**v1 — five upright stems, evenly spaced, on one flat baseline.** Each plant separate, no
+shared stem, one colour each: the argument of the sheet drawn literally. Helen: *"can we have
+squiggles and swirly bits so it isn't all linear? may be add some mushrooms or something"*.
+She was right, and it was a **fault, not a preference**. A sheet whose thesis is
+"counter-narratives following their own rhythms and temporalities" had a drawing in military
+formation at the top of it. No guard can catch that; the markup was valid and the tokens were
+correct.
+
+**v2 — scattered, coiled, with fungi.** Different root heights, fern croziers, tendrils, three
+mushrooms. Better, still built out of upright stems.
+
+**v3 — Art Nouveau, and the real answer.** Helen's brief: *"ornate swirling botanical style,
+with flowing curved vines, spiraling tendrils, and organic scrollwork instead of straight or
+geometric lines… asymmetrical, flowing composition… delicate filigree-like branches winding
+around… no rigid or angular shapes. Not linear — alive, sprouting in all directions with
+flow."* What that actually required:
+
+1. **No baseline and no roots.** One whiplash vine enters at the lower left and sweeps up
+   across the panel; everything else hangs off it. There is no ground to stand on, so nothing
+   can line up.
+2. **Every terminal curls.** Vines, tendrils and scrolls all end in a spiral turning back on
+   itself. A curve that merely stops is the thing this drawing is not.
+3. **The shapes had to change too, and this is the part that nearly got missed.** The flowing
+   linework landed in v3 while the *flowers and mushrooms were still v1's* — six-ellipse
+   daisies and flat domes on sticks with one horizontal rule for gills. Against sinuous vines
+   they read worse than they had against straight stems, because now they were the only rigid
+   things on the panel. Blooms are five sinuous petals at uneven spacings; caps have an
+   undulating margin over a tapering bent stipe; `.gills` was deleted outright. **A style note
+   about line is also a style note about form.**
+4. **A taller canvas.** 560×260, up from 434×156. Filigree needs vertical room or the curls
+   close into blobs.
+
+**The motion model needed no change and got better.** Every vine, tendril and volute is a
+`.stem`, so it draws itself on, and a long S-curve unrolling is what that animation was always
+for — v1's short uprights were the hard case, not this. Leaves, blooms, fungi and moths are
+`.sprout` groups. Verified after the rebuild: 16 stems, 28 sprouts, plain view shows the
+complete drawing with nothing hidden and no dash offsets, and the only `opacity: 0` in the
+stylesheet is inside `@keyframes qe-unfurl`, which reduced motion never runs.
+
+**`--len` is measured, not estimated.** Each path's `--len` is its real `getTotalLength()`,
+read out of the live DOM and written back. A declared length shorter than the actual one turns
+the dash into a repeating pattern and the vine draws on with gaps in it — three paths were
+short on the first pass and it is invisible in the finished state, only in the animation. **If
+you edit a `d`, re-measure that path.**
+
+### Landscape plates get `.qe-plate-wide` (2026-09-08)
+
+`.qe-plate` is capped at 23rem, which is right for a portrait plate and useless for a
+landscape one: Darwin's Bryonia tendril is 1000px of fine woodcut line across 520px of height,
+and at 350px wide its two counter-turning spirals close up into a smudge. `.qe-plate-wide`
+raises the cap to `var(--qe-measure)` and no further — the reading column stays the limit on
+this site, and a plate that wants more than the measure wants to be a different kind of page.
+

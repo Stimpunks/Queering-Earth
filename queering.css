@@ -533,6 +533,44 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
 .qe-botanical .bloom-verdigris { fill: var(--qe-verdigris); stroke: var(--qe-moss); stroke-width: 1.1; }
 .qe-botanical .bloom-lichen    { fill: var(--qe-lichen);    stroke: var(--qe-moss); stroke-width: 1.1; }
 
+/* These three shipped without a print rule, so on paper they stayed saturated
+   blobs while `.bloom` and `.bloom-alt` beside them turned into line art. Fixed
+   2026-09-08. An SVG `fill` is not a background, so "Background graphics off"
+   does not suppress it — the print sheet has to reach every art class by name or
+   the plate prints half-drawn. */
+@media print {
+  .qe-botanical .bloom-violet,
+  .qe-botanical .bloom-verdigris,
+  .qe-botanical .bloom-lichen { fill: none; stroke: #444; }
+}
+
+/* ─────────────────────────────────────────────── fungi and curl
+ *
+ * Added 2026-09-08 for the Rossetti sheet, at Helen's note on the header art:
+ * "can we have squiggles and swirly bits so it isn't all linear? may be add some
+ * mushrooms or something". She was right, and it was a fault rather than a
+ * preference — see the comment on that sheet's drawing.
+ *
+ * A curl or a tendril carries no new class: it is a `.stem`, so it draws itself
+ * on with everything else and a future session cannot forget to animate it.
+ * Fungi need three, because a mushroom is a pale stalk under a coloured cap with
+ * a line of gills between them, and none of the flower classes is any of those.
+ */
+.qe-botanical .cap     { fill: var(--qe-coral);    stroke: var(--qe-moss); stroke-width: 1.1; }
+.qe-botanical .cap-alt { fill: var(--qe-marigold); stroke: var(--qe-moss); stroke-width: 1.1; }
+.qe-botanical .stipe   { fill: var(--qe-paper-deep); stroke: var(--qe-moss); stroke-width: 1; }
+
+/* There is no `.gills` class. The first draft had one, drawing the underside of
+   the cap as a single horizontal rule, and that rule was the most rigid line on
+   a panel whose brief was that nothing be rigid. The cap's own undulating margin
+   carries the form instead, and the two curved marks on the dome are `.rib`,
+   which the print sheet already reaches. */
+
+@media print {
+  .qe-botanical .cap, .qe-botanical .cap-alt,
+  .qe-botanical .stipe { fill: none; stroke: #444; }
+}
+
 /* ─────────────────────────────────────────────── a mounted plate
  *
  * A scanned illustration, mounted the way a specimen is mounted: pinned to the
@@ -561,6 +599,12 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
   color: var(--qe-moss);
   text-align: left;
 }
+
+/* A landscape plate at 23rem is a postage stamp — Darwin's Bryonia tendril is
+   1000px of fine woodcut line across 520px of height, and at 350px wide the
+   spirals close up into a smudge. Wide plates take the full measure and not one
+   pixel more: the reading column is still the limit on this site. */
+.qe-plate-wide { max-width: var(--qe-measure); }
 
 @media print {
   /* The plate prints. Capped so it cannot take a sheet of its own, and the frame
