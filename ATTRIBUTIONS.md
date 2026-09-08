@@ -892,6 +892,87 @@ inherited from a catalogue record describe the catalogue record.
 
 ----
 
+### Pamela Demory — "to queer, then, may be to adapt", and the same sentence adapted by its own author
+
+**Quoted on:** `index.html`, in the sections *To queer is to adapt* and *The sentence adapts
+itself*. Four quotations from Demory, in two places, plus one phrase she is herself quoting.
+
+**1. The slash (2019), quoted in full:**
+
+> To adapt is to modify, to evolve, to transform, to repeat, imitate, parody, make new. To
+> queer something is to make it strange or odd, but also to turn or transform it. To queer,
+> then, may be to adapt; to adapt is to queer.
+
+**2 and 3. Two phrases from the same page, quoted inline:** "suffer from the stereotype of
+being secondary, somehow less authentic" (page 1), and "If we think of queer as a verb, as a
+doing rather than a being, then to queer something is to deconstruct it, to demonstrate the
+instability of all those apparently obvious oppositions" (page 3). The three oppositions the
+page then names — male/female, homosexuality/heterosexuality, normal/deviant — are given on
+our page as a list in our own sentence, not inside the quotation marks.
+
+**Source:** Pamela Demory, ["Queer/Adaptation: An Introduction"](https://link.springer.com/chapter/10.1007/978-3-030-05306-2_1),
+chapter 1, pages 1–14, in *Queer/Adaptation: A Collection of Critical Essays*, ed. Pamela
+Demory, Palgrave Studies in Adaptation and Visual Culture, Palgrave Macmillan, 2019.
+DOI [10.1007/978-3-030-05306-2_1](https://doi.org/10.1007/978-3-030-05306-2_1).
+
+**Verified:** 2026-09-08, by extracting the full chapter text from the PDF held in the
+Stimpunks Knowledge System at `inbox/Queer_Adaptation_An_Introduction.pdf` and reading the
+sentences in place. All three are exact, including the unpunctuated tail of the first
+("to repeat, imitate, parody, make new" — no *to* before the last three verbs, which is
+Demory's own acceleration and not a transcription slip). Page numbers read off the running
+heads in the scan.
+
+**4. The same sentence, five years later:**
+
+> As argued elsewhere, queer and adaptation are parallel terms, both shaping the ways that we
+> approach or reflect on given texts. In other words, 'To adapt is to modify … To queer
+> something is to make it strange or odd … or transform it. To queer, then, may be to adapt'
+> (Demory 2019).
+
+**Source:** Pamela Demory, ["Queering Emily Dickinson for the Millennial Age"](https://link.springer.com/chapter/10.1007/978-3-031-50832-5_10),
+chapter 10 of *Adapting Television and Literature*, ed. Blythe Worthy and Paul Sheehan,
+Palgrave Studies in Adaptation and Visual Culture, Palgrave Macmillan, 2024. DOI
+[10.1007/978-3-031-50832-5_10](https://doi.org/10.1007/978-3-031-50832-5_10). The chapter
+reads Apple TV+'s *Dickinson* (2019–2021, created by Alena Smith).
+
+**Verified in two halves, 2026-09-08, and the second half is not the primary.**
+
+- *The quoted-within part is verified against the primary.* Every fragment inside Demory's
+  single quotes matches the 2019 chapter word for word, and every ellipsis is honest. She
+  cuts "to evolve, to transform, to repeat, imitate, parody, make new"; she cuts "but also to
+  turn"; she cuts the returning half, "; to adapt is to queer". Nothing is altered, only
+  removed, and every removal is marked. This was checked fragment by fragment against the PDF.
+- *The framing sentence is not.* "As argued elsewhere, queer and adaptation are parallel
+  terms, both shaping the ways that we approach or reflect on given texts" is Demory's 2024
+  prose, and the 2024 chapter is paywalled and is **not** held in SKS. It reaches this site as
+  a transcription supplied by Ryan Boren with the Springer link attached. The chapter title,
+  its author, its book, its editors, publisher, series, and year were all confirmed against
+  Springer's own record and the book's catalogue listings; the sentence itself has not been
+  read here against the page.
+
+**What to do about that.** Nothing, unless the chapter becomes readable. It is recorded here
+rather than quietly shipped because the difference between "read in the primary" and
+"transcribed by a person we trust" is exactly what this file exists to keep visible. **If a
+future session gets access to the 2024 chapter, read that first sentence and either confirm
+it here or fix the page.**
+
+**Why this pair is on the front page at all.** The 2024 quotation is a demonstration of the
+2019 one. Demory adapts her own sentence — trims it to fit a new argument, keeps her name on
+it, and the sentence survives as something no longer identical to itself. That is the exact
+manoeuvre this file was written to police in *other* people's hands, and the thing that makes
+it legitimate rather than a misquotation is visible in the text: the ellipses. The front page
+says so.
+
+**One phrase quoted at one remove, and labelled as such.** The page also carries "repetition,
+but repetition without replication", which is **Linda Hutcheon's** definition of adaptation
+(*A Theory of Adaptation*, page 7) as **quoted by Demory** on page 3 of the 2019 introduction.
+Hutcheon's own book has not been read here. The front page names both people and says the
+phrase is quoted in Demory's introduction, which is the honest form: the citation on the page
+claims only what was actually verified, which is that Demory quotes Hutcheon saying it.
+
+
+----
+
 ## Open
 
 ### Two sentences on the Miranda sheet claim a little more than their source does
