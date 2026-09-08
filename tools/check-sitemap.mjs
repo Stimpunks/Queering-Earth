@@ -140,17 +140,26 @@ let rootEntry = false;
 for (const loc of locs) {
   if (loc === ORIGIN || loc === ORIGIN.slice(0, -1)) { rootEntry = true; continue; }
   if (!loc.startsWith(ORIGIN)) { fail('off-site', loc); continue; }
-  paths.push(loc.slice(ORIGIN.length));
+  const slug = loc.slice(ORIGIN.length);
+  /* This site's addresses are extensionless — see DECISIONS.md. The file on disk is
+     still `<slug>.html`; the URL is not. A loc carrying .html is the old shape and
+     disagrees with every canonical tag on the site, so it fails rather than passing
+     quietly by resolving to a real file. */
+  if (slug.endsWith('.html')) {
+    fail('extension', `${loc} — addresses here are extensionless; write /${slug.replace(/\.html$/, '')}`);
+    continue;
+  }
+  paths.push(slug);
 }
 
 if (!rootEntry) fail('root', `no bare ${ORIGIN} entry — index.html depends on it for coverage`);
 
 for (const f of files) {
   if (EXEMPT.has(f)) continue;
-  if (!paths.includes(f)) fail('missing', f);
+  if (!paths.includes(f.replace(/\.html$/, ''))) fail('missing', f);
 }
 for (const p of paths) {
-  if (!fs.existsSync(path.join(REPO, p))) fail('stale', p);
+  if (!fs.existsSync(path.join(REPO, p + '.html'))) fail('stale', `${p} (no ${p}.html on disk)`);
 }
 const seen = new Set();
 for (const p of paths) {
@@ -192,6 +201,7 @@ for (const [kind, label] of [
   ['stale', 'stale (no file on disk)'],
   ['duplicate', 'duplicate entries'],
   ['off-site', 'off-site or non-https locs'],
+  ['extension', 'locs still carrying .html'],
   ['lastmod', 'lastmod problems'],
   ['structure', 'structural problems'],
   ['root', 'root-entry problems'],

@@ -7,45 +7,6 @@ re-litigated in three weeks.
 
 ## Open
 
-### Netlify rewrites our HTML, and our links disagree with our canonical
-
-Found 2026-09-07 by reading the *served* page rather than the repo, while checking that the
-sibling nav had deployed.
-
-The repo says `href="coming-to-terms.html"`. The live page says `href='/coming-to-terms'` —
-different quotes, different URL. Netlify's **Pretty URLs** post-processing is on
-(`processing_settings.html.pretty_urls: true`, the platform default) and rewrites internal
-links to strip `.html`.
-
-The result is a split we made ourselves:
-
-| | says |
-|---|---|
-| every internal link, as served | `/coming-to-terms` |
-| `<link rel="canonical">` | `/coming-to-terms.html` |
-| `sitemap.xml` | `/coming-to-terms.html` |
-
-Both forms return **200 with no redirect**. So the site links to one address and declares a
-different one canonical, which is a smaller version of the failure this file already records
-Star Stuff paying for — several addresses serving byte-identical documents.
-
-**Nothing is broken for a reader**, and the canonical tag means search engines resolve it. What
-is broken is the repo's claim to be the site: this rewrite exists nowhere in the repo, and a
-session reading these files would never know the served HTML differs from them.
-
-**Two ways out, and it is Ryan's call because it changes a live project setting:**
-
-1. **Turn Pretty URLs off** — one toggle in the Netlify UI, or a `processing_settings` PATCH.
-   Links then go out as written and agree with canonical and the sitemap. Note this probably
-   does *not* stop `/coming-to-terms` resolving — Netlify serves extensionless for `.html`
-   either way — but nothing would link to it and canonical would point away from it. This is
-   the smaller change and the one that makes the repo true again.
-2. **Adopt extensionless URLs** — rewrite canonical, `sitemap.xml`, and `tools/check-sitemap.mjs`
-   to match what is served. More work, and it breaks the "every page is a file at its own path"
-   model that `CLAUDE.md` leans on, since the filenames and the URLs would stop matching.
-
-Recommended: **1**.
-
 ### The wordmark and the tagline
 
 The masthead currently reads **Queering.Earth** with **"Post-normal possibilities."** under
@@ -123,6 +84,36 @@ Hers to correct on her own site; ours to check against the book before any sheet
 ----
 
 ## Settled
+
+### Addresses on this site are extensionless (2026-09-07)
+
+`https://queering.earth/on-being-ill`, not `/on-being-ill.html`. The file on disk is still
+`on-being-ill.html` — only the address changed.
+
+**Why the question came up.** Netlify's **Pretty URLs** post-processing is on by default and
+rewrites internal links to strip `.html`, so the served page said `href='/coming-to-terms'`
+while the repo said `href="coming-to-terms.html"` and every canonical tag and sitemap entry
+said `.html`. The site linked to one address and declared a different one canonical. Found by
+reading the served page rather than the repo, while checking that the sibling nav had deployed.
+
+Two ways out were on the table: turn the setting off, or adopt what it produces. **Ryan chose
+to adopt it.** So canonical tags, `og:url`, `sitemap.xml`, and every internal link now say the
+extensionless form, and the repo describes what Netlify actually serves. Nothing is rewritten
+on the way out any more, because there is nothing left to strip.
+
+**What this costs.** The filename and the address no longer match, which the "every page is a
+file at its own path" line in `CLAUDE.md` used to be able to claim literally. That line now says
+so explicitly rather than leaving the next session to discover it.
+
+**`tools/check-sitemap.mjs` enforces it.** A `<loc>` carrying `.html` now fails instead of
+passing quietly by resolving to a real file — verified by putting one back and watching it
+fail. `tools/serve.mjs` needed no change: it already retried `<path>.html` for clean URLs, with
+a comment saying why.
+
+**Still true, and fine:** `/on-being-ill.html` also answers 200. Nothing links to it and its
+canonical points away, so it is an unlinked alias rather than a competing address. Forcing it
+to 301 would take one `_redirects` line per sheet, which is a per-sheet chore forever; not
+worth it unless the alias starts showing up somewhere it matters.
 
 ### Sheets link to each other, outside `<main>`, with less on the card (2026-09-07)
 

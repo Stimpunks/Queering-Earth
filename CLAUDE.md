@@ -50,8 +50,12 @@ held to the same standard as anything on Star Stuff, and arguably a stricter one
 
 ## Architecture
 
-- Every page is a **self-contained HTML file** at the repo root, reachable at its own path.
-  `index.html` is the landing page.
+- Every page is a **self-contained HTML file** at the repo root. `index.html` is the landing
+  page.
+- **Addresses are extensionless**: `on-being-ill.html` on disk is `/on-being-ill` on the web.
+  Write internal links, canonical tags, `og:url`, and `sitemap.xml` entries that way — a
+  `<loc>` carrying `.html` fails `check-sitemap`. The filename and the address deliberately
+  do not match; see `DECISIONS.md` for why.
 - Two shared assets, included by relative URL:
   - **`queering.css`** — the **canonical palette tokens** (`--qe-*`, the single source of
     truth for every recurring colour), the type stack, the shared layout, the botanical
