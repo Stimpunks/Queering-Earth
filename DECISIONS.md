@@ -7,6 +7,45 @@ re-litigated in three weeks.
 
 ## Open
 
+### Netlify rewrites our HTML, and our links disagree with our canonical
+
+Found 2026-09-07 by reading the *served* page rather than the repo, while checking that the
+sibling nav had deployed.
+
+The repo says `href="coming-to-terms.html"`. The live page says `href='/coming-to-terms'` —
+different quotes, different URL. Netlify's **Pretty URLs** post-processing is on
+(`processing_settings.html.pretty_urls: true`, the platform default) and rewrites internal
+links to strip `.html`.
+
+The result is a split we made ourselves:
+
+| | says |
+|---|---|
+| every internal link, as served | `/coming-to-terms` |
+| `<link rel="canonical">` | `/coming-to-terms.html` |
+| `sitemap.xml` | `/coming-to-terms.html` |
+
+Both forms return **200 with no redirect**. So the site links to one address and declares a
+different one canonical, which is a smaller version of the failure this file already records
+Star Stuff paying for — several addresses serving byte-identical documents.
+
+**Nothing is broken for a reader**, and the canonical tag means search engines resolve it. What
+is broken is the repo's claim to be the site: this rewrite exists nowhere in the repo, and a
+session reading these files would never know the served HTML differs from them.
+
+**Two ways out, and it is Ryan's call because it changes a live project setting:**
+
+1. **Turn Pretty URLs off** — one toggle in the Netlify UI, or a `processing_settings` PATCH.
+   Links then go out as written and agree with canonical and the sitemap. Note this probably
+   does *not* stop `/coming-to-terms` resolving — Netlify serves extensionless for `.html`
+   either way — but nothing would link to it and canonical would point away from it. This is
+   the smaller change and the one that makes the repo true again.
+2. **Adopt extensionless URLs** — rewrite canonical, `sitemap.xml`, and `tools/check-sitemap.mjs`
+   to match what is served. More work, and it breaks the "every page is a file at its own path"
+   model that `CLAUDE.md` leans on, since the filenames and the URLs would stop matching.
+
+Recommended: **1**.
+
 ### The wordmark and the tagline
 
 The masthead currently reads **Queering.Earth** with **"Post-normal possibilities."** under
