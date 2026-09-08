@@ -891,3 +891,71 @@ html.plain .qe-typespec .spec { font-style: normal; }
   .qe-typespec { background: none; border: 0.5pt solid #999; }
   .qe-typespec .spec, .qe-typespec .spec-body, .qe-terms dd { color: #000; }
 }
+
+/* ─────────────────────────────────────────────── mounted verse
+ *
+ * A poem is a specimen whose LINE BREAKS ARE THE OBJECT. Reflowed into prose it
+ * is a different poem, so every line gets its own block and the alternating
+ * indent of the first printing is reproduced rather than normalised away.
+ *
+ * Each line is a `<span class="l">` and not a `<br>`-separated run. Two reasons,
+ * both learned the hard way elsewhere: a `<br>` interleaved among spans breaks
+ * `nth-child` counting, so a parity rule for the indent silently re-indents the
+ * whole poem the moment a line is added or removed; and a run of text broken only
+ * by `<br>` gives a wrapped long line nothing to hang from. The indent is a class
+ * the markup states outright, because it is a fact about the source printing.
+ */
+.qe-poem {
+  margin: 2.5rem 0;
+  padding: 0.3rem 0 0.3rem 1.35rem;
+  border-left: 3px solid var(--qe-moss);
+}
+.qe-poem blockquote { margin: 0; }
+
+.qe-poem .qe-stanza {
+  margin: 0 0 1.5rem;
+  font-family: var(--qe-display);
+  font-size: 1.14em;
+  line-height: 1.5;
+  color: var(--qe-ink);
+  font-variation-settings: "SOFT" 30, "WONK" 0;
+}
+.qe-poem .qe-stanza:last-child { margin-bottom: 0; }
+html.plain .qe-poem .qe-stanza { font-variation-settings: normal; }
+
+/* One verse line. A line too long for the measure hangs rather than wrapping
+   flush, so a wrap is never mistakable for a line the poet wrote. */
+.qe-poem .l {
+  display: block;
+  text-indent: -1.1em;
+  margin-left: 1.1em;
+}
+.qe-poem .l-in { margin-left: 2.7em; }   /* the 1896 setting indents alternate lines */
+
+.qe-poem figcaption {
+  margin-top: 1.4rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--qe-moss);
+}
+
+/* Narrow screens. The hanging indent means a wrap is never mistaken for a line
+   break the poet wrote, but seven of Rossetti's twenty-four lines wrapped on a
+   375px viewport, and a poem read at that ratio is being read as prose. The type
+   steps down instead — verse is the one place on this site where fitting the
+   line matters more than holding the body size, and the reader who needs the
+   larger type has the browser's own zoom, which this block scales with. */
+@media (max-width: 26rem) {
+  .qe-poem { padding-left: 0.9rem; }
+  .qe-poem .qe-stanza { font-size: 0.98em; }
+  .qe-poem .l-in { margin-left: 2.1em; }
+}
+
+@media print {
+  .qe-poem { border-left: 2pt solid #000; padding-left: 12pt; }
+  .qe-poem .qe-stanza { color: #000; }
+  .qe-poem figcaption { color: #222; }
+  /* A stanza is a unit of sense. Breaking one across a page break is the one
+     thing this component must not do on paper. */
+  .qe-poem .qe-stanza { break-inside: avoid; }
+}

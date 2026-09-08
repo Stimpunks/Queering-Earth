@@ -73,6 +73,20 @@ publisher move together. Three ways to handle it and none is obviously right yet
 
 Worth settling with Helen, because it decides what the Woolf sheet *is*.
 
+**A second sheet has now hit the same question, 2026-09-08.** `promises-like-pie-crust.html`
+mounts Rossetti's *Promises like Pie-crust*, whose 1896 first printing has a **colon** at line
+20 where every circulating copy has a full stop. Both sheets ended up doing **1 and 2 together**:
+name the printing on the label, quote only from it, *and* make the difference between printings
+a section of the sheet. Two for two is a pattern, not yet a rule — but the next sheet that reads
+a revised or posthumously-printed work should assume this is the house answer unless Helen and
+Ryan decide otherwise, and option 3 (both texts side by side) still has no worked example.
+
+Rossetti's case adds a wrinkle Woolf's did not have. Woolf revised her own text, so **both**
+states are authorial and the question is which of her two you mean. Rossetti died before the poem
+was printed at all: the 1896 text is her brother's transcription of her notebook, so the earliest
+printing is not certified to be her hand, and the sheet has to say so rather than resting the
+finding on "the older text wins."
+
 ### Woolf's "resonant and porous" line, on More Realms
 
 Still open, and still not ours to fix. [Monotropa Uniflora and Monotropism](https://morerealms.com/monotropa-uniflora-and-monotropism/)
@@ -417,3 +431,43 @@ possible. A check that cannot fail is a check nobody reads.
 Star Stuff's copy serves whatever directory it was started from, so a wrong-directory run
 looks exactly like a site with every page missing. This copy derives its root from the
 script's own location.
+
+### Verse gets a shared component, and every line is its own element (2026-09-08)
+
+Added for the Rossetti sheet. `.qe-poem` lives in `queering.css` rather than in the page,
+because poems are going to recur here and the second one would otherwise copy the first one's
+CSS and then drift from it.
+
+**A poem's line breaks are the object being mounted.** Reflowed into prose it is a different
+poem, so the component does three things a `<blockquote>` would not:
+
+1. **Every line is a `<span class="l">` set to `display: block`.** Not a `<br>`-separated run.
+   Two reasons. A `<br>` interleaved among spans breaks `nth-child` counting, so an indent
+   driven by an even/odd rule silently re-indents the whole poem the moment somebody adds or
+   removes a line — the indent is a class the markup states outright instead. And a run broken
+   only by `<br>` gives a wrapped long line nothing to hang from.
+2. **A hanging indent on every line**, so that a line too long for the measure is visibly a
+   wrap and can never be mistaken for a line the poet wrote.
+3. **`.l-in` reproduces the source printing's alternating indent.** That class is a fact about
+   the 1896 setting and nothing else — see `ATTRIBUTIONS.md`. It is not a decorative rhythm to
+   apply to any poem.
+
+**The type steps down at narrow widths, and this is the one place on the site it may.** Seven
+of Rossetti's twenty-four lines wrapped on a 375px viewport at the body size, and a poem read
+at that ratio is being read as prose. `.qe-poem .qe-stanza` drops to `0.98em` under 26rem, which
+fits all twenty-four. It is a relative size, so browser zoom still scales it, and the hanging
+indent remains as the safety net when a longer poem needs it. Verified: 24 lines, 0 wraps,
+no horizontal overflow, at 375px and at desktop.
+
+Stanzas get `break-inside: avoid` on paper. A stanza split across a page break is the one thing
+this component must not do.
+
+### A sheet is titled from a phrase in the specimen (2026-09-08)
+
+`on-being-ill.html` is "The Army of the Upright". `promises-like-pie-crust.html` is
+"The Die Uncast". Both titles are lifted from the work being read; both filenames name the work
+instead. That split is now deliberate and worth keeping: **the filename is the address a reader
+searching for the source will guess, and the title is what the sheet found in it.** An essay
+written by us is titled by us — `coming-to-terms.html` is "Coming to Terms" — so the convention
+only applies to a reading.
+

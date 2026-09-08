@@ -41,6 +41,7 @@ LICHEN     = token("lichen")
 VERDIGRIS  = token("verdigris")
 VIOLET     = token("violet")
 MARIGOLD   = token("marigold")
+CORAL      = token("coral")
 RULE       = token("rule")
 
 # ── fonts. Iowan Old Style is the site's own first fallback after Fraunces, so a
@@ -211,11 +212,13 @@ og_card(REPO/"images"/"og-on-being-ill.png", "The Army of the Upright", "Sheet �
         "Virginia Woolf, On Being Ill, as she left it in 1930.", VERDIGRIS)
 og_card(REPO/"images"/"og-coming-to-terms.png", "Coming to Terms", "Sheet · an essay",
         "Ryan Boren on a lifetime of seeking a word that fits.", VIOLET)
+og_card(REPO/"images"/"og-promises-like-pie-crust.png", "The Die Uncast", "Sheet · a reading",
+        "Christina Rossetti, Promises like Pie-crust, written 20 April 1861.", CORAL)
 og_card(REPO/"images"/"og-design.png", "How this site is made", "Colophon",
         "A Victorian herbarium sheet as the model: the palette, the type, the drawings.", MARIGOLD)
 
 for p in ("favicon.ico", "apple-touch-icon.png", "images/icon-512.png",
           "images/og-index.png", "images/og-on-being-ill.png", "images/og-coming-to-terms.png",
-          "images/og-design.png"):
+          "images/og-design.png", "images/og-promises-like-pie-crust.png"):
     f = REPO / p
     print("  %-34s %7d bytes" % (p, f.stat().st_size))
