@@ -306,6 +306,22 @@ a:focus-visible {
 
 strong { font-weight: 700; }
 
+/* Token names and property names are code and want a code face. In the reading
+   face the two hyphens of a custom property run together and read as one long
+   dash, which makes `--qe-moss` look like an em-dash followed by a word. */
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  color: var(--qe-ink);
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-radius: 2px;
+  padding: 0.05em 0.3em;
+}
+@media print {
+  code { background: none; border: 0.5pt solid #999; color: #000; }
+}
+
 /* A first line that opens the page like a plate caption. */
 .qe-lede {
   font-size: 1.24em;
@@ -752,4 +768,126 @@ a.card:focus-visible .qe-card-title {
 @media print {
   /* On paper there is nowhere to navigate to. */
   .qe-elsewhere { display: none; }
+}
+
+/* ─────────────────────────────────────────────── the colophon
+ *
+ * Components used only by /design. They are here rather than in that page because
+ * the palette lives in one file and nothing else may write a hex — including the
+ * page whose subject is the palette. The swatches below read the same tokens the
+ * rest of the site reads, so a colour that changes changes here too, and the page
+ * cannot quietly start lying about the site it documents.
+ */
+
+.qe-swatches {
+  list-style: none;
+  margin: 1.5rem 0 2rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 1rem 1.1rem;
+}
+
+/* The chip is the colour; the words sit on paper beside it, never on top of it.
+   Decorative tokens do not clear 7:1 and text on one would be unreadable — which
+   is the very rule this page is describing. */
+.qe-swatch-chip {
+  display: block;
+  height: 3.1rem;
+  border: 1px solid var(--qe-rule);
+  border-radius: 2px;
+  background: var(--swatch, var(--qe-paper));
+}
+.qe-swatch-name {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: var(--qe-ink);
+}
+.qe-swatch-note {
+  display: block;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  color: var(--qe-moss);
+}
+.qe-swatch-note code { font-size: 0.9em; white-space: nowrap; }
+
+/* The definitions. Same ruled-slip idiom as a sheet's label, at prose scale. */
+.qe-terms { margin: 1.5rem 0 2rem; }
+.qe-terms dt {
+  font-family: var(--qe-display);
+  font-weight: 600;
+  font-size: 1.08rem;
+  color: var(--qe-moss);
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+  margin-top: 1.25rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--qe-rule);
+}
+html.plain .qe-terms dt { font-variation-settings: normal; }
+.qe-terms dd { margin: 0.6rem 0 0; }
+
+/* Type specimens: the same string set two ways, so the axis is the only variable. */
+.qe-typespec {
+  margin: 1.25rem 0 2rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-radius: 2px;
+}
+.qe-typespec p { margin: 0 0 0.35rem; }
+.qe-typespec .qe-typespec-label {
+  font-size: 0.74rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  margin: 1.1rem 0 0.3rem;
+}
+.qe-typespec .qe-typespec-label:first-child { margin-top: 0; }
+/* Italic, because Fraunces' wonk is loudest there — in roman it changes so few
+   glyphs that a specimen set in it looks like two identical lines and quietly
+   fails to demonstrate the thing the paragraph above it is claiming. */
+.qe-typespec .spec {
+  font-family: var(--qe-display);
+  font-style: italic;
+  /* Big enough that the axis is legible. At 1.9rem the two lines were
+     indistinguishable at a glance and the specimen demonstrated nothing; the
+     difference lives in the descenders and needs the size to be seen. */
+  font-size: clamp(2.1rem, 8vw, 2.7rem);
+  line-height: 1.25;
+  color: var(--qe-ink);
+}
+.qe-typespec .spec-wonk { font-variation-settings: "SOFT" 100, "WONK" 1; }
+.qe-typespec .spec-flat { font-variation-settings: "SOFT" 0, "WONK" 0; }
+.qe-typespec .spec-body {
+  font-family: var(--qe-body);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--qe-ink);
+}
+/* In plain view the axis demonstration is meaningless — both lines are the reader's
+   own face — so the page says so rather than showing two identical lines. */
+.qe-plain-only { display: none; }
+html.plain .qe-plain-only { display: block; }
+html.plain .qe-decorated-only { display: none; }
+html.plain .qe-typespec .spec-wonk,
+html.plain .qe-typespec .spec-flat { font-variation-settings: normal; }
+html.plain .qe-typespec .spec { font-style: normal; }
+
+/* Two plates side by side where there is room. */
+.qe-plates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.qe-plates .qe-plate { margin: 0; max-width: none; }
+
+@media print {
+  .qe-swatch-chip { border: 0.5pt solid #999; }
+  .qe-swatch-name { color: #000; }
+  .qe-swatch-note, .qe-terms dt, .qe-typespec .qe-typespec-label { color: #222; }
+  .qe-typespec { background: none; border: 0.5pt solid #999; }
+  .qe-typespec .spec, .qe-typespec .spec-body, .qe-terms dd { color: #000; }
 }
