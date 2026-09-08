@@ -32,14 +32,27 @@ matches exactly, including "liberating oneself from" without a preceding "and".
 
 **Note — the paraphrase we did not ship.** The working tagline for this site was
 "Subverting, defying, disrupting, and liberating oneself from all forms of normativity,"
-credited to Walker. It is not her sentence. Her parenthetical glosses *queering*, and her
+credited to Walker. It is not his sentence. His parenthetical glosses *queering*, and his
 object is specific: "neuronormativity and heteronormativity." Walker does write, in
 [*Neuroqueer Heresies*](https://neuroqueer.com/neuroqueer-heresies/), that "anyone can
 liberate themselves from the strictures of normativity" — a different sentence, in a
-different place. Generalizing her object while keeping her name on the words would have put
-our paraphrase in her mouth on the masthead. The page now quotes her exactly, names the two
-normativities she named, and says plainly that carrying the verb further out is our
+different place. Generalizing his object while keeping his name on the words would have put
+our paraphrase in his mouth on the masthead. The page now quotes him exactly, names the two
+normativities he named, and says plainly that carrying the verb further out is our
 extension and not hers.
+
+**Pronouns updated 2026-09-07.** Nick Walker uses he/him. This entry, `index.html`, and
+`DECISIONS.md` were all written with she/her and have been corrected together.
+
+**Do not "fix" this back by checking the website.** neuroqueer.com's about page carries no
+pronouns for Walker at all — it names him by role, not by pronoun — so the site neither
+confirms nor contradicts the change, and our own mirrored corpus is mixed. The change was made
+on Ryan Boren's word, which is the better authority: he works alongside Walker, and a person's
+stated preference outranks a stale third-party page every time. If a future session finds a
+pronoun-bearing primary that says otherwise, verify it against something Walker wrote or said
+about himself — not against our own files, and not against a bio somebody else maintains.
+
+----
 
 ### Virginia Woolf — *On Being Ill*, and the edition trap
 

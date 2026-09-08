@@ -15,11 +15,11 @@ it. Both are provisional.
 The tagline is Helen Edgar's own phrase from the founding brainstorm, chosen because it is
 short, it is ours, and it carries no attribution risk. It replaced the working tagline
 — "Subverting, defying, disrupting, and liberating oneself from all forms of normativity
-(props Nick Walker)" — which is a **paraphrase of Walker wearing her name**. See
+(props Nick Walker)" — which is a **paraphrase of Walker wearing his name**. See
 `ATTRIBUTIONS.md` for the full reasoning and for how the page handles Walker now.
 
 Changing either is one line in `index.html`. Whatever replaces them, the paraphrase problem
-does not come back: quote her exactly, or write our own line.
+does not come back: quote him exactly, or write our own line.
 
 ### Whether Helen gets a static CMS
 
