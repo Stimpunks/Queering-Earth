@@ -558,3 +558,16 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
   .qe-botanical .bloom-verdigris,
   .qe-botanical .bloom-lichen { fill: none; stroke: #444; }
 }
+
+/* The credit under the tagline. Small, quiet, and not optional: the masthead
+   phrase is one hyphen from the subtitle of Nick Walker's Neuroqueer Heresies,
+   and a site about queering normativity says where its masthead came from.
+   See ATTRIBUTIONS.md. */
+.qe-tagline-credit {
+  font-family: var(--qe-body);
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  color: var(--qe-moss);
+  margin: 0.45rem auto 0;
+}
+@media print { .qe-tagline-credit { color: #222; } }

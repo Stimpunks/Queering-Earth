@@ -122,7 +122,9 @@ an SKS hit. The object carries its own attribution in the corner. Read the corne
 
 ### Nick Walker — *Postnormal Possibilities*, and our masthead
 
-**OPEN.** Not a quotation we made, a collision we found.
+**Credited on:** `index.html` — the masthead, and the "Queering is a verb" section.
+
+Not a quotation we made. A collision we found, and then said out loud.
 
 The site's tagline is **"Post-normal possibilities."** The subtitle of Walker's book is
 *Notes on the Neurodiversity Paradigm, Autistic Empowerment, and **Postnormal Possibilities***
@@ -135,12 +137,19 @@ Ravetz, early 1990s) which nobody here has yet checked against the primary. So t
 finding of borrowing. It is a finding that `DECISIONS.md` was asserting there was no risk here
 when there plainly is one, and that assertion has been corrected.
 
-**What happens to the tagline is Helen's and Ryan's call.** What this ledger needs is for the
-question to stop being invisible. It is logged, it is open, and it stays open until they close
-it.
+**Resolved 2026-09-07: the masthead credits him.** It reads *after Nick Walker*, linked to the
+book, with the full account in the section where Walker is already quoted. The page says he
+published it first, which is true, and claims nothing about how the phrase reached us, which
+nobody can honestly claim either way.
+
+*After* was chosen over "his phrase" — which would take the coinage off Helen — and over
+silence, which was defensible only until a reader noticed the subtitle. The separate lineage
+in post-normal science is real (Funtowicz and Ravetz, "Science for the post-normal age,"
+*Futures*, September 1993, checked 2026-09-07) and is not on the page, because it reads as a
+hedge on a credit that was freely given.
 
 ----
 
 ## Open
 
-The Walker tagline collision, immediately above.
+Nothing.

@@ -13,43 +13,14 @@ The masthead currently reads **Queering.Earth** with **"Post-normal possibilitie
 it. Both are provisional.
 
 The tagline is Helen Edgar's own phrase from the founding brainstorm, chosen because it is
-short and it is ours. **The claim originally recorded here — that it "carries no attribution
-risk" — was wrong, and is corrected below.** It replaced the working tagline
+short and it is ours. The attribution question it raised is **settled** — the masthead now
+credits Nick Walker, see below. The *wording* of both wordmark and tagline is still open. It replaced the working tagline
 — "Subverting, defying, disrupting, and liberating oneself from all forms of normativity
 (props Nick Walker)" — which is a **paraphrase of Walker wearing his name**. See
 `ATTRIBUTIONS.md` for the full reasoning and for how the page handles Walker now.
 
 Changing either is one line in `index.html`. Whatever replaces them, the paraphrase problem
 does not come back: quote him exactly, or write our own line.
-
-### The tagline is one hyphen from Nick Walker's book subtitle
-
-Found on 2026-09-07 while building the *Coming to Terms* sheet, in our own glossary entry for
-*neuroqueer*, and then verified against neuroqueer.com.
-
-Walker's book is *Neuroqueer Heresies: Notes on the Neurodiversity Paradigm, Autistic
-Empowerment, and **Postnormal Possibilities***. Our masthead reads **Post-normal
-possibilities.** One hyphen apart, on a site whose home page quotes Walker, about the subject
-of Walker's book.
-
-That is not proof of borrowing. Helen wrote the phrase in the founding brainstorm, and
-*post-normal* has its own separate lineage in post-normal science — Funtowicz and Ravetz,
-early 1990s — which is worth checking properly before anyone leans on it. But "it carries no
-attribution risk" is not a sentence this file can keep. The risk is the one `ATTRIBUTIONS.md`
-was written for: our phrase, somebody else's book, and no line on the page saying which is
-which.
-
-**Three ways out, and the choice is Helen's and Ryan's, not a session's:**
-
-1. **Keep it and credit the resonance** — a line somewhere that Walker got there first, which
-   costs nothing and closes the question permanently.
-2. **Keep it and say nothing**, on the grounds that Helen arrived at it independently and
-   post-normal predates them both. Defensible, and it stays defensible only for as long as
-   nobody notices the subtitle.
-3. **Change it.**
-
-What is *not* available is leaving the file asserting there is no risk here. That part is now
-fixed regardless of what happens to the tagline.
 
 ### Whether Helen gets a static CMS
 
@@ -113,6 +84,34 @@ Hers to correct on her own site; ours to check against the book before any sheet
 ----
 
 ## Settled
+
+### The masthead credits Nick Walker for the phrase (2026-09-07)
+
+Our tagline is **"Post-normal possibilities."** Walker's book is *Neuroqueer Heresies: Notes
+on the Neurodiversity Paradigm, Autistic Empowerment, and **Postnormal Possibilities***. One
+hyphen apart, on a site that quotes him on its home page, about the subject of his book.
+Found while building the *Coming to Terms* sheet, in our own glossary entry for *neuroqueer*,
+and verified against neuroqueer.com.
+
+**Ryan's call: credit him, on the masthead.** It now reads *after Nick Walker*, linked to the
+book, with the full explanation in the "Queering is a verb" section where Walker already
+appears.
+
+**Why crediting was the right of the three options.** Helen may well have arrived at the
+phrase herself — she wrote it in the founding brainstorm — and *post-normal* has a genuine
+separate lineage in post-normal science, coined by Silvio Funtowicz and Jerome Ravetz in
+"Science for the post-normal age," *Futures*, September 1993 (checked 2026-09-07, so the file
+no longer carries that as an unverified aside). None of that makes the collision invisible.
+The page therefore says the true and generous thing — *he published it first* — and claims
+nothing about the route the phrase took to get here.
+
+**The wording on the page is deliberately "after."** Not "his phrase," which would take the
+coinage away from Helen, and not silence, which was the option that stayed defensible only
+until somebody noticed the subtitle. *After* is the form poetry uses for exactly this, and it
+is the only one of the three that is true no matter which way the origin actually ran.
+
+This settles the attribution question and **not** the wording of the tagline itself, which
+stays open above as Helen's and Ryan's.
 
 ### A sheet is a reading or an essay, and the label flexes (2026-09-07)
 
