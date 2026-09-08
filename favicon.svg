@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img"
+     aria-label="A pressed leaf pinned to a sheet.">
+  <!-- The mark for queering.earth: a pressed leaf, pinned with the wordmark's rust
+       dot. The colours are the qe-paper, qe-moss, qe-lichen and qe-rust tokens from
+       queering.css; an SVG cannot read the stylesheet, so this is the second place
+       to change if one of them changes. tools/make-images.py draws the same mark for
+       the .ico and the touch icon.
+
+       NOTE: written without a doubled hyphen anywhere in this comment, including in
+       front of the token names. SVG is XML, XML forbids "- -" inside a comment, and
+       the first draft of this file quoted the tokens with their CSS prefixes and so
+       would not parse at all. It looked completely fine. -->
+  <rect width="64" height="64" fill="#f5efe2"/>
+  <path d="M32 57 C 54 47, 54 17, 32 7 C 10 17, 10 47, 32 57 Z" fill="#37502f"/>
+  <path d="M32 57 L 32 7" stroke="#9caa86" stroke-width="2.8" stroke-linecap="round"/>
+  <circle cx="32" cy="57" r="5.9" fill="#8a3520"/>
+</svg>

@@ -106,6 +106,27 @@ One trap, already paid for: **a CSS `transform` animation overrides an SVG `tran
 attribute on the same element.** Positioning goes on an outer `<g>`, the animation on an
 inner `<g class="sprout">`. Getting this wrong collapses every sprout onto the origin.
 
+### Icons and social cards are generated, not hand-made
+
+`favicon.ico`, `apple-touch-icon.png` and every `images/og-*.png` come out of
+**`tools/make-images.py`** — the one Python tool here, because it has to rasterise and
+nothing may need `npm install`. It reads the `--qe-*` values straight out of `queering.css`,
+so the cards cannot drift from the palette.
+
+**A new sheet needs a new card.** Add an `og_card(...)` line, re-run `python3 tools/make-images.py`,
+and point the page's `og:image` and `twitter:image` at it. A sheet that ships without one
+falls back to nothing and shares as a bare link.
+
+`favicon.svg` is hand-written and carries the same mark. Two traps, both already paid for:
+
+- **SVG is XML, and XML forbids a doubled hyphen inside a comment.** The first draft of
+  `favicon.svg` named the palette tokens with their CSS prefixes in a comment, which made the
+  file fail to parse *entirely* — it looked perfectly fine, served with the right content
+  type, and decoded as nothing. Test it (`xml.dom.minidom.parse`) rather than reading it.
+- **A favicon is judged at 16px, not at 64.** Two earlier marks looked good large and died
+  small: a tilted leaf reads as a diagonal stroke, and anything filled in `--qe-lichen` has too
+  little contrast on `--qe-paper` to be a shape at all. Render candidates at 16 and compare.
+
 ### Every page needs exactly one `<main>`, and the sitemap is the manifest
 
 Both are load-bearing for the **SKS site mirror**, which takes page content from the
