@@ -85,6 +85,39 @@ Hers to correct on her own site; ours to check against the book before any sheet
 
 ## Settled
 
+### Sheets link to each other, outside `<main>`, with less on the card (2026-09-07)
+
+Until now a sheet's only internal link was `/`. A reader arriving on the Woolf sheet from a
+search result had exactly one way onward: back to the plate. Each sheet now ends with
+**Elsewhere on the plate**, carrying the other sheets as the plate's own cards.
+
+Two decisions inside that, both of which would be easy to get wrong later.
+
+**It sits outside `<main>`.** Not tidiness — the SKS mirror takes page content from the
+`<main>` landmark *and nowhere else*, deliberately, so that navigation furniture is not
+indexed as content. A sibling card inside `main` would index "Coming to Terms" as part of the
+Woolf sheet, in the mirror and in anything built on it. `tools/check-markup.mjs` cannot catch
+this: the markup is valid and the landmark is correct. The comment in the markup says so at
+the point where somebody would move it.
+
+**The sibling cards carry kind, number, and title — no description.** The plate is the record;
+these are a reference to it. With two sheets that reads as restraint. At ten it is the whole
+point: repeating each card's description on every other sheet is ninety copies of a sentence
+free to drift from the one on the plate, which is the *two copies drift* failure the plain-view
+rule exists to prevent, wearing a different hat. Titles duplicate, and a title is already
+repeated in the target's `<title>` and `<h1>`, so it is the one string the site cannot avoid
+holding twice.
+
+**`auto-fill`, not `auto-fit`.** With a single sibling, `auto-fit` collapses the empty track and
+stretches one card across the whole measure, which reads as a banner. `auto-fill` keeps the
+track and the card keeps its size. The plate itself stays `auto-fit`, because there two cards
+*should* fill the width.
+
+What this does **not** do is give each sheet its own mark. That was the other reading of the
+suggestion that started this, and it is deferred: a per-sheet emblem is ornament until a reader
+needs to tell sheets apart at a glance rather than by reading the title, which is five or six
+sheets away. Every mark is then a hand-drawn asset forever, so it should be earned first.
+
 ### The plate uses Star Stuff's card class names, on purpose (2026-09-07)
 
 `index.html` now mounts the sheets as numbered cards. The box is `<div class="card-wrap">`

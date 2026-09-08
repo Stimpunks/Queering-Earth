@@ -696,3 +696,60 @@ a.card:focus-visible .qe-card-title {
   .qe-card-no, .qe-card-kind, .qe-card-sub { color: #222; }
   .qe-card-title, .qe-card-note { color: #000; }
 }
+
+/* ─────────────────────────────────────────────── elsewhere on the plate
+ *
+ * Sibling navigation at the foot of a sheet, reusing the plate's own card so the
+ * two are visibly one system.
+ *
+ * IT LIVES OUTSIDE <main>, and that is load-bearing rather than tidy: the SKS
+ * mirror takes page content from the <main> landmark and nowhere else, precisely
+ * so that navigation furniture is not indexed as content. A sibling card inside
+ * main would index "Coming to Terms" as part of the Woolf sheet.
+ *
+ * THE CARDS HERE CARRY LESS THAN THE PLATE'S: kind, number, title, and no
+ * description. The plate is the record and these are a reference to it. With one
+ * card per sheet that is a nicety; at ten sheets, repeating each description on
+ * every other sheet is ninety copies of the same sentence free to drift, which is
+ * the failure the plain-view rule exists to prevent, wearing a different hat.
+ */
+
+.qe-elsewhere {
+  max-width: var(--qe-measure);
+  margin: 0 auto;
+  padding: 0 var(--qe-gutter) 1rem;
+  border-top: 1px solid var(--qe-rule);
+  padding-top: 1.75rem;
+}
+
+.qe-elsewhere h2 {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: var(--qe-body);
+  font-variation-settings: normal;
+  color: var(--qe-moss);
+  margin: 0 0 1rem;
+}
+
+/* auto-FILL, not auto-fit: with a single sibling, auto-fit collapses the empty
+   track and stretches one card the full width of the measure, which reads as a
+   banner rather than as a card. auto-fill keeps the empty track and the card
+   keeps its size. */
+.qe-elsewhere-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+  gap: 1.1rem;
+}
+
+.qe-elsewhere a.card { padding: 0.85rem 0.95rem 1rem; }
+.qe-elsewhere .qe-card-title { font-size: 1.14rem; }
+.qe-elsewhere .qe-card-head { margin-bottom: 0.6rem; }
+
+@media print {
+  /* On paper there is nowhere to navigate to. */
+  .qe-elsewhere { display: none; }
+}

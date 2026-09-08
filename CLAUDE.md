@@ -134,6 +134,11 @@ Both are load-bearing for the **SKS site mirror**, which takes page content from
 the alternative is nav furniture indexed as content. It reads the page list from
 `sitemap.xml`. `tools/check-markup.mjs` and `tools/check-sitemap.mjs` enforce both.
 
+**Navigation belongs outside `<main>`.** The sibling nav at the foot of each sheet
+(`.qe-elsewhere`) sits after `</main>` for exactly this reason — inside it, one sheet's
+navigation is indexed as another sheet's content. No guard can catch that: the markup is valid
+and the landmark is correct.
+
 If a page ever renders content client-side, the mirror will need a published extraction
 index the way starstuff.earth publishes `search-index.json`. Prefer server-rendered content.
 
