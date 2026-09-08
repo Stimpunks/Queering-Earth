@@ -1257,3 +1257,180 @@ html.plain .qe-orig { font-variation-settings: normal; }
   }
   .qe-cutup .w-loud, .qe-cutup .w-quiet { color: #000; font-weight: 700; }
 }
+
+/* ─────────────────────────────────────────────── the accession register
+ *
+ * A herbarium keeps a register: a bound ledger recording every specimen as it
+ * enters the collection, and every annotation slip later pinned to a sheet —
+ * a re-determination, a corrected locality, a name read off the plate that
+ * disagrees with the name in the catalogue. That is a changelog, and it is a
+ * changelog in which corrections are ordinary entries rather than an
+ * embarrassment left in the commit log. So `/changelog` is drawn as the
+ * register, and it uses the site's own four words for what happens to a sheet:
+ * MOUNTED, RE-DETERMINED, LABEL CORRECTED, CABINET.
+ *
+ * THE TAG IS NOT COLOURED TEXT. Each kind carries an accent token, and the
+ * token is spent on a rule — never on the letters. The decorative five
+ * (lichen, verdigris, marigold, coral, violet) all sit under 7:1 on paper and
+ * none of them is for text; the chips read in --qe-moss like every other small
+ * caps line here, and the colour does the sorting on its own.
+ *
+ * NO NEW MOTION. The masthead drawing grows, as everywhere else on the site.
+ * The register does not animate, reveal on scroll, or collapse into
+ * accordions: it is a ledger, and a ledger you have to open is a ledger nobody
+ * reads. Every entry is on the page at first paint.
+ */
+
+.qe-register-note {
+  margin: 2rem 0 2.5rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--qe-rule);
+  border-left: 3px solid var(--qe-rust);
+  border-radius: 2px;
+  background: var(--qe-card);
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+.qe-register-note p { margin: 0 0 0.7rem; }
+.qe-register-note p:last-child { margin-bottom: 0; }
+.qe-register-note .qe-register-note-label {
+  display: block;
+  font-size: 0.76rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  margin-bottom: 0.6rem;
+}
+
+/* The legend. A list, because it is one: four kinds, named. */
+.qe-legend {
+  list-style: none;
+  margin: 1.6rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.7rem;
+}
+.qe-legend li { margin: 0; }
+
+/* One kind of entry, named. The colour is on the bottom rule and nowhere near
+   the letters — see the note at the head of this section. */
+.qe-tag {
+  --tag-color: var(--qe-lichen);
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0.22rem 0.5rem 0.16rem;
+  color: var(--qe-moss);
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-bottom: 2px solid var(--tag-color);
+  border-radius: 1px;
+}
+.qe-tag--mounted    { --tag-color: var(--qe-marigold); }
+.qe-tag--redet      { --tag-color: var(--qe-verdigris); }
+.qe-tag--label      { --tag-color: var(--qe-coral); }
+.qe-tag--cabinet    { --tag-color: var(--qe-violet); }
+
+/* One accession: a dated group of entries, ruled off from the one above it the
+   way a register rules off a day's intake. */
+.qe-register { margin: 2.5rem 0 0; }
+
+.qe-accession {
+  margin-top: 3rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--qe-rule);
+}
+.qe-accession:first-of-type { margin-top: 1.5rem; border-top: none; padding-top: 0; }
+
+.qe-accession-date {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  margin: 0 0 0.5rem;
+}
+
+/* The day's headline. Smaller than an h2 elsewhere on the site, because there
+   are seven of them on this page and each one is a sentence. */
+.qe-accession h2 {
+  font-family: var(--qe-display);
+  font-size: 1.3rem;
+  line-height: 1.28;
+  font-weight: 600;
+  color: var(--qe-ink);
+  margin: 0 0 0.8rem;
+  font-variation-settings: "SOFT" 45, "WONK" 1;
+}
+html.plain .qe-accession h2 { font-variation-settings: normal; font-weight: 700; }
+
+.qe-accession-note {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+/* One entry. Same ruled-slip grammar as a sheet's label: a hairline on the left
+   in the kind's colour, and the text on paper beside it. */
+.qe-entry {
+  --entry-color: var(--qe-lichen);
+  border-left: 3px solid var(--entry-color);
+  padding-left: 1.1rem;
+  margin-top: 1.5rem;
+}
+.qe-entry--mounted { --entry-color: var(--qe-marigold); }
+.qe-entry--redet   { --entry-color: var(--qe-verdigris); }
+.qe-entry--label   { --entry-color: var(--qe-coral); }
+.qe-entry--cabinet { --entry-color: var(--qe-violet); }
+
+.qe-entry-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.65rem;
+  margin-bottom: 0.5rem;
+}
+.qe-entry-name {
+  font-family: var(--qe-display);
+  font-size: 1.04rem;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--qe-ink);
+}
+
+.qe-entry-body { font-size: 1rem; line-height: 1.62; }
+.qe-entry-body p { margin: 0 0 0.7rem; }
+.qe-entry-body p:last-child { margin-bottom: 0; }
+.qe-entry-body ul { margin: 0.5rem 0 0.7rem; padding-left: 1.2rem; }
+.qe-entry-body li { margin: 0 0 0.4rem; }
+/* ::marker, not a ::before glyph: the colour arrives without putting a
+   decorative character into the accessibility tree. */
+.qe-entry-body li::marker { color: var(--entry-color); }
+
+@media print {
+  .qe-register-note {
+    background: none;
+    border: 0.5pt solid #999;
+    border-left: 2pt solid #555;
+  }
+  .qe-register-note .qe-register-note-label,
+  .qe-accession-date { color: #222; }
+  .qe-accession h2, .qe-entry-name { color: #000; }
+  .qe-accession { border-top: 0.5pt solid #999; }
+  /* The chips are meaningful text on paper, where the accent rule is invisible
+     to a reader who left background graphics off — so the words go black and
+     the border carries the shape. */
+  .qe-tag {
+    color: #000;
+    background: none;
+    border: 0.5pt solid #555;
+    border-bottom: 1pt solid #555;
+  }
+  .qe-entry { border-left-color: #999; }
+  .qe-entry-body li::marker { color: #555; }
+  /* An entry is a unit of sense, the way a stanza is. */
+  .qe-entry, .qe-accession { break-inside: avoid; }
+  .qe-legend { display: none; }
+}

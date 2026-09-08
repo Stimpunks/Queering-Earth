@@ -741,3 +741,60 @@ an unpaginated online-first PDF. Both the issue and the pages are wrong.
 Queering Earth's own copy is corrected. If that citation is sitting in SKS notes, on
 stimpunks.org, or in anything of Helen's, it wants the same correction — from a session in that
 repo.
+
+### The changelog is an accession register, and it is a page rather than a file (2026-09-08)
+
+`/changelog` exists. Star Stuff has kept one since it started; this site had four sheets, a
+ledger of everyone else's words, and a growing list of its own corrections — all of it visible
+only to somebody with the repo cloned. **A site that publishes an attribution ledger owes the
+account of its own mistakes to readers, not just to sessions.**
+
+**Why a register and not a list of releases.** Star Stuff's changelog is a timeline of dated
+releases tagged *New piece*, *Revised*, *Fact-check*, *Site*, and porting that shape wholesale
+would have been the palette rule's failure mode in a new place: the same page with the hue
+rotated. A herbarium already has this document. The accession register is the bound ledger of
+every specimen as it entered the collection and of every annotation slip pinned to a sheet
+afterwards — a re-determination, a corrected locality, an identification withdrawn. So the four
+kinds of entry are the four things that happen to a herbarium sheet, and they map one to one
+onto Star Stuff's four without borrowing its words:
+
+| Star Stuff | here | what it means |
+|---|---|---|
+| New piece | **Mounted** | a sheet, or a plate, went on |
+| Revised | **Re-determined** | reworked enough that what it shows is different |
+| Fact-check | **Label corrected** | an attribution fixed, ours included |
+| Site | **Cabinet** | the stylesheet, the tools, the deployment |
+
+**The tag chips do not use the accent tokens as text.** Each kind carries one of the decorative
+five, and the token is spent on the chip's bottom rule and the entry's left hairline — never on
+the letters, which are `--qe-moss` like every other small-caps line here. This is the rule from
+`CLAUDE.md` applied to a component that *wants* colour-as-meaning: the colour sorts, and the
+words are readable on their own, which is also why the print sheet takes the chips to black and
+lets the border carry the shape. Verified: `check-contrast` measures 377 text elements on this
+page, 0 failures on screen and 0 under print emulation.
+
+**Corrections are entries, not an appendix.** Six of the entries in the backfill are our own
+errors — the byline Helen declined, the Wassell citation we were handed, the Miranda caption,
+the Bridget Cleary sentence, the Walker paraphrase, the pronouns. Each says what it claimed,
+what it says now, and how it was caught. The page's own note says why they are in the ledger
+rather than in a drawer, and the sentence to keep if anybody trims it is that on this site the
+citation is the only evidence a reader has.
+
+**The list markers use `::marker`, not a `::before` glyph.** Star Stuff's entry bullets are a
+`content: '★'`, which puts a decorative character into the accessibility tree. Colouring the
+native marker gets the same result with nothing to read out.
+
+**Backfilled from the commit history, cross-read against this file and `ATTRIBUTIONS.md`**, so
+that every correction named on the page is one of those two files' own findings rather than a
+retelling. It groups by accession rather than by commit: the Wyrd sheet, its byline correction,
+its two plates, and the paste-up CSS are one dated entry, because that is one thing that
+happened.
+
+**Linked from the footer of every page**, on the line under the colophon — the same treatment
+the colophon gets, and for the same reason: it is about the site rather than on the plate, so
+it does not take a card and a number. It is not in `Elsewhere on the plate` either. Non-sheet
+pages do not carry that nav.
+
+**Keeping it up is now part of shipping a sheet.** A sheet that lands without a register entry
+is the same omission as a sheet that lands without a social card, and it is worth the same
+line in `CLAUDE.md`: mount it, card it, log it.

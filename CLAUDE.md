@@ -131,6 +131,19 @@ falls back to nothing and shares as a bare link.
   small: a tilted leaf reads as a diagonal stroke, and anything filled in `--qe-lichen` has too
   little contrast on `--qe-paper` to be a shape at all. Render candidates at 16 and compare.
 
+### A new sheet needs a register entry, too
+
+`changelog.html` is the site's **accession register** — the public log of every sheet as it was
+mounted, every plate that came off again, and every label we corrected. **Mount it, card it,
+log it.** A sheet that lands without an entry is the same omission as one that lands without a
+social card, and it is the omission that matters more: this site publishes an attribution
+ledger, and a correction nobody can read is a correction that only exists for us.
+
+Four kinds of entry, each with one accent token spent on a rule and **never on the letters** —
+`Mounted`, `Re-determined`, `Label corrected`, `Cabinet`. Group by accession, not by commit: a
+sheet, its corrections, and the CSS it needed are one dated entry. See `DECISIONS.md` for why
+it is a register rather than a list of releases.
+
 ### Every page needs exactly one `<main>`, and the sitemap is the manifest
 
 Both are load-bearing for the **SKS site mirror**, which takes page content from the
