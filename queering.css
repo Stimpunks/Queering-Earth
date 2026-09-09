@@ -740,6 +740,80 @@ html.plain .qe-botanical { opacity: 0.85; }
   .qe-moth-figure figcaption { color: #222; }
 }
 
+/* ─────────────────────────────────────────────── the lilac bush
+ *
+ * Syringa vulgaris, drawn from Ryan's own shrubs, standing above the footer on the
+ * home page. It is the site's second lilac-and-black drawing and the first one drawn
+ * from a photograph rather than from another artwork.
+ *
+ * THE VASE HABIT IS THE WHOLE READ. Many slender woody stems from one clump at
+ * ground level, bare for the lower third, fanning into a dome half again as tall as
+ * they are. Get that proportion wrong and it is a hand fan, which two drafts were.
+ * The dome's underside ARCHES — low on the flanks, high in the middle — so the bare
+ * stems show through the centre the way they do in the photograph, and one function
+ * in the markup defines that arch for both the trunk tips and the flower placement.
+ *
+ * THE FLOWERS ARE PLACED ON A STRATIFIED GRID. Rings left the middle hollow and read
+ * as a wreath; uniform random sampling clumped into two lobes with a hole between
+ * them, which is what forty random points actually look like. Staggered rows give
+ * even coverage by construction.
+ *
+ * A PANICLE IS A MASS, NOT A CHAIN. A lilac thyrse is a dense cone of hundreds of
+ * tiny four-lobed florets; the first draft strung eleven big puffs along an axis and
+ * read as a bunch of grapes. It is drawn as a triangular scatter stippled between the
+ * three lilacs, with a few four-lobed florets on top for texture — which is how an
+ * engraver handles a mass too, and drawing every real floret would be thousands of
+ * elements for a shape the reader sees as one thing.
+ *
+ * IT IS BIG: about 700 circles, 85KB of markup, and NINE KILOBYTES over the wire,
+ * because that markup is as repetitive as markup gets and every response here is
+ * compressed. Measured, not assumed, before it shipped.
+ *
+ * DO NOT REACH FOR `use` TO SHRINK IT. That was tried: outer stylesheet selectors do
+ * not cross into a `use` shadow tree — only inherited properties do — so every cloned
+ * leaf and floret fell back to a black fill while the definition still looked right.
+ * It saved 20KB raw, which is a fraction of a kilobyte compressed, in exchange for a
+ * styling path that fails silently.
+ */
+
+.qe-lilac-bush { max-width: 34rem; margin-inline: auto; }
+.qe-lilac-bush .trunk { stroke: var(--qe-ink); stroke-linecap: round; }
+.qe-lilac-bush .ground-line { fill: none; stroke: var(--qe-lichen); stroke-width: 1.6;
+                              stroke-linecap: round; }
+/* The leaves are drawn small and scaled down, so the shared botanical stroke widths
+   come out at a third of a pixel. Restated here rather than inherited. */
+.qe-lilac-bush .leaf { stroke-width: 2.6; }
+.qe-lilac-bush .rib { stroke-width: 1.8; }
+.qe-lilac-bush .puff-deep { fill: var(--qe-violet); }
+.qe-lilac-bush .puff { fill: var(--qe-lilac); }
+.qe-lilac-bush .puff-pale { fill: var(--qe-lilac-pale); }
+.qe-lilac-bush .floret { fill: var(--qe-lilac-pale); }
+
+.qe-lilac-bush-figure { margin: var(--qe-space-8) 0 var(--qe-space-4); }
+.qe-lilac-bush-figure figcaption {
+  font-family: var(--qe-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--qe-moss);
+  max-width: 32rem;
+  margin: var(--qe-space-2) auto 0;
+  text-align: center;
+}
+
+/* In print the mass becomes what an engraver would have cut: every floret an open
+   circle in line, and the tone carried by how densely they overlap rather than by
+   ink coverage. The three fills would otherwise print as three flat greys, and the
+   design sheet's claim that these drawings print as line work would stop being true. */
+@media print {
+  .qe-lilac-bush .puff-deep,
+  .qe-lilac-bush .puff,
+  .qe-lilac-bush .puff-pale,
+  .qe-lilac-bush .floret { fill: none; stroke: #444; stroke-width: 0.5; }
+  .qe-lilac-bush .trunk { stroke: #444; }
+  .qe-lilac-bush .ground-line { stroke: #777; }
+  .qe-lilac-bush-figure figcaption { color: #222; }
+}
+
 /* ─────────────────────────────────────────────── the provocation */
 
 .qe-provocation {

@@ -130,6 +130,53 @@ on both her domains. **Never edited from this repo.**
 
 ## Settled
 
+### The lilac bush, and three things it cost (2026-09-09)
+
+Ryan's shrubs, drawn from his photograph, standing above the footer on the home page —
+the second lilac-and-black drawing here and the first drawn from a photograph rather
+than from another artwork. The page had just borrowed a colour from a song and had
+nothing of the actual plant in it.
+
+**The vase habit is the whole read.** Many slender woody stems from one clump at ground
+level, bare for the lower third, fanning into a dome half again as tall as they are. Two
+drafts put the bare stems at more than half the height and produced a **hand fan**. The
+proportion was measured off the photograph in the end, not guessed.
+
+**Even coverage needs stratification, not randomness.** Ring placement left the middle
+hollow and read as a wreath. Uniform random sampling clumped into two lobes with a hole
+between them — which is what forty random points actually look like, and worth
+remembering the next time *random* is reached for when *even* is meant. Staggered rows
+inside the ellipse give even coverage by construction.
+
+**85KB raw, 9KB compressed, and the optimisation is refused.** Seven hundred circles.
+The home page went 43KB → 143KB raw and roughly 7KB → 22KB over the wire; measured
+before shipping. Defining the leaf and floret once and referencing them with `use` saved
+20KB raw and **rendered every clone black**: outer stylesheet selectors do not cross into
+a `use` shadow tree, only inherited properties do. That is a fraction of a kilobyte
+compressed for a styling path that fails silently, and the refusal is written beside the
+component so the next person has the same idea and stops.
+
+**Print is an engraving, deliberately.** Every floret prints as an open circle in line,
+tone carried by overlap rather than ink coverage. The alternative was three flat greys,
+which would have made the design sheet's claim that these drawings print as line work
+false. Verified under print emulation — where a second fault appeared: the print block
+sat above the base rule at equal specificity, so the caption printed moss-green. Source
+order decides; the print block goes last.
+
+### `check-classes` is now the strongest port candidate (2026-09-09)
+
+A class in the markup with no rule in the stylesheet renders with SVG's default black
+fill and nothing here notices. It happened twice while the lilac was being drawn: the
+generator emitted `puff-pale` before the stylesheet knew the name, and the `use`
+experiment above put `.leaf` and `.floret` somewhere selectors could not reach. Both were
+caught by looking at a render, which is not a gate.
+
+The house rule is to port a check when the failure it catches becomes possible here.
+**It is not merely possible, it has now happened twice in one afternoon.** Star Stuff's
+`check-classes` is the next port, and the thing it needs to learn that Star Stuff's copy
+may not know is that a class inside `defs` referenced by `use` is *not* stylable from the
+outer sheet — a rule with a matching selector is not proof the element is styled.
+
 ### The moth is an homage, and the four things it cost (2026-09-09)
 
 Ryan's idea: the cover of Nick Walker's *Neuroqueer Heresies* puts a human brain where a

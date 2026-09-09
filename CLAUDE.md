@@ -293,6 +293,33 @@ Four rules, each paid for by drawing it wrong first:
   wing is inside a `.sprout`, so the first four review shots showed a moth with no wings.
   Anything capturing a drawing here waits out `0.55s + i × 0.075s` plus the unfurl.
 
+**The second lilac drawing is the plant itself** — *Syringa vulgaris* from Ryan's yard,
+above the footer on the home page, with Eliot's four lines mounted over it and the credit
+for *Lilac Wine* under it. Four rules, again paid for by drawing it wrong:
+
+- **The vase habit is the read.** Many slender stems from one clump, bare for the lower
+  third, fanning into a dome half again as tall as they are. Two drafts inverted that
+  proportion and produced a hand fan.
+- **Even coverage needs a stratified grid.** Rings leave the middle hollow and read as a
+  wreath; uniform random sampling clumps into two lobes with a hole between them, which
+  is what forty random points look like. **Do not reach for random when you mean even.**
+- **A panicle is a mass, not a chain.** Eleven big puffs along an axis read as grapes.
+- **`use` DOES NOT WORK HERE, and it looks like it should.** Outer stylesheet selectors
+  do not cross into a `use` shadow tree — only inherited properties do — so every cloned
+  leaf and floret fell back to black while the definition still looked right. It saved
+  20KB raw, which is a fraction of a kilobyte once compressed. **The drawing is 85KB raw
+  and 9KB over the wire**; repetitive markup is nearly free to a compressor, so measure
+  the compressed size before optimising the raw one.
+
+**A CLASS WITH NO RULE RENDERS BLACK AND NO GATE HERE CATCHES IT.** It happened twice in
+one afternoon — a generator emitting `puff-pale` the stylesheet did not know, and the
+`use` experiment above. `check-classes` is therefore the next port from Star Stuff; see
+`DECISIONS.md`. Until it lands, **look at a render before believing a drawing is styled.**
+
+**A `@media print` block must come after the base rules it overrides.** Same specificity
+means source order decides, and the bush's caption printed moss-green because the print
+block sat above it.
+
 ### The machine-readable layer is generated, and the credit line is authored
 
 `tools/make-markdown.mjs` writes **a `.md` beside every page, `/llms.txt`,

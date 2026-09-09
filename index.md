@@ -116,3 +116,13 @@ Seven sheets, so far, mounted and numbered on the plate below.
 The border is four flowers that were once a way of saying it without saying it: *violet*, *pansy*, *green carnation*, *lavender*. Gathered as a set by Sarah Prager in [*Four Flowering Plants That Have Been Decidedly Queered*](https://daily.jstor.org/four-flowering-plants-decidedly-queered/), JSTOR Daily, 29 January 2020.
 
 What follows will be made the way [Star Stuff](https://starstuff.earth/) is made — a piece at a time, in public, with the working-out left in, by [Helen Edgar](https://morerealms.com/) and the [Stimpunks Foundation](https://stimpunks.org/). Come back and watch it fill in.
+
+Say *lilac* and something answers. For Helen it is always Eliot, instantly — the four lines that open *The Waste Land*, which file the flower on the cruel side of the season rather than the kind one.
+
+Specimen — the lilacs
+
+> April is the cruellest month, breeding Lilacs out of the dead land, mixing Memory and desire, stirring Dull roots with spring rain.
+
+T. S. Eliot, [*The Waste Land*](https://www.poetryfoundation.org/poems/47311/the-waste-land), lines 1–4 (1922). Public domain in the United States; wording checked against [Project Gutenberg’s transcription](https://www.gutenberg.org/ebooks/1321) of the 1922 text.
+
+*Syringa vulgaris*, the common lilac, drawn from the shrubs in Ryan’s yard. *Lilac Wine* is James Shelton’s, written in 1950 for the revue *Dance Me a Song*; the readings that stayed with us are [Nina Simone’s](https://en.wikipedia.org/wiki/Wild_Is_the_Wind_(Nina_Simone_album)) on *Wild Is the Wind* (1966) and [Jeff Buckley’s](https://en.wikipedia.org/wiki/Grace_(Jeff_Buckley_album)) on *Grace* (1994). One song, read three ways — which is this site’s method, sung.

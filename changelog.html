@@ -189,8 +189,51 @@
 
   <div class="qe-register">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-09-moth">
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-lilac">
       <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <h2 id="a-2026-09-09-lilac">A lilac bush from Ryan&rsquo;s own yard, standing above the footer, and the song under it belongs to a man almost nobody names <a class="qe-anchor" href="#a-2026-09-09-lilac"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Drawn from a photograph of the shrubs in Ryan&rsquo;s garden, and mounted because the site had just borrowed a colour and had nothing of the actual plant in it. It closes the home page the way a plate closes a chapter. Ezra Furman, whose song gave the site those two colours, has said what they are for: <q>So I wrote this theme song for us, and gave us some gang colors: lilac and black.</q> Us, there, is trans women, and the statement around that sentence is about being ready to defend one another&rsquo;s lives. <a href="https://www.clashmusic.com/news/ezra-furmans-lilac-and-black-is-a-trans-rallying-cry/">Furman, in <cite>Clash</cite></a>. The flower on this page is not a decoration borrowed from a song; it is the plant the colours were named after, growing in somebody&rsquo;s yard.</p>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="index">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">The vase habit is the whole read, and two drafts got it wrong in the same way</span></div>
+        <div class="qe-entry-body">
+          <p><strong>A lilac is many slender woody stems from one clump at ground level</strong>, bare for the lower third, fanning into a dome half again as tall as they are. Both of the first two drafts put the bare stems at more than half the height and produced a <em>hand fan</em> &mdash; a shape that is unmistakably not a shrub, and unmistakably not this shrub. The proportion was eventually measured off the photograph rather than guessed.</p>
+          <p><strong>The dome&rsquo;s underside arches</strong>, low on the flanks and high in the middle, so the bare stems show through the centre exactly as they do in the photograph. One function in the markup defines that arch, and both the trunk tips and the flower placement obey it &mdash; two copies of that curve would drift, and the drift would be a bush whose trunks stop in mid-air.</p>
+          <p><strong>Placement of the flowers went through three schemes.</strong> Rings left the middle hollow and read as a wreath. Uniform random sampling clumped into two lobes with a hole between them, which is what forty random points actually look like and why nobody should reach for random when they mean <em>even</em>. Staggered rows inside the ellipse give even coverage by construction, and that is the version here.</p>
+          <p><strong>A panicle is a mass, not a chain.</strong> A lilac thyrse is a dense cone of hundreds of tiny four-lobed florets; the first attempt strung eleven large puffs along an axis and read as a bunch of grapes. It is drawn now as a triangular scatter stippled between the three lilacs, with a few four-lobed florets laid over it for texture. Drawing every real floret would be thousands of elements for a shape a reader sees as one thing.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Eighty-five kilobytes of markup, nine over the wire &mdash; and the trick that would have shrunk it breaks the styling silently</span></div>
+        <div class="qe-entry-body">
+          <p>The drawing is about seven hundred circles. Raw, it is <strong>85KB</strong>; compressed, which is how every response here is actually served, it is <strong>nine</strong>, because markup this repetitive is very nearly free to a compressor. The home page went from 43KB to 143KB raw and from about 7KB to <strong>22KB</strong> over the wire. Measured before it shipped rather than assumed either way.</p>
+          <p><strong>The obvious optimisation was tried and reverted.</strong> Defining the leaf and the floret once and referencing them cut 20KB raw &mdash; and rendered every cloned leaf and floret in <em>black</em>. Outer stylesheet selectors do not cross into a <code>use</code> shadow tree; only inherited properties do, so <code>.leaf</code> and <code>.floret</code> simply stopped matching while the definitions themselves still looked perfectly correct. That is a fraction of a kilobyte compressed in exchange for a styling path that fails silently, and the comment in <code>queering.css</code> now says so, because the next person to look at seven hundred circles will have the same idea.</p>
+          <p><strong>A class with no rule renders black, and nothing here catches that.</strong> An earlier pass had the generator emitting <code>puff-pale</code> while the stylesheet only knew <code>puff</code> and <code>puff-deep</code>: a third of every flower cluster came out in solid black, and it was found by looking. Star Stuff&rsquo;s <code>check-classes</code> is the gate for exactly this, and it is the strongest candidate for the next port &mdash; the failure it catches is now known to be possible here, which is this repository&rsquo;s stated bar.</p>
+          <p><strong>In print the mass becomes an engraving.</strong> Every floret prints as an open circle in line, and the tone comes from how densely they overlap rather than from ink coverage &mdash; which keeps the design sheet&rsquo;s claim that these drawings print as line work true, and looks better than the three flat greys the screen fills would have made. Checked under print emulation, where a second fault turned up: the print block sat <em>above</em> the base rule at equal specificity, so the caption printed moss-green. Source order decided it, and the print block now comes last.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="index">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">Helen hears Eliot the instant anybody says lilac, so the plate got the four lines that come with the flower</span></div>
+        <div class="qe-entry-body">
+          <p><q>April is the cruellest month, breeding / Lilacs out of the dead land</q> &mdash; the opening of <cite>The Waste Land</cite>, and Helen&rsquo;s immediate association with the word. It is a useful one to have standing over this drawing, because it files the flower on the <em>cruel</em> side of the season: lilacs as what the dead land produces, memory and desire stirred up together, spring as an imposition rather than a mercy. A page that has just spent a paragraph on gang colours and one on a torch song is well served by a third reading that refuses to be consoling.</p>
+          <p><strong>1922, so it is public domain in the United States</strong>, and four lines can be mounted whole rather than trimmed &mdash; which matters on a site whose stated risk is the tightened quotation. The wording was checked against <a href="https://www.gutenberg.org/ebooks/1321">Project Gutenberg&rsquo;s transcription</a> of the 1922 text rather than taken from memory; <a href="https://www.poetryfoundation.org/poems/47311/the-waste-land">the Poetry Foundation&rsquo;s copy</a>, which is what the citation links, refuses automated requests. <q>Cruellest</q> keeps its British spelling, as the house rule requires inside a quotation.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="index">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">Lilac Wine is James Shelton&rsquo;s, and the caption says so before it names either singer</span></div>
+        <div class="qe-entry-body">
+          <p>The song reached this site the way it reaches most people &mdash; through <a href="https://en.wikipedia.org/wiki/Wild_Is_the_Wind_(Nina_Simone_album)">Nina Simone</a> and <a href="https://en.wikipedia.org/wiki/Grace_(Jeff_Buckley_album)">Jeff Buckley</a>. It is neither of theirs. <strong>James Shelton wrote words and music in 1950</strong>, for a Broadway revue called <cite>Dance Me a Song</cite> that ran a few weeks, where Hope Foye introduced it. Eartha Kitt recorded it in 1953, thirteen years before Simone and forty-one before Buckley.</p>
+          <p><strong>This is the site&rsquo;s characteristic failure in its most ordinary form</strong> &mdash; not an invented source, an <em>absorbed</em> one. A cover so much better known than its original that the original stops being mentioned is the same motion as a definition trimmed to fit a masthead: the work survives, the maker falls off it. So the caption names Shelton first and calls Simone and Buckley readings, which is what they are, and is also the argument this whole site is built on. One song, read three ways.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-moth">
+      <p class="qe-accession-date">2026 &middot; 9 September</p>
       <h2 id="a-2026-09-09-moth">A moth with the Earth where its body should be, in somebody else&rsquo;s two colours, and the hardest part was stopping the middle of it from looking like a brain <a class="qe-anchor" href="#a-2026-09-09-moth"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Ryan&rsquo;s, and it is two borrowings at once. The cover of Nick Walker&rsquo;s <cite>Neuroqueer Heresies</cite> sets a human brain where a swallowtail&rsquo;s body would be; Ezra Furman&rsquo;s <cite>Lilac and Black</cite> supplies the palette and the line the palette comes wrapped in &mdash; <q>We wear the lilac and black</q>. Put the Earth where the brain was and you have this site&rsquo;s name as a drawing. Both debts are stated in the figure&rsquo;s own caption, which is the only version of this that is defensible here.</p>

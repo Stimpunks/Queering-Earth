@@ -195,6 +195,8 @@ Motion is growth: stems draw themselves in, then leaves and wings unfurl. All of
 
 One drawing is neither at the top of a page nor a plant. At the foot of [Queering is a verb](https://queering.earth/#queering-is-a-verb) there is a moth with the Earth where its body should be — an homage to the cover of Nick Walker’s *Neuroqueer Heresies*, which sets a human brain there, drawn in Ezra Furman’s lilac and black. It wears the same classes as the botanical art, so it inherits that motion rather than restating it, and its coastlines are **projected rather than drawn**: three passes of hand-drawn continents read as an inkblot and, at the centre of that particular drawing, as a brain — which is the one thing it must not be mistaken for.
 
+The second is the plant itself. Above the footer on the home page stands a lilac bush — *Syringa vulgaris*, drawn from Ryan’s own shrubs, and the only drawing here taken from a photograph rather than from morphology or from another artwork. Its flowers are placed on a **stratified grid** rather than at random, because forty random points clump into two lobes with a hole between them, and it is about seven hundred circles: 85KB of markup that compresses to nine over the wire. In print it becomes an engraving, every floret an open circle, the tone carried by how densely they overlap.
+
 ## Borrowed plates
 
 Where a page wants a real botanical illustration rather than our line work, it uses a **public domain** plate from a nineteenth-century book, most of them digitised by the [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/), whose scans of out-of-copyright natural history are one of the quiet gifts of the open web.

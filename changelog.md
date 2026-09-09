@@ -36,6 +36,44 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## A lilac bush from Ryan’s own yard, standing above the footer, and the song under it belongs to a man almost nobody names
+
+Drawn from a photograph of the shrubs in Ryan’s garden, and mounted because the site had just borrowed a colour and had nothing of the actual plant in it. It closes the home page the way a plate closes a chapter. Ezra Furman, whose song gave the site those two colours, has said what they are for: “So I wrote this theme song for us, and gave us some gang colors: lilac and black.” Us, there, is trans women, and the statement around that sentence is about being ready to defend one another’s lives. [Furman, in *Clash*](https://www.clashmusic.com/news/ezra-furmans-lilac-and-black-is-a-trans-rallying-cry/). The flower on this page is not a decoration borrowed from a song; it is the plant the colours were named after, growing in somebody’s yard.
+
+MountedThe vase habit is the whole read, and two drafts got it wrong in the same way
+
+**A lilac is many slender woody stems from one clump at ground level**, bare for the lower third, fanning into a dome half again as tall as they are. Both of the first two drafts put the bare stems at more than half the height and produced a *hand fan* — a shape that is unmistakably not a shrub, and unmistakably not this shrub. The proportion was eventually measured off the photograph rather than guessed.
+
+**The dome’s underside arches**, low on the flanks and high in the middle, so the bare stems show through the centre exactly as they do in the photograph. One function in the markup defines that arch, and both the trunk tips and the flower placement obey it — two copies of that curve would drift, and the drift would be a bush whose trunks stop in mid-air.
+
+**Placement of the flowers went through three schemes.** Rings left the middle hollow and read as a wreath. Uniform random sampling clumped into two lobes with a hole between them, which is what forty random points actually look like and why nobody should reach for random when they mean *even*. Staggered rows inside the ellipse give even coverage by construction, and that is the version here.
+
+**A panicle is a mass, not a chain.** A lilac thyrse is a dense cone of hundreds of tiny four-lobed florets; the first attempt strung eleven large puffs along an axis and read as a bunch of grapes. It is drawn now as a triangular scatter stippled between the three lilacs, with a few four-lobed florets laid over it for texture. Drawing every real floret would be thousands of elements for a shape a reader sees as one thing.
+
+CabinetEighty-five kilobytes of markup, nine over the wire — and the trick that would have shrunk it breaks the styling silently
+
+The drawing is about seven hundred circles. Raw, it is **85KB**; compressed, which is how every response here is actually served, it is **nine**, because markup this repetitive is very nearly free to a compressor. The home page went from 43KB to 143KB raw and from about 7KB to **22KB** over the wire. Measured before it shipped rather than assumed either way.
+
+**The obvious optimisation was tried and reverted.** Defining the leaf and the floret once and referencing them cut 20KB raw — and rendered every cloned leaf and floret in *black*. Outer stylesheet selectors do not cross into a `use` shadow tree; only inherited properties do, so `.leaf` and `.floret` simply stopped matching while the definitions themselves still looked perfectly correct. That is a fraction of a kilobyte compressed in exchange for a styling path that fails silently, and the comment in `queering.css` now says so, because the next person to look at seven hundred circles will have the same idea.
+
+**A class with no rule renders black, and nothing here catches that.** An earlier pass had the generator emitting `puff-pale` while the stylesheet only knew `puff` and `puff-deep`: a third of every flower cluster came out in solid black, and it was found by looking. Star Stuff’s `check-classes` is the gate for exactly this, and it is the strongest candidate for the next port — the failure it catches is now known to be possible here, which is this repository’s stated bar.
+
+**In print the mass becomes an engraving.** Every floret prints as an open circle in line, and the tone comes from how densely they overlap rather than from ink coverage — which keeps the design sheet’s claim that these drawings print as line work true, and looks better than the three flat greys the screen fills would have made. Checked under print emulation, where a second fault turned up: the print block sat *above* the base rule at equal specificity, so the caption printed moss-green. Source order decided it, and the print block now comes last.
+
+MountedHelen hears Eliot the instant anybody says lilac, so the plate got the four lines that come with the flower
+
+“April is the cruellest month, breeding / Lilacs out of the dead land” — the opening of *The Waste Land*, and Helen’s immediate association with the word. It is a useful one to have standing over this drawing, because it files the flower on the *cruel* side of the season: lilacs as what the dead land produces, memory and desire stirred up together, spring as an imposition rather than a mercy. A page that has just spent a paragraph on gang colours and one on a torch song is well served by a third reading that refuses to be consoling.
+
+**1922, so it is public domain in the United States**, and four lines can be mounted whole rather than trimmed — which matters on a site whose stated risk is the tightened quotation. The wording was checked against [Project Gutenberg’s transcription](https://www.gutenberg.org/ebooks/1321) of the 1922 text rather than taken from memory; [the Poetry Foundation’s copy](https://www.poetryfoundation.org/poems/47311/the-waste-land), which is what the citation links, refuses automated requests. “Cruellest” keeps its British spelling, as the house rule requires inside a quotation.
+
+Label correctedLilac Wine is James Shelton’s, and the caption says so before it names either singer
+
+The song reached this site the way it reaches most people — through [Nina Simone](https://en.wikipedia.org/wiki/Wild_Is_the_Wind_(Nina_Simone_album)) and [Jeff Buckley](https://en.wikipedia.org/wiki/Grace_(Jeff_Buckley_album)). It is neither of theirs. **James Shelton wrote words and music in 1950**, for a Broadway revue called *Dance Me a Song* that ran a few weeks, where Hope Foye introduced it. Eartha Kitt recorded it in 1953, thirteen years before Simone and forty-one before Buckley.
+
+**This is the site’s characteristic failure in its most ordinary form** — not an invented source, an *absorbed* one. A cover so much better known than its original that the original stops being mentioned is the same motion as a definition trimmed to fit a masthead: the work survives, the maker falls off it. So the caption names Shelton first and calls Simone and Buckley readings, which is what they are, and is also the argument this whole site is built on. One song, read three ways.
+
+2026 · 9 September
+
 ## A moth with the Earth where its body should be, in somebody else’s two colours, and the hardest part was stopping the middle of it from looking like a brain
 
 Ryan’s, and it is two borrowings at once. The cover of Nick Walker’s *Neuroqueer Heresies* sets a human brain where a swallowtail’s body would be; Ezra Furman’s *Lilac and Black* supplies the palette and the line the palette comes wrapped in — “We wear the lilac and black”. Put the Earth where the brain was and you have this site’s name as a drawing. Both debts are stated in the figure’s own caption, which is the only version of this that is defensible here.

@@ -207,6 +207,76 @@ palette for this drawing, and the comment beside them in `queering.css` says whe
 from. A colour cannot be attributed the way a sentence can — nobody owns lilac — but the
 *pairing* is Furman's line, and the tokens are the reason it now recurs across the site.
 
+**What the two colours are for, added 2026-09-09.** Furman has said, of the song:
+"So I wrote this theme song for us, and gave us some gang colors: lilac and black."
+*Us* is trans women; the statement around that sentence is about solidarity and about
+being ready to defend one another's lives against a concerted political effort to make
+trans existence unliveable —
+[Furman, in *Clash*](https://www.clashmusic.com/news/ezra-furmans-lilac-and-black-is-a-trans-rallying-cry/),
+supplied by Ryan. Recorded here because a palette borrowed without its reason is a
+palette that will eventually be described as *a nice purple*, and because the site now
+wears these colours in two drawings. They are not decorative in origin.
+
+----
+
+### James Shelton — *Lilac Wine*, and two singers who did not write it
+
+**Credited on:** `index.html` — the caption under the lilac bush above the footer.
+
+Not a quotation. A **credit**, and the reason it needed one is the ordinary version of
+this site's characteristic failure.
+
+The song reaches most people through **Nina Simone** (*Wild Is the Wind*, 1966) or
+**Jeff Buckley** (*Grace*, 1994). It is neither of theirs. **James Shelton wrote words
+and music in 1950**, for a Broadway revue called *Dance Me a Song* that ran a few weeks,
+where **Hope Foye** introduced it. **Eartha Kitt** recorded it in 1953 — thirteen years
+before Simone, forty-one before Buckley.
+
+**Verified:** 2026-09-09, against
+[the song's record](https://en.wikipedia.org/wiki/Lilac_Wine) and
+[Shelton's](https://en.wikipedia.org/wiki/James_Shelton_(songwriter)). This is a
+secondary source and is named as one. The primary would be the 1950 copyright
+registration or the sheet music, and neither was reachable from here; the caption
+claims only what the credit line claims — who wrote it, when, and for what.
+
+**Why it is in this ledger at all.** A cover so much better known than its original that
+the original stops being named is *the same motion* as a definition trimmed to fit a
+masthead: the work survives and the maker falls off it. Nobody invents anything; the
+attribution just quietly evaporates. So the caption names Shelton first and calls the
+other two **readings**, which is what they are — and which is the argument this whole
+site is built on. One song, read three ways.
+
+----
+
+### T. S. Eliot — *The Waste Land*, lines 1–4
+
+**Quoted on:** `index.html` — mounted whole above the lilac bush.
+
+> April is the cruellest month, breeding
+> Lilacs out of the dead land, mixing
+> Memory and desire, stirring
+> Dull roots with spring rain.
+
+**Source:** T. S. Eliot, *The Waste Land* (1922), lines 1–4, opening "I. The Burial of
+the Dead". Cited to [the Poetry Foundation](https://www.poetryfoundation.org/poems/47311/the-waste-land).
+
+**Verified:** 2026-09-09. The Poetry Foundation refuses automated requests (HTTP 403),
+so the wording was checked against
+[Project Gutenberg's transcription](https://www.gutenberg.org/ebooks/1321) of the 1922
+text. Both the source of the citation and the source of the check are named on the page,
+because they are not the same document and pretending otherwise would be the kind of
+tidy-looking claim this file exists to prevent.
+
+**Public domain in the United States** (published 1922), so the four lines are mounted
+**whole**. That matters here: this site's stated risk is the tightened quotation, and an
+excerpt short enough to need no ellipsis is an excerpt with nothing to hide.
+
+**"Cruellest" keeps its British spelling.** House style is US, and house style stops at
+the quotation mark.
+
+**Whose association it is.** Helen Edgar's — she hears these lines the instant anybody
+says *lilac*, and said so while the drawing was being made. The page says that.
+
 ----
 
 ### Christina Rossetti — *Promises like Pie-crust*, and the colon at line 20
