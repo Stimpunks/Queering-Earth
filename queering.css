@@ -774,6 +774,108 @@ a.card:focus-visible .qe-card-title {
   text-decoration-color: var(--qe-rust);
 }
 
+/* ─────────────────────────────────────────────── the vined plate
+ *
+ * A ruled frame around the plate of sheets, with a botanical sprig on each
+ * corner — the furniture of a Victorian herbarium sheet, where the rule is the
+ * mount and the ornament sits on it.
+ *
+ * THE FOUR FLOWERS ARE NOT DECORATION. Violet, pansy, green carnation and
+ * lavender were all worn or sent as signals, at times when saying it in words
+ * was dangerous. The border says the site's argument in the site's own idiom:
+ * this is what a flower did before it was a flower again. The <p> under the
+ * frame names them, so the drawings themselves are aria-hidden rather than
+ * announcing four flower names a reader has already been given in words.
+ *
+ * THE FRAME IS CSS AND THE CORNERS ARE SVG. A four-sided vine drawn as one
+ * SVG stretches at every window size and its corners shear. A border on the
+ * wrapper never distorts, and four fixed-ratio sprigs pinned to the corners
+ * ride on it at any width.
+ *
+ * Each sprig is drawn natively for its own corner rather than mirrored into
+ * place with scaleX/scaleY: a mirrored bottom corner hangs its flowers upside
+ * down, which is fine as wallpaper and wrong on a herbarium sheet.
+ */
+
+/* The frame bleeds out into the gutter by exactly its own padding, so the cards
+   inside keep the full measure. Padding it inward instead took 387px of usable
+   width to the grid, which is under the 417px two 12.5rem tracks and a gap need
+   — and the plate silently became a stack of cards, which is a list, not a
+   plate. That is the same collapse the grid's own comment records. The bleed is
+   always smaller than --qe-gutter, so it never reaches the window edge. */
+.qe-vined {
+  --qe-vined-pad: clamp(1rem, 3vw, 1.75rem);
+  position: relative;
+  margin: 1.75rem calc(-1 * var(--qe-vined-pad)) 0.9rem;
+  padding: var(--qe-vined-pad);
+  border: 1px solid var(--qe-rule);
+  border-radius: 2px;
+}
+.qe-vined .qe-plate-grid { margin: 0; }
+
+/* The sprigs ride on the rule, half in and half out, the way a pressed
+   specimen overlaps its own frame. pointer-events: none so a corner can never
+   sit between a reader and a card. */
+.qe-botanical.qe-corner {
+  position: absolute;
+  width: clamp(4.25rem, 13vw, 6.5rem);
+  height: auto;
+  margin: 0;
+  pointer-events: none;
+}
+.qe-corner--tl { top: -0.9rem; left: -0.9rem; }
+.qe-corner--tr { top: -0.9rem; right: -0.9rem; }
+.qe-corner--bl { bottom: -0.9rem; left: -0.9rem; }
+.qe-corner--br { bottom: -0.9rem; right: -0.9rem; }
+
+/* Under about 30rem the frame is already within a hair of the window edge, and a
+   sprig hung outside it gets its flowers clipped by the viewport — the violets
+   lost half of themselves at 390px. The corners come in flush and shrink. */
+@media (max-width: 30rem) {
+  .qe-botanical.qe-corner { width: 3.9rem; }
+  .qe-corner--tl, .qe-corner--bl { left: 0; }
+  .qe-corner--tr, .qe-corner--br { right: 0; }
+  .qe-corner--tl, .qe-corner--tr { top: -0.6rem; }
+  .qe-corner--bl, .qe-corner--br { bottom: -0.6rem; }
+}
+
+/* The flower parts. One class per flower, each aliasing a palette token — the
+   green carnation is verdigris because verdigris IS the green it was: a dyed
+   buttonhole, not a colour anything grew. */
+.qe-botanical .petal-violet    { fill: var(--qe-violet);    stroke: var(--qe-moss); stroke-width: 1.1; }
+.qe-botanical .petal-pansy     { fill: var(--qe-marigold);  stroke: var(--qe-moss); stroke-width: 1.1; }
+.qe-botanical .petal-carnation { fill: var(--qe-verdigris); stroke: var(--qe-moss); stroke-width: 1.1; }
+.qe-botanical .floret-lavender { fill: var(--qe-violet);    stroke: var(--qe-moss); stroke-width: 0.9; }
+/* The pansy's dark face. On the flower, never behind it. */
+.qe-botanical .face { fill: var(--qe-violet); stroke: none; }
+.qe-botanical .leaf-narrow { fill: var(--qe-lichen); stroke: var(--qe-moss); stroke-width: 1; }
+
+/* The documented trap, paid for once already: a fill that the print sheet
+   cannot reach prints as a solid block or as nothing at all. Every new fill
+   above is listed here the day it is written, not the day it fails. */
+@media print {
+  .qe-vined { border: 0.5pt solid #999; padding: 0.5rem; }
+  .qe-botanical .petal-violet,
+  .qe-botanical .petal-pansy,
+  .qe-botanical .petal-carnation,
+  .qe-botanical .floret-lavender,
+  .qe-botanical .leaf-narrow { fill: none; stroke: #444; }
+  .qe-botanical .face { fill: #444; }
+}
+
+/* The line that names the four. Small, moss, sitting under the frame like the
+   determination slip under a mounted specimen. */
+.qe-vined-key {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--qe-moss);
+  margin: 0 0 2.25rem;
+  text-align: center;
+  max-width: 30rem;
+  margin-inline: auto;
+}
+.qe-vined-key em { font-style: italic; }
+
 @media print {
   .qe-plate-grid { display: block; }
   .card-wrap {
