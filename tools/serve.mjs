@@ -29,6 +29,13 @@ const TYPES = {
   '.png': 'image/png',
   '.ico': 'image/x-icon',
   '.webp': 'image/webp',
+  // AVIF was missing until 2026-09-09, so the local server sent the plates as
+  // application/octet-stream and the browser sniffed them. Production sets
+  // X-Content-Type-Options: nosniff, so a type this server gets wrong is a type the
+  // live site cannot recover from — and <picture> does NOT fall through to the next
+  // <source> when one fails to decode; the choice is made on type, before the fetch.
+  '.avif': 'image/avif',
+  '.md': 'text/markdown; charset=utf-8',
   '.xml': 'application/xml; charset=utf-8',
   '.txt': 'text/plain; charset=utf-8',
 };
