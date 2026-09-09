@@ -43,7 +43,10 @@
      With no stored ground, neither class is set and the media query decides. -->
 <script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
 </head>
-<body>
+<!-- Where this sheet is foxed. Four stains, stated here because a stain is a
+     fact about one piece of paper and not about the site — the same idiom as --rot
+     on a slip. Defaults for anything that states none are in queering.css. -->
+<body style="--qe-fox-a: 94% 7%; --qe-fox-b: 12% 22%; --qe-fox-c: 56% 94%; --qe-fox-d: 84% 64%">
 
 <a class="qe-skip" href="#main">Skip to the page</a>
 
@@ -60,9 +63,10 @@
     <h1>The accession register</h1>
 
     <!-- One vine unrolling left to right and closing in a scroll, carrying four
-         blooms: marigold, verdigris, coral, violet. Those are the four colours
+         blooms: lichen, marigold, coral, violet. Those are the four colours
          of the four kinds of entry below, in the order the legend gives them,
-         so the drawing is the legend. -->
+         so the drawing is the legend — so when the gold moved off Mounted and
+         onto Re-determined, the second and third flowers here moved with it. -->
     <svg class="qe-botanical" viewBox="10 20 540 168" role="img" aria-label="A single vine unrolling from the lower left, sweeping across the page and closing in a spiral at the right, with leaves along it and four flower heads in four different colours." focusable="false">
       <path class="stem" style="--len:555" stroke-width="2.4" d="M28 170 C 96 166, 132 132, 196 116 C 268 98, 340 112, 400 92 C 448 76, 466 50, 490 50 C 508 50, 516 66, 502 74 C 490 81, 478 70, 484 60"/>
 
@@ -80,7 +84,7 @@
       <!-- Mounted. -->
       <path class="stem" style="--len:39" stroke-width="1.7" d="M156 122 C 152 106, 150 96, 148 84"/>
       <g transform="translate(148 84) rotate(186)"><g class="sprout" style="--i:8">
-        <path class="bloom" stroke-width="1.1" d="M0 0 C -8 2.6, -11 11.5, -6.6 18 C -3 23, 3 23, 6.6 18 C 11 11.5, 8 2.6, 0 0 Z"/>
+        <path class="bloom-lichen" stroke-width="1.1" d="M0 0 C -8 2.6, -11 11.5, -6.6 18 C -3 23, 3 23, 6.6 18 C 11 11.5, 8 2.6, 0 0 Z"/>
         <path class="rib" stroke-width="0.8" d="M-4 17.5 C -2.6 13, -1.8 7, -1.8 1"/>
         <path class="rib" stroke-width="0.8" d="M4 17.5 C 2.6 13, 1.8 7, 1.8 1"/>
         <circle class="body" cx="0" cy="1.5" r="1.8"/>
@@ -89,7 +93,7 @@
       <!-- Re-determined. -->
       <path class="stem" style="--len:41" stroke-width="1.7" d="M262 104 C 258 88, 256 76, 254 64"/>
       <g transform="translate(254 64) rotate(190)"><g class="sprout" style="--i:9">
-        <path class="bloom-verdigris" stroke-width="1.1" d="M0 0 C -8 2.6, -11 11.5, -6.6 18 C -3 23, 3 23, 6.6 18 C 11 11.5, 8 2.6, 0 0 Z"/>
+        <path class="bloom" stroke-width="1.1" d="M0 0 C -8 2.6, -11 11.5, -6.6 18 C -3 23, 3 23, 6.6 18 C 11 11.5, 8 2.6, 0 0 Z"/>
         <path class="rib" stroke-width="0.8" d="M-4 17.5 C -2.6 13, -1.8 7, -1.8 1"/>
         <circle class="body" cx="0" cy="1.5" r="1.8"/>
       </g></g>
@@ -133,8 +137,80 @@
 
   <div class="qe-register">
 
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-patina">
+      <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <h2 id="a-2026-09-09-patina">Fifteen panels wore the specimen&rsquo;s clothes, twenty-five margin values passed for a hand-kept register, and the site&rsquo;s gold was being spent on the least interesting thing that happens to a sheet</h2>
+
+      <p class="qe-accession-note">Prompted by Ryan reading on wabi-sabi in web design, and by a scoring of this site against the seven aesthetic principles that article names. Six of the seven were already here &mdash; two of them, <em>fukinsei</em> and <em>datsuzoku</em>, more thoroughly than the article states them. <em>Seijaku</em>, the quiet, was measurably the weakest. And the article turns out to name <em>shibui</em> in the slot where the set it descends from &mdash; Hisamatsu Shin&rsquo;ichi&rsquo;s seven characteristics of Zen art &mdash; names <em>koko</em>, the weathered one. It dropped the only principle about age and then wrote two paragraphs about patina to fill the hole. This accession is mostly about that hole.</p>
+
+      <div class="qe-entry qe-entry--mounted">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">Every sheet now says when it was mounted and how often it has been corrected since</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The patina was already here and only we could see it.</strong> This register has recorded a re-determination or a corrected label for every one of the seven sheets, and not one sheet said so on its own face. A herbarium sheet carries its annotation slips <em>on the sheet</em> &mdash; that is what makes an old sheet look old, and it is information rather than ornament.</p>
+          <p>So the foot of each sheet carries <code>.qe-provenance</code>: the mounting date, the count of label corrections and re-determinations since, and a link from each clause to the entry here that did it. It is inside <code>&lt;main&gt;</code>, unlike the sibling nav, because a sheet&rsquo;s own accession history is content about that sheet and the mirror should have it.</p>
+          <p><strong>Age you can read beats age you can only see.</strong> It is true, it is checkable, it survives plain view and paper and a screen reader and 400% zoom because it is a sentence, and it accrues on its own as this page grows. Every alternative considered &mdash; a noise tile, a grain filter, a torn edge &mdash; was a picture of age drawn over the words.</p>
+          <p>All seven sheets came out mended, so the seam is on all seven and today it distinguishes nothing. That is a fact about this site rather than a fault in the device, and inventing an unmended sheet to make the gold mean something would be the exact failure the rule below forbids. Sheet No.&nbsp;8 will arrive clean.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--redet">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--redet">Re-determined</span><span class="qe-entry-name">The gold moved off mounting and onto the mend, and the drawing at the top of this page moved with it</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Kintsugi is not that the crack shows.</strong> It is that the most precious material in the workshop is spent on the break. Read that way, this register had its taxonomy backwards: <code>--qe-marigold</code>, the site&rsquo;s gold, marked <strong>Mounted</strong> &mdash; the routine intake &mdash; and the corrections got cooler colours.</p>
+          <p>Two tokens swapped. <strong>Mounted</strong> takes <code>--qe-lichen</code>, because mounting a sheet is the ordinary event. <strong>Re-determined</strong> takes <code>--qe-marigold</code>, because a re-determination is the largest correction a register records: the specimen turned out to be a different thing. <strong>Label corrected</strong> keeps <code>--qe-coral</code>, the smaller mend. On a site that publishes a ledger of its own mistakes, spending the gold on <em>we got this wrong and fixed it</em> is an argument rather than a decoration.</p>
+          <p>The vine at the top of this page is the legend &mdash; four blooms in the four kinds&rsquo; colours, in the order the legend gives them &mdash; so its second and third flowers changed too. A legend that no longer matches the thing it explains is worse than no legend.</p>
+          <p>The unclassed default for an entry and a chip is now <code>--qe-rule</code> and not an accent, so a mistyped class reads as plain instead of quietly passing for one of the four. <code>--qe-verdigris</code> leaves the register and keeps its other jobs: the green carnation, and the second butterfly.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Three surfaces, because fifteen components were sharing one and a reader could only rank them by reading the label</span></div>
+        <div class="qe-entry-body">
+          <p><code>background: var(--qe-card)</code> appeared fifteen times in the stylesheet, thirteen of them with the same <code>1px</code> rule and the same <code>2px</code> radius. So the specimen, the mounting label, our own closing commentary and a housekeeping note were <strong>the same object to the eye</strong>. That is a defect in visual hierarchy and not a matter of taste: a reader cannot tell somebody else&rsquo;s words from ours by looking, only by reading the label.</p>
+          <p>Three surfaces now, and a new panel takes the one that says what it is. <strong>Bare</strong> &mdash; space only &mdash; for our own commentary, which is the default. <strong>Ruled</strong> &mdash; <code>--qe-card</code> in a hairline box &mdash; for an object mounted here. <strong>Ruled off</strong> &mdash; hairlines above and below, no fill &mdash; for the ledger&rsquo;s own housekeeping. <code>.qe-restaged</code> went bare, <code>.qe-untidy</code> and <code>.qe-register-note</code> went ruled off, and <em>ruled</em> now means something.</p>
+          <p><strong>The third tier is rules and not a tint, and that is a measurement.</strong> A recessed <code>--qe-paper-deep</code> panel was tried first. In daylight it drops <code>--qe-moss</code> to 6.90:1 and <code>--qe-rust</code> to 6.21:1 &mdash; both under the house 7:1 and both over WCAG AA, so <code>check-contrast.mjs</code>, which gates at AA, <strong>would have passed it silently</strong>. That is the gap this file has had logged as open since yesterday, arriving as a real near-miss rather than a hypothetical.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">Dropping a fill from two panels took their list markers down to 3.89:1, and the fix was the rule this stylesheet already states everywhere else</span></div>
+        <div class="qe-entry-body">
+          <p>Moving <code>.qe-untidy</code> off the card ground moved its bullets from 4.17:1 to <strong>3.89:1</strong>. A bullet nobody can find is a list without a list in it. Checking the neighbours turned up the larger version of the same thing: the register&rsquo;s own entry bullets were drawn in each kind&rsquo;s accent, which measures <strong>2.15:1 for lichen</strong> and 2.40:1 for marigold on paper.</p>
+          <p>Both fixed by the rule this stylesheet states in five other places: <strong>the colour goes on the rule and never on the glyph.</strong> The markers took <code>--qe-moss</code>, a text token at 7.80:1, and the accent stayed where it already was &mdash; the entry&rsquo;s left rule and the chip&rsquo;s underline. <code>.qe-untidy</code> gained a coral dashed rule in exchange, at 3.89:1, which clears the 3:1 a graphical object is held to.</p>
+          <p>Neither of these was a regression the guard could report: a <code>::marker</code> is not an element with text, so nothing measures it. Found by measuring by hand, which is the only thing that has ever found this class of fault here.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Space is a scale now, because twenty-five unrelated margin values do not read as a hand-kept register &mdash; they read as noise</span></div>
+        <div class="qe-entry-body">
+          <p>The sheet used twenty-five distinct margin values: 2, 2.5, 1.5, 0.7, 2.75, 3, 1.75, 2.25, 2.4, 2.2rem and more. <strong>Asymmetry only reads as asymmetry against a norm.</strong> This site&rsquo;s whole typographic argument is deviation &mdash; the wonk axis, the leaning slips, the four corner sprigs each drawn for its own corner &mdash; and twenty-five arbitrary gaps flatten the deviations that were actually authored.</p>
+          <p>One line of body text is <code>1.19rem &times; 1.65 = 1.96rem</code>, and <code>--qe-space-*</code> is quarter-lines of it. The page was already nearly on that scale by ear: the three commonest values were 2rem, 2.5rem and 1.5rem, and quantizing moved most gaps by one to three pixels. The scale governs the space <em>between</em> blocks; inside a block the hand is still allowed. Paragraph spacing went from 1.35rem to 1.47rem, which is the one deliberate loosening.</p>
+          <p>Three corner profiles as well, spread so that no two panels a reader sees together are cornered alike: <strong>a sheet handled a hundred times does not have four identical corners</strong>, and thirteen components carried the same radius on all four of theirs. It is a radius, so it costs nothing in contrast and nothing on paper. That is <em>koko</em> for the price of a token.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The foxing was pinned to the window while the paper moved under it, and all nine sheets were stained identically</span></div>
+        <div class="qe-entry-body">
+          <p>The paper wash was <code>position: fixed</code>, so the stains held still as the sheet scrolled past them, which is the one thing a stain does not do. It is <code>absolute</code> now, against a <code>position: relative</code> body, so the foxing belongs to the sheet and travels with it.</p>
+          <p>The four stain positions were also hardcoded, so every sheet on the site was foxed in exactly the same four places. <strong>Nature does not repeat its foxing.</strong> They are <code>--qe-fox-*</code> tokens now, stated per page in the markup &mdash; the same idiom as <code>--rot</code> on a slip, because a stain is a fact about one piece of paper and not about the site. The front page keeps the original four as the fallback.</p>
+          <p><strong>Still not texture, and that is now a written rule.</strong> The research this came from recommends a noise tile and a <code>blur(0.5px) contrast(1.1)</code> filter. Both are refused. A noise tile varies effective background luminance per pixel, and <code>check-contrast.mjs</code> composites against computed colour pairs &mdash; <strong>it cannot see a texture at all</strong>, so a grain under body text would pass every guard here and fail real readers. Foxing goes on the ground, the tape, the sprigs and the rules, and never under a letter.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">The wash was made to tile so that no long sheet had clean paper through the middle, and it drew a visible line across the page at every repeat</span></div>
+        <div class="qe-entry-body">
+          <p>The first version of the entry above claimed the wash <em>tiles down long pages at a 150rem period, far enough apart that a reader never meets the repeat</em>. Ryan met the repeat immediately, on the sheet, and said so: <q>I can see lines at the color transitions of the background.</q></p>
+          <p><strong>The cause is arithmetic and not blending.</strong> <code>transparent 70%</code> puts a gradient&rsquo;s edge at 0.7 of its radius, so in a 2400px tile the stain at <code>8%</code> reaches 278px <em>above</em> the tile&rsquo;s top edge and the one at <code>96%</code> reaches 352px below its bottom. Both were cut off square at the boundary, and a cut-off gradient meets the next copy of itself as a step. No amount of softening fixes a step.</p>
+          <p>Any fix that kept the tile would have had to constrain every page&rsquo;s stain positions to a safe band inside it &mdash; <strong>a trap laid for whoever writes the next sheet</strong>, in exchange for an even cast on the two pages long enough to want one. So the tile is gone. Four stains over the whole sheet, and <strong>a long sheet is sparsely foxed, which is what a big sheet of foxed paper looks like</strong>. The spots do not multiply to fill it. The claim that a reader would never meet the repeat was the sort of thing this register exists to catch, and it was wrong within the hour.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="qe-accession" aria-labelledby="a-2026-09-08-cabinet">
-      <p class="qe-accession-date">2026 &middot; 8 September &middot; latest</p>
+      <p class="qe-accession-date">2026 &middot; 8 September</p>
       <h2 id="a-2026-09-08-cabinet">The sheet has a second ground, and it is the drawer shut rather than the lamp switched off</h2>
 
       <p class="qe-accession-note">A dark ground was refused once, in the entry for Sheet No.&nbsp;5, on the grounds that this site has one ground and it is paper. That entry stands as a description of what it refused &mdash; a generic inverted palette arriving with a draft &mdash; and the decision has been amended rather than reversed. The cabinet is a herbarium object: dark warm brown, the drawer a sheet is filed in, and the dark-ground plate whose specimens are printed on near-black so that pale forms read.</p>

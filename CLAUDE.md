@@ -82,7 +82,57 @@ marigold, coral, violet — **are not for text**, in either ground.
 
 **`check-contrast.mjs` gates at WCAG AA (4.5:1), NOT at 7:1.** The house target is held by
 hand-chosen tokens and by nothing else, so do not cite the script as evidence of it. Logged
-open in `DECISIONS.md`.
+open in `DECISIONS.md` — and cashed in on 2026-09-09, when a recessed `--qe-paper-deep`
+panel that drops `--qe-moss` to 6.90:1 and `--qe-rust` to 6.21:1 in daylight passed the
+script clean. **It also cannot see a `::marker`**, which is how the register's entry bullets
+sat at 2.15:1 unreported. Measure by hand when you move a text-bearing surface.
+
+### A new panel picks one of three surfaces
+
+Fifteen components once shared `--qe-card` + a 1px `--qe-rule` box + a 2px radius, so a
+specimen, our own commentary and a housekeeping note were the same object to the eye. A
+reader could only rank them by reading the label — a **visual hierarchy** defect, not a
+matter of taste. Pick the surface that says what the panel is:
+
+| tier | treatment | for |
+|---|---|---|
+| **bare** | space only, no fill, no box | our own commentary — the default |
+| **ruled** | `--qe-card` inside a `--qe-rule` box | an object mounted here |
+| **ruled off** | hairlines above and below, no fill | the ledger's own housekeeping |
+
+**The third tier is rules and not a tint**, and that is a measurement — see the note above.
+Dashed hairlines mean provisional (`.qe-untidy`).
+
+### Space is a scale, and the deviations are the point
+
+One line of body text is `1.19rem × 1.65 = 1.96rem`; `--qe-space-1` … `--qe-space-8` are
+quarter-lines of it. **Asymmetry only reads as asymmetry against a norm** — this sheet once
+carried twenty-five unrelated margin values, which flattens the deviations that *are*
+authored. The scale governs the space **between** blocks; inside a block the hand is
+allowed. Corners come from `--qe-corner-a/-b/-c` (and `--qe-corner-chip`): three profiles,
+none square and no two alike, spread so no two panels a reader sees together match.
+
+### Patina is a record, and the gold goes on the mend
+
+**Age on this site is `.qe-provenance`** — the line at the foot of every sheet saying when it
+was mounted and how often it has been corrected since, each clause linked to the register
+entry that did it. Inside `<main>`, unlike `.qe-elsewhere`: a sheet's own accession history is
+content about that sheet. **A new sheet needs one**, alongside its card and its register
+entry.
+
+**`--qe-marigold` is the seam token.** It marks a re-determination in the register, the join
+in a restored attribution (`.qe-correction`), and the provenance line of a corrected sheet;
+`--qe-lichen` carries the routine event of mounting. Kintsugi is not that the crack shows —
+it is that the most precious material is spent on the break. **A seam requires an actual
+repair in the register.** A gold join on a sheet nobody corrected is decoration asserting a
+fact, which is the same failure as an image of text, and it makes the real mends unfindable.
+
+**TEXTURE NEVER GOES UNDER TEXT.** A noise tile or a `blur()`/`contrast()` filter varies
+effective background luminance per pixel; `check-contrast.mjs` composites computed colour
+pairs and cannot see it at all, so grain under body text passes every guard here and fails
+real readers. Foxing goes on the ground, the tape, the sprigs and the rules. The wash is four
+gradients at token alpha, `position: absolute` so it scrolls with the paper, seeded per page
+with `--qe-fox-a` … `--qe-fox-d` in the markup — a stain is a fact about one sheet.
 
 ### The ground is paper, and its other state is the cabinet
 
@@ -163,6 +213,11 @@ mounted, every plate that came off again, and every label we corrected. **Mount 
 log it.** A sheet that lands without an entry is the same omission as one that lands without a
 social card, and it is the omission that matters more: this site publishes an attribution
 ledger, and a correction nobody can read is a correction that only exists for us.
+
+A sheet also needs its **`.qe-provenance` line**, and a correction logged here needs that line
+updated — the count on the sheet and the entries on this page are two views of one fact, and
+the sheet is the copy that will drift. All seven sheets carry `--mended` today, because all
+seven have been corrected; the unmended state is real and is waiting for Sheet No. 8.
 
 Four kinds of entry, each with one accent token spent on a rule and **never on the letters** —
 `Mounted`, `Re-determined`, `Label corrected`, `Cabinet`. Group by accession, not by commit: a

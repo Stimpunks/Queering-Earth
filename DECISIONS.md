@@ -99,6 +99,115 @@ Hers to correct on her own site; ours to check against the book before any sheet
 
 ## Settled
 
+### Three surfaces, a spacing scale, and patina as a record (2026-09-09)
+
+Prompted by Ryan reading on wabi-sabi in web design and asking how this site scores against
+the seven aesthetic principles that literature names. Six of the seven were already here;
+two — *fukinsei* (asymmetry) and *datsuzoku* (freedom from convention) — more thoroughly
+than the sources state them. Four decisions came out of the exercise.
+
+**One sourcing note first, because it shaped everything after it.** The list of "seven
+principles of wabi-sabi" in general circulation names **shibui** in the third slot. The set
+it descends from — Hisamatsu Shin'ichi's seven characteristics of Zen art, *Zen and the Fine
+Arts* — names **koko** there: the weathered, the austere, the visibly aged. The popular list
+dropped the only one of the seven that is about age, which is why "patina" recurs in the
+research without ever resolving into a principle. **Verify against Hisamatsu before any of
+this reaches public copy**; the framing of these as principles *of wabi-sabi* rather than of
+Zen art is itself a later graft, and this is exactly the tightening `ATTRIBUTIONS.md` exists
+to catch. The colophon and the register entry both name *koko* and *kintsugi* only.
+
+**1. A panel picks one of three surfaces: bare, ruled, ruled off.** `--qe-card` appeared
+fifteen times in `queering.css`, thirteen of them with the same 1px rule and 2px radius, so
+a specimen, our own commentary, and a housekeeping note were indistinguishable by surface.
+That is a hierarchy defect and not an aesthetic one. `.qe-restaged` went bare,
+`.qe-untidy` and `.qe-register-note` went ruled off, and *ruled* now means "somebody handed
+this to us."
+
+**The third tier is hairlines and not a recessed tint, and that is the interesting part.**
+A `--qe-paper-deep` fill was the obvious answer and was tried first. In daylight it drops
+`--qe-moss` to 6.90:1 and `--qe-rust` to 6.21:1 — under the house 7:1, over WCAG AA, and
+therefore **passed `check-contrast.mjs` clean**. This is the open item logged the day before
+(the guard gates at AA, the 7:1 target is held by hand-chosen tokens and nothing else)
+arriving as a real near-miss. The item stays open; it now has a case attached.
+
+A second thing the guard cannot see turned up in the same pass: **a `::marker` is not an
+element with text, so nothing measures it.** Dropping `.qe-untidy`'s fill took its bullets
+from 4.17:1 to 3.89:1, and checking the neighbours found the register's own entry bullets
+drawn in each kind's accent — 2.15:1 for lichen, 2.40:1 for marigold on paper. Both fixed
+by the rule the stylesheet already states five times over: **the colour goes on the rule and
+never on the glyph.** Markers took `--qe-moss` at 7.80:1.
+
+**2. Space is a scale.** Twenty-five distinct margin values shipped. The argument is not
+tidiness — it is that **asymmetry only reads as asymmetry against a norm**, and this site's
+entire typographic case is deviation. Twenty-five arbitrary gaps read as noise and flatten
+the deviations that were authored. `--qe-space-*` is quarter-lines of the 1.96rem body line;
+the page was already close by ear, so quantizing moved most gaps by one to three pixels.
+Paragraph spacing went 1.35rem → 1.47rem, the one deliberate loosening. The scale governs
+space **between** blocks only.
+
+Three corner profiles for the same reason, none square and no two alike: a sheet handled a
+hundred times does not have four identical corners. It is a radius, so it is free in both
+contrast and print. *Koko* for the price of a token.
+
+**3. Patina is a record, not a texture — `.qe-provenance`.** The register had already logged
+a correction or a re-determination for **every one of the seven sheets**, and no sheet said
+so on its own face. The foot of each sheet now carries its mounting date and its correction
+counts, each clause linked to the entry here that did it. Inside `<main>`, so the mirror has
+it. It is true, checkable, accrues on its own, and survives plain view, paper, a screen
+reader and 400% zoom, because it is a sentence.
+
+Every alternative on the table was a picture of age drawn over the words. The research
+recommends a noise tile and `filter: blur(0.5px) contrast(1.1)`; both refused. **Texture
+never goes under text**, and the reason is the one above: a grain varies effective background
+luminance per pixel, and the guard composites computed colour pairs. Grain under body text
+would pass every check here.
+
+What *was* taken from the texture advice: the wash is no longer `position: fixed` — the
+stains held still while the paper scrolled past them — and its four positions are now
+`--qe-fox-*` tokens stated per page, because all nine sheets were foxed in identically the
+same four places. Same idiom as `--rot` on a slip: a stain is a fact about one sheet.
+
+**The wash does not tile, and one draft that did shipped a visible line.** It was tiled at a
+150rem period so that a long sheet would not have clean paper through the middle, with a note
+claiming a reader would never meet the repeat. Ryan met it on the first sheet he looked at.
+The cause is arithmetic: `transparent 70%` puts a gradient's edge at 0.7 of its radius, so in
+a 2400px tile a stain at `8%` reaches 278px above the tile's top and one at `96%` reaches
+352px past its bottom, both cut off square — and a cut-off gradient meets the next copy of
+itself as a step, which no softening repairs. **Keeping the tile would have meant constraining
+every future page's stain positions to a safe band inside it**, which is a trap for whoever
+writes the next sheet, bought in exchange for an even cast on the two pages long enough to
+want one. Four stains over the whole sheet instead. A long sheet is sparsely foxed; spots do
+not multiply to fill a bigger sheet.
+
+**4. The gold goes on the mend.** Kintsugi is not that the crack shows; it is that the most
+precious material in the workshop is spent on the break. Read that way the register's
+taxonomy was backwards — `--qe-marigold` marked **Mounted**, the routine intake. Two tokens
+swapped: Mounted takes `--qe-lichen`, Re-determined takes `--qe-marigold` (the largest
+correction a register records — the specimen turned out to be a different thing), Label
+corrected keeps `--qe-coral`. `.qe-correction`'s left rule became marigold and gained a gold
+seam *through* the joint rather than down the edge, with coral kept on the strike: the strike
+is the break, the join is the mend. The unclassed default became `--qe-rule` rather than an
+accent, so a mistyped class reads as plain. `--qe-verdigris` leaves the register.
+
+The masthead vine on `/changelog` **is** the legend — four blooms in the four kinds' colours
+in legend order — so its second and third flowers changed with the tokens. A legend that no
+longer matches what it explains is worse than no legend.
+
+**The constraint that makes this honest: a seam requires a repair that is actually in the
+register.** No rule derives `--mended`; the class is written on a sheet whose entries exist.
+A gold join on an uncorrected sheet is decoration asserting a fact — the same failure as an
+image of text — and it would make the real mends unfindable. All seven sheets carry the seam
+today, so it currently distinguishes nothing; that is a fact about this site rather than a
+fault in the device, and Sheet No. 8 will arrive clean.
+
+**What was considered and not done.** A deckle edge via `border-image` (a picture of an
+edge, and it fights the print sheet). Per-corner foxing spots on card edges (texture, one
+step from the thing refused above). Deliberately mis-set `opsz` on small caps to imitate a
+rephotographed plate (too subtle to be worth a token, and it fights `font-optical-sizing:
+auto`). Varying the gap between register accessions to imitate uneven intake (fights the
+scale it was just given, and the register's flatness is the ledger being a ledger).
+
+
 ### Addresses on this site are extensionless (2026-09-07)
 
 `https://queering.earth/on-being-ill`, not `/on-being-ill.html`. The file on disk is still

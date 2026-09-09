@@ -19,6 +19,47 @@
  * Everything decorative — the wonk, the rotation, the botanical art, the paper wash —
  * is switched off by `.plain` on <html>. There is one copy of the words. Two copies
  * drift, and the accessible one is always the copy that rots.
+ *
+ * A NEW PANEL PICKS ONE OF THREE SURFACES.
+ * Fifteen components once shared one treatment — --qe-card, a 1px --qe-rule box, a
+ * 2px radius — so somebody else's words, our own commentary, and a housekeeping note
+ * were the same object to the eye, and a reader could only rank them by reading the
+ * label. Three surfaces, and a new panel takes the one that says what it is:
+ *
+ *   bare        space only, no fill, no box          our own commentary
+ *   ruled       --qe-card inside a --qe-rule box     an object mounted here
+ *   ruled off   hairlines above and below, no fill   the ledger's own housekeeping
+ *
+ * THE THIRD TIER IS RULES AND NOT A TINT, and that is a measurement rather than a
+ * preference. A recessed --qe-paper-deep panel was tried first, and in daylight it
+ * drops --qe-moss to 6.90:1 and --qe-rust to 6.21:1 — both under the house 7:1 and
+ * both over WCAG AA, so check-contrast.mjs, which gates at AA, would have passed it
+ * silently. Hairlines cost nothing and every token keeps its measured value.
+ *
+ * SPACE IS A SCALE, AND THE DEVIATIONS ARE THE POINT.
+ * One line of body text is 1.19rem × 1.65 = 1.96rem, and --qe-space-* is quarter
+ * lines of it. This sheet once used twenty-five unrelated margin values, which does
+ * not read as a hand-kept register — it reads as noise, and it flattens the
+ * deviations that ARE authored. Asymmetry needs a norm to deviate from. The scale
+ * governs the space BETWEEN blocks; inside a block the hand is still allowed.
+ *
+ * PATINA IS A RECORD, NOT A TEXTURE.
+ * Age here is `.qe-provenance` — a line at the foot of every sheet saying when it was
+ * mounted and how often it has been corrected since, each clause linked to the entry
+ * in the register that did it. It is true, it is readable at any zoom, it accrues on
+ * its own, and it cannot be faked. TEXTURE NEVER GOES UNDER TEXT: a noise tile varies
+ * effective background luminance per pixel and passes every checker there is, because
+ * check-contrast.mjs measures computed colour pairs and cannot see a texture at all.
+ * Foxing belongs on the ground, the tape, the sprigs and the rules.
+ *
+ * THE GOLD GOES ON THE MEND.
+ * Kintsugi is not that the crack shows — it is that the most precious material in the
+ * workshop is spent on the break. So --qe-marigold is the seam token: it marks a
+ * re-determination in the register, the join in a restored attribution, and the
+ * provenance line of a sheet that has been corrected. --qe-lichen took over the
+ * routine event of mounting. A SEAM REQUIRES AN ACTUAL REPAIR IN THE REGISTER: a gold
+ * join on a sheet nobody ever corrected is decoration asserting a fact, which is the
+ * same failure as an image of text.
  */
 
 /* ─────────────────────────────────────────────── tokens */
@@ -62,6 +103,37 @@
 
   --qe-measure: 34rem;       /* ~66 characters at the body size */
   --qe-gutter: clamp(1.25rem, 5vw, 3rem);
+
+  /* Space. One line of body text is 1.19rem × 1.65, and the scale is quarter lines
+     of it, so every gap between blocks is a whole number of quarter-lines and the
+     page has a rhythm to deviate from. See the note at the head of this file. */
+  --qe-line: 1.96rem;
+  --qe-space-1: 0.49rem;
+  --qe-space-2: 0.98rem;
+  --qe-space-3: 1.47rem;
+  --qe-space-4: 1.96rem;     /* one line */
+  --qe-space-5: 2.45rem;
+  --qe-space-6: 2.94rem;
+  --qe-space-8: 3.92rem;     /* two lines */
+
+  /* Corners. A sheet that has been picked up a hundred times does not have four
+     identical corners, and thirteen components once carried the same 2px radius on
+     all four of theirs. Three profiles, spread across the components so that no two
+     panels a reader sees together are cornered alike. Koko, for the price of a
+     token: it is a radius, so it costs nothing in contrast and nothing in print. */
+  --qe-corner-a: 3px 2px 4px 2px;
+  --qe-corner-b: 2px 4px 2px 3px;
+  --qe-corner-c: 4px 2px 3px 2px;
+  --qe-corner-chip: 2px 1px 3px 1px;   /* slips, chips, and the drift rail */
+
+  /* Where the four stains fall. A stain is a property of the paper and not of the
+     window, so these are overridden per page in the markup — the same idiom as
+     `--rot` on a slip — and no two sheets are foxed identically. The values below
+     are the front page's, and are the fallback for anything that states none. */
+  --qe-fox-a: 12% 8%;
+  --qe-fox-b: 92% 22%;
+  --qe-fox-c: 78% 96%;
+  --qe-fox-d: 4% 82%;
 
   /* Type. Fraunces carries a WONK axis — letterforms that deviate from the
      norm on purpose. Using it for the display face is not a coincidence. */
@@ -189,6 +261,14 @@ html {
 body {
   margin: 0;
   padding: 0;
+  /* Positioned, and tall enough to be a sheet on a short page: both are for the
+     wash below, which is absolute against this box rather than fixed to the window.
+     `position: relative` does not make a stacking context on its own, so the
+     negative-z wash still paints above the canvas — body's background propagates to
+     the canvas and is not part of body's own painting, which is what makes that
+     work. Nothing else on this site positions against the window. */
+  position: relative;
+  min-height: 100vh;
   background-color: var(--qe-paper);
   color: var(--qe-ink);
   font-family: var(--qe-body);
@@ -199,18 +279,39 @@ body {
 }
 
 /* The foxed-paper wash: four soft, off-centre stains, no image and no noise.
-   Switched off in plain view and never painted on paper. */
+   Switched off in plain view and never painted on paper.
+   Deliberately NOT texture: a noise tile or a grain image under text varies the
+   effective background luminance per pixel, which no contrast checker can see. Four
+   soft gradients under everything, at a token's alpha, are measurable — the ancestor
+   stack check-contrast.mjs composites against is a real colour.
+
+   IT IS ABSOLUTE, NOT FIXED, so the stains scroll with the sheet. Pinned to the
+   window they held still while the paper moved under them, which is the one thing a
+   stain does not do.
+
+   AND IT DOES NOT TILE. It did for one draft, at a 150rem period, so that a long
+   sheet would not have clean paper through the middle of it. That draft shipped a
+   visible horizontal line at every repeat, and the reason is arithmetic rather than
+   blending: `transparent 70%` puts each gradient's edge at 0.7 of its radius, so the
+   stain at `8%` of a 2400px tile reaches 278px ABOVE the tile's top and the one at
+   `96%` reaches 352px below its bottom. Both get cut off square at the boundary, and
+   a cut-off gradient meets the next copy of itself as a step. Any fix that keeps the
+   tile has to constrain every page's stain positions to a safe band inside it —
+   which is a trap laid for whoever writes the next sheet, to buy an even cast on the
+   two pages long enough to need one. So: four stains over the whole sheet, and a
+   long sheet is sparsely foxed. That is what a big sheet of foxed paper looks like.
+   The spots do not multiply to fill it. */
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: -1;
   pointer-events: none;
   background-image:
-    radial-gradient(58rem 42rem at 12% 8%, var(--qe-wash-a), transparent 70%),
-    radial-gradient(46rem 38rem at 92% 22%, var(--qe-wash-b), transparent 72%),
-    radial-gradient(52rem 40rem at 78% 96%, var(--qe-wash-c), transparent 70%),
-    radial-gradient(40rem 34rem at 4% 82%, var(--qe-wash-d), transparent 74%);
+    radial-gradient(58rem 42rem at var(--qe-fox-a), var(--qe-wash-a), transparent 70%),
+    radial-gradient(46rem 38rem at var(--qe-fox-b), var(--qe-wash-b), transparent 72%),
+    radial-gradient(52rem 40rem at var(--qe-fox-c), var(--qe-wash-c), transparent 70%),
+    radial-gradient(40rem 34rem at var(--qe-fox-d), var(--qe-wash-d), transparent 74%);
 }
 html.plain body::before { display: none; }
 
@@ -285,7 +386,7 @@ main {
   display: block;
   max-width: var(--qe-measure);
   margin: 0 auto;
-  padding: 0 var(--qe-gutter) 4rem;
+  padding: 0 var(--qe-gutter) var(--qe-space-8);
 }
 
 /* Two blocks are allowed to break the measure: the masthead and the provocation.
@@ -335,7 +436,7 @@ html.plain .qe-wordmark { font-variation-settings: normal; font-weight: 700; }
   display: block;
   width: 100%;
   height: auto;
-  margin: 1.75rem auto 0.5rem;
+  margin: var(--qe-space-4) auto var(--qe-space-1);
 }
 .qe-botanical .stem,
 .qe-botanical .rib {
@@ -423,7 +524,7 @@ h2 {
   font-size: clamp(1.5rem, 4.6vw, 2rem);
   line-height: 1.2;
   color: var(--qe-moss);
-  margin: 2.75rem 0 0.85rem;
+  margin: var(--qe-space-6) 0 var(--qe-space-2);
   font-variation-settings: "SOFT" 40, "WONK" 1;
 }
 html.plain h2 { font-variation-settings: normal; }
@@ -457,7 +558,7 @@ html.plain h2.qe-play .w { font-variation-settings: normal; transform: none; }
 h2 .qe-queer { font-variation-settings: "SOFT" 100, "WONK" 1; }
 html.plain h2 .qe-queer { font-variation-settings: normal; }
 
-p { margin: 0 0 1.35rem; }
+p { margin: 0 0 var(--qe-space-3); }
 
 a {
   color: var(--qe-rust);
@@ -499,11 +600,11 @@ code {
 /* ─────────────────────────────────────────────── the specimen quotation */
 
 .qe-specimen {
-  margin: 2.75rem 0;
+  margin: var(--qe-space-6) 0;
   padding: 1.75rem 1.5rem 1.25rem;
   background: var(--qe-card);
   border: 1px solid var(--qe-rule);
-  border-radius: 2px;
+  border-radius: var(--qe-corner-a);
   box-shadow: 0 1px 0 var(--qe-paper-deep);
   position: relative;
 }
@@ -544,7 +645,7 @@ html.plain .qe-specimen blockquote { font-variation-settings: normal; }
   border-top: 1px solid var(--qe-rule);
   margin: 0 auto;
   max-width: 46rem;
-  padding: 2rem var(--qe-gutter) 3.5rem;
+  padding: var(--qe-space-4) var(--qe-gutter) var(--qe-space-8);
   font-size: 0.98rem;
   line-height: 1.6;
   color: var(--qe-moss);
@@ -605,11 +706,11 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
 /* The mounting label. A ruled slip, read as pairs, never as a table — the
    fields are a description of one object, which is what <dl> is for. */
 .qe-label {
-  margin: 2rem 0 2.5rem;
+  margin: var(--qe-space-4) 0 var(--qe-space-5);
   padding: 1.1rem 1.25rem 0.6rem;
   border: 1px solid var(--qe-rule);
   border-left: 3px solid var(--qe-moss);
-  border-radius: 2px;
+  border-radius: var(--qe-corner-b);
   background: var(--qe-card);
   font-size: 0.97rem;
   line-height: 1.5;
@@ -642,7 +743,7 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
 
 /* The edition table. Wide content scrolls inside its own box; the page body
    never scrolls sideways. */
-.qe-editions-scroll { overflow-x: auto; margin: 1.5rem 0 2rem; }
+.qe-editions-scroll { overflow-x: auto; margin: var(--qe-space-3) 0 var(--qe-space-4); }
 .qe-editions {
   border-collapse: collapse;
   width: 100%;
@@ -746,7 +847,7 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
  * the page. See ATTRIBUTIONS.md.
  */
 .qe-plate {
-  margin: 2.75rem auto;
+  margin: var(--qe-space-6) auto;
   max-width: 23rem;
   text-align: center;
 }
@@ -814,7 +915,7 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
 
 .qe-plate-grid {
   list-style: none;
-  margin: 1.75rem 0 2.25rem;
+  margin: var(--qe-space-4) 0 var(--qe-space-5);
   padding: 0;
   display: grid;
   /* 12.5rem, not 14: the measure leaves 452px inside the gutters, and two 14rem
@@ -829,7 +930,7 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
   background: var(--qe-card);
   border: 1px solid var(--qe-rule);
   border-top: 3px solid var(--card-color);
-  border-radius: 2px;
+  border-radius: var(--qe-corner-c);
   box-shadow: 0 1px 0 var(--qe-paper-deep);
   height: 100%;
 }
@@ -944,10 +1045,10 @@ a.card:focus-visible .qe-card-title {
 .qe-vined {
   --qe-vined-pad: clamp(1rem, 3vw, 1.75rem);
   position: relative;
-  margin: 1.75rem calc(-1 * var(--qe-vined-pad)) 0.9rem;
+  margin: var(--qe-space-4) calc(-1 * var(--qe-vined-pad)) var(--qe-space-2);
   padding: var(--qe-vined-pad);
   border: 1px solid var(--qe-rule);
-  border-radius: 2px;
+  border-radius: var(--qe-corner-c);
 }
 .qe-vined .qe-plate-grid { margin: 0; }
 
@@ -1007,7 +1108,7 @@ a.card:focus-visible .qe-card-title {
   font-size: 0.88rem;
   line-height: 1.5;
   color: var(--qe-moss);
-  margin: 0 0 2.25rem;
+  margin: 0 0 var(--qe-space-5);
   text-align: center;
   max-width: 30rem;
   margin-inline: auto;
@@ -1051,7 +1152,7 @@ a.card:focus-visible .qe-card-title {
   margin: 0 auto;
   padding: 0 var(--qe-gutter) 1rem;
   border-top: 1px solid var(--qe-rule);
-  padding-top: 1.75rem;
+  padding-top: var(--qe-space-4);
 }
 
 .qe-elsewhere h2 {
@@ -1097,7 +1198,7 @@ a.card:focus-visible .qe-card-title {
 
 .qe-swatches {
   list-style: none;
-  margin: 1.5rem 0 2rem;
+  margin: var(--qe-space-3) 0 var(--qe-space-4);
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
@@ -1111,7 +1212,7 @@ a.card:focus-visible .qe-card-title {
   display: block;
   height: 3.1rem;
   border: 1px solid var(--qe-rule);
-  border-radius: 2px;
+  border-radius: var(--qe-corner-a);
   background: var(--swatch, var(--qe-paper));
 }
 .qe-swatch-name {
@@ -1130,7 +1231,7 @@ a.card:focus-visible .qe-card-title {
 .qe-swatch-note code { font-size: 0.9em; white-space: nowrap; }
 
 /* The definitions. Same ruled-slip idiom as a sheet's label, at prose scale. */
-.qe-terms { margin: 1.5rem 0 2rem; }
+.qe-terms { margin: var(--qe-space-3) 0 var(--qe-space-4); }
 .qe-terms dt {
   font-family: var(--qe-display);
   font-weight: 600;
@@ -1146,11 +1247,11 @@ html.plain .qe-terms dt { font-variation-settings: normal; }
 
 /* Type specimens: the same string set two ways, so the axis is the only variable. */
 .qe-typespec {
-  margin: 1.25rem 0 2rem;
+  margin: var(--qe-space-3) 0 var(--qe-space-4);
   padding: 1.1rem 1.25rem;
   background: var(--qe-card);
   border: 1px solid var(--qe-rule);
-  border-radius: 2px;
+  border-radius: var(--qe-corner-a);
 }
 .qe-typespec p { margin: 0 0 0.35rem; }
 .qe-typespec .qe-typespec-label {
@@ -1195,8 +1296,8 @@ html.plain .qe-typespec .spec { font-style: normal; }
 .qe-plates {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
+  gap: var(--qe-space-3);
+  margin: var(--qe-space-4) 0;
 }
 .qe-plates .qe-plate { margin: 0; max-width: none; }
 
@@ -1222,7 +1323,7 @@ html.plain .qe-typespec .spec { font-style: normal; }
  * the markup states outright, because it is a fact about the source printing.
  */
 .qe-poem {
-  margin: 2.5rem 0;
+  margin: var(--qe-space-5) 0;
   padding: 0.3rem 0 0.3rem 1.35rem;
   border-left: 3px solid var(--qe-moss);
 }
@@ -1299,7 +1400,7 @@ html.plain .qe-poem .qe-stanza { font-variation-settings: normal; }
  */
 
 .qe-verse {
-  margin: 2.5rem 0;
+  margin: var(--qe-space-5) 0;
   padding: 1.15rem 0 0;
   border-top: 2px solid var(--qe-rust);
 }
@@ -1373,7 +1474,7 @@ html.plain .qe-poem .qe-stanza { font-variation-settings: normal; }
 
 .qe-wall {
   list-style: none;
-  margin: 2.5rem 0 3rem;
+  margin: var(--qe-space-5) 0 var(--qe-space-6);
   padding: 0;
   display: grid;
   /* 12.5rem, not 13.5, and the arithmetic is the point: the measure leaves 448px
@@ -1392,7 +1493,7 @@ html.plain .qe-poem .qe-stanza { font-variation-settings: normal; }
   padding: 1.2rem 1.05rem 0.95rem;
   background: var(--qe-card);
   border: 1px solid var(--qe-rule);
-  border-radius: 1px;
+  border-radius: var(--qe-corner-chip);
   box-shadow: 0 1px 0 var(--qe-paper-deep), 0 8px 16px -12px var(--qe-shade);
   transform: rotate(var(--rot, 0deg));
 }
@@ -1448,7 +1549,7 @@ html.plain .qe-slip blockquote { font-variation-settings: normal; }
 
 .qe-drift {
   list-style: none;
-  margin: 2.75rem 0 3rem;
+  margin: var(--qe-space-6) 0;
   padding: 0;
   display: grid;
   /* 16rem, which inside the 448px measure is always ONE column, deliberately.
@@ -1465,7 +1566,7 @@ html.plain .qe-slip blockquote { font-variation-settings: normal; }
   background: var(--qe-card);
   border: 1px solid var(--qe-rule);
   border-top: 3px solid var(--slip-color, var(--qe-lichen));
-  border-radius: 1px;
+  border-radius: var(--qe-corner-chip);
   box-shadow: 0 1px 0 var(--qe-paper-deep);
   transform: rotate(var(--rot, 0deg));
 }
@@ -1614,13 +1715,16 @@ html.plain .qe-orig { font-variation-settings: normal; }
  * reads. Every entry is on the page at first paint.
  */
 
+/* RULED OFF, not a card: this is the ledger talking about itself, and it was one
+   of six panels on a sheet wearing the specimen's clothes. Hairlines above and
+   below, the way a register rules off a section, and no fill at all — see the
+   three-surface note at the head of this file for why the tier is rules rather
+   than a --qe-paper-deep tint. */
 .qe-register-note {
-  margin: 2rem 0 2.5rem;
-  padding: 1.1rem 1.25rem;
-  border: 1px solid var(--qe-rule);
-  border-left: 3px solid var(--qe-rust);
-  border-radius: 2px;
-  background: var(--qe-card);
+  margin: var(--qe-space-4) 0 var(--qe-space-5);
+  padding: var(--qe-space-3) 0;
+  border-top: 1px solid var(--qe-rule);
+  border-bottom: 1px solid var(--qe-rule);
   font-size: 0.97rem;
   line-height: 1.6;
 }
@@ -1638,7 +1742,7 @@ html.plain .qe-orig { font-variation-settings: normal; }
 /* The legend. A list, because it is one: four kinds, named. */
 .qe-legend {
   list-style: none;
-  margin: 1.6rem 0 0;
+  margin: var(--qe-space-3) 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -1649,7 +1753,7 @@ html.plain .qe-orig { font-variation-settings: normal; }
 /* One kind of entry, named. The colour is on the bottom rule and nowhere near
    the letters — see the note at the head of this section. */
 .qe-tag {
-  --tag-color: var(--qe-lichen);
+  --tag-color: var(--qe-rule);
   display: inline-block;
   font-size: 0.7rem;
   letter-spacing: 0.15em;
@@ -1660,20 +1764,26 @@ html.plain .qe-orig { font-variation-settings: normal; }
   background: var(--qe-card);
   border: 1px solid var(--qe-rule);
   border-bottom: 2px solid var(--tag-color);
-  border-radius: 1px;
+  border-radius: var(--qe-corner-chip);
 }
-.qe-tag--mounted    { --tag-color: var(--qe-marigold); }
-.qe-tag--redet      { --tag-color: var(--qe-verdigris); }
+/* THE GOLD IS ON THE MEND, not on the intake. Mounting a sheet is the ordinary
+   event and takes --qe-lichen; a re-determination is the largest correction a
+   register records — the specimen turned out to be a different thing — and takes
+   --qe-marigold. A label corrected keeps --qe-coral, the smaller mend. The
+   unclassed default below is --qe-rule and not an accent, so a mistyped class
+   reads as plain rather than quietly passing for one of the four. */
+.qe-tag--mounted    { --tag-color: var(--qe-lichen); }
+.qe-tag--redet      { --tag-color: var(--qe-marigold); }
 .qe-tag--label      { --tag-color: var(--qe-coral); }
 .qe-tag--cabinet    { --tag-color: var(--qe-violet); }
 
 /* One accession: a dated group of entries, ruled off from the one above it the
    way a register rules off a day's intake. */
-.qe-register { margin: 2.5rem 0 0; }
+.qe-register { margin: var(--qe-space-5) 0 0; }
 
 .qe-accession {
-  margin-top: 3rem;
-  padding-top: 1.6rem;
+  margin-top: var(--qe-space-6);
+  padding-top: var(--qe-space-3);
   border-top: 1px solid var(--qe-rule);
 }
 .qe-accession:first-of-type { margin-top: 1.5rem; border-top: none; padding-top: 0; }
@@ -1708,13 +1818,13 @@ html.plain .qe-accession h2 { font-variation-settings: normal; font-weight: 700;
 /* One entry. Same ruled-slip grammar as a sheet's label: a hairline on the left
    in the kind's colour, and the text on paper beside it. */
 .qe-entry {
-  --entry-color: var(--qe-lichen);
+  --entry-color: var(--qe-rule);
   border-left: 3px solid var(--entry-color);
   padding-left: 1.1rem;
-  margin-top: 1.5rem;
+  margin-top: var(--qe-space-3);
 }
-.qe-entry--mounted { --entry-color: var(--qe-marigold); }
-.qe-entry--redet   { --entry-color: var(--qe-verdigris); }
+.qe-entry--mounted { --entry-color: var(--qe-lichen); }
+.qe-entry--redet   { --entry-color: var(--qe-marigold); }
 .qe-entry--label   { --entry-color: var(--qe-coral); }
 .qe-entry--cabinet { --entry-color: var(--qe-violet); }
 
@@ -1738,16 +1848,16 @@ html.plain .qe-accession h2 { font-variation-settings: normal; font-weight: 700;
 .qe-entry-body p:last-child { margin-bottom: 0; }
 .qe-entry-body ul { margin: 0.5rem 0 0.7rem; padding-left: 1.2rem; }
 .qe-entry-body li { margin: 0 0 0.4rem; }
-/* ::marker, not a ::before glyph: the colour arrives without putting a
-   decorative character into the accessibility tree. */
-.qe-entry-body li::marker { color: var(--entry-color); }
+/* ::marker rather than a ::before glyph, so no decorative character lands in the
+   accessibility tree. The colour is --qe-moss and NOT the entry's own accent: as
+   accents these measure 2.15:1 (lichen) to 4.76:1 (violet) on paper, so the kind's
+   colour on the bullets made them a bullet a reader cannot find. The accent is on
+   the 3px left rule and on the chip's underline, which is where this file puts
+   every accent; the marker is a glyph and takes a text token. */
+.qe-entry-body li::marker { color: var(--qe-moss); }
 
 @media print {
-  .qe-register-note {
-    background: none;
-    border: 0.5pt solid #999;
-    border-left: 2pt solid #555;
-  }
+  .qe-register-note { border-color: #999; }
   .qe-register-note .qe-register-note-label,
   .qe-accession-date { color: #222; }
   .qe-accession h2, .qe-entry-name { color: #000; }
@@ -1840,13 +1950,13 @@ html.plain h2 .qe-wobble { transform: none; }
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--qe-moss);
-  margin: 2rem 0 0.55rem;
+  margin: var(--qe-space-4) 0 var(--qe-space-1);
 }
 
 /* ── the chain of stagers. Chips in the tag idiom, in sequence. */
 .qe-chain {
   list-style: none;
-  margin: 1.6rem 0 2.4rem;
+  margin: var(--qe-space-3) 0 var(--qe-space-5);
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -1864,7 +1974,7 @@ html.plain h2 .qe-wobble { transform: none; }
   background: var(--qe-card);
   border: 1px solid var(--qe-rule);
   border-bottom: 2px solid var(--qe-lichen);
-  border-radius: 1px;
+  border-radius: var(--qe-corner-chip);
 }
 /* The arrow between two links. Drawn, with an empty alt string, because the
    <ol> already carries the order and a repeated glyph in the tree does not. */
@@ -1882,20 +1992,34 @@ html.plain h2 .qe-wobble { transform: none; }
 }
 
 /* ── the correction. A speaker prefix struck out and another written over it,
-      which is the editorial history rather than an illustration of it. */
+      which is the editorial history rather than an illustration of it.
+ *
+ * RULED, because it mounts somebody else's lines — and the one panel on this site
+ * that carries a REPAIR, so it is where the gold goes. --qe-marigold on the left
+ * rule and on a seam under the joint itself; --qe-coral stays on the strike. The
+ * strike is the break and the join is the mend, which is the distinction kintsugi
+ * is actually about: not that the crack shows, but that the most precious material
+ * in the workshop is spent on it. Both are rules and neither is ever a letter —
+ * marigold is 2.4:1 on paper and coral 3.6:1, and the words below them say what
+ * happened, so the colour is reinforcement and never the carrier. */
 .qe-correction {
-  margin: 1.75rem 0 0.5rem;
+  margin: var(--qe-space-4) 0 var(--qe-space-1);
   padding: 1.2rem 1.3rem 1rem;
   background: var(--qe-card);
   border: 1px solid var(--qe-rule);
-  border-left: 3px solid var(--qe-coral);
-  border-radius: 2px;
+  border-left: 3px solid var(--qe-marigold);
+  border-radius: var(--qe-corner-b);
 }
+/* The seam: a gold hairline THROUGH the joint, not down the edge of the panel.
+   Every other accent on this site runs down a left border; a mend is the one
+   thing that should be visible where the two pieces actually meet. */
 .qe-correction-speaker {
   font-size: 0.78rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   margin: 0 0 0.7rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 2px solid var(--qe-marigold);
 }
 /* Moss letters, coral strike. The colour is on the rule and never on the word. */
 .qe-correction-speaker del {
@@ -1949,29 +2073,35 @@ html.plain .qe-correction blockquote { font-variation-settings: normal; }
   margin: 0.85rem 0 0;
 }
 
-/* ── what a sheet will not tidy. Dashed on purpose: a panel that reads as
-      provisional, because its contents are the parts that stayed unresolved. */
+/* ── what a sheet will not tidy. Ruled off and DASHED: the dashed line is this
+      panel's whole signal — a section that reads as provisional, because its
+      contents are the parts that stayed unresolved — but it does not need the
+      specimen's fill to say so. Yūgen is the one thing on this site that should
+      not look mounted. */
 .qe-untidy {
-  margin: 2.75rem 0;
-  padding: 1.35rem 1.4rem 1.1rem;
-  border: 1px dashed var(--qe-rule);
-  border-radius: 2px;
-  background: var(--qe-card);
+  margin: var(--qe-space-6) 0;
+  padding: var(--qe-space-3) 0;
+  /* Coral on the rule, not on the bullets. Dropping the fill moved the markers
+     from --qe-card to --qe-paper and took them from 4.17:1 to 3.89:1 — a bullet
+     nobody can see is a list without a list in it. So the accent went where this
+     file says every accent goes, and the markers took a text token. */
+  border-top: 1px dashed var(--qe-coral);
+  border-bottom: 1px dashed var(--qe-coral);
 }
 .qe-untidy .qe-block-label { margin-top: 0; }
 .qe-untidy ul { margin: 0; padding-left: 1.25rem; }
 .qe-untidy li { margin: 0 0 0.7rem; line-height: 1.6; }
 .qe-untidy li:last-child { margin-bottom: 0; }
-.qe-untidy li::marker { color: var(--qe-coral); }
+.qe-untidy li::marker { color: var(--qe-moss); }
 
-/* ── the closing panel: the chain again, with the reader on the end of it. */
+/* ── the closing panel: the chain again, with the reader on the end of it.
+      BARE. It is our own commentary, and our own commentary is the default
+      surface on this site: space, and nothing else. It shipped as a card, which
+      put the last words on the sheet in the same box as Shakespeare's. The
+      .qe-block-label names the block, so nothing is lost by dropping the frame —
+      and in plain view and on paper it read as a card either way. */
 .qe-restaged {
-  margin: 3rem 0 1rem;
-  padding: 1.35rem 1.4rem 1.2rem;
-  border: 1px solid var(--qe-rule);
-  border-radius: 2px;
-  background: var(--qe-card);
-  box-shadow: 0 1px 0 var(--qe-paper-deep);
+  margin: var(--qe-space-6) 0 var(--qe-space-2);
 }
 .qe-restaged .qe-block-label { margin-top: 0; }
 .qe-restaged .qe-chain { margin: 0 0 1.1rem; }
@@ -1979,8 +2109,8 @@ html.plain .qe-correction blockquote { font-variation-settings: normal; }
 
 /* ── the reference list. A hanging indent, which is what a bibliography is. */
 .qe-references {
-  margin: 3rem 0 0;
-  padding-top: 1.5rem;
+  margin: var(--qe-space-6) 0 0;
+  padding-top: var(--qe-space-3);
   border-top: 1px solid var(--qe-rule);
   font-size: 0.95rem;
   line-height: 1.55;
@@ -1999,13 +2129,15 @@ html.plain .qe-correction blockquote { font-variation-settings: normal; }
   h2.qe-section { color: #000; border-bottom: 0.5pt solid #999; }
   .qe-sheet-sub, .qe-block-label, .qe-correction-note,
   .qe-references p { color: #222; }
-  .qe-correction, .qe-untidy, .qe-restaged {
+  .qe-correction {
     background: none;
     box-shadow: none;
     border: 0.5pt solid #999;
+    border-left: 2pt solid #555;
   }
-  .qe-correction { border-left: 2pt solid #555; }
-  .qe-untidy { border-style: dashed; }
+  /* The seam prints. On this component it is the argument, not the trim. */
+  .qe-correction-speaker { border-bottom: 1pt solid #555; }
+  .qe-untidy { border-top-color: #999; border-bottom-color: #999; }
   /* The chips are meaningful text on paper — same reasoning as .qe-tag. */
   .qe-chain > li {
     color: #000;
@@ -2020,4 +2152,65 @@ html.plain .qe-correction blockquote { font-variation-settings: normal; }
   .qe-untidy li::marker { color: #555; }
   .qe-correction, .qe-untidy, .qe-restaged { break-inside: avoid; }
   .qe-references p { break-inside: avoid; }
+}
+
+/* ─────────────────────────────────────────────── provenance
+ *
+ * PATINA THAT IS A RECORD RATHER THAN A TEXTURE.
+ *
+ * A herbarium sheet carries its annotation slips on the sheet. That is what makes an
+ * old sheet look old, and it is information rather than ornament. So the foot of
+ * every sheet says when it was mounted, and how often its label has been corrected
+ * or its determination changed since — each clause linked to the entry in
+ * changelog.html that did it.
+ *
+ * This is the site's answer to koko, the weathered principle: age that can be
+ * measured and checked, accruing on its own as the register grows. It cannot be
+ * faked, it cannot drift out of step with the ledger it points at, and it survives
+ * plain view, paper, a screen reader and 400% zoom, because it is a sentence.
+ *
+ * IT IS INSIDE <main>, unlike .qe-elsewhere. A sheet's own accession history is
+ * content about that sheet, so the SKS mirror should have it; sibling navigation is
+ * furniture about other sheets, so the mirror must not.
+ *
+ * THE SEAM IS THE GOLD, AND IT IS ONLY EVER THE RULE. A sheet that has been mended
+ * is ruled off in --qe-marigold at 2px rather than --qe-rule at 1px. The words stay
+ * --qe-moss (7.8:1) and the links --qe-rust (7.0:1). Marigold measures 2.4:1 on
+ * paper and is not for letters, here or anywhere — and it does not need to be: the
+ * line SAYS "label corrected five times", so the gold is reinforcement and never
+ * the carrier. Same rule as the register's chips, one component further on.
+ *
+ * --mended IS A FACT, WRITTEN ON THE SHEET. No rule derives it: the class goes on a
+ * sheet whose corrections are actually in the register. A gold join on a sheet
+ * nobody ever corrected is decoration asserting a fact — the same failure as an
+ * image of text — and it would make the real mends unfindable.
+ */
+
+.qe-provenance {
+  margin: var(--qe-space-6) 0 0;
+  padding-top: var(--qe-space-2);
+  border-top: 1px solid var(--qe-rule);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--qe-moss);
+}
+.qe-provenance--mended { border-top: 2px solid var(--qe-marigold); }
+
+.qe-provenance-label {
+  display: block;
+  font-size: 0.74rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.qe-provenance a { color: var(--qe-rust); }
+
+@media print {
+  /* The provenance prints: it is the sheet's own accession history, and the most
+     herbarium thing on the page. Marigold at 2.4:1 on white is nearly nothing, so on
+     paper the seam is carried by WEIGHT rather than by colour — the same move the
+     tags make, for the same reason. */
+  .qe-provenance { color: #222; border-top: 0.5pt solid #999; break-inside: avoid; }
+  .qe-provenance--mended { border-top: 1.5pt solid #555; }
+  .qe-provenance a { color: #000; }
 }
