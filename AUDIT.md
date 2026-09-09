@@ -332,6 +332,25 @@ nothing to consent to, and adding one would make the site worse.**
 The category the spec itself says moves fastest, and the one this site has most to gain from:
 a site built to be quoted and cited, currently legible to agents only as HTML.
 
+> **Remediated 2026-09-09.** All six shipped, plus two of the `optional` items and the
+> partial `machine-readable-formats`. `/llms.txt` and `/llms-full.txt` with
+> `rel="describedby"`; a `Link` header carrying describedby, sitemap, license, the feed and
+> the agent-skills index; JSON-LD on all eleven pages; `.md` beside every page;
+> `/feed.xml` from the register's own accessions; and `/.well-known/agent-skills/` with a
+> digested `SKILL.md`. From the `optional` tier, Content-Signals and TDMRep now state the
+> CC BY-SA position in machine-readable form.
+>
+> **Everything except the JSON-LD is derived** by `tools/make-markdown.mjs` from each
+> page's own `<main>`, so no second copy of the prose exists to rot.
+> `tools/check-metadata.mjs` is the fifth gate: it regenerates into memory to prove
+> freshness exactly, verifies the skill digest, and **refuses a JSON-LD block that names
+> one person as both `author` and `about.author`** — the misattribution this site is
+> organised against. All five of its detectors were made to fail first.
+>
+> The AI-crawler policy is Ryan's decision of 2026-09-09: **allow everything, declare the
+> licence.** Named training and retrieval crawlers all `Allow: /`, with
+> `Content-Signal: ... ai-train=yes` and `tdm-reservation: 0`.
+
 ### Absent, `recommended`
 
 | item | status | state |

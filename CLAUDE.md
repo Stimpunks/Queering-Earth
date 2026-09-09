@@ -213,6 +213,34 @@ One trap, already paid for: **a CSS `transform` animation overrides an SVG `tran
 attribute on the same element.** Positioning goes on an outer `<g>`, the animation on an
 inner `<g class="sprout">`. Getting this wrong collapses every sprout onto the origin.
 
+### The machine-readable layer is generated, and the credit line is authored
+
+`tools/make-markdown.mjs` writes **a `.md` beside every page, `/llms.txt`,
+`/llms-full.txt`, and `/feed.xml`** — all derived, none typed. Each `.md` comes from that
+page's own `<main>`, the same landmark the SKS mirror reads, so the Markdown an agent
+fetches cannot disagree with the page. The feed comes from the register's own accessions.
+Run it by hand like `make-images.py`, commit the output, and `check-metadata.mjs` fails
+when it is stale.
+
+**The converter throws on a tag it does not know rather than dropping it.** A converter
+that silently discards an element is how a Markdown copy comes to say less than the page,
+which is the drift the generator exists to prevent arriving by another door. Teach it the
+tag. Two things it deliberately keeps: **`<del>` and `<ins>` stay as HTML**, because a
+restored attribution is the one distinction Markdown has no vocabulary for, and losing it
+would flatten *what we got wrong* and *what is true* into one line.
+
+**JSON-LD is authored per page, not generated**, because `author` and `about.author` are
+an editorial judgment: who wrote our reading, and who made the thing being read. The gate
+checks the mechanical fields against the page and refuses the conflation. **A new sheet
+needs a block, and needs the two credited apart.**
+
+**NEVER WRITE AN ANGLE-BRACKET TAG NAME IN A COMMENT NEAR THE HEAD.** A comment that says
+`<main>` is indistinguishable from the landmark to a regex, and a comment naming `<g>` is
+indistinguishable from an SVG group. Both were paid for here in one afternoon: the second
+broke the art converter, and the first made a `<main>` extractor match inside the comment
+and take the `<head>` as the page body. **The SKS mirror reads that landmark too.** Write
+the name without brackets.
+
 ### Icons and social cards are generated, not hand-made
 
 `favicon.ico`, `apple-touch-icon.png` and every `images/og-*.png` come out of
@@ -350,6 +378,21 @@ an invented source — it is a *tightened* one: a definition trimmed to fit a ma
 object quietly generalized, the attribution left attached. **If we changed the words, they
 are ours.** Credit the concept, quote the original exactly, or write our own line.
 
+### The AI-crawler policy is permission, stated in the form a machine parses
+
+`robots.txt` names the training crawlers and the retrieval crawlers explicitly and
+**allows all of them**, with `Content-Signal: search=yes, ai-input=yes, ai-train=yes`, and
+`_headers` sends `tdm-reservation: 0`. That is a decision Ryan made on 2026-09-09 and it
+is consistent by design: a reservation of `1` beside a CC BY-SA licence would be a
+contradiction someone would eventually have to resolve.
+
+**The answer is yes and the ask is attribution.** So the same pass that granted the
+permission put the citation trail where a machine can reach it — a `.md` per page,
+`ATTRIBUTIONS.md` for every quotation, `/changelog` for every correction, and an Agent
+Skill at `/.well-known/agent-skills/` whose main subject is how to cite this site and how
+to tell a checkable fact from a reading. **Re-digest the skill when you edit it**;
+`check-metadata.mjs` fails on a stale hash, because a wrong digest reads as tampering.
+
 ### SKS is read-only from here
 
 `tools/sks-search.sh` and the `sks-search` skill search the Stimpunks Knowledge System.
@@ -358,7 +401,7 @@ anything that needs fixing there in `DECISIONS.md` instead.
 
 ## The checks
 
-Run before shipping. All four are browser-free or Chrome-only; nothing needs `npm install`,
+Run before shipping. All five are browser-free or Chrome-only; nothing needs `npm install`,
 and the default path of every one of them is offline.
 
 ```bash
@@ -366,7 +409,14 @@ node tools/check-markup.mjs     # parser-rewriting markup, duplicate ids, exactl
 node tools/check-sitemap.mjs    # every page listed once, every entry resolves
 node tools/check-contrast.mjs   # 7:1 in BOTH grounds and under print emulation, two tiers
 node tools/check-addresses.mjs  # one address per page: a forced 301! per .html twin
+node tools/check-metadata.mjs   # generated files current, JSON-LD agreeing, credit correct
 ```
+
+**`check-metadata.mjs` regenerates into memory and compares**, so staleness is exact
+rather than an `mtime` guess. Its one non-freshness check is the one that matters most:
+a page must not name the same person as its own `author` and as `about.author`. The
+first is who wrote our reading, the second is who made the thing read, and collapsing
+them tells every agent on the web that we wrote Woolf.
 
 **`check-addresses.mjs --live` probes the deployed site**, which no other gate does. Run it
 after any change to `_redirects`, because **a redirect loop is how that file fails** and a

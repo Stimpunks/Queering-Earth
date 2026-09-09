@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Queering Earth — the accession register</title>
+    <link>https://queering.earth/changelog</link>
+    <atom:link href="https://queering.earth/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Every sheet as it was mounted, every plate that came off again, and every label we corrected. Generated from the register itself by tools/make-markdown.mjs.</description>
+    <language>en</language>
+    <copyright>CC BY-SA 4.0</copyright>
+    <lastBuildDate>Wed, 09 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>The site was measured against somebody else’s specification, and the first thing it found was a defect this cabinet had already named, already fixed one layer up, and never thought to look for underneath</title>
+      <link>https://queering.earth/changelog#a-2026-09-09-audit</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-audit</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: The site now says out loud, to machines, the permission it had only ever said to people — and puts the citation trail within reach of anything that takes it up
+Cabinet: A mistyped address no longer ejects the reader from the herbarium, and fixing it introduced a soft 404 the new gate caught
+Cabinet: One address per sheet at last, and a fourth gate that asks the site instead of the files
+Cabinet: Two response headers the site had simply never sent, and a policy that carries exactly one directive on purpose</description>
+    </item>
+    <item>
+      <title>Fifteen panels wore the specimen’s clothes, twenty-five margin values passed for a hand-kept register, and the site’s gold was being spent on the least interesting thing that happens to a sheet</title>
+      <link>https://queering.earth/changelog#a-2026-09-09-patina</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-patina</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: Every sheet now says when it was mounted and how often it has been corrected since
+Re-determined: The gold moved off mounting and onto the mend, and the drawing at the top of this page moved with it
+Cabinet: Three surfaces, because fifteen components were sharing one and a reader could only rank them by reading the label
+Label corrected: Dropping a fill from two panels took their list markers down to 3.89:1, and the fix was the rule this stylesheet already states everywhere else
+Cabinet: Space is a scale now, because twenty-five unrelated margin values do not read as a hand-kept register — they read as noise
+Cabinet: The foxing was pinned to the window while the paper moved under it, and all nine sheets were stained identically
+Mounted: Long sheets carry a contents list, every section has an address you can share, and the register has the addresses but not the list
+Cabinet: Every section on the site has an address now, and the home page still has no contents list, because its contents list is the plate
+Mounted: The Preferred Flower of Life — Sheet No. 8, and the first that is a wall rather than a reading
+Label corrected: A much-quoted Mary Oliver sentence is in the wrong book and is missing the half that answers it, and it took owning both books to find out
+Re-determined: Woolf’s resonant and porous is exactly right, and it is Woolf guessing at what Coleridge meant
+Label corrected: A 2005 paper’s byline deadnames its third author, and a citation generated from the record repeats it
+Cabinet: The card generator reported a hand-kept list of files rather than the files it wrote, and the new card went missing from its own summary
+Mounted: The register is indexed by sheet at the foot of the page, because a contents list is front matter and an index is back matter
+Cabinet: A fourth guard, because a mistyped sheet name drops an entry out of the index and leaves the page reading perfectly
+Cabinet: The register looked like the strongest case for a contents list and measured as the worst one, so it was built, measured, and taken out again
+Mounted: The colophon scores this site against the seven principles, including the two it fails, and names what it cannot vouch for in them
+Label corrected: This entry claimed a source swapped one principle for another, which was written from memory and is not established
+Label corrected: Our own foundation published the line this site’s gold seam is built on, four months before we reinvented a near copy of it
+Cabinet: The guard now measures the number this house publishes, and it was raised on the day the gap was nearly spent
+Label corrected: The wash was made to tile so that no long sheet had clean paper through the middle, and it drew a visible line across the page at every repeat</description>
+    </item>
+    <item>
+      <title>The sheet has a second ground, and it is the drawer shut rather than the lamp switched off</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-cabinet</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-cabinet</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: Brown rather than green, and the reason is measurable rather than a preference
+Cabinet: A card is lighter than the page in daylight and would be darker than it here, which is a trap and not a taste
+Cabinet: A discreet control, a machine that decides when nobody has, and paper that is daylight whatever either of them says
+Label corrected: Two claims about this site’s own measurements were describing the daylight sheet only, and one of them was describing a check that does not exist
+Cabinet: The guard measures both grounds, and it was made to fail before it was believed</description>
+    </item>
+    <item>
+      <title>A first-person account that ends the moment two words fit had nothing under it about what a word that fits is for, and the writers who answer that were gathered on Stimpunks pages that are a finding aid and not a citation</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-labels</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-labels</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: Six sections below the essay, on what a label buys and what it charges
+Label corrected: The mounting label described a sheet that carried one text, and it now carries two
+Cabinet: Every quotation named to the copy it was read in, and a rule about our own library corrected in the middle of applying it</description>
+    </item>
+    <item>
+      <title>The most-quoted sentence about lavender and Abraham Lincoln is word for word what Carl Sandburg wrote, and the man it describes is Joshua Speed</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-flowercodes</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-flowercodes</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: A Waste Garden, Flowering at Its Will — Sheet No. 7
+Re-determined: The streak of lavender belongs to Joshua Speed, and only the referent has moved
+Cabinet: Two of the four plates are the wrong object, and both captions say so</description>
+    </item>
+    <item>
+      <title>Four flowers people wore when saying it in words was dangerous, drawn onto the corners of the plate of sheets</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-vine</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-vine</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: The border is an argument, and the line under it says whose set of four this is
+Cabinet: The frame is CSS and the corners are SVG, and the plate nearly became a list again</description>
+    </item>
+    <item>
+      <title>A heading that says the type plays was set in the same even measure as every other heading, which is a claim arguing against itself</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-typeplays</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-typeplays</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: The heading performs its own sentence, and the verb carries the axis wherever it is a heading</description>
+    </item>
+    <item>
+      <title>Higginson wrote let us alter as little as possible and then printed Dickinson’s poem with eight of its nine dashes gone — and the copy a reader will find today has lost a word out of the line that asks to be moored</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-dickinson</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-dickinson</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: The Swell and the Dwell — Sheet No. 6
+Re-determined: The poem in general circulation is missing the word but, and the page that prints it names no edition
+Re-determined: What 1891 did to the leaf, and the one change that is not a tidy
+Label corrected: Two scans agreed with each other and were both wrong, because they came out of the same library
+Label corrected: Three citations in the first draft of this sheet were written from memory, and one of them was an invented DOI
+Cabinet: A licensed plate for the first time, a title that breaks its own convention, and punctuation added to a poem of ours</description>
+    </item>
+    <item>
+      <title>A scholar cut her own sentence down to fit a later argument, marked every cut, and in doing so demonstrated the thing the sentence says</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-demory</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-demory</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: Two sections on the front page: To queer is to adapt and The sentence adapts itself
+Cabinet: The second quotation is a trimmed version of the first, and that is why both are on the page
+Label corrected: Half of one quotation on this page has not been read against its primary, and the ledger says so</description>
+    </item>
+    <item>
+      <title>An editor in 1733 decided Miranda’s hardest speech was not credible coming from her, moved it into her father’s mouth, and three centuries of editions followed him</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-miranda</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-miranda</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: Miranda: To Be Wondered With — Sheet No. 5
+Label corrected: Two citations in the incoming draft, wrong before the sheet was ever built
+Cabinet: Four devices from Helen’s draft, kept — and its colours, not kept</description>
+    </item>
+    <item>
+      <title>A site that publishes a ledger of everyone else’s words was keeping the account of its own mistakes in a file only we could read</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-register</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-register</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: The register itself</description>
+    </item>
+    <item>
+      <title>A sheet shipped with Helen Edgar’s name over prose she did not write — she declined the credit, and the answer had been written in our own colophon before the sheet was made</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-wyrd</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-wyrd</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: Wyrd, Weird, and the Invention of Normal — Sheet No. 4
+Label corrected: The byline. It shipped wrong, and it was corrected on Helen’s word
+Re-determined: The sheet’s kind changed from essay to reading, and No. 1 gained a second reader
+Mounted: Two paintings, chosen by Helen Edgar
+Label corrected: A journal citation we were handed had the wrong issue and the wrong pages
+Label corrected: Two captions checked against the primary rather than against the picture
+Label corrected: A scholar’s conclusion that cuts against the sheet, kept on the sheet
+Cabinet: The paste-up: a zine wall built out of herbarium furniture
+Cabinet: The colophon says how these sheets are drafted</description>
+    </item>
+    <item>
+      <title>Two grey woodcuts came off a colour sheet, and the drawing above them was rebuilt twice before it stopped standing to attention</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-plates</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-plates</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Re-determined: Colour over subject matter: three chromolithographs replace two Darwin woodcuts
+Label corrected: A digitiser’s metadata disagreed with the corner of the plate, for the third time
+Re-determined: The header drawing, rebuilt twice, and the first version was a fault rather than a preference</description>
+    </item>
+    <item>
+      <title>The first printing of Promises like Pie-crust ends line 20 with a colon, every copy in circulation ends it with a full stop, and the line is the one about breaking the chain</title>
+      <link>https://queering.earth/changelog#a-2026-09-08-rossetti</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-rossetti</guid>
+      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: The Die Uncast — Sheet No. 3
+Label corrected: The colon at line 20, read in two separately scanned copies
+Label corrected: The proverb in the title has no owner here, on purpose
+Label corrected: Two elisions kept lower-case, and one character normalised with the reason written down
+Label corrected: A definition that circulates without a name got its name back
+Cabinet: Verse gets a shared component, and every line is its own element
+Cabinet: A sheet is titled from a phrase in the specimen, and the filename names the work</description>
+    </item>
+    <item>
+      <title>The site was linking to one address and declaring a different one canonical, and nobody would have found it by reading the repository</title>
+      <link>https://queering.earth/changelog#a-2026-09-07-colophon</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-07-colophon</guid>
+      <pubDate>Mon, 07 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: Addresses on this site are extensionless
+Cabinet: How this site is made — the colophon
+Cabinet: Sheets link to each other, outside the page’s main landmark</description>
+    </item>
+    <item>
+      <title>The phrase on the masthead turned out to be one hyphen away from the subtitle of a book we quote on the same page</title>
+      <link>https://queering.earth/changelog#a-2026-09-07-sheets</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-07-sheets</guid>
+      <pubDate>Mon, 07 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: The Army of the Upright — Sheet No. 1
+Mounted: Coming to Terms — Sheet No. 2
+Label corrected: The masthead credits Nick Walker, and the decision log stopped claiming there was no risk
+Label corrected: The paraphrase that did not ship, and the pronouns that did
+Label corrected: Woolf verified ahead of the sheet, because this trap does not survive verification-after-drafting
+Mounted: Plate 511, The Floral Magazine v.9 (1870), and the first metadata error
+Cabinet: The plate, the favicon, and the social cards</description>
+    </item>
+    <item>
+      <title>For six minutes at a time the site looked deployed: a green dashboard, auto-publishing on, and a commit several pushes stale</title>
+      <link>https://queering.earth/changelog#a-2026-09-07-planted</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-07-planted</guid>
+      <pubDate>Mon, 07 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: The site is planted
+Cabinet: Continuous deployment, and the trap that made pushes silently not deploy
+Cabinet: queering.earth is live
+Cabinet: The content model: a sheet mounts a specimen and carries our label</description>
+    </item>
+  </channel>
+</rss>

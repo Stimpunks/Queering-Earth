@@ -34,3 +34,26 @@
   # NO `preload`. The preload list's own operator now advises against it, removal
   # takes months, and it applies to every subdomain. Do not add it.
   Strict-Transport-Security: max-age=63072000; includeSubDomains
+
+  # ── Machine-readable discovery ───────────────────────────────────────────────
+  # RFC 8288 Link header, so an agent that never parses our HTML still finds the
+  # index, the manifest, and the licence. Registered relation types only — the IANA
+  # registry is the source of truth and inventing a rel is a bad signal.
+  # rel=describedby on /llms.txt is llms.txt v2's one hard requirement: without it an
+  # agent is back to guessing the root path. Per-page `rel=alternate` for the .md
+  # source lives in each page's <head>, because it varies by path and this does not.
+  Link: </llms.txt>; rel="describedby"; type="text/markdown", </sitemap.xml>; rel="sitemap"; type="application/xml", </llms-full.txt>; rel="alternate"; type="text/markdown"; title="Full text", </feed.xml>; rel="alternate"; type="application/rss+xml"; title="The accession register", <https://creativecommons.org/licenses/by-sa/4.0/>; rel="license", </.well-known/agent-skills/index.json>; rel="agent-skills"; type="application/json"
+
+  # TDM reservation (RFC-adjacent, W3C TDMRep). 0 means: mine it freely.
+  # The header rather than /.well-known/tdmrep.json because the answer does not vary
+  # by path, and the header covers responses with no <head> to put a <meta> in — the
+  # plates, the .md files, the sitemap. The spec is explicit that the well-known file
+  # is the weakest of the three mechanisms and is for path-varying answers.
+  # A reservation of 0 beside a CC BY-SA licence and Content-Signal: ai-train=yes is
+  # the consistent triple; a 1 here would contradict both.
+  tdm-reservation: 0
+
+# Agent Skills discovery. The spec asks for CORS wide open on both files so a
+# browser-based agent can fetch them; they are a public description of a public site.
+/.well-known/agent-skills/*
+  Access-Control-Allow-Origin: *

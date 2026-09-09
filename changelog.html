@@ -42,6 +42,53 @@
      turned it off, or the daylight sheet at someone who asked for the cabinet.
      With no stored ground, neither class is set and the media query decides. -->
 <script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
+<!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
+     rel=alternate points an agent at this page's Markdown source, derived from this
+     page's own main landmark by tools/make-markdown.mjs.
+
+     NO ANGLE-BRACKET TAG NAMES IN A COMMENT NEAR THE HEAD. Writing the landmark's name
+     with brackets here made a /<main[^>]*>/ extractor match inside this very comment
+     and take the head as the page body. The SKS mirror reads that landmark too. -->
+<link rel="describedby" href="/llms.txt" type="text/markdown" title="Site index for agents">
+<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Queering Earth — the accession register">
+<link rel="alternate" href="https://queering.earth/changelog.md" type="text/markdown" title="The accession register — Markdown source">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://queering.earth/changelog#page",
+  "name": "The accession register",
+  "description": "The changelog for Queering Earth: every sheet as it was mounted, every plate that came off again, and every label we corrected — including the attributions we got wrong and exactly how they were fixed.",
+  "url": "https://queering.earth/changelog",
+  "inLanguage": "en",
+  "isFamilyFriendly": true,
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "publisher": [
+    {
+      "@type": "Organization",
+      "name": "Stimpunks Foundation",
+      "url": "https://stimpunks.org/"
+    },
+    {
+      "@type": "Organization",
+      "name": "More Realms",
+      "url": "https://morerealms.com/"
+    }
+  ],
+  "dateModified": "2026-09-09",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Queering Earth",
+    "url": "https://queering.earth/"
+  },
+  "encoding": {
+    "@type": "MediaObject",
+    "encodingFormat": "text/markdown",
+    "contentUrl": "https://queering.earth/changelog.md"
+  }
+}
+</script>
 </head>
 <!-- Where this sheet is foxed. Four stains, stated here because a stain is a
      fact about one piece of paper and not about the site — the same idiom as --rot
@@ -147,6 +194,18 @@
       <p class="qe-accession-note">Audited against <a href="https://specification.website/">The Website Specification</a> &mdash; the whole <code>required</code> tier, thirty-six items across ten categories, plus all twenty-one <code>agent-readiness</code> items at every status. Eight required findings, twenty-two verified passes, five items that genuinely do not apply here, and one that needs field data this site may not have yet two days after going live. The full working is in <code>AUDIT.md</code> in <a href="https://github.com/Stimpunks/Queering-Earth">the repository</a>, and it is a findings document rather than a fix list.</p>
 
       <p class="qe-accession-note"><strong>The largest finding was ours twice over, and it is closed below.</strong> Every sheet answers <code>200</code> at two addresses &mdash; <code>/on-being-ill</code> and <code>/on-being-ill.html</code>, byte-identical, same <code>ETag</code>. That is exactly the shape <code>_redirects</code> describes in its own comments, found on Star Stuff on 15 August and fixed here for the hostnames on 7 September: <q>byte-identical documents at four URLs, which is a duplicate-content problem and an ambiguity about which address is the real one.</q> We wrote that down, fixed the hostname layer, and did not check the path layer. The house rule says addresses are extensionless, <code>check-sitemap.mjs</code> confirms no <code>.html</code> reaches the manifest, and every <code>rel=&quot;canonical&quot;</code> points the right way &mdash; and the <code>.html</code> twin serves anyway, because <strong>no file-level guard can see what the edge actually answers.</strong> A guard that probes the served site was the thing this audit said we were missing, and there is one now.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The site now says out loud, to machines, the permission it had only ever said to people &mdash; and puts the citation trail within reach of anything that takes it up</span></div>
+        <div class="qe-entry-body">
+          <p><code>robots.txt</code> has always opened with one sentence: <q>Everything here is meant to be read, quoted, and reused (CC BY-SA 4.0).</q> <strong>It was a sentence addressed to humans, in a file read by machines.</strong> Every training and retrieval crawler is now named and allowed explicitly, with <code>Content-Signal: search=yes, ai-input=yes, ai-train=yes</code>, and every response carries <code>tdm-reservation: 0</code>. Nothing about the policy changed; it stopped being an inference. A reservation of <code>1</code> beside a CC BY-SA licence would have been a contradiction somebody eventually has to resolve, and probably not in our favour.</p>
+          <p><strong>The answer is yes, and the ask is attribution &mdash; so the same pass built the trail.</strong> Granting permission to mine a site whose one correctness requirement is credit, without making the credit reachable, would be the generous half of a decision and not the whole of it. So: a Markdown source beside every page, an index at <code>/llms.txt</code>, the whole site at <code>/llms-full.txt</code>, a feed of this register, JSON-LD on every page, and an Agent Skill at <code>/.well-known/agent-skills/</code> whose main subject is how to cite this place and how to tell a checkable fact from a reading.</p>
+          <p><strong>Nothing in the Markdown is typed.</strong> <code>tools/make-markdown.mjs</code> derives each <code>.md</code> from that page&rsquo;s own <code>main</code> landmark &mdash; the same landmark the mirror reads, so the copy an agent fetches cannot disagree with the page &mdash; and derives the feed from this register&rsquo;s own accessions. The rule it is built around is the bluntest one in <code>CLAUDE.md</code>: two copies of the same words drift, and the accessible one is always the copy that rots. The converter <em>throws</em> on a tag it has not been taught rather than dropping it, because a converter that quietly discards an element is that same drift arriving by another door.</p>
+          <p><strong>One thing it refuses to flatten.</strong> <code>&lt;del&gt;</code> and <code>&lt;ins&gt;</code> stay as HTML in the Markdown instead of becoming <code>~~strikethrough~~</code> and nothing, because the one pair on this site is <code>PROSPERO</code> struck through and <em>Miranda, First Folio, 1623</em> written in &mdash; a restored attribution, the kintsugi seam. Markdown has no counterpart for <code>&lt;ins&gt;</code>, so the pair would have read as <q>old new</q> with nothing saying which was which. Losing the difference between what we got wrong and what is true is not a formatting compromise here.</p>
+          <p><strong>The JSON-LD is authored and not generated, and this is the reason.</strong> Every sheet&rsquo;s label already distinguishes the <em>Maker</em> &mdash; who made the thing being read &mdash; from <em>Read by</em>, who wrote our reading of it. In the structured data that is <code>about.author</code> against <code>author</code>, and the two are now stated separately on every sheet: <em>The Army of the Upright</em> is by Helen Edgar and Ryan Boren, <em>about</em> a work by Virginia Woolf. Collapsing them would tell every agent on the web that we wrote Woolf. <code>check-metadata.mjs</code> refuses the conflation outright, which makes it the first gate here that checks an <em>attribution</em> rather than a fact about a file. Where a page states no reader, no author is asserted at all.</p>
+          <p>Two traps paid for, and they were the same trap twice in one afternoon. <strong>A comment that names a tag in angle brackets is indistinguishable from that tag to a regex.</strong> The note in <code>flower-codes.html</code> explaining that positioning goes on the outer <code>g</code> and the animation on the inner one made the converter refuse the page; then a comment added to every head, explaining the new discovery links, said <code>main</code> in brackets and made a <code>main</code>-landmark extractor match <em>inside the comment</em> and take the head as the page body. The mirror reads that landmark too. Fixed on both sides &mdash; comments stripped before parsing, and the brackets taken out of the comments &mdash; and written into <code>CLAUDE.md</code> so it is not paid for a third time.</p>
+        </div>
+      </div>
 
       <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
         <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">A mistyped address no longer ejects the reader from the herbarium, and fixing it introduced a soft 404 the new gate caught</span></div>

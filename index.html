@@ -47,6 +47,49 @@
      turned it off, or the daylight sheet at someone who asked for the cabinet.
      With no stored ground, neither class is set and the media query decides. -->
 <script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
+<!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
+     rel=alternate points an agent at this page's Markdown source, derived from this
+     page's own main landmark by tools/make-markdown.mjs.
+
+     NO ANGLE-BRACKET TAG NAMES IN A COMMENT NEAR THE HEAD. Writing the landmark's name
+     with brackets here made a /<main[^>]*>/ extractor match inside this very comment
+     and take the head as the page body. The SKS mirror reads that landmark too. -->
+<link rel="describedby" href="/llms.txt" type="text/markdown" title="Site index for agents">
+<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Queering Earth — the accession register">
+<link rel="alternate" href="https://queering.earth/index.md" type="text/markdown" title="Queering Earth — Markdown source">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://queering.earth/#page",
+  "name": "Queering Earth",
+  "description": "Reading the world through a queering lens — art, literature, poetry, politics, people, history — and asking what else any of it could have been. A Stimpunks Foundation and More Realms collaboration.",
+  "url": "https://queering.earth/",
+  "inLanguage": "en",
+  "isFamilyFriendly": true,
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "publisher": [
+    {
+      "@type": "Organization",
+      "name": "Stimpunks Foundation",
+      "url": "https://stimpunks.org/"
+    },
+    {
+      "@type": "Organization",
+      "name": "More Realms",
+      "url": "https://morerealms.com/"
+    }
+  ],
+  "dateModified": "2026-09-09",
+  "alternateName": "Post-normal possibilities",
+  "encoding": {
+    "@type": "MediaObject",
+    "encodingFormat": "text/markdown",
+    "contentUrl": "https://queering.earth/index.md"
+  }
+}
+</script>
 </head>
 <body>
 

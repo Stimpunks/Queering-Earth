@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "queering-earth",
+      "type": "skill",
+      "description": "Read and cite queering.earth. Markdown source endpoints, the attribution ledger, the accession register of corrected citations, and how to tell a checkable fact from a reading.",
+      "url": "https://queering.earth/.well-known/agent-skills/queering-earth/SKILL.md",
+      "digest": "sha256:80002596644ba7e28d886715a068568c61b21ede11fadef793e73e571bff1616"
+    }
+  ]
+}

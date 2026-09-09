@@ -1,5 +1,57 @@
 # Everything here is meant to be read, quoted, and reused (CC BY-SA 4.0).
+#
+# That sentence used to be the whole policy, and it was addressed to humans in a file
+# read by machines. The named groups below say the same thing in the form a crawler
+# actually parses, and the Content-Signal lines say it for uses robots.txt has no
+# vocabulary for. Added 2026-09-09 from the spec audit.
+#
+# THE ANSWER IS YES, AND THE ASK IS ATTRIBUTION. CC BY-SA requires credit and
+# share-alike. We are not withholding the text to protect that; we are stating the
+# permission plainly and putting the citation trail where a machine can reach it —
+# ATTRIBUTIONS.md for every quotation, /changelog for every correction we have made
+# to one, and a .md source beside every page so nobody has to guess at our prose by
+# scraping it.
+
 User-agent: *
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+# Training corpora. Named explicitly so the answer is a rule and not an inference.
+User-agent: GPTBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: ClaudeBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Google-Extended
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Applebot-Extended
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: CCBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+# Retrieval and answer engines. These cite, which is the behaviour this site wants most.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 Sitemap: https://queering.earth/sitemap.xml
