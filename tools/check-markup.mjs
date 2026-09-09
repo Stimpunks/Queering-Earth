@@ -633,6 +633,55 @@ for (const file of targets) {
     }
   }
 
+  /* ── data-sheet, on the register's entries
+   *
+   * The by-sheet index files an entry under the sheet it declares. A typo in that
+   * declaration does not throw and does not show: the entry simply matches no
+   * group and vanishes out of the index, while the register above it still reads
+   * perfectly. That is the silent class this repo keeps building guards for, and
+   * on a page whose subject is corrections, an index that quietly drops one is the
+   * worst available bug.
+   *
+   * Every token must be a page in this repo or the literal `the-site`. Multiple
+   * tokens are allowed and are how one entry belongs to two sheets — the byline
+   * rule changed Sheet No. 4 and gave No. 1 a second reader in one stroke.
+   *
+   * A GROUP THAT NOTHING FILES INTO IS ALSO REPORTED, because an authored group
+   * for a sheet that has no entries is either a sheet nothing has happened to
+   * (fine, and it stays hidden) or a slug that does not match what the entries
+   * say (not fine, and invisible without this). */
+  /* Same idiom as the .ss-nav check above: a slice-and-count, not the tag loop's
+     carried counter, which is scoped to that loop. There are seventy-odd of these
+     on one page rather than forty-five thousand across a repo, so the O(n) slice
+     the loop's comment warns about does not apply here. */
+  const lineOfIndex = (idx) => src.slice(0, idx).split('\n').length;
+  const sheetTokens = new Set();
+  for (const m of src.matchAll(/<div class="qe-entry[^"]*"\s+data-sheet="([^"]*)"/g)) {
+    const line = lineOfIndex(m.index);
+    const tokens = decode(m[1]).trim().split(/\s+/).filter(Boolean);
+    if (!tokens.length) {
+      problems.push(`entry at line ${line} has an empty data-sheet — it would file under nothing and disappear from the index`);
+      continue;
+    }
+    for (const t of tokens) {
+      sheetTokens.add(t);
+      if (t === 'the-site') continue;
+      if (!fs.existsSync(path.join(REPO, t + '.html'))) {
+        problems.push(
+          `entry at line ${line} declares data-sheet="${t}", and there is no ${t}.html — the entry would match no group in the by-sheet index and drop out of it silently`
+        );
+      }
+    }
+  }
+  for (const m of src.matchAll(/<div class="qe-index-group"\s+data-sheet="([^"]*)"/g)) {
+    const t = decode(m[1]).trim();
+    if (t && !sheetTokens.has(t)) {
+      problems.push(
+        `index group at line ${lineOfIndex(m.index)} is for data-sheet="${t}", which no entry on this page declares — either the slug is wrong or the group is stale`
+      );
+    }
+  }
+
   if (!exempt(file)) memberPages++;
   if (badge) badgesSeen++;
 

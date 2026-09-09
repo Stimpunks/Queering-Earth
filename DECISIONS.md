@@ -99,6 +99,63 @@ Hers to correct on her own site; ours to check against the book before any sheet
 
 ## Settled
 
+### The register is indexed by sheet, and the association is authored (2026-09-09)
+
+The open item from the contents work, closed the same day. `/changelog` is written **by
+accession**, which is by date, because a sheet, its corrections and the CSS it needed are one
+dated event. That is the right unit to *write* in and the wrong one to *look something up*
+in: a reader is usually asking what happened to one sheet, and its entries are scattered
+across sixteen dates.
+
+**The distinction the first attempt missed: a contents list is front matter, an index is back
+matter.** That is why a table of contents measured so badly here (1,293px at the top,
+delaying the first entry by three and a half screens) and why an index does not: it sits at
+the foot of the page, where a bound volume has always kept one, and delays nobody. One line
+up by the legend points down at it. The register's own first accession is back to 1,839px
+from the top.
+
+**Which sheet an entry concerns is stated in the markup, never inferred.** Each `.qe-entry`
+carries `data-sheet`. Deriving it from the links inside an entry was considered and fails on
+the evidence: the Dickinson accession links `/on-being-ill`, `/promises-like-pie-crust` and
+`/wild-nights` and concerns only the last, so incidental cross-references would file
+corrections under sheets they have nothing to do with. **On a site whose whole risk is a
+wrong attribution, an index that silently misfiles a correction is the worst bug available**,
+so the association is authored — 73 entries, read one at a time — and guarded.
+
+Two entries legitimately belong to two sheets and carry both tokens, which is why the field
+is a token list rather than a single value: the byline rule changed Sheet No. 4 and gave
+No. 1 a second reader in one stroke, and today's correction about the seven principles
+touched the colophon and this register together. 73 entries file as 75 index lines.
+
+**What is authored and what is derived.** Every group, its heading, its sheet number, and the
+order the groups appear in are written in `changelog.html` — those are editorial words, and
+`queering.js` may not write words. The script only *files*: it clones an entry's existing
+name and its existing kind chip and puts them under the group the entry declares. Nothing is
+composed, summarised or truncated, so the index cannot end up calling an entry something the
+entry does not call itself. The group labels were checked against each sheet's own `<h1>` and
+against the plate's cards rather than typed from memory.
+
+**A guard, because the failure is silent.** A typo'd slug does not throw and does not show:
+the entry matches no group, drops out of the index, and the register above it still reads
+perfectly. `check-markup.mjs` now validates every `data-sheet` token against the pages that
+exist (plus the literal `the-site`), reports an empty declaration, and reports a group that
+nothing files into — which catches the same typo from the other end. **Made to fail before it
+was believed**, per the standing rule: a typo'd entry slug, an emptied declaration, and a
+stale group each reported with a line number and exit 1; then reverted and the clean tree
+re-run.
+
+**One layout attempt discarded on measurement.** The index items were first a wrapping flex
+line, chip beside name. A chip plus an entry name exceeds the measure almost every time, so
+every single item put its chip alone on a row above itself and the index came to 6,726px for
+no extra information. Ordinary inline flow — chip opening the line, name wrapping beneath —
+is 5,502px and is what an index entry has always looked like anyway.
+
+**The one redundancy left in.** A sheet's `Mounted` entry is named after the sheet, so it
+restates the group heading directly beneath it. Fixing that would mean rewriting entry names
+in the register, which is editing the record to suit an index built on top of it. The index
+defers to the record.
+
+
 ### Contents on the long sheets: derived list, authored addresses (2026-09-09)
 
 Ryan wanted to see what is coming on a long sheet, jump around it, and share deep links to
@@ -178,11 +235,11 @@ register keeps its section marks and its sixteen addresses — deep links there 
 half of what was asked — and has no contents list. Removed after measuring rather than
 shipped because it had been built.
 
-**Open, and left open on purpose: the register wants an index by sheet, not a contents list.**
-What a reader of `/changelog` wants is usually "what happened to sheet X", and the accessions
-are grouped by date. That is a different artifact, it needs a real editorial decision about
-how a sheet's entries are gathered across accessions, and approximating it with a contents
-list is what the measurement just talked us out of.
+**The register wanted an index by sheet, not a contents list — built the same day.** What a
+reader of `/changelog` wants is usually "what happened to sheet X", and the accessions are
+grouped by date. See the entry below; the short version is that **a contents list is front
+matter and an index is back matter**, and reaching for the first when the page wanted the
+second is what produced the 1,293px block.
 
 **A wrinkle flagged and deliberately not solved.** On the sheets the headings are often
 quotations, so the Tempest's contents reads *Assembled, not born · A household of three · O,

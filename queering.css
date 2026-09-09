@@ -2387,3 +2387,121 @@ h2[id]:target::before {
   .qe-anchor { display: none; }
   h2[id]:target::before { display: none; }
 }
+
+/* ─────────────────────────────────────────────── index by sheet
+ *
+ * BACK MATTER, and that is the whole correction. A contents list is front matter;
+ * an INDEX is back matter. Reaching for the first when the page wanted the second
+ * put a 1,293px block at the top of the register and delayed its first entry by
+ * three and a half screens — see the note on `.qe-contents`. An index at the foot
+ * of the page delays nobody, and is where a bound volume has always kept one. A
+ * single line up by the legend points down at it, the way a book's front matter
+ * points at its index.
+ *
+ * The register is written by accession because a sheet, its corrections and the
+ * CSS it needed are one dated event. That is the right unit to write in and the
+ * wrong one to look something up in. This is the same entries filed the other way,
+ * and it is generated: see the long note in queering.js for what is authored here
+ * (every group, its heading, its number, their order) and what is derived (only
+ * the filing). Nothing in this component is a second copy of anything.
+ *
+ * RULED OFF, like the register's other housekeeping — it is the ledger talking
+ * about how the ledger is arranged, which is exactly tier three.
+ */
+
+.qe-sheet-index {
+  margin: var(--qe-space-8) 0 0;
+  padding: var(--qe-space-3) 0 0;
+  border-top: 1px solid var(--qe-rule);
+}
+
+.qe-sheet-index h2 {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: var(--qe-body);
+  font-variation-settings: normal;
+  color: var(--qe-moss);
+  margin: 0 0 var(--qe-space-2);
+}
+
+.qe-index-note {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--qe-moss);
+  margin: 0 0 var(--qe-space-4);
+}
+
+/* One sheet's worth. Ruled off from the one above it the way an accession is. */
+.qe-index-group { margin-top: var(--qe-space-4); }
+.qe-index-group:first-of-type { margin-top: 0; }
+
+.qe-index-sheet {
+  font-family: var(--qe-display);
+  font-size: 1.06rem;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--qe-ink);
+  margin: 0 0 var(--qe-space-2);
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--qe-rule);
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+}
+html.plain .qe-index-sheet { font-variation-settings: normal; font-weight: 700; }
+.qe-index-sheet a { color: var(--qe-rust); }
+
+/* Which sheet number, or which piece of furniture. Small caps beside the title,
+   the same slug idiom as a sheet's own kicker. */
+.qe-index-kicker {
+  font-family: var(--qe-body);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  white-space: nowrap;
+  font-variation-settings: normal;
+}
+
+.qe-index-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.97rem;
+  line-height: 1.5;
+}
+/* NOT a flex line, and that was the first attempt. A chip plus an entry name is
+   wider than the measure almost every time, so a wrapping flex line put the chip
+   alone on its own row above every single entry and doubled the height of the
+   index for no information. Ordinary inline flow instead: the chip opens the line
+   and the name wraps beneath it, which is what an index entry has always looked
+   like. */
+.qe-index-group li {
+  margin: 0 0 var(--qe-space-2);
+  padding-left: 0.1rem;
+}
+.qe-index-group li:last-child { margin-bottom: 0; }
+.qe-index-group li a { color: var(--qe-rust); }
+/* The chip is cloned out of the entry, so it arrives with .qe-tag's own rules and
+   its kind colour already on it — the index cannot end up calling an entry
+   something the entry does not call itself. */
+.qe-index-group li .qe-tag {
+  margin-right: 0.45rem;
+  vertical-align: 0.1em;
+}
+
+/* The pointer in the front matter. One line, and a link. */
+.qe-index-link {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--qe-moss);
+  margin: var(--qe-space-3) 0 0;
+}
+
+@media print {
+  /* Same reason as the contents list and the sibling nav: on paper there is
+     nowhere to navigate to, and an index whose entries are all on the same sheet
+     of paper the reader is holding is a list of things they already have. */
+  .qe-sheet-index { display: none; }
+  .qe-index-link { display: none; }
+}

@@ -155,4 +155,92 @@
        list is not how to report it. */
     if (made) contents.hidden = false;
   }
+
+  /* ── index by sheet
+   *
+   * The register is kept by accession, which is by date, because a sheet, its
+   * corrections and the CSS it needed are one dated event. That is the right unit
+   * to WRITE in and the wrong one to look something up in: a reader here is
+   * usually asking what happened to one sheet, and its entries are scattered
+   * across sixteen dates. So the same entries are filed the other way, once, at
+   * the foot of the page.
+   *
+   * BACK MATTER, and that distinction is the thing this page got wrong before. A
+   * contents list is front matter and belongs at the top; an INDEX is back matter
+   * and belongs at the end. Reaching for a contents list here produced a 1,293px
+   * block that delayed the first entry by three and a half screens. An index at
+   * the end delays nobody and is where a bound volume has always kept one.
+   *
+   * THE GROUPS AND THEIR ORDER ARE AUTHORED; ONLY THE FILING IS DERIVED. Every
+   * group, its heading, its sheet number and the order they appear in are written
+   * in changelog.html, because those are editorial words and this file may not
+   * write words. What happens here is only sorting: an entry's name is cloned out
+   * of the entry it already lives in, and its kind chip is cloned too. Nothing is
+   * composed, nothing is summarised, nothing is truncated.
+   *
+   * WHICH SHEET AN ENTRY CONCERNS IS STATED, NOT INFERRED. Each entry carries
+   * `data-sheet`. Deriving it from the links inside an entry was tried on paper
+   * and fails: the Dickinson accession links three sheets and concerns one, so
+   * incidental cross-references would file corrections under sheets they have
+   * nothing to do with. On a site whose whole risk is a wrong attribution, an
+   * index that silently misfiles a correction is the worst available bug, so the
+   * association is authored and check-markup.mjs validates every token of it.
+   *
+   * AN EMPTY GROUP STAYS HIDDEN. A sheet with no entries is a sheet nothing has
+   * happened to, and an empty heading under it reads as a fault.
+   */
+
+  var index = document.querySelector('.qe-sheet-index');
+  if (index) {
+    var groups = index.querySelectorAll('.qe-index-group');
+    var filled = 0;
+
+    for (var g = 0; g < groups.length; g++) {
+      var group = groups[g];
+      var slug = group.getAttribute('data-sheet');
+      var into = group.querySelector('ul');
+      var count = 0;
+
+      var entries = document.querySelectorAll('.qe-entry[data-sheet]');
+      for (var e = 0; e < entries.length; e++) {
+        var entry = entries[e];
+        /* Split on whitespace: an entry may concern two sheets — the byline rule
+           changed Sheet No. 4 and gave No. 1 a second reader in one stroke — and
+           it belongs under both rather than under whichever is listed first. */
+        var owns = entry.getAttribute('data-sheet').split(/\s+/);
+        if (owns.indexOf(slug) === -1) continue;
+
+        var accession = entry.closest('.qe-accession');
+        var heading = accession && accession.querySelector('h2[id]');
+        if (!heading) continue;
+
+        var nameEl = entry.querySelector('.qe-entry-name');
+        if (!nameEl) continue;
+        var name = nameEl.cloneNode(true);
+        var stray = name.querySelector('.qe-anchor');
+        if (stray) stray.remove();
+        var label = name.textContent.replace(/\s+/g, ' ').trim();
+        if (!label) continue;
+
+        var li = document.createElement('li');
+
+        /* The kind chip, cloned rather than rebuilt, so the index cannot end up
+           calling an entry something the entry does not call itself. */
+        var chip = entry.querySelector('.qe-tag');
+        if (chip) li.appendChild(chip.cloneNode(true));
+
+        var a = document.createElement('a');
+        a.setAttribute('href', '#' + heading.id);
+        a.textContent = label;
+        li.appendChild(a);
+
+        into.appendChild(li);
+        count++;
+      }
+
+      if (count) { group.hidden = false; filled++; }
+    }
+
+    if (filled) index.hidden = false;
+  }
 })();

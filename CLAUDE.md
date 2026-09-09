@@ -265,8 +265,30 @@ by including the empty `<nav>`; `queering.js` fills it from that page's own `<h2
   22–34 on a sheet: the block measured 1,293px against 319–510px elsewhere and delayed the
   first entry by three and a half screens. Truncating a label is this site's characteristic
   failure applied to itself, and a short second label is the drift. The register keeps its
-  section marks and its addresses. An index **by sheet** is what it actually wants, and that
-  is logged open rather than approximated with this component.
+  section marks and its addresses, and gets `.qe-sheet-index` instead — see below.
+
+### A contents list is front matter; an index is back matter
+
+`.qe-sheet-index` on `/changelog` files the same entries by **what they happened to** rather
+than by date, at the **foot** of the page. That distinction is the whole reason the contents
+list failed there and the index does not: front matter delays every reader, back matter
+delays none. A one-line pointer up by the legend is how a book does it.
+
+- **Which sheet an entry concerns is stated, never inferred.** Every `.qe-entry` carries
+  `data-sheet`, a token list (two tokens where an entry genuinely touched two sheets).
+  Deriving it from links inside an entry fails on the evidence — the Dickinson accession
+  links three sheets and concerns one — and **an index that silently misfiles a correction is
+  the worst bug this site can ship.**
+- **Groups are authored; only the filing is derived.** Group headings, sheet numbers and
+  their order live in `changelog.html`, because they are editorial words and `queering.js`
+  may not write words. The script clones the entry's existing name and its existing kind
+  chip, so the index cannot call an entry something the entry does not call itself.
+- **`check-markup.mjs` guards it**, because the failure is silent: a typo'd slug matches no
+  group, drops out of the index, and leaves the register reading perfectly. It validates
+  every token against the pages that exist plus `the-site`, flags an empty declaration, and
+  flags a group nothing files into — the same typo caught from both ends.
+- **A new entry needs its `data-sheet`** in the same pass that writes it. Mount it, card it,
+  log it, **file it**.
 
 ### Every page needs exactly one `<main>`, and the sitemap is the manifest
 
