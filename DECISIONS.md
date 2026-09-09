@@ -314,7 +314,10 @@ It is also *more* bustable than 300 seconds, which was the stated priority.
 The cost is the one thing the five minutes bought: a reader moving through several sheets
 revalidates once per sheet instead of once per sitting. That is a conditional request
 returning 304 with an empty body, issued alongside the revalidation the HTML is already
-doing. At 31 KB brotli'd, correctness is worth the round trip.
+doing. Measured against the deployed site on the day of the amendment: the conditional
+request comes back `304` with a zero-byte body in 0.23s, against 33 KB brotli'd for the
+full response. Correctness is worth the round trip. (The 31 KB above was accurate when
+the entry was written and the stylesheet has grown since — it is left as it stood.)
 
 **No `stale-if-error` on those two, and the mechanical reason has a matching one.** RFC 9111
 forbids serving a stale `must-revalidate` response, so the pairing cancels. It would also buy
