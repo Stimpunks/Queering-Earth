@@ -889,3 +889,118 @@ citation and that every URL in one resolves — the Edgar URL would have been ca
 second half of that. **If a third bad citation ships, write the link-resolver half.** A check
 that cannot fail is a check nobody reads, and a check that can only verify punctuation is
 worse: it would have passed all three of these.
+
+**Addendum, 2026-09-08, from the Dickinson sheet.** Three more bad references, all caught
+before shipping, so the trigger above has still not fired — but two of them were **invented
+DOIs**, and both return **404 from the DOI resolver**. That is the first citation error on this
+site a guard could actually have caught, and it is worth knowing that the DOI half is the
+trustworthy half: `https://doi.org/<doi>` with `Accept: application/vnd.citationstyles.csl+json`
+returns the registered title, authors, journal, volume, issue, pages and year, so a checker can
+verify the whole field rather than merely that it resolves. **The general URL half cannot be
+trusted the same way** — Medium, doi.org's own publisher redirects, the Poetry Foundation and
+Harvard all answer a script with 403 or 202 whether the URL is good or not, so a checker reading
+those as broken would cry wolf on most of the references here. If the check gets written: hard
+failure on DOIs, advisory at most on everything else.
+
+### Sheet No. 6 is titled from Ryan's phrase, not from the specimen (2026-09-08)
+
+**The first exception to the convention above**, made on Ryan's call with the alternatives in
+front of him. *A sheet is a reading or an essay* settled that a reading takes its title from a
+phrase in the work it reads — `on-being-ill` is "The Army of the Upright", `promises-like-pie-crust`
+is "The Die Uncast". The Dickinson sheet was offered three titles out of the poem —
+**Done with the Compass**, **Rowing in Eden**, **A Heart in Port** — and one out of Ryan's own
+prose, and he picked **The Swell and the Dwell**.
+
+**It is the right call and the convention survives it.** The reason a reading is titled from
+the specimen is that the title should say what the sheet *found*. This sheet mounts two poems:
+Dickinson's and Ryan's reply. "The swell and the dwell of relational tides" is the sentence in
+which the reading actually happens — it is the frame that lets the poem be about
+co-regulation — and no line of Dickinson's holds both halves of it, because her poem only has
+the swell in it. **A title out of the specimen would have named half the sheet.**
+
+So the rule now reads: **a reading is titled from a phrase in the specimen unless the reading's
+own hinge sentence is somewhere else, in which case it is titled from that.** The address still
+names the work — `/wild-nights` — which is the half of the split that was always doing the
+navigational work.
+
+### Our own verse gets a component, and it is rust where the specimen is moss (2026-09-08)
+
+`.qe-verse` in `queering.css`, added for the Dickinson sheet, which is the first one to mount a
+poem of ours next to a poem of somebody else's.
+
+**`.qe-poem` could not be reused and it was not close.** It wraps a `<blockquote>` with a
+`cite` and a citation in the `figcaption`, because it mounts a specimen. Ryan's reply is not a
+quotation of anybody, has no source to cite, and putting it in a blockquote would have made the
+markup say it was somebody else's — on the one site whose stated risk is a wrong attribution.
+
+**The distinction is carried by the two things a reader sees first, and both alias tokens:**
+
+| | the specimen | our reply |
+|---|---|---|
+| rule | moss, solid, on the **left** | rust, on **top** |
+| face | the display face, Fraunces | the body face, Newsreader, italic |
+
+**And it is never carried by styling alone.** `.qe-verse-label` says whose words these are in
+words — "In reply — Ryan Boren" — so plain view, a screen reader, a print-out and a
+stylesheet-less render all still say it. That is the same rule as the `<del>`/`<ins>` fix on the
+Miranda sheet: **a distinction that only exists in CSS does not exist.**
+
+Every line is its own `<span class="l">` with a hanging indent, for the reasons already written
+down under *Verse gets a shared component*. There is deliberately **no `.l-in`**: the
+alternating indent is a fact about Rossetti's 1896 compositor and has no business in our verse.
+
+### A licensed plate, for the first time (2026-09-08)
+
+Every plate on this site until now has been public domain and said so. The Dickinson facsimile
+is **CC BY-NC-ND 3.0**, from the Emily Dickinson Archive, and Ryan asked for it by name.
+
+**Mounted, with the three conditions met deliberately rather than incidentally** — attribution
+in the caption in the archive's required form, a non-commercial site, and the file unaltered
+because it was requested from *Harvard's own IIIF service* at the width we wanted, so the only
+derivative was made by the rightsholder's own server. `ATTRIBUTIONS.md` carries the detail and
+the instruction not to resize the file locally.
+
+**What was considered and rejected:** mounting the 1891 printed page instead, which is
+unambiguously public domain and which we had already read in three copies. It would have been
+the safe choice and it would have been the wrong object — **the sheet's argument is about what
+the printers did to the leaf, and you cannot show that with a picture of the printing.**
+
+**The precedent this sets, stated so it does not have to be re-argued:** a licensed image may
+be mounted here when the licence permits our use, the conditions are met in the markup rather
+than in good intentions, and the sheet says on its face that the plate is licensed rather than
+free. The default is still public domain. **We take a rightsholder at their word on a
+photograph of a flat public-domain original rather than arguing Bridgeman at them**, and that
+is a decision about how this site behaves, not a legal opinion.
+
+### Ryan's verse got punctuation and nothing else, and three places say so (2026-09-08)
+
+His brief: *"Don't revise my writing above except to give the verse proper poetic
+formatting/punctuation."* Five terminal full stops and five commas were added, and **not one
+word, line break or capital was touched** — including the lower-case continuation lines, which
+turn out to be consistent across all eight stanzas and are therefore prosody rather than
+typing.
+
+**The change is disclosed in three places, on purpose:** a `Reply in verse` row in the sheet's
+label, a full itemised list in `ATTRIBUTIONS.md`, and the register entry. The reason is the
+rule the `coming-to-terms` label already sets — **an unmarked edit of our own published text is
+the same failure as an unmarked edit of somebody else's, and the site just happens to be the
+injured party.** A verse written for one person and mounted on a public plate is exactly the
+case where that rule earns its keep.
+
+### Corroboration means a different library, not a different file (2026-09-08)
+
+The Rossetti entry in `ATTRIBUTIONS.md` says its colon was verified in "two separately scanned
+copies", and it happened to be two different libraries. **The Dickinson sheet nearly shipped a
+broken piece of type as a variant reading**, because the first two scans of page 97 of *Poems,
+Second Series* both come out of University of California Libraries holdings and both show line
+11 as `mocr` instead of `moor`. They agree. They are one witness.
+
+The University of Toronto copy has the word intact, and the sheet now reports the defect as a
+defect. **The rule, written down because "two scans" reads as sufficient and is not:
+corroboration means a different physical copy, from a different holding institution, digitised
+by a different pipeline.** Two of those three is not enough.
+
+**This is not a candidate for a guard script.** Nothing on disk knows which library scanned
+which Internet Archive item, and the identifier suffix that gave it away — `dickrich` on both —
+is a convention, not a contract. It is a reading rule, and the place for it is here and in the
+ledger.

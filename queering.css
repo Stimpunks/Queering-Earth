@@ -1007,6 +1007,70 @@ html.plain .qe-poem .qe-stanza { font-variation-settings: normal; }
   .qe-poem .qe-stanza { break-inside: avoid; }
 }
 
+/* ─────────────────────────────────────────────── our own verse
+ *
+ * `.qe-poem` mounts a specimen. This mounts an ANSWER, and the two must never be
+ * mistakable for one another — a site whose whole risk is a wrong attribution
+ * cannot let our lines and a dead poet's lines wear the same clothes.
+ *
+ * So the distinction is carried by the two things a reader sees first, and both of
+ * them alias tokens:
+ *
+ *   the specimen  — moss rule on the LEFT, the display face (Fraunces)
+ *   our reply     — rust rule ABOVE, the body face in italic (Newsreader)
+ *
+ * It is never carried by styling alone. `.qe-verse-label` says whose words these
+ * are in words, so plain view, a screen reader and a print-out all still say it.
+ *
+ * Line breaks are the object here exactly as they are in `.qe-poem`, so every line
+ * is its own `<span class="l">` with a hanging indent and there are no `<br>`s.
+ * See DECISIONS.md — the reasons are the same ones, and so is the narrow-screen
+ * step-down. There is no `.l-in`: an alternating indent is a fact about somebody
+ * else's 1896 compositor and has no business in our own verse.
+ */
+
+.qe-verse {
+  margin: 2.5rem 0;
+  padding: 1.15rem 0 0;
+  border-top: 2px solid var(--qe-rust);
+}
+
+.qe-verse-label {
+  display: block;
+  font-family: var(--qe-body);
+  font-size: 0.74rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--qe-rust);
+  margin: 0 0 1.1rem;
+}
+
+.qe-verse .qe-stanza {
+  margin: 0 0 1.5rem;
+  font-family: var(--qe-body);
+  font-style: italic;
+  font-size: 1.1em;
+  line-height: 1.55;
+  color: var(--qe-ink);
+}
+.qe-verse .qe-stanza:last-of-type { margin-bottom: 0; }
+
+.qe-verse .l {
+  display: block;
+  text-indent: -1.1em;
+  margin-left: 1.1em;
+}
+
+@media (max-width: 26rem) {
+  .qe-verse .qe-stanza { font-size: 1em; }
+}
+
+@media print {
+  .qe-verse { border-top: 2pt solid #000; }
+  .qe-verse-label { color: #000; }
+  .qe-verse .qe-stanza { color: #000; break-inside: avoid; }
+}
+
 /* ─────────────────────────────────────────────── the paste-up
  *
  * A ZINE WALL, IN A HERBARIUM REGISTER.

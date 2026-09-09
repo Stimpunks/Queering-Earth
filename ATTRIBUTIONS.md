@@ -973,6 +973,290 @@ claims only what was actually verified, which is that Demory quotes Hutcheon say
 
 ----
 
+### Emily Dickinson — *Wild nights – Wild nights!*, the 1891 tidy, and two scans that were not two witnesses
+
+**Quoted on:** `wild-nights.html` (the poem, entire, and seven lines of it again in a
+comparison table).
+
+**The specimen.** *Wild nights – Wild nights!* — **Fr269, J249** — written about late 1861 and
+sewn into **Fascicle 11**. The manuscript is one leaf in ink at **Houghton Library, Harvard
+University: MS Am 1118.3 (38b)**, in *Poems: Packet VIII, Fascicle 11*, catalogued by the
+Emily Dickinson Archive as [F269A](https://curiosity.lib.harvard.edu/emily-dickinson-archive/catalog/195-EDA0392_F269A).
+The poem is **public domain**; the photograph of the leaf is not, and has its own entry below.
+
+**The text on the sheet is R. W. Franklin's reading of that leaf**, as published in the Emily
+Dickinson Archive and printed identically by the
+[Poetry Foundation](https://www.poetryfoundation.org/poems/44087/wild-nights-wild-nights-269)
+from his *Reading Edition* (Belknap Press, 1999). **The sheet names the edition in the label
+rather than claiming the manuscript**, and that is deliberate — see the last section of this
+entry.
+
+**Verified:** 2026-09-08.
+
+- The **facsimile** was fetched from Harvard's own IIIF image service at full size (2480×3824)
+  and read at native resolution, stanza by stanza.
+- **Page 97 of *Poems, Second Series* (1891) was rendered as images and the type read**, in
+  **three separately scanned copies**, because the findings here are single marks and a text
+  extractor is not evidence about a mark.
+- Franklin's reading, EDA's transcription and the Poetry Foundation's text were compared
+  character by character and agree.
+
+**The finding: the first printing tidied nine dashes down to one.**
+
+| | as Franklin reads the leaf | 1891, *Second Series*, p. 97 |
+|---|---|---|
+| line 1 | Wild nights **–** Wild nights! | WILD nights **!**   Wild nights ! |
+| line 5 | Futile **–** the winds **–** | Futile the winds |
+| line 6 | To a **H**eart in port **–** | To a **h**eart in port**, —** |
+| line 7 | Done with the **C**ompass **–** | Done with the **c**ompass**,** |
+| line 8 | Done with the **C**hart! | Done with the **c**hart**.** |
+| line 10 | Ah **–** the **S**ea! | Ah **!** the **s**ea ! |
+| lines 11–12 | Might I but moor **–** tonight **–** / In thee! | Might I but moor / **To-night** in thee ! |
+
+Nine dashes go in and one comes out — the em dash closing line 6, and it has acquired a comma
+in front of it. **Four of her capitals are lowered:** Heart, Compass, Chart, Sea. *Eden* keeps
+its capital because *Eden* is a proper noun in anybody's grammar and the other four were only
+proper nouns in hers. Three exclamation marks and three commas are added; a full stop replaces
+the exclamation at the end of stanza 2. Counting the marks rather than the changes: her five
+exclamation points become seven.
+
+**Three things on the 1891 page that are the volume's typography and not hers**, all
+normalised on the sheet and all said out loud on it:
+
+1. **A two-line drop cap.** The poem opens `WILD nights !` after a large initial **W**, which
+   is how the volume opens every poem. The word is *Wild*.
+2. **The same initial is why line 2 sits inset.** `Were I with thee,` is set beside the drop
+   cap, not indented by an editor. **Do not "restore" that indent as an editorial choice** —
+   it is a consequence of the W.
+3. **A space before every exclamation mark**, all through the book — the same French spacing
+   as the 1896 Rossetti volume two entries up. House style of the volume, not her pointing.
+
+**The lineation is not a tidy, and the sheet says so.** Dickinson wrote `Might I but moor –`
+and ran out of leaf, so `Tonight –` went on the line below. Franklin records that division in
+his textual notes (`Division / 11 moor - |`) and reads through it. Todd and Higginson set what
+was in front of them. **One editor reproduced the poem and the other reproduced the leaf, and
+both are defensible.** Do not "fix" the sheet by calling 1891 wrong about line 11.
+
+**The circulating text, and a word missing from it.** The
+[Academy of American Poets](https://poets.org/poem/wild-nights-wild-nights-249), read on
+2026-09-08 out of the live DOM rather than out of a summary, prints a composite: the dashes
+restored, *heart / compass / chart / sea* still lower case from 1891, `Ah, the sea!` with a
+comma that is in neither, `Wild Nights` capitalized where neither the leaf nor 1891
+capitalizes it, and line 11 as **`Might I moor – Tonight –`**.
+
+| | line 11 |
+|---|---|
+| Franklin, and the leaf | Might I **but** moor – tonight – |
+| poets.org, 2026-09-08 | Might I moor – Tonight – |
+
+**The word *but* is gone**, and it is the hinge of the line: *might I but moor* is a plea with
+a limit built into it, *might I moor* is a request for permission to dock. The page names no
+edition, no editor and no date, and says only "This poem is in the public domain," which is
+true of the poem and tells a reader nothing about the text. **This is the Woolf edition trap
+and the Rossetti colon arriving a third time.** Name the printing, or do not quote.
+
+**And the methodological finding, which matters more than any of the above.** Page 97 was read
+in three scanned copies. The first two — the Internet Archive items `poemsbyemilyd00dickrich`
+(via [the Commons DjVu](https://commons.wikimedia.org/wiki/File:Emily_Dickinson_Poems_-_second_series_(1891).djvu),
+which is derived from it) and
+[`poemssecondserie00dickrich`](https://archive.org/details/poemssecondserie00dickrich) —
+**agree with each other and are wrong.** A broken piece of type makes line 11 read **`mocr`**
+instead of `moor`, identically in both, and it is unambiguous at native resolution. Both are
+digitised from **University of California Libraries** holdings. The
+[University of Toronto copy](https://archive.org/details/poemsemilys00dickuoft) has the word
+intact.
+
+**Two scans that agree are not two witnesses if they came out of one library.** The Rossetti
+entry above says "two separately scanned copies" and it meant *two libraries*; that was luck of
+phrasing rather than precision, and this sheet nearly published a broken letter as a variant
+reading before the third copy was pulled. **The rule, restated so the next session cannot miss
+it: corroboration means a different physical copy from a different holding institution
+digitised by a different pipeline. Two of those three is not enough.** `mocr` is named on the
+sheet as a press defect and nowhere claimed as a reading.
+
+**What is not claimed.** We read the facsimile and we are **not** setting our own readings of
+her marks against Franklin's. What is on the leaf is a great many short strokes of varying
+length and angle, some of which are dashes, some of which are exclamation points and some of
+which are the tail of the letter before them; the sheet says this in as many words. The dashes
+are set as spaced en dashes, which is a rendering convention and is disclosed in the poem's
+caption. **If a future session wants to make a claim about a particular mark on this leaf, it
+needs Franklin's variorum apparatus and Johnson's, not an afternoon with the JPEG.**
+
+----
+
+### T. W. Higginson to Mabel Loomis Todd, 21 April 1891 — the letter about this poem
+
+**Quoted on:** `wild-nights.html`, two paragraphs of the letter.
+
+> Let us alter as little as possible, now that the public ear is opened.
+>
+> One poem only I dread a little to print—that wonderful "Wild Nights,"—lest the malignant
+> read into it more than that virgin recluse ever dreamed of putting there. Has Miss Lavinia
+> any shrinking about it? You will understand & pardon my solicitude. Yet what a loss to omit
+> it! Indeed it is not to be omitted.
+
+**Source:** Thomas Wentworth Higginson to Mabel Loomis Todd, headed *25 Buckingham St. /
+Cambridge, Mass. / Apr. 21, 1891*, printed in Millicent Todd Bingham, *Ancestors' Brocades: The
+Literary Debut of Emily Dickinson* (New York: Harper & Brothers, 1945), **page 127**.
+
+**Verified:** 2026-09-08, by rendering page 127 of the scan held at
+[archive.org/details/in.ernet.dli.2015.29377](https://archive.org/details/in.ernet.dli.2015.29377)
+as an image and reading the type, **not** from the OCR — the OCR of that page mangles the
+ampersand to `&:` and the footnote marker to `®`, which is exactly the kind of noise that turns
+into a false quotation. The salutation is small-capped `DEAR FRIEND`; the em dashes are closed
+up as printed and the sheet says so, because house style spaces them and a quotation keeps its
+own pointing.
+
+**Bingham's own footnote corroborates the page.** Her note 5 on that sentence reads *Poems,
+Second Series, p. 97* — the same page we read in three copies for the entry above, arrived at
+independently.
+
+**Two things the sheet says about this letter, and one it does not.** It says Higginson knew
+exactly what was in the poem — the apparatus of denial and the decision to publish are in the
+same paragraph — and it says he wrote *let us alter as little as possible* two lines before the
+poem reached the press with eight of its nine dashes gone. **It does not say Higginson made
+those changes.** Nothing read here establishes whether the pointing on page 97 is his, Todd's,
+or the compositor's, and the sheet leaves that open rather than pinning it on the man whose
+letter we happen to have.
+
+*Miss Lavinia* is Lavinia Dickinson, the poet's sister, identified in the caption.
+
+----
+
+### The manuscript image — Houghton Library, and the first plate here that is not public domain
+
+**Mounted on:** `wild-nights.html`.
+
+**File:** `images/dickinson-1861-wild-nights-houghton-ms-am-1118-3-38b.jpg`, 1400×2159.
+
+**Credit, in the form the archive requires:** Houghton Library, Harvard University, Cambridge,
+MA — *Poems: Packet VIII, Fascicle 11. Includes 20 poems, written in ink, ca. 1861*, MS Am
+1118.3 (38b). Emily Dickinson Archive, <https://www.edickinson.org>.
+
+**Licence: [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/).** The
+archive's [Copyright & Terms of Use](https://curiosity.lib.harvard.edu/emily-dickinson-archive/about/copyright-terms-of-use)
+page, read 2026-09-08, states that images of manuscripts, attribution information and
+transcriptions on the site are governed by that licence, that no permission is needed for
+"personal research, in-class teaching purposes, school projects and assignments, blog posts, or
+other non-commercial uses", and that the material "must be used with accompanying credit line
+to the owning institution".
+
+**How the three licence conditions are met, so that a later session does not undo one of them
+by accident:**
+
+- **BY** — the credit line above is in the plate's caption, with the catalogue record and the
+  archive both linked.
+- **NC** — queering.earth carries no advertising and sells nothing.
+- **ND** — **the file is unaltered.** It is not cropped, rotated, colour-corrected or
+  resampled by us. It was requested from *Harvard's own IIIF image service* at
+  `/full/1400,/0/default.jpg`, so the scaling was performed by the rightsholder's server and
+  the bytes on disk are the bytes they returned. **If a future pass wants a different size, ask
+  their service for it — do not resize this file locally.**
+
+**This is the first thing mounted on this site that is not in the public domain**, and the
+sheet says so in *What this sheet will not tidy*. The poem is public domain; the photograph is
+offered under a licence, and **we take the archive at its word rather than arguing about
+whether a photograph of a flat public-domain manuscript can carry a copyright of its own.**
+That is a decision about how this site behaves rather than a legal opinion, and it is recorded
+in `DECISIONS.md`.
+
+**One thing we did not do.** EDA also asks that reuse of "edited texts, as presented in the
+Johnson or Franklin volumes" be taken up with Harvard University Press. The sheet quotes a
+twelve-line public-domain poem in a critical reading, names the edition at every use, and links
+the archive — the same footing as the Arden text on the Miranda sheet. **The transcription is
+credited to Franklin and never presented as ours.**
+
+----
+
+### The terms quoted on the Dickinson sheet, and who coined each one
+
+**Quoted on:** `wild-nights.html`. Seven sources, three of them at one remove and all three
+labelled as such on the sheet itself. **Verified:** 2026-09-08. Every DOI below was resolved
+through DOI content negotiation and the title, authors, journal, volume, issue, pages and year
+read off the registered record — the first draft of this sheet carried **three citations
+written from memory and two of them were wrong**, which is the reason this paragraph exists.
+
+| term | credited to | read where | checked |
+|---|---|---|---|
+| co-regulation | **Janae Elisabeth**, writing as Trauma Geek, [*The Neuroscience of Community*](https://medium.com/age-of-awareness/the-neuroscience-of-community-9f0a437d3a4f) | the Stimpunks [co-regulation](https://stimpunks.org/glossary/co-regulation/) entry, which quotes it | URL taken from the glossary's own link, not typed |
+| co-regulation as system property | **Lori Hogenkamp, Dhwani Sanghavi and Heini Natri**, *Toward an Emergent Paradigm for Neurodiversity and Health* | the same glossary entry | [10.1177/25739581261433443](https://doi.org/10.1177/25739581261433443) — *Autism in Adulthood*, 24 March 2026 |
+| safety as sensory, attentional, relational and political | **Helen Edgar**, [*Expanding the Mycelial Network of Care*](https://morerealms.com/expanding-the-mycelial-network-of-care-autistic-community-safety-and-rhizomatic-futures/), More Realms | her own page | read in place |
+| belonging | **the Stimpunks glossary itself** — [belonging](https://stimpunks.org/glossary/belonging/) | there | see note below |
+| stimming | **Kapp, Steward, Crane, Elliott, Elphick, Pellicano and Russell** | the Stimpunks [stimming](https://stimpunks.org/glossary/stimming/) entry | [10.1177/1362361319829628](https://doi.org/10.1177/1362361319829628) — *Autism* 23:7 (2019), 1782–1792 |
+| bodymind | **Margaret Price**, [*The Bodymind Problem and the Possibilities of Pain*](https://doi.org/10.1111/hypa.12127) — quoted through **Nick Walker** | the Stimpunks [bodymind](https://stimpunks.org/glossary/bodymind/) entry | Price: *Hypatia* 30:1 (2015), 268–284. Walker: [10.1089/aut.2020.29014.njw](https://doi.org/10.1089/aut.2020.29014.njw), *Autism in Adulthood* 3:1 (2021), 5–10, **interviewed by Dora M. Raymaker** |
+| glimmers | **Deb Dana** — quoted through **Helen Edgar** | [*Glimmers: Autistic Joy and Monotropism*](https://autisticrealms.com/glimmers-autistic-joy-and-monotropism/), Autistic Realms | Dana's *The Polyvagal Theory in Therapy* (W. W. Norton, 2018) confirmed bibliographically, **not read** |
+| limerence | **Dorothy Tennov**, *Love and Limerence* (Stein and Day, 1979) | [*Psychology Today*](https://www.psychologytoday.com/us/basics/limerence), via the Stimpunks [limerence](https://stimpunks.org/glossary/limerence/) entry | Tennov's book confirmed bibliographically, **not read** |
+
+**Three citation errors caught before the sheet shipped**, all of them written from memory into
+the first draft and all of them the shape this file exists to catch:
+
+1. A **fabricated DOI** for the Hogenkamp paper — `10.3389/fpsyg.2025.1546642`, a plausible
+   Frontiers identifier for a paper that is in *Autism in Adulthood*. **A DOI invented to look
+   right is the worst thing on this list**, because it resolves to somebody else's work.
+2. The Walker interview as `aut.2021.29014.njw`. The registered DOI is **`aut.2020.29014.njw`**
+   — the article is 2021 and the identifier is 2020, which is exactly the trap.
+3. A **wrong Medium slug** for the Trauma Geek piece. The right one is the glossary's own link
+   and it was there to be copied all along.
+
+**Standing rule, which is the Miranda lesson in a new place:** a DOI, a slug, a volume number
+and a page range are claims like any other. Resolve them, or take them verbatim from the page
+you actually read. **Never type one from memory.**
+
+**Why *belonging* is credited to the glossary and not to a person.** The passage quoted —
+"Belonging means more than being included…" — sits in the Stimpunks glossary entry between a
+webinar link and a quotation from Hari Srinivasan (2026), and carries **no byline of its own
+within the entry**. Rather than attach it to whichever neighbour is nearest, the sheet credits
+the glossary and says in the caption that it is doing so. **If a future session establishes an
+author for that paragraph, credit the person and fix the caption.**
+
+**Two extensions on the sheet that are ours, and are labelled ours.** Both are in *What this
+sheet will not tidy*:
+
+- **Limerence requited is not limerence.** Tennov's term is defined by *uncertainty* and is
+  "almost always one-sided". The reply asks for the intensity with the uncertainty removed,
+  which is a different thing needing a different name. The credit for *limerence* stays with
+  Tennov and the requited version is named as ours. **If we changed the meaning while keeping
+  the word, the rule is the same as if we had changed the words.**
+- **Helen's *assemblage* runs the other way.** Her sentence is about moving "away from
+  restrictive assemblages" — Deleuze and Guattari's *lines of flight* — and the reply's
+  "realest assemblage" is one worth arriving at. The word covers both in Deleuze and Guattari,
+  so this is an extension rather than a misuse, and the sheet says which direction each of the
+  two sentences runs.
+
+----
+
+### Ryan Boren's reply in verse — our own words, and the punctuation we added
+
+**On:** `wild-nights.html`, thirty-two lines in two `.qe-verse` blocks.
+
+The verse is **Ryan Boren's**, written for a person rather than for a readership, and mounted
+at his request. His instruction was explicit: *"Don't revise my writing above except to give
+the verse proper poetic formatting/punctuation."*
+
+**What was changed, in full, because an unmarked edit of our own text is the same failure as an
+unmarked edit of somebody else's** — the rule the `coming-to-terms` label already sets:
+
+- **Nothing else.** No word was added, removed, reordered or replaced. No line break was moved.
+  His line-initial capitals are his and are kept exactly, including the lower-case
+  continuation lines (*that we co-make*, *segued to the calm*, *held not in tension*, *that has
+  been requited and matched*).
+- **Terminal full stops added** to the four stanzas that had none: after *Regulated peace*,
+  *A love-tangled spiral*, *Woven delightfully*, and *And be our realest assemblage*.
+- **Commas added** after *Calm quiescence*, *Denouement after arrival*, *In your heart and your
+  body*, *In your mind and your soul*, and *that has been requited and matched*.
+- **One full stop added mid-stanza**, after *Nor our constructs of gender*, because *Let's rest
+  the guise* begins a new sentence.
+
+The sheet's label carries the row `Reply in verse — Ryan Boren. Punctuation set for print; the
+words and the line breaks are his.` **That row is the disclosure and it is not decorative. If
+the verse is ever edited further, the row and this entry both need changing.**
+
+**The links inside the verse are ours, not his prosody.** *co-regulation*, *Stimmy*,
+*glimmers*, *Somatic*, *limerence* and *assemblage* are anchored to the glossary and to
+Helen's page. They add no words and change no line.
+
+----
+
 ## Open
 
 ### Two sentences on the Miranda sheet claim a little more than their source does

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Swell and the Dwell &mdash; Queering Earth</title>
+<meta name="description" content="Emily Dickinson's Wild nights &ndash; Wild nights! read as co-regulation: the winds futile rather than stilled, the compass and the chart put down, and one night asked for instead of a lifetime. With a reply in verse, and what her first editor tidied in 1891.">
+<link rel="canonical" href="https://queering.earth/wild-nights">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5efe2">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Queering Earth">
+<meta property="og:title" content="The Swell and the Dwell">
+<meta property="og:description" content="Dickinson asks for one night in harbour, in a poem with no indicative verb in it. A reading of Wild nights &ndash; Wild nights! as co-regulation, answered in verse.">
+<meta property="og:url" content="https://queering.earth/wild-nights">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://queering.earth/images/og-wild-nights.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sheet, a reading: The Swell and the Dwell. Emily Dickinson, Wild nights &ndash; Wild nights!, written about late 1861.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Swell and the Dwell">
+<meta name="twitter:description" content="Dickinson asks for one night in harbour, in a poem with no indicative verb in it. A reading of Wild nights &ndash; Wild nights! as co-regulation, answered in verse.">
+<meta name="twitter:image" content="https://queering.earth/images/og-wild-nights.png">
+<meta name="twitter:image:alt" content="Sheet, a reading: The Swell and the Dwell. Emily Dickinson, Wild nights &ndash; Wild nights!, written about late 1861.">
+
+<!-- The mark is a pressed leaf pinned with the wordmark's rust dot. SVG first for
+     anything that takes it; the .ico carries 16/32/48/64 for everything else.
+     All of them are drawn by tools/make-images.py — do not hand-edit the rasters. -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;display=swap">
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's plain-view choice BEFORE first paint. Deferred to
+     queering.js it would flash the decorated page at someone who turned it off. -->
+<script>try{if(localStorage.getItem('qe-plain')==='1')document.documentElement.classList.add('plain')}catch(e){}</script>
+</head>
+<body>
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+</div>
+
+<main id="main">
+
+  <header class="qe-masthead qe-masthead-sheet">
+    <p class="qe-home"><a href="/">Queering Earth</a></p>
+    <p class="qe-kicker">Sheet &middot; a reading</p>
+    <h1>The Swell and the Dwell</h1>
+
+    <!-- THE SWELL AND THE DWELL, DRAWN. Two long lines, the same water in both.
+         One rises out of the lower left and breaks at the upper right in a crest
+         that curls back on itself — the wild night. One runs almost flat across
+         the foot of the panel — the heart in port. Rushes and blooms grow out of
+         the flat water only, and wind up through the swell on their way.
+
+         The two moths are NOT in opposite corners the way the Rossetti sheet's
+         are. They are close together high over the rising swell and tilted towards
+         each other, because the poem underneath is about reciprocation and the reply
+         underneath that is about it being requited. If a later pass separates
+         them for the sake of filling the empty quarters, it has undrawn the one
+         thing this panel is saying.
+
+         The house rules for this drawing, every one of them already paid for and
+         all of them written down in DECISIONS.md:
+
+         1. NO BASELINE. The flat line is water, not ground, and it curls at its
+            right end like everything else here. Nothing stands on anything.
+         2. EVERY TERMINAL CURLS. Crest, volute, tendril, rush tip: each ends in a
+            spiral turning back on itself. A curve that merely stops is the thing
+            this drawing is not.
+         3. NOTHING OVERRUNS THE viewBox. The Miranda sheet lost an entire
+            breaking wave to a crest that curled to y 252 inside a box ending at
+            238, and an SVG that overruns does not error — it silently stops
+            drawing. Lowest ink here is y 254 in a 260 box.
+         4. POSITIONING GOES ON THE OUTER g AND THE ANIMATION ON THE INNER
+            .sprout. A CSS transform animation overrides an SVG transform
+            attribute on the same element and collapses every sprout onto the
+            origin.
+         5. --len IS MEASURED, NOT ESTIMATED. Every value here is the path's real
+            getTotalLength(), read out of the live DOM and written back. A
+            declared length shorter than the real one turns the dash into a
+            repeating pattern and the line draws on with gaps in it — invisible
+            in the finished drawing and obvious in the animation. If you edit a
+            `d`, re-measure that path. -->
+    <svg class="qe-botanical" viewBox="0 0 560 260" role="img" aria-label="An ornate botanical panel drawn as water. One long line rises out of the lower left in a flowing swell and breaks at the upper right in a crest that curls back on itself. A second line runs beneath it and ends in a spiral. Across the foot of the panel a third line lies almost flat, the same water in harbour, and it too curls at its right end. A stand of rushes grows up out of the flat water and winds through the swell, with curved sickle leaves along them and four flowers, each a different colour, opening at their tips. Thread-fine tendrils spiral off everything. Two moths fly close together high above the rising swell, tilted towards one another, and a few drops hang in the air around them." focusable="false">
+
+      <!-- ── the swell. One line the length of the panel, and the crest curling over -->
+      <path class="stem" style="--len:501" stroke-width="2.6" d="M8 214 C 70 220, 120 206, 168 182 C 220 156, 260 116, 316 92 C 372 68, 430 66, 470 44"/>
+      <path class="stem" style="--len:167" stroke-width="2.1" d="M470 44 C 500 30, 534 42, 532 70 C 530 94, 500 100, 492 84 C 486 72, 498 62, 506 70"/>
+
+      <!-- ── the trough, under the swell, ending in a volute -->
+      <path class="stem" style="--len:331" stroke-width="2.1" d="M14 232 C 78 240, 132 228, 178 206 C 226 183, 268 150, 320 128"/>
+      <path class="stem" style="--len:68" stroke-width="1.7" d="M320 128 C 336 120, 352 128, 348 142 C 344 154, 330 152, 330 142"/>
+
+      <!-- ── the dwell. The same water, in port. Almost flat, and it curls too. -->
+      <path class="stem" style="--len:472" stroke-width="2.1" d="M20 244 C 120 250, 240 248, 350 242 C 418 238, 462 241, 490 250"/>
+      <path class="stem" style="--len:53" stroke-width="1.6" d="M490 250 C 504 254, 518 248, 514 238 C 511 231, 500 233, 500 241"/>
+
+      <!-- ── rushes out of the flat water, winding up through the swell -->
+      <path class="stem" style="--len:136" stroke-width="2" d="M96 246 C 88 210, 96 178, 118 156 C 132 142, 148 146, 144 160"/>
+      <path class="stem" style="--len:45" stroke-width="1.5" d="M144 160 C 140 172, 128 174, 126 164 C 124 156, 132 152, 136 158"/>
+      <path class="stem" style="--len:119" stroke-width="1.8" d="M126 248 C 124 218, 138 194, 162 180 C 178 171, 192 178, 188 190"/>
+      <path class="stem" style="--len:43" stroke-width="1.4" d="M188 190 C 184 201, 172 202, 171 192 C 170 184, 178 181, 181 187"/>
+      <path class="stem" style="--len:108" stroke-width="1.7" d="M68 246 C 56 220, 58 194, 76 176 C 88 164, 102 168, 99 179"/>
+      <path class="stem" style="--len:109" stroke-width="1.6" d="M258 244 C 262 218, 280 200, 306 196 C 324 193, 334 203, 327 213"/>
+
+      <!-- ── spiralling tendrils, one at every scale, none of them ending straight -->
+      <path class="stem" style="--len:80" stroke-width="1.3" d="M148 130 C 128 126, 114 132, 116 144 C 118 155, 132 156, 132 146 C 132 139, 125 138, 124 143"/>
+      <path class="stem" style="--len:87" stroke-width="1.3" d="M352 100 C 372 106, 384 118, 378 130 C 372 141, 358 138, 360 128 C 362 120, 370 121, 369 126"/>
+      <path class="stem" style="--len:77" stroke-width="1.2" d="M212 224 C 224 236, 240 240, 248 232 C 255 225, 248 216, 240 220 C 234 223, 236 230, 242 229"/>
+      <path class="stem" style="--len:88" stroke-width="1.3" d="M424 122 C 446 124, 460 136, 454 148 C 449 158, 434 155, 436 145 C 438 137, 446 138, 445 143"/>
+      <path class="stem" style="--len:90" stroke-width="1.2" d="M406 200 C 426 192, 442 196, 444 210 C 446 222, 432 228, 428 218 C 425 210, 433 206, 436 212"/>
+      <path class="stem" style="--len:79" stroke-width="1.1" d="M34 196 C 52 190, 68 196, 68 208 C 68 218, 55 221, 54 212 C 53 205, 61 203, 62 209"/>
+
+      <!-- ── scrollwork. Ornament doing no botanical work at all, which is the most
+               Art Nouveau thing on the panel. -->
+      <path class="stem" style="--len:104" stroke-width="1.5" d="M196 154 C 214 144, 232 150, 230 166 C 228 180, 210 182, 206 170 C 203 160, 214 154, 220 162"/>
+      <path class="stem" style="--len:96" stroke-width="1.3" d="M292 62 C 308 50, 326 56, 324 72 C 322 85, 306 86, 304 74 C 302 64, 312 60, 316 68"/>
+
+      <!-- ── curling sickle leaves along the rushes, alternating sides. A leaf opens
+               from where it meets the stem: .sprout-leaf sets that origin. -->
+      <g transform="translate(90 214) rotate(-64)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" d="M0 0 C 7 -12, 26 -16, 37 -8 C 41 -5, 40 0.4, 36 0.4 C 33 0.4, 33 -3, 35 -5 C 26 -1.6, 12 6.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 11 -4, 24 -8, 34 -7"/></g></g>
+      <g transform="translate(100 178) rotate(118)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" d="M0 0 C 6 -10, 21 -13, 30 -6.4 C 33.4 -4, 32.6 0.4, 29 0.4 C 26.6 0.4, 26.6 -2.4, 28.4 -4 C 21 -1.2, 10 5.2, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 9 -3, 20 -6, 27.6 -5.6"/></g></g>
+      <g transform="translate(130 222) rotate(-52)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" d="M0 0 C 6 -10, 21 -13, 30 -6.4 C 33.4 -4, 32.6 0.4, 29 0.4 C 26.6 0.4, 26.6 -2.4, 28.4 -4 C 21 -1.2, 10 5.2, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 9 -3, 20 -6, 27.6 -5.6"/></g></g>
+      <g transform="translate(142 196) rotate(132)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf" d="M0 0 C 7 -12, 26 -16, 37 -8 C 41 -5, 40 0.4, 36 0.4 C 33 0.4, 33 -3, 35 -5 C 26 -1.6, 12 6.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 11 -4, 24 -8, 34 -7"/></g></g>
+      <g transform="translate(62 216) rotate(-108)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf" d="M0 0 C 5 -8, 16 -10, 23 -5 C 25.6 -3.2, 25 0.4, 22.2 0.4 C 20.4 0.4, 20.4 -1.8, 21.8 -3.2 C 16 -1, 8 4, 0 0 Z"/><path class="rib" stroke-width="0.7" d="M0 0 C 7 -2, 16 -4, 21 -4.4"/></g></g>
+      <g transform="translate(268 218) rotate(-42)"><g class="sprout sprout-leaf" style="--i:5"><path class="leaf" d="M0 0 C 7 -12, 26 -16, 37 -8 C 41 -5, 40 0.4, 36 0.4 C 33 0.4, 33 -3, 35 -5 C 26 -1.6, 12 6.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 11 -4, 24 -8, 34 -7"/></g></g>
+      <g transform="translate(292 200) rotate(24)"><g class="sprout sprout-leaf" style="--i:6"><path class="leaf" d="M0 0 C 6 -10, 21 -13, 30 -6.4 C 33.4 -4, 32.6 0.4, 29 0.4 C 26.6 0.4, 26.6 -2.4, 28.4 -4 C 21 -1.2, 10 5.2, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 9 -3, 20 -6, 27.6 -5.6"/></g></g>
+      <g transform="translate(340 108) rotate(-38)"><g class="sprout sprout-leaf" style="--i:7"><path class="leaf" d="M0 0 C 6 -10, 21 -13, 30 -6.4 C 33.4 -4, 32.6 0.4, 29 0.4 C 26.6 0.4, 26.6 -2.4, 28.4 -4 C 21 -1.2, 10 5.2, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 9 -3, 20 -6, 27.6 -5.6"/></g></g>
+      <g transform="translate(412 72) rotate(16)"><g class="sprout sprout-leaf" style="--i:8"><path class="leaf" d="M0 0 C 7 -12, 26 -16, 37 -8 C 41 -5, 40 0.4, 36 0.4 C 33 0.4, 33 -3, 35 -5 C 26 -1.6, 12 6.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 11 -4, 24 -8, 34 -7"/></g></g>
+      <g transform="translate(240 172) rotate(150)"><g class="sprout sprout-leaf" style="--i:6"><path class="leaf" d="M0 0 C 6 -10, 21 -13, 30 -6.4 C 33.4 -4, 32.6 0.4, 29 0.4 C 26.6 0.4, 26.6 -2.4, 28.4 -4 C 21 -1.2, 10 5.2, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 C 9 -3, 20 -6, 27.6 -5.6"/></g></g>
+      <g transform="translate(318 210) rotate(58)"><g class="sprout sprout-leaf" style="--i:7"><path class="leaf" d="M0 0 C 5 -8, 16 -10, 23 -5 C 25.6 -3.2, 25 0.4, 22.2 0.4 C 20.4 0.4, 20.4 -1.8, 21.8 -3.2 C 16 -1, 8 4, 0 0 Z"/><path class="rib" stroke-width="0.7" d="M0 0 C 7 -2, 16 -4, 21 -4.4"/></g></g>
+
+      <!-- Four blooms at the tips of the rushes, no two the same size, colour or
+           angle. Five sinuous petals at uneven spacings: a six-ellipse daisy is
+           the geometric shape this drawing rejects. -->
+      <g transform="translate(136 158) rotate(-24) scale(1.1)"><g class="sprout" style="--i:13"><path class="bloom-verdigris" stroke-width="1" transform="rotate(0)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-verdigris" stroke-width="1" transform="rotate(76)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-verdigris" stroke-width="1" transform="rotate(138)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-verdigris" stroke-width="1" transform="rotate(216)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-verdigris" stroke-width="1" transform="rotate(281)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="rib" stroke-width="0.7" d="M0 0 C 4 -2, 8 -3, 11 -2.6"/><path class="rib" stroke-width="0.7" d="M0 0 C -2 -4, -4 -7, -7 -8.4"/><circle class="body" cx="0" cy="0" r="2.1"/></g></g>
+      <g transform="translate(181 187) rotate(40) scale(0.9)"><g class="sprout" style="--i:14"><path class="bloom" stroke-width="1" transform="rotate(5)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom" stroke-width="1" transform="rotate(64)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom" stroke-width="1" transform="rotate(150)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom" stroke-width="1" transform="rotate(208)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom" stroke-width="1" transform="rotate(291)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="rib" stroke-width="0.7" d="M0 0 C 4 -2, 8 -3, 11 -2.6"/><path class="rib" stroke-width="0.7" d="M0 0 C -2 -4, -4 -7, -7 -8.4"/><circle class="body" cx="0" cy="0" r="2.1"/></g></g>
+      <g transform="translate(99 179) rotate(-136) scale(0.8)"><g class="sprout" style="--i:12"><path class="bloom-lichen" stroke-width="1" transform="rotate(-4)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-lichen" stroke-width="1" transform="rotate(75)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-lichen" stroke-width="1" transform="rotate(137)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-lichen" stroke-width="1" transform="rotate(218)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="bloom-lichen" stroke-width="1" transform="rotate(285)" d="M0 0 C 4 -5.4, 13 -8.4, 18.4 -4.2 C 21.6 -1.4, 20.4 4.2, 15 5.2 C 9 6.2, 3 3, 0 0 Z"/><path class="rib" stroke-width="0.7" d="M0 0 C 4 -2, 8 -3, 11 -2.6"/><path class="rib" stroke-width="0.7" d="M0 0 C -2 -4, -4 -7, -7 -8.4"/><circle class="body" cx="0" cy="0" r="2.1"/></g></g>
+      <!-- the nodding one, hanging off the tip of the rush that reaches furthest right -->
+      <g transform="translate(327 213) rotate(-8) scale(0.95)"><g class="sprout" style="--i:15">
+        <path class="bloom-violet" stroke-width="1.1" d="M0 0 C -8 2, -13.2 10, -12 18 C -11.4 23, -7.6 25.2, -5.6 22.6 C -3.4 25.6, -0.4 26, 0 22.4 C 0.6 26, 3.8 25.6, 5.8 22.6 C 7.8 25.2, 11.4 23, 12 18 C 13.2 10, 8 2, 0 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M-6.6 21.4 C -5 15, -3.4 8, -2.4 1.4"/>
+        <path class="rib" stroke-width="0.8" d="M0 22.6 C 0 15, 0 8, 0 1.4"/>
+        <path class="rib" stroke-width="0.8" d="M6.6 21.4 C 5 15, 3.4 8, 2.4 1.4"/>
+        <circle class="body" cx="0" cy="1.6" r="1.9"/>
+      </g></g>
+
+      <!-- ── the two moths, close together over the crest and tilted towards each
+               other. Requited and matched: see the note at the top of this file. -->
+      <g transform="translate(224 46) rotate(16) scale(0.7)"><g class="sprout" style="--i:18">
+        <path class="wing" d="M0 -2 C -10 -20, -28 -22, -24 -6 C -22 3, -8 6, 0 -2 Z"/>
+        <path class="wing" d="M0 0 C -9 4, -19 12, -14 19 C -9 24, -1 12, 0 0 Z"/>
+        <path class="wing-alt" d="M0 -2 C 10 -20, 28 -22, 24 -6 C 22 3, 8 6, 0 -2 Z"/>
+        <path class="wing-alt" d="M0 0 C 9 4, 19 12, 14 19 C 9 24, 1 12, 0 0 Z"/>
+        <ellipse class="body" cx="0" cy="1" rx="1.8" ry="9"/>
+        <path class="antenna" d="M-0.8 -8 C -3 -13, -6 -15, -8.5 -16"/>
+        <path class="antenna" d="M0.8 -8 C 3 -13, 6 -15, 8.5 -16"/>
+      </g></g>
+      <g transform="translate(160 66) rotate(-18) scale(0.62)"><g class="sprout" style="--i:19">
+        <path class="wing-alt" d="M0 -2 C -10 -20, -28 -22, -24 -6 C -22 3, -8 6, 0 -2 Z"/>
+        <path class="wing-alt" d="M0 0 C -9 4, -19 12, -14 19 C -9 24, -1 12, 0 0 Z"/>
+        <path class="wing" d="M0 -2 C 10 -20, 28 -22, 24 -6 C 22 3, 8 6, 0 -2 Z"/>
+        <path class="wing" d="M0 0 C 9 4, 19 12, 14 19 C 9 24, 1 12, 0 0 Z"/>
+        <ellipse class="body" cx="0" cy="1" rx="1.8" ry="9"/>
+        <path class="antenna" d="M-0.8 -8 C -3 -13, -6 -15, -8.5 -16"/>
+        <path class="antenna" d="M0.8 -8 C 3 -13, 6 -15, 8.5 -16"/>
+      </g></g>
+
+      <!-- ── drops, hanging in the air off the crest -->
+      <g transform="translate(196 30)"><g class="sprout" style="--i:20"><circle class="body" cx="0" cy="0" r="1.5"/></g></g>
+      <g transform="translate(258 22)"><g class="sprout" style="--i:21"><circle class="body" cx="0" cy="0" r="1.1"/></g></g>
+      <g transform="translate(466 108)"><g class="sprout" style="--i:22"><circle class="body" cx="0" cy="0" r="1.3"/></g></g>
+      <g transform="translate(388 44)"><g class="sprout" style="--i:22"><circle class="body" cx="0" cy="0" r="1.2"/></g></g>
+      <g transform="translate(72 150)"><g class="sprout" style="--i:22"><circle class="body" cx="0" cy="0" r="1.1"/></g></g>
+    </svg>
+  </header>
+
+  <div class="qe-label">
+    <dl>
+      <dt>Specimen</dt>
+      <dd><cite>Wild nights &ndash; Wild nights!</cite> &mdash; Fr269, J249</dd>
+      <dt>Maker</dt>
+      <dd>Emily Dickinson</dd>
+      <dt>Written</dt>
+      <dd>About late 1861, in Fascicle 11</dd>
+      <dt>Manuscript</dt>
+      <dd>Houghton Library, Harvard University &mdash; <cite>Poems: Packet VIII, Fascicle 11</cite>, MS Am 1118.3 (38b), one leaf in ink. Mounted below</dd>
+      <dt>First printed</dt>
+      <dd><cite>Poems by Emily Dickinson, Second Series</cite> (Boston: Roberts Brothers, 1891), Book II &mdash; Love, poem VII, page 97, edited by T. W. Higginson and Mabel Loomis Todd</dd>
+      <dt>This text</dt>
+      <dd>R. W. Franklin&rsquo;s reading of the manuscript, as published in the <a href="https://www.edickinson.org/">Emily Dickinson Archive</a>. The line division after <q>moor &ndash;</q> is the manuscript&rsquo;s own and Franklin records it</dd>
+      <dt>Read</dt>
+      <dd>8 September 2026</dd>
+      <dt>Read by</dt>
+      <dd>Ryan Boren</dd>
+      <dt>Reply in verse</dt>
+      <dd>Ryan Boren. Punctuation set for print; the words and the line breaks are his</dd>
+      <dt>Terms</dt>
+      <dd><a href="https://stimpunks.org/glossary/co-regulation/">Co-regulation</a> &middot; <a href="https://stimpunks.org/glossary/safe-space/">Safe space</a> &middot; <a href="https://stimpunks.org/glossary/belonging/">Belonging</a> &middot; <a href="https://stimpunks.org/glossary/bodymind/">Bodymind</a> &middot; <a href="https://stimpunks.org/glossary/somatic/">Somatic</a> &middot; <a href="https://stimpunks.org/glossary/stimming/">Stimming</a> &middot; <a href="https://stimpunks.org/glossary/glimmers/">Glimmers</a> &middot; <a href="https://stimpunks.org/glossary/limerence/">Limerence</a></dd>
+    </dl>
+  </div>
+
+  <p class="qe-lede">Emily Dickinson wrote twelve lines asking for one night in harbour, and there is not a single indicative verb in them. Thirty years later her first editors printed the poem &mdash; one of them apologising for it in a letter as he did &mdash; and eight of her nine dashes did not survive the trip to the press. This sheet reads it as a description of <a href="https://stimpunks.org/glossary/co-regulation/">co-regulation</a> &mdash; the swell and the dwell of relational tides &mdash; and answers it in verse.</p>
+
+  <figure class="qe-poem">
+    <span class="qe-specimen-label">Specimen &mdash; the poem, entire</span>
+    <blockquote cite="https://www.poetryfoundation.org/poems/44087/wild-nights-wild-nights-269">
+      <p class="qe-stanza">
+        <span class="l">Wild nights &ndash; Wild nights!</span>
+        <span class="l">Were I with thee</span>
+        <span class="l">Wild nights should be</span>
+        <span class="l">Our luxury!</span>
+      </p>
+      <p class="qe-stanza">
+        <span class="l">Futile &ndash; the winds &ndash;</span>
+        <span class="l">To a Heart in port &ndash;</span>
+        <span class="l">Done with the Compass &ndash;</span>
+        <span class="l">Done with the Chart!</span>
+      </p>
+      <p class="qe-stanza">
+        <span class="l">Rowing in Eden &ndash;</span>
+        <span class="l">Ah &ndash; the Sea!</span>
+        <span class="l">Might I but moor &ndash; tonight &ndash;</span>
+        <span class="l">In thee!</span>
+      </p>
+    </blockquote>
+    <figcaption>Emily Dickinson, <cite>Wild nights &ndash; Wild nights!</cite>, written about late 1861 in Fascicle&nbsp;11. Text as R. W. Franklin reads the manuscript, published in the <a href="https://www.edickinson.org/">Emily Dickinson Archive</a> and printed identically by the <a href="https://www.poetryfoundation.org/poems/44087/wild-nights-wild-nights-269">Poetry Foundation</a> from Franklin&rsquo;s Reading Edition (Belknap Press, 1999). Her dashes are set here as spaced en dashes; in her hand they vary in length and angle, and telling one from a flourish is the standing problem of editing her. Line&nbsp;11 runs on to line&nbsp;12 on the leaf itself, and the 1891 editors made that break a line break &mdash; see below.</figcaption>
+  </figure>
+
+  <figure class="qe-plate">
+    <img src="images/dickinson-1861-wild-nights-houghton-ms-am-1118-3-38b.jpg" width="1400" height="2159" loading="lazy" decoding="async"
+         alt="A single leaf of blue-ruled writing paper photographed against a pale ground, with three stab holes down the right edge where it was bound into a fascicle. Twelve lines of small, steeply slanted brown-ink handwriting sit in three groups with a clear space between each group, every line broken off by a short horizontal stroke. A pencilled cross and the numeral 2 sit alone at the top of the page. The last group runs to five written lines rather than four, and a single pen stroke is ruled underneath it like a full stop for the whole poem.">
+    <figcaption><cite>Wild Nights &ndash; Wild Nights!</cite> in Dickinson&rsquo;s hand, one leaf of <cite>Poems: Packet VIII, Fascicle 11</cite>, written in ink about 1861. Houghton Library, Harvard University, Cambridge, MA &mdash; MS Am 1118.3 (38b); <a href="https://curiosity.lib.harvard.edu/emily-dickinson-archive/catalog/195-EDA0392_F269A">catalogued as F269A</a> in the <a href="https://www.edickinson.org/">Emily Dickinson Archive</a>. Reproduced under the archive&rsquo;s <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a> licence and unaltered: the file mounted here is the one Harvard&rsquo;s own image service returned at this width. <strong>Look at the third group.</strong> It has five written lines, not four &mdash; <q>Tonight &ndash;</q> stands alone because the leaf ran out of room, and everything that follows on this sheet follows from what two sets of editors did with that.</figcaption>
+  </figure>
+
+  <div class="qe-verse">
+    <span class="qe-verse-label">In reply &mdash; Ryan Boren</span>
+    <p class="qe-stanza">
+      <span class="l">Erotic and cozy.</span>
+      <span class="l">Turbulent and safe.</span>
+      <span class="l">We share space</span>
+      <span class="l">that we co-make.</span>
+    </p>
+    <p class="qe-stanza">
+      <span class="l">Passionate gratification</span>
+      <span class="l">segued to the calm</span>
+      <span class="l"><a href="https://stimpunks.org/glossary/co-regulation/">co-regulation</a></span>
+      <span class="l">that is our shared balm.</span>
+    </p>
+  </div>
+
+  <p>To be in <a href="https://stimpunks.org/glossary/safe-space/">safe space</a> with one you adore, basking in reciprocation and mutual understanding, that is a great feeling. That is THE feeling &mdash; craved by our kind.</p>
+
+  <p>Dickinson captures well <a href="https://starstuff.earth/the-nearest-body-zine">the swell and the dwell of relational tides</a>. The swell is of sensory passion and exploration, of <a href="https://stimpunks.org/glossary/bodymind/">bodyminds</a> alive and alight in luxurious abandonment. The dwell is of <a href="https://stimpunks.org/glossary/belonging/">belonging and legibility</a> &mdash; where you can put down the compass and the chart and just be: accepted and understood.</p>
+
+  <div class="qe-verse">
+    <span class="qe-verse-label">In reply, continued</span>
+    <p class="qe-stanza">
+      <span class="l">Oh to be human,</span>
+      <span class="l">in a deep easy rhythm,</span>
+      <span class="l">of reciprocal need,</span>
+      <span class="l">held not in tension.</span>
+    </p>
+    <p class="qe-stanza">
+      <span class="l"><a href="https://stimpunks.org/glossary/stimming/">Stimmy</a> <a href="https://stimpunks.org/glossary/glimmers/">glimmers</a></span>
+      <span class="l"><a href="https://stimpunks.org/glossary/somatic/">Somatic</a> release</span>
+      <span class="l">Sensory ease</span>
+      <span class="l">Regulated peace.</span>
+    </p>
+    <p class="qe-stanza">
+      <span class="l">Calm quiescence,</span>
+      <span class="l">Denouement after arrival,</span>
+      <span class="l">Preceded by</span>
+      <span class="l">A love-tangled spiral.</span>
+    </p>
+    <p class="qe-stanza">
+      <span class="l">Might I but moor</span>
+      <span class="l">In your heart and your body,</span>
+      <span class="l">In your mind and your soul,</span>
+      <span class="l">Woven delightfully.</span>
+    </p>
+    <p class="qe-stanza">
+      <span class="l">We need not our masks</span>
+      <span class="l">Nor our constructs of gender.</span>
+      <span class="l">Let&rsquo;s rest the guise</span>
+      <span class="l">And be our realest <a href="https://morerealms.com/expanding-the-mycelial-network-of-care-autistic-community-safety-and-rhizomatic-futures/">assemblage</a>.</span>
+    </p>
+    <p class="qe-stanza">
+      <span class="l">With the strength of <a href="https://stimpunks.org/glossary/limerence/">limerence</a></span>
+      <span class="l">that has been requited and matched,</span>
+      <span class="l">Let&rsquo;s be together</span>
+      <span class="l">And let the world pass.</span>
+    </p>
+  </div>
+
+  <h2>Futile &ndash; the winds</h2>
+
+  <p>Read the second stanza slowly, because it does not say what people remember it saying. <strong>The storm does not stop.</strong> The winds are still blowing at the end of that line exactly as hard as they were at the beginning of it. What has changed is that they have become <em>futile</em> &mdash; a word about effect, not about strength &mdash; and the thing that made them futile is a location: <q>To a Heart in port.</q></p>
+
+  <p>That is co-regulation, described more than a century before there was a word for it. Not a calm temperament. Not a coping skill. A place, and company, in which the same weather stops landing.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; a safe enough person</span>
+    <blockquote cite="https://medium.com/age-of-awareness/the-neuroscience-of-community-9f0a437d3a4f">
+      <p>Co-regulation is when we complete the stress cycle with the support of a safe enough person.</p>
+      <p>A safe enough person is a person in safe &amp; social mode. They have deep belly breathing, expressive face, soft gaze, calm heart rate, prosodic voice, and the ability to enjoy safe touch or closeness.</p>
+    </blockquote>
+    <figcaption>Janae Elisabeth, writing as <a href="https://medium.com/age-of-awareness/the-neuroscience-of-community-9f0a437d3a4f">Trauma Geek</a>, <cite>The Neuroscience of Community</cite>. Quoted in the Stimpunks glossary entry for <a href="https://stimpunks.org/glossary/co-regulation/">co-regulation</a>, which is where we read it.</figcaption>
+  </figure>
+
+  <p><q>Safe enough.</q> Not safe. Not perfect. Enough &mdash; which is the whole reason a harbour is a harbour and not a fortress, and it is why Dickinson can leave the winds in the poem. A port that required the weather to be good would not be a port.</p>
+
+  <p>The clinical literature has spent decades measuring the wrong half of this. It looks for the regulated individual and finds a dysregulated one, and writes that down as a property of the person rather than of the room they were in. A 2026 paper puts the correction plainly:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; not a passive backdrop</span>
+    <blockquote cite="https://doi.org/10.1177/25739581261433443">
+      <p>Co-regulation distributes adaptive labour across the system rather than concentrating it within the individual. Environments are not passive backdrops to which people must adjust; they are active participants in regulatory dynamics.</p>
+    </blockquote>
+    <figcaption>Lori Hogenkamp, Dhwani Sanghavi and Heini Natri, <a href="https://doi.org/10.1177/25739581261433443"><cite>Toward an Emergent Paradigm for Neurodiversity and Health</cite></a>, <cite>Autism in Adulthood</cite>, 24 March 2026. Quoted in the Stimpunks glossary entry for <a href="https://stimpunks.org/glossary/co-regulation/">co-regulation</a>, which is where we read it. The authors write <em>labor</em>; house style spells it <em>labour</em>, and the quotation keeps theirs.</figcaption>
+  </figure>
+
+  <p>Dickinson had already put the environment in the sentence. <q>Futile &ndash; the winds &ndash; / To a Heart in port</q> is a claim about a system with two things in it, and the second thing is doing the work.</p>
+
+  <h2>Done with the Compass &ndash; Done with the Chart</h2>
+
+  <p>Here is the line the whole sheet turns on, and it is worth being precise about what a compass and a chart are <em>for</em>. They are not what you use when you know where you are. They are what you use when you do not &mdash; instruments of continuous correction, consulted and reconsulted, every heading checked against a reading and adjusted before the next one.</p>
+
+  <p><strong>That is masking, described as equipment.</strong> Check the face. Check the volume. Check whether that was too much. Correct. Check again. It is navigation, it never stops, and it is exhausting in exactly the way that holding a bearing in unfamiliar water is exhausting.</p>
+
+  <p>Dickinson does not say the navigator has arrived, or that the instruments were wrong. She says they are <em>done with</em> &mdash; put down, on the table, not needed in here. Helen Edgar names the same three things from the other end, as conditions rather than as relief:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; what safety involves</span>
+    <blockquote cite="https://morerealms.com/expanding-the-mycelial-network-of-care-autistic-community-safety-and-rhizomatic-futures/">
+      <p>Across education, healthcare, and employment, a common thread seems to emerge that safety is not only physical or psychological. It is sensory, attentional, relational, and political.</p>
+      <p>Safety involves being able to focus without constant interruption.</p>
+      <p>It involves communicating without fear of misinterpretation.</p>
+      <p>It involves participating without masking core aspects of identity.</p>
+    </blockquote>
+    <figcaption>Helen Edgar, <a href="https://morerealms.com/expanding-the-mycelial-network-of-care-autistic-community-safety-and-rhizomatic-futures/"><cite>Expanding the Mycelial Network of Care: Autistic Community, Safety, and Rhizomatic Futures</cite></a>, More Realms.</figcaption>
+  </figure>
+
+  <p><em>Communicating without fear of misinterpretation</em> is the chart. <em>Focusing without constant interruption</em> is the compass. And <em>participating without masking core aspects of identity</em> is the moment both of them go down on the table &mdash; which is what Ryan&rsquo;s reply asks for in as many words: <q>We need not our masks / Nor our constructs of gender.</q></p>
+
+  <p>This is also the difference between being included and belonging, and it is a difference the Stimpunks glossary refuses to let go of:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; more than being included</span>
+    <blockquote cite="https://stimpunks.org/glossary/belonging/">
+      <p>Belonging means more than being included. It means feeling understood, accepted, and able to participate without constantly having to explain yourself, hide parts of who you are, or push past exhaustion just to keep up.</p>
+    </blockquote>
+    <figcaption>From the Stimpunks Foundation glossary entry for <a href="https://stimpunks.org/glossary/belonging/">belonging</a>. Read there on 8 September 2026; the entry gathers several sources and this passage carries no separate byline within it, so it is credited to the glossary rather than to a named author.</figcaption>
+  </figure>
+
+  <p>Being included is being allowed on the boat. Belonging is being done with the compass.</p>
+
+  <h2>Rowing in Eden</h2>
+
+  <p>Two words, and both of them are doing work that generations of readers have mostly spent on the second one.</p>
+
+  <p><strong>Eden is before shame.</strong> Not before sex &mdash; before the part where somebody notices they are naked and reaches for a covering. That is a sentence about masking too, in the oldest available vocabulary.</p>
+
+  <p><strong>And <em>rowing</em> is labour.</strong> It is rhythmic, repetitive, bilateral, whole-body work; it is the least ethereal verb available for what she is describing, and she chose it over floating, over drifting, over sailing. A body doing a repeated motion in time, and the doing of it is the pleasure. There is a word for that on this site:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; an adaptive mechanism</span>
+    <blockquote cite="https://doi.org/10.1177/1362361319829628">
+      <p>Autistic adults highlighted the importance of stimming as an adaptive mechanism that helps them to soothe or communicate intense emotions or thoughts and thus objected to treatment that aims to eliminate the behaviour.</p>
+    </blockquote>
+    <figcaption>Steven K. Kapp, Robyn Steward, Laura Crane, Daisy Elliott, Chris Elphick, Elizabeth Pellicano and Ginny Russell, <a href="https://doi.org/10.1177/1362361319829628"><cite>&lsquo;People should be allowed to do what they like&rsquo;: Autistic adults&rsquo; views and experiences of stimming</cite></a>, <cite>Autism</cite> 23:7 (2019), 1782&ndash;1792. The paper writes <q>autistic</q> in lower case; this site capitalizes <strong>Autistic</strong>, and the quotation keeps the authors&rsquo; usage.</figcaption>
+  </figure>
+
+  <p>Ryan&rsquo;s reply puts it in a line: <q>Stimmy glimmers / Somatic release / Sensory ease / Regulated peace.</q> Four nouns, no verb, and it is the same grammar Dickinson uses in <q>Rowing in Eden &ndash; / Ah &ndash; the Sea!</q> &mdash; a state named rather than an action reported.</p>
+
+  <p>None of which is happening to a mind. It is happening to a <a href="https://stimpunks.org/glossary/bodymind/">bodymind</a>, which is Margaret Price&rsquo;s term and is not a decorative compound:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; not minds riding around</span>
+    <blockquote cite="https://neuroqueer.com/neuroqueer-heresies/">
+      <p>Mind is an embodied phenomenon. The mind is encoded in the brain as ever-changing webs of neural connectivity. The brain is part of the body, interconnected with the rest of the body by a vast network of nerves. The activity of the mind and body creates changes in the brain; changes in the brain affect both mind and embodiment. Mind, brain, and embodiment are intricately entwined in a single complex system. We&rsquo;re not minds riding around in bodies, we&rsquo;re bodyminds.</p>
+    </blockquote>
+    <figcaption>Nick Walker, interviewed by Dora M. Raymaker in <a href="https://doi.org/10.1089/aut.2020.29014.njw"><cite>Toward a Neuroqueer Future: An Interview with Nick Walker</cite></a>, <cite>Autism in Adulthood</cite> 3:1 (2021), 5&ndash;10. The term is <strong>Margaret Price&rsquo;s</strong>, from <a href="https://doi.org/10.1111/hypa.12127"><cite>The Bodymind Problem and the Possibilities of Pain</cite></a>, <cite>Hypatia</cite> 30:1 (2015), 268&ndash;284, where she says she took it up out of trauma studies; Sami Schalk carries it into disability studies in <cite>Bodyminds Reimagined</cite> (Duke University Press, 2018). Both are quoted in the Stimpunks glossary entry for <a href="https://stimpunks.org/glossary/bodymind/">bodymind</a>, which is where we read all three.</figcaption>
+  </figure>
+
+  <p><strong>And now look at what Dickinson capitalizes.</strong> Heart. Compass. Chart. Sea. Eden. In her hand they are proper nouns &mdash; a common noun with a capital on it is an object with a label on it, which on a herbarium sheet is the difference between a plant and a specimen. She pins the Heart and the Compass to the page as things. The 1891 editors took four of those pins out, and we will come to that.</p>
+
+  <h2>Might I but moor &ndash; tonight</h2>
+
+  <p>The poem asks for <strong>one night</strong>.</p>
+
+  <p>Not a life, not a vow, not an arrangement. <em>Tonight.</em> And the word for a small bounded moment of regulation that is worth having on its own terms, without being the down payment on anything, is <a href="https://stimpunks.org/glossary/glimmers/">glimmer</a> &mdash; Deb Dana&rsquo;s coinage out of polyvagal work, and the opposite of a trigger:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; micro-moments</span>
+    <blockquote cite="https://autisticrealms.com/glimmers-autistic-joy-and-monotropism/">
+      <p>Deb Dana first used the term glimmers to describe &ldquo;micro-moments of regulation that foster feelings of well-being.&rdquo;</p>
+    </blockquote>
+    <figcaption>Helen Edgar, <a href="https://autisticrealms.com/glimmers-autistic-joy-and-monotropism/"><cite>Glimmers: Autistic Joy and Monotropism</cite></a>, Autistic Realms, quoting <strong>Deb Dana</strong>. Dana&rsquo;s own book, <cite>The Polyvagal Theory in Therapy</cite> (W. W. Norton, 2018), has not been read here, so the coinage is credited to her at one remove and the quotation is Helen&rsquo;s page.</figcaption>
+  </figure>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; when everything aligns</span>
+    <blockquote cite="https://autisticrealms.com/glimmers-autistic-joy-and-monotropism/">
+      <p>Glimmers are small but powerful moments when everything aligns; our focus, sensory needs, and emotions come together in a way that feels right. For Autistic people, these fleeting moments of joy, peace, or connection offer grounding and relief in a society that often feels overwhelming.</p>
+    </blockquote>
+    <figcaption>Helen Edgar, <a href="https://autisticrealms.com/glimmers-autistic-joy-and-monotropism/"><cite>Glimmers: Autistic Joy and Monotropism</cite></a>, Autistic Realms. Her own extension of Dana&rsquo;s term, and the one this sheet is using.</figcaption>
+  </figure>
+
+  <p><em>When everything aligns.</em> That is a description of a night, not of a life, and the poem knows it. <q>Might I but moor &ndash; tonight &ndash;</q> asks for the alignment and asks for nothing after it.</p>
+
+  <p>Which is where this sheet meets <a href="/promises-like-pie-crust">the one before it</a>. Rossetti, writing in England in April 1861 &mdash; the same year Dickinson was sewing this leaf into Fascicle 11 &mdash; declines to promise anybody anything and holds the die uncast, <q>free to come as free to go.</q> Dickinson asks for tonight. Two poems, one year, an ocean apart, and neither of them is asking to get on the escalator. One refuses the future and one does not mention it.</p>
+
+  <h2>Were I with thee &mdash; the poem is in the subjunctive, all the way down</h2>
+
+  <p>Now the thing that is hiding in plain sight, and it is a fact about the grammar rather than an interpretation of the imagery. <strong>Count the finite verbs in this poem.</strong> There are three, and every one of them is a conditional:</p>
+
+  <ul>
+    <li><q>Were I with thee</q> &mdash; subjunctive.</li>
+    <li><q>Wild nights should be / Our luxury</q> &mdash; conditional, and dependent on the line above it.</li>
+    <li><q>Might I but moor</q> &mdash; optative, and a question that the poem never answers.</li>
+  </ul>
+
+  <p>Everything else has no finite verb at all. <q>Futile &ndash; the winds &ndash;</q> has none. <q>Done with the Compass &ndash;</q> is a participle. <q>Rowing in Eden &ndash;</q> is a participle. <q>Ah &ndash; the Sea!</q> is an exclamation with nothing in it that happens. <strong>Nothing in this poem takes place.</strong> Twelve lines, three verbs, no indicative &mdash; it is a poem made entirely of a mood, in both senses of the word.</p>
+
+  <p>And that is the strict definition of the term Ryan&rsquo;s last stanza reaches for:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the desire to be desired</span>
+    <blockquote cite="https://www.psychologytoday.com/us/basics/limerence">
+      <p>Limerence is a state of involuntary obsession with another person. The experience of limerence is different from love or lust in that it is based on the uncertainty that the person you desire, called the &ldquo;limerent object&rdquo; in the literature, also desires you. Since limerence is the desire to be desired, it is a cognitive, as well as physical, and emotional experience. As the focus of limerence is whether or not the object of desire reciprocates the feelings, rather than actually falling in love with the person, it is almost always one-sided.</p>
+    </blockquote>
+    <figcaption><a href="https://www.psychologytoday.com/us/basics/limerence">Limerence</a>, <cite>Psychology Today</cite>. The word was coined by the psychologist <strong>Dorothy Tennov</strong> in the 1970s, in <cite>Love and Limerence: The Experience of Being in Love</cite> (Stein and Day, 1979), which has not been read here. Both are quoted in the Stimpunks glossary entry for <a href="https://stimpunks.org/glossary/limerence/">limerence</a>, which is where we read them.</figcaption>
+  </figure>
+
+  <p><strong>Uncertainty is not a symptom of limerence. It is the definition.</strong> Take the uncertainty out and the word does not apply any more &mdash; which is why the poem&rsquo;s grammar is the evidence for the diagnosis. A speaker who was moored would have written an indicative sentence.</p>
+
+  <p>So watch what the reply does with its own verbs, because it is not doing the same thing at all. It opens flat in the present indicative &mdash; <q>We share space / that we co-make</q> &mdash; borrows her subjunctive exactly once, at the centre, where it repeats <q>Might I but moor</q> back to her, and then ends somewhere she never goes: <q>Let&rsquo;s be together / And let the world pass.</q> First person plural, hortative, addressed to somebody who is expected to answer.</p>
+
+  <p>Three moods against her one. <strong>That is the actual distance between the two poems on this sheet</strong>, and it is measurable in the verbs rather than argued from the feeling.</p>
+
+  <h2>Let us alter as little as possible</h2>
+
+  <p>On 21 April 1891, from 25 Buckingham Street in Cambridge, Massachusetts, Thomas Wentworth Higginson wrote to his co-editor Mabel Loomis Todd about the volume they were assembling. He enclosed a preliminary selection. He wrote one sentence about editorial policy and then, immediately, a paragraph about this poem.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; Higginson to Todd, 21 April 1891</span>
+    <blockquote cite="https://archive.org/details/in.ernet.dli.2015.29377">
+      <p>Let us alter as little as possible, now that the public ear is opened.</p>
+      <p>One poem only I dread a little to print&mdash;that wonderful &ldquo;Wild Nights,&rdquo;&mdash;lest the malignant read into it more than that virgin recluse ever dreamed of putting there. Has Miss Lavinia any shrinking about it? You will understand &amp; pardon my solicitude. Yet what a loss to omit it! Indeed it is not to be omitted.</p>
+    </blockquote>
+    <figcaption>T. W. Higginson to Mabel Loomis Todd, 21 April 1891, printed in Millicent Todd Bingham, <a href="https://archive.org/details/in.ernet.dli.2015.29377"><cite>Ancestors&rsquo; Brocades: The Literary Debut of Emily Dickinson</cite></a> (New York: Harper &amp; Brothers, 1945), page 127, and read there. Bingham&rsquo;s own footnote to the sentence points at <cite>Poems, Second Series</cite>, page 97 &mdash; the page mounted in the table below. Higginson&rsquo;s em dashes are closed up as printed; house style spaces them, and a quotation keeps its own pointing. <q>Miss Lavinia</q> is Lavinia Dickinson, the poet&rsquo;s sister.</figcaption>
+  </figure>
+
+  <p>Read that letter as a whole and it is stranger than the famous sentence in the middle of it. Higginson is frightened of the poem, protective of a woman he is describing as a <q>virgin recluse</q> less than five years after her death, worried about what <q>the malignant</q> will see &mdash; and he prints it anyway, and the reason he gives is that leaving it out would be a loss. <strong>He knew exactly what was in it.</strong> The apparatus of denial and the decision to publish are in the same paragraph.</p>
+
+  <p>He also wrote <q>let us alter as little as possible</q> two lines earlier. Here is what reached page 97.</p>
+
+  <div class="qe-editions-scroll">
+    <table class="qe-editions">
+      <caption>The manuscript reading, and <cite>Poems, Second Series</cite> (1891), page 97</caption>
+      <thead>
+        <tr><th scope="col">As Franklin reads the leaf</th><th scope="col">1891, page 97</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Wild nights <em>&ndash;</em> Wild nights!</td><td>WILD nights <em>!</em>&nbsp;&nbsp; Wild nights !</td></tr>
+        <tr><td>Futile <em>&ndash;</em> the winds <em>&ndash;</em></td><td>Futile the winds</td></tr>
+        <tr><td>To a <em>H</em>eart in port <em>&ndash;</em></td><td>To a <em>h</em>eart in port, &mdash;</td></tr>
+        <tr><td>Done with the <em>C</em>ompass <em>&ndash;</em></td><td>Done with the <em>c</em>ompass<em>,</em></td></tr>
+        <tr><td>Done with the <em>C</em>hart!</td><td>Done with the <em>c</em>hart<em>.</em></td></tr>
+        <tr><td>Ah <em>&ndash;</em> the <em>S</em>ea!</td><td>Ah <em>!</em> the <em>s</em>ea !</td></tr>
+        <tr><td>Might I but moor <em>&ndash;</em> tonight <em>&ndash;</em><br>In thee!</td><td>Might I but moor<br><em>To-night</em> in thee !</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>Nine dashes go in and one comes out</strong> &mdash; the em dash at the end of line 6, and even that one has acquired a comma in front of it. Four of her capitals are lowered: Heart, Compass, Chart, Sea. <em>Eden</em> keeps its capital, because <em>Eden</em> is a proper noun in anybody&rsquo;s grammar and the other four were only proper nouns in hers. Three new exclamation marks and three new commas arrive. A full stop replaces the exclamation at the end of the second stanza. The poem opens with a two-line drop-cap <strong>W</strong>, which is how the volume opens every poem, so <q>WILD</q> is a compositor&rsquo;s capital and the word is <em>Wild</em>; the same initial is why line 2 sits inset, and that indent is the drop cap rather than an editorial one. Every exclamation mark in the book has a space in front of it, which is the volume&rsquo;s house style and not her pointing. And where the manuscript has a dash between the two halves of line 1, the compositor set an unusually wide space.</p>
+
+  <p><strong>The lineation is the one change that is not a tidy, and it deserves better than it usually gets.</strong> Dickinson wrote <q>Might I but moor &ndash;</q> and ran out of leaf, so <q>Tonight &ndash;</q> went on the line below. Franklin records that division in his textual notes and reads through it: the verse line is <q>Might I but moor &ndash; tonight &ndash;</q>, and the physical break is an accident of paper. Todd and Higginson set what was in front of them. <em>Both are defensible.</em> One editor reproduced the poem and the other reproduced the leaf, and the argument between them is the whole argument about how to print Dickinson, arriving in 1891 at line 11 of this poem and never really leaving.</p>
+
+  <p>What is not defensible is a text that has been through both and kept neither.</p>
+
+  <h2>A word missing from the copy you will find</h2>
+
+  <p>The <a href="https://www.poetryfoundation.org/poems/44087/wild-nights-wild-nights-269">Poetry Foundation</a> prints Franklin, credits the edition, and gets it right. It also files the poem under <cite>Queer Love Poems</cite>, which is a reading rather than a fact about her, and a good one.</p>
+
+  <p>The <a href="https://poets.org/poem/wild-nights-wild-nights-249">Academy of American Poets</a> prints something else. Read on 8 September 2026, poets.org gives a text that has been through the 1891 tidy and the modern restoration and come out as neither: the dashes are back, so it is not 1891; <em>heart</em>, <em>compass</em>, <em>chart</em> and <em>sea</em> are lower case, so it is not the manuscript; <q>Ah, the sea!</q> has a comma that is in no printing we have looked at; <q>Wild Nights</q> is capitalized where neither the leaf nor 1891 capitalizes it; and line 11 reads:</p>
+
+  <div class="qe-editions-scroll">
+    <table class="qe-editions">
+      <caption>Line 11, as printed</caption>
+      <thead>
+        <tr><th scope="col">Franklin, and the leaf</th><th scope="col">poets.org, 8 September 2026</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Might I <em>but</em> moor &ndash; tonight &ndash;</td><td>Might I moor &ndash; Tonight &ndash;</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>The word <em>but</em> is gone</strong>, and with it a beat of the line and most of its meaning. <em>Might I but moor</em> is a plea with a limit written into it &mdash; <em>if I could only</em>, <em>if I might just</em>, asking for the smallest possible version of the thing. <em>Might I moor</em> is a request for permission to dock. The page carries no edition, no editor and no date; it says <q>This poem is in the public domain,</q> which is true of the poem and tells you nothing about the text.</p>
+
+  <p>This is the third time the register has caught this shape of error, and it arrives the same way every time. <a href="/on-being-ill">Woolf</a> had two texts and both were hers. <a href="/promises-like-pie-crust">Rossetti</a> has a colon in her first printing where every circulating copy has a full stop. Here a poem that asks to be moored has had the hinge taken out of the asking. <strong>Name the printing, or do not quote.</strong></p>
+
+  <p>One more thing, and it is about our own method rather than anybody else&rsquo;s. Page 97 was read in three separately scanned copies. The first two &mdash; both digitised from University of California Libraries holdings &mdash; agree with each other and are wrong: a broken piece of type makes line 11 read <em>mocr</em> instead of <em>moor</em>, identically in both. The University of Toronto copy has the word intact. <strong>Two scans that agree are not two witnesses if they came out of one library</strong>, and this site had already written the lesson down once, about a scan of a Child ballad, and still nearly published a broken letter as a variant. The finding is not in the text of the poem; it is in the way we check it.</p>
+
+  <h2>What this sheet will not tidy</h2>
+
+  <p><strong>Dickinson was not writing this.</strong> She had no word for co-regulation, no glossary, no nervous system in the sense the term above is using, and no relationship escalator to decline. She wrote twelve lines to a <q>thee</q> the leaf does not name and sewed them into a fascicle. Reading her forward until she arrives at a regulated bodymind is <em>our</em> move, and it is the method of this whole site rather than a discovery about her. The language is hers. The use is ours.</p>
+
+  <p><strong>The speaker of this poem is not in port.</strong> This is the hardest thing on the sheet and it undercuts most of the comfort in it, so it belongs here rather than in a footnote. The winds are futile <em>to a Heart in port</em> &mdash; and the speaker is outside, in the weather, asking to be let in. <q>Might I but moor</q> is a question the poem does not answer, in a poem with no indicative verb in it. Everything warm described above is a description of the thing this poem <em>wants</em>. The reply on this sheet is written from inside the harbour; the specimen is not.</p>
+
+  <p><strong>Limerence requited is not limerence.</strong> <q>With the strength of limerence / that has been requited and matched</q> asks for Tennov&rsquo;s intensity with Tennov&rsquo;s uncertainty removed, and once the uncertainty is gone the word has stopped describing the thing. That is a deliberate turn and it is the reply&rsquo;s best line, but the credit for <em>limerence</em> stays with Dorothy Tennov and the requited version is ours. <strong>If we changed the words, they are ours</strong> &mdash; and if we changed the meaning while keeping the word, the same rule applies.</p>
+
+  <p><strong>Helen&rsquo;s assemblage runs the other way.</strong> In her sentence the assemblages are the restrictive ones people take flight from &mdash; Deleuze and Guattari&rsquo;s <em>lines of flight</em>, moving <q>away from restrictive assemblages</q>. <q>Be our realest assemblage</q> asks for one worth arriving at. The word covers both in Deleuze and Guattari, so this is an extension rather than a misuse; but hers is a sentence about escape and this is a line about arrival, and they are not the same sentence.</p>
+
+  <p><strong>We do not know who <q>thee</q> is, and this sheet is not going to guess.</strong> The addressee is ungendered in the manuscript, the identity of Dickinson&rsquo;s addressees is unsettled scholarship, and Higginson&rsquo;s <q>virgin recluse</q> is evidence about Higginson. A queer reading of this poem does not need a biography to stand up, and it does not get one here. <strong>Not knowing who she was writing to is not the same as her writing to nobody.</strong></p>
+
+  <p><strong>We read the facsimile and we are not setting our own readings against Franklin&rsquo;s.</strong> The leaf is mounted above and you can look at it. What is on it is a great many short strokes of varying length and angle, some of which are dashes, some of which are exclamation marks and some of which are the tail of the letter before them. Deciding which is which is the work of the two variorum editions and not of an afternoon, and it is precisely why this sheet names its edition in the label instead of claiming the manuscript.</p>
+
+  <p><strong>The facsimile is not in the public domain, and everything else mounted on this site is.</strong> The poem is public domain. Harvard&rsquo;s photograph of the leaf is offered by the Emily Dickinson Archive under CC BY-NC-ND 3.0, and we take them at their word rather than arguing about whether a photograph of a flat public-domain manuscript can carry a copyright of its own. That makes this the first plate here that is licensed rather than free, the credit line is the archive&rsquo;s required one, and the file is unaltered.</p>
+
+  <p><strong>And the reply is for somebody.</strong> It was written to a person, not to a readership, and it is mounted here at its author&rsquo;s request with its punctuation set for print and nothing else touched. A sheet cannot be a private letter and a public plate at the same time. This one is both, and that is a decision rather than an oversight.</p>
+
+  <p>Might I but moor.</p>
+
+</main>
+
+<!-- Elsewhere on the plate. OUTSIDE <main> on purpose: the SKS mirror takes page
+     content from the <main> landmark and nowhere else, so navigation placed inside
+     it would be indexed as this sheet's own content. See CLAUDE.md. -->
+<nav class="qe-elsewhere" aria-labelledby="qe-elsewhere-h">
+  <h2 id="qe-elsewhere-h">Elsewhere on the plate</h2>
+  <ul class="qe-elsewhere-grid">
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/on-being-ill">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;1</span>
+          </span>
+          <span class="qe-card-title">The Army of the Upright</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-violet)">
+        <a class="card" href="/coming-to-terms">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Essay</span>
+            <span class="qe-card-no">No.&nbsp;2</span>
+          </span>
+          <span class="qe-card-title">Coming to Terms</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-coral)">
+        <a class="card" href="/promises-like-pie-crust">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;3</span>
+          </span>
+          <span class="qe-card-title">The Die Uncast</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-marigold)">
+        <a class="card" href="/invention-of-normal">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;4</span>
+          </span>
+          <span class="qe-card-title">Wyrd, Weird, and the Invention of Normal</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-lichen)">
+        <a class="card" href="/the-tempest">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;5</span>
+          </span>
+          <span class="qe-card-title">Miranda: To Be Wondered With</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<footer class="qe-footer">
+  <p><a href="/">Queering Earth</a> is a collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+  <p>The poem was read from the facsimile of the Houghton leaf and set from Franklin&rsquo;s reading of it; page 97 of <cite>Poems, Second Series</cite> was read in three separately scanned copies; Higginson&rsquo;s letter was read on page 127 of <cite>Ancestors&rsquo; Brocades</cite>. All of it is logged in the site&rsquo;s attribution ledger, along with the sources quoted at one remove and named as such.</p>
+  <p>Our words licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Dickinson&rsquo;s are in the public domain. The manuscript image is Houghton Library&rsquo;s, reproduced under <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a>. The passages from <cite>Autism</cite>, <cite>Psychology Today</cite>, More Realms, Autistic Realms and the Stimpunks glossary belong to their authors and are quoted here under fair dealing, with each source linked at every use.</p>
+  <p><a href="/design">How this site is made</a> &mdash; the herbarium sheet, the palette, the type, and the borrowed plates.</p>
+  <p><a href="/changelog">The accession register</a> &mdash; every sheet as it was mounted, and every label we corrected.</p>
+</footer>
+
+<script src="queering.js"></script>
+</body>
+</html>
