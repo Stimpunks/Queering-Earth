@@ -55,3 +55,17 @@ http://queering-earth.netlify.app/*   https://queering.earth/:splat  301!
 
 # The plate is `/`, not `/index.html`. Netlify already 301s the bare /index.
 /index.html                       /                             301!
+
+# ── The error page has no address ──────────────────────────────────────────────
+#
+# 404.html is a real file, so /404 and /404.html both answered 200 with the error
+# page — a SOFT 404, which is the fault the spec's error-pages item leads with, and
+# one we introduced by fixing the page. check-addresses.mjs --live reported both.
+#
+# These are REWRITES and not redirects: a non-3xx status serves the target's content
+# at the requested path with that status, so the reader gets the herbarium 404 and
+# the crawler gets a 404 to match. Netlify resolves a rewrite once and does not
+# re-run the table against the target, so the self-reference on the second rule
+# does not loop — verified live rather than assumed.
+/404                              /404.html                     404!
+/404.html                         /404.html                     404!
