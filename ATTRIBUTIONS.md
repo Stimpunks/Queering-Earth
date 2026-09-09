@@ -1711,6 +1711,114 @@ linked a 1521 Strasbourg scan; the date came from a tertiary source and is gone.
 
 ----
 
+### Stimpunks Foundation — kintsugi, and the line this site's seam came from
+
+**Quoted on:** `design.html`, in *Age, and where the gold goes*
+
+Four quotations, all from the same page, all exact:
+
+> The cracks are where the gold goes.
+
+> we are not broken. We are kintsugi.
+
+> Kintsugi doesn't restore the original object. It makes something that couldn't have
+> existed without the break.
+
+> Masking is the opposite of Kintsugi.
+
+**Source:** Stimpunks Foundation, ["Infodumplings: Kintsugi and Finding the Gold Within
+You"](https://stimpunks.org/2026/05/06/infodumplings-kintsugi-and-finding-the-gold-within-you/),
+6 May 2026.
+
+**Verified:** 2026-09-09, against the mirrored post in SKS
+(`site/stimpunks-org/posts/infodumplings-kintsugi-and-finding-the-gold-within-you.md`,
+whose frontmatter carries the canonical URL above). The mirror is our own publication, so
+this is the one case where SKS *is* the primary — it is a copy of a page we wrote.
+
+**Capitalization preserved.** "Masking is the opposite of Kintsugi" carries a mid-sentence
+capital K, and "we are not broken" opens lower-case because it is a fragment of "The thesis:
+we are not broken. We are kintsugi." Both are left as published, per the house rule on
+quotations.
+
+**Why this entry exists at all, when nobody asked for it.** The kintsugi device on this site
+— `--qe-marigold` spent on a correction rather than on a mounting — was designed on
+2026-09-09 from a general reading of kintsugi, and the working notes, the commit message, and
+the register entry all described it in our own words: *the gold goes on the mend*. Then a
+library search turned up **our own foundation's page on kintsugi, published four months
+earlier, saying "The cracks are where the gold goes."**
+
+Nobody plagiarised anything. But a house phrase already existed, we had reinvented a near
+copy of it, and the version that would have shipped read as though the idea originated in a
+stylesheet. **Over-crediting others and under-claiming for ourselves is the safe direction**,
+and it applies to our own colleagues at least as much as to strangers. The page now cites
+theirs and calls ours the small version.
+
+**And it supplied the argument the design page was missing.** "Masking is the opposite of
+Kintsugi" is what makes this device belong on a site about queering normativity rather than
+being imported warmth: a site about the cost of passing cannot file its own corrections where
+only maintainers can read them. That sentence is theirs. The application to an accession
+register is ours, and the page says which is which.
+
+----
+
+### Hisamatsu Shin'ichi — the seven characteristics, at one remove and with the name unsettled
+
+**Credited on:** `design.html`, in *Wabi-sabi, and which parts of it we can actually claim*
+
+The seven principles the section scores against are attributed to **Hisamatsu Shin'ichi,
+*Zen and the Fine Arts*, Kodansha International, 1971** (ISBN 0870111507; English translation
+by Tokiwa Gishin). Hisamatsu (1889–1980) was a Zen philosopher at Kyoto University who
+studied under Nishida Kitarō and founded the FAS Society.
+
+**We have not read it.** The seven reach this site through a peer-reviewed paper that cites
+it:
+
+**Source (secondary, and named as such on the page):** Lomas, T., Etcoff, N., Van Gordon, W.,
+& Shonin, E. (2017). Zen and the Art of Living Mindfully: The Health-Enhancing Potential of
+Zen Aesthetics. *Journal of Religion and Health, 56*(5), 1720–1739.
+<https://doi.org/10.1007/s10943-017-0446-5>
+
+**Verified:** 2026-09-09. The citation was pinned from **Crossref's own record** for that DOI
+rather than from a search summary — volume 56, issue 5, pages 1720–1739 — because the
+Wassell entry above is this ledger's standing lesson about online-first dates and unpaginated
+PDFs. The set of seven was cross-checked against three independent renderings. **The paper
+itself was not read in full**, and neither was Hisamatsu; nothing on the page is presented as
+either source's wording.
+
+**Three things the page says out loud rather than smoothing over.**
+
+**1. The seven are not wabi-sabi's.** They are characteristics of *Zen art*. The list
+circulates online as "the seven principles of wabi-sabi", which is a relabelling that
+happened in transmission — Zen aesthetics and wabi-sabi overlap and are not the same thing.
+
+**2. The third one's name is unsettled and we could not settle it.** Lomas et al. give *koko*
+(austere sublimity). Another rendering of the same seven gives *shibui/shibumi* (lofty
+dryness) in the same slot, with the same sense. The page uses *koko*, says the renderings
+disagree, and says it cannot resolve it from here. Only the book can.
+
+**This corrects a claim we made earlier the same day.** The first version of the 2026-09-09
+register entry and decision log stated flatly that the design article had *swapped shibui in
+where Hisamatsu has koko*. That is **not established** — at least one rendering of Hisamatsu
+gives shibui for that characteristic. The confident version was written from memory before
+anything was checked, which is precisely the failure mode this file exists for, and it was
+caught by the decision log's own instruction to verify before the claim reached public copy.
+Corrected in `DECISIONS.md`, in `changelog.html`, and here.
+
+**3. What survives the correction, because it is checkable.** Whatever the term should be, the
+design advice that prompted all this glosses its third principle as quiet, unobtrusive beauty
+revealing depth over time — **a definition with no age in it**. That is a statement about two
+texts a reader can open, and it needs no ruling on Hisamatsu's vocabulary. It is also the
+reason "patina" recurs in that literature without ever becoming a principle.
+
+**Not cited for anything it does not support.** Leonard Koren's *Wabi-Sabi for Artists,
+Designers, Poets & Philosophers* (Stone Bridge Press, 1994) is named on the page as the book
+through which wabi-sabi reached English-language design writing, and for nothing else. We
+have not read it either, so the page makes **no claim about what Koren does or does not
+enumerate** — which is the specific temptation here, since several secondary summaries
+attribute "seven principles" to him too.
+
+----
+
 ## Open
 
 ### Two sentences on the Miranda sheet claim a little more than their source does

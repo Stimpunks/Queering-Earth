@@ -106,15 +106,30 @@ the seven aesthetic principles that literature names. Six of the seven were alre
 two — *fukinsei* (asymmetry) and *datsuzoku* (freedom from convention) — more thoroughly
 than the sources state them. Four decisions came out of the exercise.
 
-**One sourcing note first, because it shaped everything after it.** The list of "seven
-principles of wabi-sabi" in general circulation names **shibui** in the third slot. The set
-it descends from — Hisamatsu Shin'ichi's seven characteristics of Zen art, *Zen and the Fine
-Arts* — names **koko** there: the weathered, the austere, the visibly aged. The popular list
-dropped the only one of the seven that is about age, which is why "patina" recurs in the
-research without ever resolving into a principle. **Verify against Hisamatsu before any of
-this reaches public copy**; the framing of these as principles *of wabi-sabi* rather than of
-Zen art is itself a later graft, and this is exactly the tightening `ATTRIBUTIONS.md` exists
-to catch. The colophon and the register entry both name *koko* and *kintsugi* only.
+**One sourcing note first, because it shaped everything after it.** The list circulating as
+"the seven principles of wabi-sabi" is Hisamatsu Shin'ichi's seven characteristics of **Zen
+art**, from *Zen and the Fine Arts* (Kodansha International, 1971). Zen aesthetics and
+wabi-sabi overlap and are not the same thing, so the relabelling happened in transmission.
+The third of the seven — the one about age — is where the transmission frays, and the design
+advice glosses it with **no age in it at all**, which is why "patina" recurs in that
+literature without ever resolving into a principle. This accession is mostly about that hole.
+
+**Corrected the same day — the first version of this paragraph overclaimed.** It stated
+flatly that the popular list *names shibui where Hisamatsu names koko*, and that the swap is
+what dropped the aging. **That is not established.** At least one rendering of Hisamatsu's
+seven gives *shibui/shibumi* for that characteristic itself, glossed "lofty dryness" — the
+same sense the *koko* renderings carry. The confident version was written from memory before
+anything was checked, and the instruction two sentences later to *verify against Hisamatsu
+before any of this reaches public copy* is what caught it, when the colophon section was
+written and the checking actually happened. **The paragraph above is the part that survives
+verification**, because it is a claim about two texts a reader can open rather than a ruling
+on Hisamatsu's vocabulary. Full working, with the citation pinned from Crossref, is in
+`ATTRIBUTIONS.md`; the register entry is corrected too.
+
+We use *koko* as the term for the weathered principle, on the warrant of the peer-reviewed
+paper we have the seven from, and the colophon says the renderings disagree and that we
+cannot settle it from here. **We have read neither Hisamatsu nor Koren**, and the page says
+so rather than implying a lineage.
 
 **1. A panel picks one of three surfaces: bare, ruled, ruled off.** `--qe-card` appeared
 fifteen times in `queering.css`, thirteen of them with the same 1px rule and 2px radius, so
