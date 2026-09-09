@@ -11,6 +11,22 @@ only evidence a reader has.
 
 **A search of our own library is not verification.** See the `credit-source` skill.
 
+**What that rule is aimed at, and what it is not (added 2026-09-08).** It is aimed at **our own
+prose** — a glossary gloss, a summary, a paraphrase — being read back later as somebody else's
+wording. That is the Kelly-on-Eno *scenius* failure: the thing being confirmed was a rewrite,
+and five files agreeing with each other were one witness.
+
+It is **not** a rule that Ryan's quote collection is unusable. A direct quotation he transcribed
+from a paper he read, published with a citation to that paper, is a first-hand reading with the
+source named. Papers get rented, access lapses, and refusing to quote anything we cannot re-open
+today would discard years of legitimate collecting and quietly imply he did not read what he says
+he read.
+
+**So: re-reading is an upgrade, not a precondition.** Where the primary is reachable, read it and
+say which copy — that is how the Jack edition difference below was found. Where it is not, quote
+it with the citation attached and name whose transcription it is. The citation is the thing that
+has to be right.
+
 ----
 
 ## Verified
@@ -1481,6 +1497,217 @@ much of a section's weight the OED would be better. The derivation is uncontrove
 1929 date is the load-bearing part, since it is what puts the word's turn inside the same
 decade as the drag scene that took the flower's name. **If anyone here has OED access, this is
 a five-minute upgrade.**
+
+----
+
+### The labels treatment on the Coming to Terms sheet — seven sources, and which copy each came from
+
+**Quoted on:** `coming-to-terms.html`, in the section appended below Ryan's 2022 essay.
+
+**Verified:** 2026-09-08. Six of the seven below were read in the work they come from. The
+seventh is a transcription of speech from a video and is labelled as one, on the page and here.
+Jordynn Jack's *Gender Copia*, the eighth source on that section, has its own entry after this
+one, because it is the one that started the day unreachable and did not stay that way.
+
+**What the "not from our own library" rule does and does not mean, corrected 2026-09-08.**
+This entry first said the Stimpunks glossary pages were "the pointer, not the authority" and
+left it there, which is too strong and was corrected on Ryan Boren's objection. The rule exists
+to stop **our own prose** — a glossary gloss, a summary, a paraphrase — being read back as
+somebody else's wording; that is the Kelly-on-Eno *scenius* failure, where the thing being
+confirmed was a rewrite. **A direct quotation Ryan transcribed from a paper he read, published
+with a citation to that paper, is not that.** It is a first-hand reading with the source named,
+and treating it as unusable would throw out years of legitimate collecting and quietly assert
+that he did not read what he says he read.
+
+So the working rule here is: **re-reading is an upgrade, not a precondition.** Where the primary
+is reachable, read it and say which copy — that is what happened with all six below, and it is
+what turned up the edition difference in the Jack entry. Where it is not reachable, a Stimpunks
+quotation with its citation attached is quotable, and the sheet says whose transcription it is.
+Papers get rented. Access lapses. The citation is the thing that has to be right.
+
+**1. Sonny Jane Wise — the smorgasbord.**
+
+> If we're rolling with the analogy of a smorgasbord, there are a lot of different ingredients
+> that make up the diversity of our minds. You could say each individual is a plate of various
+> ingredients and tasty treats. Each of us are our own unique combination of ingredients and
+> there are infinite combinations of ingredients.
+
+Sonny Jane Wise (they/them), [*The Neurodiversity Smorgasbord: An Alternative Framework for
+Understanding Differences Outside of Diagnostic
+Labels*](https://www.livedexperienceeducator.com/blog/theneurodiversitysmorgasbord), Lived
+Experience Educator. Read from the live page. **"Each of us are" is theirs and is kept** —
+the sentence is not tidied to agree. The date on the sheet, **27 September 2024**, is the
+page's own `datePublished`; the page prints only "27 September" in its visible furniture, so
+the year comes from the site's structured data and nothing else.
+
+**2. Florence Ashley — the building materials.**
+
+> To arrive at a gender identity, we arrange gender subjectivity like building materials. My
+> theory helps us understand how different people offer seemingly incompatible accounts of
+> their gender identity without questioning their authenticity or validity. They simply
+> arrange similar building materials differently.
+
+Florence Ashley, "What Is It like to Have a Gender Identity?", *Mind* 132:528, 1053–1073,
+[doi:10.1093/mind/fzac071](https://doi.org/10.1093/mind/fzac071). Read in the published PDF
+hosted by the author at florenceashley.com, whose running head reads *Mind*, Vol. 132 · 528 ·
+October 2023 and whose first page carries the DOI. **The passage is the abstract**, and the
+sheet says so. Pages and issue confirmed against Crossref; the month on the sheet is the one
+printed on the article itself, not Crossref's later print date.
+
+**3. Ira David Socol — the hinge.**
+
+> Only when people get to choose their own labels will we get anywhere toward building an
+> equitable culture.
+
+Ira David Socol, guest post *Using "Correct Language" And "People First"*, Bowllan's Blog,
+*School Library Journal*, 12 May 2009. **The original address no longer resolves**; read in
+the [Internet Archive capture of 4 March
+2021](https://web.archive.org/web/20210304193914/http://blogs.slj.com/bowllansblog/2009/05/12/using-correct-language-and-people-first-by-ira-david-socol/),
+which the sheet cites as such. It is the closing sentence of the post, immediately before the
+author's biographical note.
+
+**4. Nick Walker — the verb, then the adjective.**
+
+> And, just like *queer*, the adjective form of *neuroqueer* can also serve as a label of
+> social identity. One can neuroqueer, and one can *be* neuroqueer.
+
+> Or, to put it more concisely (but perhaps more confusingly): you're neuroqueer if you
+> neuroqueer.
+
+Nick Walker, [*Neuroqueer: An Introduction*](https://neuroqueer.com/neuroqueer-an-introduction/),
+neuroqueer.com. Read from the page, which states it was first published Spring 2015 and revised
+Summer 2021, and which points readers to [*Neuroqueer
+Heresies*](https://neuroqueer.com/neuroqueer-heresies/) for the citable version. **The italics
+are his and are reproduced**, including the italic *be* — which is the whole point of the
+sentence and would vanish in a plain-text copy. Two paragraphs, not adjacent in the original:
+one intervening paragraph is elided and the sheet sets them as two blocks rather than running
+them together. Same source as the masthead quotation already logged above; Walker uses he/him.
+
+**5. Helen Edgar — the wrong object.**
+
+> However, it is not labels that disable us or our children, it is the bureaucratic structure
+> that attaches value and resources to labels rather than to authentic needs. When a child is
+> only seen as deserving of support once labelled, the problem lies with the gatekeeping logic
+> and finances of the institution and system, not the real identity and needs of the child.
+
+and, on the slip wall:
+
+> Labels can become barriers when used inflexibly or in a pathologizing way.
+>
+> Labels can also be liberating when used to affirm identity, understanding, and belonging when
+> adopting a neuro-affirming approach.
+
+Helen Edgar, [*Inclusion Needs Recognition, Not Erasure: A Neurodiversity-Affirming
+Approach*](https://autisticrealms.com/inclusion-needs-recognition-not-erasure-a-neurodiversity-affirming-approach/),
+Autistic Realms, 18 October 2025. Read from the live page; the date is its `datePublished`.
+The byline reads "Helen Edgar (Autistic Realms) following a conversation with David
+Gray-Hammond". **"pathologizing" is spelt with a z in the original**, against the -ise spelling
+used elsewhere on her site, and is kept. The two slip sentences are consecutive lines in the
+original and **she does not choose between them**, which is why both are on the same slip
+rather than one being spent as the site's own conclusion.
+
+A nearby sentence of hers — "Labels aren't everything but they can go a long way…" — was
+**not** quoted, because the same sentence contains "Autisic", a typo, and quoting it would
+mean either reproducing the typo, silently fixing it, or hanging a *[sic]* on a colleague.
+None of those three is worth it when the better sentence is two paragraphs down.
+
+**6. autisticltd — the shedding.**
+
+> A list of words and identities doesn't really begin to scratch the surface of my experience
+> and it's making me more insular than I'd like.
+
+> I'm reveling in the shedding of labels whilst appreciating the immense privilege I have to
+> know who I am, to have words for my experiences, and the resources to find my own.
+
+[*Shedding my labels*](https://autisticltd.co.uk/2024/03/04/shedding-my-labels/), Autistic and
+Living the Dream, 4 March 2024. **The blog carries no personal name.** The post byline is the
+handle `autisticltd`, the contact page 404s, and no name appears in the page metadata; the
+sheet cites the handle and says on the page that it is doing so. That is a choice to respect,
+not a gap to fill — if a name is later published by its owner, this entry and the sheet can be
+updated together. "reveling" is spelt with one l in the original and is kept.
+
+**7. The Leftist Cooks — the buffet.**
+
+> Language is not a set menu, it's a buffet.
+
+*Spider-Verse, Identity Politics, Leftist Infighting, and the Oppression Olympics*, The Leftist
+Cooks, YouTube, uploaded 20 August 2023 — **channel and upload date confirmed from the watch
+page**. The wording is Ryan Boren's transcription, taken down while watching and published on the
+Stimpunks glossary.
+
+**This one was cut from the first draft and then put back.** It was cut because every route to
+the caption track returned empty, so the wording could not be re-checked against the video: the
+`en` and `en-asr` tracks both return zero bytes to every format parameter. That is a reason to
+**label** the quotation, not to bin it. A spoken line has no authoritative text at all — there is
+no printing to go back to, only somebody's ear — and the citation names the video, the channel and
+the date, which is everything a reader needs to go and listen. So the sheet carries it with the
+transcription attributed on the page.
+
+**What is not done, in either direction.** The line is not smoothed, and the buffet/set-menu
+construction is not reworded into our own prose either. Borrowing the figure while dropping the
+name would be the same taking with the credit filed off, and it is the move this file exists to
+catch.
+
+----
+
+### Jordynn Jack — *Gender Copia*, and the two editions that punctuate it differently
+
+**Quoted on:** `coming-to-terms.html`, the section *A copia, not a category* — one block
+quotation from p. 3 and three inline quotations, two from p. 3 and one from the Conclusions on
+p. 14.
+
+**Source:** Jordynn Jack, "Gender Copia: Feminist Rhetorical Perspectives on an Autistic Concept
+of Sex/Gender", *Women's Studies in Communication* 35:1 (2012), 1–17,
+[doi:10.1080/07491409.2012.667519](https://doi.org/10.1080/07491409.2012.667519). Department of
+English and Comparative Literature, University of North Carolina at Chapel Hill.
+
+**Verified:** 2026-09-08, by reading **a scan of the printed article**, supplied by Ryan Boren
+into the SKS inbox mid-session after this entry had been opened as a gap. Pages read: 1–4 and
+13–16, which covers the abstract, the copia passage, the Conclusions, and the works-cited list.
+The running head on p. 1 gives the volume, pages and year directly; the issue number is
+Crossref's.
+
+**This entry began life in *Open* and said the article was unreachable.** It was: OpenAlex
+reported no open copy, Semantic Scholar's abstract field is elided by the publisher,
+tandfonline returns 403, and every hit in our own library was one of *our own* pages quoting
+it. The sheet therefore described Jack's argument and said in the same breath that it was
+describing rather than quoting. **The scan changed that, and the section was rewritten to quote
+her.** Worth leaving on the record that the gap was named on the page before it was closed,
+because that is the behaviour this file is trying to make ordinary.
+
+**Jack writes *autistic* in lower case.** House style here capitalizes it. Her sentences are
+reproduced as she set them, and the sheet says so in the caption, because the alternative is
+correcting a scholar's usage inside her own quotation marks.
+
+**The edition finding: slashes in print, equals signs in the digital text.**
+
+The passages as quoted on the Stimpunks glossary pages this material was gathered from read
+`masculine=feminine`, `sex=gender`, `male=female`, `nature=culture`, and `symbolic=embodied`.
+The printed pages read `masculine/feminine`, `sex/gender`, `male/female`, `nature/culture`, and
+`symbolic/embodied`.
+
+**Neither is a mistake, and this is not a correction of Stimpunks.** Ryan Boren states that his
+piece quoted directly from the paper and that the wording is exact to the edition he read, and
+that is the better authority for what that edition says — the same principle already applied to
+Nick Walker's pronouns above. A solidus rendering as `=` is an ordinary artifact of a publisher's
+own digital typesetting, and the title of the very same article is *Sex/Gender* in both. So:
+**two renderings of one text, both real, and a quotation is only correct once it is attached to
+the copy it came from.**
+
+Queering Earth quotes the print pages, because the print pages are what this session read, and
+the caption on the sheet names that copy. **Do not "fix" the Stimpunks glossary against this
+entry, and do not fix this entry against the glossary.** This is the Woolf trap in miniature:
+tidying either one against the other produces a quotation that is wrong while looking more
+careful than the alternative. If a future session wants the digital edition's characters on the
+page instead, it needs to cite the digital edition.
+
+**Erasmus, at one remove.** Jack's "(17)" is a page reference to *Desiderius Erasmus of
+Rotterdam: On Copia of Words and Ideas*, ed. Donald King and David Rix (Milwaukee: Marquette
+University Press, 1963), read off her works-cited list on p. 16 and cited on the sheet as she
+cites it. **We have not opened that book**, and nothing on the sheet quotes Erasmus — the
+sentence about his two books, one on abundance of words and one on abundance of matter, is our
+own gloss and is supported by the title alone. An earlier draft dated *De copia* to 1512 and
+linked a 1521 Strasbourg scan; the date came from a tertiary source and is gone.
 
 ----
 
