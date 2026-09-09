@@ -130,6 +130,72 @@ on both her domains. **Never edited from this repo.**
 
 ## Settled
 
+### Search is a page, a file, and a refusal (2026-09-09)
+
+Ryan asked for search. Three things were genuinely open and were put to him; all three
+answers below are his.
+
+**Where it lives: a `/search` sheet, and only there.** A field in the masthead of every
+page has better discovery and costs a markup change on thirteen pages and an argument about
+whether the field is furniture or content. Inline live search everywhere was the third
+option and the worst fit: it fetches 368 KB of index for every reader who never searches,
+and it puts other sheets' words inside a sheet. One page, linked from every footer.
+
+**What the index does with quoted text: indexed, marked, never snippet-cropped.** This was
+the real question. A conventional snippet — twenty words either side, an ellipsis at each
+end, no maker — is a fine convention on a page of prose and a *machine for producing the
+tightened source* when pointed at eighty-two mounted quotations. It would have manufactured
+the exact artefact `ATTRIBUTIONS.md` exists to prevent, once per result, at scale, for the
+rest of the site's life. So `blockquote`s are whole records rendered entire with maker and
+citation, and short quotations inside our prose keep their character ranges so the crop
+widens around them. The rejected middle option was "crop like any prose"; the rejected safe
+option was "index our own words only", which would have made *Miranda*, *Fr269* and every
+line of Dickinson unsearchable on a site that is largely about them.
+
+**How the register ranks: a separate, secondary group.** `/changelog` is 25,359 words, 28%
+of the site. Flat-ranked it buries the sheets on any query naming a writer; excluded, every
+correction becomes unfindable by word. Its entries come under their own heading below the
+sheets. This is the register's own front-matter/back-matter distinction, applied to it.
+
+**Consequences that were not obvious going in**, each of which is now a rule in `CLAUDE.md`:
+
+- **`/privacy` said there was nowhere on this site to type anything.** True when written
+  that morning; false a few hours later by our own hand. A binding statement of practice
+  has to be re-read against the code every time the code grows a capability, and the gate
+  that enforces the third-party claim cannot see a sentence like that one.
+- **The query goes in the fragment.** `?q=` is sent to the server, so search terms would be
+  written into the hosting log `/privacy` describes. Fragments are not sent. The form is
+  also hidden until its script runs, because a form without its script would submit a query
+  string and undo the decision — and hiding it is what makes the generated manifest, rather
+  than a dead field, what a reader without JavaScript sees.
+- **The highlight could not be a wash, and could not be marigold.** Two independent
+  failures. Marigold at 0.30 composites to 11.2:1 on paper and 6.94:1 in the drawer, and no
+  alpha clears 7:1 there, because lightening a dark ground moves it *towards* light ink.
+  And marigold is the seam token: a search hit is not a repair, and gold spent on one is
+  what makes real mends unfindable. It is a verdigris rule under the word, which costs the
+  ink nothing in either ground.
+- **The contrast gate could not see any of it.** Every result component is built at
+  runtime, so `/search` measured 193 clean elements and zero of the ones that matter. The
+  gate's `REVEAL` hook now clones the page's own templates. Two findings fell out of
+  writing it: this file had been running `check-contrast.mjs` **without `--check`**, which
+  makes it a report that exits 0 — so the entire 7:1 tier had shipped as advice — and our
+  own reply poem on `/wild-nights` was being flattened into prose and cropped mid-line,
+  which the never-crop rule did not reach because the words are ours.
+
+**Rejected: a hosted search service.** Never seriously on the table. The site makes no
+third-party request and `/privacy` is gated on it.
+
+**Rejected: putting it in `queering.js`.** Its boundary is that it may derive navigation
+from the DOM and may never create words. A result is a sentence from another page put onto
+this one. The boundary was worth more than the convenience, so the code is a third file
+loaded by one page — and it still writes no label: every word is authored in `search.html`
+as a `<template>` and cloned, the way the register's index clones an entry's own chip.
+
+**Open: nothing about ranking has been tuned against real use.** Weights are heading 8,
+entry name 8, page title 6, quotation source 2, prose and quotation text 1, with every term
+required to appear. That is a guess that reads well on the queries we tried. It is worth
+revisiting when there is any evidence, and there is no analytics here to produce any.
+
 ### The shared assets are not fingerprinted, and the cache is bounded instead (2026-09-09)
 
 The spec's `cache-control` item gives one clean answer — `max-age=31536000, immutable` — and

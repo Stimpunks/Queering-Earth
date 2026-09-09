@@ -314,6 +314,8 @@ og_card(REPO/"images"/"og-changelog.png", "The accession register", "Register ·
         "Every sheet as it was mounted, and every label we corrected.", CORAL)
 og_card(REPO/"images"/"og-privacy.png", "What this site knows about you", "Privacy",
         "Almost nothing, and the whole of it: two view preferences and a hosting log.", VERDIGRIS)
+og_card(REPO/"images"/"og-search.png", "Find a word in the cabinet", "Finding aid",
+        "Every sheet, every quotation, and every correction.", LICHEN)
 
 # The report enumerates WHAT WAS ACTUALLY WRITTEN, not a hand-kept list of what
 # ought to have been. It was a hand-kept list until 2026-09-09, and the ghost pipe

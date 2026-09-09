@@ -63,7 +63,11 @@ held to the same standard as anything on Star Stuff, and arguably a stricter one
   not exist, for as long as the site has been up. `_redirects` carries a forced `301!` per
   page, enumerated so a missing one is reportable by name, and `check-addresses.mjs` is the
   guard — the only one here that knows what the edge answers rather than what the files say.
-  **A new sheet needs a rule.** Mount it, card it, log it, file it, **route it**.
+  **A new sheet needs a rule.** Mount it, card it, log it, file it, **route it**, and
+  **group it** — `tools/pages.mjs` is the one place the page order lives, and
+  `make-markdown.mjs` throws on a page in no group, which is the reminder. Everything
+  the finding aid shows is derived from there and from the sheet's own landmark, so a
+  grouped sheet needs nothing else to be searchable.
 
   **This also means the site cannot be browsed over `file://`, and that is the trade.** Star
   Stuff can be, because it writes document-relative links with the extension (`index.html`);
@@ -83,7 +87,11 @@ held to the same standard as anything on Star Stuff, and arguably a stricter one
     truth for every recurring colour), the type stack, the shared layout, the botanical
     art styles, and the print sheet.
   - **`queering.js`** — the view controls (plain view, and the ground) and the
-    contents list. **It may derive navigation from the DOM; it may never create
+    contents list. **`queering-search.js` is a third file, loaded only by `/search`**,
+    because a result is a sentence from *another* page put onto this one, which is past
+    the boundary below however carefully it is done — and widening the boundary to fit
+    would have cost the boundary. It writes no label either: every word a searcher sees
+    is authored in `search.html`, in `<template>`s after the footer, and cloned. **It may derive navigation from the DOM; it may never create
     words.** That boundary replaced "the two view controls, and nothing else" on
     2026-09-09: a count of features is a rule that gets quietly broken the first
     time a third thing is worth having, and the prohibition that matters — nothing
@@ -110,6 +118,14 @@ marigold, coral, violet — **are not for text**, in either ground.
 two tiers reported apart: under WCAG AA is `FAIL`, between AA and 7:1 is `UNDER`, and both
 exit non-zero. `--aa` drops to AA only and says loudly that it did — use it to put an
 argument for a specific colour on the record, not to get a run to go green.
+
+**A component built at runtime is invisible to it unless `REVEAL` builds one.** `/search`
+measured 193 clean elements while every colour a searcher actually reads — the chips,
+the marks, the snippet, the mounted quotation — sat in the other zero. The gate's own
+comment asked for this in advance: *a page that checks the 8% of itself that happens to
+be visible reports zero failures and looks exactly like a clean one.* `REVEAL` now
+clones the page's own result templates, so the real markup is measured under the real
+stylesheet. **A new runtime component needs a line there.**
 
 **What it still cannot see, so measure these by hand.** A `::marker` is not an element with
 its own text, which is how the register's entry bullets sat at 2.15:1 unreported — the rule
@@ -228,6 +244,22 @@ which is the drift the generator exists to prevent arriving by another door. Tea
 tag. Two things it deliberately keeps: **`<del>` and `<ins>` stay as HTML**, because a
 restored attribution is the one distinction Markdown has no vocabulary for, and losing it
 would flatten *what we got wrong* and *what is true* into one line.
+
+**`tools/make-search-index.mjs` writes `search-index.json` and the manifest inside
+`/search`**, from the same landmark, and it is the one generated view where **quoted
+text is held apart from ours**. A `blockquote` becomes a whole record with its `cite`
+and its caption; a short quotation inside our prose keeps its character range, so the
+crop can be widened around it. That separation is the feature: a search snippet is a
+trimming machine, and pointed at eighty-two mounted quotations it manufactures the
+tightened source `ATTRIBUTIONS.md` exists to prevent, one per result. **A retracted
+attribution is not indexed** — only the restored half of a `del`/`ins` pair — because
+plain text cannot say *this is the reading we got wrong*.
+
+**`tools/html.mjs` and `tools/pages.mjs` are shared, and that is the point of them.**
+The entity table is case-sensitive because the sheets quote Old English, so a second
+copy is a letter one generator learns and the other does not; the page order is
+editorial, so a second copy is a sheet announced to agents and missing from the
+reader's index. One of each, imported by both generators.
 
 **JSON-LD is authored per page, not generated**, because `author` and `about.author` are
 an editorial judgment: who wrote our reading, and who made the thing being read. The gate
@@ -411,6 +443,31 @@ delays none. A one-line pointer up by the legend is how a book does it.
 - **A new entry needs its `data-sheet`** in the same pass that writes it. Mount it, card it,
   log it, **file it**.
 
+### The finding aid searches in the reader's browser, and refuses to crop a quotation
+
+`/search` is the site's one client-rendered page, and three decisions keep it honest.
+
+- **A quotation is shown whole with its source, or not at all.** Our own commentary is
+  cropped and marked as cropped; a window that would cut into a short quotation set
+  inside our prose is widened until it does not. The generator records those ranges and
+  **proves them** — it slices the finished text at each offset and throws unless it gets
+  back what it wrote. The first version recorded offsets against a string it tidied
+  afterwards, so every fence sat four to fifteen characters downstream of what it
+  guarded. A guard reporting success while pointing at the wrong words is worse than
+  none. **Our own verse counts**: `div.qe-verse` is a whole block too, wearing the label
+  the sheet gives it, because a poem flattened into a cropped paragraph is the same
+  defect and the words being ours only means it is our poem being mangled.
+- **The query lives after the `#`, never in a query string.** A `?q=` is sent to the
+  server, so every term anybody typed would land in the hosting log — on a site about
+  queerness, illness and naming yourself, the most revealing thing here by a distance.
+  **The form is hidden in the markup and revealed by its script**, so a reader without
+  JavaScript cannot submit one by accident, and gets the generated manifest of the whole
+  cabinet instead — which is also what the mirror indexes, because a landmark holding an
+  empty results div says nothing.
+- **`/privacy` describes it, because a field made two of its sentences false.** It said
+  there was nowhere on this site to type anything. A page that binds us is a page to
+  check against the code every time the code grows a capability.
+
 ### Every page needs exactly one `<main>`, and the sitemap is the manifest
 
 Both are load-bearing for the **SKS site mirror**, which takes page content from the
@@ -460,12 +517,18 @@ Run before shipping. All five are browser-free or Chrome-only; nothing needs `np
 and the default path of every one of them is offline.
 
 ```bash
-node tools/check-markup.mjs     # parser-rewriting markup, duplicate ids, exactly one <main>
-node tools/check-sitemap.mjs    # every page listed once, every entry resolves
-node tools/check-contrast.mjs   # 7:1 in BOTH grounds and under print emulation, two tiers
-node tools/check-addresses.mjs  # one address per page: a forced 301! per .html twin
-node tools/check-metadata.mjs   # derived files current, JSON-LD agreeing, credit correct
+node tools/check-markup.mjs             # parser-rewriting markup, duplicate ids, exactly one <main>
+node tools/check-sitemap.mjs            # every page listed once, every entry resolves
+node tools/check-contrast.mjs --check   # 7:1 in BOTH grounds and under print emulation, two tiers
+node tools/check-addresses.mjs          # one address per page: a forced 301! per .html twin
+node tools/check-metadata.mjs           # derived files current, JSON-LD agreeing, credit correct
 ```
+
+**`--check` is load-bearing on the contrast gate and this file left it off until
+2026-09-09.** Without it the tool is a report that prints its findings and exits 0, so
+the whole two-tier apparatus described above shipped as advice. Verified both ways
+rather than read off the source: the marigold wash below reports `FAIL — 8 element(s)`
+and exits 1 with the flag, and exits 0 without it.
 
 **`check-metadata.mjs` regenerates into memory and compares**, so staleness is exact
 rather than an `mtime` guess. Its one non-freshness check is the one that matters most:

@@ -32,56 +32,16 @@
  */
 
 import { readFile, writeFile, readdir } from 'node:fs/promises';
+import { decode, attrs, tokenize, stripComments } from './html.mjs';
+import { GROUPS } from './pages.mjs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ORIGIN = 'https://queering.earth';
 
-/* Editorial grouping for llms.txt. Authored here, like the register's group headings,
- * because these are words and a derived label cannot invent them. Order is the order
- * a reader should meet them. */
-const GROUPS = [
-  ['The readings', ['on-being-ill', 'coming-to-terms', 'promises-like-pie-crust', 'invention-of-normal',
-                    'the-tempest', 'wild-nights', 'flower-codes', 'monotropa-uniflora']],
-  ['The cabinet itself', ['index', 'design', 'changelog', 'privacy']],
-];
-
-/* Every named entity these pages actually use, plus a few near neighbours. The lookup is
- * CASE-SENSITIVE on purpose: the sheets quote Old English and Old Norse, so `&THORN;` (Þ)
- * and `&thorn;` (þ) are different letters, and a tolower() fallback would silently
- * lowercase a proper noun in a quotation. On this site that is not a typo, it is a
- * misquotation. Anything absent throws rather than passing through. */
-const ENTITIES = {
-  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: '\u00a0',
-  mdash: '\u2014', ndash: '\u2013', hellip: '\u2026', middot: '\u00b7',
-  lsquo: '\u2018', rsquo: '\u2019', ldquo: '\u201c', rdquo: '\u201d',
-  laquo: '\u00ab', raquo: '\u00bb', deg: '\u00b0', sect: '\u00a7',
-  times: '\u00d7', frac12: '\u00bd', rarr: '\u2192', larr: '\u2190',
-  // Old English and Old Norse, as quoted on the sheets.
-  thorn: '\u00fe', THORN: '\u00de', eth: '\u00f0', ETH: '\u00d0',
-  aelig: '\u00e6', AElig: '\u00c6', oelig: '\u0153', OElig: '\u0152',
-  // Latin-1 letters that turn up in names and titles.
-  agrave: '\u00e0', Agrave: '\u00c0', aacute: '\u00e1', Aacute: '\u00c1',
-  auml: '\u00e4', Auml: '\u00c4', aring: '\u00e5', Aring: '\u00c5',
-  eacute: '\u00e9', Eacute: '\u00c9', egrave: '\u00e8', Egrave: '\u00c8',
-  iacute: '\u00ed', Iacute: '\u00cd', oacute: '\u00f3', Oacute: '\u00d3',
-  ouml: '\u00f6', Ouml: '\u00d6', oslash: '\u00f8', Oslash: '\u00d8',
-  uacute: '\u00fa', Uacute: '\u00da', uuml: '\u00fc', Uuml: '\u00dc',
-  ccedil: '\u00e7', Ccedil: '\u00c7', ntilde: '\u00f1', Ntilde: '\u00d1',
-  szlig: '\u00df', thinsp: '\u2009', ensp: '\u2002', emsp: '\u2003', shy: '\u00ad',
-};
-
-function decode(s) {
-  return s
-    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
-    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(+d))
-    .replace(/&([a-z][a-z0-9]*);/gi, (m, name) => {
-      const v = ENTITIES[name];
-      if (v === undefined) throw new Error(`unknown entity &${name}; — add it to ENTITIES rather than letting it through`);
-      return v;
-    });
-}
+/* The entity table, the tokenizer and attrs() live in ./html.mjs, shared with
+ * make-search-index.mjs. One table, so a letter taught to one tool is taught to both. */
 
 const escapeMd = (s) => s.replace(/([\\`*_[\]])/g, '\\$1');
 
@@ -116,31 +76,9 @@ const BLOCK = new Set(['p', 'div', 'section', 'header', 'footer', 'article', 'as
   'tr', 'th', 'td', 'caption', 'nav', 'hr', 'br', 'img', 'main', 'a', 'colgroup', 'col',
   'picture', 'source']);
 
-function attrs(raw) {
-  const out = {};
-  for (const m of raw.matchAll(/([a-zA-Z-]+)(?:="([^"]*)")?/g)) if (m[1]) out[m[1].toLowerCase()] = m[2] ?? '';
-  return out;
-}
-
 /** Convert one <main> inner HTML to Markdown. */
 function toMarkdown(html, file) {
-  // COMMENTS FIRST, and this is not a tidiness pass. The stylesheet and the sheets
-  // document their own traps in comments, and those comments quote markup — the note
-  // in flower-codes.html explaining that positioning goes on the outer `<g>` and the
-  // animation on the inner one contains a literal `<g>`, which the tokenizer read as
-  // an element and refused. A comment is never content; strip it before parsing.
-  html = html.replace(/<!--[\s\S]*?-->/g, '');
-
-  const tokens = [];
-  let i = 0;
-  // Quoted attribute values come FIRST in the alternation so an apostrophe or a `>`
-  // inside a double-quoted value cannot end the tag early.
-  for (const m of html.matchAll(/<(\/?)([a-zA-Z][a-zA-Z0-9]*)((?:"[^"]*"|'[^']*'|[^>])*?)(\/?)>/g)) {
-    if (m.index > i) tokens.push({ text: html.slice(i, m.index) });
-    tokens.push({ close: m[1] === '/', tag: m[2].toLowerCase(), raw: m[3], self: m[4] === '/' });
-    i = m.index + m[0].length;
-  }
-  if (i < html.length) tokens.push({ text: html.slice(i) });
+  const tokens = tokenize(stripComments(html));
 
   let out = '';
   let skipDepth = 0, skipTag = null;
@@ -173,7 +111,13 @@ function toMarkdown(html, file) {
     const cls = (a.class || '').split(/\s+/);
 
     // Subtrees that never reach the Markdown.
+    /* `.qe-find` and `.qe-found` join the contents nav for the same reason it is here:
+     * both are empty or inert in the served HTML, and neither has a Markdown
+     * counterpart. A search field is a control, not a sentence — rendering it as one
+     * would put a placeholder and a button label into the prose an agent fetches, and
+     * the thing it actually searches is listed in full further down the same page. */
     if (!t.close && (SKIP_TAGS.has(t.tag) || cls.includes('qe-anchor') || cls.includes('qe-sr') ||
+        cls.includes('qe-find') || cls.includes('qe-found') ||
         (t.tag === 'nav' && cls.includes('qe-contents')))) {
       if (!t.self) { skipDepth = 1; skipTag = t.tag; }
       continue;

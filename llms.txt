@@ -32,6 +32,7 @@ tools/make-markdown.mjs; nothing here is hand-kept.
 - [Queering Earth](https://queering.earth/): Reading the world through a queering lens — art, literature, poetry, politics, people, history — and asking what else any of it could have been. A Stimpunks Foundation and More Realms collaboration. [Markdown](https://queering.earth/index.md)
 - [How this site is made](https://queering.earth/design): The design of Queering Earth: a Victorian herbarium sheet as the model, biophilic ground rules, the palette, the type, the drawings, and what we mean by specimen, sheet, plate, and label. [Markdown](https://queering.earth/design.md)
 - [The accession register](https://queering.earth/changelog): The changelog for Queering Earth: every sheet as it was mounted, every plate that came off again, and every label we corrected — including the attributions we got wrong and exactly how they were fixed. [Markdown](https://queering.earth/changelog.md)
+- [Find a word in the cabinet](https://queering.earth/search): Search every sheet, every quotation and every correction on this site. The searching happens in your browser; nothing you type is sent anywhere, including to us. [Markdown](https://queering.earth/search.md)
 - [What this site knows about you](https://queering.earth/privacy): Almost nothing, and here is the whole of it: two view preferences your own browser keeps, and the server log our host writes. No analytics, no cookies, no third-party requests, no forms. [Markdown](https://queering.earth/privacy.md)
 
 ## Optional

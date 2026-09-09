@@ -36,6 +36,44 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## A cabinet made almost entirely of other people’s sentences grew a search field, which is a machine for trimming other people’s sentences, and most of the work was teaching it when to refuse
+
+**A conventional search snippet is this site’s characteristic failure, industrialised.** Twenty words either side of the match, an ellipsis at each end, no maker and no citation — pointed at a page of prose that is a perfectly good convention, and pointed at eighty-two mounted quotations it manufactures exactly the artefact `ATTRIBUTIONS.md` exists to prevent, once per result. The whole feature is built around refusing to do that, and everything below follows from it.
+
+MountedA finding aid that will show you a whole quotation or none of it
+
+**Quoted text is indexed apart from ours, and the two are treated differently on purpose.** A `blockquote` becomes one record carrying its `cite` and its caption, and a result that matches inside one renders the quotation entire with its maker attached — never a window onto it. Our own commentary *is* cropped, because it is ours and the rest of it is one click away. Where one of our sentences has a short quotation set inside it, the crop widens rather than cut in: the generator records the character range of all 190 of them, and the window grows until nothing is half-covered.
+
+**Those ranges are proved rather than trusted, and the first version of them was wrong.** Offsets were recorded while the prose was being built and the prose was tidied afterwards, so every fence sat between four and fifteen characters downstream of the quotation it was supposed to protect — a guard reporting success while pointing at the wrong words, which is worse than no guard. The prose is now canonical as it is written and nothing may rewrite it later, and the generator slices the finished text at each recorded offset and throws unless it gets back exactly the characters it wrote. That check was made to fail before it was believed: offsets nudged by three characters, `changelog.html` reported by name, exit code 1.
+
+**The register is filed second, and the register is why.** At 25,359 words it is more than a quarter of the site, so ranked flat it would bury the sheets on any search naming a writer. Its entries come under their own heading below the sheets, wearing the kind chip they already wear. The same page’s own finding — that an accession headline is a sentence by design and averages 148 characters — is why the new sheet points at the register rather than reprinting its eighteen headlines.
+
+**An attribution we have retracted is not searchable.** Plain text has no vocabulary for *this is the reading we got wrong*, so an indexed `del` would surface a corrected attribution as though it were the live one — the same flattening that keeps `del` and `ins` as HTML in the Markdown siblings. Checked rather than assumed: the site’s one struck attribution is “PROSPERO”, and [the Miranda sheet](https://queering.earth/the-tempest) says Prospero thirteen times in prose besides, so nothing became unfindable. The correction itself is findable here, in ordinary words, which is where it should be read.
+
+**The sheet carries the whole cabinet as ordinary HTML**, page by page and section by section, generated into it between two markers the way the typefaces are written into the stylesheet. That is what a reader without JavaScript gets, and what the mirror indexes: [the finding aid](https://queering.earth/search) is the site’s one client-rendered page, and a landmark holding an empty results div would have said nothing to either. Nobody types that list, so no heading in it can drift from the heading it names.
+
+Label correctedThe privacy policy said there was nowhere on this site to type anything, and then there was
+
+[The policy](https://queering.earth/privacy) is a binding statement of practice, which is why `check-metadata.mjs` enforces the third-party claim in it rather than trusting anybody’s memory. It also carried a sentence no gate can see: “There is nowhere on this site to type anything, so there is nothing you could submit.” True when it was written on 9 September and false a few hours later, in the same afternoon, by us.
+
+**So the field was designed around the sentence rather than the sentence rewritten around the field.** The searching happens in the reader’s browser against a file it has already fetched from this domain; there is no search server and no third party, and the policy now has a section of its own saying so. Nothing is remembered between visits, and the two view preferences remain the only two things this site stores.
+
+**The query is in the fragment, not a query string, and that is the part worth keeping.** The ordinary way to make a search shareable is `?q=` — which a browser sends, so every term anybody typed would land in the hosting log the policy describes two sections earlier. On a site about queerness, illness and naming yourself, that log would be the most revealing thing here by a wide margin. Browsers never send the part after the `#`, so `/search#q=lavender` is shareable, bookmarkable, and reaches nobody. The form is also hidden until its script runs, because a form without its script would submit to this address *with* a query string and undo the whole decision.
+
+CabinetThe gold stayed on the mend, and the mark that says “found” went onto a rule
+
+The first draft highlighted a match the way everything highlights a match: a wash of marigold behind the word. **It failed twice, and each failure is one of this cabinet’s own rules arriving in a new component.**
+
+**It failed the drawer, by measurement.** Marigold at 0.30 over `--qe-paper` composites to 11.2:1 against the ink and passes comfortably. The same wash over `--qe-cab-paper` composites to 6.94:1, and every alpha above it is worse — because lightening a dark ground moves it *towards* light ink. That is the gating-surface inversion the stylesheet already warns about for cards, met again from the other side. No alpha of marigold clears 7:1 in the cabinet.
+
+**And it failed the seam rule, which is the one that mattered.** `--qe-marigold` is spent on mends: a re-determination, a restored attribution, the provenance line of a corrected sheet. A search hit is not a repair, and a gold mark on a page nobody corrected is decoration asserting a fact — the failure that makes the real mends unfindable. So the mark is a **rule under the word and nothing behind it**, in verdigris, which nothing else here has claimed. The colour goes on the rule and never on the glyph, and the ink keeps 14.3:1 and 12.8:1 untouched in both grounds with no compositing left to measure.
+
+**The new capability is not in `queering.js`.** That file may derive navigation from the DOM and may never create words, and a result is a sentence from another page put onto this one, however carefully. Widening the boundary to fit would have cost the boundary — so the search code lives in its own file loaded by the one page that needs it, and a reader of a sheet downloads neither it nor the 357 KB index. It still writes no label of its own: every word a searcher sees is authored in `search.html` and cloned, the way the index by sheet clones an entry’s existing chip.
+
+**Two entity tables became one, and one page order became one.** The new generator needed the same tokenizer, the same comment stripping and the same case-sensitive entity table the Markdown generator has — and that table is the reason: it knows `&THORN;` from `&thorn;` because the sheets quote Old English, and a second copy would be a lookup one tool learns and the other does not. Both now read from `tools/html.mjs`, and the editorial page order that `/llms.txt` and the new manifest both need lives once in `tools/pages.mjs`. The refactor was proved by the freshness gate: it regenerates and compares, so a green run is a byte-identical run.
+
+2026 · 9 September
+
 ## The site was measured against somebody else’s specification, and the first thing it found was a defect this cabinet had already named, already fixed one layer up, and never thought to look for underneath
 
 Audited against [The Website Specification](https://specification.website/) — the whole `required` tier, thirty-six items across ten categories, plus all twenty-one `agent-readiness` items at every status. Eight required findings, twenty-two verified passes, five items that genuinely do not apply here, and one that needs field data this site may not have yet two days after going live. The full working is in `AUDIT.md` in [the repository](https://github.com/Stimpunks/Queering-Earth), and it is a findings document rather than a fix list.
@@ -841,6 +879,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [A Waste Garden, Flowering at Its Will](https://queering.earth/flower-codes) Sheet No. 7
 
 ### [The Preferred Flower of Life](https://queering.earth/monotropa-uniflora) Sheet No. 8
+
+### [Find a word in the cabinet](https://queering.earth/search) the finding aid
 
 ### [Queering.Earth](https://queering.earth/) the plate
 

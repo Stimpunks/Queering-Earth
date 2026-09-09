@@ -220,6 +220,20 @@
   /* The shadow a lifted sheet casts. Near-black on paper; on the cabinet ground
      a near-black shadow is invisible, so this is a token and not a literal. */
   --qe-shade: rgba(36, 31, 26, 0.55);
+  /* THE FOUND MARK, and it is a RULE rather than a wash, for two separate reasons
+     that were each found by measuring rather than by taste.
+       · A tint under the word fails in the drawer. Marigold at 0.30 over --qe-paper
+         composites to 11.2:1 against the ink and passes comfortably; the same wash
+         over --qe-cab-paper composites to 6.94:1, and every alpha above it is worse,
+         because lightening a dark ground moves it TOWARDS light ink. That is the
+         gating-surface inversion this file warns about, arriving in a new component.
+         The colour goes on the rule and never on the glyph — and never under it.
+       · It is not marigold. Marigold is the seam token: a re-determination, a
+         restored attribution, a corrected sheet. A search hit is not a repair, and
+         spending the gold on one would be a gold join on a sheet nobody corrected,
+         which is what makes the real mends unfindable. Verdigris is not spoken for,
+         and a reader's own mark on somebody else's page is the right register for it. */
+  --qe-found: var(--qe-verdigris);
 
   --qe-measure: 34rem;       /* ~66 characters at the body size */
   --qe-gutter: clamp(1.25rem, 5vw, 3rem);
@@ -2630,4 +2644,308 @@ html.plain .qe-index-sheet { font-variation-settings: normal; font-weight: 700; 
      of paper the reader is holding is a list of things they already have. */
   .qe-sheet-index { display: none; }
   .qe-index-link { display: none; }
+}
+
+/* ─────────────────────────────────────────────── the finding aid
+ *
+ * /search only, and everything here is scoped so it costs a sheet nothing.
+ *
+ * THREE SURFACES, EACH EARNING ITS TIER — the rule the fifteen-lookalike-panels
+ * audit produced, applied to a page made almost entirely of new panels:
+ *
+ *   · THE FIELD is RULED. It is the instrument this sheet mounts, and the one
+ *     object on the page a reader is meant to reach for. A card inside a rule box
+ *     is how this cabinet says "a thing is mounted here".
+ *   · THE COUNT LINE is RULED OFF. Hairlines above and below, no fill. It is the
+ *     page talking about its own arrangement — how many, of what, for which word —
+ *     which is tier three exactly, the same as the register's housekeeping. Rules
+ *     and not a tint, because a tint under text is the measurement problem.
+ *   · A RESULT is BARE. Space only. Twenty of them in boxes would be twenty
+ *     specimens, and they are not specimens — they are pointers to elsewhere. The
+ *     heading rank and the space do the work, which is what the default tier is for.
+ *   · A QUOTATION INSIDE A RESULT goes back to RULED, because it genuinely is a
+ *     mounted object, and it borrows .qe-specimen-label so it reads as the same kind
+ *     of thing it would be on the sheet it came from.
+ *
+ * NO MOTION, and this is the one place on the site where that is a rule rather than
+ * an omission. Everything else here draws itself on because growth is the idiom for
+ * arriving. A results list does not arrive, it REPLACES, on every keystroke — and
+ * animating text that is being replaced while somebody reads it is the opposite of
+ * what the motion rule is for. There is nothing to put inside a reduced-motion query
+ * because there is nothing to reduce.
+ *
+ * CORNERS SPREAD. The field takes --qe-corner-b and a result's quotation takes
+ * --qe-corner-c, so the two boxes a reader sees together are not the same box.
+ */
+
+/* ── the field */
+
+.qe-find {
+  margin: var(--qe-space-5) 0;
+  padding: var(--qe-space-3) var(--qe-space-3) var(--qe-space-2);
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-radius: var(--qe-corner-b);
+  box-shadow: 0 1px 0 var(--qe-paper-deep);
+}
+
+.qe-find-label {
+  display: block;
+  font-family: var(--qe-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  margin: 0 0 var(--qe-space-1);
+}
+
+.qe-find-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--qe-space-1);
+}
+
+.qe-find input[type="search"] {
+  flex: 1 1 14rem;
+  min-width: 0;
+  font: inherit;
+  font-size: 1.08rem;
+  line-height: 1.5;
+  padding: 0.45rem 0.6rem;
+  color: var(--qe-ink);
+  background: var(--qe-paper);
+  border: 1px solid var(--qe-rule);
+  border-radius: var(--qe-corner-chip);
+  /* The field is an instrument, not a specimen: no wonk, no lean, at any size. */
+  font-variation-settings: normal;
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* Placeholder text is a hint and not content, and it is the one string here that
+   cannot clear 7:1 without reading as a value already typed. Moss is the floor. */
+.qe-find input[type="search"]::placeholder { color: var(--qe-moss); opacity: 1; }
+
+.qe-find button {
+  font: inherit;
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  padding: 0.45rem 1.1rem;
+  color: var(--qe-card);
+  background: var(--qe-moss);
+  border: 1px solid var(--qe-moss);
+  border-radius: var(--qe-corner-chip);
+  cursor: pointer;
+}
+.qe-find button:hover { background: var(--qe-ink); border-color: var(--qe-ink); }
+
+.qe-find-note {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--qe-moss);
+  margin: var(--qe-space-1) 0 0;
+}
+
+/* ── the count line: ruled off, tier three */
+
+.qe-found { margin: var(--qe-space-5) 0 0; }
+
+.qe-found-count {
+  margin: 0 0 var(--qe-space-4);
+  padding: var(--qe-space-2) 0;
+  border-top: 1px solid var(--qe-rule);
+  border-bottom: 1px solid var(--qe-rule);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--qe-moss);
+}
+.qe-found-count b { color: var(--qe-ink); font-weight: 600; }
+.qe-found-count:empty { display: none; }
+
+/* ── a group of results */
+
+.qe-result-group { margin: 0 0 var(--qe-space-6); }
+.qe-result-group:last-child { margin-bottom: 0; }
+
+.qe-result-group h3 {
+  font-family: var(--qe-body);
+  font-variation-settings: normal;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  margin: 0 0 var(--qe-space-3);
+}
+
+/* ── a result: bare, the default tier */
+
+.qe-result { margin: 0 0 var(--qe-space-4); }
+.qe-result:last-child { margin-bottom: 0; }
+
+.qe-result-where {
+  margin: 0;
+  font-family: var(--qe-display);
+  font-size: 1.12rem;
+  line-height: 1.4;
+  font-variation-settings: "SOFT" 20, "WONK" 0;
+}
+html.plain .qe-result-where { font-variation-settings: normal; }
+
+.qe-result-link { color: var(--qe-rust); }
+
+/* The sheet number, in the slip idiom the cards already use. */
+.qe-result-no {
+  display: inline-block;
+  font-family: var(--qe-body);
+  font-variation-settings: normal;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--qe-moss);
+  margin-right: 0.45rem;
+  vertical-align: 0.18em;
+}
+/* A register result wears the chip its entry wears, so the two agree by construction. */
+.qe-result-where .qe-tag { margin-right: 0.45rem; vertical-align: 0.18em; }
+
+.qe-result-in {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--qe-moss);
+}
+
+.qe-result-snip {
+  margin: var(--qe-space-1) 0 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--qe-ink);
+}
+
+/* WHAT THE READER IS LOOKING FOR. A rule under the word and nothing behind it, so
+   the ink keeps its own ratio untouched — 14.3:1 in daylight, 12.8:1 in the drawer —
+   in every result and in every quotation, with no compositing to measure and no
+   second answer needed for the second ground. See --qe-found in :root for the two
+   measurements that ruled the wash out. text-decoration rather than a border because
+   it follows the word across a line break, which a border does not. */
+.qe-result mark {
+  background: none;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--qe-found);
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.2em;
+}
+
+/* ── a quotation inside a result: ruled, because it is a mounted object */
+
+.qe-result-quote {
+  margin: var(--qe-space-2) 0 0;
+  padding: var(--qe-space-2) var(--qe-space-3) var(--qe-space-2);
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-radius: var(--qe-corner-c);
+  box-shadow: 0 1px 0 var(--qe-paper-deep);
+}
+
+.qe-result-quote blockquote {
+  margin: 0;
+  font-family: var(--qe-display);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--qe-ink);
+  font-variation-settings: "SOFT" 30, "WONK" 0;
+  /* Verse arrives with its line breaks intact from the index, and they are the poem. */
+  white-space: pre-wrap;
+}
+html.plain .qe-result-quote blockquote { font-variation-settings: normal; }
+
+.qe-result-quote figcaption {
+  margin-top: var(--qe-space-2);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--qe-moss);
+  /* The caption is prose about the quotation and must not inherit pre-wrap. */
+  white-space: normal;
+}
+
+.qe-result-none {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--qe-ink);
+}
+
+/* ── the manifest: the whole cabinet, served as HTML
+ *
+ * Generated into search.html by tools/make-search-index.mjs, so nothing here is a
+ * second copy of a heading. Bare, like a result — it is a list of pointers, and
+ * boxing thirteen pages would put thirteen specimens on a page that mounts one.
+ */
+
+.qe-manifest-group {
+  font-family: var(--qe-body);
+  font-variation-settings: normal;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+  margin: var(--qe-space-5) 0 var(--qe-space-3);
+}
+
+.qe-manifest { list-style: none; margin: 0; padding: 0; }
+.qe-manifest > li { margin: 0 0 var(--qe-space-4); }
+.qe-manifest > li:last-child { margin-bottom: 0; }
+
+.qe-manifest-head {
+  margin: 0;
+  font-family: var(--qe-display);
+  font-size: 1.12rem;
+  line-height: 1.4;
+  font-variation-settings: "SOFT" 20, "WONK" 0;
+}
+html.plain .qe-manifest-head { font-variation-settings: normal; }
+.qe-manifest-head a { color: var(--qe-rust); }
+
+.qe-manifest-no,
+.qe-manifest-kind {
+  font-family: var(--qe-body);
+  font-variation-settings: normal;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--qe-moss);
+  vertical-align: 0.18em;
+}
+
+.qe-manifest-sub {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--qe-moss);
+}
+.qe-manifest-sub a { color: var(--qe-rust); }
+
+.qe-manifest-sections {
+  margin: var(--qe-space-1) 0 0;
+  padding-left: 1.4rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+.qe-manifest-sections li { margin: 0 0 0.2rem; }
+.qe-manifest-sections li:last-child { margin-bottom: 0; }
+/* Moss, not an accent: a marker is a glyph, and the colour goes on the rule and
+   never on the glyph. The register paid for this one already. */
+.qe-manifest-sections li::marker { color: var(--qe-moss); }
+.qe-manifest-sections a { color: var(--qe-rust); }
+
+@media print {
+  /* The field cannot be printed and the results are somewhere else on the site.
+     The manifest stays: on paper it is a table of contents, which is useful. */
+  .qe-find { display: none; }
+  .qe-found { display: none; }
+  .qe-manifest-head, .qe-manifest-sections a { color: #000; }
+  .qe-manifest-group, .qe-manifest-kind, .qe-manifest-no, .qe-manifest-sub { color: #222; }
 }

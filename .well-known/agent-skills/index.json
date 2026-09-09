@@ -6,7 +6,7 @@
       "type": "skill",
       "description": "Read and cite queering.earth. Markdown source endpoints, the attribution ledger, the accession register of corrected citations, and how to tell a checkable fact from a reading.",
       "url": "https://queering.earth/.well-known/agent-skills/queering-earth/SKILL.md",
-      "digest": "sha256:80002596644ba7e28d886715a068568c61b21ede11fadef793e73e571bff1616"
+      "digest": "sha256:2744e61a516e94c073bf8d03a24c6a644ba5e3ea92430661b137400e240ecad6"
     }
   ]
 }

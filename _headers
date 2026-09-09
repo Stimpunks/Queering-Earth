@@ -120,6 +120,19 @@
 /queering.js
   Cache-Control: public, max-age=300
 
+# ── The search index ──────────────────────────────────────────────────────────
+# 357 KB uncompressed and brotli'd to a fraction of it, fetched only by /search and
+# only once a reader types. Derived from the pages, so it goes stale exactly when
+# they change: the same ten minutes /llms.txt takes, for the same reason, and
+# stale-if-error because a finding aid that fails closed is worse than one a few
+# minutes behind.
+/search-index.json
+  Content-Type: application/json; charset=UTF-8
+  Cache-Control: public, max-age=600, stale-if-error=604800
+
+/queering-search.js
+  Cache-Control: public, max-age=300
+
 # ── The faces ─────────────────────────────────────────────────────────────────
 # Self-hosted since 2026-09-09 so the site makes no third-party request. The type is
 # set explicitly rather than trusted: production sends nosniff, and a font served as

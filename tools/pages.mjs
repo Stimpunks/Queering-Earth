@@ -1,0 +1,24 @@
+/**
+ * pages.mjs — the order a reader should meet these pages, and how they group.
+ *
+ * AUTHORED, not derived. These are editorial words and an editorial sequence: which
+ * pages are readings and which are the cabinet's own furniture is a judgement, and
+ * the order inside each group is the order somebody chose. Nothing can compute it.
+ *
+ * SHARED, so there is one copy. `make-markdown.mjs` builds /llms.txt from this and
+ * `make-search-index.mjs` builds the finding aid's manifest from it. Kept separately
+ * they would drift, and the drift would be silent in the worst direction: a new sheet
+ * added to one and not the other is a sheet that is announced to agents and missing
+ * from the reader's index, or the reverse.
+ *
+ * A NEW SHEET GOES IN A GROUP. make-markdown.mjs throws on a page in none, which is
+ * the reminder.
+ */
+export const GROUPS = [
+  ['The readings', ['on-being-ill', 'coming-to-terms', 'promises-like-pie-crust', 'invention-of-normal',
+                    'the-tempest', 'wild-nights', 'flower-codes', 'monotropa-uniflora']],
+  ['The cabinet itself', ['index', 'design', 'changelog', 'search', 'privacy']],
+];
+
+/** The register keeps its own back matter, and the finding aid defers to it. */
+export const REGISTER = 'changelog';

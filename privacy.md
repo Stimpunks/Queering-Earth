@@ -15,7 +15,7 @@ generated_by: "tools/make-markdown.mjs from the page's own <main> landmark"
 
 Almost nothing, and this is the whole of it.
 
-This is the privacy policy, and it is short because there is little to describe. This site is a folder of files on a web host. It runs no analytics, sets no cookies, has no forms, no accounts, no comments, and no advertising, and it makes **no requests to anybody else’s server**. Two things nevertheless happen when you read a page, and both are below.
+This is the privacy policy, and it is short because there is little to describe. This site is a folder of files on a web host. It runs no analytics, sets no cookies, has no accounts, no comments, and no advertising, and it makes **no requests to anybody else’s server**. There is one field on the whole site, on [the finding aid](https://queering.earth/search), and it never submits anywhere — see below. Two things nevertheless happen when you read a page, and both are below.
 
 Last updated 9 September 2026. Any change to this page gets an entry in [the accession register](https://queering.earth/changelog), the same as a correction to a sheet — so “we may update this policy from time to time” is not something we have to ask you to accept on trust.
 
@@ -44,8 +44,18 @@ We do not use those logs for analytics and we do not build anything from them. T
 - **No analytics of any kind.** No page-view counter, no tag manager, no heatmap, no session recording. We do not know how many people read this.
 - **No cookies.** The word `document.cookie` does not appear anywhere in this site’s code, which is why there is no consent banner: there is nothing to consent to, and a banner would be theatre.
 - **No third-party requests.** Until 9 September 2026 the pages loaded their two typefaces from Google’s font CDN, which told Google your IP address and user agent on every page load, before you had read a word. **The fonts are now served from this domain** and that request is gone. It was the only one.
-- **No forms, accounts, or comments.** There is nowhere on this site to type anything, so there is nothing you could submit.
+- **No accounts and no comments**, and **nothing that submits**. There is exactly one place on this site to type: the search field on [the finding aid](https://queering.earth/search). It has no server behind it. What you type is matched against a file your browser has already downloaded, inside your browser, and it is never sent anywhere — not to us, because there is no us to send it to. Until 9 September 2026 this line said there was nowhere on the site to type anything at all; the field is new and the line was corrected in the same change that added it, which is [in the register](https://queering.earth/changelog#a-2026-09-09-search).
 - **No advertising, and nothing sold or shared.** There is no commercial arrangement here to share anything under.
+
+## What you search for
+
+[The finding aid](https://queering.earth/search) searches this whole site, and **it does the searching in your browser**. Your browser fetches one file from this domain — `search-index.json`, the text of every page — and everything after that happens on your machine. There is no search server, no search API, and no third party involved, so the request our host logs is a request for that one file and nothing about what you were looking for.
+
+**The search term is not in the address, and that is deliberate.** The usual way to make a search shareable is `?q=`, which is part of the URL a browser sends — so every term anybody typed would be written into the hosting log described above. Here it goes after the `#` instead: `/search#q=lavender`. **Browsers never send the part after the `#` to a server.** The link is still shareable and still bookmarkable, and the word you searched for reaches nobody, including us.
+
+Nothing about a search is remembered. There is no history of recent searches, nothing added to local storage, and the two values described at the top of this page are still the only two things this site stores.
+
+One thing worth being plain about, since it is the general case and not ours: **your browser’s own address bar may remember the address, fragment and all.** That is your browser’s history on your own device, not something this site does or can see — but on a shared machine it is the copy that would tell somebody what you looked up.
 
 ## Links to other places
 

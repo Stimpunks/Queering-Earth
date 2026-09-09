@@ -27,7 +27,31 @@ licence. They are generated from the page's own `<main>` landmark, so they canno
 with it. Two index files:
 
 - [`/llms.txt`](https://queering.earth/llms.txt) — every page as title, summary, and both URLs.
-- [`/llms-full.txt`](https://queering.earth/llms-full.txt) — the whole site concatenated, about 320 KB.
+- [`/llms-full.txt`](https://queering.earth/llms-full.txt) — the whole site concatenated, about 360 KB.
+- [`/search-index.json`](https://queering.earth/search-index.json) — the same prose split into
+  addressed sections, and the one place quoted text is separated from ours. See below.
+
+## Finding one passage, and the field that separates ours from theirs
+
+`/search-index.json` is what [the finding aid](https://queering.earth/search) reads. It is
+derived from the same `<main>` landmarks, and its unit is a **section**, so a record points
+at `/wild-nights#compass` rather than at nine thousand words. Each record carries:
+
+```
+text     our prose for that section, as one string
+quoted   [start, end] character ranges of every short quotation set inside that prose
+quotes   whole quotations: { text, cite, source }, and { label } where the verse is ours
+```
+
+**`quotes` and `quoted` are the useful part of this file for you, and the reason to prefer
+it over the Markdown for anything you intend to requote.** Everything in `quotes` is somebody
+else's words with their citation attached, and everything in `quoted` marks where somebody
+else's words sit inside ours. The Markdown flattens that distinction; this does not.
+
+Two omissions to know about: a retracted attribution is **not** in the index — only the
+restored half of a correction is indexed, so a `del` on a sheet is absent here and the
+correction is described in prose in [the register](https://queering.earth/changelog) instead.
+And the register's own entries are records too, marked by their page's `register: true`.
 
 **Addresses are extensionless.** `/on-being-ill`, never `/on-being-ill.html` — the latter
 301s. Once published, an address here does not change.

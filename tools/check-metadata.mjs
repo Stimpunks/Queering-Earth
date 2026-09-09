@@ -54,8 +54,10 @@
  *    a diff.
  *
  * (1), (6) and (8) are all freshness, which is why they live in one gate: every derived
- * artefact here — Markdown, indexes, feed, plate variants — is only true until somebody
- * edits a source and does not re-run the tool.
+ * artefact here — Markdown, indexes, feed, the search index, the finding aid's manifest,
+ * plate variants — is only true until somebody edits a source and does not re-run the
+ * tool. The search index is the newest and fails the most quietly: a reworded heading
+ * leaves /search pointing at a name no page uses, and the page still reads perfectly.
  */
 
 import { readFile, readdir, stat } from 'node:fs/promises';
@@ -80,23 +82,38 @@ const GENERATED = [
   ...files.map((f) => f.replace(/\.html$/, '.md')),
   'llms.txt', 'llms-full.txt', 'feed.xml',
 ];
-const before = new Map();
-for (const g of GENERATED) {
-  try { before.set(g, await readFile(join(ROOT, g), 'utf8')); }
-  catch { fail('stale', `${g} does not exist — run: node tools/make-markdown.mjs`); }
-}
+const { writeFile } = await import('node:fs/promises');
 
-if (before.size === GENERATED.length) {
-  await promisify(execFile)(process.execPath, [join(ROOT, 'tools', 'make-markdown.mjs')], { cwd: ROOT });
-  const { writeFile } = await import('node:fs/promises');
-  for (const [g, was] of before) {
+/** Snapshot, run the generator, compare, put the tree back, and report. */
+async function freshness(tool, outputs) {
+  const was = new Map();
+  for (const g of outputs) {
+    try { was.set(g, await readFile(join(ROOT, g), 'utf8')); }
+    catch { fail('stale', `${g} does not exist — run: node tools/${tool}`); }
+  }
+  if (was.size !== outputs.length) return;
+
+  await promisify(execFile)(process.execPath, [join(ROOT, 'tools', tool)], { cwd: ROOT });
+  for (const [g, old] of was) {
     const now = await readFile(join(ROOT, g), 'utf8');
-    if (now !== was) {
-      fail('stale', `${g} is not what the generator writes today — run: node tools/make-markdown.mjs`);
-      await writeFile(join(ROOT, g), was); // leave the tree as we found it
+    if (now !== old) {
+      fail('stale', `${g} is not what the generator writes today — run: node tools/${tool}`);
+      await writeFile(join(ROOT, g), old); // leave the tree as we found it
     }
   }
 }
+
+await freshness('make-markdown.mjs', GENERATED);
+
+/* THE SEARCH INDEX AND THE FINDING AID'S MANIFEST, and search.html is the one on this
+ * list that is not wholly generated. Its prose is authored and its manifest is written
+ * in between two markers, the make-fonts.mjs idiom — so a stale one is a page whose
+ * index of the cabinet disagrees with the cabinet. That fails in the direction nobody
+ * checks: the sheet still reads perfectly, and it points at a heading that has been
+ * reworded or a section that no longer exists. Comparing the whole file catches a
+ * drifted manifest and leaves the authored prose alone, because the generator only
+ * ever rewrites what is between the markers. */
+await freshness('make-search-index.mjs', ['search-index.json', 'search.html']);
 
 /* ── 2. the Agent Skill digest ─────────────────────────────────────────────────── */
 const SKILL = '.well-known/agent-skills/queering-earth/SKILL.md';
