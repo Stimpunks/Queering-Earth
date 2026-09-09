@@ -80,12 +80,16 @@ that are text (`--qe-ink` 14.3:1, `--qe-moss` 7.8:1, `--qe-rust` 7.0:1 in daylig
 7.2:1, 7.3:1 in the cabinet) are chosen for it. The decorative tokens — lichen, verdigris,
 marigold, coral, violet — **are not for text**, in either ground.
 
-**`check-contrast.mjs` gates at WCAG AA (4.5:1), NOT at 7:1.** The house target is held by
-hand-chosen tokens and by nothing else, so do not cite the script as evidence of it. Logged
-open in `DECISIONS.md` — and cashed in on 2026-09-09, when a recessed `--qe-paper-deep`
-panel that drops `--qe-moss` to 6.90:1 and `--qe-rust` to 6.21:1 in daylight passed the
-script clean. **It also cannot see a `::marker`**, which is how the register's entry bullets
-sat at 2.15:1 unreported. Measure by hand when you move a text-bearing surface.
+**`check-contrast.mjs` gates at the house 7:1** (4.5:1 for large text) as of 2026-09-09, in
+two tiers reported apart: under WCAG AA is `FAIL`, between AA and 7:1 is `UNDER`, and both
+exit non-zero. `--aa` drops to AA only and says loudly that it did — use it to put an
+argument for a specific colour on the record, not to get a run to go green.
+
+**What it still cannot see, so measure these by hand.** A `::marker` is not an element with
+its own text, which is how the register's entry bullets sat at 2.15:1 unreported — the rule
+that catches them is editorial: **the colour goes on the rule and never on the glyph**. And a
+**texture**, because the tool composites computed colour pairs; see the patina rule below. A
+pass is not permission for either.
 
 ### A new panel picks one of three surfaces
 
@@ -259,12 +263,18 @@ Run before shipping. All three are browser-free or Chrome-only; nothing needs `n
 ```bash
 node tools/check-markup.mjs     # parser-rewriting markup, duplicate ids, exactly one <main>
 node tools/check-sitemap.mjs    # every page listed once, every entry resolves
-node tools/check-contrast.mjs   # WCAG contrast in BOTH grounds and under print emulation
+node tools/check-contrast.mjs   # 7:1 in BOTH grounds and under print emulation, two tiers
 ```
 
 Star Stuff has five more (`check-classes`, `check-overlap`, `check-sheets`, `check-embeds`,
 `check-card-order`). **Port one when the failure it catches becomes possible here** — not
 before. A check that cannot fail is a check nobody reads.
+
+And **make a new gate fail before believing it.** The 7:1 tier was proved by putting the
+recessed `--qe-paper-deep` panel back and confirming it reported 6.90:1 and 6.21:1 as `UNDER`,
+by injecting a 2.15:1 colour and confirming that reported as `FAIL` on the other tier, and by
+checking both exit codes — then reverting. A guard nobody has watched fail is a guard nobody
+should trust.
 
 ## House voice
 

@@ -128,7 +128,8 @@ A `--qe-paper-deep` fill was the obvious answer and was tried first. In daylight
 `--qe-moss` to 6.90:1 and `--qe-rust` to 6.21:1 — under the house 7:1, over WCAG AA, and
 therefore **passed `check-contrast.mjs` clean**. This is the open item logged the day before
 (the guard gates at AA, the 7:1 target is held by hand-chosen tokens and nothing else)
-arriving as a real near-miss. The item stays open; it now has a case attached.
+arriving as a real near-miss. **It closed the same day**: the gate was raised to 7:1 in two
+tiers, and the site passed it without a colour changing. See that entry below.
 
 A second thing the guard cannot see turned up in the same pass: **a `::marker` is not an
 element with text, so nothing measures it.** Dropping `.qe-untidy`'s fill took its bullets
@@ -1177,16 +1178,51 @@ they have not expressed, and clicking writes the opposite one down.
 total, which would have made it exactly the "check nobody reads" this repo keeps warning
 about. It is in the gate, and it was verified by breaking a token on purpose.
 
-### `tools/check-contrast.mjs` gates at WCAG AA, not at the house 7:1 (2026-09-08, open)
+### `tools/check-contrast.mjs` gates at WCAG AA, not at the house 7:1 (2026-09-08, **closed 2026-09-09**)
 
 Found while trying to make the new cabinet pass fail: a card lifted to 6.0:1 sailed through.
 `CLAUDE.md` names the 7:1 target and `check-contrast.mjs` in the same breath, which reads as
-though the script enforces the house standard. It does not — `needFor()` returns 4.5, or 3.0
-for large text, and the summary line says AA in as many words. **The 7:1 figure is held by
+though the script enforces the house standard. It did not — `needFor()` returned 4.5, or 3.0
+for large text, and the summary line said AA in as many words. **The 7:1 figure was held by
 hand-chosen tokens and by nothing else.**
 
-This is **logged and not fixed.** Raising the gate is its own job: it needs a run to find out
-what it newly fails, a decision about the decorative-adjacent text that will surface, and
-possibly a two-tier report (AA gating, 7:1 warning) rather than a single threshold. Doing it
-inside the cabinet work would have buried both. The thing to avoid meanwhile is *citing*
-the script as evidence of 7:1 compliance, which it is not.
+Logged and deliberately not fixed at the time: raising the gate needed a run to find out what
+it newly failed, a decision about the decorative-adjacent text that would surface, and
+possibly a two-tier report rather than a single threshold. Doing it inside the cabinet work
+would have buried both.
+
+**Closed the next day, and the reason it closed cheaply is that the wish got called in.** The
+recessed `--qe-paper-deep` panel built during the surfaces work drops `--qe-moss` to 6.90:1
+and `--qe-rust` to 6.21:1 in daylight and **passed this script clean**. That is the predicted
+failure, arriving in the working tree rather than in a hypothetical.
+
+Each of the three worries turned out to be answerable:
+
+- **What does it newly fail?** Nothing. All 9,142 text elements clear 7:1 (4.5:1 large) in
+  both grounds and under print emulation. The gate could be raised without a single colour
+  changing — which is the whole argument for raising it now rather than later, when it would
+  arrive tangled with whatever it first caught.
+- **The decorative-adjacent text.** Did not surface, because this site already keeps colour on
+  rules and off letters. The two faults of that kind found the same day — the register's
+  `::marker` bullets at 2.15:1, and `.qe-untidy`'s at 3.89:1 — are **invisible to this tool
+  either way**: a `::marker` is not an element with its own text, so nothing measures it. That
+  is now written into the tool's header and `CLAUDE.md` as a known blind spot rather than left
+  to be rediscovered.
+- **Two tiers or one threshold?** Two, reported apart. Under AA is `FAIL` and is illegible;
+  between AA and 7:1 is `UNDER` and is readable-but-under-the-house-number. Both exit
+  non-zero. Folding them into one count would hide which kind just landed, and they are
+  genuinely different bugs.
+
+`--aa` gates at AA only and prints a line saying the house target is not being measured in
+that run. It exists so that an argument for a specific colour is an argument somebody makes
+on the record, rather than a two-line edit to `needFor()` that nobody reviews.
+
+**Verified by making it fail before believing it**, which is this repo's rule for a new gate:
+the recessed panel was put back and reported 6.90:1 and 6.21:1 as `UNDER` with exit 1; a
+2.15:1 colour was injected and reported as `FAIL` on the other tier with exit 1; `--aa` passed
+the same tree with exit 0 and said why. Then reverted, and the clean tree re-run.
+
+**One thing this does not fix.** A pass here is still not evidence about texture. The tool
+composites computed colour pairs, so grain under body text passes every number in it. That is
+a rule in `CLAUDE.md`, enforced by nothing, and it is the next thing on this list to become
+possible the day somebody reaches for a background image.

@@ -199,6 +199,18 @@
         </div>
       </div>
 
+      <div class="qe-entry qe-entry--cabinet">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The guard now measures the number this house publishes, and it was raised on the day the gap was nearly spent</span></div>
+        <div class="qe-entry-body">
+          <p>The style guide asks for <strong>7:1</strong>. For this site&rsquo;s whole life <code>check-contrast.mjs</code> gated at <strong>4.5:1</strong> &mdash; WCAG AA &mdash; with an entry in the decision log saying so and a line in the working notes warning, in as many words, not to cite the script as evidence of the house standard. <strong>A stated principle nobody measures is a wish.</strong></p>
+          <p>The wish got called in this morning. The recessed panel described two entries above drops moss to <strong>6.90:1</strong> and rust to <strong>6.21:1</strong> in daylight, and <strong>passed the guard clean</strong>, because 6.21 clears AA. It was built, measured by hand, and thrown away &mdash; but it would have shipped on a day when nobody thought to measure by hand.</p>
+          <p>So the gate moved, in <strong>two tiers reported apart</strong>. Under AA reads <code>FAIL</code> and means illegible. Between AA and 7:1 reads <code>UNDER</code> and means readable, and beneath the number this site publishes. Both exit non-zero; one count would have hidden which kind had just landed, and they are different bugs. <code>--aa</code> drops to AA and prints a line saying the house target is not being measured &mdash; so that an argument for a particular colour is an argument somebody makes on the record, rather than a two-line edit nobody reviews.</p>
+          <p><strong>It cost nothing, which is the argument for doing it today.</strong> All <strong>9,142</strong> text elements on the ten pages clear 7:1 in both grounds and under print emulation, so the gate could be raised without a single colour changing. Raised later it would have arrived tangled with whatever it first caught.</p>
+          <p><strong>Made to fail before it was believed</strong>, the same way the cabinet pass was: the recessed panel was put back and reported 6.90 and 6.21 as <code>UNDER</code>; a 2.15:1 colour was injected and reported as <code>FAIL</code> on the other tier; <code>--aa</code> passed the same tree and said why. Exit codes checked on all three. Then reverted.</p>
+          <p>Two blind spots are now written into the tool&rsquo;s own header rather than left to be rediscovered. <strong>A <code>::marker</code> is not an element with text</strong>, so nothing measures it &mdash; that is how the bullets in the entry above sat at 2.15:1. And <strong>a texture is invisible to it entirely</strong>, because it composites computed colour pairs. A pass here is not permission for either.</p>
+        </div>
+      </div>
+
       <div class="qe-entry qe-entry--label">
         <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">The wash was made to tile so that no long sheet had clean paper through the middle, and it drew a visible line across the page at every repeat</span></div>
         <div class="qe-entry-body">

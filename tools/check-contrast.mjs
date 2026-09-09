@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * check-contrast.mjs — measures WCAG text contrast on every page, on SCREEN in
- * both grounds and under PRINT emulation.
+ * check-contrast.mjs — measures text contrast on every page against the HOUSE
+ * TARGET of 7:1, on SCREEN in both grounds and under PRINT emulation.
  *
  * WHY THIS EXISTS
  * CLAUDE.md says three things that only mean something if a script enforces them:
@@ -13,6 +13,12 @@
  * re-derived from scratch is a check nobody runs.
  *
  * WHAT IT MEASURES
+ *   0. TWO TIERS, and the gate is the house number. Under WCAG AA (4.5:1, or 3:1
+ *      for large text) is ILLEGIBLE and reported as a failure. Between AA and the
+ *      house target of 7:1 (4.5:1 large) is a SHORTFALL, reported apart and gating
+ *      just the same: readable, and under the number this house publishes. They are
+ *      counted separately on purpose — one count would hide which kind just landed.
+ *      `--aa` drops to AA only and says loudly that it did.
  *   1. Every HTML element with its own text, composited against its *real*
  *      ancestor background stack — not against the token you assume applies.
  *   2. Every SVG <text>/<tspan> fill, composited against the shapes actually
@@ -57,6 +63,27 @@
  *   node tools/check-contrast.mjs                      # every *.html in the repo root
  *   node tools/check-contrast.mjs bone-song-zine.html  # just these
  *   node tools/check-contrast.mjs --check              # exit non-zero on any failure
+ *   node tools/check-contrast.mjs --check --aa         # gate at WCAG AA only
+ *
+ * WHY THE GATE IS 7:1 AND NOT AA
+ * The house style guide asks for 7:1. For this tool's first weeks that number was
+ * held by hand-chosen tokens and by nothing else — DECISIONS.md carried it as an
+ * open item and CLAUDE.md warned in as many words not to cite this script as
+ * evidence of it. On 2026-09-09 the gap was nearly spent for real: a recessed
+ * --qe-paper-deep panel, built and very nearly shipped, drops --qe-moss to 6.90:1
+ * and --qe-rust to 6.21:1 in daylight and passed this script clean, because 6.21
+ * clears AA. A stated principle nobody measures is a wish; this was the wish being
+ * called in. The gate moved the same day, and the site passed it unchanged.
+ *
+ * WHAT IT STILL CANNOT SEE, and both were found by hand on the same day:
+ *   · A ::marker is not an element with its own text, so nothing here measures it.
+ *     The register's entry bullets sat at 2.15:1 unreported. The rule that catches
+ *     this class of fault is editorial, not mechanical: the colour goes on the rule
+ *     and never on the glyph.
+ *   · A TEXTURE. This measures computed colour pairs, so a noise tile or a grain
+ *     image under body text varies effective background luminance per pixel and
+ *     passes every number below. CLAUDE.md forbids texture under text for exactly
+ *     this reason. Do not read a pass here as permission.
  *
  * --check matches build-search-index.mjs's convention: it is the gating mode, the
  * one to put in the ship routine. A plain run always exits 0 so an informational
@@ -73,6 +100,24 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PORT = 9412; // build-search-index.mjs holds 9411; different port so both can run
 const CHECK = process.argv.includes('--check');
+
+/* THE GATE IS THE HOUSE TARGET, 7:1, and not WCAG AA.
+   The Stimpunks style guide asks for 7:1, which is WCAG AAA — and for most of this
+   tool's life that number was held by hand-chosen tokens and by nothing else, with
+   an open item in DECISIONS.md saying so and a warning in CLAUDE.md not to cite this
+   script as evidence of it. On 2026-09-09 the gap was very nearly spent: a recessed
+   --qe-paper-deep panel that drops --qe-moss to 6.90:1 and --qe-rust to 6.21:1 in
+   daylight passed this script clean, because 6.21 clears AA. So the gate moved.
+
+   TWO TIERS, REPORTED APART, because they are different faults. Under AA is
+   ILLEGIBLE and is a bug in anybody's book. Between AA and the house target is a
+   SHORTFALL: readable, and under the number this house publishes. Both fail --check;
+   folding them into one count would hide which kind just landed.
+
+   --aa gates at AA only, and exists so that an argument for a specific colour is an
+   argument somebody makes on the record rather than a two-line edit to this file.
+   It prints what it is letting through. */
+const AA_ONLY = process.argv.includes('--aa');
 
 /* A fixed viewport, so a run is reproducible and so @media width rules resolve to
    the desktop layout every time. A narrow viewport is a different layout and could
@@ -263,8 +308,11 @@ const MEASURE = String.raw`((mode) => {
       .replace(/\s+/g, ' ')
       .trim();
 
-  /* WCAG large-text exemption: 24px, or 18.66px at bold. */
-  const needFor = (px, weight) => (px >= 24 || (weight >= 700 && px >= 18.66) ? 3.0 : 4.5);
+  /* WCAG large-text exemption: 24px, or 18.66px at bold. Two tiers — AA is the
+     floor, HOUSE (AAA) is the gate. See the note beside AA_ONLY above. */
+  const isLarge = (px, weight) => px >= 24 || (weight >= 700 && px >= 18.66);
+  const needAA = (px, weight) => (isLarge(px, weight) ? 3.0 : 4.5);
+  const needHouse = (px, weight) => (isLarge(px, weight) ? 4.5 : 7.0);
 
   /* WCAG 1.4.3 exempts "text that is part of an inactive user interface component".
      A disabled control is off, and WCAG does not ask it to meet the ratio. Exempt,
@@ -296,25 +344,30 @@ const MEASURE = String.raw`((mode) => {
     el.matches(DECORATIVE) && el.closest('[aria-hidden="true"]') !== null;
 
   const fails = [];
+  const shortfalls = [];
   const unmeasured = [];
   let checkedCss = 0, checkedSvg = 0, overImage = 0, exempt = 0, decorative = 0;
 
   const record = (kind, el, text, fg, bg, px, weight, note) => {
-    const need = needFor(px, weight);
+    const aa = needAA(px, weight);
+    const house = needHouse(px, weight);
     const r = ratio(fg, bg);
-    if (r >= need) return;
-    fails.push({
+    if (r >= house) return;
+    const row = {
       kind,
       tag: el.tagName.toLowerCase(),
       cls: String(el.getAttribute('class') || '').slice(0, 36),
       text: text.slice(0, 44),
       ratio: Math.round(r * 100) / 100,
-      need,
+      need: r < aa ? aa : house,
       fg: show(fg),
       bg: show(bg),
       px: Math.round(px * 10) / 10,
       note: note || '',
-    });
+    };
+    /* Under AA is illegible; between AA and the house target is a shortfall. One
+       element lands in exactly one of the two, so the counts never double-count. */
+    (r < aa ? fails : shortfalls).push(row);
   };
 
   /* ── 1. HTML text ───────────────────────────────────────────────────────────
@@ -455,7 +508,7 @@ const MEASURE = String.raw`((mode) => {
     }
   }
 
-  return JSON.stringify({ mode, fails, unmeasured, checkedCss, checkedSvg, overImage, exempt, decorative });
+  return JSON.stringify({ mode, fails, shortfalls, unmeasured, checkedCss, checkedSvg, overImage, exempt, decorative });
 })`;
 
 /* ─── minimal CDP client ──────────────────────────────────────────────────────
@@ -685,23 +738,34 @@ async function main() {
          of itself is indistinguishable from a healthy one. Counts of what was
          actually measured are the part that makes a silent regression visible. */
       const s = out.screen, c = out.cabinet, p = out.print, pb = out.printBg;
+      const short = (r) => (AA_ONLY ? [] : r.shortfalls);
       const bad = s.fails.length + c.fails.length + p.fails.length;
+      const low = short(s).length + short(c).length + short(p).length;
       const un = s.unmeasured.length + c.unmeasured.length + p.unmeasured.length;
+      /* Three states, not two. A page under AA says FAIL; a page that clears AA and
+         misses 7:1 says UNDER — a distinct word, because it is a distinct fault and
+         the one this tool spent its first weeks unable to see. */
+      const verdict = notMeasured ? 'UNREAD' : bad ? 'FAIL  ' : low ? 'UNDER ' : 'ok    ';
+      const n = (res) => {
+        const t = res.fails.length + short(res).length;
+        return String(t).padStart(3);
+      };
       process.stdout.write(
-        `  ${f.padEnd(42)} ${notMeasured ? 'UNREAD' : bad ? 'FAIL  ' : 'ok    '}` +
-          `  screen ${String(s.fails.length).padStart(3)}/${String(s.checkedCss + s.checkedSvg).padEnd(4)}` +
-          `  cabinet ${String(c.fails.length).padStart(3)}/${String(c.checkedCss + c.checkedSvg).padEnd(4)}` +
-          `  print ${String(p.fails.length).padStart(3)}/${String(p.checkedCss + p.checkedSvg).padEnd(4)}` +
+        `  ${f.padEnd(42)} ${verdict}` +
+          `  screen ${n(s)}/${String(s.checkedCss + s.checkedSvg).padEnd(4)}` +
+          `  cabinet ${n(c)}/${String(c.checkedCss + c.checkedSvg).padEnd(4)}` +
+          `  print ${n(p)}/${String(p.checkedCss + p.checkedSvg).padEnd(4)}` +
           `  svg ${String(s.checkedSvg).padStart(3)}` +
           (pb.fails.length ? `  +bg ${pb.fails.length}` : '') +
           (un ? `  ~${un} unmeasured` : '') +
           '\n'
       );
       for (const [label, res] of [['screen', s], ['cabinet', c], ['print', p]]) {
-        if (!res.fails.length) continue;
+        const rows = [...res.fails, ...short(res)];
+        if (!rows.length) continue;
         console.log(`    ${label}:`);
-        for (const x of res.fails.slice(0, 8)) console.log(detail(x));
-        if (res.fails.length > 8) console.log(`      … ${res.fails.length - 8} more`);
+        for (const x of rows.slice(0, 8)) console.log(detail(x));
+        if (rows.length > 8) console.log(`      … ${rows.length - 8} more`);
       }
     }
   } finally {
@@ -715,6 +779,7 @@ async function main() {
   const screenFails = tot('fails', 'screen');
   const cabinetFails = tot('fails', 'cabinet');
   const printFails = tot('fails', 'print');
+  const shortAll = AA_ONLY ? 0 : across((m) => tot('shortfalls', m));
   const checked = across((m) => sum('checkedCss', m) + sum('checkedSvg', m));
   const svgChecked = across((m) => sum('checkedSvg', m));
   const unmeasured = across((m) => tot('unmeasured', m));
@@ -727,8 +792,15 @@ async function main() {
     `\n${results.length} pages · ${checked.toLocaleString()} text elements measured ` +
       `(${svgChecked.toLocaleString()} SVG labels) · ` +
       `${screenFails} screen failure(s), ${cabinetFails} cabinet failure(s), ` +
-      `${printFails} print failure(s)`
+      `${printFails} print failure(s)` +
+      (AA_ONLY ? '' : ` · ${shortAll} under the house 7:1`)
   );
+  if (AA_ONLY) {
+    console.log(
+      'Gating at WCAG AA only (--aa). The house target is 7:1 and is NOT being measured\n' +
+        'in this run; do not cite it as evidence of the house number.'
+    );
+  }
   if (exempt) {
     console.log(
       `${exempt} inactive-control element(s) exempt under WCAG 1.4.3 (disabled prev/next buttons).`
@@ -796,6 +868,7 @@ async function main() {
   }
 
   const failures = screenFails + cabinetFails + printFails;
+  const under = shortAll;
   if (CHECK) {
     if (unread.length) {
       console.error(`\nFAIL — ${unread.length} page(s) not measured; the run is incomplete.`);
@@ -805,7 +878,20 @@ async function main() {
       console.error(`\nFAIL — ${failures} element(s) under WCAG AA (4.5:1, or 3.0:1 for large text).`);
       process.exit(1);
     }
-    console.log('\nPASS — every measured text element clears WCAG AA in both grounds and in print.');
+    if (under) {
+      console.error(
+        `\nFAIL — ${under} element(s) clear WCAG AA and miss the house target of 7:1\n` +
+          `       (4.5:1 for large text). Readable, and under the number this site publishes.\n` +
+          `       Fix the colour, or make the case and run with --aa.`
+      );
+      process.exit(1);
+    }
+    console.log(
+      AA_ONLY
+        ? '\nPASS — every measured text element clears WCAG AA in both grounds and in print.'
+        : '\nPASS — every measured text element clears the house target of 7:1 (4.5:1 for large\n' +
+          '       text) in both grounds and in print.'
+    );
     process.exit(0);
   }
   if (failures) {
