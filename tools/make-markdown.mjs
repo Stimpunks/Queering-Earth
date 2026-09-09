@@ -12,8 +12,22 @@
  * So nothing here is typed. Every `.md` file, and both index files, are DERIVED from
  * the page's own `<main>` landmark — the same landmark the SKS mirror reads, so the
  * Markdown and the mirror can never disagree about what a page says. This is the
- * `make-images.py` pattern: a tool run by hand, its output committed, and a gate
- * (`check-markdown.mjs`) that fails when the output is stale.
+ * `make-images.py` pattern: a tool run by hand, its output committed, and a gate that
+ * fails when the output is stale.
+ *
+ * THAT GATE IS `check-metadata.mjs`, NOT a `check-markdown.mjs`. This comment named the
+ * latter until 2026-09-09; no such file was ever written, because the check was built
+ * inside the metadata gate instead — where it belongs, since staleness here is one case
+ * of the same question that gate already asks about llms.txt, llms-full.txt and feed.xml.
+ * It regenerates into memory and compares, so the test is exact rather than an mtime
+ * guess, and it separately asserts that every page still advertises its sibling with
+ * rel=alternate. Both were verified firing on 2026-09-09.
+ *
+ * The wrong name was not harmless. Star Stuff read this header while porting the tool,
+ * looked for the file, did not find it, and published — in its changelog, its working
+ * notes and its ledger — that this site ships Markdown mirrors with no staleness check
+ * at all. It does not. A comment naming a file that does not exist is a claim, and this
+ * one was repeated by somebody who trusted it.
  *
  * WHAT IT IS NOT
  * It is not a general HTML-to-Markdown converter and must not become one. It handles
