@@ -232,7 +232,23 @@ Four kinds of entry, each with one accent token spent on a rule and **never on t
 sheet, its corrections, and the CSS it needed are one dated entry. See `DECISIONS.md` for why
 it is a register rather than a list of releases.
 
-### A long page gets contents, and the list is derived while the addresses are authored
+### Addresses are cheap; a contents list is furniture
+
+**These are two separate decisions and the first version of this rule conflated them.**
+
+- **Every `<h2>` on every page gets an authored `id` and a `.qe-anchor`.** No threshold. A
+  section a reader cannot link to is a section nobody can cite, and the register was italicising
+  three home-page section names it had no way to reach.
+- **A contents list goes only on a page long enough to want one**, and the page declares that
+  by including the container. Six pages have one; five do not.
+
+**The home page is the case that separates them.** Its own content *is* a contents list — the
+plate of eight numbered cards — so a `.qe-contents` above the prose would put two competing
+navigational lists on one page, and the one a reader wants is the plate. It is also the
+shortest page on the site at 1,362 words. **Addresses yes, contents no**, and `/#what-grows-here`
+is now a direct address for the plate itself.
+
+### A long page's contents list is derived while its addresses are authored
 
 `.qe-contents` — **On this sheet**, the within-page twin of `.qe-elsewhere`. A page opts in
 by including the empty `<nav>`; `queering.js` fills it from that page's own `<h2>`s.

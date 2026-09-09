@@ -600,7 +600,7 @@ Found while building the *Coming to Terms* sheet, in our own glossary entry for 
 and verified against neuroqueer.com.
 
 **Ryan's call: credit him, on the masthead.** It now reads *after Nick Walker*, linked to the
-book, with the full explanation in the "Queering is a verb" section where Walker already
+book, with the full explanation in [Queering is a verb](https://queering.earth/#queering-is-a-verb) where Walker already
 appears.
 
 **Why crediting was the right of the three options.** Helen may well have arrived at the

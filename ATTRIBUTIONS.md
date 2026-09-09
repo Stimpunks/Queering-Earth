@@ -138,7 +138,7 @@ an SKS hit. The object carries its own attribution in the corner. Read the corne
 
 ### Nick Walker — *Postnormal Possibilities*, and our masthead
 
-**Credited on:** `index.html` — the masthead, and the "Queering is a verb" section.
+**Credited on:** `index.html` — the masthead, and [Queering is a verb](https://queering.earth/#queering-is-a-verb).
 
 Not a quotation we made. A collision we found, and then said out loud.
 
@@ -910,8 +910,9 @@ inherited from a catalogue record describe the catalogue record.
 
 ### Pamela Demory — "to queer, then, may be to adapt", and the same sentence adapted by its own author
 
-**Quoted on:** `index.html`, in the sections *To queer is to adapt* and *The sentence adapts
-itself*. Four quotations from Demory, in two places, plus one phrase she is herself quoting.
+**Quoted on:** `index.html`, in [To queer is to adapt](https://queering.earth/#to-queer-is-to-adapt)
+and [The sentence adapts itself](https://queering.earth/#the-sentence-adapts). Four quotations
+from Demory, in two places, plus one phrase she is herself quoting.
 
 **1. The slash (2019), quoted in full:**
 
