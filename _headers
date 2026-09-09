@@ -3,3 +3,34 @@
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+  # Clickjacking. Added 2026-09-09 from the spec audit, which found the site sending
+  # no embedding policy at all — no CSP, no X-Frame-Options, from here or from
+  # Netlify's defaults.
+  #
+  # The usual argument for this header is session theft, and it does not apply: there
+  # is no login here, no form, and no authenticated action to hijack. The reason it
+  # matters on THIS site is attribution. Without it anybody can frame a sheet inside
+  # their own chrome and present it as theirs, on a site whose stated correctness
+  # requirement is that credit reaches the person it belongs to.
+  #
+  # THE CSP CARRIES frame-ancestors AND NOTHING ELSE, ON PURPOSE. Every page has an
+  # inline <script> in its head — the snippet that applies both stored view
+  # preferences before first paint — and inline style throughout. Adding default-src
+  # or script-src here without 'unsafe-inline' would kill that snippet, and the page
+  # would flash the decorated sheet at the reader who turned decoration off. That is
+  # the exact failure the before-first-paint rule exists to prevent.
+  Content-Security-Policy: frame-ancestors 'none'
+  X-Frame-Options: DENY
+
+  # HSTS. Netlify's default was max-age=31536000 with no includeSubDomains; the spec
+  # asks for two years and the subdomain flag, so this now overrides it.
+  #
+  # The spec's caution is to audit subdomains first, because an HTTP-only subdomain
+  # breaks the moment this ships. Audited 2026-09-09: www.queering.earth answers 301
+  # to https://queering.earth/, so it is HTTPS-capable, and there is nothing else
+  # under the name. Recheck this before adding any subdomain.
+  #
+  # NO `preload`. The preload list's own operator now advises against it, removal
+  # takes months, and it applies to every subdomain. Do not add it.
+  Strict-Transport-Security: max-age=63072000; includeSubDomains

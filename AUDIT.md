@@ -16,6 +16,12 @@ Audit run **2026-09-09**.
 21 `agent-readiness` items at every status. `recommended` items in the other nine categories
 were not audited, so the absence of a finding below is not a pass for them.
 
+**This file is served.** The repo root *is* the site with no build step, so this document
+is public at `https://queering.earth/AUDIT.md`, alongside `CLAUDE.md`, `DECISIONS.md`,
+`ATTRIBUTIONS.md`, and `README.md`, which have always been. Written accordingly. The two
+findings whose disclosure was worth minding — the missing embedding policy and the short
+HSTS — were closed before this file went up; see the remediation notes on each.
+
 **This file is not a sheet.** It is a working document at the repo root, so it takes no
 social card, no register entry, no `.qe-provenance` line, and no `sitemap.xml` entry. Those
 belong to pages. Anything we *change* in response to a finding gets all four by the usual
@@ -42,7 +48,7 @@ decoration, texture, or plain view. The spec does not know that texture under te
 
 | | count |
 |---|---|
-| **Findings** | **8** |
+| **Findings** | **8** — 2 remediated 2026-09-09, 6 open |
 | Passing, verified | 22 |
 | Not applicable, with reasons | 5 |
 | Deferred — needs field data | 1 |
@@ -94,6 +100,11 @@ The spec's own list of common mistakes includes *"Letting trailing slashes serve
 content from non-trailing slashes"* — the same class of ambiguity, and it asks for
 canonicalisation by 301.
 
+The home page has its own version. `/index.html` answers `200` with the same ETag as `/`,
+so the plate is reachable at two addresses too. `/index` answers `301` to `/` — correct, but
+it means the sheet index's own `<a href="/index">` link takes a one-hop redirect the spec
+says to flatten where you control both ends, and we control both ends.
+
 *Where the fix would go:* `_redirects`, alongside the hostname rule that already documents
 the reasoning. Not `check-sitemap.mjs` — it is already correct and already passing. Worth a
 new gate that probes the served site rather than the manifest, since this is precisely the
@@ -102,6 +113,14 @@ failure no file-level check can see.
 ### 2. No clickjacking policy at all
 
 `frame-ancestors` (required) · [spec](https://specification.website/spec/security/frame-ancestors/) (updated 2026-05-29)
+
+> **Remediated 2026-09-09.** `_headers` now sends `Content-Security-Policy: frame-ancestors
+> 'none'` and `X-Frame-Options: DENY` on every response. The finding is kept below rather
+> than deleted, because a correction is a record here and not an erasure. **The policy
+> carries `frame-ancestors` and nothing else deliberately** — a `default-src` or `script-src`
+> without `'unsafe-inline'` would kill the inline before-first-paint snippet in every head
+> and flash the wrong ground at the reader who chose the other one. The reasoning is in
+> `_headers` beside the rule.
 
 No CSP and no `X-Frame-Options` anywhere — not in `_headers`, not in any page, not from
 Netlify's defaults. Verified: `curl -sI https://queering.earth/ | grep -iE 'frame-ancestors|x-frame-options'` returns nothing.
@@ -143,6 +162,11 @@ serves a file or does not. Recording it as unreachable-by-construction rather th
 ### 4. HSTS is short and does not cover subdomains
 
 `hsts` (required) · [spec](https://specification.website/spec/security/hsts/) (updated 2026-07-01)
+
+> **Remediated 2026-09-09.** `_headers` now sends
+> `Strict-Transport-Security: max-age=63072000; includeSubDomains`, overriding Netlify's
+> default. The subdomain audit the spec asks for was run first and came out clean. **No
+> `preload`**, per the spec and the list operator's own advice.
 
 ```
 current:  strict-transport-security: max-age=31536000
