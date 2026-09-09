@@ -241,11 +241,39 @@ broke the art converter, and the first made a `<main>` extractor match inside th
 and take the `<head>` as the page body. **The SKS mirror reads that landmark too.** Write
 the name without brackets.
 
+### Python touches pixels; Node does everything else
+
+**That boundary replaced "the one Python tool here" on 2026-09-09**, when the plates
+needed transcoding. The reason behind the old sentence was never the count — it was that
+something has to rasterise and nothing may need `npm install`. Same correction the
+`queering.js` rule already took: a count is a rule that gets quietly broken the first
+time a second thing is worth having.
+
+- **`tools/make-images.py`** *draws* from the palette: `favicon.ico`,
+  `apple-touch-icon.png`, `images/og-*.png`.
+- **`tools/make-plates.py`** *re-encodes* somebody else's scan: AVIF and WebP for every
+  plate, at the css width the figure is displayed at and its 2x, **never upscaled past
+  the scan**. `.qe-plate` is `23rem` = 368px and never reflows wider; `.qe-plate-wide` is
+  `34rem` = 544px. The ladder follows those measurements, so `sizes` needs no media
+  guesswork. The original JPEG stays as the `img` fallback and the archival copy — the
+  filename is the provenance.
+
+**A new plate needs its variants and a `<picture>`.** `check-metadata.mjs` fails on a
+bare `img` in a plate figure, on a missing variant, on a `srcset` that disagrees with
+`tools/plate-variants.json`, and — the silent one — **on a scan whose bytes no longer
+match the hash it was encoded from.** Replace a scan without re-running the tool and
+nearly every reader gets AVIF of the old one while the JPEG nobody fetches shows the new.
+
+**`serve.mjs` must know every type the site serves.** It had no `.avif` entry, so it sent
+`application/octet-stream` and the browser sniffed it — invisible locally, because there
+is no `nosniff` there. Production sends `nosniff` on `/*`, and **`<picture>` does not fall
+through to the next `<source>` when one fails to decode**: the choice is made on `type`,
+before the fetch. A type this server gets wrong is one the live site cannot recover from.
+
 ### Icons and social cards are generated, not hand-made
 
 `favicon.ico`, `apple-touch-icon.png` and every `images/og-*.png` come out of
-**`tools/make-images.py`** — the one Python tool here, because it has to rasterise and
-nothing may need `npm install`. It reads the `--qe-*` values straight out of `queering.css`,
+**`tools/make-images.py`**, for the reason above. It reads the `--qe-*` values straight out of `queering.css`,
 so the cards cannot drift from the palette. **The lookup is anchored to the `:root` block on
 purpose**: a social card is a herbarium sheet, not the drawer it is filed in, and an
 unanchored search would return whichever palette appeared first in the file.
@@ -409,7 +437,7 @@ node tools/check-markup.mjs     # parser-rewriting markup, duplicate ids, exactl
 node tools/check-sitemap.mjs    # every page listed once, every entry resolves
 node tools/check-contrast.mjs   # 7:1 in BOTH grounds and under print emulation, two tiers
 node tools/check-addresses.mjs  # one address per page: a forced 301! per .html twin
-node tools/check-metadata.mjs   # generated files current, JSON-LD agreeing, credit correct
+node tools/check-metadata.mjs   # derived files current, JSON-LD agreeing, credit correct
 ```
 
 **`check-metadata.mjs` regenerates into memory and compares**, so staleness is exact

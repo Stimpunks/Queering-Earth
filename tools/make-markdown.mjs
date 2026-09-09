@@ -113,7 +113,8 @@ const SKIP_TAGS = new Set(['svg', 'script', 'style', 'button']);
 const BLOCK = new Set(['p', 'div', 'section', 'header', 'footer', 'article', 'aside',
   'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'dl', 'dt', 'dd',
   'blockquote', 'figure', 'figcaption', 'table', 'thead', 'tbody', 'tfoot',
-  'tr', 'th', 'td', 'caption', 'nav', 'hr', 'br', 'img', 'main', 'a', 'colgroup', 'col']);
+  'tr', 'th', 'td', 'caption', 'nav', 'hr', 'br', 'img', 'main', 'a', 'colgroup', 'col',
+  'picture', 'source']);
 
 function attrs(raw) {
   const out = {};
@@ -195,6 +196,12 @@ function toMarkdown(html, file) {
     if (!BLOCK.has(t.tag)) throw new Error(`${file}: unhandled tag <${t.tag}> — teach the converter or it will silently drop content`);
 
     switch (t.tag) {
+      // <picture> is a wrapper and <source> is a void element. NEITHER goes through the
+      // skip machinery: that tracks a closing tag, and `<source>` never has one, so
+      // skipping it would swallow the rest of the document. They emit nothing and the
+      // <img> inside the picture produces the Markdown image, as it did before.
+      case 'picture': break;
+      case 'source': break;
       case 'br':
         // A newline inside a table cell ends the row, so a <br> in a <td> silently
         // split one line of Dickinson across two rows and left a one-pipe orphan.

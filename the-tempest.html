@@ -214,8 +214,18 @@
   </ol>
 
   <figure class="qe-plate qe-plate-wide">
-    <img src="images/waterhouse-1916-miranda-the-tempest.jpg" width="1280" height="921" loading="lazy" decoding="async"
+    <picture>
+      <!-- AVIF first: Baseline widely available since 2026-07-25, and the spec was
+           rewritten that August to say encode it first rather than layer it over WebP.
+           The chain stays because "widely available" describes the browser versions
+           shipped in the last thirty months, not the ones people are running. Widths are
+           the css widths this figure is displayed at and its 2x, never upscaled past the
+           scan. The img keeps the scan as the last fallback and the archival copy. -->
+      <source type="image/avif" srcset="images/waterhouse-1916-miranda-the-tempest-544.avif 544w, images/waterhouse-1916-miranda-the-tempest-1088.avif 1088w" sizes="(max-width: 38rem) 92vw, 34rem">
+      <source type="image/webp" srcset="images/waterhouse-1916-miranda-the-tempest-544.webp 544w, images/waterhouse-1916-miranda-the-tempest-1088.webp 1088w" sizes="(max-width: 38rem) 92vw, 34rem">
+      <img src="images/waterhouse-1916-miranda-the-tempest.jpg" width="1280" height="921" loading="lazy" decoding="async"
          alt="A rocky shore under a grey storm sky. A woman in a deep teal-blue dress stands with her back mostly to us on the pebbles, long red hair streaming sideways in the wind, one hand raised to hold it clear of her face as she watches the sea. Out to the left a three-masted ship is going over in heavy green-white breakers. Dark cliffs close the scene on the right; a broken spar and small pink flowers lie among the stones in the foreground.">
+    </picture>
     <figcaption>John William Waterhouse (1849&ndash;1917). <a href="https://commons.wikimedia.org/wiki/File:Miranda_-_The_Tempest_JWW.jpg"><cite>Miranda &ndash; The Tempest</cite></a>, 1916, oil on canvas. Painted the year before Waterhouse&rsquo;s death, forty-one years after his first, gentler Miranda of 1875. Public domain.</figcaption>
   </figure>
 

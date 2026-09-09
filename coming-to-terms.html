@@ -167,8 +167,18 @@
   <p>I didn&rsquo;t openly express myself in dress much&mdash;I was deathly afraid of being noticed and totally unsure about what I felt&mdash;but I would splash some color in. I opted for a pink tinted coating on a new pair of eyeglasses once. Kids at school gave me grief, but I liked them and came to wear them as a defiant badge and also a sort of shield. My father had the coating removed.</p>
 
   <figure class="qe-plate">
-    <img src="images/floral-magazine-1870-plate-511.jpg" width="678" height="1024" loading="lazy" decoding="async"
+    <picture>
+      <!-- AVIF first: Baseline widely available since 2026-07-25, and the spec was
+           rewritten that August to say encode it first rather than layer it over WebP.
+           The chain stays because "widely available" describes the browser versions
+           shipped in the last thirty months, not the ones people are running. Widths are
+           the css widths this figure is displayed at and its 2x, never upscaled past the
+           scan. The img keeps the scan as the last fallback and the archival copy. -->
+      <source type="image/avif" srcset="images/floral-magazine-1870-plate-511-368.avif 368w, images/floral-magazine-1870-plate-511-678.avif 678w" sizes="(max-width: 26rem) 92vw, 23rem">
+      <source type="image/webp" srcset="images/floral-magazine-1870-plate-511-368.webp 368w, images/floral-magazine-1870-plate-511-678.webp 678w" sizes="(max-width: 26rem) 92vw, 23rem">
+      <img src="images/floral-magazine-1870-plate-511.jpg" width="678" height="1024" loading="lazy" decoding="async"
          alt="A hand-coloured lithograph of two orchid blooms. Broad tawny sepals and petals, heavily freckled with dark red, spread around a frilled lip of deep pink and magenta with a yellow throat. Thick green leaves and pale roots sit below.">
+    </picture>
     <figcaption>Plate 511, <a href="https://www.biodiversitylibrary.org/page/50241086"><cite>The Floral Magazine</cite>, volume 9</a> (London: L. Reeve &amp; Co., 1870). Drawn and lithographed by Worthington G. Smith; printed by Vincent Brooks, Day &amp; Son. Public domain, digitised by the <a href="https://www.biodiversitylibrary.org/">Biodiversity Heritage Library</a>.</figcaption>
   </figure>
 

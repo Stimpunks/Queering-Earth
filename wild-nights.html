@@ -314,8 +314,18 @@
   </figure>
 
   <figure class="qe-plate">
-    <img src="images/dickinson-1861-wild-nights-houghton-ms-am-1118-3-38b.jpg" width="1400" height="2159" loading="lazy" decoding="async"
+    <picture>
+      <!-- AVIF first: Baseline widely available since 2026-07-25, and the spec was
+           rewritten that August to say encode it first rather than layer it over WebP.
+           The chain stays because "widely available" describes the browser versions
+           shipped in the last thirty months, not the ones people are running. Widths are
+           the css widths this figure is displayed at and its 2x, never upscaled past the
+           scan. The img keeps the scan as the last fallback and the archival copy. -->
+      <source type="image/avif" srcset="images/dickinson-1861-wild-nights-houghton-ms-am-1118-3-38b-368.avif 368w, images/dickinson-1861-wild-nights-houghton-ms-am-1118-3-38b-736.avif 736w" sizes="(max-width: 26rem) 92vw, 23rem">
+      <source type="image/webp" srcset="images/dickinson-1861-wild-nights-houghton-ms-am-1118-3-38b-368.webp 368w, images/dickinson-1861-wild-nights-houghton-ms-am-1118-3-38b-736.webp 736w" sizes="(max-width: 26rem) 92vw, 23rem">
+      <img src="images/dickinson-1861-wild-nights-houghton-ms-am-1118-3-38b.jpg" width="1400" height="2159" loading="lazy" decoding="async"
          alt="A single leaf of blue-ruled writing paper photographed against a pale ground, with three stab holes down the right edge where it was bound into a fascicle. Twelve lines of small, steeply slanted brown-ink handwriting sit in three groups with a clear space between each group, every line broken off by a short horizontal stroke. A pencilled cross and the numeral 2 sit alone at the top of the page. The last group runs to five written lines rather than four, and a single pen stroke is ruled underneath it like a full stop for the whole poem.">
+    </picture>
     <figcaption><cite>Wild Nights &ndash; Wild Nights!</cite> in Dickinson&rsquo;s hand, one leaf of <cite>Poems: Packet VIII, Fascicle 11</cite>, written in ink about 1861. Houghton Library, Harvard University, Cambridge, MA &mdash; MS Am 1118.3 (38b); <a href="https://curiosity.lib.harvard.edu/emily-dickinson-archive/catalog/195-EDA0392_F269A">catalogued as F269A</a> in the <a href="https://www.edickinson.org/">Emily Dickinson Archive</a>. Reproduced under the archive&rsquo;s <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a> licence and unaltered: the file mounted here is the one Harvard&rsquo;s own image service returned at this width. <strong>Look at the third group.</strong> It has five written lines, not four &mdash; <q>Tonight &ndash;</q> stands alone because the leaf ran out of room, and everything that follows on this sheet follows from what two sets of editors did with that.</figcaption>
   </figure>
 

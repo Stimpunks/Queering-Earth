@@ -34,6 +34,17 @@
  *    Woolf, which is the exact misattribution this whole site is organised against.
  * 5. DISCOVERY — every page carries `rel=describedby` to /llms.txt and a
  *    `rel=alternate` pointing at its own `.md`, and that target exists.
+ * 6. PLATES — every plate figure is a `<picture>` with an AVIF and a WebP source whose
+ *    srcset widths match the manifest, every variant file exists, and every source scan
+ *    still hashes to what `tools/plate-variants.json` recorded. **The scan hash is the
+ *    one that matters**: replacing a plate with a better scan and forgetting to re-run
+ *    `make-plates.py` leaves the page serving AVIF of the OLD scan to nearly every
+ *    reader while the JPEG fallback nobody fetches shows the new one. Nothing looks
+ *    broken and the two disagree.
+ *
+ * (1) and (6) are both freshness, which is why they live in one gate: every derived
+ * artefact here — Markdown, indexes, feed, plate variants — is only true until somebody
+ * edits a source and does not re-run the tool.
  */
 
 import { readFile, readdir, stat } from 'node:fs/promises';
@@ -136,15 +147,66 @@ for (const f of files) {
   else if (!(await exists(`${slug}.md`))) fail('discovery', `${f} advertises ${alt} but ${slug}.md is not in the repo`);
 }
 
+/* ── 6. the plates ────────────────────────────────────────────────────────────── */
+let plateCount = 0;
+try {
+  const manifest = JSON.parse(await readFile(join(ROOT, 'tools', 'plate-variants.json'), 'utf8'));
+
+  for (const [name, entry] of Object.entries(manifest)) {
+    const buf = await readFile(join(ROOT, 'images', name)).catch(() => null);
+    if (!buf) { fail('plates', `images/${name} is in the manifest but not in the repo`); continue; }
+    const have = createHash('sha256').update(buf).digest('hex');
+    if (have !== entry.sha256)
+      fail('plates', `images/${name} has changed since it was encoded — run: python3 tools/make-plates.py`);
+    for (const v of entry.variants)
+      if (!(await exists(`images/${v}`)))
+        fail('plates', `images/${v} is missing — run: python3 tools/make-plates.py`);
+  }
+
+  for (const f of files) {
+    const html = (await readFile(join(ROOT, f), 'utf8')).replace(/<!--[\s\S]*?-->/g, '');
+    for (const fig of html.matchAll(/<figure class="([^"]*qe-plate[^"]*)"[^>]*>([\s\S]*?)<\/figure>/g)) {
+      const block = fig[2];
+      const img = /<img\b[^>]*>/.exec(block);
+      if (!img) continue;
+      plateCount++;
+      const src = /src="images\/([^"]+)\.jpg"/.exec(img[0]);
+      if (!src) { fail('plates', `${f}: a plate figure's img is not one of the scans in images/`); continue; }
+      const stem = src[1];
+      const entry = manifest[`${stem}.jpg`];
+      if (!entry) { fail('plates', `${f}: ${stem}.jpg has no manifest entry — run: python3 tools/make-plates.py`); continue; }
+
+      if (!/<picture>/.test(block)) {
+        fail('plates', `${f}: the ${stem} figure is a bare <img> with no <picture> — no reader gets AVIF`);
+        continue;
+      }
+      for (const type of ['avif', 'webp']) {
+        const srcset = new RegExp(`<source type="image/${type}" srcset="([^"]+)"`).exec(block);
+        if (!srcset) { fail('plates', `${f}: the ${stem} picture has no ${type} source`); continue; }
+        const declared = srcset[1].split(',').map((s) => s.trim().split(/\s+/)[1]).join(',');
+        const wanted = entry.widths.map((w) => `${w}w`).join(',');
+        if (declared !== wanted)
+          fail('plates', `${f}: ${stem} ${type} srcset offers ${declared}, the manifest has ${wanted}`);
+      }
+      for (const attr of ['width', 'height', 'alt', 'loading', 'decoding'])
+        if (!new RegExp(`\\b${attr}=`).test(img[0]))
+          fail('plates', `${f}: the ${stem} img lost its ${attr} attribute in the <picture> rewrite`);
+    }
+  }
+} catch (e) {
+  fail('plates', `cannot verify the plates: ${e.message}`);
+}
+
 /* ── report ────────────────────────────────────────────────────────────────────── */
 const line = (l, v) => console.log(`  ${l.padEnd(42)} ${v}`);
-console.log(`\n  ${files.length} page(s) · ${GENERATED.length} generated file(s)\n`);
+console.log(`\n  ${files.length} page(s) · ${GENERATED.length} generated file(s) · ${plateCount} plate figure(s)\n`);
 for (const [kind, label] of [
   ['stale', 'generated files out of date'],
   ['digest', 'Agent Skill digest problems'],
   ['jsonld', 'JSON-LD disagreeing with its page'],
   ['attribution', 'JSON-LD misattributions'],
   ['discovery', 'missing or wrong discovery links'],
+  ['plates', 'plate encoding or markup problems'],
 ]) {
   const hits = problems.filter((p) => p.kind === kind);
   line(label, hits.length ? `${hits.length}` : 'none');

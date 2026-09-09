@@ -48,7 +48,7 @@ decoration, texture, or plain view. The spec does not know that texture under te
 
 | | count |
 |---|---|
-| **Findings** | **8** — 6 remediated 2026-09-09, 2 open |
+| **Findings** | **8** — 7 remediated 2026-09-09, 1 open |
 | Passing, verified | 22 |
 | Not applicable, with reasons | 5 |
 | Deferred — needs field data | 1 |
@@ -221,6 +221,28 @@ operator now discourages it. Don't add it.
 ### 5. Fifteen plates, all JPEG
 
 `image-optimization` (required) · [spec](https://specification.website/spec/performance/image-optimization/) (rewritten 2026-08-08)
+
+> **Remediated 2026-09-09.** All 13 plates now ship AVIF and WebP through a `<picture>`
+> chain, at the css width the figure is displayed at and its 2x, never upscaled past the
+> scan. `tools/make-plates.py` encodes them; `tools/plate-variants.json` is the manifest.
+>
+> **The wins are large.** The Dickinson manuscript goes 312 KB → 34 KB at 2x and 12 KB at
+> 1x; the Hughes 330 KB → 100 KB / 17 KB; the Waterhouse 341 KB → 150 KB / 28 KB. A reader
+> on a 2x display fetches AVIF and never touches a JPEG — confirmed in the browser.
+>
+> **Quality was checked rather than assumed:** PSNR 36.9–40.7 across the hardest cases,
+> plus a 1:1 crop of Dickinson's hand and the Cooke fungi hatching against the resized
+> source. Indistinguishable.
+>
+> **The near miss worth recording:** `serve.mjs` had no `.avif` type and was sending
+> `application/octet-stream`, which the browser sniffed — invisible locally because there
+> is no `nosniff` there. Production sends `nosniff` on `/*`, and `<picture>` does **not**
+> fall through to the next `<source>` on a decode failure, so a wrong type would have
+> broken every plate with no fallback. The variants were deployed a commit ahead of the
+> markup purely to confirm Netlify types them `image/avif` before anything depended on it.
+>
+> `check-metadata.mjs` grew five plate detectors, all made to fail first, including the
+> silent one: a scan whose bytes no longer match the hash it was encoded from.
 
 Everything else about the images is right, and worth saying before the finding: all 15
 `<img>` elements carry explicit `width` and `height`, `loading="lazy"`, `decoding="async"`,
