@@ -15,7 +15,12 @@ import { join, extname, normalize, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const PORT = Number(process.argv[2]) || 8766;
+/* THE PORT IS NOT OURS TO INSIST ON. An argument still wins, so the documented
+   `node tools/serve.mjs 8766` is unchanged — but with none, PORT from the environment
+   comes next, because that is how a Browser-pane launch config hands over a port when
+   8766 is already taken by another session's copy of this same server. Hardcoding the
+   number in launch.json meant a second session could not preview the site at all. */
+const PORT = Number(process.argv[2]) || Number(process.env.PORT) || 8766;
 
 const TYPES = {
   '.html': 'text/html; charset=utf-8',

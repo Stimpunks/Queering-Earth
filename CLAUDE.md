@@ -98,7 +98,12 @@ held to the same standard as anything on Star Stuff, and arguably a stricter one
     here puts content on a page — is stronger stated as a boundary.
 - Local render checks: `node tools/serve.mjs 8766`, or the Browser pane via
   `.claude/launch.json`. `serve.mjs` roots itself at the repo, not at `process.cwd()`, so it
-  is correct from any directory.
+  is correct from any directory. **The launch config names no port**: it sets `autoPort` and
+  the server takes `PORT` from the environment, because the config used to hardcode 8766 and
+  a second session could then not preview the site at all while the first held it. An
+  explicit argument still wins, which is why the command above is unchanged. Nothing on the
+  site cares which port it is — every asset reference is relative or root-relative, and
+  `check-addresses.mjs` enforces that.
 
 ## Rules — do not break these
 
