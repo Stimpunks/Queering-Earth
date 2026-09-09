@@ -16,6 +16,7 @@
       <description>Mounted: Every sheet is stamped, and the fade is on the ring because no colour here can make a letter faint and legal
 Cabinet: The washed-out effect is a blend mode, the blend mode erases the stamp in the drawer, and the contrast gate reported it clean
 Label corrected: The stylesheet was cached for five minutes longer than the markup that needed it, and the first reader of the stamp saw the consequence
+Cabinet: A sixth gate, because a comment in a config file predicted this failure and a comment cannot fail a build
 Cabinet: The finding aid does not index the stamp, which is the masthead decision arriving one component further down</description>
     </item>
     <item>

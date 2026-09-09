@@ -352,7 +352,16 @@ its legible diffs. See `DECISIONS.md`.
 `must-revalidate` response, and the head of `_headers` says so. Which one a file gets is a
 real decision: the stylesheet fails when the page fails, so resilience buys it nothing and it
 takes `must-revalidate`; the search index is fetched *after* the page renders, so it takes
-plain `max-age=0` and keeps `stale-if-error`. **No gate checks any of this yet.**
+plain `max-age=0` and keeps `stale-if-error`.
+
+**`check-cache.mjs` is the guard, and which assets are coupled is DECLARED in it.** Two lists,
+each entry carrying why — because the inference is available, plausible and wrong: nothing in a
+file's bytes says whether its content knows about markup, and `queering.js` and a `.woff2` are
+both static files fetched by every page. It also reads `fetch()` calls in our own scripts,
+because `search-index.json` is reached from `queering-search.js` and appears in no attribute on
+any page — an HTML-only scan would have missed the very file that prompted the gate. **A new
+asset needs a line in one of the two lists**; the gate fails on one in neither, which is the
+reminder. `--live` probes the edge and checks the precedence model rather than the policy.
 
 ### Python touches pixels; Node does everything else
 
@@ -567,7 +576,7 @@ anything that needs fixing there in `DECISIONS.md` instead.
 
 ## The checks
 
-Run before shipping. All five are browser-free or Chrome-only; nothing needs `npm install`,
+Run before shipping. All six are browser-free or Chrome-only; nothing needs `npm install`,
 and the default path of every one of them is offline.
 
 ```bash
@@ -576,6 +585,7 @@ node tools/check-sitemap.mjs            # every page listed once, every entry re
 node tools/check-contrast.mjs --check   # 7:1 in BOTH grounds and under print emulation, two tiers
 node tools/check-addresses.mjs          # one address per page: a forced 301! per .html twin
 node tools/check-metadata.mjs           # derived files current, JSON-LD agreeing, credit correct
+node tools/check-cache.mjs              # no markup-coupled asset outliving the markup
 ```
 
 **`--check` is load-bearing on the contrast gate and this file left it off until
@@ -596,7 +606,10 @@ loop is invisible offline. It asserts each twin is a single hop and not a chain.
 
 Star Stuff has five more (`check-classes`, `check-overlap`, `check-sheets`, `check-embeds`,
 `check-card-order`). **Port one when the failure it catches becomes possible here** — not
-before. A check that cannot fail is a check nobody reads.
+before. A check that cannot fail is a check nobody reads. `check-cache.mjs` is the sixth here
+and was not ported from anywhere: it exists because the failure happened, which is the same
+bar. `check-overlap` is the closest to earning its place — a corner-floated accession stamp
+was refused partly for want of it.
 
 And **make a new gate fail before believing it.** The 7:1 tier was proved by putting the
 recessed `--qe-paper-deep` panel back and confirming it reported 6.90:1 and 6.21:1 as `UNDER`,
