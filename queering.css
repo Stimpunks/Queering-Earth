@@ -1656,6 +1656,83 @@ a.card:focus-visible .qe-card-title {
   .qe-card-title, .qe-card-note { color: #000; }
 }
 
+/* ─────────────────────────────────────────────── the cabinet's own pages
+ *
+ * The list at the foot of the home page, under "The cabinet itself": the pages
+ * that are not specimens — how the sheets are made, what has been corrected, how
+ * to search the drawers, and what the site knows about you. It is the same group
+ * `tools/pages.mjs` already names, so the plate, the finding aid's manifest and
+ * llms.txt all call this set the same thing.
+ *
+ * NOT A CARD, AND THAT IS THE WHOLE COMPONENT. Card treatment here would file
+ * these with the eight readings, and none of them is a reading of anything. This
+ * is the BARE tier from the three-surface note at the head of this file — space
+ * only, no fill, no box — which is what that note reserves for the cabinet
+ * talking in its own voice. The plate above does the ranking; this list agrees
+ * with it by declining to compete.
+ *
+ * BACK MATTER, exactly where the four links it replaces already were. A contents
+ * list is front matter and an index is back matter — the correction the register
+ * paid for — and furniture at the top of the home page would delay every reader
+ * to reach the thing they came for. The home page's own content is a contents
+ * list already.
+ *
+ * NAMED FOR THE FURNITURE, NOT THE DRAWER: --qe-cab-* is the dark ground and has
+ * nothing to do with this.
+ *
+ * A <dl>, because each entry is a name and a gloss on it. The Markdown converter
+ * writes a term and its definition, so the copy an agent fetches keeps the
+ * pairing instead of flattening into loose lines.
+ */
+
+.qe-furniture {
+  /* The link's own padding is part of the gap above the first entry, so the
+     scale step is taken net of it. Otherwise the list starts 11px below where
+     every other block on the page starts, and a deviation nobody authored is a
+     deviation that makes the authored ones mean less. */
+  margin: calc(var(--qe-space-4) - 0.7rem) 0 var(--qe-space-5);
+}
+
+/* THE TARGET IS THE LINE, NOT THE LETTERS. A <dt> that is entirely a link is not
+   an inline link inside a sentence, so WCAG 2.5.8's inline exception does not
+   cover it, and the ink alone is 23px tall. The padding takes the target to 45px
+   — 2.5.5's figure, not the 24px floor the ground control shipped one pixel over.
+   It grows into the gap above the description rather than pushing entries apart,
+   and the next target starts a whole description later, so no two can touch.
+   Measured afterwards, because nothing here measures a hit area. */
+.qe-furniture dt { margin: 0; }
+.qe-furniture dt a {
+  display: inline-block;
+  padding: 0.7rem 0;
+  font-family: var(--qe-display);
+  font-size: 1.14rem;
+  line-height: 1.25;
+  font-weight: 600;
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+}
+html.plain .qe-furniture dt a { font-variation-settings: normal; font-weight: 700; }
+
+/* Net of the next link's padding again: 0.7rem inside an entry, a full
+   --qe-space-3 between two of them. Two to one, so the pairs group by eye
+   without a rule drawn anywhere. */
+.qe-furniture dd {
+  margin: 0 0 calc(var(--qe-space-3) - 0.7rem);
+  font-size: 0.99rem;
+  line-height: 1.6;
+  color: var(--qe-ink);
+}
+.qe-furniture dd:last-child { margin-bottom: 0; }
+
+@media print {
+  /* This one stays on paper, unlike the sibling nav and the register's index.
+     Those list things the reader is already holding; these are four other pages,
+     and a printed sheet that names them by address is more use than one that
+     pretends the site is eight readings. A name must not print without its
+     gloss. */
+  .qe-furniture dt { break-after: avoid; }
+  .qe-furniture dt a { color: #000; }
+}
+
 /* ─────────────────────────────────────────────── elsewhere on the plate
  *
  * Sibling navigation at the foot of a sheet, reusing the plate's own card so the

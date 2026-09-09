@@ -190,8 +190,33 @@
 
   <div class="qe-register">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-09-embed">
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-cabinet">
       <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <h2 id="a-2026-09-09-cabinet">The four pages that are not specimens were only ever in the footer, which is where a site puts what it hopes nobody needs <a class="qe-anchor" href="#a-2026-09-09-cabinet"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">The plate names eight readings and nothing else, so <a href="/design">how the site is made</a>, <a href="/changelog">this register</a>, <a href="/search">the finding aid</a> and <a href="/privacy">the privacy page</a> lived in the footer of every page and in no page&rsquo;s content. <strong>A site that publishes an attribution ledger and a privacy policy should not file both under fine print.</strong> They now have a section of their own at the foot of the home page, under the name <a href="/#the-cabinet-itself">the group already had</a> in <code>tools/pages.mjs</code> &mdash; so the plate, the finding aid&rsquo;s manifest and <code>/llms.txt</code> call this set the same thing rather than three things.</p>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="index">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">A list with no cards, because a card would say these were readings and none of them is a reading of anything</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The bare tier, and that is the whole design.</strong> Space only, no fill, no box &mdash; the surface this house reserves for the cabinet talking in its own voice. Fifteen components once shared one card treatment here and a reader could only rank them by reading the label; giving the furniture the plate&rsquo;s clothes would be that defect deliberately reintroduced. The plate does the ranking, and this list agrees with it by declining to compete.</p>
+          <p><strong>Back matter, not front matter.</strong> It sits last inside <code>main</code>, where the links it replaces already were. That is the correction the register paid for when a contents list at the top of this page delayed its first entry by three and a half screens: furniture at the top costs every reader, furniture at the foot costs none. The home page&rsquo;s own content is a contents list already.</p>
+          <p><strong>A description list, because each entry is a name and a gloss on it.</strong> The Markdown converter writes a term and its definition, so the copy an agent fetches at <code>/index.md</code> keeps the pairing instead of flattening into loose lines. It is inside <code>main</code> rather than beside the sibling nav for the reason the contents list may be: a list of the site&rsquo;s own pages on the site&rsquo;s own index page cannot be one sheet&rsquo;s navigation indexed as another sheet&rsquo;s content.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="index">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The target is the line and not the letters, which is the rule the ground control shipped one pixel over</span></div>
+        <div class="qe-entry-body">
+          <p>A <code>dt</code> that is entirely a link is not an inline link inside a sentence, so WCAG 2.5.8&rsquo;s inline exception does not cover it &mdash; and the ink alone is 23px tall. Padding takes each target to <strong>45px</strong>, which is 2.5.5&rsquo;s figure rather than the 24px floor. It grows into the gap above the description instead of pushing the entries apart, so the list did not get taller to get reachable, and the next target starts a whole description later, so no two can touch. <strong>Measured afterwards</strong>, because nothing in the seven gates measures a hit area and a number nobody checked is a number.</p>
+          <p><strong>The padding is also spacing, so the scale is taken net of it.</strong> 0.7rem inside an entry and a full <code>--qe-space-3</code> between two &mdash; two to one, which groups the pairs by eye with no rule drawn anywhere. Left uncompensated the list would have started 11px below where every other block on the page starts, and an unauthored deviation makes the authored ones mean less.</p>
+          <p><strong>The home page&rsquo;s footer lost the four links and no other page did.</strong> On this page they are two paragraphs above; everywhere else the footer is still the way there. One page, one list of the same four things.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-embed">
+      <p class="qe-accession-date">2026 &middot; 9 September</p>
       <h2 id="a-2026-09-09-embed">A site that had spent a day removing its only third-party request mounted a YouTube player, and the whole of the work was making that honest <a class="qe-anchor" href="#a-2026-09-09-embed"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Ryan and Helen listen to Eliot read <cite>The Waste Land</cite> together, and a site about reading things closely is a strange place to make somebody leave in order to hear one. So there is now a recording under the lilac. <strong>It cost a sentence this site had been proud of.</strong> <code>/privacy</code> said, of the Google fonts removed that morning, <q>It was the only one.</q> That is no longer true, and the honest replacement is not a smaller boast but a more precise claim: <em>reading</em> a page makes no third-party request, and there is exactly one place where you can choose to make one.</p>

@@ -596,6 +596,35 @@ delays none. A one-line pointer up by the legend is how a book does it.
 - **A new entry needs its `data-sheet`** in the same pass that writes it. Mount it, card it,
   log it, **file it**.
 
+### A cabinet page is listed on the home page, not carded
+
+The plate names readings. The pages that are not readings — `/design`, `/changelog`,
+`/search`, `/privacy` — are listed at the **foot of the home page** under
+**The cabinet itself**, in `.qe-furniture`: a `<dl>`, a name and one sentence of gloss,
+**no card**. A card would file them with the eight readings, and none of them is a
+reading of anything. It is the **bare** tier from the three-surface rule above, and
+**back matter** for the reason the register's index is — furniture at the top of the
+home page delays every reader to reach what they came for.
+
+**The heading is the name `tools/pages.mjs` already uses.** That group has been called
+*The cabinet itself* since the finding aid shipped, and `/search`'s manifest and
+`/llms.txt` show it to readers and to agents. A second name for a set that has one is
+drift, and this is the file that keeps warning about it.
+
+**A NEW CABINET PAGE NEEDS A LINE IN THE LIST**, and nothing derives it: those sentences
+are authored, and `queering.js` may not write words. So a cabinet page is mount it, **list
+it**, log it, file it, route it, group it, card it for social, and give it a JSON-LD block
+— no plate number, no accession stamp, no `.qe-provenance`, because a stamp is for a
+specimen. A Mission page is the next one; see `DECISIONS.md`.
+
+**The four links left the home page's footer and no other page's.** On the home page they
+are two paragraphs above it; everywhere else the footer is still the way there.
+
+**The target is the line, not the letters.** A `<dt>` that is entirely a link is not an
+inline link inside a sentence, so WCAG 2.5.8's inline exception does not cover it. Padding
+takes each to 45px and it is netted out of the spacing scale — see the hit-area rule above,
+and **measure a new entry**, because no gate here does.
+
 ### The finding aid searches in the reader's browser, and refuses to crop a quotation
 
 `/search` is the site's one client-rendered page, and three decisions keep it honest.

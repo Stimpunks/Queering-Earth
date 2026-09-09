@@ -126,9 +126,67 @@ drift, on the same writer, in a friendly source, in 2026.
 citation also appears in `neuroqueering-time-bergson-deleuze-and-monotropism-an-exploration.md`
 on both her domains. **Never edited from this repo.**
 
+### What else goes in "The cabinet itself"
+
+The home page now ends with a list of the pages that are not specimens — `/design`,
+`/changelog`, `/search`, `/privacy` — under the name that group already had in
+`tools/pages.mjs`. **Ryan's stated reason for building it now is that more pages are
+coming**, starting with a **Mission page**. That is the destination for them: a page that
+is not a reading of anything goes in this list and not on the plate.
+
+**What a new entry costs:** a `<dt>`/`<dd>` pair in `index.html`, a slug in the
+`The cabinet itself` group in `tools/pages.mjs`, and everything else the ordinary
+new-page checklist already asks for — a register entry with its `data-sheet`, a social
+card, a JSON-LD block, a redirect rule, a sitemap line, and a regenerated Markdown
+sibling. The list itself derives nothing, on purpose: these are four sentences somebody
+wrote about four pages, and `queering.js` may not write words.
+
+**Still open:** whether the section keeps its four-line intro once it holds seven or eight
+entries, and whether a Mission page displaces `/design` from the top of the list. Both are
+editorial and neither needs deciding before the page exists.
+
 ----
 
 ## Settled
+
+### The cabinet's own pages came out of the footer (2026-09-09)
+
+`/design`, `/changelog`, `/search` and `/privacy` were reachable only from the footer of
+every page, which is where a site puts what it hopes nobody needs. **A site that publishes
+an attribution ledger and a privacy policy should not file both under fine print.** They
+now have a section at the foot of the home page, inside `main`.
+
+**The name was not invented.** `tools/pages.mjs` has called this group *The cabinet itself*
+since the finding aid shipped, and `/search`'s manifest and `/llms.txt` already show that
+heading to readers and to agents. Picking anything else — *Off the plate*, *The workroom* —
+would have been a second name for a set that had one, which is the drift this repo keeps
+paying to avoid. Ryan chose it from three.
+
+**No card treatment, and that is the whole design.** A card would file these with the eight
+readings and none of them is a reading of anything. It is the bare tier: space only, no
+fill, no box. The plate above does the ranking and this list agrees by declining to compete.
+
+**Back matter, not front matter** — the correction the register already paid for when a
+contents list at the top of `/changelog` delayed its first entry by three and a half
+screens. It sits last inside `main`, where the four links it replaces already sat.
+
+**A `<dl>`, so the Markdown copy keeps the pairing.** Each entry is a name and a gloss on
+it; the converter writes a term and its definition rather than eight loose lines.
+
+**It is inside `main`, which the sibling-nav rule forbids and this does not break.** That
+rule stops *one sheet's* navigation being indexed as *another sheet's* content. A list of
+the site's own pages, on the site's own index page, cannot do that — the same reasoning
+that lets `.qe-contents` sit inside `main`.
+
+**The hit area was measured, because nothing here measures one.** A `<dt>` that is entirely
+a link is not an inline link in a sentence, so WCAG 2.5.8's inline exception does not apply,
+and the ink alone is 23px tall. Padding takes each target to **45.2px**, confirmed in the
+browser at 1280px and at 375px, with 88px of clear space between adjacent targets. The
+padding is netted out of the spacing scale so the list does not start 11px below every other
+block on the page.
+
+**Only the home page's footer lost the links.** Everywhere else the footer is still the way
+there; on the home page they are two paragraphs above it.
 
 ### One embedded recording, and the privacy page it cost (2026-09-09)
 

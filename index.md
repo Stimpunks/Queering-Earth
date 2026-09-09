@@ -134,3 +134,19 @@ Helen listens to Eliot read *The Waste Land* often, in what she calls “his dul
 Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
 
 Uploaded by [tim24frames](https://www.youtube.com/@tim24frames). Eliot recorded the poem more than once, and we have not established which reading this is or who holds the recording — so it is somebody else’s copy of somebody else’s tape, linked and labelled as exactly that.
+
+## The cabinet itself
+
+Four pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything.
+
+**[How this site is made](https://queering.earth/design)**
+: The herbarium sheet, the palette, the type that leans, and the borrowed plates — each rule written down with the reason it exists, so it can be argued with.
+
+**[The accession register](https://queering.earth/changelog)**
+: Every sheet as it was mounted, every plate that came off again, and every label we corrected. Grouped by accession rather than by release, and indexed at the foot by which sheet it happened to.
+
+**[Find a word in the cabinet](https://queering.earth/search)**
+: Every sheet, every quotation, and every correction, searched in your own browser. A quotation comes back whole with its source or not at all, and nothing you type is sent anywhere.
+
+**[What this site knows about you](https://queering.earth/privacy)**
+: Almost nothing, and the whole of it: no analytics, no cookies, no accounts, and exactly one thing on the site that can reach anybody else — which waits until you press it.

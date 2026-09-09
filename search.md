@@ -154,6 +154,7 @@ Monotropa uniflora, Dickinson, and monotropism
   - [The sentence adapts itself](https://queering.earth/#the-sentence-adapts)
   - [The type plays, and the words do not move](https://queering.earth/#the-type-plays)
   - [What grows here](https://queering.earth/#what-grows-here)
+  - [The cabinet itself](https://queering.earth/#the-cabinet-itself)
 
 -
 
@@ -178,7 +179,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-108 entries across 23 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+110 entries across 24 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

@@ -36,6 +36,28 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## The four pages that are not specimens were only ever in the footer, which is where a site puts what it hopes nobody needs
+
+The plate names eight readings and nothing else, so [how the site is made](https://queering.earth/design), [this register](https://queering.earth/changelog), [the finding aid](https://queering.earth/search) and [the privacy page](https://queering.earth/privacy) lived in the footer of every page and in no page’s content. **A site that publishes an attribution ledger and a privacy policy should not file both under fine print.** They now have a section of their own at the foot of the home page, under the name [the group already had](https://queering.earth/#the-cabinet-itself) in `tools/pages.mjs` — so the plate, the finding aid’s manifest and `/llms.txt` call this set the same thing rather than three things.
+
+MountedA list with no cards, because a card would say these were readings and none of them is a reading of anything
+
+**The bare tier, and that is the whole design.** Space only, no fill, no box — the surface this house reserves for the cabinet talking in its own voice. Fifteen components once shared one card treatment here and a reader could only rank them by reading the label; giving the furniture the plate’s clothes would be that defect deliberately reintroduced. The plate does the ranking, and this list agrees with it by declining to compete.
+
+**Back matter, not front matter.** It sits last inside `main`, where the links it replaces already were. That is the correction the register paid for when a contents list at the top of this page delayed its first entry by three and a half screens: furniture at the top costs every reader, furniture at the foot costs none. The home page’s own content is a contents list already.
+
+**A description list, because each entry is a name and a gloss on it.** The Markdown converter writes a term and its definition, so the copy an agent fetches at `/index.md` keeps the pairing instead of flattening into loose lines. It is inside `main` rather than beside the sibling nav for the reason the contents list may be: a list of the site’s own pages on the site’s own index page cannot be one sheet’s navigation indexed as another sheet’s content.
+
+CabinetThe target is the line and not the letters, which is the rule the ground control shipped one pixel over
+
+A `dt` that is entirely a link is not an inline link inside a sentence, so WCAG 2.5.8’s inline exception does not cover it — and the ink alone is 23px tall. Padding takes each target to **45px**, which is 2.5.5’s figure rather than the 24px floor. It grows into the gap above the description instead of pushing the entries apart, so the list did not get taller to get reachable, and the next target starts a whole description later, so no two can touch. **Measured afterwards**, because nothing in the seven gates measures a hit area and a number nobody checked is a number.
+
+**The padding is also spacing, so the scale is taken net of it.** 0.7rem inside an entry and a full `--qe-space-3` between two — two to one, which groups the pairs by eye with no rule drawn anywhere. Left uncompensated the list would have started 11px below where every other block on the page starts, and an unauthored deviation makes the authored ones mean less.
+
+**The home page’s footer lost the four links and no other page did.** On this page they are two paragraphs above; everywhere else the footer is still the way there. One page, one list of the same four things.
+
+2026 · 9 September
+
 ## A site that had spent a day removing its only third-party request mounted a YouTube player, and the whole of the work was making that honest
 
 Ryan and Helen listen to Eliot read *The Waste Land* together, and a site about reading things closely is a strange place to make somebody leave in order to hear one. So there is now a recording under the lilac. **It cost a sentence this site had been proud of.** `/privacy` said, of the Google fonts removed that morning, “It was the only one.” That is no longer true, and the honest replacement is not a smaller boast but a more precise claim: *reading* a page makes no third-party request, and there is exactly one place where you can choose to make one.
