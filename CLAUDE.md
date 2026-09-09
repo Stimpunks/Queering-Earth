@@ -198,9 +198,10 @@ already paid for:
 - **`--qe-stamp-blend` is a token because it differs between the grounds and is not a
   colour** — the fourth time that lesson has arrived, after the wash, the shade and the
   flesh. See the contrast gate's blind spots above.
-- **It stays in flow and it is not a link.** A corner-floated stamp lands on the prose and
-  is the change that would make `check-overlap` worth porting; the provenance line beside it
-  already points at the accession, so a linked number is a second tab stop going nowhere new.
+- **It stays in flow and it is not a link.** A corner-floated stamp lands on the prose, which
+  is why `check-overlap.mjs` was ported the same day — and that gate now catches the refused
+  design, which is how it was proved. The provenance line beside it already points at the
+  accession, so a linked number is a second tab stop going nowhere new.
   It is skipped in `search-index.json` for the reason `.qe-masthead` is, and kept in the `.md`.
 
 **A new sheet needs a stamp**, alongside its card, its provenance line and its register entry.
@@ -576,7 +577,7 @@ anything that needs fixing there in `DECISIONS.md` instead.
 
 ## The checks
 
-Run before shipping. All six are browser-free or Chrome-only; nothing needs `npm install`,
+Run before shipping. All seven are browser-free or Chrome-only; nothing needs `npm install`,
 and the default path of every one of them is offline.
 
 ```bash
@@ -586,6 +587,7 @@ node tools/check-contrast.mjs --check   # 7:1 in BOTH grounds and under print em
 node tools/check-addresses.mjs          # one address per page: a forced 301! per .html twin
 node tools/check-metadata.mjs           # derived files current, JSON-LD agreeing, credit correct
 node tools/check-cache.mjs              # no markup-coupled asset outliving the markup
+node tools/check-overlap.mjs --check    # no text on other text, nothing clipped by its box
 ```
 
 **`--check` is load-bearing on the contrast gate and this file left it off until
@@ -604,12 +606,35 @@ them tells every agent on the web that we wrote Woolf.
 after any change to `_redirects`, because **a redirect loop is how that file fails** and a
 loop is invisible offline. It asserts each twin is a single hop and not a chain.
 
-Star Stuff has five more (`check-classes`, `check-overlap`, `check-sheets`, `check-embeds`,
+Star Stuff has four more (`check-classes`, `check-sheets`, `check-embeds`,
 `check-card-order`). **Port one when the failure it catches becomes possible here** — not
-before. A check that cannot fail is a check nobody reads. `check-cache.mjs` is the sixth here
-and was not ported from anywhere: it exists because the failure happened, which is the same
-bar. `check-overlap` is the closest to earning its place — a corner-floated accession stamp
-was refused partly for want of it.
+before. A check that cannot fail is a check nobody reads. `check-cache.mjs` is native and
+exists because the failure happened, which is the same bar.
+
+**`check-overlap.mjs` was ported on 2026-09-09**, because a corner-floated accession stamp
+was designed, measured and refused partly for want of it — and refusing a design for want of
+a gate is a reason to build the gate. Three things about the port are worth knowing:
+
+- **`--check` is load-bearing**, as on the contrast gate. A plain run reports and exits 0.
+- **The two SVG kinds have no instance on this site** and cannot fire: there is not one
+  `text` element in any page here, because *never an image of text*. They are kept because
+  dropping them would stop the sweep MEASURING SVG text, so the day a sheet carries a label
+  the gate would report a page it never looked at. Proved by injection, not by a real page.
+- **`.qe-sr` is excluded as not-ink, and that exclusion is precarious rather than
+  load-bearing.** Removing it adds 113 boxes and still reports zero — those invisible
+  288×39px rects happen to miss everything on these fourteen pages. Position luck, one moved
+  heading from being noisy.
+
+**Two faults in the imported tool were found and fixed here**, and both are recorded in
+`DECISIONS.md` because Star Stuff is not edited from this repo: its clip walk started at
+`el.parentElement`, so an element clipping its **own** overflowing text was never a clip
+host, and its `locate()` reported `page` for precisely the absolutely-positioned case the
+gate exists to catch.
+
+**The real gap is print**, and here it is a live one rather than inherited. Star Stuff defers
+to its `check-sheets.mjs`; this repo has no paper gate at all, and paper is the medium this
+house has already been burned by. No print collision has been observed here yet, which is the
+only reason it is not in the port.
 
 And **make a new gate fail before believing it.** The 7:1 tier was proved by putting the
 recessed `--qe-paper-deep` panel back and confirming it reported 6.90:1 and 6.21:1 as `UNDER`,

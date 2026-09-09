@@ -130,6 +130,76 @@ on both her domains. **Never edited from this repo.**
 
 ## Settled
 
+### check-overlap is ported, and two faults in it were found on the way (2026-09-09)
+
+Ported from Star Stuff because a corner-floated accession stamp was designed, measured and
+**refused** partly because nothing here could see it land on the prose. Refusing a design
+for want of a gate is a reason to build the gate, and the gate now catches that exact
+design — 7 collisions on Sheet No. 2, `span.qe-stamp-no "Sheet No. 2"` sitting on the
+masthead's own `a "Queering Earth"`. That is how it was proved rather than assumed.
+
+**Not a copy.** `REVEAL`/`UNREVEAL` were extracted to `tools/reveal.mjs` and the Chrome
+client to `tools/cdp.mjs`, both shared with `check-contrast.mjs`. REVEAL is the one that
+mattered: it is the list of things a page builds at runtime, it is editorial, it GROWS, and
+its own comment tells the next author to add to it. Two copies is a component one gate
+learns and the other does not — the failure `html.mjs` and `pages.mjs` already exist to
+prevent. `cdp.mjs` earns its place on `evaluated()` alone, which turns an in-page exception
+into a loud failure instead of a flawless report about a page nothing measured. **Both
+extractions were proved output-neutral**: `check-contrast --check` printed a byte-identical
+report before and after.
+
+**TWO FAULTS IN THE IMPORTED TOOL, both fixed here and neither reported upstream from this
+repo**, because Star Stuff is not edited from a session in this one:
+
+1. **The clip walk started at `el.parentElement`**, so an element clipping its **own**
+   overflowing text was never a clip host and the fault was invisible. Found by probing why
+   `.qe-sr` produced no phantom clip: it is a 1px box with `overflow:hidden` holding a
+   288×39px line of text, and nothing reported it because the walk stepped over the very
+   element doing the clipping. Fixed to start at the element. On this site it changes no
+   finding today — the only `overflow:hidden` in the stylesheet is `.qe-sr`'s own, and that
+   is excluded as invisible — but it is what makes the `clipped` proof possible at all, and
+   the proof names `span.qe-provenance-label` as its own clip host.
+2. **`locate()` reported `page` for the case the gate exists to catch.** It walked up the
+   ancestor chain looking for a preceding heading, and an absolutely positioned block is a
+   child of `main`, so the one finding that most needed an address got none. Now it walks
+   backwards over real document order and returns the nearest authored heading id — which
+   always exists here, because every `h2` carries one by house rule.
+
+**Three things about this site that changed the port:**
+
+- **There is not one rendered `text` element in any page.** The art is 535 paths, 381
+  groups and 160 ellipses and circles, named by `aria-label` and `title`. That is *never an
+  image of text* showing up in a place nobody expected it. So `svg-vs-svg` and `svg-vs-html`
+  — the two faults that motivated the tool upstream — cannot fire here. They are kept
+  regardless, and the reasoning inverts the usual rule: this is one sweep with three labels,
+  not three checks, and dropping the SVG half would stop the sweep *measuring* SVG text. The
+  day a sheet carries a label, the gate would report a clean page it never looked at. Proved
+  by injecting labels, and the file says so rather than implying they were battle-tested.
+- **`.qe-sr` is excluded as not-ink, and the first draft of that note was wrong.** It
+  claimed the exclusion suppressed phantoms "113 times". It suppresses none today: remove it
+  and the sweep adds 113 boxes and still reports zero. Those invisible 288×39px rects happen
+  to miss everything on these fourteen pages, which is **position luck and not structure** —
+  one moved heading from being noisy. Kept, because measuring text no eye can see is
+  measuring the wrong thing.
+- **The `.qe-skip` exemption was removed after testing it.** It went in on the strength of
+  Star Stuff's note, where the equivalent skip link fires on 5 of its first 7 pages. With
+  the list empty this site still reports zero clips, because `.qe-skip` here has no clipping
+  ancestor to be outside of. **An exemption that exempts nothing is a named hole a real clip
+  can fall into, and it reads as evidence somebody checked.**
+
+**Rotation needed nothing, which is worth knowing rather than rediscovering.** This site
+leans type in fifteen places, and `getClientRects()` on rotated text returns the axis-aligned
+box of the rotated quad — the stamp's bottom line is 11px of type whose AABB is 29px at 7
+degrees. `INK_RATIO` already handles it: the shrink takes `min(rect.height, em × 0.8)`, so an
+inflated AABB is discarded in favour of the em box. The imported constant was already the
+defence. If a component ever leans far enough for that to stop holding, the fix is to measure
+the rotated quad, not to widen the tolerance until the noise stops.
+
+**Print is the real gap and it is a live one.** Star Stuff defers this to `check-sheets.mjs`;
+this repo has no paper gate at all, and paper is the medium this house has already been burned
+by — 44 of 46 pages printing blank. No print collision has been observed here, which is the
+only reason it is not in the port, and it is the obvious next addition.
+
 ### The accession stamp says Queering Earth, and the fade is on the ring (2026-09-09)
 
 Ryan saw the oval stamp on a scanned sheet from the Ada Hayden Herbarium at Iowa State
