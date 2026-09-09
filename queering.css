@@ -503,6 +503,103 @@ html.plain body::before { display: none; }
   padding: 0.9rem var(--qe-gutter) 0;
 }
 
+/* ─── the finding aid, reachable from the top of every page
+ *
+ * Search used to live only in the footer, which on /wild-nights is nine thousand
+ * words down — and most arrivals here are not via the home page, they are a shared
+ * link or a search result landing straight on a sheet. So it sits with the two view
+ * controls, which is also where it belongs conceptually: Search, Cabinet and Plain
+ * view are three ways of looking, and this cluster is the instrument tray.
+ *
+ * QUIET LIKE THE GROUND CONTROL, not a pill. Plain view takes the pill because it
+ * changes what the page IS; this only goes somewhere. It is also the only real LINK
+ * of the three, so a hairline under it is the honest treatment rather than a
+ * borrowed one — and the loupe is what tells it apart from the word beside it.
+ *
+ * IT IS DRAWN, NOT WRITTEN. A botanist's folding pocket lens: a teardrop case and a
+ * smaller lens ring, both pinned at the same rivet and swung apart. Sixteen candidates
+ * were rendered at 16 to 90px and compared, which is the lesson favicon.svg already
+ * paid for twice — a mark that looks good large can die small. Three findings, each
+ * from looking rather than reasoning:
+ *
+ *   · TWO OVERLAPPING OUTLINES GO MUDDY below about 20px. So each part is filled with
+ *     the paper and occludes what is behind it rather than crossing it.
+ *   · THEY HAVE TO SHARE THE PIN or they are not hinged, they are stacked. The first
+ *     draft had a plain ring beside the case with nothing reaching up to the rivet,
+ *     and it read as two shapes that happened to touch. Both parts are teardrops with
+ *     their apex AT the rivet now, rotated apart about that one point.
+ *   · TWO EQUAL LOBES READ AS A WISHBONE. The case is the fatter of the two and the
+ *     lens ring is smaller, as they are in the hand; that asymmetry is the whole
+ *     difference between an instrument and a pair of prongs.
+ *
+ * The word carries the meaning regardless. The drawing only has to be handsome, and
+ * unmistakably a thing a botanist would have in a pocket. */
+.qe-search-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  font-family: var(--qe-body);
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: var(--qe-moss);
+  text-decoration: none;
+  border-bottom: 1px solid var(--qe-rule);
+  padding: 0.2rem 0.15rem;
+}
+.qe-search-link:hover { border-bottom-color: var(--qe-moss); }
+.qe-search-link:focus-visible {
+  outline: 3px solid var(--qe-rust);
+  outline-offset: 2px;
+}
+/* On /search itself. The footer already self-links on every furniture page, so the
+   control stays rather than vanishing on one page out of fourteen — but it says so. */
+.qe-search-link[aria-current="page"] {
+  color: var(--qe-ink);
+  border-bottom-color: var(--qe-moss);
+}
+
+.qe-loupe {
+  display: block;
+  flex: none;
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+/* Each part occludes what is behind it, as they do in the hand. Paper rather than a
+   fill of its own, so it follows the ground without needing a second value. */
+.qe-loupe .shell { fill: var(--qe-paper); }
+.qe-loupe .rivet { fill: currentColor; stroke: none; }
+
+/* ─── the target, which is not the ink
+ *
+ * WCAG 2.5.5 asks for 44x44 CSS px and 2.5.8 for 24x24, and both mean the
+ * INTERACTIVE area rather than the visible mark. Measured on a 375px phone the
+ * ground control was 53x25 — one pixel over the AA floor and well under the AAA
+ * number this site holds itself to everywhere else. Enlarging the ink would have
+ * made the quieter control loud, which is the one thing its own note above asks
+ * not to happen, so the hit area is grown behind it instead.
+ *
+ * Vertical growth only, in practice: all three controls are already wider than
+ * 44px, so `min-width` never fires and no two hit areas can meet. The band it adds
+ * above and below sits in the cluster's own padding. The skip link overlaps it when
+ * focused and wins on z-index, which is the right way round. */
+.qe-controls > * { position: relative; }
+.qe-controls > *::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  min-width: 44px;
+  min-height: 44px;
+}
+
 /* The ground control, deliberately the quieter of the two. Plain view changes
    what the page IS — it takes the pill. This only changes what the page is lying
    on, so it is a word and a hairline. Its label is where the click goes, which is

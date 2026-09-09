@@ -132,6 +132,15 @@ be visible reports zero failures and looks exactly like a clean one.* `REVEAL` n
 clones the page's own result templates, so the real markup is measured under the real
 stylesheet. **A new runtime component needs a line there.**
 
+**A TARGET IS THE INTERACTIVE AREA, NOT THE INK, AND NOTHING HERE MEASURES IT.**
+WCAG 2.5.5 asks 44×44 CSS px and 2.5.8 asks 24×24. The ground control shipped at
+**53×25** on a 375px phone — one pixel over the floor — and no gate noticed, because
+contrast is the only thing measured. Grow the hit area behind a control rather than
+enlarging its ink: `.qe-controls > *::after` is an absolutely positioned box with
+`min-width`/`min-height: 44px`, which leaves the design alone. **A new control needs
+one, and needs measuring after** — check that no two hit areas overlap and that each
+still receives its own tap.
+
 **What it still cannot see, so measure these by hand.** A `::marker` is not an element with
 its own text, which is how the register's entry bullets sat at 2.15:1 unreported — the rule
 that catches them is editorial: **the colour goes on the rule and never on the glyph**. A
