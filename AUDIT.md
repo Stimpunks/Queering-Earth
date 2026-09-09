@@ -48,7 +48,7 @@ decoration, texture, or plain view. The spec does not know that texture under te
 
 | | count |
 |---|---|
-| **Findings** | **8** — 5 remediated 2026-09-09, 3 open |
+| **Findings** | **8** — 6 remediated 2026-09-09, 2 open |
 | Passing, verified | 22 |
 | Not applicable, with reasons | 5 |
 | Deferred — needs field data | 1 |
@@ -246,6 +246,25 @@ decision, not a mechanical fix.
 ### 6. Nothing is cached, including the things that never change
 
 `cache-control` (required) · [spec](https://specification.website/spec/performance/cache-control/)
+
+> **Remediated 2026-09-09.** The HTML half of this finding was never wrong: the spec's
+> recommendation for HTML is `public, max-age=0, must-revalidate`, verbatim what Netlify
+> already sent. It is written into `_headers` now so it is owned rather than inherited.
+>
+> The plates take **thirty days with `stale-while-revalidate` and `stale-if-error`, and no
+> `immutable`** — the spec reserves that for content-hashed URLs, and promising an
+> unchangeable body on a filename a rescan could overwrite asserts a fact we cannot
+> enforce. `queering.css` and `queering.js` take **five minutes and no SWR**; the icons a
+> week; the manifests ten minutes with `stale-if-error`. `must-revalidate` and
+> `stale-if-error` are never combined, per the spec's note that RFC 9111 cancels them.
+>
+> **Not fingerprinting** is a recorded decision, not an omission — see `DECISIONS.md`. The
+> prize is 31 KB brotli'd; the cost is a generator, twelve rewritten pages per CSS edit,
+> and an unreadable diff for a one-line palette fix.
+>
+> Verified live: Netlify's path rules replace rather than append, every path carries its
+> intended policy, conditional requests return 304 with zero bytes, and `Vary:
+> Accept-Encoding` is intact.
 
 Every asset gets the same header:
 

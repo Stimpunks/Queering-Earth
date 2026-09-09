@@ -130,6 +130,46 @@ on both her domains. **Never edited from this repo.**
 
 ## Settled
 
+### The shared assets are not fingerprinted, and the cache is bounded instead (2026-09-09)
+
+The spec's `cache-control` item gives one clean answer — `max-age=31536000, immutable` — and
+it is available only to URLs carrying a content hash. `queering.css` and `queering.js` carry
+their own names, because there is no build step, so the clean answer is off the table and
+what is left is a choice between two imperfect ones.
+
+**Not fingerprinting.** The machinery would be a generator that renames both files by content
+hash and rewrites the reference in all twelve pages, plus a gate to catch a page pointing at
+a hash that no longer exists. Every commit touching the stylesheet would then churn twelve
+HTML files, which makes the diff of a one-line palette fix unreadable — and the register
+depends on those diffs being legible. **The prize is 31 KB over the wire, brotli'd.** That is
+not a trade worth making at this size, and it can be made later without undoing anything:
+adding fingerprints is a strictly additive change to a tool that does not exist yet.
+
+**So the cache is bounded instead: five minutes.** Chosen for the shape of a visit rather than
+the size of the file. A reader moving through several sheets in one sitting revalidates once
+instead of once per sheet, and a bad stylesheet reaches everyone within five minutes rather
+than being stuck in caches with no way to bust it. **That bound is the whole point.** This
+site's characteristic failure is a palette or print change that breaks pages silently — Star
+Stuff shipped 44 of 46 pages that printed blank — so an unbustable stylesheet is a worse
+exposure here than a slow one.
+
+`stale-while-revalidate` is deliberately **not** on those two, though it is on the plates. The
+HTML is `must-revalidate` and therefore always fresh; a stylesheet one visit behind it would
+render a change that adds a class and its rule together as an unstyled page for that visit.
+Staleness is only safe where the stale copy cannot disagree with the fresh HTML.
+
+**And the plates get thirty days without `immutable`.** Their bodies will almost certainly
+never change: `annales-lugduno-batavi-1863-tab4-gonystylus-miquelianus.jpg` names one plate in
+one volume, and tab 4 of the 1863 Annales is not going to be re-cut. But *almost certainly*
+is not what `immutable` means. It tells a browser the body can never change, on a filename a
+better scan could overwrite, and asserting a fact we cannot enforce is the same failure as a
+gold seam on a sheet nobody corrected. **Thirty days is a claim we can keep.** If a plate is
+ever rescanned, the honest move is a new filename — but nothing forces that, which is exactly
+why the promise is not made.
+
+Revisit when either file is fingerprinted for another reason, or when the stylesheet is large
+enough that 300 seconds of caching is measurably costing something.
+
 ### Sheet No. 8 is a wall, which is a third kind of sheet (2026-09-09)
 
 Ryan asked for a zine wall, pointing at [Stimpunks' zine
