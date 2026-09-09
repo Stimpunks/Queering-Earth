@@ -53,6 +53,16 @@
   # the consistent triple; a 1 here would contradict both.
   tdm-reservation: 0
 
+# The two index files are Markdown, and the Link header says so. Netlify types a .txt
+# as text/plain, which the llms.txt spec allows — but declaring text/markdown in the
+# Link header while serving text/plain is a disagreement an agent has to resolve, and
+# the file genuinely is Markdown. The name is fixed by the convention; the type is not.
+/llms.txt
+  Content-Type: text/markdown; charset=UTF-8
+
+/llms-full.txt
+  Content-Type: text/markdown; charset=UTF-8
+
 # Agent Skills discovery. The spec asks for CORS wide open on both files so a
 # browser-based agent can fetch them; they are a public description of a public site.
 /.well-known/agent-skills/*
