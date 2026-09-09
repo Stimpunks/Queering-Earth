@@ -290,6 +290,35 @@ h2 {
 }
 html.plain h2 { font-variation-settings: normal; }
 
+/* ── a heading that does the thing it claims
+ *
+ * "The type plays" set in the same even measure as every other heading argues
+ * against itself, so this one is set per word: each carries its own SOFT, a
+ * few sit a degree off the line, and the three words that say the words do not
+ * move are the three set flat and straight. Per word, never per letter — a
+ * heading cut into letter spans is one line to the eye and a stutter to a
+ * screen reader. Same `.w` idiom the cut-out line already uses.
+ */
+h2.qe-play .w {
+  display: inline-block;
+  font-variation-settings: "SOFT" var(--soft, 60), "WONK" var(--wonk, 1);
+  transform: rotate(var(--rot, 0deg)) translateY(var(--dy, 0));
+}
+html.plain h2.qe-play .w { font-variation-settings: normal; transform: none; }
+
+/* Same reason as the leaning title below: under about 30rem a rotated word
+   collides with its neighbour rather than leaning away from it. */
+@media (max-width: 30rem) {
+  h2.qe-play .w { transform: none; }
+}
+
+/* ── the verb, wonked. The word this whole site is built on gets the axis at
+      its full extent wherever it appears in a heading. SOFT as well as WONK,
+      because in roman WONK alone moves too few glyphs to be seen at heading
+      size — the same reason the type specimen is set in italic. */
+h2 .qe-queer { font-variation-settings: "SOFT" 100, "WONK" 1; }
+html.plain h2 .qe-queer { font-variation-settings: normal; }
+
 p { margin: 0 0 1.35rem; }
 
 a {
