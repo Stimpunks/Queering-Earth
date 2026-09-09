@@ -130,6 +130,56 @@ on both her domains. **Never edited from this repo.**
 
 ## Settled
 
+### The moth is an homage, and the four things it cost (2026-09-09)
+
+Ryan's idea: the cover of Nick Walker's *Neuroqueer Heresies* puts a human brain where a
+swallowtail's body would be, so put the **Earth** there and you have this site's name as a
+drawing. The colours are Ezra Furman's — *we wear the lilac and black*. Both credits are in
+the figure's own caption and in `ATTRIBUTIONS.md`.
+
+**Placement: the foot of "Queering is a verb", not the masthead.** The header spray was not
+the thing to replace, and the moth is an argument about that particular section — the verb,
+and our extension of it. It is the first drawing here that is neither a masthead nor a corner.
+
+**Surface: bare.** Our drawing, our caption, so it is the default tier. A **dark-ground card**
+was drafted (lilac line on near-black, identical in both grounds, closest to the book cover
+and to the song) and **refused**: a black panel on a vellum sheet is a fourth surface, and the
+three-surface rule exists so a reader can rank a panel without reading its label. Revisit only
+if something else genuinely wants a worn-card surface, in which case it is a rule amendment
+with a second use case behind it, not a one-off.
+
+**Two new decorative tokens, taking the decorative five to seven.** `--qe-lilac` and
+`--qe-lilac-pale`. A wash and the thing washed onto it cannot be one value — the same reason
+`--qe-paper` has a `--qe-paper-deep`. The alternative considered was reusing `--qe-violet` for
+the forewing and adding one token, which would have saved a line and changed the drawing that
+was actually approved. The pale one goes **darker** in the cabinet, because in daylight it is
+the recessed thing.
+
+**The black inverts, and that is not a compromise being hidden.** "Black" is `--qe-ink`, so in
+the drawer the outline and the continents come up cream. The song says lilac and black; the
+ground rule says the lightest thing text sits on flips, and a literal black line on dark warm
+brown is a line nobody sees. The only version that would have held true black in both grounds
+is the card that lost on the surface rule.
+
+**The coastlines are projected, not drawn, and the reason is funnier than it is technical.**
+Three passes of hand-drawn continents came out as symmetrical dark blobs either side of a
+central meridian — a Rorschach card, which is to say a **brain**. A picture whose entire point
+is that the Earth is where the brain was cannot have a middle that reads as the thing it
+replaced. They are now coarse lat/lon outlines through an orthographic projection centred on
+25° W, 12° N, with far-side points pushed onto the limb rather than folded back across the
+disc. Africa is unmistakable at a 40px radius, which is the size that matters.
+
+**No tails, after four attempts.** Straight down they read as legs; swept out, a bracket;
+curled in, a moustache; merged into the hindwing path, a boot. A broad fanned hindwing and a
+feathered antenna are what say *moth*. The cover's tails say *swallowtail*, which we are not,
+and the caption carries that reference so the drawing does not have to fake it.
+
+**One process note worth keeping.** The first four review screenshots showed a moth with no
+wings. Every wing is inside a `.sprout`, which starts at `opacity: 0` and unfurls on a delay,
+so a screenshot taken half a second after load photographs an animation that has not happened.
+The gating is right; the reviewer was early. Anything that screenshots a drawing here has to
+wait out `0.55s + i × 0.075s` plus the unfurl.
+
 ### check-overlap is ported, and two faults in it were found on the way (2026-09-09)
 
 Ported from Star Stuff because a corner-floated accession stamp was designed, measured and

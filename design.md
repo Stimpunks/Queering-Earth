@@ -75,14 +75,16 @@ The chips below are drawn with the tokens themselves rather than with copies of 
 - MarigoldDecoration only. `--qe-marigold`
 - CoralDecoration only. `--qe-coral`
 - VioletDecoration only. `--qe-violet`
+- LilacDecoration only. `--qe-lilac`
+- Lilac, paleDecoration only — the wash under the lilac. `--qe-lilac-pale`
 
-The five decorative colours are the ones a butterfly wing gives you. They are used sparingly and never all at once.
+The seven decorative colours are the ones a butterfly wing gives you. They are used sparingly and never all at once. The two lilacs arrived last and arrived together, borrowed for [the moth on the home page](https://queering.earth/#queering-is-a-verb): a wash and the thing washed onto it cannot be one value, which is the same reason `--qe-paper` has a `--qe-paper-deep`.
 
 ## The two grounds
 
 The sheet has a **daylight** ground and a **cabinet** ground, and the cabinet is not the daylight sheet with the lamp switched off. It is the drawer shut: a herbarium cabinet is dark warm brown, and a Victorian dark-ground plate prints its specimens on near-black precisely so that pale forms read. The accents on this site were always the accents of such a plate — sage foliage, marigold leaves, coral caps, cream bodies — which is the argument for brown and against a dark green. Green ground shares its hue with moss, lichen, and verdigris, and takes the separation out of the colours the site is built from.
 
-Two numbers move and the rest do not. Ink, moss, and rust are lifted to clear 7:1 on the new ground — **12.8:1**, **7.2:1**, and **7.3:1** respectively. The five decorative tokens stay where they are, still saturated. **7:1 is a rule for letters.** Applying it to the drawings turns every flower chalky and washes the plates out; the brightness belongs to the text.
+Two numbers move and the rest do not. Ink, moss, and rust are lifted to clear 7:1 on the new ground — **12.8:1**, **7.2:1**, and **7.3:1** respectively. The seven decorative tokens stay where they are, still saturated. **7:1 is a rule for letters.** Applying it to the drawings turns every flower chalky and washes the plates out; the brightness belongs to the text.
 
 One inversion is worth naming, because it is a trap rather than a taste. In daylight a card is *lighter* than the page, so text sitting on one gains contrast. On a dark ground that instinct is backwards — a lifted card *loses* it, and solving for 7:1 on a lifted panel drags rust up into a pale pink with no rust left in it. The cabinet's cards are recessed instead, which keeps every token above target and reads better anyway: compartments in a drawer.
 
@@ -190,6 +192,8 @@ It is a stylesheet, not a second document. There is one copy of every sentence o
 The botanical art at the top of each page is inline SVG — paths in the page, coloured by the same tokens as everything else, animated in CSS. Nothing is an image file, so it stays sharp at any size, prints as line work, and costs no extra request.
 
 Motion is growth: stems draw themselves in, then leaves and wings unfurl. All of it is gated behind `prefers-reduced-motion`, so the reduced state is the completed drawing.
+
+One drawing is neither at the top of a page nor a plant. At the foot of [Queering is a verb](https://queering.earth/#queering-is-a-verb) there is a moth with the Earth where its body should be — an homage to the cover of Nick Walker’s *Neuroqueer Heresies*, which sets a human brain there, drawn in Ezra Furman’s lilac and black. It wears the same classes as the botanical art, so it inherits that motion rather than restating it, and its coastlines are **projected rather than drawn**: three passes of hand-drawn continents read as an inkblot and, at the centre of that particular drawing, as a brain — which is the one thing it must not be mistaken for.
 
 ## Borrowed plates
 

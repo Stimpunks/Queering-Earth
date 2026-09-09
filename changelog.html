@@ -189,8 +189,44 @@
 
   <div class="qe-register">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-09-stamp">
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-moth">
       <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <h2 id="a-2026-09-09-moth">A moth with the Earth where its body should be, in somebody else&rsquo;s two colours, and the hardest part was stopping the middle of it from looking like a brain <a class="qe-anchor" href="#a-2026-09-09-moth"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Ryan&rsquo;s, and it is two borrowings at once. The cover of Nick Walker&rsquo;s <cite>Neuroqueer Heresies</cite> sets a human brain where a swallowtail&rsquo;s body would be; Ezra Furman&rsquo;s <cite>Lilac and Black</cite> supplies the palette and the line the palette comes wrapped in &mdash; <q>We wear the lilac and black</q>. Put the Earth where the brain was and you have this site&rsquo;s name as a drawing. Both debts are stated in the figure&rsquo;s own caption, which is the only version of this that is defensible here.</p>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="index design">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">The drawing is at the foot of a section rather than at the top of a page, which is the first time anything here has been</span></div>
+        <div class="qe-entry-body">
+          <p>Every other drawing on this site sits above the prose as a masthead, or in a corner as a vine. This one closes <a href="/#queering-is-a-verb">Queering is a verb</a>, because that is the section it is an argument about: Walker&rsquo;s coinage, our extension of it, and a picture that performs the extension rather than restating it. The header spray at the top of the home page is untouched &mdash; it was never the thing to replace.</p>
+          <p><strong>The surface is bare.</strong> Space only, no fill, no box: it is our own drawing with our own caption under it, which is the default tier and not an object mounted from elsewhere. The one dark-ground version drafted for review was refused for that reason as much as any other &mdash; a black card on a vellum sheet is a fourth surface, and the three-surface rule exists so that a reader can rank a panel without reading its label.</p>
+          <p><strong>It wears <code>.qe-botanical</code> as well as <code>.qe-moth</code>, and that is deliberate.</strong> The growth motion, the stroke-drawn stems and the unfurling sprouts are all written once; only the fills are new. A second copy of that idiom is a second thing to keep in step with <code>prefers-reduced-motion</code>, and the reduced state has to be the finished drawing in both.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Two new decorative tokens, because a wash and the thing washed onto it cannot be one value</span></div>
+        <div class="qe-entry-body">
+          <p><code>--qe-lilac</code> takes the forewing, <code>--qe-lilac-pale</code> the hindwing and the sea of the globe, and both have <code>--qe-cab-*</code> counterparts aliased through both ground switches. The decorative five is a decorative seven now, and the sentence on <a href="/design#palette">the palette sheet</a> that counted them has been recounted &mdash; a number in prose that nothing checks is a number that goes stale silently, and this one had been true since the site shipped.</p>
+          <p><strong>The pale one goes <em>darker</em> in the drawer, not lighter.</strong> That is the gating-surface inversion arriving in a component with no text in it: in daylight the wash is the recessed thing under the wing, and lifting it in the cabinet would have it out-shouting the ink line. Neither token is for text in either ground, so 7:1 does not apply &mdash; there is not a letter anywhere in the drawing.</p>
+          <p><strong>Black is <code>--qe-ink</code>, so the black inverts.</strong> In daylight the outline and the continents are near-black on vellum; in the drawer they are cream. The song says lilac and black and the drawer says otherwise, and the drawer wins, because the alternative is a literal black line on dark brown that nobody can see. The one version that would have kept the black in both grounds was the black card, and it lost on the surface rule above.</p>
+          <p>The print sheet flattens the wings to line work like every other drawing here, with one exception written into the rule: <strong>the continents keep their fill.</strong> Flatten those along with the wings and the globe stops being the Earth and becomes a ruled circle.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="index">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The coastlines are projected rather than drawn, because three passes of hand-drawn continents kept reading as a brain</span></div>
+        <div class="qe-entry-body">
+          <p><strong>This is the funniest available failure and the least acceptable one.</strong> The drawing quotes a book cover that has a brain in the middle of it. Hand-drawn continents &mdash; three separate attempts at them &mdash; came out as a pair of symmetrical dark blobs either side of a central meridian, which is a Rorschach card, which is to say: a brain. A picture whose whole point is that the Earth is where the brain was cannot have a middle that reads as the thing it replaced.</p>
+          <p>So the coastlines are coarse lat/lon outlines put through an orthographic projection centred on 25&deg; west and 12&deg; north &mdash; the Atlantic view, the only one where the Americas and Africa are both legible. Points on the far side are pushed out onto the limb rather than folded back across the disc, which is what a continent going round the edge actually looks like. <strong>The foreshortening is Earth&rsquo;s and not ours</strong>, and Africa is unmistakable at a forty-pixel radius, which is the size that matters.</p>
+          <p><strong>It has no tails, after four attempts at them.</strong> Hanging straight down they read as legs; swept outward, as a bracket; curled inward, as a moustache; integrated into the hindwing path, as a boot. What actually says <em>moth</em> is a broad fanned hindwing and a feathered antenna, both of which it has. The cover&rsquo;s tails say <em>swallowtail</em>, which we are not, and the caption carries that reference instead of the drawing pretending to.</p>
+          <p>One thing the review process itself taught: <strong>the first four screenshots showed no wings at all.</strong> Every wing is inside a <code>.sprout</code>, which starts at <code>opacity: 0</code> and unfurls on a delay, so a screenshot taken half a second after load is a photograph of an animation that has not happened. The growth gating is correct and the reviewer was wrong; noting it because the next person to check a drawing here will hit the same thing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-stamp">
+      <p class="qe-accession-date">2026 &middot; 9 September</p>
       <h2 id="a-2026-09-09-stamp">A real herbarium stamps its sheets with an accession number that is a row in a ledger, which is the whole reason this one could have it and most of the work was proving the ink was legal <a class="qe-anchor" href="#a-2026-09-09-stamp"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Prompted by Ryan noticing the oval stamp on a scanned sheet from the Ada Hayden Herbarium at Iowa State University &mdash; the institution&rsquo;s name around the ring, its parent below, and <strong>497892</strong> across the middle. The suggestion was that a faded one would add to the sense of age, and it does. What it cost was a measurement, because <em>faded</em> and <strong>7:1</strong> are the same argument from opposite ends.</p>

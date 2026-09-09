@@ -202,6 +202,13 @@
   --qe-marigold: #c9922e;
   --qe-coral: #c4553c;
   --qe-violet: #7a5c9e;
+  /* THE TWO LILACS ARE ONE COLOUR AT TWO STRENGTHS, and they are two tokens for the
+     same reason --qe-paper and --qe-paper-deep are: a wash and the thing washed onto
+     it cannot be one value. The moth's forewing takes the first, its hindwing and the
+     sea of its globe the second. Borrowed from Ezra Furman by way of the illustration
+     that needed them — see the moth on the home page, and ATTRIBUTIONS.md. */
+  --qe-lilac: #b9a2d6;
+  --qe-lilac-pale: #ded1ec;
 
   /* Structure */
   --qe-rule: #cdbfa4;
@@ -313,6 +320,8 @@
   --qe-cab-marigold: #c9922e;
   --qe-cab-coral: #cf6142;
   --qe-cab-violet: #8f6fb5;
+  --qe-cab-lilac: #a98cca;
+  --qe-cab-lilac-pale: #6f5a8c;
 
   --qe-cab-rule: #4a382f;
   --qe-cab-flesh: #d8c9ae;
@@ -353,6 +362,8 @@
     --qe-marigold: var(--qe-cab-marigold);
     --qe-coral: var(--qe-cab-coral);
     --qe-violet: var(--qe-cab-violet);
+    --qe-lilac: var(--qe-cab-lilac);
+    --qe-lilac-pale: var(--qe-cab-lilac-pale);
     --qe-rule: var(--qe-cab-rule);
     --qe-flesh: var(--qe-cab-flesh);
     --qe-wash-a: var(--qe-cab-wash-a);
@@ -377,6 +388,8 @@
     --qe-marigold: var(--qe-cab-marigold);
     --qe-coral: var(--qe-cab-coral);
     --qe-violet: var(--qe-cab-violet);
+    --qe-lilac: var(--qe-cab-lilac);
+    --qe-lilac-pale: var(--qe-cab-lilac-pale);
     --qe-rule: var(--qe-cab-rule);
     --qe-flesh: var(--qe-cab-flesh);
     --qe-wash-a: var(--qe-cab-wash-a);
@@ -634,6 +647,98 @@ html.plain .qe-wordmark { font-variation-settings: normal; font-weight: 700; }
 
 /* Plain view keeps the drawing and drops the motion. */
 html.plain .qe-botanical { opacity: 0.85; }
+
+/* ─────────────────────────────────────────────── the moth, and the Earth in it
+ *
+ * An homage, on the home page, at the foot of "Queering is a verb": Nick Walker's
+ * NEUROQUEER HERESIES puts a human brain where a swallowtail's body would be, and
+ * this puts the Earth there instead. The colours are Ezra Furman's — we wear the
+ * lilac and black. Both debts are named in the figure's own caption and in
+ * ATTRIBUTIONS.md, because an uncredited homage on a site that publishes an
+ * attribution ledger is the exact failure that ledger exists to prevent.
+ *
+ * IT WEARS .qe-botanical TOO, and that is the point of it. The motion, the
+ * stroke-drawing stems and the unfurling sprouts are already written up there; only
+ * the fills are new. A second copy of the growth idiom is a second thing to keep in
+ * step with prefers-reduced-motion.
+ *
+ * THE SURFACE IS BARE — space only, no fill, no box. It is our own drawing and our
+ * own caption, which is the default tier and not a mounted object.
+ *
+ * FOUR THINGS THAT WERE FOUND BY DRAWING IT WRONG FIRST, all in the markup rather
+ * than here, and all worth knowing before anybody edits the paths:
+ *
+ *   - THE COASTLINES ARE PROJECTED, NOT DRAWN. Three passes of hand-drawn continents
+ *     read as an inkblot, and — at the centre of this particular drawing — as a
+ *     BRAIN, which is the one thing it must not be mistaken for. They are coarse
+ *     lat/lon outlines through an orthographic projection centred on 25 west, so the
+ *     foreshortening towards the limb is Earth's and not ours.
+ *   - IT HAS NO TAILS. Four tries: hanging straight down they read as legs, swept
+ *     outward as a bracket, curled inward as a moustache. A broad fanned hindwing
+ *     and a feathered antenna are what say MOTH; the cover's tails say SWALLOWTAIL,
+ *     which we are not. The caption carries that reference instead.
+ *   - BANDS RUN ACROSS THE WING. A band chasing the outer margin sat outside the
+ *     outline entirely and painted onto the paper, invisible in review because
+ *     lilac on vellum at four pixels wide looks like nothing at all.
+ *   - THE MIRROR GOES ON AN OUTER GROUP AND THE ANIMATION ON AN INNER ONE, the same
+ *     trap the sprouts already document: a CSS transform overrides the attribute and
+ *     collapses the whole wing onto the origin.
+ */
+
+.qe-moth { max-width: 26rem; margin-inline: auto; }
+
+/* The wings. Forewing takes the lilac, hindwing the wash under it. */
+.qe-moth .fore { fill: var(--qe-lilac); stroke: var(--qe-ink); stroke-width: 1.6; }
+.qe-moth .hind { fill: var(--qe-lilac-pale); stroke: var(--qe-ink); stroke-width: 1.6; }
+.qe-moth .hollow { fill: none; }
+.qe-moth .band { fill: none; stroke: var(--qe-violet); stroke-width: var(--w, 5);
+                 opacity: var(--o, 1); stroke-linecap: round; }
+.qe-moth .vein { fill: none; stroke: var(--qe-ink); stroke-width: 0.9; opacity: 0.5;
+                 stroke-linecap: round; }
+.qe-moth .halo { fill: none; stroke: var(--qe-ink); stroke-width: 1; opacity: 0.55; }
+.qe-moth .eye { fill: var(--qe-violet); stroke: var(--qe-ink); stroke-width: 1.2; }
+.qe-moth .pupil { fill: var(--qe-ink); }
+
+/* The body. The globe stands in for the thorax, so only the abdomen is drawn. */
+.qe-moth .abdomen { fill: var(--qe-ink); }
+.qe-moth .segment { fill: none; stroke: var(--qe-lilac); stroke-width: 1; opacity: 0.65;
+                    stroke-linecap: round; }
+.qe-moth .fur { fill: none; stroke: var(--qe-ink); stroke-width: 1.2; stroke-linecap: round; }
+.qe-moth .stem { stroke: var(--qe-ink); stroke-width: 1.7; }
+.qe-moth .barb { fill: none; stroke: var(--qe-ink); stroke-width: 0.85; stroke-linecap: round; }
+
+/* The globe. Land is ink and sea is the lilac wash — which is the brief's two
+   colours exactly, and it inverts with the ground like every other ink mark here. */
+.qe-moth .sea { fill: var(--qe-lilac-pale); }
+.qe-moth .land { fill: var(--qe-ink); }
+.qe-moth .graticule { fill: none; stroke: var(--qe-ink); stroke-width: 0.7; opacity: 0.45; }
+.qe-moth .axis { stroke-width: 1; opacity: 0.6; }
+.qe-moth .rim { fill: none; stroke: var(--qe-ink); stroke-width: 2.2; }
+
+.qe-moth-figure { margin: var(--qe-space-6) 0; }
+.qe-moth-figure figcaption {
+  font-family: var(--qe-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--qe-moss);
+  max-width: 30rem;
+  margin: var(--qe-space-2) auto 0;
+  text-align: center;
+}
+
+/* Print is line work, the same as every other drawing here — but the CONTINENTS KEEP
+   THEIR FILL. Flatten those to none along with the wings and the globe stops being
+   the Earth and becomes a ruled circle. */
+@media print {
+  .qe-moth .fore, .qe-moth .hind, .qe-moth .eye, .qe-moth .abdomen { fill: none; stroke: #444; }
+  .qe-moth .sea { fill: none; }
+  .qe-moth .land, .qe-moth .pupil { fill: #444; }
+  .qe-moth .band, .qe-moth .vein, .qe-moth .graticule, .qe-moth .rim,
+  .qe-moth .fur, .qe-moth .stem, .qe-moth .barb, .qe-moth .halo,
+  .qe-moth .segment { stroke: #444; }
+  .qe-moth .band { opacity: 0.35; }
+  .qe-moth-figure figcaption { color: #222; }
+}
 
 /* ─────────────────────────────────────────────── the provocation */
 

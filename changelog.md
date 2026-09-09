@@ -36,6 +36,40 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## A moth with the Earth where its body should be, in somebody else’s two colours, and the hardest part was stopping the middle of it from looking like a brain
+
+Ryan’s, and it is two borrowings at once. The cover of Nick Walker’s *Neuroqueer Heresies* sets a human brain where a swallowtail’s body would be; Ezra Furman’s *Lilac and Black* supplies the palette and the line the palette comes wrapped in — “We wear the lilac and black”. Put the Earth where the brain was and you have this site’s name as a drawing. Both debts are stated in the figure’s own caption, which is the only version of this that is defensible here.
+
+MountedThe drawing is at the foot of a section rather than at the top of a page, which is the first time anything here has been
+
+Every other drawing on this site sits above the prose as a masthead, or in a corner as a vine. This one closes [Queering is a verb](https://queering.earth/#queering-is-a-verb), because that is the section it is an argument about: Walker’s coinage, our extension of it, and a picture that performs the extension rather than restating it. The header spray at the top of the home page is untouched — it was never the thing to replace.
+
+**The surface is bare.** Space only, no fill, no box: it is our own drawing with our own caption under it, which is the default tier and not an object mounted from elsewhere. The one dark-ground version drafted for review was refused for that reason as much as any other — a black card on a vellum sheet is a fourth surface, and the three-surface rule exists so that a reader can rank a panel without reading its label.
+
+**It wears `.qe-botanical` as well as `.qe-moth`, and that is deliberate.** The growth motion, the stroke-drawn stems and the unfurling sprouts are all written once; only the fills are new. A second copy of that idiom is a second thing to keep in step with `prefers-reduced-motion`, and the reduced state has to be the finished drawing in both.
+
+CabinetTwo new decorative tokens, because a wash and the thing washed onto it cannot be one value
+
+`--qe-lilac` takes the forewing, `--qe-lilac-pale` the hindwing and the sea of the globe, and both have `--qe-cab-\*` counterparts aliased through both ground switches. The decorative five is a decorative seven now, and the sentence on [the palette sheet](https://queering.earth/design#palette) that counted them has been recounted — a number in prose that nothing checks is a number that goes stale silently, and this one had been true since the site shipped.
+
+**The pale one goes *darker* in the drawer, not lighter.** That is the gating-surface inversion arriving in a component with no text in it: in daylight the wash is the recessed thing under the wing, and lifting it in the cabinet would have it out-shouting the ink line. Neither token is for text in either ground, so 7:1 does not apply — there is not a letter anywhere in the drawing.
+
+**Black is `--qe-ink`, so the black inverts.** In daylight the outline and the continents are near-black on vellum; in the drawer they are cream. The song says lilac and black and the drawer says otherwise, and the drawer wins, because the alternative is a literal black line on dark brown that nobody can see. The one version that would have kept the black in both grounds was the black card, and it lost on the surface rule above.
+
+The print sheet flattens the wings to line work like every other drawing here, with one exception written into the rule: **the continents keep their fill.** Flatten those along with the wings and the globe stops being the Earth and becomes a ruled circle.
+
+CabinetThe coastlines are projected rather than drawn, because three passes of hand-drawn continents kept reading as a brain
+
+**This is the funniest available failure and the least acceptable one.** The drawing quotes a book cover that has a brain in the middle of it. Hand-drawn continents — three separate attempts at them — came out as a pair of symmetrical dark blobs either side of a central meridian, which is a Rorschach card, which is to say: a brain. A picture whose whole point is that the Earth is where the brain was cannot have a middle that reads as the thing it replaced.
+
+So the coastlines are coarse lat/lon outlines put through an orthographic projection centred on 25° west and 12° north — the Atlantic view, the only one where the Americas and Africa are both legible. Points on the far side are pushed out onto the limb rather than folded back across the disc, which is what a continent going round the edge actually looks like. **The foreshortening is Earth’s and not ours**, and Africa is unmistakable at a forty-pixel radius, which is the size that matters.
+
+**It has no tails, after four attempts at them.** Hanging straight down they read as legs; swept outward, as a bracket; curled inward, as a moustache; integrated into the hindwing path, as a boot. What actually says *moth* is a broad fanned hindwing and a feathered antenna, both of which it has. The cover’s tails say *swallowtail*, which we are not, and the caption carries that reference instead of the drawing pretending to.
+
+One thing the review process itself taught: **the first four screenshots showed no wings at all.** Every wing is inside a `.sprout`, which starts at `opacity: 0` and unfurls on a delay, so a screenshot taken half a second after load is a photograph of an animation that has not happened. The growth gating is correct and the reviewer was wrong; noting it because the next person to check a drawing here will hit the same thing.
+
+2026 · 9 September
+
 ## A real herbarium stamps its sheets with an accession number that is a row in a ledger, which is the whole reason this one could have it and most of the work was proving the ink was legal
 
 Prompted by Ryan noticing the oval stamp on a scanned sheet from the Ada Hayden Herbarium at Iowa State University — the institution’s name around the ring, its parent below, and **497892** across the middle. The suggestion was that a faded one would add to the sense of age, and it does. What it cost was a measurement, because *faded* and **7:1** are the same argument from opposite ends.

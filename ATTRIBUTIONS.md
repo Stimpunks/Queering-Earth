@@ -166,6 +166,49 @@ hedge on a credit that was freely given.
 
 ----
 
+### Nick Walker and Ezra Furman — the moth, the Earth, and two colours
+
+**Credited on:** `index.html` — the figure at the foot of
+[Queering is a verb](https://queering.earth/#queering-is-a-verb), in the caption under the
+drawing. Also described on [the design sheet](https://queering.earth/design#drawings).
+
+Not a quotation. An **homage**, which is a thing this ledger has to hold too, because an
+uncredited homage is a borrowing with our name on it.
+
+**What was borrowed, from whom.** The cover of Walker's
+[*Neuroqueer Heresies*](https://neuroqueer.com/neuroqueer-heresies/) (Autonomous Press, 2021)
+sets a human brain where a swallowtail butterfly's body would be. Our drawing sets the Earth
+there instead. The **composition is his book's**; the substitution is ours, and it is the
+site's own name — Queering Earth — as a picture.
+
+The colours are **Ezra Furman's**, from *Lilac and Black* on
+[*Twelve Nudes*](https://genius.com/Ezra-furman-lilac-and-black-lyrics) (Bella Union, 2019):
+
+> We wear the lilac and black
+
+**Verified:** 2026-09-09. The book's subtitle and cover were confirmed against
+neuroqueer.com on 2026-09-07 for the masthead credit (see *Postnormal Possibilities*, above);
+the same page carries the cover image. The Furman line was supplied by Ryan with the Genius
+link, and the caption quotes no more of the song than the two colour words it takes.
+
+**What the caption says, and why it says that much.** *After the cover of Nick Walker's
+Neuroqueer Heresies, which sets a human brain where a swallowtail's body would be, and after
+Ezra Furman's Lilac and Black. Ours is a moth, and the Earth is where the brain was.*
+
+Three things are load-bearing in it. **"After"** — the same word the masthead uses for Walker,
+and for the same reason: it credits without claiming his authorship of what we made.
+**Naming the brain** — because a reader who does not know the cover cannot otherwise see that
+the Earth is a substitution, and the substitution is the whole idea. And **"ours is a moth"** —
+because it is not the cover's swallowtail, and saying so is cheaper and more honest than a
+drawing that pretends to be one. The moth has no tails for exactly that reason.
+
+**Two tokens were named after the borrowing.** `--qe-lilac` and `--qe-lilac-pale` entered the
+palette for this drawing, and the comment beside them in `queering.css` says where they came
+from. A colour cannot be attributed the way a sentence can — nobody owns lilac — but the
+*pairing* is Furman's line, and the tokens are the reason it now recurs across the site.
+
+----
+
 ### Christina Rossetti — *Promises like Pie-crust*, and the colon at line 20
 
 **Quoted on:** `promises-like-pie-crust.html` (the poem, entire).

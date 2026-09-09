@@ -117,7 +117,7 @@ colours the print sheet could not reach. `tools/check-contrast.mjs` measures bot
 asks for it. Every text token in `queering.css` clears it against the ground; the three
 that are text (`--qe-ink` 14.3:1, `--qe-moss` 7.8:1, `--qe-rust` 7.0:1 in daylight; 12.8:1,
 7.2:1, 7.3:1 in the cabinet) are chosen for it. The decorative tokens — lichen, verdigris,
-marigold, coral, violet — **are not for text**, in either ground.
+marigold, coral, violet, and the two lilacs — **are not for text**, in either ground.
 
 **`check-contrast.mjs` gates at the house 7:1** (4.5:1 for large text) as of 2026-09-09, in
 two tiers reported apart: under WCAG AA is `FAIL`, between AA and 7:1 is `UNDER`, and both
@@ -231,8 +231,9 @@ to get wrong:
   is.** In daylight a card is lighter than the page. In the cabinet the cards are
   **recessed** so the page stays the worst case — lift one and rust has to go pale pink to
   clear 7:1.
-- **Decoration stays saturated.** 7:1 is a rule for letters; lifting the decorative five to
-  it turns every flower chalky.
+- **Decoration stays saturated.** 7:1 is a rule for letters; lifting the decorative seven to
+  it turns every flower chalky. `--qe-lilac-pale` goes **darker** in the drawer, not lighter,
+  because in daylight it is the recessed thing — a wash under a wing.
 - **Paper is daylight always.** Both switches are `@media screen`. Anything that is a
   daylight object by nature — the print sheet, the social cards — must not reach the cabinet
   palette.
@@ -261,6 +262,36 @@ inside `@media (prefers-reduced-motion: no-preference)`, so the reduced state is
 One trap, already paid for: **a CSS `transform` animation overrides an SVG `transform`
 attribute on the same element.** Positioning goes on an outer `<g>`, the animation on an
 inner `<g class="sprout">`. Getting this wrong collapses every sprout onto the origin.
+
+### One drawing is not a masthead, and it is an homage with a caption
+
+The moth at the foot of `/#queering-is-a-verb` puts the **Earth where Nick Walker's cover
+puts a brain**, in Ezra Furman's lilac and black. It is the only drawing here that is
+neither a masthead nor a corner vine, and the only one with a caption. **The caption is
+the point:** an uncredited homage on a site that publishes an attribution ledger is the
+exact failure the ledger exists to prevent, so both debts are named on the page and in
+`ATTRIBUTIONS.md`. It wears `.qe-botanical` as well as `.qe-moth`, so the growth motion is
+inherited rather than restated — a second copy is a second thing to keep in step with
+`prefers-reduced-motion`.
+
+Four rules, each paid for by drawing it wrong first:
+
+- **THE COASTLINES ARE PROJECTED, NOT DRAWN.** Three passes of hand-drawn continents came
+  out as symmetrical blobs either side of a central meridian — a Rorschach card, which is
+  to say **a brain**, which is the one thing the middle of this drawing must not read as.
+  They are coarse lat/lon outlines through an orthographic projection centred on 25° W,
+  12° N, far-side points pushed onto the limb rather than folded back across the disc.
+  **Africa has to be unmistakable at a 40px radius**, because that is the size it ships at.
+- **It has no tails.** Four tries: straight down they read as legs, swept out as a bracket,
+  curled in as a moustache, merged into the hindwing path as a boot. A broad fanned
+  hindwing and a feathered antenna are what say *moth*; the cover's tails say *swallowtail*,
+  which we are not. The caption carries that reference so the drawing need not fake it.
+- **Bands run across the wing, never along the outer margin.** A band chasing the outside of
+  the outline sits off the wing entirely and paints onto the paper — invisible in review,
+  because lilac on vellum at four pixels looks like nothing at all.
+- **A screenshot taken too early photographs an animation that has not happened.** Every
+  wing is inside a `.sprout`, so the first four review shots showed a moth with no wings.
+  Anything capturing a drawing here waits out `0.55s + i × 0.075s` plus the unfurl.
 
 ### The machine-readable layer is generated, and the credit line is authored
 

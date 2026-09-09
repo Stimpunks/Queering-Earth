@@ -41,6 +41,8 @@ Walker is naming two normativities in particular. Taking the verb further out �
 
 The line under our masthead owes him too. *Neuroqueer Heresies* is subtitled *Notes on the Neurodiversity Paradigm, Autistic Empowerment, and Postnormal Possibilities* — one hyphen from our own. Whatever route the phrase took to reach us, he published it first, and a site about queering normativity is not going to be coy about where its masthead came from.
 
+After the cover of Nick Walker’s [*Neuroqueer Heresies*](https://neuroqueer.com/neuroqueer-heresies/), which sets a human brain where a swallowtail’s body would be, and after Ezra Furman’s [*Lilac and Black*](https://genius.com/Ezra-furman-lilac-and-black-lyrics). Ours is a moth, and the Earth is where the brain was.
+
 ## To queer is to adapt
 
 Walker gives us the verb. [Pamela Demory](https://ucdavis.academia.edu/PDemory) — writing in adaptation studies, not in neurodiversity — gives us what the verb does to a text. Her argument is that two fields have been describing the same motion under different names for years, and she sets the two words on either side of a slash to say so.

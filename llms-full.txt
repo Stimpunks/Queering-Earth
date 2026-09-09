@@ -1819,6 +1819,8 @@ Walker is naming two normativities in particular. Taking the verb further out �
 
 The line under our masthead owes him too. *Neuroqueer Heresies* is subtitled *Notes on the Neurodiversity Paradigm, Autistic Empowerment, and Postnormal Possibilities* — one hyphen from our own. Whatever route the phrase took to reach us, he published it first, and a site about queering normativity is not going to be coy about where its masthead came from.
 
+After the cover of Nick Walker’s [*Neuroqueer Heresies*](https://neuroqueer.com/neuroqueer-heresies/), which sets a human brain where a swallowtail’s body would be, and after Ezra Furman’s [*Lilac and Black*](https://genius.com/Ezra-furman-lilac-and-black-lyrics). Ours is a moth, and the Earth is where the brain was.
+
 ## To queer is to adapt
 
 Walker gives us the verb. [Pamela Demory](https://ucdavis.academia.edu/PDemory) — writing in adaptation studies, not in neurodiversity — gives us what the verb does to a text. Her argument is that two fields have been describing the same motion under different names for years, and she sets the two words on either side of a slash to say so.
@@ -1967,14 +1969,16 @@ The chips below are drawn with the tokens themselves rather than with copies of 
 - MarigoldDecoration only. `--qe-marigold`
 - CoralDecoration only. `--qe-coral`
 - VioletDecoration only. `--qe-violet`
+- LilacDecoration only. `--qe-lilac`
+- Lilac, paleDecoration only — the wash under the lilac. `--qe-lilac-pale`
 
-The five decorative colours are the ones a butterfly wing gives you. They are used sparingly and never all at once.
+The seven decorative colours are the ones a butterfly wing gives you. They are used sparingly and never all at once. The two lilacs arrived last and arrived together, borrowed for [the moth on the home page](https://queering.earth/#queering-is-a-verb): a wash and the thing washed onto it cannot be one value, which is the same reason `--qe-paper` has a `--qe-paper-deep`.
 
 ## The two grounds
 
 The sheet has a **daylight** ground and a **cabinet** ground, and the cabinet is not the daylight sheet with the lamp switched off. It is the drawer shut: a herbarium cabinet is dark warm brown, and a Victorian dark-ground plate prints its specimens on near-black precisely so that pale forms read. The accents on this site were always the accents of such a plate — sage foliage, marigold leaves, coral caps, cream bodies — which is the argument for brown and against a dark green. Green ground shares its hue with moss, lichen, and verdigris, and takes the separation out of the colours the site is built from.
 
-Two numbers move and the rest do not. Ink, moss, and rust are lifted to clear 7:1 on the new ground — **12.8:1**, **7.2:1**, and **7.3:1** respectively. The five decorative tokens stay where they are, still saturated. **7:1 is a rule for letters.** Applying it to the drawings turns every flower chalky and washes the plates out; the brightness belongs to the text.
+Two numbers move and the rest do not. Ink, moss, and rust are lifted to clear 7:1 on the new ground — **12.8:1**, **7.2:1**, and **7.3:1** respectively. The seven decorative tokens stay where they are, still saturated. **7:1 is a rule for letters.** Applying it to the drawings turns every flower chalky and washes the plates out; the brightness belongs to the text.
 
 One inversion is worth naming, because it is a trap rather than a taste. In daylight a card is *lighter* than the page, so text sitting on one gains contrast. On a dark ground that instinct is backwards — a lifted card *loses* it, and solving for 7:1 on a lifted panel drags rust up into a pale pink with no rust left in it. The cabinet's cards are recessed instead, which keeps every token above target and reads better anyway: compartments in a drawer.
 
@@ -2083,6 +2087,8 @@ The botanical art at the top of each page is inline SVG — paths in the page, c
 
 Motion is growth: stems draw themselves in, then leaves and wings unfurl. All of it is gated behind `prefers-reduced-motion`, so the reduced state is the completed drawing.
 
+One drawing is neither at the top of a page nor a plant. At the foot of [Queering is a verb](https://queering.earth/#queering-is-a-verb) there is a moth with the Earth where its body should be — an homage to the cover of Nick Walker’s *Neuroqueer Heresies*, which sets a human brain there, drawn in Ezra Furman’s lilac and black. It wears the same classes as the botanical art, so it inherits that motion rather than restating it, and its coastlines are **projected rather than drawn**: three passes of hand-drawn continents read as an inkblot and, at the centre of that particular drawing, as a brain — which is the one thing it must not be mistaken for.
+
 ## Borrowed plates
 
 Where a page wants a real botanical illustration rather than our line work, it uses a **public domain** plate from a nineteenth-century book, most of them digitised by the [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/), whose scans of out-of-copyright natural history are one of the quiet gifts of the open web.
@@ -2147,6 +2153,40 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Cabinet
 
 2026 · 9 September · latest
+
+## A moth with the Earth where its body should be, in somebody else’s two colours, and the hardest part was stopping the middle of it from looking like a brain
+
+Ryan’s, and it is two borrowings at once. The cover of Nick Walker’s *Neuroqueer Heresies* sets a human brain where a swallowtail’s body would be; Ezra Furman’s *Lilac and Black* supplies the palette and the line the palette comes wrapped in — “We wear the lilac and black”. Put the Earth where the brain was and you have this site’s name as a drawing. Both debts are stated in the figure’s own caption, which is the only version of this that is defensible here.
+
+MountedThe drawing is at the foot of a section rather than at the top of a page, which is the first time anything here has been
+
+Every other drawing on this site sits above the prose as a masthead, or in a corner as a vine. This one closes [Queering is a verb](https://queering.earth/#queering-is-a-verb), because that is the section it is an argument about: Walker’s coinage, our extension of it, and a picture that performs the extension rather than restating it. The header spray at the top of the home page is untouched — it was never the thing to replace.
+
+**The surface is bare.** Space only, no fill, no box: it is our own drawing with our own caption under it, which is the default tier and not an object mounted from elsewhere. The one dark-ground version drafted for review was refused for that reason as much as any other — a black card on a vellum sheet is a fourth surface, and the three-surface rule exists so that a reader can rank a panel without reading its label.
+
+**It wears `.qe-botanical` as well as `.qe-moth`, and that is deliberate.** The growth motion, the stroke-drawn stems and the unfurling sprouts are all written once; only the fills are new. A second copy of that idiom is a second thing to keep in step with `prefers-reduced-motion`, and the reduced state has to be the finished drawing in both.
+
+CabinetTwo new decorative tokens, because a wash and the thing washed onto it cannot be one value
+
+`--qe-lilac` takes the forewing, `--qe-lilac-pale` the hindwing and the sea of the globe, and both have `--qe-cab-\*` counterparts aliased through both ground switches. The decorative five is a decorative seven now, and the sentence on [the palette sheet](https://queering.earth/design#palette) that counted them has been recounted — a number in prose that nothing checks is a number that goes stale silently, and this one had been true since the site shipped.
+
+**The pale one goes *darker* in the drawer, not lighter.** That is the gating-surface inversion arriving in a component with no text in it: in daylight the wash is the recessed thing under the wing, and lifting it in the cabinet would have it out-shouting the ink line. Neither token is for text in either ground, so 7:1 does not apply — there is not a letter anywhere in the drawing.
+
+**Black is `--qe-ink`, so the black inverts.** In daylight the outline and the continents are near-black on vellum; in the drawer they are cream. The song says lilac and black and the drawer says otherwise, and the drawer wins, because the alternative is a literal black line on dark brown that nobody can see. The one version that would have kept the black in both grounds was the black card, and it lost on the surface rule above.
+
+The print sheet flattens the wings to line work like every other drawing here, with one exception written into the rule: **the continents keep their fill.** Flatten those along with the wings and the globe stops being the Earth and becomes a ruled circle.
+
+CabinetThe coastlines are projected rather than drawn, because three passes of hand-drawn continents kept reading as a brain
+
+**This is the funniest available failure and the least acceptable one.** The drawing quotes a book cover that has a brain in the middle of it. Hand-drawn continents — three separate attempts at them — came out as a pair of symmetrical dark blobs either side of a central meridian, which is a Rorschach card, which is to say: a brain. A picture whose whole point is that the Earth is where the brain was cannot have a middle that reads as the thing it replaced.
+
+So the coastlines are coarse lat/lon outlines put through an orthographic projection centred on 25° west and 12° north — the Atlantic view, the only one where the Americas and Africa are both legible. Points on the far side are pushed out onto the limb rather than folded back across the disc, which is what a continent going round the edge actually looks like. **The foreshortening is Earth’s and not ours**, and Africa is unmistakable at a forty-pixel radius, which is the size that matters.
+
+**It has no tails, after four attempts at them.** Hanging straight down they read as legs; swept outward, as a bracket; curled inward, as a moustache; integrated into the hindwing path, as a boot. What actually says *moth* is a broad fanned hindwing and a feathered antenna, both of which it has. The cover’s tails say *swallowtail*, which we are not, and the caption carries that reference instead of the drawing pretending to.
+
+One thing the review process itself taught: **the first four screenshots showed no wings at all.** Every wing is inside a `.sprout`, which starts at `opacity: 0` and unfurls on a delay, so a screenshot taken half a second after load is a photograph of an animation that has not happened. The growth gating is correct and the reviewer was wrong; noting it because the next person to check a drawing here will hit the same thing.
+
+2026 · 9 September
 
 ## A real herbarium stamps its sheets with an accession number that is a row in a ledger, which is the whole reason this one could have it and most of the work was proving the ink was legal
 
@@ -3259,7 +3299,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-97 entries across 20 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+100 entries across 21 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
