@@ -53,6 +53,8 @@ VERDIGRIS  = token("verdigris")
 VIOLET     = token("violet")
 MARIGOLD   = token("marigold")
 CORAL      = token("coral")
+# The pale flesh of a specimen — a mushroom's stipe, a cut stem, a ghost pipe.
+FLESH      = token("flesh")
 RULE       = token("rule")
 
 # ── fonts. Iowan Old Style is the site's own first fallback after Fraunces, so a
@@ -146,6 +148,59 @@ def spray(d, x0, y0, scale, accents):
         dn = bezier(lt, (lt[0]+10*scale, lt[1]+10*scale), (lp[0]-14*scale, lp[1]+14*scale), lp)
         d.polygon(up + dn, fill=LICHEN, outline=MOSS)
 
+def ghost_pipes(d, x0, y0, scale):
+    """The ghost pipe, for the one sheet whose specimen has no leaf and no green.
+
+    THIS EXISTS BECAUSE THE GENERIC SPRIG CONTRADICTS THAT SHEET. `spray` draws
+    leaves in LICHEN and heads in three accents, which is right for every other
+    card here and exactly wrong for Monotropa uniflora: the whole argument of that
+    sheet is a plant with no chlorophyll, no foliage, and one pale nodding bell. A
+    card showing green leaves on it is the card arguing with the page — the same
+    fault as a legend that no longer matches its own drawing.
+
+    THE ARCH IS THE NAME. Monotropa means one turn, and the turn is this: the stem
+    bends right over so the flower hangs facing the ground. A first pass drew the
+    stems nearly upright with the bells sitting on top, which is a different plant
+    and loses the reason for the word. The crown is offset hard horizontally and
+    the control points pull sideways, so each stem is a real C.
+
+    AND THE THREADS CROSS. Two near-parallel horizontals read as ground, which is
+    the one thing this drawing must not have; they are pitched against each other
+    so they intersect."""
+    # the network: two threads at opposing pitches, crossing near the middle
+    a = bezier((x0 - 40*scale, y0 + 30*scale), (x0 + 110*scale, y0 - 26*scale),
+               (x0 + 250*scale, y0 + 20*scale), (x0 + 400*scale, y0 - 30*scale))
+    b = bezier((x0 - 30*scale, y0 - 22*scale), (x0 + 120*scale, y0 + 26*scale),
+               (x0 + 260*scale, y0 - 24*scale), (x0 + 410*scale, y0 + 26*scale))
+    for th, w in ((a, 3), (b, 2)):
+        d.line(th, fill=MOSS, width=max(1, int(w*scale)), joint="curve")
+
+    for (ox, oy, sc) in ((10, 30, 1.0), (150, 8, 1.18), (300, 34, 0.84)):
+        bx, by = x0 + ox*scale, y0 + oy*scale
+        h = 132 * scale * sc
+        # a real arch: the crown sits well to the RIGHT of the base, and the bell
+        # hangs off it facing the ground.
+        crown = (bx + 56*scale*sc, by - h)
+        stem = bezier((bx, by + 26*scale), (bx - 10*scale*sc, by - h*0.62),
+                      (bx + 14*scale*sc, by - h*1.06), crown)
+        d.line(stem, fill=MOSS, width=max(2, int(3.4*scale*sc)), joint="curve")
+        # scale bracts: pointed, pale, and NOT leaves
+        for t in (0.30, 0.56, 0.76):
+            px, py = stem[int(t * (len(stem)-1))]
+            tip = (px - 24*scale*sc, py + 8*scale*sc)
+            up = bezier((px, py), (px-9*scale*sc, py-7*scale*sc),
+                        (tip[0]+7*scale*sc, tip[1]-7*scale*sc), tip)
+            dn = bezier(tip, (tip[0]+7*scale*sc, tip[1]+6*scale*sc),
+                        (px-9*scale*sc, py+7*scale*sc), (px, py))
+            d.polygon(up + dn, fill=FLESH, outline=MOSS)
+        # the bell, nodding off the end of the arch
+        r = 21 * scale * sc
+        d.ellipse([crown[0]-r*0.80, crown[1]-r*0.10, crown[0]+r*0.80, crown[1]+r*2.0],
+                  fill=FLESH, outline=MOSS, width=max(1, int(1.7*scale)))
+        for sx in (-0.30, 0.0, 0.30):
+            d.line([crown[0]+r*sx, crown[1]+r*0.5, crown[0]+r*sx*0.55, crown[1]+r*1.65],
+                   fill=MOSS, width=max(1, int(1.1*scale)))
+
 def wrap(d, text, f, maxw):
     words, lines, cur = text.split(), [], ""
     for w in words:
@@ -157,7 +212,9 @@ def wrap(d, text, f, maxw):
     if cur: lines.append(cur)
     return lines
 
-def og_card(out, title, kicker, sub, accent):
+WROTE = []   # every file this run actually produced; the report reads this
+
+def og_card(out, title, kicker, sub, accent, sprig=spray):
     ss = 2
     img = Image.new("RGB", (W*ss, H*ss), PAPER)
     d = ImageDraw.Draw(img)
@@ -212,8 +269,14 @@ def og_card(out, title, kicker, sub, accent):
 
     # Sized to FIT: the stem runs 400*scale from x0, so x0 + 400*scale must stay
     # inside the canvas or the far head is drawn off the edge and silently lost.
-    spray(d, W*ss - 500*ss, H*ss - 150*ss, 1.2*ss, [VIOLET, accent, VERDIGRIS])
+    if sprig is spray:
+        spray(d, W*ss - 500*ss, H*ss - 150*ss, 1.2*ss, [VIOLET, accent, VERDIGRIS])
+    else:
+        # further right and lower than `spray` sits: this sprig is wider, and a
+        # bract overlapped the last word of the subtitle on the first pass.
+        sprig(d, W*ss - 400*ss, H*ss - 128*ss, 1.05*ss)
     img.resize((W, H), Image.LANCZOS).save(out, optimize=True)
+    WROTE.append(out)
 
 (REPO / "images").mkdir(exist_ok=True)
 og_card(REPO/"images"/"og-index.png", "Post-normal possibilities.", "",
@@ -241,17 +304,23 @@ og_card(REPO/"images"/"og-flower-codes.png", "A Waste Garden, Flowering at Its W
         "Sheet · a reading",
         "Four flowers worn as code, and what a code becomes once read.",
         VIOLET)
+og_card(REPO/"images"/"og-monotropa-uniflora.png", "The Preferred Flower of Life",
+        "Sheet · a wall",
+        "A plant that will not photosynthesise, and the word it shares with a mind.",
+        LICHEN, sprig=ghost_pipes)
 og_card(REPO/"images"/"og-design.png", "How this site is made", "Colophon",
         "A Victorian herbarium sheet as the model: the palette, the type, the drawings.", MARIGOLD)
 og_card(REPO/"images"/"og-changelog.png", "The accession register", "Register · the changelog",
         "Every sheet as it was mounted, and every label we corrected.", CORAL)
 
-for p in ("favicon.ico", "apple-touch-icon.png", "images/icon-512.png",
-          "images/og-index.png", "images/og-on-being-ill.png", "images/og-coming-to-terms.png",
-          "images/og-flower-codes.png",
-          "images/og-design.png", "images/og-promises-like-pie-crust.png",
-          "images/og-invention-of-normal.png", "images/og-the-tempest.png",
-          "images/og-wild-nights.png",
-          "images/og-changelog.png"):
+# The report enumerates WHAT WAS ACTUALLY WRITTEN, not a hand-kept list of what
+# ought to have been. It was a hand-kept list until 2026-09-09, and the ghost pipe
+# card generated correctly and went unreported because nobody added a line to it —
+# which means the reverse could also happen: a card silently NOT generated, in a
+# report that looks complete. A new og_card call now reports itself.
+for p in ("favicon.ico", "apple-touch-icon.png", "images/icon-512.png"):
     f = REPO / p
-    print("  %-34s %7d bytes" % (p, f.stat().st_size))
+    print("  %-38s %7d bytes" % (p, f.stat().st_size))
+for f in WROTE:
+    print("  %-38s %7d bytes" % (f.relative_to(REPO), f.stat().st_size))
+print("  %d social card(s) written" % len(WROTE))

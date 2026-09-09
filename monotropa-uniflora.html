@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Preferred Flower of Life — Queering Earth</title>
+<meta name="description" content="Monotropa uniflora, the ghost pipe: a plant with no chlorophyll that feeds off fungi, the flower Emily Dickinson called the preferred flower of life, and the Greek root it shares with monotropism.">
+<link rel="canonical" href="https://queering.earth/monotropa-uniflora">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Queering Earth">
+<meta property="og:title" content="The Preferred Flower of Life">
+<meta property="og:description" content="A plant that will not photosynthesise, the flower Dickinson kept in her herbarium, and one Greek root shared by a 1753 binomial and a theory of Autistic attention.">
+<meta property="og:url" content="https://queering.earth/monotropa-uniflora">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://queering.earth/images/og-monotropa-uniflora.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sheet, a wall: The Preferred Flower of Life. Monotropa uniflora, Emily Dickinson, and monotropism.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Preferred Flower of Life">
+<meta name="twitter:description" content="A plant that will not photosynthesise, the flower Dickinson kept in her herbarium, and one Greek root shared by a 1753 binomial and a theory of Autistic attention.">
+<meta name="twitter:image" content="https://queering.earth/images/og-monotropa-uniflora.png">
+<meta name="twitter:image:alt" content="Sheet, a wall: The Preferred Flower of Life. Monotropa uniflora, Emily Dickinson, and monotropism.">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;display=swap">
+<link rel="stylesheet" href="queering.css">
+
+<script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
+</head>
+<!-- Where this sheet is foxed. Four stains, stated here because a stain is a
+     fact about one piece of paper and not about the site — the same idiom as --rot
+     on a slip. Defaults for anything that states none are in queering.css. -->
+<body style="--qe-fox-a: 16% 5%; --qe-fox-b: 86% 30%; --qe-fox-c: 30% 86%; --qe-fox-d: 94% 72%">
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+</div>
+
+<main id="main">
+
+  <header class="qe-masthead qe-masthead-sheet">
+    <p class="qe-home"><a href="/">Queering Earth</a></p>
+    <p class="qe-kicker">Sheet &middot; a wall</p>
+    <h1>The Preferred Flower of Life</h1>
+
+    <!-- THE GHOST PIPE, DRAWN, AND THE ONE DRAWING ON THIS SITE WITH NO LEAF IN IT.
+         Monotropa uniflora carries no chlorophyll and no foliage — only scale
+         bracts up a bare arched stem, and one nodding bell. So `.leaf` does not
+         appear here, and that absence is the drawing's whole argument: every other
+         panel on this site is green because every other specimen photosynthesises.
+         The bells and stems are `.stipe`, which fills with --qe-flesh, the token
+         written for "the pale flesh of a specimen — a mushroom's stipe, a cut
+         stem". It was waiting for exactly this plant.
+         The network BELOW is the subject as much as the pipes above: the plant
+         feeds entirely off mycorrhizal fungi, so the threads are drawn at the same
+         weight as the stems rather than as background.
+         House rules for a drawing here, all five already paid for elsewhere:
+         1. NO BASELINE. Nothing stands on anything. The horizontal is mycelium,
+            and it curls at both ends like everything else.
+         2. EVERY TERMINAL CURLS. Thread tip, stem crown, bract point.
+         3. NOTHING OVERRUNS THE viewBox. Measured off the live DOM, not eyeballed:
+            the drawing's bounding box is x 11 to 544 and y 75 to 242, inside 560 x 260.
+         4. POSITIONING ON THE OUTER g, ANIMATION ON THE INNER .sprout. A CSS
+            transform animation overrides an SVG transform attribute on the same
+            element and collapses every sprout onto the origin.
+         5. --len IS MEASURED, NOT ESTIMATED. Every value below is the path's real
+            getTotalLength(), read out of the live DOM and written back. Re-measure
+            any path whose `d` you edit. -->
+    <svg class="qe-botanical" viewBox="0 0 560 260" role="img" aria-label="A botanical panel of three ghost pipes. Three bare, leafless stems arch up out of a tangle of fine curling threads, each one bending over at the top so that a single pale bell-shaped flower nods downward. Small pointed scales run up the stems in place of leaves. Beneath them a network of thread-fine lines spreads sideways across the panel, branching and spiralling, joining all three stems below the surface. Nothing in the drawing is green and there is not a single leaf." focusable="false">
+      <!-- ── the network. The horizontal of this panel is mycelium, not ground. -->
+      <path class="stem" style="--len:531" stroke-width="1.7" d="M16 198 C 84 226, 148 186, 214 214 C 286 236, 352 190, 424 218 C 476 238, 516 200, 538 212"/>
+      <path class="stem" style="--len:44" stroke-width="1.3" d="M538 212 C 547 218, 546 230, 535 231 C 527 232, 524 223, 530 221"/>
+      <path class="stem" style="--len:42" stroke-width="1.3" d="M16 198 C 8 191, 10 180, 20 181 C 28 182, 29 191, 23 193"/>
+      <path class="stem" style="--len:88" stroke-width="1.4" d="M92 210 C 78 226, 84 240, 102 240 C 116 240, 120 228, 110 224 C 102 221, 98 228, 104 231"/>
+      <path class="stem" style="--len:89" stroke-width="1.4" d="M250 212 C 240 230, 250 244, 268 242 C 282 240, 284 228, 274 225 C 266 223, 263 230, 269 232"/>
+      <path class="stem" style="--len:82" stroke-width="1.3" d="M400 208 C 392 224, 400 238, 418 236 C 430 234, 432 223, 422 221 C 415 220, 412 226, 418 228"/>
+      <path class="stem" style="--len:75" stroke-width="1.2" d="M170 210 C 158 200, 142 202, 140 214 C 138 224, 150 228, 154 220 C 157 214, 150 210, 146 215"/>
+      <path class="stem" style="--len:76" stroke-width="1.2" d="M330 206 C 344 196, 360 200, 360 212 C 360 222, 348 225, 345 217 C 342 211, 349 207, 353 212"/>
+      <path class="stem" style="--len:75" stroke-width="1.1" d="M466 212 C 478 226, 494 228, 500 218 C 505 210, 496 203, 490 209 C 486 213, 490 219, 495 217"/>
+      <!-- A second long thread, CROSSING the first rather than running beside it.
+           Two lines that intersect are a network; one line is a horizon, and a
+           horizon is the thing rule 1 forbids. -->
+      <path class="stem" style="--len:453" stroke-width="1.2" d="M60 224 C 140 196, 224 232, 306 200 C 372 174, 440 206, 508 188"/>
+      <path class="stem" style="--len:43" stroke-width="1.1" d="M508 188 C 518 182, 528 188, 524 197 C 521 204, 512 202, 513 195"/>
+
+      <!-- ── pipe one. Arched, bare, nodding. -->
+      <path class="stem" style="--len:184" stroke-width="2.4" d="M134 232 C 130 190, 138 138, 158 110 C 172 92, 196 88, 206 104"/>
+      <g transform="translate(206 104) rotate(6)"><g class="sprout" style="--i:1">
+        <path class="stipe" stroke-width="1.2" d="M0 0 C -16 5, -22 24, -13 38 C -6 50, 6 50, 13 38 C 22 24, 16 5, 0 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M-6 36 C -4 26, -2 14, -2 4"/>
+        <path class="rib" stroke-width="0.8" d="M6 36 C 4 26, 2 14, 2 4"/>
+      </g></g>
+      <g transform="translate(140 176) rotate(-32)"><g class="sprout" style="--i:2">
+        <path class="stipe" stroke-width="1" d="M0 0 C 5 -5, 14 -4, 17 0 C 14 4, 5 5, 0 0 Z"/>
+      </g></g>
+      <g transform="translate(146 146) rotate(-18)"><g class="sprout" style="--i:3">
+        <path class="stipe" stroke-width="1" d="M0 0 C 4 -4, 12 -3, 15 0 C 12 3, 4 4, 0 0 Z"/>
+      </g></g>
+
+      <!-- ── pipe two, taller, leaning the other way. -->
+      <path class="stem" style="--len:204" stroke-width="2.4" d="M284 236 C 292 188, 288 126, 306 94 C 318 73, 344 68, 354 86"/>
+      <g transform="translate(354 86) rotate(9)"><g class="sprout" style="--i:4">
+        <path class="stipe" stroke-width="1.2" d="M0 0 C -17 6, -23 26, -14 41 C -7 53, 7 53, 14 41 C 23 26, 17 6, 0 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M-6 39 C -4 28, -2 15, -2 4"/>
+        <path class="rib" stroke-width="0.8" d="M6 39 C 4 28, 2 15, 2 4"/>
+      </g></g>
+      <g transform="translate(290 178) rotate(-28)"><g class="sprout" style="--i:5">
+        <path class="stipe" stroke-width="1" d="M0 0 C 5 -5, 14 -4, 17 0 C 14 4, 5 5, 0 0 Z"/>
+      </g></g>
+      <g transform="translate(294 140) rotate(-14)"><g class="sprout" style="--i:6">
+        <path class="stipe" stroke-width="1" d="M0 0 C 4 -4, 12 -3, 15 0 C 12 3, 4 4, 0 0 Z"/>
+      </g></g>
+      <g transform="translate(300 110) rotate(-6)"><g class="sprout" style="--i:7">
+        <path class="stipe" stroke-width="1" d="M0 0 C 4 -3, 10 -3, 13 0 C 10 3, 4 3, 0 0 Z"/>
+      </g></g>
+
+      <!-- ── pipe three, shortest, just breaking the litter. -->
+      <path class="stem" style="--len:134" stroke-width="2.1" d="M434 230 C 440 196, 434 158, 450 141 C 461 130, 480 130, 486 143"/>
+      <g transform="translate(486 143) rotate(12)"><g class="sprout" style="--i:8">
+        <path class="stipe" stroke-width="1.1" d="M0 0 C -14 5, -19 21, -11 33 C -5 43, 5 43, 11 33 C 19 21, 14 5, 0 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M-5 31 C -3 23, -1 12, -1 3"/>
+      </g></g>
+      <g transform="translate(438 184) rotate(-24)"><g class="sprout" style="--i:9">
+        <path class="stipe" stroke-width="1" d="M0 0 C 4 -4, 11 -3, 14 0 C 11 3, 4 4, 0 0 Z"/>
+      </g></g>
+    </svg>
+
+    <p class="qe-sheet-sub">A plant that will not photosynthesise, the flower Emily Dickinson kept in her herbarium, and one Greek root shared by a 1753 binomial and a theory of Autistic attention.</p>
+  </header>
+
+  <div class="qe-label">
+    <dl>
+      <dt>Specimen</dt>
+      <dd><cite>Monotropa uniflora</cite> L. &mdash; the ghost pipe, the Indian pipe, the ghost plant</dd>
+
+      <dt>Named</dt>
+      <dd>Carl Linnaeus, <cite>Species Plantarum</cite>, 1753. <em>Monotropa</em>, one turn, for the arched stem; <em>uniflora</em>, one-flowered</dd>
+
+      <dt>Also mounted</dt>
+      <dd>Emily Dickinson to Mabel Loomis Todd, 30 September 1882 (Letter&nbsp;997), and Dickinson&rsquo;s poem <cite>&lsquo;Tis whiter than an Indian pipe</cite>, about 1879 (Fr1513A)</dd>
+
+      <dt>Following</dt>
+      <dd>Helen Edgar, <a href="https://morerealms.com/monotropa-uniflora-and-monotropism/"><cite>Monotropa Uniflora and Monotropism</cite></a>, More Realms, 7&nbsp;July 2026 &mdash; written for the fifth anniversary of Dinah Murray&rsquo;s death, and the reason this sheet exists</dd>
+
+      <dt>Read</dt>
+      <dd>9 September 2026</dd>
+
+      <dt>Read by</dt>
+      <dd>Ryan Boren</dd>
+
+      <dt>Biology</dt>
+      <dd>Not here. The mechanism &mdash; myco-heterotrophy, carbon taken from fungi and none given back &mdash; is our sibling site&rsquo;s: <a href="https://starstuff.earth/symbioses-field-guide.html">Star Stuff, <cite>A Field Guide to Symbioses</cite></a>. This sheet has the naming, the letter, the poem, and the word</dd>
+
+      <dt>Terms</dt>
+      <dd><a href="https://stimpunks.org/glossary/monotropism/">Monotropism</a> &middot; <a href="https://stimpunks.org/glossary/neuroqueer/">Neuroqueer</a> &middot; <a href="https://stimpunks.org/glossary/interdependence/">Interdependence</a> &middot; <a href="https://stimpunks.org/glossary/flow-state/">Flow state</a></dd>
+    </dl>
+  </div>
+
+  <p class="qe-lede">There is a plant in the deep shade of North American, Latin American and East Asian forests that carries no green at all. It cannot photosynthesise. It does not reach for the light. It draws everything it needs from fungal threads in the soil, which draw theirs from the roots of trees &mdash; so the plant lives, entirely, on a connection nobody above ground can see. Linnaeus named it in 1753 for the single turn of its stem. Emily Dickinson pressed it into a herbarium, wrote a poem about it, and called it the preferred flower of life. Two hundred and thirty-eight years after the naming, an Autistic researcher and her neighbour reached for the same Greek root to describe a mind whose attention runs in one deep channel instead of many shallow ones.</p>
+
+  <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
+    <h2 id="qe-contents-h">On this sheet</h2>
+    <ol></ol>
+  </nav>
+
+  <h2 id="the-wall">Seven hands on one specimen <a class="qe-anchor" href="#the-wall"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>This sheet is a <strong>wall</strong> rather than a reading, and the difference is not decoration. A reading has an order and an argument that arrives at the end. A wall has a chorus: many people, across two hundred and seventy years, standing in front of the same object and each seeing something the others could not. A herbarium sheet that has been in a cabinet long enough looks exactly like this &mdash; a specimen, and a stack of determination slips in different hands, every one of them signed.</p>
+
+  <ul class="qe-wall" aria-label="Seven voices on Monotropa uniflora, 1753 to 2026">
+    <li><figure class="qe-slip" style="--rot:-1.8deg; --tape:4deg; --slip-color: var(--qe-flesh)">
+      <blockquote><p>That without suspecting it you should send me the preferred flower of life, seems almost supernatural, and the sweet glee that I felt at meeting it, I could confide to none.</p></blockquote>
+      <figcaption>Emily Dickinson to Mabel Loomis Todd, 30&nbsp;September 1882 &mdash; Letter&nbsp;997, in pencil. Todd had sent her a painted panel of Indian pipes six days earlier.</figcaption>
+    </figure></li>
+
+    <li><figure class="qe-slip" style="--rot:1.5deg; --tape:-3deg; --slip-color: var(--qe-violet)">
+      <blockquote><p class="qe-lines"><span class="l">This limitless Hyperbole</span><span class="l">Each one of us shall be -</span><span class="l">&lsquo;Tis Drama - if Hypothesis</span><span class="l">It be not Tragedy -</span></p></blockquote>
+      <figcaption>Emily Dickinson, <cite>&lsquo;Tis whiter than an Indian pipe</cite>, about 1879 &mdash; the last quatrain, from R. W. Franklin&rsquo;s reading of Amherst Manuscript 483 (Fr1513A).</figcaption>
+    </figure></li>
+
+    <li><figure class="qe-slip" style="--rot:-1.2deg; --tape:3deg; --slip-color: var(--qe-marigold)">
+      <blockquote><p>He meant, perhaps, that the androgynous mind is resonant and porous; that it transmits emotion without impediment; that it is naturally creative, incandescent and undivided.</p></blockquote>
+      <figcaption>Virginia Woolf, <cite>A Room of One&rsquo;s Own</cite>, chapter&nbsp;VI (Hogarth Press, 1929), pp.&nbsp;148&ndash;149. The <em>he</em> is Coleridge, and Woolf is guessing at what he meant &mdash; twice, with a <em>perhaps</em> in each clause.</figcaption>
+    </figure></li>
+
+    <li><figure class="qe-slip" style="--rot:2deg; --tape:-4deg; --slip-color: var(--qe-verdigris)">
+      <blockquote><p>Attention without feeling, I began to learn, is only a report. An openness &mdash; an empathy &mdash; was necessary if the attention was to matter.</p></blockquote>
+      <figcaption>Mary Oliver, <cite>Our World</cite> (Beacon Press, 2007). Transcribed by Ryan Boren from his own copy. <strong>Not from <cite>Upstream</cite></strong>, which is where this sentence is usually credited &mdash; see the label correction below.</figcaption>
+    </figure></li>
+
+    <li><figure class="qe-slip" style="--rot:-2.2deg; --tape:2deg; --slip-color: var(--qe-coral)">
+      <blockquote><p>I haven&rsquo;t really ever had a career, I&rsquo;ve had a mission.</p></blockquote>
+      <figcaption>Dinah Murray, interviewed by Kate Fox in Dalgety Bay about a month before her death on 7&nbsp;July 2021, quoted in Fox&rsquo;s <a href="https://katefoxwriter.wordpress.com/2021/08/16/tribute-to-dinah-murray/">tribute</a>, 16&nbsp;August 2021. Fox titled the poem she read at the memorial <cite>Monotropa Uniflora</cite>.</figcaption>
+    </figure></li>
+
+    <li><figure class="qe-slip" style="--rot:1.1deg; --tape:-2deg; --slip-color: var(--qe-lichen)">
+      <blockquote><p>It is a plant that refuses to be binary at the root of its being, in the same way it refuses to draw its nourishment from sunlight, the way other plants are expected to.</p></blockquote>
+      <figcaption>Helen Edgar, <a href="https://morerealms.com/monotropa-uniflora-and-monotropism/"><cite>Monotropa Uniflora and Monotropism</cite></a>, More Realms, July 2026. <cite>Monotropa uniflora</cite> is a <em>perfect flower</em> in the botanical sense &mdash; stamens and pistil in one bloom.</figcaption>
+    </figure></li>
+
+    <li><figure class="qe-slip" style="--rot:-1.5deg; --tape:5deg; --slip-color: var(--qe-flesh)">
+      <blockquote><p>The quality of presence that the world persistently mistakes for absence, the inner life that runs deeper than it appears from the outside?</p></blockquote>
+      <figcaption>Helen Edgar, same essay, on what the <em>it</em> of Dickinson&rsquo;s poem might be. Her sentence ends in a question mark and it is left here, because she is asking rather than concluding.</figcaption>
+    </figure></li>
+  </ul>
+
+  <h2 id="one-root">One root, three turns <a class="qe-anchor" href="#one-root"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The Greek <span lang="grc-Latn">monotropos</span> means turning one way. Linnaeus took it for the arched stem of a flower. Two centuries later two women in London took it for a mind. Nobody planned the rhyme, and it is not a metaphor either: it is the same word, describing the same shape twice.</p>
+
+  <ol class="qe-drift" aria-label="One root in three states">
+    <li style="--slip-color: var(--qe-lichen); --rot:-1.4deg">
+      <p class="qe-drift-word" lang="grc-Latn" style="--soft:0; --wonk:0">monotropos</p>
+      <p class="qe-drift-when">Greek</p>
+      <p class="qe-drift-gloss">Turning one way; of a single turn. <span lang="grc-Latn">Monos</span>, one, and <span lang="grc-Latn">tropos</span>, a turn &mdash; the same <span lang="grc-Latn">tropos</span> that gives English <em>trope</em>, a turn of phrase.</p>
+    </li>
+    <li style="--slip-color: var(--qe-marigold); --rot:1.6deg">
+      <p class="qe-drift-word" style="--soft:60; --wonk:1"><em>Monotropa</em></p>
+      <p class="qe-drift-when">1753</p>
+      <p class="qe-drift-gloss">Linnaeus&rsquo;s genus, in <cite>Species Plantarum</cite>. The turn is physical: the stem arches over so the single flower hangs facing the ground. A plant named for the direction it bends.</p>
+    </li>
+    <li style="--slip-color: var(--qe-coral); --rot:-0.8deg">
+      <p class="qe-drift-word" style="--soft:100; --wonk:1">monotropism</p>
+      <p class="qe-drift-when">1991 onward</p>
+      <p class="qe-drift-gloss">Attention pooled in one deep channel rather than spread thin across many. Coined by <strong>Dinah Murray</strong> with her neighbour <strong>Jeanette Buirski</strong>, and set out in Murray, Lesser and Lawson&rsquo;s 2005 paper. A turn you are, not a turn you make.</p>
+    </li>
+  </ol>
+
+  <p>The 2005 paper is <a href="https://doi.org/10.1177/1362361305051398">Murray, Lesser and Lawson, <cite>Attention, monotropism and the diagnostic criteria for autism</cite></a>, in <cite>Autism</cite> 9(2), 139&ndash;156. <strong>Its third author is Wenn Lawson, and the journal&rsquo;s byline still reads Wendy Lawson.</strong> He is a trans man who has published under Wenn for years, and a citation that reproduces a publisher&rsquo;s record over a living author&rsquo;s own name is not neutral accuracy &mdash; it is a database outranking a person. We cite him as Wenn Lawson and say what the byline says, so a reader can find the paper and nobody has to be deadnamed to do it.</p>
+
+  <h2 id="two-hands">Two hands, and one of them is the same hand <a class="qe-anchor" href="#two-hands"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Mabel Loomis Todd painted a panel of Indian pipes and sent it to Emily Dickinson in September 1882. Dickinson wrote back within days, in pencil, and told her she had sent <q>the preferred flower of life</q>. Eight years later, when Todd and T. W. Higginson brought out the first posthumous <cite>Poems</cite>, that painting went on the cover.</p>
+
+  <p><strong>Todd is also one of the two editors who tidied Dickinson.</strong> <a href="/wild-nights">Sheet No.&nbsp;6</a> is about what they did to <cite>Wild nights</cite>: Higginson wrote <q>let us alter as little as possible</q> and then printed the poem with eight of its nine dashes gone. The hand that gave Dickinson her favourite flower is the hand that regularised her punctuation. That is not hypocrisy and it is not a scandal &mdash; it is what editing was, and Todd is the reason a great deal of Dickinson survived at all. It is simply worth saying that <strong>the same person can be the gift and the alteration</strong>, and that a reader who only has the tidied text cannot tell.</p>
+
+  <p class="qe-provocation"><span class="qe-off qe-off-a">Gift</span> and <span class="qe-off qe-off-b">alteration</span>, one hand.</p>
+
+  <h2 id="the-poem">A poem, and what 1896 did to it <a class="qe-anchor" href="#the-poem"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Three years before the letter, Dickinson had already written the plant down. The poem survives on a fragment of stationery, in pencil, about 1879.</p>
+
+  <figure class="qe-poem">
+    <blockquote>
+      <p class="qe-stanza">
+        <span class="l">&lsquo;Tis whiter than an Indian Pipe -</span>
+        <span class="l">&lsquo;Tis dimmer than a Lace -</span>
+        <span class="l">No stature has it, like a Fog</span>
+        <span class="l">When you approach the place -</span>
+        <span class="l">Not any voice imply it here -</span>
+        <span class="l">Or intimate it there -</span>
+        <span class="l">A spirit - how doth it accost -</span>
+        <span class="l">What function hath the Air?</span>
+        <span class="l">This limitless Hyperbole</span>
+        <span class="l">Each one of us shall be -</span>
+        <span class="l">&lsquo;Tis Drama - if Hypothesis</span>
+        <span class="l">It be not Tragedy -</span>
+      </p>
+    </blockquote>
+    <figcaption>Emily Dickinson, about 1879. Amherst Manuscript 483, in pencil on a fragment of stationery. Text from R. W. Franklin, <cite>The Poems of Emily Dickinson: Variorum Edition</cite> (Belknap Press, 1998), Fr1513A, as published in the <a href="https://curiosity.lib.harvard.edu/emily-dickinson-archive/catalog/195-EDA2078_F1513A">Emily Dickinson Archive</a>.</figcaption>
+  </figure>
+
+  <p><strong>She left herself alternatives, and the first editors took them.</strong> Franklin records three words Dickinson wrote in as options: <em>denote</em> for <q>imply</q> in line 5, <em>designate</em> for <q>intimate</q> in line 6, and <em>What customs</em> for <q>What function</q> in line 8. When the poem was first printed in <cite>Poems</cite> (1896) it appeared <strong>as three quatrains, with the alternatives for lines 5 and 8 adopted</strong> &mdash; so the version that circulated read <em>denote</em> and <em>What customs</em>, and the version above is the one on the paper.</p>
+
+  <p>Neither reading is a mistake. She wrote both. But an editor choosing between a poet&rsquo;s alternatives, silently, and printing the result as the poem is the same move as removing her dashes, and it is the move this collection keeps finding. <strong>The alternatives are the poem too.</strong> A text that has had its options resolved for you is a text with a decision hidden in it.</p>
+
+  <p class="qe-cutup"><span class="w" style="--rot:-3deg; --sz:1.1em">&lsquo;Tis</span> <span class="w w-loud" style="--rot:2deg; --sz:1.35em">Drama</span> <span class="w" style="--rot:-1deg">&mdash;</span> <span class="w w-quiet" style="--rot:3deg; --sz:0.85em">if</span> <span class="w" style="--rot:-2deg; --sz:1.05em">Hypothesis</span> <span class="w" style="--rot:1.5deg; --sz:0.9em">It</span> <span class="w" style="--rot:-2.5deg; --sz:0.9em">be</span> <span class="w w-loud" style="--rot:2.5deg; --sz:1.2em">not</span> <span class="w" style="--rot:-1.5deg; --sz:1.3em">Tragedy</span></p>
+
+  <h2 id="a-herbarium">She kept a herbarium, which is what this site is <a class="qe-anchor" href="#a-herbarium"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Dickinson assembled more than four hundred pressed plants as a young woman, mounted and labelled, and the album is now in Harvard&rsquo;s Houghton Library &mdash; the same library that holds the manuscript on <a href="/wild-nights">Sheet No.&nbsp;6</a>. <cite>Monotropa uniflora</cite> is in it.</p>
+
+  <p>This site is drawn as a herbarium sheet because the form makes an attribution argument: a specimen is somebody else&rsquo;s, a label is where we speak, and the line between them is drawn in the layout rather than left to a reader&rsquo;s good faith. <strong>It is a slightly strange thing to discover that the poet on two of our sheets was doing the same thing at nineteen</strong>, with real plants, in an album, in Amherst.</p>
+
+  <p>Which is also the answer to the question people keep asking about her life. From outside it looked like a withdrawal. From the letters, the poems, and four hundred labelled specimens, it looks like the opposite: attention pooled, at length, on a small number of things, with enormous care. There is a word for that now, and the word shares a root with the flower.</p>
+
+  <h2 id="not-a-tragedy">Not a tragedy <a class="qe-anchor" href="#not-a-tragedy"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The plant is white because it has given up chlorophyll. It has no leaves. It grows in the dark, on the forest floor, out of leaf litter, and it feeds through fungi that feed through trees. By every measure a plant is usually judged by, it is failing at being a plant.</p>
+
+  <p>It is also perfectly well. It is not a parasite on trees and not a saprophyte on rot, which is what botanists thought for a century; it is a myco-heterotroph, and the arrangement works. <strong>The plant is not doing without a connection to light. It is connected to light through somebody else.</strong> That is not a lesser way to be alive, and Star Stuff has the numbers on how the carbon actually moves.</p>
+
+  <p>Dickinson&rsquo;s last line does not say the thing is a tragedy. It says: <q>&lsquo;Tis Drama - if Hypothesis / It be not Tragedy -</q> &mdash; which reads, turned around, as a hope with a condition on it. Helen puts the same thought without the subjunctive: the ghost pipe is not a tragedy, and neither are Autistic people, and both thrive when the conditions are right rather than when they are corrected.</p>
+
+  <div class="qe-untidy">
+    <p class="qe-block-label">What this sheet will not tidy</p>
+    <ul>
+      <li><strong>We are not claiming Dickinson was Autistic</strong>, and neither is Helen &mdash; she says so in as many words on her own page. Monotropism is a theory of attention that many Autistic people recognise; a nineteenth-century poet cannot be assessed by resemblance, and reading her life through a word coined in 1991 is our doing, not hers.</li>
+      <li><strong>The rhyme between the plant and the theory is a coincidence of vocabulary, not evidence of anything.</strong> Linnaeus named a stem&rsquo;s curve. Murray and Buirski named a pattern of attention. That both reached for <span lang="grc-Latn">monotropos</span> is lovely and it proves nothing about either.</li>
+      <li>This sheet has <strong>no plate</strong>. Every mounted image on this site is a public-domain botanical print or painting, and we do not have one of <cite>Monotropa uniflora</cite>. The Dickinson manuscript is available but licensed, the modern photographs are in copyright, and Todd&rsquo;s painted panel &mdash; the object at the centre of the letter &mdash; we could not clear. <strong>If you know of a public-domain <cite>Monotropa uniflora</cite> plate</strong>, it belongs here. <a href="https://github.com/Stimpunks/Queering-Earth/issues">Say so</a> and it will be.</li>
+      <li>The plant blackens and collapses when handled, and Helen reads that as recognisable. We have kept her reading in her words rather than generalising it, because <q>maybe it&rsquo;s just me who relates in this way</q> is in her sentence and taking it out would make a shared claim out of a personal one.</li>
+      <li><strong>The biology here is deliberately thin.</strong> Myco-heterotrophy is a mechanism with numbers attached and those belong to our sibling site, which risks a wrong fact where this one risks a wrong attribution. If you want to know how the carbon moves, <a href="https://starstuff.earth/symbioses-field-guide.html">go there</a>.</li>
+    </ul>
+  </div>
+
+  <p>Dinah Murray spent her last years photographing lichens and mushrooms on the Fife coast &mdash; the same kingdom of organisms this plant lives through, attended to closely, for their own sake, by someone who had given the world a word for exactly that kind of attention. Kate Fox called the memorial poem <cite>Monotropa Uniflora</cite>. It was the right name.</p>
+
+  <p class="qe-provenance qe-provenance--mended">
+    <span class="qe-provenance-label">Provenance</span>
+    Mounted <a href="/changelog#a-2026-09-09-patina"><time datetime="2026-09-09">9 September 2026</time></a>.
+    <a href="/changelog#a-2026-09-09-patina">Label corrected once before it shipped</a> &mdash; a quotation on the essay this sheet follows is credited to the wrong book, and it is credited here to the right one.
+  </p>
+
+</main>
+
+<nav class="qe-elsewhere" aria-labelledby="qe-elsewhere-h">
+  <h2 id="qe-elsewhere-h">Elsewhere on the plate</h2>
+  <ul class="qe-elsewhere-grid">
+    <li><div class="card-wrap" style="--card-color: var(--qe-marigold)"><a class="card" href="/on-being-ill"><span class="qe-card-head"><span class="qe-card-kind">A reading</span><span class="qe-card-no">No. 1</span></span><span class="qe-card-title">The Army of the Upright</span></a></div></li>
+    <li><div class="card-wrap" style="--card-color: var(--qe-verdigris)"><a class="card" href="/coming-to-terms"><span class="qe-card-head"><span class="qe-card-kind">An essay</span><span class="qe-card-no">No. 2</span></span><span class="qe-card-title">Coming to Terms</span></a></div></li>
+    <li><div class="card-wrap" style="--card-color: var(--qe-coral)"><a class="card" href="/promises-like-pie-crust"><span class="qe-card-head"><span class="qe-card-kind">A reading</span><span class="qe-card-no">No. 3</span></span><span class="qe-card-title">The Die Uncast</span></a></div></li>
+    <li><div class="card-wrap" style="--card-color: var(--qe-violet)"><a class="card" href="/invention-of-normal"><span class="qe-card-head"><span class="qe-card-kind">A reading</span><span class="qe-card-no">No. 4</span></span><span class="qe-card-title">Wyrd, Weird, and the Invention of Normal</span></a></div></li>
+    <li><div class="card-wrap" style="--card-color: var(--qe-lichen)"><a class="card" href="/the-tempest"><span class="qe-card-head"><span class="qe-card-kind">A reading</span><span class="qe-card-no">No. 5</span></span><span class="qe-card-title">Miranda: To Be Wondered With</span></a></div></li>
+    <li><div class="card-wrap" style="--card-color: var(--qe-marigold)"><a class="card" href="/wild-nights"><span class="qe-card-head"><span class="qe-card-kind">A reading</span><span class="qe-card-no">No. 6</span></span><span class="qe-card-title">The Swell and the Dwell</span></a></div></li>
+    <li><div class="card-wrap" style="--card-color: var(--qe-violet)"><a class="card" href="/flower-codes"><span class="qe-card-head"><span class="qe-card-kind">A reading</span><span class="qe-card-no">No. 7</span></span><span class="qe-card-title">A Waste Garden, Flowering at Its Will</span></a></div></li>
+  </ul>
+</nav>
+
+<footer class="qe-footer">
+  <p><a href="/">Queering Earth</a> &middot; <a href="/design">Colophon</a> &middot; <a href="/changelog">Register</a></p>
+  <p>A collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+</footer>
+
+<script src="queering.js" defer></script>
+</body>
+</html>

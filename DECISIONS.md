@@ -87,17 +87,138 @@ was printed at all: the 1896 text is her brother's transcription of her notebook
 printing is not certified to be her hand, and the sheet has to say so rather than resting the
 finding on "the older text wins."
 
-### Woolf's "resonant and porous" line, on More Realms
+### Three quotations on More Realms, checked because a sheet reused them (2026-09-09)
 
-Still open, and still not ours to fix. [Monotropa Uniflora and Monotropism](https://morerealms.com/monotropa-uniflora-and-monotropism/)
-quotes Woolf's mind as "resonant and porous… naturally creative, incandescent and undivided,"
-attributed to Woolf 1929 *as cited in* Popova 2021 rather than to *A Room of One's Own*
-itself. A primary cited to a secondary is the exact shape `ATTRIBUTIONS.md` exists to catch.
-Hers to correct on her own site; ours to check against the book before any sheet reuses it.
+**Not ours to fix, and now specific enough to be fixable.** The open Woolf item that stood here
+since 2026-09-08 said "ours to check against the book before any sheet reuses it." Sheet No. 8
+reuses it, so it got checked, along with everything else on the page it follows. Ryan supplied
+*A Room of One's Own* and *The Letters of Emily Dickinson*; the results split three ways.
+
+**1. Woolf's "resonant and porous" — the wording is right. Closed.** Verified in the book
+(chapter VI, pp. 148–149, Hogarth 1929). The phrase is Woolf's, the ellipsis is honest, nothing
+was tightened. The only fault was citing it to Popova rather than to Woolf, and our sheet cites
+the book. **One nuance we kept and she may want:** the sentence is Woolf guessing at what
+*Coleridge* meant, and it is hedged twice — "Perhaps the androgynous mind…", "He meant,
+perhaps…". Quoting from "the androgynous mind is resonant and porous" quietly promotes a
+speculation to a definition.
+
+**2. The Mary Oliver epigraph is in the wrong book and is trimmed. Open, hers.** It appears on
+at least two More Realms posts (*Monotropa Uniflora and Monotropism*, *Mossy Minds &
+Monotropism*) and on autisticrealms.com, as *"Attention without feeling, is only a report."* —
+Mary Oliver, *Upstream: Selected Essays* (2016). It is **not in *Upstream***; Ryan owns it and
+looked. It is in ***Our World*** (Beacon Press, 2007), and the full passage is *"Attention
+without feeling, I began to learn, is only a report. An openness — an empathy — was necessary
+if the attention was to matter."* Three words gone from the middle, and the whole second
+sentence gone — the sentence that says what attention needs instead. **The quotation as it
+circulates states the problem and drops the answer.** Full working in `ATTRIBUTIONS.md`.
+
+**3. The Dickinson letter has drifted three characters. Open, hers, and very minor.** Against
+Letter 997 in the *Letters*: a dash where there is a full stop, `child` for `Child`, and an
+inserted `the` in "enhances the mystery". Nobody did it on purpose; it is what happens to a
+quotation copied from a copy. It is worth a line only because the sheet's subject is that
+Dickinson's punctuation and capitals were regularised by her editors, and this is the same
+drift, on the same writer, in a friendly source, in 2026.
+
+**Where these live, for a session in the More Realms repo:**
+`site/morerealms-com/posts/monotropa-uniflora-and-monotropism.md`,
+`site/morerealms-com/posts/mossy-minds-monotropism.md`,
+`site/autisticrealms-com/posts/mossy-minds-monotropism.md`, and the "resonant and porous"
+citation also appears in `neuroqueering-time-bergson-deleuze-and-monotropism-an-exploration.md`
+on both her domains. **Never edited from this repo.**
 
 ----
 
 ## Settled
+
+### Sheet No. 8 is a wall, which is a third kind of sheet (2026-09-09)
+
+Ryan asked for a zine wall, pointing at [Stimpunks' zine
+walls](https://stimpunks.org/library/zine-walls/) and at the Fraunces specimen site. One thing
+in the format does not transfer and it decided the whole design.
+
+**A Stimpunks zine wall works by unattributed declaration.** Its own page calls it "a wall of
+declarations", and the pull quotes on *Learning at the Edges* are deliberately set apart with
+no source. That is right for a manifesto and is the one move this site cannot make, because
+here the citation *is* the product. So a wall here is one of two things and mixing them is the
+failure: **our own declarations**, which are ours and need no source, or **a chorus of labelled
+slips**. We built the second, because the herbarium already invented it — a sheet that has been
+in a cabinet long enough carries a stack of determination slips in different hands, every one
+signed.
+
+**So "a wall" joins "a reading" and "an essay" as a sheet kind.** The distinction is not
+decoration: a reading has an order and arrives somewhere; **a wall has a chorus**, and its
+argument is made by accumulation. The subject has to deserve that — Monotropa uniflora does,
+because seven people across 273 years looked at one specimen and each saw something the others
+could not.
+
+**No new visual language.** `.qe-wall`, `.qe-slip`, `.qe-drift` and `.qe-cutup` were built for
+Sheet No. 4 and are reused unchanged. Wabi-sabi adds one rule the Stimpunks walls do not need:
+**the wall must not be uniform.** Twelve slips at twelve angles on an even grid is a pattern,
+not a paste-up, so sizes and weights differ because the *sources* differ — a Latin binomial
+does not get what a letter gets, and neither gets what a poem gets.
+
+**Which principles bore on it.** *Fukinsei* is the whole device. *Kanso* kept the biology off
+the sheet. *Yūgen* is why the wall is open at first paint and nothing reveals on scroll.
+*Koko* is in the specimen rather than the styling: the plant is pale, ephemeral, lives on
+decay, and blackens when touched.
+
+**The shelf division did real work here.** Star Stuff already has the mechanism — its Symbioses
+field guide entry *Nourished in the Dark* covers myco-heterotrophy, no chlorophyll, carbon
+taken and none given back. That is a wrong-fact risk and theirs. Ours is the naming, the
+letter, the poem's edition history, the editor, and the word. **The sheet links across rather
+than re-explaining**, and the label carries a `Biology` row saying where it went. This is the
+first sheet where the two sites explicitly divide one subject.
+
+**The drawing is the first on this site with no leaf in it**, and that absence is the argument:
+every other panel here is green because every other specimen photosynthesises. The bells and
+bracts are `--qe-flesh`, the token written for "the pale flesh of a specimen — a mushroom's
+stipe, a cut stem", which turned out to have been waiting for this plant. Two drafts were
+thrown away against the documented drawing rules: the first put the pipes standing on a single
+long thread, which is the baseline rule 1 forbids, and the second drew the stems nearly upright
+so the bells sat on top — which loses the *one turn* the genus is named for. The threads now
+cross at opposing pitches and the crowns are offset hard sideways.
+
+**No plate, and the sheet says so.** Every mounted image here is public domain, and there is no
+public-domain *Monotropa uniflora* print in hand. The Dickinson manuscript is licensed, modern
+photographs are in copyright, and Todd's painted panel — the object at the centre of the letter
+— could not be cleared. Same treatment as the wrong violet on Sheet No. 7: the gap is named on
+the page and a reader is asked for a better plate.
+
+### Star Stuff's field guides have no per-entry addresses (2026-09-09, open, theirs)
+
+Noticed while linking Sheet No. 8 across to the Symbioses guide. The SKS mirror of that page
+carries a convenience link of the form `symbioses-field-guide.html#monotropa`, and **that
+anchor does not exist on the served page** — the whole document has exactly one id, `#grid`,
+and the twelve entries are rendered into it client-side from data.
+
+So our sheet links to the page rather than to the entry, which is correct but coarser than we
+wanted. It is also the situation `CLAUDE.md` already warns about in the other direction: *"If a
+page ever renders content client-side, the mirror will need a published extraction index."*
+Over there it means a reader cannot be sent to one partnership, and a citation cannot address
+one either.
+
+**Not ours to fix** — `starstuff.earth` is a separate repo. Recorded here so that a session in
+that repo has the finding, and so the next Queering Earth sheet that wants to cite one field
+guide entry knows it cannot yet. Worth adding: **their page already links to Helen Edgar's
+Monotropa essay**, so both sites arrived at it independently, and the cross-link now runs both
+ways.
+
+### The social-card report enumerated a hand-kept list (2026-09-09)
+
+`make-images.py` generated the new card correctly and **did not report it**, because its
+closing summary iterated a hardcoded tuple of filenames that nobody had added a line to. Caught
+by eye, not by a guard.
+
+Harmless in that direction and not in the other: the same hand-kept list would report a
+complete-looking run while a card had **silently failed to generate**, which is precisely the
+class of failure this repo keeps building checks for. The report now enumerates what `og_card`
+actually wrote and prints a count, so a new card reports itself and a missing one is visible.
+
+Also added: a `ghost_pipes` sprig, because the generic one draws leaves in lichen and heads in
+three accents. On the one sheet whose entire argument is a plant with no chlorophyll and no
+foliage, **the stock card was arguing with the page** — the same fault as a legend that no
+longer matches its own drawing.
+
 
 ### The register is indexed by sheet, and the association is authored (2026-09-09)
 

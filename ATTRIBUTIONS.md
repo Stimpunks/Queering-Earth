@@ -1819,6 +1819,162 @@ attribute "seven principles" to him too.
 
 ----
 
+### Emily Dickinson — Letter 997, and three small changes on the way to us
+
+**Quoted on:** `monotropa-uniflora.html`
+
+> That without suspecting it you should send me the preferred flower of life, seems almost
+> supernatural, and the sweet glee that I felt at meeting it, I could confide to none. I still
+> cherish the clutch with which I bore it from the ground when a wondering Child, an unearthly
+> booty, and maturity only enhances mystery, never decreases it.
+
+**Source:** Emily Dickinson to Mabel Loomis Todd, 30 September 1882 — Letter 997 in *The
+Letters of Emily Dickinson*, p. 689. AC 765, in pencil; first published in *Letters* (1894);
+postmarked 30 September 1882. Todd had sent her a painted panel of Indian pipes on 24
+September.
+
+**Verified:** 2026-09-09, by Ryan Boren, from his own copy of the *Letters*. The sheet quotes
+the first two sentences only and the primary continues.
+
+**Three differences from the version we started with.** The reading of this letter in general
+circulation — including the More Realms essay this sheet follows — differs from the *Letters*
+text in three places:
+
+| circulating | Letter 997 |
+|---|---|
+| `to none — I still` | `to none. I still` |
+| `a wondering child` | `a wondering Child` |
+| `enhances the mystery` | `enhances mystery` |
+
+A dash where there was a full stop, a capital lowercased, and a word inserted. **Nobody did
+this on purpose and it is the most ordinary thing in the world** — it is what happens to a
+quotation copied from a copy. It is recorded here for one reason: the sheet's own subject is
+that Dickinson's punctuation and capitals were regularised by her first editors, and here is
+the same three-part drift happening to the same writer in 2026, in a friendly source, at a
+scale of three characters. **The pattern is the finding, not the fault.** Our text follows the
+*Letters*.
+
+**Not corrected on More Realms from here.** Helen's essay is hers. Logged in `DECISIONS.md` as
+an open item for a session in that repo.
+
+----
+
+### Emily Dickinson — *'Tis whiter than an Indian pipe*, and the alternatives 1896 adopted
+
+**Quoted on:** `monotropa-uniflora.html`, mounted in full
+
+**Source:** About 1879, in pencil on a fragment of stationery — Amherst Manuscript 483. Text
+from R. W. Franklin, *The Poems of Emily Dickinson: Variorum Edition* (Belknap Press, 1998),
+Fr1513A, as published in the [Emily Dickinson
+Archive](https://curiosity.lib.harvard.edu/emily-dickinson-archive/catalog/195-EDA2078_F1513A).
+
+**Verified:** 2026-09-09, against Franklin's text and textual notes in the Archive record. The
+rendering in the More Realms essay matches Franklin word for word; only the dash glyphs differ,
+which is typesetting rather than text.
+
+**Dickinson left alternatives, and the first printing took two of them.** Franklin records
+three: `imply] denote` (line 5), `intimate] designate` (line 6), `What function] What customs`
+(line 8). The Archive's publication history reads: *"Poems (1896), 156, as three quatrains,
+with the alternatives for lines 5 and 8 adopted."* So the version that circulated for decades
+reads **denote** and **What customs**, and neither is an error — she wrote both. **An editor
+resolving a poet's options silently and printing the result as the poem is the same move as
+removing her dashes**, which is the subject of Sheet No. 6, and the sheet says so.
+
+----
+
+### Virginia Woolf — the androgynous mind, and a hedge worth keeping
+
+**Quoted on:** `monotropa-uniflora.html`
+
+> He meant, perhaps, that the androgynous mind is resonant and porous; that it transmits
+> emotion without impediment; that it is naturally creative, incandescent and undivided.
+
+**Source:** Virginia Woolf, *A Room of One's Own*, chapter VI — Hogarth Press Uniform Edition
+(1935), pp. 148–149; first published September 1929.
+
+**Verified:** 2026-09-09, **in the book**, from the copy Ryan put in the SKS inbox. This closes
+the open item that had stood since 2026-09-08, when the line was found on More Realms cited to
+a secondary rather than to Woolf.
+
+**The wording is exactly right, and the attribution was the only problem.** The circulating
+form — "resonant and porous… naturally creative, incandescent and undivided" — is Woolf's,
+with the ellipsis correctly marking the clause it drops. Nothing was tightened.
+
+**But the sentence is a guess about Coleridge, twice hedged, and we keep the hedge.** Two
+sentences earlier Woolf writes "Coleridge certainly did not mean, when he said that a great
+mind is androgynous, that…" — so the *he* is Coleridge, and Woolf's own sentence opens "He
+meant, **perhaps**," after a preceding "**Perhaps** the androgynous mind is less apt…".
+Quoting from "the androgynous mind is resonant and porous" turns Woolf speculating about
+another critic into Woolf defining a mind. It is a small strengthening and it is the shape this
+ledger exists to catch, so the sheet quotes from *He meant, perhaps* and names Coleridge in the
+caption.
+
+----
+
+### Mary Oliver — the attention sentence, and the wrong book
+
+**Quoted on:** `monotropa-uniflora.html`
+
+> Attention without feeling, I began to learn, is only a report. An openness — an empathy —
+> was necessary if the attention was to matter.
+
+**Source:** Mary Oliver, *Our World* (Beacon Press, 2007).
+
+**Verified:** 2026-09-09, by Ryan Boren, from his own copies — including by **failing** to find
+it where it was supposed to be.
+
+**Two findings, and this is the clearest example of tightening in this whole ledger.** The
+sentence is widely quoted, and the More Realms essays this sheet follows quote it, as:
+
+> "Attention without feeling, is only a report." — Mary Oliver, *Upstream: Selected Essays*
+> (2016)
+
+- **Wrong book.** It is not in *Upstream*. Ryan owns *Upstream* and looked. It is in *Our
+  World*, nine years earlier — a book Oliver made around Molly Malone Cook's photographs.
+- **Trimmed, and trimmed in the place that matters.** Three words are gone from the middle —
+  "I began to learn" — which turns something Oliver came to over time into an aphorism she
+  hands down. And the **whole second sentence is gone**, which is the one that says what
+  attention needs instead: *"An openness — an empathy — was necessary if the attention was to
+  matter."* The quotation as it circulates states the problem and drops the answer.
+
+**A citation nobody could check.** The reason this survived is that a reader who wanted to
+verify it would have gone to *Upstream* and not found it, and most readers do not go. It took
+someone owning both books.
+
+**Not corrected on More Realms from here.** Logged in `DECISIONS.md` for a session in that
+repo. Our sheet quotes the full two sentences, cites *Our World*, and says on the page that
+this is not where the line is usually credited.
+
+----
+
+### Dinah Murray, Jeanette Buirski, and Wenn Lawson — monotropism, and a byline that lags a name
+
+**Credited on:** `monotropa-uniflora.html`
+
+> I haven't really ever had a career, I've had a mission.
+
+**Source of the quotation:** Dinah Murray, interviewed by Kate Fox in Dalgety Bay about a month
+before her death on 7 July 2021, quoted in Fox's [tribute to Dinah
+Murray](https://katefoxwriter.wordpress.com/2021/08/16/tribute-to-dinah-murray/), 16 August
+2021. **Verified:** 2026-09-09, on Fox's page. This reaches us through Fox rather than from a
+recording, and the caption says so.
+
+**The coinage:** monotropism was coined by **Dinah Murray** with her neighbour **Jeanette
+Buirski**, and set out in Murray, Lesser and Lawson (2005), *Attention, monotropism and the
+diagnostic criteria for autism*, *Autism* 9(2), 139–156,
+<https://doi.org/10.1177/1362361305051398>. Citation pinned from Crossref. **The paper itself
+has not been read here**, and nothing is quoted from it.
+
+**The third author is Wenn Lawson, and the journal's byline reads Wendy Lawson.** He is a trans
+man who has published as Wenn for years. Crossref, the journal record and most citation
+managers still carry the 2005 byline, so a citation generated automatically deadnames him.
+**Reproducing a publisher's record over a living author's own name is not neutral accuracy — it
+is a database outranking a person.** The sheet cites him as Wenn Lawson and states what the
+byline says, so the paper is findable without that cost. Helen Edgar's essay already does this
+correctly and is where we saw it done.
+
+----
+
 ## Open
 
 ### Two sentences on the Miranda sheet claim a little more than their source does

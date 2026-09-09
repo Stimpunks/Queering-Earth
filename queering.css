@@ -1644,20 +1644,31 @@ html.plain .qe-cutup .w {
  * `wyrd bið ful aræd` with English phonetics is reading a different sentence.
  */
 
-/* Verse inside a specimen wants the poem's device: one line per block, hanging,
-   so a wrap on a 375px screen is never mistakable for a line break the poet
-   wrote. Six lines of Völuspá wrapped into nine before this existed. */
+/* Verse anywhere wants the poem's device: one line per block, hanging, so a wrap
+   on a 375px screen is never mistakable for a line break the poet wrote. Six
+   lines of Völuspá wrapped into nine before this existed.
+
+   UNSCOPED, AND IT WAS SCOPED TWICE BEFORE THAT. This rule started life as
+   `.qe-specimen .qe-lines .l`, was copied to `.qe-correction .qe-lines .l` when
+   the Miranda sheet needed it, and then Sheet No. 8 put verse inside a `.qe-slip`
+   — where it inherited neither, went inline, and printed four lines of Dickinson
+   as one run with the words jammed together at every line end. Three contexts is
+   enough: a `.l` is a line of verse wherever it appears, so the display rule is
+   now unscoped and only the size is contextual. A fourth component would have hit
+   the same wall. */
+.qe-lines .l {
+  display: block;
+  text-indent: -1.1em;
+  margin-left: 1.1em;
+}
 .qe-specimen .qe-lines {
   /* One step down from the specimen's 1.16em. Bellows sets Völuspá in six long
      half-line pairs and three of the six wrapped inside the measure; at 1.07em
      (about 20px, still over the 18px floor) only one does. */
   font-size: 0.92em;
 }
-.qe-specimen .qe-lines .l {
-  display: block;
-  text-indent: -1.1em;
-  margin-left: 1.1em;
-}
+/* A slip is narrower than the measure, so verse in one steps down further. */
+.qe-slip .qe-lines { font-size: 0.95em; }
 
 .qe-orig {
   margin: 0 0 0.7rem;
@@ -2060,11 +2071,6 @@ html.plain .qe-correction blockquote { font-variation-settings: normal; }
    break Shakespeare wrote. The rules for .qe-lines are scoped to .qe-specimen,
    and the correction is not one — a blockquote here would have wrapped flat. */
 .qe-correction .qe-lines { font-size: 0.92em; }
-.qe-correction .qe-lines .l {
-  display: block;
-  text-indent: -1.1em;
-  margin-left: 1.1em;
-}
 
 .qe-correction-note {
   font-size: 0.88rem;
