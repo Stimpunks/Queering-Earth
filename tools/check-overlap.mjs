@@ -89,13 +89,43 @@
  *                  fault — text landing where it does not fit — and the same
  *                  measurement finds it.
  *
+ * ── 5. IT MEASURES PAPER, WHICH THE UPSTREAM TOOL DOES NOT ──────────────────────
+ * Added the same day as the port. Star Stuff defers print collisions to its
+ * `check-sheets.mjs`; this repo has no paper gate at all, and paper is the medium this
+ * house has already been burned by — 44 of 46 pages once printed blank there.
+ *
+ * THE VIEWPORT MOVES, and that is the whole point rather than a detail.
+ * `check-contrast.mjs` emulates print media at 1280px and is right to: it measures
+ * colour, and colour does not reflow. A collision is a position. This stylesheet sets
+ * `main { max-width: none }` in print, so the text runs the full width of the sheet —
+ * measuring that at 1280px measures a line length no printer produces. The counts show
+ * it: `/changelog` is 4,884 boxes on screen, 3,567 on Letter and 3,604 on A4.
+ *
+ * BOTH PAPERS, because picking one width and calling it "print" is the same mistake
+ * this pass exists to fix, 22px smaller. Letter and A4 differ by that much and it is
+ * enough to rewrap a line and move a hand-placed mark, as those two counts show.
+ *
+ * REVEAL IS UNDONE FIRST. `reveal.mjs` says why in its own header: the print
+ * stylesheet reveals a different state, and measuring a screen-only class left
+ * switched on is how Star Stuff invented 257 print failures on one page. Proved in
+ * both directions — a screen-only collision reports 7 on screen and 0 on paper; a
+ * print-only collision reports 0 on screen and 3 on each paper.
+ *
+ * AND THE EMPTY-PASS GUARD IS PER PASS, which turns out to catch the original
+ * disaster. A page whose print stylesheet renders nothing measures zero boxes on
+ * paper while measuring hundreds on screen — and is reported as NOT MEASURED rather
+ * than as clean. Verified with `@media print { body { display: none } }`: the run
+ * fails, names the page, and names which passes were blank. The 44-blank-pages fault
+ * would not have survived this gate.
+ *
  * ── WHAT IT DOES NOT MEASURE ────────────────────────────────────────────────────
- *   · PRINT, and here that is a real gap rather than an inherited one. Star Stuff
- *     defers to its `check-sheets.mjs`; this repo has no paper gate at all, and the
- *     print sheet is the medium this house has already been burned by — 44 of 46
- *     pages printed blank there. A print pass is the obvious next addition. It is not
- *     in this port because no print collision has been observed here, which is the
- *     same bar everything else in this file had to clear.
+ *   · PAGINATION, and this is the honest limit of the paper pass. Chrome's print
+ *     emulation reflows to the width but does not break the document into sheets, so
+ *     a collision that exists only because two blocks land either side of a page
+ *     break is invisible here. `break-inside: avoid` on `.qe-accession-block` exists
+ *     because pagination is real. Getting at it means extracting text positions from
+ *     `Page.printToPDF` output, which is a different tool rather than a flag on this
+ *     one. What this pass covers is the print stylesheet's LAYOUT at paper width.
  *   · ONE VIEWPORT, 1280×900, the width `check-contrast.mjs` uses, so a run is
  *     reproducible and the media queries resolve the same way every time. A collision
  *     that only happens at 380px is real and this will not see it. The cabinet ground
@@ -112,8 +142,9 @@
  * run reports and exits 0. CLAUDE.md left that flag off the contrast gate once and the
  * whole two-tier apparatus shipped as advice.
  *
- * BASELINE: 0, over all 14 pages. Keep it there. A gate that ships with a non-zero
- * baseline has to be read past to reach the real number, and then it stops being read.
+ * BASELINE: 0, over all 14 pages in all three passes — 28,882 text boxes. Keep it
+ * there. A gate that ships with a non-zero baseline has to be read past to reach the
+ * real number, and then it stops being read.
  *
  * Requires: Google Chrome. Node 22+ for the global WebSocket. Netlify never runs it.
  */
@@ -129,6 +160,15 @@ const PORT = 9413; // 9411 the search index, 9412 the contrast gate — one each
 const CHECK = process.argv.includes('--check');
 const VERBOSE = process.argv.includes('--verbose');
 const VIEWPORT = { width: 1280, height: 900 };
+
+/* Paper, as a CONTENT box rather than a sheet: the sheet less Chrome's default 0.4in
+   margin on each side, at 96 CSS px to the inch. Letter is 8.5×11in → 7.7×10.2in of
+   content; A4 is 8.27×11.69in → 7.47×10.89in. The two differ by 22px of width, which
+   is exactly the size of difference that reflows a line and moves a hand-placed mark. */
+const PAPERS = [
+  ['letter', Math.round(7.7 * 96), Math.round(10.2 * 96)],
+  ['a4', Math.round(7.47 * 96), Math.round(10.89 * 96)],
+];
 const withPage = (url, fn) => withPageOnPort(PORT, url, fn);
 
 const MEASURE = String.raw`((cfg) => {
@@ -404,23 +444,59 @@ async function main() {
     for (const f of files) {
       try {
         const out = await withPage(`file://${path.join(ROOT, f)}`, async (send) => {
-          await send('Emulation.setDeviceMetricsOverride',
-            { width: VIEWPORT.width, height: VIEWPORT.height, deviceScaleFactor: 1, mobile: false });
-          const n = await settle(send);
-          if (n === null) return null;
-          evaluated(await send('Runtime.evaluate', { expression: REVEAL, returnByValue: true }), 'reveal');
-          const measured = evaluated(
+          const measure = async (what) => evaluated(
             await send('Runtime.evaluate',
               { expression: `(${MEASURE})(${JSON.stringify(CFG)})`, returnByValue: true }),
-            'measure'
+            what
           );
+          const viewport = (w, h) => send('Emulation.setDeviceMetricsOverride',
+            { width: w, height: h, deviceScaleFactor: 1, mobile: false });
+
+          await viewport(VIEWPORT.width, VIEWPORT.height);
+          const n = await settle(send);
+          if (n === null) return null;
+
+          /* SCREEN, with the runtime components revealed: /search builds its whole
+             result UI at load and would otherwise be an empty div. */
+          evaluated(await send('Runtime.evaluate', { expression: REVEAL, returnByValue: true }), 'reveal');
+          const screen = await measure('screen measure');
+
+          /* PAPER. UNREVEAL FIRST, and this is not tidiness — reveal.mjs says so in
+             its own header. The print stylesheet reveals a DIFFERENT state, and
+             measuring a screen-only class left switched on is how Star Stuff invented
+             257 print failures on one page. */
           evaluated(await send('Runtime.evaluate', { expression: UNREVEAL, returnByValue: true }), 'unreveal');
-          return measured;
+          await send('Emulation.setEmulatedMedia', { media: 'print' });
+
+          /* AND THE VIEWPORT MOVES, which is the whole reason this pass exists and the
+             one place it departs from check-contrast.mjs. That gate emulates print
+             media at 1280px and is right to: it measures colour, and colour does not
+             reflow. Overlap is a position. In print this stylesheet sets
+             `main { max-width: none }`, so the text runs the full width of the paper
+             — measuring that at 1280px measures a line length no printer produces and
+             a layout no reader ever sees.
+             BOTH PAPERS, because hardcoding one width and calling it "print" would be
+             the same mistake this pass exists to fix, 22px smaller. Chrome's default
+             print margin is 0.4in a side, so the content box is the sheet less 0.8in. */
+          const paper = {};
+          for (const [name, w, h] of PAPERS) {
+            await viewport(w, h);
+            await sleep(250);
+            paper[name] = await measure(`${name} measure`);
+          }
+
+          await send('Emulation.setEmulatedMedia', { media: '', features: [] });
+          await viewport(VIEWPORT.width, VIEWPORT.height);
+          return { screen, paper };
         });
         if (out === null) { unread.push([f, 'never settled']); continue; }
         /* A page that measured NOTHING is a broken run, not a clean page — the lesson
-           every tool in this repo learned separately. It gates with the others. */
-        if (!out.boxes) { unread.push([f, 'measured 0 text boxes']); continue; }
+           every tool in this repo learned separately. It gates with the others, and it
+           is checked PER PASS: a print pass that measured nothing while the screen
+           pass measured 4,787 boxes is the exact silent success this guards against. */
+        const empty = [['screen', out.screen], ...Object.entries(out.paper)]
+          .filter(([, o]) => !o || !o.boxes).map(([k]) => k);
+        if (empty.length) { unread.push([f, `measured 0 text boxes in: ${empty.join(', ')}`]); continue; }
         results.push([f, out]);
       } catch (e) {
         unread.push([f, String(e.message || e).slice(0, 90)]);
@@ -431,29 +507,41 @@ async function main() {
   }
 
   // ── report ──────────────────────────────────────────────────────────────────
+  /* Each page is one line per PASS THAT FOUND SOMETHING, plus one summary line. The
+     alternative — three lines per page always — is 42 lines of "ok" to read past on a
+     clean run, and a gate nobody reads is a gate that does not work. But a pass is
+     never silently omitted from the totals: the counts below sum every pass. */
+  const passes = (o) => [['screen', o.screen], ...Object.entries(o.paper)];
+  const tally = (o) => passes(o).reduce((a, [, p]) => a + p.hits.length + p.clipped.length, 0);
+
   console.log();
   for (const [f, o] of results) {
-    const n = o.hits.length + o.clipped.length;
-    console.log(
-      `  ${f.padEnd(42)} ${n ? 'FAIL' : 'ok  '}   ${String(o.boxes).padStart(5)} boxes` +
-      `   ${o.hits.length} collision(s)   ${o.clipped.length} clipped` +
-      `${o.offscreen ? `   ${o.offscreen} exempt` : ''}`
-    );
-    for (const h of o.hits)
-      console.log(`      ${h.kind}  ${h.dx}×${h.dy}px at ${h.where}\n        ${h.aSel} "${h.a}"\n        ${h.bSel} "${h.b}"`);
-    for (const c of o.clipped)
-      console.log(`      clipped  ${c.by}px (${c.em}em) outside ${c.host} at ${c.where}\n        ${c.sel} "${c.text}"`);
+    const n = tally(o);
+    const boxSummary = passes(o).map(([k, p]) => `${k} ${p.boxes}`).join(' · ');
+    console.log(`  ${f.padEnd(42)} ${n ? 'FAIL' : 'ok  '}   ${boxSummary}`);
+    for (const [name, p] of passes(o)) {
+      for (const h of p.hits)
+        console.log(`      [${name}] ${h.kind}  ${h.dx}×${h.dy}px at ${h.where}\n        ${h.aSel} "${h.a}"\n        ${h.bSel} "${h.b}"`);
+      for (const c of p.clipped)
+        console.log(`      [${name}] clipped  ${c.by}px (${c.em}em) outside ${c.host} at ${c.where}\n        ${c.sel} "${c.text}"`);
+    }
   }
 
-  const hits = results.reduce((a, [, o]) => a + o.hits.length, 0);
-  const clipped = results.reduce((a, [, o]) => a + o.clipped.length, 0);
-  const boxes = results.reduce((a, [, o]) => a + o.boxes, 0);
-  const offscreen = results.reduce((a, [, o]) => a + (o.offscreen || 0), 0);
+  const sum = (fn) => results.reduce((a, [, o]) => a + passes(o).reduce((b, [, p]) => b + fn(p), 0), 0);
+  const hits = sum((p) => p.hits.length);
+  const clipped = sum((p) => p.clipped.length);
+  const boxes = sum((p) => p.boxes);
+  const offscreen = sum((p) => p.offscreen || 0);
 
-  console.log(
-    `\n${results.length} page(s) · ${boxes.toLocaleString()} text boxes measured at ` +
-    `${VIEWPORT.width}×${VIEWPORT.height} · ${hits} collision(s), ${clipped} clipped`
-  );
+  /* PER PASS, because one number hides which medium is broken — and print is the
+     medium this house has been burned by. */
+  console.log(`\n${results.length} page(s) · ${boxes.toLocaleString()} text boxes measured across ${1 + PAPERS.length} pass(es)`);
+  for (const [name] of [['screen'], ...PAPERS.map((p) => [p[0]])]) {
+    const h = results.reduce((a, [, o]) => a + (passes(o).find(([k]) => k === name)?.[1].hits.length ?? 0), 0);
+    const c = results.reduce((a, [, o]) => a + (passes(o).find(([k]) => k === name)?.[1].clipped.length ?? 0), 0);
+    const w = name === 'screen' ? `${VIEWPORT.width}×${VIEWPORT.height}` : PAPERS.find((x) => x[0] === name).slice(1).join('×');
+    console.log(`  ${name.padEnd(8)} ${w.padEnd(10)} ${h} collision(s), ${c} clipped`);
+  }
 
   /* On its own line, like the contrast gate's exemption counts: a number folded into
      a total is a number nobody reads, and a list that grows is a list somebody can

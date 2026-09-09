@@ -587,7 +587,7 @@ node tools/check-contrast.mjs --check   # 7:1 in BOTH grounds and under print em
 node tools/check-addresses.mjs          # one address per page: a forced 301! per .html twin
 node tools/check-metadata.mjs           # derived files current, JSON-LD agreeing, credit correct
 node tools/check-cache.mjs              # no markup-coupled asset outliving the markup
-node tools/check-overlap.mjs --check    # no text on other text, nothing clipped by its box
+node tools/check-overlap.mjs --check    # no text on text, on screen and on paper, nothing clipped
 ```
 
 **`--check` is load-bearing on the contrast gate and this file left it off until
@@ -631,10 +631,30 @@ a gate is a reason to build the gate. Three things about the port are worth know
 host, and its `locate()` reported `page` for precisely the absolutely-positioned case the
 gate exists to catch.
 
-**The real gap is print**, and here it is a live one rather than inherited. Star Stuff defers
-to its `check-sheets.mjs`; this repo has no paper gate at all, and paper is the medium this
-house has already been burned by. No print collision has been observed here yet, which is the
-only reason it is not in the port.
+**It measures paper, which the upstream tool does not.** Star Stuff defers print collisions
+to its `check-sheets.mjs`; this repo has no paper gate, and paper is the medium this house has
+already been burned by. Three passes: screen at 1280×900, then Letter and A4 at their content
+widths (the sheet less Chrome's 0.4in default margins).
+
+- **The viewport moves, and that is the point.** `check-contrast.mjs` emulates print media at
+  1280px and is right to — colour does not reflow. A collision is a position, and print sets
+  `main { max-width: none }`, so measuring paper at 1280px measures a line length no printer
+  produces. `/changelog` is 4,884 boxes on screen, 3,567 on Letter, 3,604 on A4.
+- **Both papers**, because picking one width and calling it print is the same mistake 22px
+  smaller — and those two counts show 22px is enough to rewrap a line.
+- **REVEAL is undone before the paper passes**, per `reveal.mjs`'s own header. Proved both
+  ways: a screen-only collision reports 7 on screen and 0 on paper, a print-only one 0 on
+  screen and 3 on each paper.
+- **The empty-pass guard is per pass, and it catches the original disaster.** A page whose
+  print stylesheet renders nothing measures zero boxes on paper while measuring hundreds on
+  screen, and is reported NOT MEASURED rather than clean. **44 of 46 pages printing blank
+  would not survive this gate.**
+
+**What it still cannot see is pagination.** Chrome's print emulation reflows to the width but
+does not break the document into sheets, so a collision that exists only because two blocks
+land either side of a page break is invisible. `break-inside: avoid` on `.qe-accession-block`
+is there because pagination is real. Reaching it means text positions out of
+`Page.printToPDF`, which is a different tool and not a flag on this one.
 
 And **make a new gate fail before believing it.** The 7:1 tier was proved by putting the
 recessed `--qe-paper-deep` panel back and confirming it reported 6.90:1 and 6.21:1 as `UNDER`,

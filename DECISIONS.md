@@ -195,10 +195,34 @@ inflated AABB is discarded in favour of the em box. The imported constant was al
 defence. If a component ever leans far enough for that to stop holding, the fix is to measure
 the rotated quad, not to widen the tolerance until the noise stops.
 
-**Print is the real gap and it is a live one.** Star Stuff defers this to `check-sheets.mjs`;
-this repo has no paper gate at all, and paper is the medium this house has already been burned
-by — 44 of 46 pages printing blank. No print collision has been observed here, which is the
-only reason it is not in the port, and it is the obvious next addition.
+**The print pass was added the same day, and it is not in the upstream tool.** Star Stuff
+defers print collisions to `check-sheets.mjs`; this repo has no paper gate, and paper is the
+medium this house has already been burned by. Three passes now: screen, Letter, A4.
+
+**The viewport moves, and that is the entire reason the pass is worth having.**
+`check-contrast.mjs` emulates print media at 1280px and is right to — it measures colour, and
+colour does not reflow. A collision is a position, and this stylesheet sets
+`main { max-width: none }` in print, so the text runs the full width of the sheet. Measuring
+that at 1280px measures a line length no printer produces. The counts are the evidence:
+`/changelog` is 4,884 text boxes on screen, 3,567 on Letter, 3,604 on A4. **Both papers,
+because those last two numbers differ** — 22px of width is enough to rewrap a line and move a
+hand-placed mark, so picking one and calling it "print" would be this pass's own mistake at a
+smaller scale.
+
+**Proved in four ways, and the fourth was a surprise.** A print-only collision reports 0 on
+screen and 3 on each paper; a screen-only collision reports 7 on screen and 0 on paper, which
+is what proves `UNREVEAL` and the media switch do not leak. Exit code 1 on a paper-only fault.
+And the empty-pass guard, which is per pass rather than per page: a stylesheet that renders
+nothing on paper measures zero boxes there while measuring hundreds on screen, and the run
+reports the page as NOT MEASURED and names which passes were blank. **That is the
+44-blank-pages fault, and it would not survive this gate** — which was not the reason the
+guard was written.
+
+**Pagination is the honest limit.** Chrome's print emulation reflows to the width but does not
+break the document into sheets, so a collision that exists only because two blocks land either
+side of a page break is invisible. `break-inside: avoid` on `.qe-accession-block` is there
+because pagination is real. Reaching it means extracting text positions from
+`Page.printToPDF`, which is a different tool rather than a flag on this one.
 
 ### The accession stamp says Queering Earth, and the fade is on the ring (2026-09-09)
 

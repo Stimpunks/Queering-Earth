@@ -7,11 +7,11 @@
 <link rel="stylesheet" href="/queering.css">
 <style>
 /* ══ CANDIDATE PALETTE ADDITIONS — these would go into queering.css :root ══
-   Decoration only. Neither is for text, in either ground. */
+   Decoration only. Not for text, in either ground. */
 :root {
-  --qe-lilac: #b9a2d6;        /* the wing */
-  --qe-lilac-pale: #ded1ec;   /* the wash under it */
-  --qe-lilac-black: #17121c;  /* the ground of the worn card */
+  --qe-lilac: #b9a2d6;
+  --qe-lilac-pale: #ded1ec;
+  --qe-lilac-black: #17121c;
   --qe-cab-lilac: #a98cca;
   --qe-cab-lilac-pale: #6f5a8c;
 }
@@ -21,33 +21,31 @@
 @media screen { :root.cabinet { --qe-lilac: var(--qe-cab-lilac); --qe-lilac-pale: var(--qe-cab-lilac-pale); } }
 
 /* ══ the moth ══ */
-.qe-moth { max-width: 30rem; margin-inline: auto; }
+.qe-moth { max-width: 26rem; margin-inline: auto; }
 .qe-moth .fore { fill: var(--qe-lilac); stroke: var(--qe-ink); stroke-width: 1.6; }
 .qe-moth .hind { fill: var(--qe-lilac-pale); stroke: var(--qe-ink); stroke-width: 1.6; }
 .qe-moth .hollow { fill: none; }
-.qe-moth .band { fill: none; stroke: var(--qe-violet); stroke-width: 4.5; opacity: 0.8; stroke-linecap: round; }
+.qe-moth .band { fill: none; stroke: var(--qe-violet); stroke-width: 5; stroke-linecap: round; }
 .qe-moth .vein { fill: none; stroke: var(--qe-ink); stroke-width: 0.9; opacity: 0.5; stroke-linecap: round; }
-.qe-moth .discal { fill: var(--qe-ink); opacity: 0.85; }
+.qe-moth .discal { fill: var(--qe-lilac-pale); stroke: var(--qe-ink); stroke-width: 1.2; }
+.qe-moth .halo { fill: none; stroke: var(--qe-ink); stroke-width: 1; opacity: 0.55; }
 .qe-moth .eye { fill: var(--qe-violet); stroke: var(--qe-ink); stroke-width: 1.2; }
 .qe-moth .pupil { fill: var(--qe-ink); }
 .qe-moth .abdomen { fill: var(--qe-ink); }
 .qe-moth .segment { fill: none; stroke: var(--qe-lilac); stroke-width: 1; opacity: 0.65; stroke-linecap: round; }
-.qe-moth .collar { fill: none; stroke: var(--qe-ink); stroke-width: 2.2; }
 .qe-moth .fur { fill: none; stroke: var(--qe-ink); stroke-width: 1.2; stroke-linecap: round; }
 .qe-moth .stem { stroke: var(--qe-ink); stroke-width: 1.7; }
 .qe-moth .barb { fill: none; stroke: var(--qe-ink); stroke-width: 0.85; stroke-linecap: round; }
 .qe-moth .sea { fill: var(--qe-lilac-pale); }
-.qe-moth .land { fill: var(--qe-violet); }
-.qe-moth .graticule { fill: none; stroke: var(--qe-ink); stroke-width: 0.7; opacity: 0.4; }
+.qe-moth .land { fill: var(--qe-ink); }
+.qe-moth .graticule { fill: none; stroke: var(--qe-ink); stroke-width: 0.7; opacity: 0.45; }
+.qe-moth .axis { stroke-width: 1; opacity: 0.6; }
 .qe-moth .rim { fill: none; stroke: var(--qe-ink); stroke-width: 2.2; }
 .qe-moth .fissure { fill: none; stroke: var(--qe-ink); stroke-width: 1.7; stroke-linecap: round; }
 
-/* B steps the wings back to line so the two hemispheres carry the drawing. */
-.qe-moth--hemi .band { stroke: var(--qe-lilac); stroke-width: 5; opacity: 1; }
+.qe-moth--hemi .band { stroke: var(--qe-lilac); stroke-width: 5; }
 .qe-moth--hemi .vein { opacity: 0.75; }
-.qe-moth--hemi .sea { fill: var(--qe-lilac-pale); }
 
-/* C brings its own ground, so every line that was ink becomes lilac. */
 .qe-moth--card .ground { fill: var(--qe-lilac-black); }
 .qe-moth--card .fore,
 .qe-moth--card .hind { fill: none; stroke: var(--qe-lilac); stroke-width: 1.7; }
@@ -55,24 +53,38 @@
 .qe-moth--card .vein,
 .qe-moth--card .graticule { stroke: var(--qe-lilac); opacity: 0.65; }
 .qe-moth--card .rim,
-.qe-moth--card .collar,
-.qe-moth--card .stem { stroke: var(--qe-lilac); }
+.qe-moth--card .stem,
 .qe-moth--card .fur,
-.qe-moth--card .barb { stroke: var(--qe-lilac); }
+.qe-moth--card .barb,
+.qe-moth--card .halo,
+.qe-moth--card .segment { stroke: var(--qe-lilac); }
 .qe-moth--card .sea { fill: none; }
 .qe-moth--card .land { fill: var(--qe-lilac); opacity: 0.85; }
 .qe-moth--card .abdomen { fill: none; stroke: var(--qe-lilac); stroke-width: 1.7; }
-.qe-moth--card .segment { stroke: var(--qe-lilac); }
-.qe-moth--card .discal { fill: var(--qe-lilac); }
+.qe-moth--card .discal,
 .qe-moth--card .eye { fill: none; stroke: var(--qe-lilac); }
 .qe-moth--card .pupil { fill: var(--qe-lilac); }
 
+/* the figure as it would sit in prose: bare surface, space only */
+.qe-moth-figure { margin: var(--qe-space-6) 0; }
+.qe-moth-figure figcaption {
+  font-family: var(--qe-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--qe-moss);
+  max-width: 30rem;
+  margin: var(--qe-space-2) auto 0;
+  text-align: center;
+}
+
 /* mockup furniture only */
-.mock { border-top: 1px solid var(--qe-rule); margin-top: 3rem; padding-top: 1rem; }
+body { padding: 0 1.5rem 4rem; }
+main { max-width: 46rem; margin: 0 auto; }
+.mock { border-top: 1px solid var(--qe-rule); margin-top: 3.5rem; padding-top: 1rem; }
 .mock h2 { margin-top: 0; }
-.mock-note { color: var(--qe-moss); font-size: 1rem; max-width: 34rem; }
-.mock-small { max-width: 22rem; margin-inline: auto; }
-.mock-row { display: flex; gap: 2rem; align-items: flex-end; justify-content: center; margin: 1.5rem 0; }
+.mock-note { color: var(--qe-moss); font-size: 1rem; }
+.mock-big .qe-moth { max-width: 40rem; }
+.mock-label { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--qe-moss); margin: 2rem 0 0; }
 </style>
 </head>
 <body>
@@ -82,112 +94,128 @@
 </div>
 <main id="main">
 <h1>Moth mockups</h1>
-<p class="qe-lede">Four readings of the same homage &mdash; Nick Walker&rsquo;s cover, Ezra Furman&rsquo;s lilac and black, the Earth where the brain was. Toggle the ground and the plain view; each is shown large and again at the size it would sit in prose.</p>
+<p class="qe-lede">Four readings of one homage &mdash; Walker&rsquo;s cover, Furman&rsquo;s lilac and black, the Earth where the brain was. Each is shown large, then at the size and place it would take at the foot of <em>Queering is a verb</em>. Both grounds; the plain view drops the motion and keeps the drawing.</p>
 
-<section class="mock">
-  <h2>Variant A — the plate</h2>
-  <p class="mock-note">The book cover read into this site&rsquo;s own register: a symmetrical Victorian plate, ink line over lilac wash, the globe where the brain was. Luna-moth tails do the work the swallowtail&rsquo;s tails do on the cover.</p>
-  <figure style="margin:1.5rem 0">
-    <svg class="qe-botanical qe-moth qe-moth--plate" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above with its wings spread, drawn as a herbarium plate. In place of its body sits the Earth: a globe with the Atlantic at its centre, the Americas on the left limb and Africa and Eurasia on the right, ruled across with lines of latitude and longitude. The wings are lilac with black veins, two dark bands sweeping the outer margin of each forewing, a dark crescent on each forewing and a ringed eyespot on each hindwing. Two long tails trail from the hindwings, and a pair of feathered antennae rise from a furred collar above the globe." focusable="false">
+<section class="mock" data-key="A">
+  <h2>Variant A &mdash; the plate</h2>
+  <p class="mock-note">The cover read into this site&rsquo;s own register: a symmetrical Victorian plate, ink line over a lilac wash, the globe where the brain was. Luna-moth tails do the work the swallowtail&rsquo;s tails do on the cover, so it stays a moth.</p>
+  <p class="mock-label">Large</p>
+  <div class="mock-big"><svg class="qe-botanical qe-moth qe-moth--plate" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above with its wings spread, drawn as a herbarium plate. Where its body would be sits the Earth: a globe centred on the Atlantic, Africa and Europe to the right of the middle, the Americas away to the left, ruled across with lines of latitude and longitude. The wings are lilac with black veins, three dark bands crossing each forewing, a pale crescent on each forewing and a ringed eyespot on each hindwing. A long narrow tail trails from each hindwing, and a pair of feathered antennae rise from a furred collar behind the globe." focusable="false">
       <g class="side side-r">
         <g class="sprout" style="--i:1">
+          <path class="hind" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
       <g class="side side-l" transform="translate(560 0) scale(-1 1)">
         <g class="sprout" style="--i:1">
+          <path class="hind" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
-      <path class="abdomen" d="M 280 190 C 295 196, 293.5 224.1, 280 252 C 266.5 224.1, 265 196, 280 190 Z"/>
-      <path class="segment" d="M 267.4 202.4 Q 280 205.4, 292.6 202.4"/>
-      <path class="segment" d="M 269.8 214.8 Q 280 217.8, 290.2 214.8"/>
-      <path class="segment" d="M 272.2 227.2 Q 280 230.2, 287.8 227.2"/>
-      <path class="segment" d="M 274.6 239.6 Q 280 242.6, 285.4 239.6"/>
-      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
-      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
+      <path class="abdomen" d="M 280 188 C 301 194, 298.9 222.1, 280 250 C 261.1 222.1, 259 194, 280 188 Z"/>
+      <path class="segment" d="M 262.4 200.4 Q 280 203.4, 297.6 200.4"/>
+      <path class="segment" d="M 265.7 212.8 Q 280 215.8, 294.3 212.8"/>
+      <path class="segment" d="M 269.1 225.2 Q 280 228.2, 290.9 225.2"/>
+      <path class="segment" d="M 272.4 237.6 Q 280 240.6, 287.6 237.6"/>
+      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
+      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
       <path class="fur" d="M 239.6 140.4 L 230.4 137.8"/>
       <path class="fur" d="M 240.7 137.3 L 231.4 133.8"/>
       <path class="fur" d="M 241.9 134.3 L 232.7 130"/>
@@ -226,125 +254,142 @@
         <clipPath id="qe-globe-a"><circle cx="280" cy="152" r="44"/></clipPath>
         <circle class="sea" cx="280" cy="152" r="44"/>
         <g clip-path="url(#qe-globe-a)">
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.66 -0.44 C -0.52 -0.55, -0.30 -0.53, -0.22 -0.42 C -0.16 -0.34, -0.25 -0.26, -0.30 -0.19 C -0.36 -0.11, -0.33 -0.02, -0.40 0.02 C -0.48 0.06, -0.52 -0.06, -0.58 -0.16 C -0.65 -0.26, -0.72 -0.36, -0.66 -0.44 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.34 0.02 C -0.23 -0.03, -0.15 0.06, -0.18 0.18 C -0.20 0.31, -0.26 0.44, -0.31 0.58 C -0.35 0.69, -0.44 0.69, -0.44 0.56 C -0.44 0.42, -0.39 0.30, -0.42 0.20 C -0.45 0.10, -0.42 0.04, -0.34 0.02 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.04 -0.32 C 0.16 -0.37, 0.30 -0.35, 0.36 -0.28 C 0.44 -0.20, 0.42 -0.10, 0.34 -0.04 C 0.30 0.06, 0.28 0.20, 0.22 0.36 C 0.18 0.48, 0.12 0.55, 0.08 0.48 C 0.05 0.40, 0.08 0.28, 0.06 0.18 C 0.03 0.10, -0.06 0.06, -0.06 -0.06 C -0.06 -0.20, -0.04 -0.29, 0.04 -0.32 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.06 -0.36 C 0.20 -0.47, 0.44 -0.57, 0.64 -0.50 C 0.75 -0.46, 0.72 -0.34, 0.60 -0.32 C 0.44 -0.30, 0.30 -0.24, 0.18 -0.28 C 0.08 -0.31, 0.02 -0.33, 0.06 -0.36 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.44 0.34 C 0.54 0.28, 0.66 0.34, 0.64 0.44 C 0.62 0.54, 0.50 0.57, 0.44 0.50 C 0.39 0.44, 0.39 0.38, 0.44 0.34 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.772 -0.278 L -0.6366 -0.45389999999999997 L -0.5255 -0.5453 L -0.445 -0.5774 L -0.3446 -0.6077 L -0.30960000000000004 -0.589 L -0.3353 -0.6634 L -0.3335 -0.7439 L -0.332 -0.7946 L -0.36260000000000003 -0.8147000000000001 L -0.4542 -0.7727999999999999 L -0.5826 -0.6928 L -0.7198 -0.5742999999999999 L -0.8397 -0.4025 L -0.8402999999999999 -0.285 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.7943 0.22669999999999998 L -0.7242000000000001 0.0043 L -0.6197999999999999 -0.0107 L -0.45230000000000004 0.0993 L -0.42260000000000003 0.1884 L -0.3251 0.2475 L -0.22369999999999998 0.30369999999999997 L -0.1715 0.3552 L -0.2347 0.43239999999999995 L -0.2556 0.5517000000000001 L -0.3541 0.5868 L -0.4019 0.6977000000000001 L -0.44580000000000003 0.7479 L -0.4545 0.8042999999999999 L -0.4353 0.8613 L -0.4646 0.8548 L -0.5602 0.7373999999999999 L -0.6243 0.589 L -0.703 0.4059 L -0.8046 0.2238 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.26339999999999997 -0.4159 L 0.36260000000000003 -0.4407 L 0.4581 -0.4526 L 0.5846 -0.37339999999999995 L 0.6496000000000001 -0.405 L 0.7269 -0.4093 L 0.7912 -0.3029 L 0.8473999999999999 -0.2125 L 0.9068999999999999 -0.1272 L 0.9491 -0.15419999999999998 L 0.9361 -0.0144 L 0.9205 0.08120000000000001 L 0.9085 0.18630000000000002 L 0.8897 0.2729 L 0.8318 0.3981 L 0.7622000000000001 0.5277999999999999 L 0.6698 0.6377 L 0.5792 0.6815 L 0.5738 0.6115 L 0.5724 0.4602 L 0.5561 0.2737 L 0.5589 0.1381 L 0.4669 0.0803 L 0.357 0.10809999999999999 L 0.2917 0.1301 L 0.2054 0.047799999999999995 L 0.13440000000000002 -0.054299999999999994 L 0.145 -0.176 L 0.21359999999999998 -0.2811 L 0.2312 -0.36510000000000004 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.2016 -0.5209 L 0.26 -0.4317 L 0.3237 -0.4844 L 0.39180000000000004 -0.554 L 0.49510000000000004 -0.5233 L 0.5602 -0.5201 L 0.6377999999999999 -0.48869999999999997 L 0.6861 -0.4858 L 0.7497 -0.4174 L 0.8109 -0.4061 L 0.8282 -0.43639999999999995 L 0.8975 -0.3872 L 0.9028999999999999 -0.397 L 0.7908999999999999 -0.5656 L 0.7464 -0.5929 L 0.683 -0.6536000000000001 L 0.633 -0.7261 L 0.5292 -0.8238 L 0.3732 -0.9137000000000001 L 0.3407 -0.913 L 0.352 -0.8803 L 0.2802 -0.8784 L 0.2444 -0.8587 L 0.2514 -0.8045 L 0.2729 -0.7351 L 0.2857 -0.6436000000000001 L 0.2398 -0.597 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.9399 0.3414 L 0.967 0.2547 L 0.9989 0.046 L 0.9995 0.0329 L 0.9985 -0.055299999999999995 L 0.7283999999999999 0.6852 L 0.33039999999999997 0.9439 L 0.11109999999999999 0.9937999999999999 L 0.1546 0.988 L 0.3225 0.9466 L 0.5727000000000001 0.8197000000000001 L 0.7293 0.6842 L 0.7731 0.6343 L 0.9007999999999999 0.4342 Z"/>
         <path class="graticule" d="M 246 124.7 Q 280 128.5, 314 124.7"/>
         <path class="graticule" d="M 238.9 137.9 Q 280 139.9, 321.1 137.9"/>
         <path class="graticule" d="M 236.7 152 Q 280 152, 323.3 152"/>
         <path class="graticule" d="M 238.9 166.1 Q 280 164.1, 321.1 166.1"/>
         <path class="graticule" d="M 246 179.3 Q 280 175.5, 314 179.3"/>
-        <line class="graticule" x1="280" y1="108.4" x2="280" y2="195.6"/>
+        <line class="graticule axis" x1="280" y1="108.4" x2="280" y2="195.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="15" ry="43.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="29.9" ry="43.6"/>
         </g>
         <circle class="rim" cx="280" cy="152" r="44"/>
       </g>
-    </svg>
-  </figure>
-  <div class="mock-row">
-    <div class="mock-small"><svg class="qe-botanical qe-moth qe-moth--plate" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above with its wings spread, drawn as a herbarium plate. In place of its body sits the Earth: a globe with the Atlantic at its centre, the Americas on the left limb and Africa and Eurasia on the right, ruled across with lines of latitude and longitude. The wings are lilac with black veins, two dark bands sweeping the outer margin of each forewing, a dark crescent on each forewing and a ringed eyespot on each hindwing. Two long tails trail from the hindwings, and a pair of feathered antennae rise from a furred collar above the globe." focusable="false">
+    </svg></div>
+  <p class="mock-label">In place, at the foot of the section</p>
+  <p>Walker is naming two normativities in particular. Taking the verb further out &mdash; to a painting, a canon, a century, a diagnosis, a life &mdash; is our extension, not his sentence. The credit for the verb stays with him.</p>
+  <figure class="qe-moth-figure">
+    <svg class="qe-botanical qe-moth qe-moth--plate" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above with its wings spread, drawn as a herbarium plate. Where its body would be sits the Earth: a globe centred on the Atlantic, Africa and Europe to the right of the middle, the Americas away to the left, ruled across with lines of latitude and longitude. The wings are lilac with black veins, three dark bands crossing each forewing, a pale crescent on each forewing and a ringed eyespot on each hindwing. A long narrow tail trails from each hindwing, and a pair of feathered antennae rise from a furred collar behind the globe." focusable="false">
       <g class="side side-r">
         <g class="sprout" style="--i:1">
+          <path class="hind" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
       <g class="side side-l" transform="translate(560 0) scale(-1 1)">
         <g class="sprout" style="--i:1">
+          <path class="hind" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
-      <path class="abdomen" d="M 280 190 C 295 196, 293.5 224.1, 280 252 C 266.5 224.1, 265 196, 280 190 Z"/>
-      <path class="segment" d="M 267.4 202.4 Q 280 205.4, 292.6 202.4"/>
-      <path class="segment" d="M 269.8 214.8 Q 280 217.8, 290.2 214.8"/>
-      <path class="segment" d="M 272.2 227.2 Q 280 230.2, 287.8 227.2"/>
-      <path class="segment" d="M 274.6 239.6 Q 280 242.6, 285.4 239.6"/>
-      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
-      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
+      <path class="abdomen" d="M 280 188 C 301 194, 298.9 222.1, 280 250 C 261.1 222.1, 259 194, 280 188 Z"/>
+      <path class="segment" d="M 262.4 200.4 Q 280 203.4, 297.6 200.4"/>
+      <path class="segment" d="M 265.7 212.8 Q 280 215.8, 294.3 212.8"/>
+      <path class="segment" d="M 269.1 225.2 Q 280 228.2, 290.9 225.2"/>
+      <path class="segment" d="M 272.4 237.6 Q 280 240.6, 287.6 237.6"/>
+      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
+      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
       <path class="fur" d="M 239.6 140.4 L 230.4 137.8"/>
       <path class="fur" d="M 240.7 137.3 L 231.4 133.8"/>
       <path class="fur" d="M 241.9 134.3 L 232.7 130"/>
@@ -383,130 +428,148 @@
         <clipPath id="qe-globe-a-s"><circle cx="280" cy="152" r="44"/></clipPath>
         <circle class="sea" cx="280" cy="152" r="44"/>
         <g clip-path="url(#qe-globe-a-s)">
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.66 -0.44 C -0.52 -0.55, -0.30 -0.53, -0.22 -0.42 C -0.16 -0.34, -0.25 -0.26, -0.30 -0.19 C -0.36 -0.11, -0.33 -0.02, -0.40 0.02 C -0.48 0.06, -0.52 -0.06, -0.58 -0.16 C -0.65 -0.26, -0.72 -0.36, -0.66 -0.44 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.34 0.02 C -0.23 -0.03, -0.15 0.06, -0.18 0.18 C -0.20 0.31, -0.26 0.44, -0.31 0.58 C -0.35 0.69, -0.44 0.69, -0.44 0.56 C -0.44 0.42, -0.39 0.30, -0.42 0.20 C -0.45 0.10, -0.42 0.04, -0.34 0.02 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.04 -0.32 C 0.16 -0.37, 0.30 -0.35, 0.36 -0.28 C 0.44 -0.20, 0.42 -0.10, 0.34 -0.04 C 0.30 0.06, 0.28 0.20, 0.22 0.36 C 0.18 0.48, 0.12 0.55, 0.08 0.48 C 0.05 0.40, 0.08 0.28, 0.06 0.18 C 0.03 0.10, -0.06 0.06, -0.06 -0.06 C -0.06 -0.20, -0.04 -0.29, 0.04 -0.32 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.06 -0.36 C 0.20 -0.47, 0.44 -0.57, 0.64 -0.50 C 0.75 -0.46, 0.72 -0.34, 0.60 -0.32 C 0.44 -0.30, 0.30 -0.24, 0.18 -0.28 C 0.08 -0.31, 0.02 -0.33, 0.06 -0.36 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.44 0.34 C 0.54 0.28, 0.66 0.34, 0.64 0.44 C 0.62 0.54, 0.50 0.57, 0.44 0.50 C 0.39 0.44, 0.39 0.38, 0.44 0.34 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.772 -0.278 L -0.6366 -0.45389999999999997 L -0.5255 -0.5453 L -0.445 -0.5774 L -0.3446 -0.6077 L -0.30960000000000004 -0.589 L -0.3353 -0.6634 L -0.3335 -0.7439 L -0.332 -0.7946 L -0.36260000000000003 -0.8147000000000001 L -0.4542 -0.7727999999999999 L -0.5826 -0.6928 L -0.7198 -0.5742999999999999 L -0.8397 -0.4025 L -0.8402999999999999 -0.285 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.7943 0.22669999999999998 L -0.7242000000000001 0.0043 L -0.6197999999999999 -0.0107 L -0.45230000000000004 0.0993 L -0.42260000000000003 0.1884 L -0.3251 0.2475 L -0.22369999999999998 0.30369999999999997 L -0.1715 0.3552 L -0.2347 0.43239999999999995 L -0.2556 0.5517000000000001 L -0.3541 0.5868 L -0.4019 0.6977000000000001 L -0.44580000000000003 0.7479 L -0.4545 0.8042999999999999 L -0.4353 0.8613 L -0.4646 0.8548 L -0.5602 0.7373999999999999 L -0.6243 0.589 L -0.703 0.4059 L -0.8046 0.2238 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.26339999999999997 -0.4159 L 0.36260000000000003 -0.4407 L 0.4581 -0.4526 L 0.5846 -0.37339999999999995 L 0.6496000000000001 -0.405 L 0.7269 -0.4093 L 0.7912 -0.3029 L 0.8473999999999999 -0.2125 L 0.9068999999999999 -0.1272 L 0.9491 -0.15419999999999998 L 0.9361 -0.0144 L 0.9205 0.08120000000000001 L 0.9085 0.18630000000000002 L 0.8897 0.2729 L 0.8318 0.3981 L 0.7622000000000001 0.5277999999999999 L 0.6698 0.6377 L 0.5792 0.6815 L 0.5738 0.6115 L 0.5724 0.4602 L 0.5561 0.2737 L 0.5589 0.1381 L 0.4669 0.0803 L 0.357 0.10809999999999999 L 0.2917 0.1301 L 0.2054 0.047799999999999995 L 0.13440000000000002 -0.054299999999999994 L 0.145 -0.176 L 0.21359999999999998 -0.2811 L 0.2312 -0.36510000000000004 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.2016 -0.5209 L 0.26 -0.4317 L 0.3237 -0.4844 L 0.39180000000000004 -0.554 L 0.49510000000000004 -0.5233 L 0.5602 -0.5201 L 0.6377999999999999 -0.48869999999999997 L 0.6861 -0.4858 L 0.7497 -0.4174 L 0.8109 -0.4061 L 0.8282 -0.43639999999999995 L 0.8975 -0.3872 L 0.9028999999999999 -0.397 L 0.7908999999999999 -0.5656 L 0.7464 -0.5929 L 0.683 -0.6536000000000001 L 0.633 -0.7261 L 0.5292 -0.8238 L 0.3732 -0.9137000000000001 L 0.3407 -0.913 L 0.352 -0.8803 L 0.2802 -0.8784 L 0.2444 -0.8587 L 0.2514 -0.8045 L 0.2729 -0.7351 L 0.2857 -0.6436000000000001 L 0.2398 -0.597 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.9399 0.3414 L 0.967 0.2547 L 0.9989 0.046 L 0.9995 0.0329 L 0.9985 -0.055299999999999995 L 0.7283999999999999 0.6852 L 0.33039999999999997 0.9439 L 0.11109999999999999 0.9937999999999999 L 0.1546 0.988 L 0.3225 0.9466 L 0.5727000000000001 0.8197000000000001 L 0.7293 0.6842 L 0.7731 0.6343 L 0.9007999999999999 0.4342 Z"/>
         <path class="graticule" d="M 246 124.7 Q 280 128.5, 314 124.7"/>
         <path class="graticule" d="M 238.9 137.9 Q 280 139.9, 321.1 137.9"/>
         <path class="graticule" d="M 236.7 152 Q 280 152, 323.3 152"/>
         <path class="graticule" d="M 238.9 166.1 Q 280 164.1, 321.1 166.1"/>
         <path class="graticule" d="M 246 179.3 Q 280 175.5, 314 179.3"/>
-        <line class="graticule" x1="280" y1="108.4" x2="280" y2="195.6"/>
+        <line class="graticule axis" x1="280" y1="108.4" x2="280" y2="195.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="15" ry="43.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="29.9" ry="43.6"/>
         </g>
         <circle class="rim" cx="280" cy="152" r="44"/>
       </g>
-    </svg></div>
-  </div>
+    </svg>
+    <figcaption>After the cover of Nick Walker&rsquo;s <a href="https://neuroqueer.com/neuroqueer-heresies/"><cite>Neuroqueer Heresies</cite></a>, which sets a human brain where a swallowtail&rsquo;s body would be, and after Ezra Furman&rsquo;s <a href="https://genius.com/Ezra-furman-lilac-and-black-lyrics"><cite>Lilac and Black</cite></a>. Ours is a moth, and the Earth is where the brain was.</figcaption>
+  </figure>
+  <p>The line under our masthead owes him too. <cite>Neuroqueer Heresies</cite> is subtitled <em>Notes on the Neurodiversity Paradigm, Autistic Empowerment, and Postnormal Possibilities</em> &mdash; one hyphen from our own.</p>
 </section>
 
-<section class="mock">
-  <h2>Variant B — two hemispheres</h2>
-  <p class="mock-note">The homage made literal. A brain is two hemispheres; so is the Earth. The old double-hemisphere world map puts two circles exactly where Walker&rsquo;s cover puts two lobes, and the wings step back to line so the centre carries it.</p>
-  <figure style="margin:1.5rem 0">
-    <svg class="qe-botanical qe-moth qe-moth--hemi" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above with its wings spread, drawn in black line without fill. In place of its body sit two globes side by side, the western and eastern hemispheres, ruled with lines of latitude and longitude and divided by a wavering line down the middle where a brain would be divided into its two halves. The wings carry lilac bands along their outer margins, and a pair of feathered antennae rise between the two hemispheres." focusable="false">
+<section class="mock" data-key="B">
+  <h2>Variant B &mdash; two hemispheres</h2>
+  <p class="mock-note">The homage made literal. A brain is two hemispheres; so is the Earth. The old double-hemisphere world map puts two circles exactly where the cover puts two lobes, and the wings step back to bare line so the centre carries the drawing.</p>
+  <p class="mock-label">Large</p>
+  <div class="mock-big"><svg class="qe-botanical qe-moth qe-moth--hemi" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above with its wings spread, drawn in black line without fill. Where its body would be sit two globes side by side, the western and the eastern hemisphere, each ruled with lines of latitude and longitude, divided by a wavering line down the middle where a brain is divided into its two halves. The wings carry lilac bands across them, and a pair of feathered antennae rise between the two hemispheres." focusable="false">
       <g class="side side-r">
         <g class="sprout" style="--i:1">
+          <path class="hind hollow" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore hollow" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind hollow" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind hollow" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
       <g class="side side-l" transform="translate(560 0) scale(-1 1)">
         <g class="sprout" style="--i:1">
+          <path class="hind hollow" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore hollow" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind hollow" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind hollow" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
-      <path class="abdomen" d="M 280 190 C 294 196, 292.6 224.1, 280 252 C 267.4 224.1, 266 196, 280 190 Z"/>
-      <path class="segment" d="M 268.2 202.4 Q 280 205.4, 291.8 202.4"/>
-      <path class="segment" d="M 270.5 214.8 Q 280 217.8, 289.5 214.8"/>
-      <path class="segment" d="M 272.7 227.2 Q 280 230.2, 287.3 227.2"/>
-      <path class="segment" d="M 275 239.6 Q 280 242.6, 285 239.6"/>
-      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
-      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
+      <path class="abdomen" d="M 280 188 C 300 194, 298 222.1, 280 250 C 262 222.1, 260 194, 280 188 Z"/>
+      <path class="segment" d="M 263.2 200.4 Q 280 203.4, 296.8 200.4"/>
+      <path class="segment" d="M 266.4 212.8 Q 280 215.8, 293.6 212.8"/>
+      <path class="segment" d="M 269.6 225.2 Q 280 228.2, 290.4 225.2"/>
+      <path class="segment" d="M 272.8 237.6 Q 280 240.6, 287.2 237.6"/>
+      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
+      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
       <path class="fur" d="M 255.3 140.9 L 247.5 136.7"/>
       <path class="fur" d="M 256.8 138.4 L 249.2 133.3"/>
       <path class="fur" d="M 258.5 136.1 L 251.2 130"/>
@@ -533,12 +596,12 @@
         <clipPath id="qe-globe-bw"><circle cx="251" cy="154" r="29"/></clipPath>
         <circle class="sea" cx="251" cy="154" r="29"/>
         <g clip-path="url(#qe-globe-bw)">
-        <path class="land" transform="translate(251 154) scale(29)" d="M -0.66 -0.44 C -0.52 -0.55, -0.30 -0.53, -0.22 -0.42 C -0.16 -0.34, -0.25 -0.26, -0.30 -0.19 C -0.36 -0.11, -0.33 -0.02, -0.40 0.02 C -0.48 0.06, -0.52 -0.06, -0.58 -0.16 C -0.65 -0.26, -0.72 -0.36, -0.66 -0.44 Z"/>
-        <path class="land" transform="translate(251 154) scale(29)" d="M -0.34 0.02 C -0.23 -0.03, -0.15 0.06, -0.18 0.18 C -0.20 0.31, -0.26 0.44, -0.31 0.58 C -0.35 0.69, -0.44 0.69, -0.44 0.56 C -0.44 0.42, -0.39 0.30, -0.42 0.20 C -0.45 0.10, -0.42 0.04, -0.34 0.02 Z"/>
+        <path class="land" transform="translate(251 154) scale(29)" d="M 0.1281 -0.19269999999999998 L 0.1982 -0.3958 L 0.2542 -0.5093 L 0.31 -0.5595 L 0.3742 -0.6116 L 0.4199 -0.6036 L 0.32630000000000003 -0.6622 L 0.2323 -0.7305 L 0.1606 -0.7719 L 0.09440000000000001 -0.7792 L 0.0554 -0.7199 L 0 -0.6157 L -0.0668 -0.4701 L -0.1076 -0.277 L 0 -0.1736 Z"/>
+        <path class="land" transform="translate(251 154) scale(29)" d="M 0.2068 0.3045 L 0.306 0.0597 L 0.4317 0.014199999999999999 L 0.6133 0.078 L 0.6427999999999999 0.15930000000000002 L 0.7183999999999999 0.19540000000000002 L 0.7837000000000001 0.2295 L 0.8091 0.2708 L 0.7541 0.36360000000000003 L 0.6998 0.4929 L 0.6063999999999999 0.5534 L 0.4873 0.6864 L 0.3886 0.7555 L 0.2988 0.8249 L 0.21059999999999998 0.8911 L 0.1697 0.8937999999999999 L 0.2367 0.7802 L 0.302 0.6317 L 0.297 0.4597 L 0.18980000000000002 0.30519999999999997 Z"/>
         <path class="graticule" d="M 227.1 138.1 Q 251 140.3, 274.9 138.1"/>
         <path class="graticule" d="M 222.4 154 Q 251 154, 279.6 154"/>
         <path class="graticule" d="M 227.1 170 Q 251 167.7, 274.9 170"/>
-        <line class="graticule" x1="251" y1="125.3" x2="251" y2="182.7"/>
+        <line class="graticule axis" x1="251" y1="125.3" x2="251" y2="182.7"/>
         <ellipse class="graticule" cx="251" cy="154" rx="12.2" ry="28.7"/>
         </g>
         <circle class="rim" cx="251" cy="154" r="29"/>
@@ -547,121 +610,138 @@
         <clipPath id="qe-globe-be"><circle cx="309" cy="154" r="29"/></clipPath>
         <circle class="sea" cx="309" cy="154" r="29"/>
         <g clip-path="url(#qe-globe-be)">
-        <path class="land" transform="translate(309 154) scale(29)" d="M 0.04 -0.32 C 0.16 -0.37, 0.30 -0.35, 0.36 -0.28 C 0.44 -0.20, 0.42 -0.10, 0.34 -0.04 C 0.30 0.06, 0.28 0.20, 0.22 0.36 C 0.18 0.48, 0.12 0.55, 0.08 0.48 C 0.05 0.40, 0.08 0.28, 0.06 0.18 C 0.03 0.10, -0.06 0.06, -0.06 -0.06 C -0.06 -0.20, -0.04 -0.29, 0.04 -0.32 Z"/>
-        <path class="land" transform="translate(309 154) scale(29)" d="M 0.06 -0.36 C 0.20 -0.47, 0.44 -0.57, 0.64 -0.50 C 0.75 -0.46, 0.72 -0.34, 0.60 -0.32 C 0.44 -0.30, 0.30 -0.24, 0.18 -0.28 C 0.08 -0.31, 0.02 -0.33, 0.06 -0.36 Z"/>
-        <path class="land" transform="translate(309 154) scale(29)" d="M 0.44 0.34 C 0.54 0.28, 0.66 0.34, 0.64 0.44 C 0.62 0.54, 0.50 0.57, 0.44 0.50 C 0.39 0.44, 0.39 0.38, 0.44 0.34 Z"/>
+        <path class="land" transform="translate(309 154) scale(29)" d="M -0.4755 -0.43889999999999996 L -0.37489999999999996 -0.44210000000000005 L -0.2731 -0.43260000000000004 L -0.1782 -0.3295 L -0.07390000000000001 -0.3427 L 0.044899999999999995 -0.32580000000000003 L 0.07959999999999999 -0.2086 L 0.13240000000000002 -0.1065 L 0.22 -0.0052 L 0.3505 -0.0135 L 0.25780000000000003 0.1148 L 0.2079 0.2034 L 0.18980000000000002 0.30519999999999997 L 0.1705 0.3876 L 0.0994 0.49889999999999995 L 0.047 0.6154 L -0.0293 0.707 L -0.1422 0.7288 L -0.21159999999999998 0.6507000000000001 L -0.2939 0.4903 L -0.3564 0.2953 L -0.35810000000000003 0.1598 L -0.4515 0.082 L -0.5571 0.0865 L -0.6142000000000001 0.0952 L -0.6736 -0.0028 L -0.7064 -0.1162 L -0.667 -0.2325 L -0.5792999999999999 -0.3207 L -0.5277999999999999 -0.3972 Z"/>
+        <path class="land" transform="translate(309 154) scale(29)" d="M -0.4603 -0.5488999999999999 L -0.4694 -0.45430000000000004 L -0.383 -0.4908 L -0.2695 -0.5408 L -0.18259999999999998 -0.4895 L -0.1066 -0.471 L -0.027899999999999998 -0.42269999999999996 L 0.0423 -0.407 L 0.0896 -0.3265 L 0.19669999999999999 -0.297 L 0.2676 -0.3178 L 0.4115 -0.2455 L 0.4532 -0.2502 L 0.36260000000000003 -0.4407 L 0.287 -0.4811 L 0.24180000000000001 -0.5535 L 0.2717 -0.6282000000000001 L 0.2808 -0.7361 L 0.24080000000000001 -0.8472999999999999 L 0.171 -0.8576 L 0.097 -0.8317 L 0 -0.848 L -0.0745 -0.8402999999999999 L -0.1499 -0.7935 L -0.2155 -0.7289 L -0.2954 -0.6446000000000001 L -0.3742 -0.6116 Z"/>
+        <path class="land" transform="translate(309 154) scale(29)" d="M 0.9221 0.3866 L 0.955 0.2968 L 0.9851 0.1719 L 0.9884 0.15209999999999999 L 0.9927999999999999 0.1202 L 0.9649 0.2625 L 0.9262999999999999 0.3767 L 0.8997 0.4365 L 0.7952 0.6063 L 0.8022999999999999 0.5969 L 0.8372 0.547 L 0.862 0.5069 L 0.8318 0.5551 L 0.8921 0.4516 Z"/>
         <path class="graticule" d="M 285.1 138.1 Q 309 140.3, 332.9 138.1"/>
         <path class="graticule" d="M 280.4 154 Q 309 154, 337.6 154"/>
         <path class="graticule" d="M 285.1 170 Q 309 167.7, 332.9 170"/>
-        <line class="graticule" x1="309" y1="125.3" x2="309" y2="182.7"/>
+        <line class="graticule axis" x1="309" y1="125.3" x2="309" y2="182.7"/>
         <ellipse class="graticule" cx="309" cy="154" rx="12.2" ry="28.7"/>
         </g>
         <circle class="rim" cx="309" cy="154" r="29"/>
       </g>
       <path class="fissure" d="M 280 124 C 283 136, 277 150, 280 162 C 283 173, 278 180, 280 188"/>
-    </svg>
-  </figure>
-  <div class="mock-row">
-    <div class="mock-small"><svg class="qe-botanical qe-moth qe-moth--hemi" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above with its wings spread, drawn in black line without fill. In place of its body sit two globes side by side, the western and eastern hemispheres, ruled with lines of latitude and longitude and divided by a wavering line down the middle where a brain would be divided into its two halves. The wings carry lilac bands along their outer margins, and a pair of feathered antennae rise between the two hemispheres." focusable="false">
+    </svg></div>
+  <p class="mock-label">In place, at the foot of the section</p>
+  <p>Walker is naming two normativities in particular. Taking the verb further out &mdash; to a painting, a canon, a century, a diagnosis, a life &mdash; is our extension, not his sentence. The credit for the verb stays with him.</p>
+  <figure class="qe-moth-figure">
+    <svg class="qe-botanical qe-moth qe-moth--hemi" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above with its wings spread, drawn in black line without fill. Where its body would be sit two globes side by side, the western and the eastern hemisphere, each ruled with lines of latitude and longitude, divided by a wavering line down the middle where a brain is divided into its two halves. The wings carry lilac bands across them, and a pair of feathered antennae rise between the two hemispheres." focusable="false">
       <g class="side side-r">
         <g class="sprout" style="--i:1">
+          <path class="hind hollow" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore hollow" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind hollow" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind hollow" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
       <g class="side side-l" transform="translate(560 0) scale(-1 1)">
         <g class="sprout" style="--i:1">
+          <path class="hind hollow" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore hollow" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind hollow" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind hollow" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
-      <path class="abdomen" d="M 280 190 C 294 196, 292.6 224.1, 280 252 C 267.4 224.1, 266 196, 280 190 Z"/>
-      <path class="segment" d="M 268.2 202.4 Q 280 205.4, 291.8 202.4"/>
-      <path class="segment" d="M 270.5 214.8 Q 280 217.8, 289.5 214.8"/>
-      <path class="segment" d="M 272.7 227.2 Q 280 230.2, 287.3 227.2"/>
-      <path class="segment" d="M 275 239.6 Q 280 242.6, 285 239.6"/>
-      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
-      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
+      <path class="abdomen" d="M 280 188 C 300 194, 298 222.1, 280 250 C 262 222.1, 260 194, 280 188 Z"/>
+      <path class="segment" d="M 263.2 200.4 Q 280 203.4, 296.8 200.4"/>
+      <path class="segment" d="M 266.4 212.8 Q 280 215.8, 293.6 212.8"/>
+      <path class="segment" d="M 269.6 225.2 Q 280 228.2, 290.4 225.2"/>
+      <path class="segment" d="M 272.8 237.6 Q 280 240.6, 287.2 237.6"/>
+      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
+      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
       <path class="fur" d="M 255.3 140.9 L 247.5 136.7"/>
       <path class="fur" d="M 256.8 138.4 L 249.2 133.3"/>
       <path class="fur" d="M 258.5 136.1 L 251.2 130"/>
@@ -688,12 +768,12 @@
         <clipPath id="qe-globe-bw-s"><circle cx="251" cy="154" r="29"/></clipPath>
         <circle class="sea" cx="251" cy="154" r="29"/>
         <g clip-path="url(#qe-globe-bw-s)">
-        <path class="land" transform="translate(251 154) scale(29)" d="M -0.66 -0.44 C -0.52 -0.55, -0.30 -0.53, -0.22 -0.42 C -0.16 -0.34, -0.25 -0.26, -0.30 -0.19 C -0.36 -0.11, -0.33 -0.02, -0.40 0.02 C -0.48 0.06, -0.52 -0.06, -0.58 -0.16 C -0.65 -0.26, -0.72 -0.36, -0.66 -0.44 Z"/>
-        <path class="land" transform="translate(251 154) scale(29)" d="M -0.34 0.02 C -0.23 -0.03, -0.15 0.06, -0.18 0.18 C -0.20 0.31, -0.26 0.44, -0.31 0.58 C -0.35 0.69, -0.44 0.69, -0.44 0.56 C -0.44 0.42, -0.39 0.30, -0.42 0.20 C -0.45 0.10, -0.42 0.04, -0.34 0.02 Z"/>
+        <path class="land" transform="translate(251 154) scale(29)" d="M 0.1281 -0.19269999999999998 L 0.1982 -0.3958 L 0.2542 -0.5093 L 0.31 -0.5595 L 0.3742 -0.6116 L 0.4199 -0.6036 L 0.32630000000000003 -0.6622 L 0.2323 -0.7305 L 0.1606 -0.7719 L 0.09440000000000001 -0.7792 L 0.0554 -0.7199 L 0 -0.6157 L -0.0668 -0.4701 L -0.1076 -0.277 L 0 -0.1736 Z"/>
+        <path class="land" transform="translate(251 154) scale(29)" d="M 0.2068 0.3045 L 0.306 0.0597 L 0.4317 0.014199999999999999 L 0.6133 0.078 L 0.6427999999999999 0.15930000000000002 L 0.7183999999999999 0.19540000000000002 L 0.7837000000000001 0.2295 L 0.8091 0.2708 L 0.7541 0.36360000000000003 L 0.6998 0.4929 L 0.6063999999999999 0.5534 L 0.4873 0.6864 L 0.3886 0.7555 L 0.2988 0.8249 L 0.21059999999999998 0.8911 L 0.1697 0.8937999999999999 L 0.2367 0.7802 L 0.302 0.6317 L 0.297 0.4597 L 0.18980000000000002 0.30519999999999997 Z"/>
         <path class="graticule" d="M 227.1 138.1 Q 251 140.3, 274.9 138.1"/>
         <path class="graticule" d="M 222.4 154 Q 251 154, 279.6 154"/>
         <path class="graticule" d="M 227.1 170 Q 251 167.7, 274.9 170"/>
-        <line class="graticule" x1="251" y1="125.3" x2="251" y2="182.7"/>
+        <line class="graticule axis" x1="251" y1="125.3" x2="251" y2="182.7"/>
         <ellipse class="graticule" cx="251" cy="154" rx="12.2" ry="28.7"/>
         </g>
         <circle class="rim" cx="251" cy="154" r="29"/>
@@ -702,127 +782,145 @@
         <clipPath id="qe-globe-be-s"><circle cx="309" cy="154" r="29"/></clipPath>
         <circle class="sea" cx="309" cy="154" r="29"/>
         <g clip-path="url(#qe-globe-be-s)">
-        <path class="land" transform="translate(309 154) scale(29)" d="M 0.04 -0.32 C 0.16 -0.37, 0.30 -0.35, 0.36 -0.28 C 0.44 -0.20, 0.42 -0.10, 0.34 -0.04 C 0.30 0.06, 0.28 0.20, 0.22 0.36 C 0.18 0.48, 0.12 0.55, 0.08 0.48 C 0.05 0.40, 0.08 0.28, 0.06 0.18 C 0.03 0.10, -0.06 0.06, -0.06 -0.06 C -0.06 -0.20, -0.04 -0.29, 0.04 -0.32 Z"/>
-        <path class="land" transform="translate(309 154) scale(29)" d="M 0.06 -0.36 C 0.20 -0.47, 0.44 -0.57, 0.64 -0.50 C 0.75 -0.46, 0.72 -0.34, 0.60 -0.32 C 0.44 -0.30, 0.30 -0.24, 0.18 -0.28 C 0.08 -0.31, 0.02 -0.33, 0.06 -0.36 Z"/>
-        <path class="land" transform="translate(309 154) scale(29)" d="M 0.44 0.34 C 0.54 0.28, 0.66 0.34, 0.64 0.44 C 0.62 0.54, 0.50 0.57, 0.44 0.50 C 0.39 0.44, 0.39 0.38, 0.44 0.34 Z"/>
+        <path class="land" transform="translate(309 154) scale(29)" d="M -0.4755 -0.43889999999999996 L -0.37489999999999996 -0.44210000000000005 L -0.2731 -0.43260000000000004 L -0.1782 -0.3295 L -0.07390000000000001 -0.3427 L 0.044899999999999995 -0.32580000000000003 L 0.07959999999999999 -0.2086 L 0.13240000000000002 -0.1065 L 0.22 -0.0052 L 0.3505 -0.0135 L 0.25780000000000003 0.1148 L 0.2079 0.2034 L 0.18980000000000002 0.30519999999999997 L 0.1705 0.3876 L 0.0994 0.49889999999999995 L 0.047 0.6154 L -0.0293 0.707 L -0.1422 0.7288 L -0.21159999999999998 0.6507000000000001 L -0.2939 0.4903 L -0.3564 0.2953 L -0.35810000000000003 0.1598 L -0.4515 0.082 L -0.5571 0.0865 L -0.6142000000000001 0.0952 L -0.6736 -0.0028 L -0.7064 -0.1162 L -0.667 -0.2325 L -0.5792999999999999 -0.3207 L -0.5277999999999999 -0.3972 Z"/>
+        <path class="land" transform="translate(309 154) scale(29)" d="M -0.4603 -0.5488999999999999 L -0.4694 -0.45430000000000004 L -0.383 -0.4908 L -0.2695 -0.5408 L -0.18259999999999998 -0.4895 L -0.1066 -0.471 L -0.027899999999999998 -0.42269999999999996 L 0.0423 -0.407 L 0.0896 -0.3265 L 0.19669999999999999 -0.297 L 0.2676 -0.3178 L 0.4115 -0.2455 L 0.4532 -0.2502 L 0.36260000000000003 -0.4407 L 0.287 -0.4811 L 0.24180000000000001 -0.5535 L 0.2717 -0.6282000000000001 L 0.2808 -0.7361 L 0.24080000000000001 -0.8472999999999999 L 0.171 -0.8576 L 0.097 -0.8317 L 0 -0.848 L -0.0745 -0.8402999999999999 L -0.1499 -0.7935 L -0.2155 -0.7289 L -0.2954 -0.6446000000000001 L -0.3742 -0.6116 Z"/>
+        <path class="land" transform="translate(309 154) scale(29)" d="M 0.9221 0.3866 L 0.955 0.2968 L 0.9851 0.1719 L 0.9884 0.15209999999999999 L 0.9927999999999999 0.1202 L 0.9649 0.2625 L 0.9262999999999999 0.3767 L 0.8997 0.4365 L 0.7952 0.6063 L 0.8022999999999999 0.5969 L 0.8372 0.547 L 0.862 0.5069 L 0.8318 0.5551 L 0.8921 0.4516 Z"/>
         <path class="graticule" d="M 285.1 138.1 Q 309 140.3, 332.9 138.1"/>
         <path class="graticule" d="M 280.4 154 Q 309 154, 337.6 154"/>
         <path class="graticule" d="M 285.1 170 Q 309 167.7, 332.9 170"/>
-        <line class="graticule" x1="309" y1="125.3" x2="309" y2="182.7"/>
+        <line class="graticule axis" x1="309" y1="125.3" x2="309" y2="182.7"/>
         <ellipse class="graticule" cx="309" cy="154" rx="12.2" ry="28.7"/>
         </g>
         <circle class="rim" cx="309" cy="154" r="29"/>
       </g>
       <path class="fissure" d="M 280 124 C 283 136, 277 150, 280 162 C 283 173, 278 180, 280 188"/>
-    </svg></div>
-  </div>
+    </svg>
+    <figcaption>After the cover of Nick Walker&rsquo;s <a href="https://neuroqueer.com/neuroqueer-heresies/"><cite>Neuroqueer Heresies</cite></a>, which sets a human brain where a swallowtail&rsquo;s body would be, and after Ezra Furman&rsquo;s <a href="https://genius.com/Ezra-furman-lilac-and-black-lyrics"><cite>Lilac and Black</cite></a>. Ours is a moth, and the Earth is where the brain was.</figcaption>
+  </figure>
+  <p>The line under our masthead owes him too. <cite>Neuroqueer Heresies</cite> is subtitled <em>Notes on the Neurodiversity Paradigm, Autistic Empowerment, and Postnormal Possibilities</em> &mdash; one hyphen from our own.</p>
 </section>
 
-<section class="mock">
-  <h2>Variant C — the lilac and the black</h2>
-  <p class="mock-note">The cover&rsquo;s own logic, and the song&rsquo;s: a dark panel worn on the sheet, lilac line on black. This is the only version that looks the same in daylight and in the cabinet, because it brings its own ground.</p>
-  <figure style="margin:1.5rem 0">
-    <svg class="qe-botanical qe-moth qe-moth--card" viewBox="44 34 472 300" role="img" aria-label="A moth with its wings spread, drawn in lilac on a black ground like the cover of a book. In place of its body sits the Earth: a globe with the Atlantic at its centre, ruled across with lines of latitude and longitude. Two long tails trail from the hindwings and a pair of feathered antennae rise above the globe." focusable="false">
+<section class="mock" data-key="C">
+  <h2>Variant C &mdash; the lilac and the black</h2>
+  <p class="mock-note">The cover&rsquo;s own logic, and the song&rsquo;s: a dark card worn on the sheet, lilac line on black. The only version that looks the same in daylight and in the cabinet, because it brings its own ground &mdash; and the only one that does not sit on the paper.</p>
+  <p class="mock-label">Large</p>
+  <div class="mock-big"><svg class="qe-botanical qe-moth qe-moth--card" viewBox="44 34 472 300" role="img" aria-label="A moth with its wings spread, drawn in lilac line on a black ground like the cover of a book. Where its body would be sits the Earth, a globe centred on the Atlantic and ruled with lines of latitude and longitude. A long tail trails from each hindwing and a pair of feathered antennae rise above the globe." focusable="false">
       <rect class="ground" x="44" y="34" width="472" height="300" rx="4"/>
       <g class="side side-r">
         <g class="sprout" style="--i:1">
+          <path class="hind" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
       <g class="side side-l" transform="translate(560 0) scale(-1 1)">
         <g class="sprout" style="--i:1">
+          <path class="hind" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
-      <path class="abdomen" d="M 280 190 C 295 196, 293.5 224.1, 280 252 C 266.5 224.1, 265 196, 280 190 Z"/>
-      <path class="segment" d="M 267.4 202.4 Q 280 205.4, 292.6 202.4"/>
-      <path class="segment" d="M 269.8 214.8 Q 280 217.8, 290.2 214.8"/>
-      <path class="segment" d="M 272.2 227.2 Q 280 230.2, 287.8 227.2"/>
-      <path class="segment" d="M 274.6 239.6 Q 280 242.6, 285.4 239.6"/>
-      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
-      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
+      <path class="abdomen" d="M 280 188 C 301 194, 298.9 222.1, 280 250 C 261.1 222.1, 259 194, 280 188 Z"/>
+      <path class="segment" d="M 262.4 200.4 Q 280 203.4, 297.6 200.4"/>
+      <path class="segment" d="M 265.7 212.8 Q 280 215.8, 294.3 212.8"/>
+      <path class="segment" d="M 269.1 225.2 Q 280 228.2, 290.9 225.2"/>
+      <path class="segment" d="M 272.4 237.6 Q 280 240.6, 287.6 237.6"/>
+      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
+      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
       <path class="fur" d="M 239.6 140.4 L 230.4 137.8"/>
       <path class="fur" d="M 240.7 137.3 L 231.4 133.8"/>
       <path class="fur" d="M 241.9 134.3 L 232.7 130"/>
@@ -861,126 +959,143 @@
         <clipPath id="qe-globe-c"><circle cx="280" cy="152" r="44"/></clipPath>
         <circle class="sea" cx="280" cy="152" r="44"/>
         <g clip-path="url(#qe-globe-c)">
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.66 -0.44 C -0.52 -0.55, -0.30 -0.53, -0.22 -0.42 C -0.16 -0.34, -0.25 -0.26, -0.30 -0.19 C -0.36 -0.11, -0.33 -0.02, -0.40 0.02 C -0.48 0.06, -0.52 -0.06, -0.58 -0.16 C -0.65 -0.26, -0.72 -0.36, -0.66 -0.44 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.34 0.02 C -0.23 -0.03, -0.15 0.06, -0.18 0.18 C -0.20 0.31, -0.26 0.44, -0.31 0.58 C -0.35 0.69, -0.44 0.69, -0.44 0.56 C -0.44 0.42, -0.39 0.30, -0.42 0.20 C -0.45 0.10, -0.42 0.04, -0.34 0.02 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.04 -0.32 C 0.16 -0.37, 0.30 -0.35, 0.36 -0.28 C 0.44 -0.20, 0.42 -0.10, 0.34 -0.04 C 0.30 0.06, 0.28 0.20, 0.22 0.36 C 0.18 0.48, 0.12 0.55, 0.08 0.48 C 0.05 0.40, 0.08 0.28, 0.06 0.18 C 0.03 0.10, -0.06 0.06, -0.06 -0.06 C -0.06 -0.20, -0.04 -0.29, 0.04 -0.32 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.06 -0.36 C 0.20 -0.47, 0.44 -0.57, 0.64 -0.50 C 0.75 -0.46, 0.72 -0.34, 0.60 -0.32 C 0.44 -0.30, 0.30 -0.24, 0.18 -0.28 C 0.08 -0.31, 0.02 -0.33, 0.06 -0.36 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.44 0.34 C 0.54 0.28, 0.66 0.34, 0.64 0.44 C 0.62 0.54, 0.50 0.57, 0.44 0.50 C 0.39 0.44, 0.39 0.38, 0.44 0.34 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.772 -0.278 L -0.6366 -0.45389999999999997 L -0.5255 -0.5453 L -0.445 -0.5774 L -0.3446 -0.6077 L -0.30960000000000004 -0.589 L -0.3353 -0.6634 L -0.3335 -0.7439 L -0.332 -0.7946 L -0.36260000000000003 -0.8147000000000001 L -0.4542 -0.7727999999999999 L -0.5826 -0.6928 L -0.7198 -0.5742999999999999 L -0.8397 -0.4025 L -0.8402999999999999 -0.285 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.7943 0.22669999999999998 L -0.7242000000000001 0.0043 L -0.6197999999999999 -0.0107 L -0.45230000000000004 0.0993 L -0.42260000000000003 0.1884 L -0.3251 0.2475 L -0.22369999999999998 0.30369999999999997 L -0.1715 0.3552 L -0.2347 0.43239999999999995 L -0.2556 0.5517000000000001 L -0.3541 0.5868 L -0.4019 0.6977000000000001 L -0.44580000000000003 0.7479 L -0.4545 0.8042999999999999 L -0.4353 0.8613 L -0.4646 0.8548 L -0.5602 0.7373999999999999 L -0.6243 0.589 L -0.703 0.4059 L -0.8046 0.2238 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.26339999999999997 -0.4159 L 0.36260000000000003 -0.4407 L 0.4581 -0.4526 L 0.5846 -0.37339999999999995 L 0.6496000000000001 -0.405 L 0.7269 -0.4093 L 0.7912 -0.3029 L 0.8473999999999999 -0.2125 L 0.9068999999999999 -0.1272 L 0.9491 -0.15419999999999998 L 0.9361 -0.0144 L 0.9205 0.08120000000000001 L 0.9085 0.18630000000000002 L 0.8897 0.2729 L 0.8318 0.3981 L 0.7622000000000001 0.5277999999999999 L 0.6698 0.6377 L 0.5792 0.6815 L 0.5738 0.6115 L 0.5724 0.4602 L 0.5561 0.2737 L 0.5589 0.1381 L 0.4669 0.0803 L 0.357 0.10809999999999999 L 0.2917 0.1301 L 0.2054 0.047799999999999995 L 0.13440000000000002 -0.054299999999999994 L 0.145 -0.176 L 0.21359999999999998 -0.2811 L 0.2312 -0.36510000000000004 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.2016 -0.5209 L 0.26 -0.4317 L 0.3237 -0.4844 L 0.39180000000000004 -0.554 L 0.49510000000000004 -0.5233 L 0.5602 -0.5201 L 0.6377999999999999 -0.48869999999999997 L 0.6861 -0.4858 L 0.7497 -0.4174 L 0.8109 -0.4061 L 0.8282 -0.43639999999999995 L 0.8975 -0.3872 L 0.9028999999999999 -0.397 L 0.7908999999999999 -0.5656 L 0.7464 -0.5929 L 0.683 -0.6536000000000001 L 0.633 -0.7261 L 0.5292 -0.8238 L 0.3732 -0.9137000000000001 L 0.3407 -0.913 L 0.352 -0.8803 L 0.2802 -0.8784 L 0.2444 -0.8587 L 0.2514 -0.8045 L 0.2729 -0.7351 L 0.2857 -0.6436000000000001 L 0.2398 -0.597 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.9399 0.3414 L 0.967 0.2547 L 0.9989 0.046 L 0.9995 0.0329 L 0.9985 -0.055299999999999995 L 0.7283999999999999 0.6852 L 0.33039999999999997 0.9439 L 0.11109999999999999 0.9937999999999999 L 0.1546 0.988 L 0.3225 0.9466 L 0.5727000000000001 0.8197000000000001 L 0.7293 0.6842 L 0.7731 0.6343 L 0.9007999999999999 0.4342 Z"/>
         <path class="graticule" d="M 246 124.7 Q 280 128.5, 314 124.7"/>
         <path class="graticule" d="M 238.9 137.9 Q 280 139.9, 321.1 137.9"/>
         <path class="graticule" d="M 236.7 152 Q 280 152, 323.3 152"/>
         <path class="graticule" d="M 238.9 166.1 Q 280 164.1, 321.1 166.1"/>
         <path class="graticule" d="M 246 179.3 Q 280 175.5, 314 179.3"/>
-        <line class="graticule" x1="280" y1="108.4" x2="280" y2="195.6"/>
+        <line class="graticule axis" x1="280" y1="108.4" x2="280" y2="195.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="15" ry="43.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="29.9" ry="43.6"/>
         </g>
         <circle class="rim" cx="280" cy="152" r="44"/>
       </g>
-    </svg>
-  </figure>
-  <div class="mock-row">
-    <div class="mock-small"><svg class="qe-botanical qe-moth qe-moth--card" viewBox="44 34 472 300" role="img" aria-label="A moth with its wings spread, drawn in lilac on a black ground like the cover of a book. In place of its body sits the Earth: a globe with the Atlantic at its centre, ruled across with lines of latitude and longitude. Two long tails trail from the hindwings and a pair of feathered antennae rise above the globe." focusable="false">
+    </svg></div>
+  <p class="mock-label">In place, at the foot of the section</p>
+  <p>Walker is naming two normativities in particular. Taking the verb further out &mdash; to a painting, a canon, a century, a diagnosis, a life &mdash; is our extension, not his sentence. The credit for the verb stays with him.</p>
+  <figure class="qe-moth-figure">
+    <svg class="qe-botanical qe-moth qe-moth--card" viewBox="44 34 472 300" role="img" aria-label="A moth with its wings spread, drawn in lilac line on a black ground like the cover of a book. Where its body would be sits the Earth, a globe centred on the Atlantic and ruled with lines of latitude and longitude. A long tail trails from each hindwing and a pair of feathered antennae rise above the globe." focusable="false">
       <rect class="ground" x="44" y="34" width="472" height="300" rx="4"/>
       <g class="side side-r">
         <g class="sprout" style="--i:1">
+          <path class="hind" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
       <g class="side side-l" transform="translate(560 0) scale(-1 1)">
         <g class="sprout" style="--i:1">
+          <path class="hind" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
-      <path class="abdomen" d="M 280 190 C 295 196, 293.5 224.1, 280 252 C 266.5 224.1, 265 196, 280 190 Z"/>
-      <path class="segment" d="M 267.4 202.4 Q 280 205.4, 292.6 202.4"/>
-      <path class="segment" d="M 269.8 214.8 Q 280 217.8, 290.2 214.8"/>
-      <path class="segment" d="M 272.2 227.2 Q 280 230.2, 287.8 227.2"/>
-      <path class="segment" d="M 274.6 239.6 Q 280 242.6, 285.4 239.6"/>
-      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
-      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
+      <path class="abdomen" d="M 280 188 C 301 194, 298.9 222.1, 280 250 C 261.1 222.1, 259 194, 280 188 Z"/>
+      <path class="segment" d="M 262.4 200.4 Q 280 203.4, 297.6 200.4"/>
+      <path class="segment" d="M 265.7 212.8 Q 280 215.8, 294.3 212.8"/>
+      <path class="segment" d="M 269.1 225.2 Q 280 228.2, 290.9 225.2"/>
+      <path class="segment" d="M 272.4 237.6 Q 280 240.6, 287.6 237.6"/>
+      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
+      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
       <path class="fur" d="M 239.6 140.4 L 230.4 137.8"/>
       <path class="fur" d="M 240.7 137.3 L 231.4 133.8"/>
       <path class="fur" d="M 241.9 134.3 L 232.7 130"/>
@@ -1019,55 +1134,66 @@
         <clipPath id="qe-globe-c-s"><circle cx="280" cy="152" r="44"/></clipPath>
         <circle class="sea" cx="280" cy="152" r="44"/>
         <g clip-path="url(#qe-globe-c-s)">
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.66 -0.44 C -0.52 -0.55, -0.30 -0.53, -0.22 -0.42 C -0.16 -0.34, -0.25 -0.26, -0.30 -0.19 C -0.36 -0.11, -0.33 -0.02, -0.40 0.02 C -0.48 0.06, -0.52 -0.06, -0.58 -0.16 C -0.65 -0.26, -0.72 -0.36, -0.66 -0.44 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.34 0.02 C -0.23 -0.03, -0.15 0.06, -0.18 0.18 C -0.20 0.31, -0.26 0.44, -0.31 0.58 C -0.35 0.69, -0.44 0.69, -0.44 0.56 C -0.44 0.42, -0.39 0.30, -0.42 0.20 C -0.45 0.10, -0.42 0.04, -0.34 0.02 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.04 -0.32 C 0.16 -0.37, 0.30 -0.35, 0.36 -0.28 C 0.44 -0.20, 0.42 -0.10, 0.34 -0.04 C 0.30 0.06, 0.28 0.20, 0.22 0.36 C 0.18 0.48, 0.12 0.55, 0.08 0.48 C 0.05 0.40, 0.08 0.28, 0.06 0.18 C 0.03 0.10, -0.06 0.06, -0.06 -0.06 C -0.06 -0.20, -0.04 -0.29, 0.04 -0.32 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.06 -0.36 C 0.20 -0.47, 0.44 -0.57, 0.64 -0.50 C 0.75 -0.46, 0.72 -0.34, 0.60 -0.32 C 0.44 -0.30, 0.30 -0.24, 0.18 -0.28 C 0.08 -0.31, 0.02 -0.33, 0.06 -0.36 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.44 0.34 C 0.54 0.28, 0.66 0.34, 0.64 0.44 C 0.62 0.54, 0.50 0.57, 0.44 0.50 C 0.39 0.44, 0.39 0.38, 0.44 0.34 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.772 -0.278 L -0.6366 -0.45389999999999997 L -0.5255 -0.5453 L -0.445 -0.5774 L -0.3446 -0.6077 L -0.30960000000000004 -0.589 L -0.3353 -0.6634 L -0.3335 -0.7439 L -0.332 -0.7946 L -0.36260000000000003 -0.8147000000000001 L -0.4542 -0.7727999999999999 L -0.5826 -0.6928 L -0.7198 -0.5742999999999999 L -0.8397 -0.4025 L -0.8402999999999999 -0.285 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.7943 0.22669999999999998 L -0.7242000000000001 0.0043 L -0.6197999999999999 -0.0107 L -0.45230000000000004 0.0993 L -0.42260000000000003 0.1884 L -0.3251 0.2475 L -0.22369999999999998 0.30369999999999997 L -0.1715 0.3552 L -0.2347 0.43239999999999995 L -0.2556 0.5517000000000001 L -0.3541 0.5868 L -0.4019 0.6977000000000001 L -0.44580000000000003 0.7479 L -0.4545 0.8042999999999999 L -0.4353 0.8613 L -0.4646 0.8548 L -0.5602 0.7373999999999999 L -0.6243 0.589 L -0.703 0.4059 L -0.8046 0.2238 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.26339999999999997 -0.4159 L 0.36260000000000003 -0.4407 L 0.4581 -0.4526 L 0.5846 -0.37339999999999995 L 0.6496000000000001 -0.405 L 0.7269 -0.4093 L 0.7912 -0.3029 L 0.8473999999999999 -0.2125 L 0.9068999999999999 -0.1272 L 0.9491 -0.15419999999999998 L 0.9361 -0.0144 L 0.9205 0.08120000000000001 L 0.9085 0.18630000000000002 L 0.8897 0.2729 L 0.8318 0.3981 L 0.7622000000000001 0.5277999999999999 L 0.6698 0.6377 L 0.5792 0.6815 L 0.5738 0.6115 L 0.5724 0.4602 L 0.5561 0.2737 L 0.5589 0.1381 L 0.4669 0.0803 L 0.357 0.10809999999999999 L 0.2917 0.1301 L 0.2054 0.047799999999999995 L 0.13440000000000002 -0.054299999999999994 L 0.145 -0.176 L 0.21359999999999998 -0.2811 L 0.2312 -0.36510000000000004 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.2016 -0.5209 L 0.26 -0.4317 L 0.3237 -0.4844 L 0.39180000000000004 -0.554 L 0.49510000000000004 -0.5233 L 0.5602 -0.5201 L 0.6377999999999999 -0.48869999999999997 L 0.6861 -0.4858 L 0.7497 -0.4174 L 0.8109 -0.4061 L 0.8282 -0.43639999999999995 L 0.8975 -0.3872 L 0.9028999999999999 -0.397 L 0.7908999999999999 -0.5656 L 0.7464 -0.5929 L 0.683 -0.6536000000000001 L 0.633 -0.7261 L 0.5292 -0.8238 L 0.3732 -0.9137000000000001 L 0.3407 -0.913 L 0.352 -0.8803 L 0.2802 -0.8784 L 0.2444 -0.8587 L 0.2514 -0.8045 L 0.2729 -0.7351 L 0.2857 -0.6436000000000001 L 0.2398 -0.597 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.9399 0.3414 L 0.967 0.2547 L 0.9989 0.046 L 0.9995 0.0329 L 0.9985 -0.055299999999999995 L 0.7283999999999999 0.6852 L 0.33039999999999997 0.9439 L 0.11109999999999999 0.9937999999999999 L 0.1546 0.988 L 0.3225 0.9466 L 0.5727000000000001 0.8197000000000001 L 0.7293 0.6842 L 0.7731 0.6343 L 0.9007999999999999 0.4342 Z"/>
         <path class="graticule" d="M 246 124.7 Q 280 128.5, 314 124.7"/>
         <path class="graticule" d="M 238.9 137.9 Q 280 139.9, 321.1 137.9"/>
         <path class="graticule" d="M 236.7 152 Q 280 152, 323.3 152"/>
         <path class="graticule" d="M 238.9 166.1 Q 280 164.1, 321.1 166.1"/>
         <path class="graticule" d="M 246 179.3 Q 280 175.5, 314 179.3"/>
-        <line class="graticule" x1="280" y1="108.4" x2="280" y2="195.6"/>
+        <line class="graticule axis" x1="280" y1="108.4" x2="280" y2="195.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="15" ry="43.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="29.9" ry="43.6"/>
         </g>
         <circle class="rim" cx="280" cy="152" r="44"/>
       </g>
-    </svg></div>
-  </div>
+    </svg>
+    <figcaption>After the cover of Nick Walker&rsquo;s <a href="https://neuroqueer.com/neuroqueer-heresies/"><cite>Neuroqueer Heresies</cite></a>, which sets a human brain where a swallowtail&rsquo;s body would be, and after Ezra Furman&rsquo;s <a href="https://genius.com/Ezra-furman-lilac-and-black-lyrics"><cite>Lilac and Black</cite></a>. Ours is a moth, and the Earth is where the brain was.</figcaption>
+  </figure>
+  <p>The line under our masthead owes him too. <cite>Neuroqueer Heresies</cite> is subtitled <em>Notes on the Neurodiversity Paradigm, Autistic Empowerment, and Postnormal Possibilities</em> &mdash; one hyphen from our own.</p>
 </section>
 
-<section class="mock">
-  <h2>Variant D — queered</h2>
-  <p class="mock-note">Asymmetry against the norm. One side finished, one side still line and vein, set a few degrees off. It is the verb rather than the specimen &mdash; a moth mid-queering rather than one pinned.</p>
-  <figure style="margin:1.5rem 0">
-    <svg class="qe-botanical qe-moth qe-moth--queered" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above whose two sides do not match. The right wings are whole and filled lilac, banded and eyespotted, with a long trailing tail. The left wings are bare black outline with their veins showing and no tail, and they are set at a different angle from the right. In place of the body sits the Earth, a globe ruled with lines of latitude and longitude. One antenna is fully feathered and the other is sparse." focusable="false">
+<section class="mock" data-key="D">
+  <h2>Variant D &mdash; queered</h2>
+  <p class="mock-note">Asymmetry against a norm. One side finished, one side still line and vein, set a few degrees off, one antenna sparse. The verb rather than the specimen &mdash; a moth mid-queering rather than one pinned.</p>
+  <p class="mock-label">Large</p>
+  <div class="mock-big"><svg class="qe-botanical qe-moth qe-moth--queered" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above whose two sides do not match. The right wings are whole and filled lilac, banded, with an eyespot and a long trailing tail. The left wings are bare black outline with their veins showing and no tail, and they are set a few degrees off the angle of the right. Where the body would be sits the Earth, a globe ruled with lines of latitude and longitude. One antenna is fully feathered and the other is sparse." focusable="false">
       <g class="side side-r">
         <g class="sprout" style="--i:1">
+          <path class="hind" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
       <g class="side side-l" transform="translate(560 0) scale(-1 1) rotate(-7 300 150)">
         <g class="sprout" style="--i:3">
+          <path class="hind hollow" d="M 298 158 C 348 166, 400 178, 424 200 C 440 216, 432 244, 400 258 C 366 272, 328 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+        </g>
+        <g class="sprout" style="--i:4">
           <path class="fore hollow" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
@@ -1075,54 +1201,54 @@
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
         </g>
-        <g class="sprout" style="--i:4">
-          <path class="hind hollow" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-        </g>
       </g>
-      <path class="abdomen" d="M 280 190 C 295 196, 293.5 224.1, 280 252 C 266.5 224.1, 265 196, 280 190 Z"/>
-      <path class="segment" d="M 267.4 202.4 Q 280 205.4, 292.6 202.4"/>
-      <path class="segment" d="M 269.8 214.8 Q 280 217.8, 290.2 214.8"/>
-      <path class="segment" d="M 272.2 227.2 Q 280 230.2, 287.8 227.2"/>
-      <path class="segment" d="M 274.6 239.6 Q 280 242.6, 285.4 239.6"/>
-      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
-      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 296.7 108.7, 297.6 108.7"/>
-      <path class="barb" d="M 292.8 108.3 Q 288.8 105, 287.9 103.4"/>
-      <path class="barb" d="M 303.2 92.9 Q 306.3 93.6, 306.8 93.6"/>
-      <path class="barb" d="M 303.2 92.9 Q 300.2 89.4, 299.7 87.8"/>
-      <path class="barb" d="M 316.5 79.6 Q 318.7 80.3, 318.9 80.3"/>
-      <path class="barb" d="M 316.5 79.6 Q 314.3 76.2, 314.1 74.6"/>
-      <path class="barb" d="M 332.7 68.5 Q 334.3 68.8, 334.1 68.8"/>
-      <path class="barb" d="M 332.7 68.5 Q 331.2 65.4, 331.3 63.8"/>
-      <path class="barb" d="M 352 59.5 Q 353 59.4, 352.7 59.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.9 56.8, 351.3 55.4"/></g></g>
+      <path class="abdomen" d="M 280 188 C 301 194, 298.9 222.1, 280 250 C 261.1 222.1, 259 194, 280 188 Z"/>
+      <path class="segment" d="M 262.4 200.4 Q 280 203.4, 297.6 200.4"/>
+      <path class="segment" d="M 265.7 212.8 Q 280 215.8, 294.3 212.8"/>
+      <path class="segment" d="M 269.1 225.2 Q 280 228.2, 290.9 225.2"/>
+      <path class="segment" d="M 272.4 237.6 Q 280 240.6, 287.6 237.6"/>
+      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
+      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 299.8 112.7, 300.5 113"/>
+      <path class="barb" d="M 296.3 111.6 Q 292.8 107.8, 292.1 105.9"/>
+      <path class="barb" d="M 309.8 98.3 Q 312.4 99.4, 312.7 99.6"/>
+      <path class="barb" d="M 309.8 98.3 Q 307.1 94.4, 306.8 92.5"/>
+      <path class="barb" d="M 326.4 86.7 Q 328.3 87.5, 328.3 87.7"/>
+      <path class="barb" d="M 326.4 86.7 Q 324.5 83, 324.5 81.3"/>
+      <path class="barb" d="M 346.3 77 Q 347.6 77.4, 347.3 77.4"/>
+      <path class="barb" d="M 346.3 77 Q 344.9 73.7, 345.2 72.1"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.2 69.2, 369.8 68.9"/>
+      <path class="barb" d="M 369.3 69.2 Q 368.3 66.5, 368.7 65.1"/></g></g>
       <path class="fur" d="M 239.6 140.4 L 230.4 137.8"/>
       <path class="fur" d="M 240.7 137.3 L 231.1 133.7"/>
       <path class="fur" d="M 241.9 134.3 L 232.3 129.7"/>
@@ -1144,50 +1270,60 @@
         <clipPath id="qe-globe-d"><circle cx="280" cy="152" r="44"/></clipPath>
         <circle class="sea" cx="280" cy="152" r="44"/>
         <g clip-path="url(#qe-globe-d)">
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.66 -0.44 C -0.52 -0.55, -0.30 -0.53, -0.22 -0.42 C -0.16 -0.34, -0.25 -0.26, -0.30 -0.19 C -0.36 -0.11, -0.33 -0.02, -0.40 0.02 C -0.48 0.06, -0.52 -0.06, -0.58 -0.16 C -0.65 -0.26, -0.72 -0.36, -0.66 -0.44 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.34 0.02 C -0.23 -0.03, -0.15 0.06, -0.18 0.18 C -0.20 0.31, -0.26 0.44, -0.31 0.58 C -0.35 0.69, -0.44 0.69, -0.44 0.56 C -0.44 0.42, -0.39 0.30, -0.42 0.20 C -0.45 0.10, -0.42 0.04, -0.34 0.02 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.04 -0.32 C 0.16 -0.37, 0.30 -0.35, 0.36 -0.28 C 0.44 -0.20, 0.42 -0.10, 0.34 -0.04 C 0.30 0.06, 0.28 0.20, 0.22 0.36 C 0.18 0.48, 0.12 0.55, 0.08 0.48 C 0.05 0.40, 0.08 0.28, 0.06 0.18 C 0.03 0.10, -0.06 0.06, -0.06 -0.06 C -0.06 -0.20, -0.04 -0.29, 0.04 -0.32 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.06 -0.36 C 0.20 -0.47, 0.44 -0.57, 0.64 -0.50 C 0.75 -0.46, 0.72 -0.34, 0.60 -0.32 C 0.44 -0.30, 0.30 -0.24, 0.18 -0.28 C 0.08 -0.31, 0.02 -0.33, 0.06 -0.36 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.44 0.34 C 0.54 0.28, 0.66 0.34, 0.64 0.44 C 0.62 0.54, 0.50 0.57, 0.44 0.50 C 0.39 0.44, 0.39 0.38, 0.44 0.34 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.772 -0.278 L -0.6366 -0.45389999999999997 L -0.5255 -0.5453 L -0.445 -0.5774 L -0.3446 -0.6077 L -0.30960000000000004 -0.589 L -0.3353 -0.6634 L -0.3335 -0.7439 L -0.332 -0.7946 L -0.36260000000000003 -0.8147000000000001 L -0.4542 -0.7727999999999999 L -0.5826 -0.6928 L -0.7198 -0.5742999999999999 L -0.8397 -0.4025 L -0.8402999999999999 -0.285 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.7943 0.22669999999999998 L -0.7242000000000001 0.0043 L -0.6197999999999999 -0.0107 L -0.45230000000000004 0.0993 L -0.42260000000000003 0.1884 L -0.3251 0.2475 L -0.22369999999999998 0.30369999999999997 L -0.1715 0.3552 L -0.2347 0.43239999999999995 L -0.2556 0.5517000000000001 L -0.3541 0.5868 L -0.4019 0.6977000000000001 L -0.44580000000000003 0.7479 L -0.4545 0.8042999999999999 L -0.4353 0.8613 L -0.4646 0.8548 L -0.5602 0.7373999999999999 L -0.6243 0.589 L -0.703 0.4059 L -0.8046 0.2238 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.26339999999999997 -0.4159 L 0.36260000000000003 -0.4407 L 0.4581 -0.4526 L 0.5846 -0.37339999999999995 L 0.6496000000000001 -0.405 L 0.7269 -0.4093 L 0.7912 -0.3029 L 0.8473999999999999 -0.2125 L 0.9068999999999999 -0.1272 L 0.9491 -0.15419999999999998 L 0.9361 -0.0144 L 0.9205 0.08120000000000001 L 0.9085 0.18630000000000002 L 0.8897 0.2729 L 0.8318 0.3981 L 0.7622000000000001 0.5277999999999999 L 0.6698 0.6377 L 0.5792 0.6815 L 0.5738 0.6115 L 0.5724 0.4602 L 0.5561 0.2737 L 0.5589 0.1381 L 0.4669 0.0803 L 0.357 0.10809999999999999 L 0.2917 0.1301 L 0.2054 0.047799999999999995 L 0.13440000000000002 -0.054299999999999994 L 0.145 -0.176 L 0.21359999999999998 -0.2811 L 0.2312 -0.36510000000000004 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.2016 -0.5209 L 0.26 -0.4317 L 0.3237 -0.4844 L 0.39180000000000004 -0.554 L 0.49510000000000004 -0.5233 L 0.5602 -0.5201 L 0.6377999999999999 -0.48869999999999997 L 0.6861 -0.4858 L 0.7497 -0.4174 L 0.8109 -0.4061 L 0.8282 -0.43639999999999995 L 0.8975 -0.3872 L 0.9028999999999999 -0.397 L 0.7908999999999999 -0.5656 L 0.7464 -0.5929 L 0.683 -0.6536000000000001 L 0.633 -0.7261 L 0.5292 -0.8238 L 0.3732 -0.9137000000000001 L 0.3407 -0.913 L 0.352 -0.8803 L 0.2802 -0.8784 L 0.2444 -0.8587 L 0.2514 -0.8045 L 0.2729 -0.7351 L 0.2857 -0.6436000000000001 L 0.2398 -0.597 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.9399 0.3414 L 0.967 0.2547 L 0.9989 0.046 L 0.9995 0.0329 L 0.9985 -0.055299999999999995 L 0.7283999999999999 0.6852 L 0.33039999999999997 0.9439 L 0.11109999999999999 0.9937999999999999 L 0.1546 0.988 L 0.3225 0.9466 L 0.5727000000000001 0.8197000000000001 L 0.7293 0.6842 L 0.7731 0.6343 L 0.9007999999999999 0.4342 Z"/>
         <path class="graticule" d="M 246 124.7 Q 280 128.5, 314 124.7"/>
         <path class="graticule" d="M 238.9 137.9 Q 280 139.9, 321.1 137.9"/>
         <path class="graticule" d="M 236.7 152 Q 280 152, 323.3 152"/>
         <path class="graticule" d="M 238.9 166.1 Q 280 164.1, 321.1 166.1"/>
         <path class="graticule" d="M 246 179.3 Q 280 175.5, 314 179.3"/>
-        <line class="graticule" x1="280" y1="108.4" x2="280" y2="195.6"/>
+        <line class="graticule axis" x1="280" y1="108.4" x2="280" y2="195.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="15" ry="43.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="29.9" ry="43.6"/>
         </g>
         <circle class="rim" cx="280" cy="152" r="44"/>
       </g>
-    </svg>
-  </figure>
-  <div class="mock-row">
-    <div class="mock-small"><svg class="qe-botanical qe-moth qe-moth--queered" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above whose two sides do not match. The right wings are whole and filled lilac, banded and eyespotted, with a long trailing tail. The left wings are bare black outline with their veins showing and no tail, and they are set at a different angle from the right. In place of the body sits the Earth, a globe ruled with lines of latitude and longitude. One antenna is fully feathered and the other is sparse." focusable="false">
+    </svg></div>
+  <p class="mock-label">In place, at the foot of the section</p>
+  <p>Walker is naming two normativities in particular. Taking the verb further out &mdash; to a painting, a canon, a century, a diagnosis, a life &mdash; is our extension, not his sentence. The credit for the verb stays with him.</p>
+  <figure class="qe-moth-figure">
+    <svg class="qe-botanical qe-moth qe-moth--queered" viewBox="44 34 472 300" role="img" aria-label="A moth seen from above whose two sides do not match. The right wings are whole and filled lilac, banded, with an eyespot and a long trailing tail. The left wings are bare black outline with their veins showing and no tail, and they are set a few degrees off the angle of the right. Where the body would be sits the Earth, a globe ruled with lines of latitude and longitude. One antenna is fully feathered and the other is sparse." focusable="false">
       <g class="side side-r">
         <g class="sprout" style="--i:1">
+          <path class="hind" d="M 298 158 C 348 166, 400 178, 424 200 C 442 214, 443 233, 436 246 C 442 268, 440 296, 434 318 C 432 326, 425 326, 424 318 C 424 296, 424 270, 420 254 C 380 268, 330 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+          <circle class="halo" cx="366" cy="222" r="12.5"/>
+          <circle class="eye" cx="366" cy="222" r="8.5"/>
+          <circle class="pupil" cx="366" cy="222" r="3.6"/>
+        </g>
+        <g class="sprout" style="--i:2">
           <path class="fore" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
-          <path class="band" d="M 492 86 C 478 116, 444 146, 396 158"/>
-          <path class="band" d="M 498 72 C 486 100, 456 128, 410 142"/>
+          <path class="band" d="M 432 82 C 424 108, 418 138, 404 164"/>
+          <path class="band" d="M 470 71 C 466 94, 456 122, 440 148"/>
+          <path class="band" d="M 492 92 C 480 124, 448 150, 402 162"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
           <path class="vein" d="M 304 149 C 350 145, 410 128, 470 106"/>
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
-          <ellipse class="discal" cx="406" cy="118" rx="9" ry="5.5" transform="rotate(-24 406 118)"/>
-        </g>
-        <g class="sprout" style="--i:2">
-          <path class="hind" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="hind" d="M 420 242 C 441 272, 431 307, 402 321 C 392 326, 387 317, 396 308 C 414 286, 421 264, 412 246 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-          <circle class="eye" cx="372" cy="202" r="8"/>
-          <circle class="pupil" cx="372" cy="202" r="3.2"/>
+          <path class="discal" d="M 396 128 C 398 116, 408 108, 420 108 C 412 114, 406 120, 404 130 Z"/>
         </g>
       </g>
       <g class="side side-l" transform="translate(560 0) scale(-1 1) rotate(-7 300 150)">
         <g class="sprout" style="--i:3">
+          <path class="hind hollow" d="M 298 158 C 348 166, 400 178, 424 200 C 440 216, 432 244, 400 258 C 366 272, 328 262, 310 236 C 298 218, 294 178, 298 158 Z"/>
+          <path class="vein" d="M 304 170 C 342 180, 384 192, 412 208"/>
+          <path class="vein" d="M 302 182 C 336 200, 372 220, 398 242"/>
+          <path class="vein" d="M 300 194 C 324 214, 344 234, 356 256"/>
+          <path class="vein" d="M 300 204 C 314 226, 322 240, 328 258"/>
+        </g>
+        <g class="sprout" style="--i:4">
           <path class="fore hollow" d="M 296 126 C 350 108, 420 82, 486 66 C 500 63, 507 74, 500 92 C 490 128, 452 158, 400 170 C 356 180, 316 172, 298 152 Z"/>
           <path class="vein" d="M 302 132 C 352 116, 418 92, 480 72"/>
           <path class="vein" d="M 304 141 C 352 130, 414 108, 476 86"/>
@@ -1195,54 +1331,54 @@
           <path class="vein" d="M 304 155 C 346 160, 400 152, 452 134"/>
           <path class="vein" d="M 306 162 C 342 172, 386 170, 426 158"/>
         </g>
-        <g class="sprout" style="--i:4">
-          <path class="hind hollow" d="M 300 158 C 352 166, 402 182, 430 208 C 446 224, 438 249, 414 246 C 366 240, 320 214, 294 178 Z"/>
-          <path class="vein" d="M 304 166 C 344 178, 390 196, 420 220"/>
-          <path class="vein" d="M 302 172 C 336 188, 374 206, 404 232"/>
-          <path class="vein" d="M 300 178 C 328 196, 356 214, 380 236"/>
-        </g>
       </g>
-      <path class="abdomen" d="M 280 190 C 295 196, 293.5 224.1, 280 252 C 266.5 224.1, 265 196, 280 190 Z"/>
-      <path class="segment" d="M 267.4 202.4 Q 280 205.4, 292.6 202.4"/>
-      <path class="segment" d="M 269.8 214.8 Q 280 217.8, 290.2 214.8"/>
-      <path class="segment" d="M 272.2 227.2 Q 280 230.2, 287.8 227.2"/>
-      <path class="segment" d="M 274.6 239.6 Q 280 242.6, 285.4 239.6"/>
-      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 299.1 110.1, 301 110.6"/>
-      <path class="barb" d="M 292.8 108.3 Q 286.4 103.7, 284.5 101.5"/>
-      <path class="barb" d="M 296.2 102.4 Q 302.1 104.4, 303.8 105.1"/>
-      <path class="barb" d="M 296.2 102.4 Q 290.4 97.6, 288.7 95.3"/>
-      <path class="barb" d="M 300.1 96.9 Q 305.5 99.1, 307 99.8"/>
-      <path class="barb" d="M 300.1 96.9 Q 294.7 91.9, 293.2 89.5"/>
-      <path class="barb" d="M 304.3 91.6 Q 309.2 94, 310.6 94.8"/>
-      <path class="barb" d="M 304.3 91.6 Q 299.4 86.4, 298 84"/>
-      <path class="barb" d="M 308.9 86.6 Q 313.4 89.1, 314.5 89.9"/>
-      <path class="barb" d="M 308.9 86.6 Q 304.4 81.3, 303.3 78.9"/>
-      <path class="barb" d="M 313.9 81.9 Q 317.9 84.4, 318.8 85.3"/>
-      <path class="barb" d="M 313.9 81.9 Q 309.8 76.6, 308.9 74.1"/>
-      <path class="barb" d="M 319.2 77.5 Q 322.8 80, 323.6 80.9"/>
-      <path class="barb" d="M 319.2 77.5 Q 315.6 72.1, 314.9 69.6"/>
-      <path class="barb" d="M 325 73.3 Q 328.2 75.8, 328.7 76.7"/>
-      <path class="barb" d="M 325 73.3 Q 321.8 68, 321.2 65.5"/>
-      <path class="barb" d="M 331.1 69.4 Q 333.9 71.9, 334.3 72.7"/>
-      <path class="barb" d="M 331.1 69.4 Q 328.3 64.2, 327.9 61.8"/>
-      <path class="barb" d="M 337.7 65.8 Q 340.1 68.1, 340.4 68.9"/>
-      <path class="barb" d="M 337.7 65.8 Q 335.2 60.7, 334.9 58.3"/>
-      <path class="barb" d="M 344.6 62.5 Q 346.8 64.7, 346.9 65.4"/>
-      <path class="barb" d="M 344.6 62.5 Q 342.5 57.5, 342.4 55.2"/>
-      <path class="barb" d="M 352 59.5 Q 353.8 61.5, 353.8 62.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.1 54.7, 350.1 52.4"/></g></g>
-      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 288 118 C 300 90, 322 70, 356 58"/>
-      <path class="barb" d="M 292.8 108.3 Q 296.7 108.7, 297.6 108.7"/>
-      <path class="barb" d="M 292.8 108.3 Q 288.8 105, 287.9 103.4"/>
-      <path class="barb" d="M 303.2 92.9 Q 306.3 93.6, 306.8 93.6"/>
-      <path class="barb" d="M 303.2 92.9 Q 300.2 89.4, 299.7 87.8"/>
-      <path class="barb" d="M 316.5 79.6 Q 318.7 80.3, 318.9 80.3"/>
-      <path class="barb" d="M 316.5 79.6 Q 314.3 76.2, 314.1 74.6"/>
-      <path class="barb" d="M 332.7 68.5 Q 334.3 68.8, 334.1 68.8"/>
-      <path class="barb" d="M 332.7 68.5 Q 331.2 65.4, 331.3 63.8"/>
-      <path class="barb" d="M 352 59.5 Q 353 59.4, 352.7 59.1"/>
-      <path class="barb" d="M 352 59.5 Q 350.9 56.8, 351.3 55.4"/></g></g>
+      <path class="abdomen" d="M 280 188 C 301 194, 298.9 222.1, 280 250 C 261.1 222.1, 259 194, 280 188 Z"/>
+      <path class="segment" d="M 262.4 200.4 Q 280 203.4, 297.6 200.4"/>
+      <path class="segment" d="M 265.7 212.8 Q 280 215.8, 294.3 212.8"/>
+      <path class="segment" d="M 269.1 225.2 Q 280 228.2, 290.9 225.2"/>
+      <path class="segment" d="M 272.4 237.6 Q 280 240.6, 287.6 237.6"/>
+      <g class="side"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 301.4 114, 302.8 114.9"/>
+      <path class="barb" d="M 296.3 111.6 Q 291.2 106.4, 289.8 104"/>
+      <path class="barb" d="M 299.8 107.6 Q 304.5 110.1, 305.8 111"/>
+      <path class="barb" d="M 299.8 107.6 Q 295.1 102.3, 293.8 99.8"/>
+      <path class="barb" d="M 303.6 103.8 Q 308 106.4, 309.1 107.3"/>
+      <path class="barb" d="M 303.6 103.8 Q 299.2 98.4, 298.1 95.9"/>
+      <path class="barb" d="M 307.6 100.1 Q 311.7 102.7, 312.7 103.6"/>
+      <path class="barb" d="M 307.6 100.1 Q 303.6 94.6, 302.6 92.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 315.7 99.2, 316.5 100.1"/>
+      <path class="barb" d="M 311.9 96.5 Q 308.2 91, 307.4 88.5"/>
+      <path class="barb" d="M 316.5 93.1 Q 320 95.7, 320.6 96.7"/>
+      <path class="barb" d="M 316.5 93.1 Q 313.1 87.6, 312.4 85.1"/>
+      <path class="barb" d="M 321.3 89.8 Q 324.5 92.4, 325 93.4"/>
+      <path class="barb" d="M 321.3 89.8 Q 318.2 84.4, 317.6 81.9"/>
+      <path class="barb" d="M 326.4 86.7 Q 329.3 89.3, 329.7 90.2"/>
+      <path class="barb" d="M 326.4 86.7 Q 323.5 81.3, 323.1 78.8"/>
+      <path class="barb" d="M 331.8 83.7 Q 334.4 86.2, 334.7 87.1"/>
+      <path class="barb" d="M 331.8 83.7 Q 329.1 78.4, 328.8 75.9"/>
+      <path class="barb" d="M 337.4 80.9 Q 339.7 83.3, 340 84.1"/>
+      <path class="barb" d="M 337.4 80.9 Q 335 75.7, 334.8 73.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 345.4 80.5, 345.5 81.3"/>
+      <path class="barb" d="M 343.2 78.2 Q 341.1 73.1, 340.9 70.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 351.3 77.9, 351.3 78.7"/>
+      <path class="barb" d="M 349.3 75.7 Q 347.4 70.8, 347.4 68.4"/>
+      <path class="barb" d="M 355.7 73.4 Q 357.5 75.5, 357.4 76.1"/>
+      <path class="barb" d="M 355.7 73.4 Q 354 68.6, 354 66.3"/>
+      <path class="barb" d="M 362.4 71.2 Q 363.9 73.1, 363.8 73.8"/>
+      <path class="barb" d="M 362.4 71.2 Q 360.8 66.5, 360.9 64.3"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.7 71, 370.5 71.6"/>
+      <path class="barb" d="M 369.3 69.2 Q 367.8 64.7, 368 62.5"/></g></g>
+      <g class="side" transform="translate(560 0) scale(-1 1)"><g class="sprout" style="--i:5"><path class="stem antenna-shaft" style="--len:70" d="M 290 120 C 306 96, 334 78, 374 68"/>
+      <path class="barb" d="M 296.3 111.6 Q 299.8 112.7, 300.5 113"/>
+      <path class="barb" d="M 296.3 111.6 Q 292.8 107.8, 292.1 105.9"/>
+      <path class="barb" d="M 309.8 98.3 Q 312.4 99.4, 312.7 99.6"/>
+      <path class="barb" d="M 309.8 98.3 Q 307.1 94.4, 306.8 92.5"/>
+      <path class="barb" d="M 326.4 86.7 Q 328.3 87.5, 328.3 87.7"/>
+      <path class="barb" d="M 326.4 86.7 Q 324.5 83, 324.5 81.3"/>
+      <path class="barb" d="M 346.3 77 Q 347.6 77.4, 347.3 77.4"/>
+      <path class="barb" d="M 346.3 77 Q 344.9 73.7, 345.2 72.1"/>
+      <path class="barb" d="M 369.3 69.2 Q 370.2 69.2, 369.8 68.9"/>
+      <path class="barb" d="M 369.3 69.2 Q 368.3 66.5, 368.7 65.1"/></g></g>
       <path class="fur" d="M 239.6 140.4 L 230.4 137.8"/>
       <path class="fur" d="M 240.7 137.3 L 231.1 133.7"/>
       <path class="fur" d="M 241.9 134.3 L 232.3 129.7"/>
@@ -1264,24 +1400,26 @@
         <clipPath id="qe-globe-d-s"><circle cx="280" cy="152" r="44"/></clipPath>
         <circle class="sea" cx="280" cy="152" r="44"/>
         <g clip-path="url(#qe-globe-d-s)">
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.66 -0.44 C -0.52 -0.55, -0.30 -0.53, -0.22 -0.42 C -0.16 -0.34, -0.25 -0.26, -0.30 -0.19 C -0.36 -0.11, -0.33 -0.02, -0.40 0.02 C -0.48 0.06, -0.52 -0.06, -0.58 -0.16 C -0.65 -0.26, -0.72 -0.36, -0.66 -0.44 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M -0.34 0.02 C -0.23 -0.03, -0.15 0.06, -0.18 0.18 C -0.20 0.31, -0.26 0.44, -0.31 0.58 C -0.35 0.69, -0.44 0.69, -0.44 0.56 C -0.44 0.42, -0.39 0.30, -0.42 0.20 C -0.45 0.10, -0.42 0.04, -0.34 0.02 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.04 -0.32 C 0.16 -0.37, 0.30 -0.35, 0.36 -0.28 C 0.44 -0.20, 0.42 -0.10, 0.34 -0.04 C 0.30 0.06, 0.28 0.20, 0.22 0.36 C 0.18 0.48, 0.12 0.55, 0.08 0.48 C 0.05 0.40, 0.08 0.28, 0.06 0.18 C 0.03 0.10, -0.06 0.06, -0.06 -0.06 C -0.06 -0.20, -0.04 -0.29, 0.04 -0.32 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.06 -0.36 C 0.20 -0.47, 0.44 -0.57, 0.64 -0.50 C 0.75 -0.46, 0.72 -0.34, 0.60 -0.32 C 0.44 -0.30, 0.30 -0.24, 0.18 -0.28 C 0.08 -0.31, 0.02 -0.33, 0.06 -0.36 Z"/>
-        <path class="land" transform="translate(280 152) scale(44)" d="M 0.44 0.34 C 0.54 0.28, 0.66 0.34, 0.64 0.44 C 0.62 0.54, 0.50 0.57, 0.44 0.50 C 0.39 0.44, 0.39 0.38, 0.44 0.34 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.772 -0.278 L -0.6366 -0.45389999999999997 L -0.5255 -0.5453 L -0.445 -0.5774 L -0.3446 -0.6077 L -0.30960000000000004 -0.589 L -0.3353 -0.6634 L -0.3335 -0.7439 L -0.332 -0.7946 L -0.36260000000000003 -0.8147000000000001 L -0.4542 -0.7727999999999999 L -0.5826 -0.6928 L -0.7198 -0.5742999999999999 L -0.8397 -0.4025 L -0.8402999999999999 -0.285 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M -0.7943 0.22669999999999998 L -0.7242000000000001 0.0043 L -0.6197999999999999 -0.0107 L -0.45230000000000004 0.0993 L -0.42260000000000003 0.1884 L -0.3251 0.2475 L -0.22369999999999998 0.30369999999999997 L -0.1715 0.3552 L -0.2347 0.43239999999999995 L -0.2556 0.5517000000000001 L -0.3541 0.5868 L -0.4019 0.6977000000000001 L -0.44580000000000003 0.7479 L -0.4545 0.8042999999999999 L -0.4353 0.8613 L -0.4646 0.8548 L -0.5602 0.7373999999999999 L -0.6243 0.589 L -0.703 0.4059 L -0.8046 0.2238 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.26339999999999997 -0.4159 L 0.36260000000000003 -0.4407 L 0.4581 -0.4526 L 0.5846 -0.37339999999999995 L 0.6496000000000001 -0.405 L 0.7269 -0.4093 L 0.7912 -0.3029 L 0.8473999999999999 -0.2125 L 0.9068999999999999 -0.1272 L 0.9491 -0.15419999999999998 L 0.9361 -0.0144 L 0.9205 0.08120000000000001 L 0.9085 0.18630000000000002 L 0.8897 0.2729 L 0.8318 0.3981 L 0.7622000000000001 0.5277999999999999 L 0.6698 0.6377 L 0.5792 0.6815 L 0.5738 0.6115 L 0.5724 0.4602 L 0.5561 0.2737 L 0.5589 0.1381 L 0.4669 0.0803 L 0.357 0.10809999999999999 L 0.2917 0.1301 L 0.2054 0.047799999999999995 L 0.13440000000000002 -0.054299999999999994 L 0.145 -0.176 L 0.21359999999999998 -0.2811 L 0.2312 -0.36510000000000004 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.2016 -0.5209 L 0.26 -0.4317 L 0.3237 -0.4844 L 0.39180000000000004 -0.554 L 0.49510000000000004 -0.5233 L 0.5602 -0.5201 L 0.6377999999999999 -0.48869999999999997 L 0.6861 -0.4858 L 0.7497 -0.4174 L 0.8109 -0.4061 L 0.8282 -0.43639999999999995 L 0.8975 -0.3872 L 0.9028999999999999 -0.397 L 0.7908999999999999 -0.5656 L 0.7464 -0.5929 L 0.683 -0.6536000000000001 L 0.633 -0.7261 L 0.5292 -0.8238 L 0.3732 -0.9137000000000001 L 0.3407 -0.913 L 0.352 -0.8803 L 0.2802 -0.8784 L 0.2444 -0.8587 L 0.2514 -0.8045 L 0.2729 -0.7351 L 0.2857 -0.6436000000000001 L 0.2398 -0.597 Z"/>
+        <path class="land" transform="translate(280 152) scale(44)" d="M 0.9399 0.3414 L 0.967 0.2547 L 0.9989 0.046 L 0.9995 0.0329 L 0.9985 -0.055299999999999995 L 0.7283999999999999 0.6852 L 0.33039999999999997 0.9439 L 0.11109999999999999 0.9937999999999999 L 0.1546 0.988 L 0.3225 0.9466 L 0.5727000000000001 0.8197000000000001 L 0.7293 0.6842 L 0.7731 0.6343 L 0.9007999999999999 0.4342 Z"/>
         <path class="graticule" d="M 246 124.7 Q 280 128.5, 314 124.7"/>
         <path class="graticule" d="M 238.9 137.9 Q 280 139.9, 321.1 137.9"/>
         <path class="graticule" d="M 236.7 152 Q 280 152, 323.3 152"/>
         <path class="graticule" d="M 238.9 166.1 Q 280 164.1, 321.1 166.1"/>
         <path class="graticule" d="M 246 179.3 Q 280 175.5, 314 179.3"/>
-        <line class="graticule" x1="280" y1="108.4" x2="280" y2="195.6"/>
+        <line class="graticule axis" x1="280" y1="108.4" x2="280" y2="195.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="15" ry="43.6"/>
         <ellipse class="graticule" cx="280" cy="152" rx="29.9" ry="43.6"/>
         </g>
         <circle class="rim" cx="280" cy="152" r="44"/>
       </g>
-    </svg></div>
-  </div>
+    </svg>
+    <figcaption>After the cover of Nick Walker&rsquo;s <a href="https://neuroqueer.com/neuroqueer-heresies/"><cite>Neuroqueer Heresies</cite></a>, which sets a human brain where a swallowtail&rsquo;s body would be, and after Ezra Furman&rsquo;s <a href="https://genius.com/Ezra-furman-lilac-and-black-lyrics"><cite>Lilac and Black</cite></a>. Ours is a moth, and the Earth is where the brain was.</figcaption>
+  </figure>
+  <p>The line under our masthead owes him too. <cite>Neuroqueer Heresies</cite> is subtitled <em>Notes on the Neurodiversity Paradigm, Autistic Empowerment, and Postnormal Possibilities</em> &mdash; one hyphen from our own.</p>
 </section>
 </main>
 <script src="/queering.js"></script>
