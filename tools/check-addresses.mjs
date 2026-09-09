@@ -174,8 +174,10 @@ if (live) {
   // ...and the error page must not be a soft 404 at its own path.
   for (const at of ['/404', '/404.html']) {
     const r = await head(ORIGIN + at);
-    if (r.status === 200)
-      fail('live', `${at} answered 200 — an error page served as a success is a soft 404`);
+    // Asserting 404 rather than "not 200": a 5xx here means the self-referential
+    // rewrite in _redirects is broken, which a not-200 test would wave through.
+    if (r.status !== 404)
+      fail('live', `${at} answered ${r.status}, expected 404 — 200 is a soft 404, 5xx is a broken rewrite`);
   }
 
   probed += 2;

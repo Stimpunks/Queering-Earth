@@ -48,7 +48,7 @@ decoration, texture, or plain view. The spec does not know that texture under te
 
 | | count |
 |---|---|
-| **Findings** | **8** — 4 remediated 2026-09-09, 4 open |
+| **Findings** | **8** — 5 remediated 2026-09-09, 3 open |
 | Passing, verified | 22 |
 | Not applicable, with reasons | 5 |
 | Deferred — needs field data | 1 |
@@ -161,6 +161,22 @@ framed.*
 ### 3. The 404 leaves the herbarium
 
 `error-pages` (required) · [spec](https://specification.website/spec/resilience/error-pages/) (updated 2026-07-09)
+
+> **Remediated 2026-09-09.** `404.html` carries the masthead, both view toggles, the
+> before-first-paint snippet, the footer, and all eight cards. The drawing is an empty
+> mount — a stem with nothing at its tip.
+>
+> **Fixing it introduced the soft 404 this item leads with**, and the new gate caught it:
+> `404.html` is a real file, so `/404` and `/404.html` answered 200 with the error page.
+> Two rewrites in `_redirects` serve it with a 404 status instead, verified not to loop.
+>
+> Both other gates carry a named exception rather than a silent skip — `NOT_CONTENT` in
+> `check-sitemap`, `NOT_ADDRESSED` in `check-addresses` — and the address gate is now
+> *stricter* about the page than the rule it excuses: it asserts the file exists, that a
+> nonexistent address serves our page rather than Netlify's, and that neither `/404` nor
+> `/404.html` answers anything but 404.
+>
+> The 500 remains unreachable by construction, as noted below.
 
 The **status code is right** — `curl -I https://queering.earth/definitely-not-a-page` returns
 `404`, so this is not a soft 404, which is the failure the spec cares most about.
