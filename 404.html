@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No such sheet &mdash; Queering Earth</title>
+<meta name="description" content="That address does not name anything in this cabinet. Here is the plate, the register, and the eight sheets.">
+
+<!-- NO rel=canonical, on purpose. This page is served at EVERY unmatched address,
+     so a canonical would tell a crawler that every wrong URL on the site is one
+     real page. An error page has no canonical address because it has no address. -->
+<!-- noindex because the page is thin by design. The spec's meta-robots item asks
+     for an explicit policy on thin content rather than leaving it implicit. -->
+<meta name="robots" content="noindex, follow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
+
+<!-- No og:image and no social card, and that is a decision rather than an omission.
+     A new SHEET needs a card; this is furniture, and it should never be shared on
+     purpose. A broken link that unfurls as a bare link is telling the truth. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Queering Earth">
+<meta property="og:title" content="No such sheet">
+<meta property="og:description" content="That address does not name anything in this cabinet.">
+<meta property="og:locale" content="en_GB">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;display=swap">
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's choices BEFORE first paint. A reader who asked for the
+     cabinet asked for it here too — an error page is the worst place to flash the
+     wrong ground, because it is the page they did not choose to be on. -->
+<script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
+</head>
+<body>
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+</div>
+
+<main id="main">
+
+  <header class="qe-masthead">
+    <p class="qe-kicker"><a href="/">Queering Earth</a></p>
+    <h1>No such sheet</h1>
+
+    <!-- An empty mount: the stem and its leaves, and nothing at the tip. The
+         herbarium version of a 404 is a sheet whose specimen is not there.
+         Positioning on the outer <g>, animation on the inner .sprout — a CSS
+         transform animation overrides an SVG transform attribute on the same
+         element, and getting that wrong collapses every sprout onto the origin. -->
+    <svg class="qe-botanical" viewBox="0 0 320 150" role="img" aria-label="A bare stem curving up from the foot of the sheet, carrying four leaves and nothing at its tip." focusable="false">
+      <path class="stem" style="--len:102" stroke-width="2.4" d="M160 142 C 158 112, 166 86, 158 40"/>
+      <g transform="translate(159 118) rotate(150)"><g class="sprout sprout-leaf" style="--i:1"><path class="leaf" stroke-width="1.1" d="M0 0 C 7.2 -9.4, 22 -9.9, 28.6 0 C 22 9.9, 7.2 9.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 27.5 0"/></g></g>
+      <g transform="translate(162 96) rotate(28)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" stroke-width="1.1" d="M0 0 C 5.9 -7.6, 18 -8.1, 23.4 0 C 18 8.1, 5.9 7.7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 22.5 0"/></g></g>
+      <g transform="translate(163 74) rotate(163)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" stroke-width="1.1" d="M0 0 C 4.6 -5.9, 14 -6.3, 18.2 0 C 14 6.3, 4.6 5.9, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 17.5 0"/></g></g>
+      <g transform="translate(160 56) rotate(22)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf" stroke-width="1.1" d="M0 0 C 3.9 -5.1, 12 -5.4, 15.6 0 C 12 5.4, 3.9 5.1, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 15 0"/></g></g>
+    </svg>
+  </header>
+
+  <p class="qe-lede">That address does not name anything in this cabinet. Nothing is broken on your end, and nothing here is lost &mdash; the address simply does not correspond to a sheet.</p>
+
+  <h2 id="why">Three ways this happens <a class="qe-anchor" href="#why"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>An address was typed with a character out of place, and the sheet it nearly names is a click away below. Or a link somewhere else on the web points at something we moved or never had &mdash; if you followed one, the fault is ours and we would like to know. Or you reached for a sheet that has not been mounted yet, which is the most likely case on a site of eleven pages that is two days old.</p>
+
+  <p>Every address here is permanent once published. <a href="/changelog">The accession register</a> records every sheet as it was mounted and every label we corrected, so if something used to be at this address, that is the book it is written in. Nothing has been withdrawn.</p>
+
+  <h2 id="where">Where to look instead <a class="qe-anchor" href="#where"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p><strong>There is no search box here, and that is deliberate.</strong> With eleven pages, the plate <em>is</em> the index: <a href="/">the front page</a> lays out every sheet as a numbered card, which is faster to read than any query would be. When there is enough here to need searching, that will be worth building and this paragraph will be wrong.</p>
+
+  <p>Otherwise: <a href="/design">the colophon</a> explains how this site is made &mdash; the herbarium sheet, the palette, the type, and the borrowed plates. <a href="/changelog">The register</a> is the ledger. Every sheet is carded below.</p>
+
+  <p class="qe-untidy">If a link sent you here, <a href="https://github.com/Stimpunks/Queering-Earth/issues">say so in the repository</a> and it becomes a register entry. A broken inbound link is a fact about this site, not about the reader who followed it.</p>
+
+</main>
+
+<!-- Elsewhere on the plate. OUTSIDE <main> on purpose: the SKS mirror takes page
+     content from the <main> landmark and nowhere else, so navigation placed inside
+     it is indexed as this page's content. On an error page the cards ARE the way
+     forward the spec asks for, which is exactly why they are navigation and not
+     the message. -->
+<nav class="qe-elsewhere" aria-labelledby="qe-elsewhere-h">
+  <h2 id="qe-elsewhere-h">Every sheet in the cabinet</h2>
+  <ul class="qe-elsewhere-grid">
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/on-being-ill">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;1</span>
+          </span>
+          <span class="qe-card-title">The Army of the Upright</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-lichen)">
+        <a class="card" href="/coming-to-terms">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;2</span>
+          </span>
+          <span class="qe-card-title">Coming to Terms</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-coral)">
+        <a class="card" href="/promises-like-pie-crust">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;3</span>
+          </span>
+          <span class="qe-card-title">The Die Uncast</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-marigold)">
+        <a class="card" href="/invention-of-normal">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;4</span>
+          </span>
+          <span class="qe-card-title">Wyrd, Weird, and the Invention of Normal</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-violet)">
+        <a class="card" href="/the-tempest">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;5</span>
+          </span>
+          <span class="qe-card-title">Miranda: To Be Wondered With</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/wild-nights">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;6</span>
+          </span>
+          <span class="qe-card-title">The Swell and the Dwell</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-coral)">
+        <a class="card" href="/flower-codes">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;7</span>
+          </span>
+          <span class="qe-card-title">A Waste Garden, Flowering at Its Will</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-lichen)">
+        <a class="card" href="/monotropa-uniflora">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;8</span>
+          </span>
+          <span class="qe-card-title">The Preferred Flower of Life</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<footer class="qe-footer">
+  <p>Queering Earth is a collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+  <p>Words and art licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Take them and make something.</p>
+  <p><a href="/design">How this site is made</a> &mdash; the herbarium sheet, the palette, the type, and the borrowed plates.</p>
+  <p><a href="/changelog">The accession register</a> &mdash; every sheet as it was mounted, and every label we corrected.</p>
+</footer>
+<script src="queering.js"></script>
+</body>
+</html>

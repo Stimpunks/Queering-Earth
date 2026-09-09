@@ -110,7 +110,24 @@ if (!fs.existsSync(sitemapPath)) {
 }
 
 const xml = fs.readFileSync(sitemapPath, 'utf8');
-const files = fs.readdirSync(REPO).filter((f) => f.endsWith('.html')).sort();
+
+/* NOT CONTENT — pages that must NOT be listed, and why each one is here.
+ *
+ * The sitemap is a manifest of addresses a crawler should fetch. `404.html` has no
+ * address: Netlify serves it for every path that does not resolve, and it answers
+ * 404 when it does. Listing it would send crawlers to an error deliberately, and
+ * Google reports a listed-and-erroring URL as a coverage fault.
+ *
+ * This is an ALLOW-LIST OF EXCEPTIONS rather than a pattern, so adding one is a
+ * decision somebody makes on purpose and reviews. If this set ever grows past two
+ * or three, the page-versus-furniture distinction has become real enough to model
+ * properly instead of enumerating. */
+const NOT_CONTENT = new Set(['404.html']);
+
+const files = fs
+  .readdirSync(REPO)
+  .filter((f) => f.endsWith('.html') && !NOT_CONTENT.has(f))
+  .sort();
 
 const problems = [];
 const fail = (kind, detail) => problems.push({ kind, detail });

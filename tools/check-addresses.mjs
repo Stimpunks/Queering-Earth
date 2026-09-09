@@ -48,7 +48,15 @@
  * With `--live`, additionally, over the network:
  *
  * 7. every extensionless address answers 200;
- * 8. every `.html` twin answers 301 to it, in ONE hop, no chain and no loop.
+ * 8. every `.html` twin answers 301 to it, in ONE hop, no chain and no loop;
+ * 9. an address that does not exist answers 404 AND serves OUR page, not Netlify's
+ *    default. This is the only way to catch `404.html` being deleted or renamed:
+ *    the site keeps working, the status stays correct, and the reader silently
+ *    leaves the herbarium for a teal Netlify page.
+ * 10. `/404` and `/404.html` do NOT answer 200. An error page reachable at its own
+ *    address with a success status is a SOFT 404 — the exact fault the spec's
+ *    error-pages item leads with, and one we would otherwise have introduced by
+ *    fixing the page.
  *
  * `--live` is opt-in because the default gate must stay offline and browser-free.
  * A redirect loop is the way this fix fails, so run `--live` after deploying it.
@@ -69,9 +77,14 @@ const gating = !args.includes('--no-gate');
 const problems = [];
 const fail = (kind, detail) => problems.push({ kind, detail });
 
+/* The error page has no address, so it takes no redirect rule and no sitemap entry.
+ * It is not exempt from being CHECKED — see the ERROR PAGE section below, which is
+ * stricter about it than the rule it is excused from. */
+const NOT_ADDRESSED = new Set(['404']);
+
 const files = (await readdir(ROOT)).filter((f) => f.endsWith('.html')).sort();
 const pages = files.map((f) => f.replace(/\.html$/, ''));
-const sheets = pages.filter((p) => p !== 'index');
+const sheets = pages.filter((p) => p !== 'index' && !NOT_ADDRESSED.has(p));
 
 // ── the redirect table ────────────────────────────────────────────────────────
 const redirects = await readFile(join(ROOT, '_redirects'), 'utf8');
@@ -109,6 +122,12 @@ for (const r of rules) {
   if (m && !pages.includes(m[1])) fail('stale', `${r.from} has a rule but no such page exists`);
 }
 
+// ── the error page ───────────────────────────────────────────────────────────
+// Netlify falls back to its own default the moment this file is gone, and nothing
+// else here would notice: every address still resolves and every status is right.
+if (!files.includes('404.html'))
+  fail('errorpage', '404.html is missing — Netlify will serve its own default page');
+
 // ── the markup ────────────────────────────────────────────────────────────────
 for (const f of files) {
   const s = await readFile(join(ROOT, f), 'utf8');
@@ -143,6 +162,22 @@ if (live) {
         fail('live', `/${p}.html -> ${twin.location} -> ${hop.status}: chain or loop, not a single hop`);
     }
   }
+  // An address that cannot exist must answer 404 with OUR page.
+  probed += 3;
+  const missUrl = `${ORIGIN}/no-such-sheet-${Date.now()}`;
+  const miss = await fetch(missUrl, { redirect: 'manual' });
+  if (miss.status !== 404) fail('live', `a nonexistent address answered ${miss.status}, expected 404`);
+  const body = await miss.text();
+  if (!body.includes('No such sheet'))
+    fail('live', 'a nonexistent address did not serve our 404 page — Netlify default is back');
+
+  // ...and the error page must not be a soft 404 at its own path.
+  for (const at of ['/404', '/404.html']) {
+    const r = await head(ORIGIN + at);
+    if (r.status === 200)
+      fail('live', `${at} answered 200 — an error page served as a success is a soft 404`);
+  }
+
   probed += 2;
   const root = await head(`${ORIGIN}/`);
   if (root.status !== 200) fail('live', `/ answered ${root.status}, expected 200`);
@@ -163,6 +198,7 @@ for (const [kind, label] of [
   ['unforced', 'rules missing the forcing !'],
   ['wrong', 'rules pointing at the wrong target'],
   ['stale', 'rules for pages that do not exist'],
+  ['errorpage', 'custom error page missing'],
   ['extension', 'internal addresses carrying .html'],
   ['asset', 'root-relative asset references'],
   ['live', 'served-site disagreements'],
