@@ -130,6 +130,58 @@ on both her domains. **Never edited from this repo.**
 
 ## Settled
 
+### One embedded recording, and the privacy page it cost (2026-09-09)
+
+Ryan asked for a click-to-load embed of Eliot reading *The Waste Land*, under the lilac,
+because he and Helen listen to it together. Built, with the whole cost stated.
+
+**What it broke.** `/privacy` claimed, in five places, that the site makes no
+third-party requests — including the line "It was the only one," written that morning
+about the Google fonts. **A privacy policy is a binding statement of practice**, so all
+five moved in the same commit that made them false. The replacement is not a smaller
+boast, it is a more precise claim: *reading* a page reaches nobody, and there is exactly
+one place you can choose to reach somebody.
+
+**The design: a facade, not an embed.** The served page holds a poster we drew and a
+plain link. Nothing touches Google until a press. Measured, not asserted — non-local
+hosts contacted on load: `[]`; after the press: exactly `www.youtube-nocookie.com`.
+YouTube's own thumbnail was refused because it would be a request to `i.ytimg.com` on
+every load, which is the Google-fonts failure in a hat.
+
+**A third script, for the reason there was a second.** `queering.js` may never put
+content on a page; this script's entire job is to put *somebody else's* content on one.
+That is the strongest possible version of what the boundary prohibits, so it got its own
+file rather than a widened boundary — the same call `queering-search.js` got.
+
+**`youtube-nocookie.com` is not anonymity and the page says so.** It does not set
+advertising cookies on load. The IP address still reaches Google. "No cookies" and "no
+tracking" are different claims and only the first is made.
+
+**What is unresolved, and is Ryan's call, not ours.** The upload is by a channel called
+`tim24frames`. Eliot recorded the poem more than once; **we have not established which
+reading this is, or who holds the recording**, and the channel is unlikely to. Embedding
+is legally distinct from hosting — the bytes come from YouTube and takedowns are theirs
+to honour — but on a site that publishes an attribution ledger, an unattributable
+recording is a genuine wart. The caption says exactly that rather than smoothing it, and
+if the upload disappears the facade degrades to a dead link rather than a broken page.
+
+### The gate reads our JavaScript now (2026-09-09)
+
+`check-metadata.mjs` enforced "no third-party requests" by scanning HTML attributes.
+**It would have passed this page.** The request lives in a script. A gate that cannot see
+where the failure would occur is a gate that certifies the failure, so it now also:
+
+- requires every third-party origin our own `.js` files mention to be **named** on
+  `/privacy` — not forbidden, named;
+- requires a `data-embed-id` facade to carry a plain link to the same video;
+- forbids an `iframe` in any served page.
+
+All three were made to fail before being believed. The first found a real fault on its
+first run: the script contacts `www.youtube-nocookie.com` and the policy named the bare
+domain. The third fails twice over — `make-markdown.mjs` throws on the unknown tag before
+the new check is reached, so the converter's "teach me or I drop content" rule turns out
+to catch a privacy regression by accident.
+
 ### The lilac bush, and three things it cost (2026-09-09)
 
 Ryan's shrubs, drawn from his photograph, standing above the footer on the home page —

@@ -36,6 +36,40 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## A site that had spent a day removing its only third-party request mounted a YouTube player, and the whole of the work was making that honest
+
+Ryan and Helen listen to Eliot read *The Waste Land* together, and a site about reading things closely is a strange place to make somebody leave in order to hear one. So there is now a recording under the lilac. **It cost a sentence this site had been proud of.** `/privacy` said, of the Google fonts removed that morning, “It was the only one.” That is no longer true, and the honest replacement is not a smaller boast but a more precise claim: *reading* a page makes no third-party request, and there is exactly one place where you can choose to make one.
+
+MountedA facade, not an embed: the served page holds a drawing and a link, and nothing reaches Google until somebody presses play
+
+**Measured rather than asserted.** On load, the set of non-local hosts the page contacts is `\[\]` — empty. After the press it is exactly one, `www.youtube-nocookie.com`, which is the host `/privacy` names. Both figures came out of a headless run reading `performance.getEntriesByType('resource')`, not out of a reading of the source.
+
+**The poster is drawn, not fetched.** YouTube’s own thumbnail would have been a request to `i.ytimg.com` on every page load, before anybody pressed anything — which is exactly the Google-fonts failure this site had just spent a day removing, wearing a different hat. It is a scatter of the same lilac florets as the bush above it.
+
+**Without JavaScript the control is an ordinary link** to the video, and pressing it goes to YouTube. With the script it stops navigating and swaps the player in place. Both are a request the reader chose, which is the same footing as every other outbound link here — and that link is also what survives into the Markdown copy, so an agent reading `/index.md` gets the address rather than a hole where a player was.
+
+**A third script, for the reason there was a second one.** `queering.js` may never put content on a page; this script’s entire job is to put somebody else’s content on one. Widening that boundary to fit would have cost the boundary. It creates no words either — even the player’s accessible name is read from `data-embed-title` in the markup rather than written in the script.
+
+CabinetThe gate now reads our JavaScript, because section 7 looked only at markup and a script is where a third party would actually appear
+
+`check-metadata.mjs` has enforced “no page may fetch from another origin” since the fonts came home, and it did it by scanning HTML attributes. **That check would have reported this page perfectly clean.** The request lives in a script, and a gate that cannot see the place the failure would occur is a gate that certifies the failure. Three assertions were added, and each was **made to fail before being believed**:
+
+**Every third-party origin our own scripts mention must be named on `/privacy`.** Not forbidden — named. Proved by renaming the host on the privacy page and watching the run go red. It found a real fault on its first honest run, too: the script contacts `www.youtube-nocookie.com` and the policy named the bare domain, so the policy was one subdomain away from being wrong about its own site.
+
+**A facade must stay a facade.** An element carrying `data-embed-id` must have a plain link to the same video beside it — that link is the no-script path and the reason the request counts as chosen — and the served page must contain no `iframe` at all. Proved by deleting the link, and again by adding an iframe. The second turns out to fail *twice*: the Markdown converter throws on the unknown tag before the new check is even reached, which is the converter’s “teach me or I will drop content” rule catching a privacy regression by accident.
+
+**The contrast gate caught the other one.** The player’s subtitle was `--qe-moss` on `--qe-paper-deep`: **6.9:1**, clearing WCAG AA and missing the house 7:1 by a tenth. That is the same surface this site already removed a recessed panel over, and it is the third time `--qe-paper-deep` has done this. The line is `--qe-ink` now, and the hierarchy is carried by size and weight, which is what should have carried it in the first place.
+
+Label correctedFive statements on the privacy page stopped being true on the same afternoon, and all five were corrected in the change that broke them
+
+The absolute claim appeared in the lede, in the deliberately-not-here list, in the JSON-LD description and in three social descriptions. **A privacy policy is a binding statement of practice**, so a change that makes one false and fixes it next week has published a false one for a week. All of them moved in the same commit, and the page gained [a section of its own](https://queering.earth/privacy#the-embed) describing what pressing play actually costs.
+
+**What that section refuses to say is the part worth noting.** `youtube-nocookie.com` is Google’s privacy-enhanced player domain and it does not set advertising cookies on load. It is *not* anonymous: the IP address still reaches Google. “No cookies” and “no tracking” are different claims, and describing the first as the second is the sort of comfortable imprecision this page exists to avoid. It says so in those words.
+
+This is the second time the finding aid’s lesson has been applied — a page that binds us is a page to re-check against the code every time the code grows a capability — and the first time the *gate* was extended rather than just the prose. A claim only a human remembers is a claim that will eventually be false.
+
+2026 · 9 September
+
 ## A lilac bush from Ryan’s own yard, standing above the footer, and the song under it belongs to a man almost nobody names
 
 Drawn from a photograph of the shrubs in Ryan’s garden, and mounted because the site had just borrowed a colour and had nothing of the actual plant in it. It closes the home page the way a plate closes a chapter. Ezra Furman, whose song gave the site those two colours, has said what they are for: “So I wrote this theme song for us, and gave us some gang colors: lilac and black.” Us, there, is trans women, and the statement around that sentence is about being ready to defend one another’s lives. [Furman, in *Clash*](https://www.clashmusic.com/news/ezra-furmans-lilac-and-black-is-a-trans-rallying-cry/). The flower on this page is not a decoration borrowed from a song; it is the plant the colours were named after, growing in somebody’s yard.

@@ -2,7 +2,7 @@
 title: "What this site knows about you"
 url: "https://queering.earth/privacy"
 updated: "2026-09-09"
-description: "Almost nothing, and here is the whole of it: two view preferences your own browser keeps, and the server log our host writes. No analytics, no cookies, no third-party requests, no forms."
+description: "Almost nothing, and here is the whole of it: two view preferences your own browser keeps, and the server log our host writes. No analytics, no cookies, no forms, and one embedded recording that fetches nothing until you press play."
 licence: "CC-BY-SA-4.0"
 licence_url: "https://creativecommons.org/licenses/by-sa/4.0/"
 attribution_ledger: "https://github.com/Stimpunks/Queering-Earth/blob/main/ATTRIBUTIONS.md"
@@ -15,7 +15,7 @@ generated_by: "tools/make-markdown.mjs from the page's own <main> landmark"
 
 Almost nothing, and this is the whole of it.
 
-This is the privacy policy, and it is short because there is little to describe. This site is a folder of files on a web host. It runs no analytics, sets no cookies, has no accounts, no comments, and no advertising, and it makes **no requests to anybody else’s server**. There is one field on the whole site, on [the finding aid](https://queering.earth/search), and it never submits anywhere — see below. Two things nevertheless happen when you read a page, and both are below.
+This is the privacy policy, and it is short because there is little to describe. This site is a folder of files on a web host. It runs no analytics, sets no cookies, has no accounts, no comments, and no advertising. **Reading it makes no request to anybody else’s server** — there is exactly one place where you can choose to make one, a recording on the home page that fetches nothing until you press play, and it has [its own section below](#the-embed). There is one field on the whole site, on [the finding aid](https://queering.earth/search), and it never submits anywhere. Two things nevertheless happen when you read a page, and both are below.
 
 Last updated 9 September 2026. Any change to this page gets an entry in [the accession register](https://queering.earth/changelog), the same as a correction to a sheet — so “we may update this policy from time to time” is not something we have to ask you to accept on trust.
 
@@ -43,7 +43,7 @@ We do not use those logs for analytics and we do not build anything from them. T
 
 - **No analytics of any kind.** No page-view counter, no tag manager, no heatmap, no session recording. We do not know how many people read this.
 - **No cookies.** The word `document.cookie` does not appear anywhere in this site’s code, which is why there is no consent banner: there is nothing to consent to, and a banner would be theatre.
-- **No third-party requests.** Until 9 September 2026 the pages loaded their two typefaces from Google’s font CDN, which told Google your IP address and user agent on every page load, before you had read a word. **The fonts are now served from this domain** and that request is gone. It was the only one.
+- **No third-party requests you did not ask for.** Until 9 September 2026 the pages loaded their two typefaces from Google’s font CDN, which told Google your IP address and user agent on every page load, before you had read a word. **The fonts are now served from this domain** and that request is gone. Nothing on this site now reaches another server on its own account. The one thing that *can* reach another server needs a press first, and is described [below](#the-embed). Until this line said “it was the only one”, which stopped being true the day the recording was mounted; the line was corrected in the same change, [in the register](https://queering.earth/changelog#a-2026-09-09-embed).
 - **No accounts and no comments**, and **nothing that submits**. There is exactly one place on this site to type: the search field on [the finding aid](https://queering.earth/search). It has no server behind it. What you type is matched against a file your browser has already downloaded, inside your browser, and it is never sent anywhere — not to us, because there is no us to send it to. Until 9 September 2026 this line said there was nowhere on the site to type anything at all; the field is new and the line was corrected in the same change that added it, which is [in the register](https://queering.earth/changelog#a-2026-09-09-search).
 - **No advertising, and nothing sold or shared.** There is no commercial arrangement here to share anything under.
 
@@ -56,6 +56,20 @@ We do not use those logs for analytics and we do not build anything from them. T
 Nothing about a search is remembered. There is no history of recent searches, nothing added to local storage, and the two values described at the top of this page are still the only two things this site stores.
 
 One thing worth being plain about, since it is the general case and not ours: **your browser’s own address bar may remember the address, fragment and all.** That is your browser’s history on your own device, not something this site does or can see — but on a shared machine it is the copy that would tell somebody what you looked up.
+
+## The one embedded thing
+
+At the foot of [the home page](https://queering.earth/) there is a recording of T. S. Eliot reading *The Waste Land*. It is hosted on YouTube, which is Google, and it is the only place on this site where another company can learn anything about you.
+
+**Nothing is fetched from it until you press play.** What the page actually contains is a picture we drew and a link. No YouTube script, no YouTube thumbnail, no invisible pixel, no `preconnect` hint — a reader who never presses play makes exactly the same requests as a reader of any other page here, which is to say requests to this domain and no other. That is checked by `tools/check-metadata.mjs` on every run, and the check reads our JavaScript as well as our markup, because a script that quietly reaches a third party would otherwise make this paragraph false while every page looked clean.
+
+**What happens if you do press it.** Your browser asks `www.youtube-nocookie.com` for a video player, and Google learns your IP address, your user-agent string, and which video you asked for. It is told that you arrived from `queering.earth` and is *not* told which page you were on, because of the referrer policy described below. From that moment Google’s privacy policy applies to that player, not ours, and we have no visibility into it and no arrangement with them.
+
+**Why `www.youtube-nocookie.com` and what it does not mean.** It is Google’s own privacy-enhanced player domain, and it does not set advertising cookies on load the way the ordinary embed does. It is *not* anonymous, and we are not going to describe it as though it were: your IP address still reaches Google, and Google is still able to record that a request was made. “No cookies” and “no tracking” are different claims and only the first one is being made here.
+
+**Without JavaScript the link is just a link.** The play control is an ordinary link to the video, upgraded by a small script into something that opens the player in place. Turn scripts off and pressing it takes you to YouTube instead, which is the same choice by a more obvious route. Either way it is a request you made.
+
+**Why it is here at all, given the rest of this page.** Because Ryan and Helen listen to that recording together, and a site about reading things closely is a strange place to make you leave in order to hear one. The cost is stated rather than hidden, it costs nothing until you choose to pay it, and if that trade is not one you want, the poem itself is [quoted on the page](https://queering.earth/#queering-is-a-verb) in text and the reading is [a link you can follow on your own terms](https://www.youtube.com/watch?v=CqvhMeZ2PlY).
 
 ## Links to other places
 

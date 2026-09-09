@@ -126,3 +126,11 @@ Specimen — the lilacs
 T. S. Eliot, [*The Waste Land*](https://www.poetryfoundation.org/poems/47311/the-waste-land), lines 1–4 (1922). Public domain in the United States; wording checked against [Project Gutenberg’s transcription](https://www.gutenberg.org/ebooks/1321) of the 1922 text.
 
 *Syringa vulgaris*, the common lilac, drawn from the shrubs in Ryan’s yard. *Lilac Wine* is James Shelton’s, written in 1950 for the revue *Dance Me a Song*; the readings that stayed with us are [Nina Simone’s](https://en.wikipedia.org/wiki/Wild_Is_the_Wind_(Nina_Simone_album)) on *Wild Is the Wind* (1966) and [Jeff Buckley’s](https://en.wikipedia.org/wiki/Grace_(Jeff_Buckley_album)) on *Grace* (1994). One song, read three ways — which is this site’s method, sung.
+
+Helen listens to Eliot read *The Waste Land* often, in what she calls “his dull but strangely calming tone”. Here he is.
+
+[  Play the recording T.S. Eliot reads *The Waste Land* · on YouTube ](https://www.youtube.com/watch?v=CqvhMeZ2PlY)
+
+Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
+
+Uploaded by [tim24frames](https://www.youtube.com/@tim24frames). Eliot recorded the poem more than once, and we have not established which reading this is or who holds the recording — so it is somebody else’s copy of somebody else’s tape, linked and labelled as exactly that.

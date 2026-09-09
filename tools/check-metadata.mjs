@@ -243,6 +243,47 @@ for (const f of [...files, '404.html']) {
   }
 }
 
+/* ── 7b. the click-to-load embed, and the scripts ──────────────────────────────
+ * Section 7 reads MARKUP, which is exactly the wrong place to look once a page can
+ * reach a third party from JavaScript instead. `/privacy` now describes one embedded
+ * recording and says in terms that this check reads our scripts as well as our pages;
+ * a claim about this code that only a human remembers is a claim that will eventually
+ * be false, which is the whole argument for section 7 in the first place.
+ *
+ * Two things are asserted, and they are the two that keep that page honest:
+ *
+ *   - EVERY THIRD-PARTY ORIGIN OUR OWN SCRIPTS MENTION MUST BE NAMED ON /privacy.
+ *     Not forbidden — named. The point was never that no request may ever happen; it
+ *     is that the policy must describe the ones that can.
+ *   - A FACADE MUST STAY A FACADE. An element carrying data-embed-id has to have a
+ *     real link to the same video beside it — that link is the no-JavaScript path and
+ *     the reason the request counts as one the reader chose — and the served page must
+ *     contain no iframe at all. An iframe in the markup is a request made on the
+ *     reader's behalf before they have pressed anything, which is the Google-fonts
+ *     failure wearing a different hat. */
+{
+  const privacy = await readFile(join(ROOT, 'privacy.html'), 'utf8');
+  const scripts = (await readdir(ROOT)).filter((f) => f.endsWith('.js')).sort();
+  for (const f of scripts) {
+    const js = await readFile(join(ROOT, f), 'utf8');
+    for (const m of js.matchAll(/https?:\/\/([a-z0-9.-]+)/gi)) {
+      const host = m[1].toLowerCase();
+      if (host === 'queering.earth' || host.endsWith('.queering.earth')) continue;
+      if (!privacy.includes(host))
+        fail('thirdparty', `${f} can reach ${host}, and /privacy does not name it`);
+    }
+  }
+  for (const f of files) {
+    const html = await readFile(join(ROOT, f), 'utf8');
+    for (const m of html.matchAll(/data-embed-id="([^"]+)"/g)) {
+      if (!html.includes(`youtube.com/watch?v=${m[1]}`))
+        fail('thirdparty', `${f} has a click-to-load facade for ${m[1]} with no plain link to it — that link is the no-script path`);
+    }
+    if (/<iframe\b/.test(html))
+      fail('thirdparty', `${f} contains an iframe in the served markup — an embed here must load on a press, not on arrival`);
+  }
+}
+
 /* ── 8. the self-hosted faces ─────────────────────────────────────────────────── */
 try {
   const fonts = JSON.parse(await readFile(join(ROOT, 'tools', 'font-files.json'), 'utf8'));

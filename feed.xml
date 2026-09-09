@@ -9,6 +9,15 @@
     <copyright>CC BY-SA 4.0</copyright>
     <lastBuildDate>Wed, 09 Sep 2026 12:00:00 GMT</lastBuildDate>
     <item>
+      <title>A site that had spent a day removing its only third-party request mounted a YouTube player, and the whole of the work was making that honest</title>
+      <link>https://queering.earth/changelog#a-2026-09-09-embed</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-embed</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: A facade, not an embed: the served page holds a drawing and a link, and nothing reaches Google until somebody presses play
+Cabinet: The gate now reads our JavaScript, because section 7 looked only at markup and a script is where a third party would actually appear
+Label corrected: Five statements on the privacy page stopped being true on the same afternoon, and all five were corrected in the change that broke them</description>
+    </item>
+    <item>
       <title>A lilac bush from Ryan’s own yard, standing above the footer, and the song under it belongs to a man almost nobody names</title>
       <link>https://queering.earth/changelog#a-2026-09-09-lilac</link>
       <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-lilac</guid>

@@ -189,8 +189,44 @@
 
   <div class="qe-register">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-09-lilac">
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-embed">
       <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <h2 id="a-2026-09-09-embed">A site that had spent a day removing its only third-party request mounted a YouTube player, and the whole of the work was making that honest <a class="qe-anchor" href="#a-2026-09-09-embed"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Ryan and Helen listen to Eliot read <cite>The Waste Land</cite> together, and a site about reading things closely is a strange place to make somebody leave in order to hear one. So there is now a recording under the lilac. <strong>It cost a sentence this site had been proud of.</strong> <code>/privacy</code> said, of the Google fonts removed that morning, <q>It was the only one.</q> That is no longer true, and the honest replacement is not a smaller boast but a more precise claim: <em>reading</em> a page makes no third-party request, and there is exactly one place where you can choose to make one.</p>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="index">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">A facade, not an embed: the served page holds a drawing and a link, and nothing reaches Google until somebody presses play</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Measured rather than asserted.</strong> On load, the set of non-local hosts the page contacts is <code>[]</code> &mdash; empty. After the press it is exactly one, <code>www.youtube-nocookie.com</code>, which is the host <code>/privacy</code> names. Both figures came out of a headless run reading <code>performance.getEntriesByType('resource')</code>, not out of a reading of the source.</p>
+          <p><strong>The poster is drawn, not fetched.</strong> YouTube&rsquo;s own thumbnail would have been a request to <code>i.ytimg.com</code> on every page load, before anybody pressed anything &mdash; which is exactly the Google-fonts failure this site had just spent a day removing, wearing a different hat. It is a scatter of the same lilac florets as the bush above it.</p>
+          <p><strong>Without JavaScript the control is an ordinary link</strong> to the video, and pressing it goes to YouTube. With the script it stops navigating and swaps the player in place. Both are a request the reader chose, which is the same footing as every other outbound link here &mdash; and that link is also what survives into the Markdown copy, so an agent reading <code>/index.md</code> gets the address rather than a hole where a player was.</p>
+          <p><strong>A third script, for the reason there was a second one.</strong> <code>queering.js</code> may never put content on a page; this script&rsquo;s entire job is to put somebody else&rsquo;s content on one. Widening that boundary to fit would have cost the boundary. It creates no words either &mdash; even the player&rsquo;s accessible name is read from <code>data-embed-title</code> in the markup rather than written in the script.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The gate now reads our JavaScript, because section 7 looked only at markup and a script is where a third party would actually appear</span></div>
+        <div class="qe-entry-body">
+          <p><code>check-metadata.mjs</code> has enforced <q>no page may fetch from another origin</q> since the fonts came home, and it did it by scanning HTML attributes. <strong>That check would have reported this page perfectly clean.</strong> The request lives in a script, and a gate that cannot see the place the failure would occur is a gate that certifies the failure. Three assertions were added, and each was <strong>made to fail before being believed</strong>:</p>
+          <p><strong>Every third-party origin our own scripts mention must be named on <code>/privacy</code>.</strong> Not forbidden &mdash; named. Proved by renaming the host on the privacy page and watching the run go red. It found a real fault on its first honest run, too: the script contacts <code>www.youtube-nocookie.com</code> and the policy named the bare domain, so the policy was one subdomain away from being wrong about its own site.</p>
+          <p><strong>A facade must stay a facade.</strong> An element carrying <code>data-embed-id</code> must have a plain link to the same video beside it &mdash; that link is the no-script path and the reason the request counts as chosen &mdash; and the served page must contain no <code>iframe</code> at all. Proved by deleting the link, and again by adding an iframe. The second turns out to fail <em>twice</em>: the Markdown converter throws on the unknown tag before the new check is even reached, which is the converter&rsquo;s <q>teach me or I will drop content</q> rule catching a privacy regression by accident.</p>
+          <p><strong>The contrast gate caught the other one.</strong> The player&rsquo;s subtitle was <code>--qe-moss</code> on <code>--qe-paper-deep</code>: <strong>6.9:1</strong>, clearing WCAG AA and missing the house 7:1 by a tenth. That is the same surface this site already removed a recessed panel over, and it is the third time <code>--qe-paper-deep</code> has done this. The line is <code>--qe-ink</code> now, and the hierarchy is carried by size and weight, which is what should have carried it in the first place.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">Five statements on the privacy page stopped being true on the same afternoon, and all five were corrected in the change that broke them</span></div>
+        <div class="qe-entry-body">
+          <p>The absolute claim appeared in the lede, in the deliberately-not-here list, in the JSON-LD description and in three social descriptions. <strong>A privacy policy is a binding statement of practice</strong>, so a change that makes one false and fixes it next week has published a false one for a week. All of them moved in the same commit, and the page gained <a href="/privacy#the-embed">a section of its own</a> describing what pressing play actually costs.</p>
+          <p><strong>What that section refuses to say is the part worth noting.</strong> <code>youtube-nocookie.com</code> is Google&rsquo;s privacy-enhanced player domain and it does not set advertising cookies on load. It is <em>not</em> anonymous: the IP address still reaches Google. <q>No cookies</q> and <q>no tracking</q> are different claims, and describing the first as the second is the sort of comfortable imprecision this page exists to avoid. It says so in those words.</p>
+          <p>This is the second time the finding aid&rsquo;s lesson has been applied &mdash; a page that binds us is a page to re-check against the code every time the code grows a capability &mdash; and the first time the <em>gate</em> was extended rather than just the prose. A claim only a human remembers is a claim that will eventually be false.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-lilac">
+      <p class="qe-accession-date">2026 &middot; 9 September</p>
       <h2 id="a-2026-09-09-lilac">A lilac bush from Ryan&rsquo;s own yard, standing above the footer, and the song under it belongs to a man almost nobody names <a class="qe-anchor" href="#a-2026-09-09-lilac"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Drawn from a photograph of the shrubs in Ryan&rsquo;s garden, and mounted because the site had just borrowed a colour and had nothing of the actual plant in it. It closes the home page the way a plate closes a chapter. Ezra Furman, whose song gave the site those two colours, has said what they are for: <q>So I wrote this theme song for us, and gave us some gang colors: lilac and black.</q> Us, there, is trans women, and the statement around that sentence is about being ready to defend one another&rsquo;s lives. <a href="https://www.clashmusic.com/news/ezra-furmans-lilac-and-black-is-a-trans-rallying-cry/">Furman, in <cite>Clash</cite></a>. The flower on this page is not a decoration borrowed from a song; it is the plant the colours were named after, growing in somebody&rsquo;s yard.</p>

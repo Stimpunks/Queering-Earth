@@ -89,6 +89,7 @@ const COUPLED = new Map([
   ['/queering.css', 'the palette, the layout and every class name the sheets use'],
   ['/queering.js', 'derives the contents list and the sheet index from the markup it is given'],
   ['/queering-search.js', 'clones result templates authored in search.html'],
+  ['/queering-embed.js', 'reads the facade\'s data-embed-* attributes out of index.html'],
   ['/search-index.json', 'derived from the sheets; a stale copy can quote a sentence no longer on the page it cites'],
 ]);
 const DECOUPLED = new Map([

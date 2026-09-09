@@ -373,13 +373,35 @@ disclosed each reader's IP address and user agent to Google **before a word was 
 the only third-party request the site made, and the pattern a Munich court ruled against
 in 2022.
 
-**`/privacy` claims there are no third-party requests, so `check-metadata.mjs` enforces
-it.** A privacy policy is a binding statement of practice; a claim about this code that
+**`/privacy` describes exactly what this site can reach, so `check-metadata.mjs`
+enforces it.** A privacy policy is a binding statement of practice; a claim about this code that
 only a human remembers is a claim that will eventually be false. The gate reads the
 attributes that make a browser *fetch* — `link rel=stylesheet|preconnect|preload`,
 `script src`, `img`, `source`, `iframe` — and **exempts `<a href>`**, because a link the
 reader chooses to follow is not a request the page made. On a site that cites everything,
 that distinction is the whole difference between a usable gate and a useless one.
+
+**Since 2026-09-09 there is exactly ONE thing here that can reach a third party**, and it
+is opt-in: a click-to-load recording of Eliot at the foot of the home page. The served
+markup holds a poster we drew and a plain link; `queering-embed.js` upgrades that link
+into a player on a press. Four rules hold it honest, and **the gate now enforces three of
+them because section 7 read only markup and would have passed this page**:
+
+- **Every third-party origin our own scripts mention must be NAMED on `/privacy`.** Not
+  forbidden — named. It caught a real fault immediately: the script contacts
+  `www.youtube-nocookie.com` and the policy named the bare domain.
+- **A `data-embed-id` facade must carry a plain link to the same video**, which is the
+  no-script path and the reason the request counts as one the reader chose.
+- **No `iframe` in any served page.** An iframe in the markup is a request made on the
+  reader's behalf before they pressed anything.
+- **The poster is drawn, never fetched.** YouTube's thumbnail would be a request to
+  `i.ytimg.com` on every load — the Google-fonts failure wearing a hat.
+
+**A capability that binds the privacy page is a capability that must move the privacy
+page in the SAME commit.** Five statements there stopped being true the afternoon this
+shipped, including "It was the only one," and a policy that is false for a week has been
+published false for a week. `/privacy` also refuses to call `youtube-nocookie.com`
+anonymous, because it is not: no cookies and no tracking are different claims.
 
 **Identical coverage, one fewer party.** All three subsets Google served are kept, with
 Google's own `unicode-range` values, so glyph coverage did not change — verified by

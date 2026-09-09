@@ -277,6 +277,27 @@ the quotation mark.
 **Whose association it is.** Helen Edgar's — she hears these lines the instant anybody
 says *lilac*, and said so while the drawing was being made. The page says that.
 
+**The recording, added 2026-09-09.** The home page now carries a click-to-load embed of
+Eliot reading the poem —
+[uploaded to YouTube by `tim24frames`](https://www.youtube.com/watch?v=CqvhMeZ2PlY),
+title *T.S. Eliot reads: The Waste Land*, confirmed via YouTube's oEmbed endpoint on
+2026-09-09.
+
+**This one is not verified and is labelled as unverified on the page.** Eliot recorded
+*The Waste Land* more than once, across the 1930s and 1940s. **We have not established
+which reading this is**, and we have no reason to think the uploading channel holds any
+right in it. The poem's *text* is public domain in the US; a mid-century *sound
+recording* of it generally is not, and the two are separate rights that this ledger
+should not be seen to conflate.
+
+It is embedded rather than hosted — the bytes come from YouTube, and a takedown is
+YouTube's to honour — and the caption on the page says plainly that it is somebody
+else's copy of somebody else's tape. That is the honest description available, and it is
+deliberately not dressed up as provenance. **If the upload disappears, the page degrades
+to a dead link rather than a false claim**, which is the right way round.
+
+The decision to carry it anyway is Ryan's and is recorded in `DECISIONS.md`.
+
 ----
 
 ### Christina Rossetti — *Promises like Pie-crust*, and the colon at line 20

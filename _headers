@@ -163,8 +163,14 @@
 /queering-search.js
   Cache-Control: public, max-age=0, must-revalidate
 
+# queering-embed.js reads data-embed-id and data-embed-title out of index.html, so it is
+# markup-coupled for exactly the reason the other two scripts are: a stale copy could point
+# the player at a video the page no longer names. Same policy, same fate.
+/queering-embed.js
+  Cache-Control: public, max-age=0, must-revalidate
+
 # ── The faces ─────────────────────────────────────────────────────────────────
-# Self-hosted since 2026-09-09 so the site makes no third-party request. The type is
+# Self-hosted since 2026-09-09 so that reading a page makes no third-party request. The type is
 # set explicitly rather than trusted: production sends nosniff, and a font served as
 # application/octet-stream does not render — the same trap the .avif plates nearly
 # walked into.

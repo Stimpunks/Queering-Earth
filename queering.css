@@ -804,6 +804,106 @@ html.plain .qe-botanical { opacity: 0.85; }
    circle in line, and the tone carried by how densely they overlap rather than by
    ink coverage. The three fills would otherwise print as three flat greys, and the
    design sheet's claim that these drawings print as line work would stop being true. */
+/* ─────────────────────────────────────────────── the one embedded thing
+ *
+ * A click-to-load player for Eliot reading The Waste Land, under the lilac. It is the
+ * only place on this site where a third party can be reached, and it reaches one ONLY
+ * when the reader presses play — the served page holds a poster we drew and a plain
+ * link, and nothing else.
+ *
+ * THE SURFACE IS RULED: an object mounted here, and not ours. That is the one tier
+ * decision this component makes, and it is the correct one — the reader should be able
+ * to tell at a glance that the thing inside the box came from somewhere else.
+ *
+ * The poster is drawn, not fetched. YouTube's own thumbnail would have been one request
+ * to i.ytimg.com on every page load, before anybody pressed anything, which is precisely
+ * the Google-fonts failure this site spent a day removing.
+ */
+
+.qe-embed {
+  margin: var(--qe-space-5) auto var(--qe-space-6);
+  max-width: 34rem;
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-radius: var(--qe-corner-b);
+  padding: var(--qe-space-3);
+}
+
+/* 16:9, held by the box so the swap from poster to player does not move the page. */
+.qe-embed-stage {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--qe-paper-deep);
+  border-radius: var(--qe-corner-chip);
+  overflow: hidden;
+}
+.qe-embed-frame { width: 100%; height: 100%; border: 0; display: block; }
+
+.qe-embed-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.qe-embed-go {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--qe-space-1);
+  text-decoration: none;
+  color: var(--qe-ink);
+  font-family: var(--qe-display);
+  font-size: 1.05rem;
+  text-align: center;
+  padding: var(--qe-space-2);
+}
+.qe-embed-go:hover .qe-embed-label,
+.qe-embed-go:focus-visible .qe-embed-label { text-decoration: underline; }
+.qe-embed-go:focus-visible { outline: 3px solid var(--qe-rust); outline-offset: -3px; }
+.qe-embed-label { font-weight: 600; }
+/* INK, NOT MOSS, AND THE GATE IS WHY. --qe-paper-deep is the surface this site already
+   removed a recessed panel over: moss on it measures 6.9:1, which clears WCAG AA and
+   misses the house 7:1, and check-contrast --check reported both this line and the cite
+   inside it as UNDER before either shipped. The hierarchy is carried by size and weight
+   instead of by colour, which is what should have carried it anyway. */
+.qe-embed-who { font-family: var(--qe-body); font-size: 0.9rem; color: var(--qe-ink); }
+
+/* The note naming the third party sits OUTSIDE the control, because it is a statement
+   of fact about the page and not a label on a button. */
+.qe-embed-note {
+  font-family: var(--qe-body);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--qe-moss);
+  margin: var(--qe-space-2) 0 0;
+  text-align: center;
+}
+.qe-embed figcaption {
+  font-family: var(--qe-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--qe-moss);
+  margin: var(--qe-space-2) 0 0;
+  text-align: center;
+}
+.qe-embed--playing .qe-embed-note { display: none; }
+
+/* Paper cannot play anything. In print the box states what it is and where it lives,
+   and the address is spelled out because a printed link that cannot be clicked is
+   only useful if you can read it. */
+@media print {
+  .qe-embed { border: 1pt solid #999; background: none; }
+  .qe-embed-stage { aspect-ratio: auto; background: none; }
+  .qe-embed-poster { display: none; }
+  .qe-embed-go { position: static; display: block; color: #222; }
+  .qe-embed-go::after { content: " — " attr(href); font-family: var(--qe-body); font-size: 0.85rem; }
+  .qe-embed-note, .qe-embed figcaption, .qe-embed-who { color: #222; }
+}
+
 @media print {
   .qe-lilac-bush .puff-deep,
   .qe-lilac-bush .puff,
