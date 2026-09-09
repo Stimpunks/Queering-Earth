@@ -139,6 +139,8 @@ Virginia Woolf, *On Being Ill*, The Hogarth Press, 1930.
 
 Not that the flowers care. That they do not, and are therefore not asking anything of you. Nothing in that garden requires you to be upright, on time, or getting better. It is the one relation in the essay with no demand in it — and Woolf finds it, characteristically, at the exact moment she has stopped being able to stand up.
 
+Queering Earth Sheet No. 1 Accessioned 7 Sep 2026
+
 Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09-07-sheets). [Label corrected once](https://queering.earth/changelog#a-2026-09-07-sheets), when Woolf’s two printings were read against each other ahead of the sheet; [re-determined once](https://queering.earth/changelog#a-2026-09-08-wyrd), when the byline rule changed what kind of sheet this is.
 
 
@@ -334,6 +336,8 @@ Socol, I. D. (2009, May 12). *Using “correct language” and “people first.�
 Walker, N. (2021). *Neuroqueer: An introduction*. neuroqueer.com. [https://neuroqueer.com/neuroqueer-an-introduction/](https://neuroqueer.com/neuroqueer-an-introduction/) (Original work published 2015)
 
 Wise, S. J. (2024, September 27). *The neurodiversity smorgasbord: An alternative framework for understanding differences outside of diagnostic labels*. Lived Experience Educator. [https://www.livedexperienceeducator.com/blog/theneurodiversitysmorgasbord](https://www.livedexperienceeducator.com/blog/theneurodiversitysmorgasbord)
+
+Queering Earth Sheet No. 2 Accessioned 7 Sep 2026
 
 Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09-07-sheets). [Label corrected once](https://queering.earth/changelog#a-2026-09-08-labels), when a second text was appended under the essay and the label was still describing one.
 
@@ -598,6 +602,8 @@ Vero, 32, female, queer, LGBTQ+ group, quoted in Huysamen, Hatton and Kourti, 20
 The authors do not resolve that, and neither will this sheet. Vero is not failing to want independence. She wants it, has it, needs paid support to have it, and is frightened by what it may cost her in forty years — because the people around her are still on the escalator, and a life off it is much lonelier than it needs to be when almost nobody else has been told they were allowed to step off. **The scarcity is the problem, not the preference.** That is an argument for more people knowing sooner, which is exactly what the paper asks for, and it is the argument a poem from 1861 has been quietly making from the shelf the whole time.
 
 Let us hold the die uncast.
+
+Queering Earth Sheet No. 3 Accessioned 8 Sep 2026
 
 Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-rossetti). [Label corrected four times](https://queering.earth/changelog#a-2026-09-08-rossetti) on mounting, then [corrected once more and re-determined twice](https://queering.earth/changelog#a-2026-09-08-plates) when the plates changed.
 
@@ -925,6 +931,8 @@ The middle sister is the one holding the bucket. Not what has come to pass, and 
 
 Find out more about [Weird Pride](https://weirdpride.day/), which falls on 4 March, and which Helen observes in July on the grounds that every day is one.
 
+Queering Earth Sheet No. 4 Accessioned 8 Sep 2026
+
 Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-wyrd). [Label corrected four times and re-determined once](https://queering.earth/changelog#a-2026-09-08-wyrd) — the byline first, and on Helen Edgar’s own word.
 
 
@@ -1136,6 +1144,8 @@ Walker, N. (2021). *Neuroqueer heresies: Notes on the neurodiversity paradigm, a
 Waterhouse, J. W. (1916). *Miranda – The Tempest* \[Painting\]. Oil on canvas.
 
 Wikipedia contributors. (n.d.). *Miranda (given name)*. Wikipedia. [https://en.wikipedia.org/wiki/Miranda\_(given\_name)](https://en.wikipedia.org/wiki/Miranda_(given_name))
+
+Queering Earth Sheet No. 5 Accessioned 8 Sep 2026
 
 Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-miranda). [Label corrected once](https://queering.earth/changelog#a-2026-09-08-miranda), for two citations that were wrong before the sheet was ever built.
 
@@ -1425,6 +1435,8 @@ One more thing, and it is about our own method rather than anybody else’s. Pag
 
 Might I but moor.
 
+Queering Earth Sheet No. 6 Accessioned 8 Sep 2026
+
 Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-dickinson). [Label corrected twice and re-determined twice](https://queering.earth/changelog#a-2026-09-08-dickinson) — two scans that agreed with each other and were both wrong, and a missing word.
 
 
@@ -1593,6 +1605,8 @@ One thing we would like to fix and cannot from here
 
 The right plate for the first section is a European sweet violet, *Viola odorata* — the violet of the Mediterranean, not the birdfoot violet of a New York state survey. The plate mounted above is the one we had, and the caption says so rather than letting the genus stand in silently for the species. **If you know of a public-domain *Viola odorata* plate**, it belongs here, and swapping it in is one line of markup and a caption. Say so in [the repository](https://github.com/Stimpunks/Queering-Earth/issues) and it will be.
 
+Queering Earth Sheet No. 7 Accessioned 8 Sep 2026
+
 Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-flowercodes). [Re-determined once](https://queering.earth/changelog#a-2026-09-08-flowercodes): the streak of lavender belongs to Joshua Speed, and only the referent moved.
 
 
@@ -1760,6 +1774,8 @@ What this sheet will not tidy
 - **The biology here is deliberately thin.** Myco-heterotrophy is a mechanism with numbers attached and those belong to our sibling site, which risks a wrong fact where this one risks a wrong attribution. If you want to know how the carbon moves, [go there](https://starstuff.earth/symbioses-field-guide.html).
 
 Dinah Murray spent her last years photographing lichens and mushrooms on the Fife coast — the same kingdom of organisms this plant lives through, attended to closely, for their own sake, by someone who had given the world a word for exactly that kind of attention. Kate Fox called the memorial poem *Monotropa Uniflora*. It was the right name.
+
+Queering Earth Sheet No. 8 Accessioned 9 Sep 2026
 
 Provenance Mounted [9 September 2026](https://queering.earth/changelog#a-2026-09-09-patina). [Label corrected once before it shipped](https://queering.earth/changelog#a-2026-09-09-patina) — a quotation on the essay this sheet follows is credited to the wrong book, and it is credited here to the right one.
 
@@ -2131,6 +2147,40 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Cabinet
 
 2026 · 9 September · latest
+
+## A real herbarium stamps its sheets with an accession number that is a row in a ledger, which is the whole reason this one could have it and most of the work was proving the ink was legal
+
+Prompted by Ryan noticing the oval stamp on a scanned sheet from the Ada Hayden Herbarium at Iowa State University — the institution’s name around the ring, its parent below, and **497892** across the middle. The suggestion was that a faded one would add to the sense of age, and it does. What it cost was a measurement, because *faded* and **7:1** are the same argument from opposite ends.
+
+MountedEvery sheet is stamped, and the fade is on the ring because no colour here can make a letter faint and legal
+
+**The faded look was measured before anything was drawn, and every candidate failed.** `--qe-lichen` is **2.15:1** on paper — the exact figure this repository already uses as the injected value that a contrast run must report as `FAIL`, and the same one the register’s entry bullets sat at unreported. `--qe-verdigris` is 3.42:1. Neither clears 7:1, and neither clears the 4.5:1 large-text floor either, so there is no size at which a pale green letter becomes permissible here.
+
+So the letters are `--qe-moss` at 7.8:1 in daylight and 7.2:1 in the drawer, and **the age is carried entirely by the ring**: two ovals with a wedge lifted out of each, and a few degrees of rotation authored per sheet. That is this cabinet’s standing rule — the colour goes on the rule and never on the glyph — and it turns out to be what a real understamped impression looks like anyway. **The outline breaks long before the letterforms do.** Nothing was given up to get the ink legal.
+
+**The number is real, which is the only reason there is a stamp at all.** Ada Hayden’s 497892 is a row in a ledger somebody can go and read. A six-digit number invented here to look convincing would be a gold join on a sheet nobody corrected — decoration asserting a fact — and it would be the worst possible place for that failure, on a site whose one stated correctness requirement is attribution. What is real here is the sheet’s number and the day it was mounted, both of them entries on this page.
+
+**It says Queering Earth alone.** The obvious move was to name Stimpunks and More Realms the way the Iowa stamp names its parent institution, and two custodians do not fit the oval — at that size the lower line crossed its own ring. The layout is not the argument, though: a stamp asserts a single custodian, this site is a collaboration, and “Queering Earth” is the one name that is true of the whole of it. The two organisations are credited where credit is a sentence rather than a mark.
+
+**No sheet named its own number anywhere inside its landmark before today.** Other sheets’ cards say it, from outside `main` where the mirror cannot see them, and this register says it constantly. So the stamp adds a fact rather than making a second copy of one, and there is no drift surface: it sits in one block with `.qe-provenance`, which states the same accession in words. The stamp is not a link, either. The provenance line beside it already points at the accession that put the sheet up, and a second tab stop landing on the same anchor a few millimetres away goes nowhere new.
+
+CabinetThe washed-out effect is a blend mode, the blend mode erases the stamp in the drawer, and the contrast gate reported it clean
+
+`mix-blend-mode: multiply` is what makes the mark look stamped rather than printed: the sheet’s own foxing comes up through the ink the way it does through a real impression. On the dark ground **it took a mark measuring 7.2:1 down to very nearly nothing** — multiply darkens towards the ground, and in the cabinet the ground is the dark thing. Caught by looking at it in the drawer.
+
+**This is a blind spot in `check-contrast.mjs` and not an oversight in it.** The tool composites computed colour pairs, so it saw `--qe-moss` on `--qe-cab-paper` and reported the figure that pair measures. It has no concept of a blend mode, and it never will without becoming a screenshot differ. It joins the two exemptions already written down: a `::marker`, which is not an element with text of its own, and a texture, which varies luminance per pixel. **A pass is not permission, and this is the third way to earn a false one.**
+
+The fix is a token rather than a second selector, because this is the fourth time that lesson has arrived. `--qe-stamp-blend` is `multiply` in `:root` and `normal` through both ground switches — the same shape the foxed-paper wash, the shadow a lifted sheet casts and the pale flesh of a specimen all ended up in, each of them a property that differs between the grounds and is not a colour. **Two selectors carrying one decision is two selectors that drift.**
+
+**The mark is in flow, at the head of the provenance line, and the corner version was refused.** A stamp belongs in a corner of a real sheet, and an absolutely positioned one lands on the prose — at a narrow width, at 400% zoom, or under a long heading — which nothing in this repository can currently see happen. Star Stuff has `check-overlap` for exactly that, and the house rule is to port a check when the failure it catches becomes possible here. **Not floating the stamp is cheaper than porting the gate**, and the accession block reads better as one object regardless.
+
+CabinetThe finding aid does not index the stamp, which is the masthead decision arriving one component further down
+
+Indexed, eight stamps put eight near-identical records **carrying the site’s own name** into the aid — “Queering Earth Sheet No. 4 Accessioned 8 Sep 2026” — which is most of what a search for “Queering Earth” would then return. That is precisely why `.qe-masthead` is already skipped, and the reasoning transfers without amendment.
+
+**Nothing becomes unfindable.** The provenance line beside each stamp says “Mounted 8 September 2026” in ordinary prose and is indexed; every sheet number is written out across this register’s own entries. A stamp is the sheet restating its accession in the object’s own form, not a new fact to find. It stays in the Markdown sibling, where there is no ranking for it to crowd — an agent reading `/on-being-ill.md` gets the transcription the way a herbarium record would carry it.
+
+2026 · 9 September
 
 ## A cabinet made almost entirely of other people’s sentences grew a search field, which is a machine for trimming other people’s sentences, and most of the work was teaching it when to refuse
 
@@ -3163,7 +3213,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-91 entries across 19 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+94 entries across 20 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

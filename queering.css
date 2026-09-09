@@ -269,6 +269,19 @@
   --qe-fox-c: 78% 96%;
   --qe-fox-d: 4% 82%;
 
+  /* HOW THE ACCESSION STAMP MEETS THE PAPER, and it is not a colour, which is why
+     it is here rather than aliased as one. `multiply` is the whole washed-out
+     effect: the sheet's own foxing comes up through the stamp's ink the way it does
+     through a real impression. On a dark ground multiply darkens towards the
+     ground, so the same declaration takes a mark measuring 7.2:1 down to almost
+     nothing — verified by eye in the drawer before this token existed, because
+     `check-contrast.mjs` composites computed colour pairs and cannot see a blend
+     mode at all. It would have reported the vanished stamp as clean.
+
+     Same lesson the wash, the shade and the flesh each taught: a property that
+     differs between the two grounds is a token, or it is two selectors that drift. */
+  --qe-stamp-blend: multiply;
+
   /* Type. Fraunces carries a WONK axis — letterforms that deviate from the
      norm on purpose. Using it for the display face is not a coincidence. */
   --qe-display: "Fraunces", "Iowan Old Style", Georgia, serif;
@@ -308,6 +321,7 @@
   --qe-cab-wash-c: rgba(228, 155, 137, 0.07);
   --qe-cab-wash-d: rgba(127, 184, 167, 0.06);
   --qe-cab-shade: rgba(0, 0, 0, 0.55);
+  --qe-cab-stamp-blend: normal;  /* see --qe-stamp-blend: multiply erases the mark here */
 }
 
 /* ─────────────────────────────────────────────── the ground switch
@@ -346,6 +360,7 @@
     --qe-wash-c: var(--qe-cab-wash-c);
     --qe-wash-d: var(--qe-cab-wash-d);
     --qe-shade: var(--qe-cab-shade);
+    --qe-stamp-blend: var(--qe-cab-stamp-blend);
   }
 }
 
@@ -369,6 +384,7 @@
     --qe-wash-c: var(--qe-cab-wash-c);
     --qe-wash-d: var(--qe-cab-wash-d);
     --qe-shade: var(--qe-cab-shade);
+    --qe-stamp-blend: var(--qe-cab-stamp-blend);
   }
 }
 
@@ -2325,6 +2341,144 @@ html.plain .qe-correction blockquote { font-variation-settings: normal; }
  * nobody ever corrected is decoration asserting a fact — the same failure as an
  * image of text — and it would make the real mends unfindable.
  */
+
+/* ─────────────────────────────────────────────────────────── the accession stamp
+ *
+ * A herbarium sheet is stamped by the herbarium that holds it: an oval, the
+ * institution's name, and an accession number that is a row in a ledger. This is
+ * the same fact `.qe-provenance` states in words, in the form the object itself
+ * states it, so the two live in one block and the stamp is not a second copy of
+ * anything — no sheet names its own number anywhere else inside its landmark.
+ *
+ * THE NUMBER IS REAL OR THERE IS NO STAMP. A six-digit accession invented to look
+ * convincing is a gold join on a sheet nobody corrected: decoration asserting a
+ * fact. What is real here is the sheet's number and the day it was mounted, both
+ * of them rows in the register — and the provenance line beside it is what links
+ * there, because two links to one accession a few millimetres apart is a second
+ * tab stop that goes nowhere new. A stamp is a mark, not a control.
+ *
+ * THE FADE IS ON THE RULE AND NEVER ON THE GLYPH, which is the house rule and also
+ * how a real understamped impression reads — the outline breaks long before the
+ * letterforms do. Measured before it was drawn: --qe-lichen is 2.15:1 on paper and
+ * --qe-verdigris 3.42:1, so neither clears even the 4.5:1 large-text floor, and no
+ * token on this site can make a letter faint and legal. Every letter is
+ * --qe-moss — 7.8:1 in daylight, 7.2:1 in the drawer — and the age is carried
+ * entirely by the ring: a wedge that did not take, and a few degrees of rotation.
+ *
+ * The ring is a pair of pseudo-elements rather than an outline on the box, because
+ * a real oval stamp has two, and because a mask on a border box is the cheapest
+ * way to lift a wedge out of one. Neither is content and neither is announced.
+ */
+
+/* THE STAMP STACKS ABOVE THE LABEL, and that was a measurement rather than a
+   preference. Beside it, the mark is 207px and the provenance line wants 20rem of
+   its own — 558px against a 34rem measure, so the row wrapped at every width this
+   site actually has. A layout that only ever takes its fallback is two layouts to
+   keep and one to look at. It is also where a real sheet carries the thing: the
+   stamp lands on the paper, and the label is written under it. */
+.qe-accession-block { margin: var(--qe-space-6) 0 0; }
+.qe-accession-block .qe-stamp { margin: 0 0 var(--qe-space-2); }
+.qe-accession-block .qe-provenance { margin: 0; }
+
+.qe-stamp {
+  --qe-stamp-rot: -4deg;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 1.1rem 3.2rem 1.15rem;
+  transform: rotate(var(--qe-stamp-rot));
+  text-align: center;
+  font-family: var(--qe-display);
+  font-variation-settings: "WONK" 0, "SOFT" 40;
+  line-height: 1.2;
+  color: var(--qe-moss);
+  mix-blend-mode: var(--qe-stamp-blend);
+}
+.qe-stamp::before,
+.qe-stamp::after {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--qe-lichen);
+  border-radius: 50%;
+  pointer-events: none;
+  /* The wedges that did not take. Authored angles rather than anything random: a
+     stamp is one object and looks the same every time the page loads. */
+  /* PADDING IS RING CLEARANCE, and the first two attempts at it were measured against
+     the wrong reference. An ellipse narrows fastest at its poles, so what matters is
+     its half-width at the FAR EDGE of the top and bottom line boxes — where the
+     ascenders and descenders actually are — and not at those lines' centres. Measured
+     at the centre the mark looked to have 20px of room; measured at the edge it had
+     MINUS one, and the letters grazed the inner ring in the browser. 1.1rem × 3.2rem
+     clears by 16px, ~11% of the line, which survives a fallback face with wider
+     metrics. It also lands at 2.4:1, which is about the proportion a real oval
+     accession stamp has. */
+  mask-image: conic-gradient(from 8deg, #000 0 14%, transparent 14% 18%,
+    #000 18% 47%, transparent 47% 49%, #000 49% 79%, transparent 79% 84%, #000 84%);
+}
+.qe-stamp::before { inset: 0; }
+.qe-stamp::after {
+  inset: 4px 7px;
+  border-width: 1px;
+  mask-image: conic-gradient(from 200deg, #000 0 31%, transparent 31% 37%, #000 37%);
+}
+
+.qe-stamp-org  { display: block; font-size: 0.66rem; letter-spacing: 0.16em;
+                 text-transform: uppercase; }
+.qe-stamp-no   { display: block; font-size: 1.5rem; font-weight: 600;
+                 letter-spacing: 0.04em; margin: 0.1rem 0 0.05rem; }
+.qe-stamp-date { display: block; font-size: 0.6rem; letter-spacing: 0.13em;
+                 text-transform: uppercase; }
+
+/* PLAIN VIEW IS A STYLESHEET, so the stamp stops being a stamp and stays the same
+   words: three lines become one sentence, and nothing is hidden or substituted.
+   The rotation, the ring and the blend are the decoration and all three go. */
+html.plain .qe-stamp {
+  transform: none;
+  mix-blend-mode: normal;
+  padding: 0;
+  text-align: left;
+  font-family: var(--qe-body);
+}
+html.plain .qe-stamp::before,
+html.plain .qe-stamp::after { display: none; }
+html.plain .qe-stamp-org,
+html.plain .qe-stamp-no,
+html.plain .qe-stamp-date {
+  display: inline;
+  font-size: 1rem;
+  font-weight: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* The impression lands. It is a press, not a growth, so it is the one motion here
+     that is not a stem drawing itself on — and like every other, the reduced state
+     is the finished mark and never a missing one. */
+  .qe-stamp { animation: qe-stamp-press 0.5s var(--qe-ease, ease-out) both; }
+  @keyframes qe-stamp-press {
+    from { transform: rotate(var(--qe-stamp-rot)) scale(1.08); opacity: 0; }
+    to   { transform: rotate(var(--qe-stamp-rot)) scale(1); opacity: 1; }
+  }
+  html.plain .qe-stamp { animation: none; }
+}
+
+@media print {
+  /* A stamped sheet prints stamped: it is the most herbarium thing on the page
+     after the provenance line it sits beside. Lichen is 2.15:1 on paper and worse
+     on white, so on paper the ring is grey and the letters are near-black — the
+     same move the seam makes, for the same reason. No blend: a printer has no
+     foxing to bring up, and multiply over white is a no-op that some drivers
+     rasterise the whole block to reach. No mask either, so the ring prints whole:
+     a broken oval on a printout reads as a printer fault rather than as an
+     impression, and a mask on a border box is exactly the construct a print
+     rasteriser is most likely to drop. This site has already paid once for
+     trusting the print sheet to reach something. */
+  .qe-accession-block { break-inside: avoid; }
+  .qe-stamp { color: #222; mix-blend-mode: normal; }
+  .qe-stamp::before, .qe-stamp::after { border-color: #999; mask-image: none; }
+}
 
 .qe-provenance {
   margin: var(--qe-space-6) 0 0;

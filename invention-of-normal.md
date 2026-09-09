@@ -325,4 +325,6 @@ The middle sister is the one holding the bucket. Not what has come to pass, and 
 
 Find out more about [Weird Pride](https://weirdpride.day/), which falls on 4 March, and which Helen observes in July on the grounds that every day is one.
 
+Queering Earth Sheet No. 4 Accessioned 8 Sep 2026
+
 Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-wyrd). [Label corrected four times and re-determined once](https://queering.earth/changelog#a-2026-09-08-wyrd) — the byline first, and on Helen Edgar’s own word.

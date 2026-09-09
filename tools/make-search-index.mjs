@@ -82,7 +82,17 @@ const SKIP_CLASS = new Set(['qe-anchor', 'qe-sr', 'qe-contents', 'qe-sheet-index
      navigation, which is the one thing this landmark is supposed not to contain. The
      herbarium label BELOW the masthead stays in, because Specimen, Maker and First
      printed are facts about the object and among the best things to search for. */
-  'qe-masthead']);
+  'qe-masthead',
+  /* THE ACCESSION STAMP IS THE MASTHEAD FAILURE AGAIN, one component further down.
+     Indexed, it puts eight near-identical records carrying the site's own name into
+     the aid — "Queering Earth Sheet No. 4 Accessioned 8 Sep 2026" — which is what a
+     search for "Queering Earth" would then mostly return. Nothing is lost, for the
+     same reason the masthead loses nothing: the provenance line it sits beside says
+     "Mounted 8 September 2026" in ordinary prose and IS indexed, and every sheet
+     number is written out across the register's own entries. A stamp is the sheet
+     restating its accession in the object's own form, not a new fact to find. It
+     stays in the Markdown sibling, where there is no ranking to crowd. */
+  'qe-stamp']);
 
 /* Anything that separates words. Everything else is inline and must not, or
  * "port</em><em>Done" becomes one token. */

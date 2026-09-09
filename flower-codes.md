@@ -167,4 +167,6 @@ One thing we would like to fix and cannot from here
 
 The right plate for the first section is a European sweet violet, *Viola odorata* — the violet of the Mediterranean, not the birdfoot violet of a New York state survey. The plate mounted above is the one we had, and the caption says so rather than letting the genus stand in silently for the species. **If you know of a public-domain *Viola odorata* plate**, it belongs here, and swapping it in is one line of markup and a caption. Say so in [the repository](https://github.com/Stimpunks/Queering-Earth/issues) and it will be.
 
+Queering Earth Sheet No. 7 Accessioned 8 Sep 2026
+
 Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-flowercodes). [Re-determined once](https://queering.earth/changelog#a-2026-09-08-flowercodes): the streak of lavender belongs to Joshua Speed, and only the referent moved.

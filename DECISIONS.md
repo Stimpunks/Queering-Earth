@@ -130,6 +130,68 @@ on both her domains. **Never edited from this repo.**
 
 ## Settled
 
+### The accession stamp says Queering Earth, and the fade is on the ring (2026-09-09)
+
+Ryan saw the oval stamp on a scanned sheet from the Ada Hayden Herbarium at Iowa State
+University and asked whether we could do the same, faded, for the sense of age. Two things
+were genuinely open and were put to him; both answers below are his.
+
+**What the stamp claims custody on behalf of: Queering Earth alone.** The Iowa stamp names
+an institution and its parent, so the obvious move was Stimpunks and More Realms on the
+lower line. Two custodians also did not fit the oval — at that size the line crossed its
+own ring — but the layout was not the argument. A stamp asserts a single custodian, this
+site is a collaboration between two organisations, and *Queering Earth* is the one name
+true of the whole of it. The two are credited where credit is a sentence and not a mark.
+
+**What goes in the lower line: the accession date.** The alternative was the custodians,
+per the reference stamp. The date makes the mark an accession record rather than a
+nameplate, which is the entire justification for having it.
+
+**The number had to be real and it happens to be.** Ada Hayden's 497892 is a row somebody
+can go and read. A six-digit number invented here would be a gold join on a sheet nobody
+corrected, and on a site whose one stated correctness requirement is attribution that is
+the worst available place for that failure. The sheet number and the mounting date are
+both entries in the register, so the stamp asserts nothing new — and no sheet stated its
+own number inside its own landmark before today, so it duplicates nothing either.
+
+**The fade could not go on the letters, and this was measured before anything was drawn.**
+`--qe-lichen` is 2.15:1 on paper — the figure this repo already uses as its injected
+`FAIL` — and `--qe-verdigris` is 3.42:1. Neither clears 7:1 or the 4.5:1 large-text floor,
+so no token here can make a letter faint and permissible at any size. The letters are
+`--qe-moss` and the age is carried entirely by the ring. That is the standing house rule,
+and it turns out to be what a real understamped impression looks like anyway: the outline
+breaks long before the letterforms do. Nothing was traded away to get the ink legal.
+
+**Three things were found by looking rather than by any gate**, and all three are the
+reason to keep looking:
+
+- `mix-blend-mode: multiply` is the whole washed-out effect and it **erases the stamp in
+  the cabinet**, because multiply darkens towards the ground and in the drawer the ground
+  is the dark thing. `check-contrast.mjs` reported `PASS` and exit 0 on that version —
+  verified deliberately, by putting the bug back. It composites computed colour pairs and
+  has no concept of a blend mode. This is a third documented blind spot beside the
+  `::marker` and the texture, and it is now a token, `--qe-stamp-blend`.
+- **Ring clearance was measured against the wrong reference twice.** An ellipse narrows
+  fastest at its poles, so what matters is its half-width at the *far edge* of the top and
+  bottom line boxes, not at their centres. At the centre the mark looked to have 20px of
+  room; at the edge it had −1px, and the letters grazed the ring on screen.
+- **The two-column layout only ever took its fallback.** The mark is 207px and the
+  provenance line wanted 20rem beside it — 558px against a 34rem measure — so the row
+  wrapped at every width the site has. The stamp stacks, which is where a real sheet
+  carries it.
+
+**The corner-floated version was refused.** A stamp belongs in the corner of a real sheet,
+and an absolutely positioned one lands on the prose at a narrow width, at 400% zoom, or
+under a long heading — which nothing here can currently see happen. Star Stuff has
+`check-overlap` for exactly that, and the house rule is to port a check when its failure
+becomes possible. Not floating the stamp is cheaper than porting the gate.
+
+**The stamp is not a link and not indexed.** The provenance line beside it already points
+at the accession, so linking the number is a second tab stop landing on the same anchor.
+And indexed, eight stamps put eight near-identical records carrying the site's own name
+into the finding aid — which is precisely why `.qe-masthead` is already skipped. It stays
+in the Markdown siblings, where there is no ranking to crowd.
+
 ### Search is a page, a file, and a refusal (2026-09-09)
 
 Ryan asked for search. Three things were genuinely open and were put to him; all three

@@ -63,8 +63,8 @@ held to the same standard as anything on Star Stuff, and arguably a stricter one
   not exist, for as long as the site has been up. `_redirects` carries a forced `301!` per
   page, enumerated so a missing one is reportable by name, and `check-addresses.mjs` is the
   guard — the only one here that knows what the edge answers rather than what the files say.
-  **A new sheet needs a rule.** Mount it, card it, log it, file it, **route it**, and
-  **group it** — `tools/pages.mjs` is the one place the page order lives, and
+  **A new sheet needs a rule.** Mount it, card it, log it, file it, stamp it, **route it**,
+  and **group it** — `tools/pages.mjs` is the one place the page order lives, and
   `make-markdown.mjs` throws on a page in no group, which is the reminder. Everything
   the finding aid shows is derived from there and from the sheet's own landmark, so a
   grouped sheet needs nothing else to be searchable.
@@ -134,9 +134,13 @@ stylesheet. **A new runtime component needs a line there.**
 
 **What it still cannot see, so measure these by hand.** A `::marker` is not an element with
 its own text, which is how the register's entry bullets sat at 2.15:1 unreported — the rule
-that catches them is editorial: **the colour goes on the rule and never on the glyph**. And a
-**texture**, because the tool composites computed colour pairs; see the patina rule below. A
-pass is not permission for either.
+that catches them is editorial: **the colour goes on the rule and never on the glyph**. A
+**texture**, because the tool composites computed colour pairs; see the patina rule below.
+And a **blend mode**, which is the same limitation from a third direction: the accession
+stamp's `mix-blend-mode: multiply` is the whole washed-out effect on paper and **erases the
+mark in the cabinet**, because multiply darkens towards the ground and in the drawer the
+ground is the dark thing. The gate reported `PASS` and exit 0 on that version — confirmed
+by putting the bug back, not assumed. **A pass is not permission for any of the three.**
 
 ### A new panel picks one of three surfaces
 
@@ -177,6 +181,29 @@ in a restored attribution (`.qe-correction`), and the provenance line of a corre
 it is that the most precious material is spent on the break. **A seam requires an actual
 repair in the register.** A gold join on a sheet nobody corrected is decoration asserting a
 fact, which is the same failure as an image of text, and it makes the real mends unfindable.
+
+**The accession stamp is the same fact in the object's own form.** `.qe-stamp` sits in one
+`.qe-accession-block` with the provenance line, above it, on all eight readings and on no
+cabinet page — a stamp is for an accessioned specimen, not for the drawer. Four rules, each
+already paid for:
+
+- **The number is real or there is no stamp.** It carries the sheet number and the mounting
+  date, both of them entries in the register. An invented accession number would be a gold
+  join on a sheet nobody corrected, in the worst possible place for that failure.
+- **The fade is on the ring and never on the glyph.** Measured before it was drawn: lichen
+  is 2.15:1 on paper and verdigris 3.42:1, so no token here makes a letter faint and legal
+  at any size. Letters are `--qe-moss`; the age is two ovals with a wedge lifted out of
+  each, and a rotation authored per sheet. A real understamped impression reads that way
+  too — the outline breaks long before the letterforms do.
+- **`--qe-stamp-blend` is a token because it differs between the grounds and is not a
+  colour** — the fourth time that lesson has arrived, after the wash, the shade and the
+  flesh. See the contrast gate's blind spots above.
+- **It stays in flow and it is not a link.** A corner-floated stamp lands on the prose and
+  is the change that would make `check-overlap` worth porting; the provenance line beside it
+  already points at the accession, so a linked number is a second tab stop going nowhere new.
+  It is skipped in `search-index.json` for the reason `.qe-masthead` is, and kept in the `.md`.
+
+**A new sheet needs a stamp**, alongside its card, its provenance line and its register entry.
 
 **TEXTURE NEVER GOES UNDER TEXT.** A noise tile or a `blur()`/`contrast()` filter varies
 effective background luminance per pixel; `check-contrast.mjs` composites computed colour

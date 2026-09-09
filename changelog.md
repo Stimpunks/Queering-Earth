@@ -36,6 +36,40 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## A real herbarium stamps its sheets with an accession number that is a row in a ledger, which is the whole reason this one could have it and most of the work was proving the ink was legal
+
+Prompted by Ryan noticing the oval stamp on a scanned sheet from the Ada Hayden Herbarium at Iowa State University — the institution’s name around the ring, its parent below, and **497892** across the middle. The suggestion was that a faded one would add to the sense of age, and it does. What it cost was a measurement, because *faded* and **7:1** are the same argument from opposite ends.
+
+MountedEvery sheet is stamped, and the fade is on the ring because no colour here can make a letter faint and legal
+
+**The faded look was measured before anything was drawn, and every candidate failed.** `--qe-lichen` is **2.15:1** on paper — the exact figure this repository already uses as the injected value that a contrast run must report as `FAIL`, and the same one the register’s entry bullets sat at unreported. `--qe-verdigris` is 3.42:1. Neither clears 7:1, and neither clears the 4.5:1 large-text floor either, so there is no size at which a pale green letter becomes permissible here.
+
+So the letters are `--qe-moss` at 7.8:1 in daylight and 7.2:1 in the drawer, and **the age is carried entirely by the ring**: two ovals with a wedge lifted out of each, and a few degrees of rotation authored per sheet. That is this cabinet’s standing rule — the colour goes on the rule and never on the glyph — and it turns out to be what a real understamped impression looks like anyway. **The outline breaks long before the letterforms do.** Nothing was given up to get the ink legal.
+
+**The number is real, which is the only reason there is a stamp at all.** Ada Hayden’s 497892 is a row in a ledger somebody can go and read. A six-digit number invented here to look convincing would be a gold join on a sheet nobody corrected — decoration asserting a fact — and it would be the worst possible place for that failure, on a site whose one stated correctness requirement is attribution. What is real here is the sheet’s number and the day it was mounted, both of them entries on this page.
+
+**It says Queering Earth alone.** The obvious move was to name Stimpunks and More Realms the way the Iowa stamp names its parent institution, and two custodians do not fit the oval — at that size the lower line crossed its own ring. The layout is not the argument, though: a stamp asserts a single custodian, this site is a collaboration, and “Queering Earth” is the one name that is true of the whole of it. The two organisations are credited where credit is a sentence rather than a mark.
+
+**No sheet named its own number anywhere inside its landmark before today.** Other sheets’ cards say it, from outside `main` where the mirror cannot see them, and this register says it constantly. So the stamp adds a fact rather than making a second copy of one, and there is no drift surface: it sits in one block with `.qe-provenance`, which states the same accession in words. The stamp is not a link, either. The provenance line beside it already points at the accession that put the sheet up, and a second tab stop landing on the same anchor a few millimetres away goes nowhere new.
+
+CabinetThe washed-out effect is a blend mode, the blend mode erases the stamp in the drawer, and the contrast gate reported it clean
+
+`mix-blend-mode: multiply` is what makes the mark look stamped rather than printed: the sheet’s own foxing comes up through the ink the way it does through a real impression. On the dark ground **it took a mark measuring 7.2:1 down to very nearly nothing** — multiply darkens towards the ground, and in the cabinet the ground is the dark thing. Caught by looking at it in the drawer.
+
+**This is a blind spot in `check-contrast.mjs` and not an oversight in it.** The tool composites computed colour pairs, so it saw `--qe-moss` on `--qe-cab-paper` and reported the figure that pair measures. It has no concept of a blend mode, and it never will without becoming a screenshot differ. It joins the two exemptions already written down: a `::marker`, which is not an element with text of its own, and a texture, which varies luminance per pixel. **A pass is not permission, and this is the third way to earn a false one.**
+
+The fix is a token rather than a second selector, because this is the fourth time that lesson has arrived. `--qe-stamp-blend` is `multiply` in `:root` and `normal` through both ground switches — the same shape the foxed-paper wash, the shadow a lifted sheet casts and the pale flesh of a specimen all ended up in, each of them a property that differs between the grounds and is not a colour. **Two selectors carrying one decision is two selectors that drift.**
+
+**The mark is in flow, at the head of the provenance line, and the corner version was refused.** A stamp belongs in a corner of a real sheet, and an absolutely positioned one lands on the prose — at a narrow width, at 400% zoom, or under a long heading — which nothing in this repository can currently see happen. Star Stuff has `check-overlap` for exactly that, and the house rule is to port a check when the failure it catches becomes possible here. **Not floating the stamp is cheaper than porting the gate**, and the accession block reads better as one object regardless.
+
+CabinetThe finding aid does not index the stamp, which is the masthead decision arriving one component further down
+
+Indexed, eight stamps put eight near-identical records **carrying the site’s own name** into the aid — “Queering Earth Sheet No. 4 Accessioned 8 Sep 2026” — which is most of what a search for “Queering Earth” would then return. That is precisely why `.qe-masthead` is already skipped, and the reasoning transfers without amendment.
+
+**Nothing becomes unfindable.** The provenance line beside each stamp says “Mounted 8 September 2026” in ordinary prose and is indexed; every sheet number is written out across this register’s own entries. A stamp is the sheet restating its accession in the object’s own form, not a new fact to find. It stays in the Markdown sibling, where there is no ranking for it to crowd — an agent reading `/on-being-ill.md` gets the transcription the way a herbarium record would carry it.
+
+2026 · 9 September
+
 ## A cabinet made almost entirely of other people’s sentences grew a search field, which is a machine for trimming other people’s sentences, and most of the work was teaching it when to refuse
 
 **A conventional search snippet is this site’s characteristic failure, industrialised.** Twenty words either side of the match, an ellipsis at each end, no maker and no citation — pointed at a page of prose that is a perfectly good convention, and pointed at eighty-two mounted quotations it manufactures exactly the artefact `ATTRIBUTIONS.md` exists to prevent, once per result. The whole feature is built around refusing to do that, and everything below follows from it.

@@ -167,4 +167,6 @@ What this sheet will not tidy
 
 Dinah Murray spent her last years photographing lichens and mushrooms on the Fife coast — the same kingdom of organisms this plant lives through, attended to closely, for their own sake, by someone who had given the world a word for exactly that kind of attention. Kate Fox called the memorial poem *Monotropa Uniflora*. It was the right name.
 
+Queering Earth Sheet No. 8 Accessioned 9 Sep 2026
+
 Provenance Mounted [9 September 2026](https://queering.earth/changelog#a-2026-09-09-patina). [Label corrected once before it shipped](https://queering.earth/changelog#a-2026-09-09-patina) — a quotation on the essay this sheet follows is credited to the wrong book, and it is credited here to the right one.

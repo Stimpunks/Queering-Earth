@@ -263,4 +263,6 @@ The authors do not resolve that, and neither will this sheet. Vero is not failin
 
 Let us hold the die uncast.
 
+Queering Earth Sheet No. 3 Accessioned 8 Sep 2026
+
 Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-rossetti). [Label corrected four times](https://queering.earth/changelog#a-2026-09-08-rossetti) on mounting, then [corrected once more and re-determined twice](https://queering.earth/changelog#a-2026-09-08-plates) when the plates changed.

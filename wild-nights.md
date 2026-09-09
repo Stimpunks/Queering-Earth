@@ -287,4 +287,6 @@ One more thing, and it is about our own method rather than anybody else’s. Pag
 
 Might I but moor.
 
+Queering Earth Sheet No. 6 Accessioned 8 Sep 2026
+
 Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-dickinson). [Label corrected twice and re-determined twice](https://queering.earth/changelog#a-2026-09-08-dickinson) — two scans that agreed with each other and were both wrong, and a missing word.

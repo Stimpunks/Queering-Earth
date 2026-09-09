@@ -211,4 +211,6 @@ Waterhouse, J. W. (1916). *Miranda – The Tempest* \[Painting\]. Oil on canvas.
 
 Wikipedia contributors. (n.d.). *Miranda (given name)*. Wikipedia. [https://en.wikipedia.org/wiki/Miranda\_(given\_name)](https://en.wikipedia.org/wiki/Miranda_(given_name))
 
+Queering Earth Sheet No. 5 Accessioned 8 Sep 2026
+
 Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-miranda). [Label corrected once](https://queering.earth/changelog#a-2026-09-08-miranda), for two citations that were wrong before the sheet was ever built.

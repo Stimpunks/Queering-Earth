@@ -137,4 +137,6 @@ Virginia Woolf, *On Being Ill*, The Hogarth Press, 1930.
 
 Not that the flowers care. That they do not, and are therefore not asking anything of you. Nothing in that garden requires you to be upright, on time, or getting better. It is the one relation in the essay with no demand in it — and Woolf finds it, characteristically, at the exact moment she has stopped being able to stand up.
 
+Queering Earth Sheet No. 1 Accessioned 7 Sep 2026
+
 Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09-07-sheets). [Label corrected once](https://queering.earth/changelog#a-2026-09-07-sheets), when Woolf’s two printings were read against each other ahead of the sheet; [re-determined once](https://queering.earth/changelog#a-2026-09-08-wyrd), when the byline rule changed what kind of sheet this is.

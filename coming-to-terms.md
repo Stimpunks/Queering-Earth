@@ -195,4 +195,6 @@ Walker, N. (2021). *Neuroqueer: An introduction*. neuroqueer.com. [https://neuro
 
 Wise, S. J. (2024, September 27). *The neurodiversity smorgasbord: An alternative framework for understanding differences outside of diagnostic labels*. Lived Experience Educator. [https://www.livedexperienceeducator.com/blog/theneurodiversitysmorgasbord](https://www.livedexperienceeducator.com/blog/theneurodiversitysmorgasbord)
 
+Queering Earth Sheet No. 2 Accessioned 7 Sep 2026
+
 Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09-07-sheets). [Label corrected once](https://queering.earth/changelog#a-2026-09-08-labels), when a second text was appended under the essay and the label was still describing one.
