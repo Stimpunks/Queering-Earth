@@ -56,6 +56,28 @@ held to the same standard as anything on Star Stuff, and arguably a stricter one
   Write internal links, canonical tags, `og:url`, and `sitemap.xml` entries that way — a
   `<loc>` carrying `.html` fails `check-sitemap`. The filename and the address deliberately
   do not match; see `DECISIONS.md` for why.
+
+  **The extension is not an address, so each `.html` twin must 301 away.** Stating the rule
+  and cleaning the manifest is not enough: Netlify shadows a redirect with a real file, so
+  `/on-being-ill.html` served a byte-identical page at an address the house style says does
+  not exist, for as long as the site has been up. `_redirects` carries a forced `301!` per
+  page, enumerated so a missing one is reportable by name, and `check-addresses.mjs` is the
+  guard — the only one here that knows what the edge answers rather than what the files say.
+  **A new sheet needs a rule.** Mount it, card it, log it, file it, **route it**.
+
+  **This also means the site cannot be browsed over `file://`, and that is the trade.** Star
+  Stuff can be, because it writes document-relative links with the extension (`index.html`);
+  every link here is root-relative and extensionless, so `href="/"` resolves to your
+  filesystem root and `href="/on-being-ill"` names a file that does not exist on disk. Making
+  the links relative would not fix it — nothing is named `on-being-ill`. The mapping is a
+  thing a server does, which is what `tools/serve.mjs:52` exists for. **Use the dev server
+  locally, never an opened file.**
+
+  Shared assets — `queering.css`, `queering.js`, the two favicons, the touch icon — are
+  included by **relative** URL so they resolve under any address; `og:image`, `twitter:image`,
+  `og:url`, and `rel="canonical"` must stay **absolute**. `check-addresses.mjs` guards the
+  first half. The three icons were root-relative until 2026-09-09, which is one rule applied
+  two ways and the reason the guard exists.
 - Two shared assets, included by relative URL:
   - **`queering.css`** — the **canonical palette tokens** (`--qe-*`, the single source of
     truth for every recurring colour), the type stack, the shared layout, the botanical
@@ -336,13 +358,19 @@ anything that needs fixing there in `DECISIONS.md` instead.
 
 ## The checks
 
-Run before shipping. All three are browser-free or Chrome-only; nothing needs `npm install`.
+Run before shipping. All four are browser-free or Chrome-only; nothing needs `npm install`,
+and the default path of every one of them is offline.
 
 ```bash
 node tools/check-markup.mjs     # parser-rewriting markup, duplicate ids, exactly one <main>
 node tools/check-sitemap.mjs    # every page listed once, every entry resolves
 node tools/check-contrast.mjs   # 7:1 in BOTH grounds and under print emulation, two tiers
+node tools/check-addresses.mjs  # one address per page: a forced 301! per .html twin
 ```
+
+**`check-addresses.mjs --live` probes the deployed site**, which no other gate does. Run it
+after any change to `_redirects`, because **a redirect loop is how that file fails** and a
+loop is invisible offline. It asserts each twin is a single hop and not a chain.
 
 Star Stuff has five more (`check-classes`, `check-overlap`, `check-sheets`, `check-embeds`,
 `check-card-order`). **Port one when the failure it catches becomes possible here** — not

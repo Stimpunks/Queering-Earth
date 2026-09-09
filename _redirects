@@ -17,3 +17,41 @@
 
 https://queering-earth.netlify.app/*  https://queering.earth/:splat  301!
 http://queering-earth.netlify.app/*   https://queering.earth/:splat  301!
+
+# ── The extension is not an address ────────────────────────────────────────────
+#
+# Added 2026-09-09 from the spec audit, which found the path-level version of the
+# defect the hostname rules above already describe: every sheet answered 200 at
+# BOTH /on-being-ill and /on-being-ill.html, byte-identical, same ETag. We wrote
+# the reasoning down for the hostnames, fixed that layer on 7 September, and did
+# not think to look one layer down.
+#
+# The house rule is that addresses are extensionless. check-sitemap.mjs enforces
+# it in the manifest, and every rel="canonical" points the right way — and none of
+# that stops the edge answering the .html twin, because NO FILE-LEVEL GUARD CAN
+# SEE WHAT THE EDGE ACTUALLY ANSWERS. tools/check-addresses.mjs is the guard that
+# can, and it is why these rules are enumerated rather than globbed: a new sheet
+# without a rule is a failure the checker reports by name.
+#
+# THE `!` IS LOAD-BEARING. Netlify shadows a redirect with a real file at the same
+# path, and on-being-ill.html IS a real file — so an unforced rule would never
+# fire. This is the same 301! the hostname rules use, for the same reason.
+#
+# Netlify already got the near misses on its own, which is how this hid so long:
+# /on-being-ill/ (trailing slash) and /on-being-ill.HTML (wrong case) both 301
+# here correctly. Only the exact-case extension had a file to hide behind. The
+# site redirected the misspelled extension and served the correct one.
+
+/changelog.html                   /changelog                    301!
+/coming-to-terms.html             /coming-to-terms              301!
+/design.html                      /design                       301!
+/flower-codes.html                /flower-codes                 301!
+/invention-of-normal.html         /invention-of-normal          301!
+/monotropa-uniflora.html          /monotropa-uniflora           301!
+/on-being-ill.html                /on-being-ill                 301!
+/promises-like-pie-crust.html     /promises-like-pie-crust      301!
+/the-tempest.html                 /the-tempest                  301!
+/wild-nights.html                 /wild-nights                  301!
+
+# The plate is `/`, not `/index.html`. Netlify already 301s the bare /index.
+/index.html                       /                             301!

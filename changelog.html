@@ -28,9 +28,9 @@
 <meta name="twitter:image" content="https://queering.earth/images/og-changelog.png">
 <meta name="twitter:image:alt" content="Register: The accession register. Every sheet as it was mounted, and every label we corrected.">
 
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,7 +146,17 @@
 
       <p class="qe-accession-note">Audited against <a href="https://specification.website/">The Website Specification</a> &mdash; the whole <code>required</code> tier, thirty-six items across ten categories, plus all twenty-one <code>agent-readiness</code> items at every status. Eight required findings, twenty-two verified passes, five items that genuinely do not apply here, and one that needs field data this site may not have yet two days after going live. The full working is in <code>AUDIT.md</code> in <a href="https://github.com/Stimpunks/Queering-Earth">the repository</a>, and it is a findings document rather than a fix list.</p>
 
-      <p class="qe-accession-note"><strong>The largest finding is still open, and it is ours twice over.</strong> Every sheet answers <code>200</code> at two addresses &mdash; <code>/on-being-ill</code> and <code>/on-being-ill.html</code>, byte-identical, same <code>ETag</code>. That is exactly the shape <code>_redirects</code> describes in its own comments, found on Star Stuff on 15 August and fixed here for the hostnames on 7 September: <q>byte-identical documents at four URLs, which is a duplicate-content problem and an ambiguity about which address is the real one.</q> We wrote that down, fixed the hostname layer, and did not check the path layer. The house rule says addresses are extensionless, <code>check-sitemap.mjs</code> confirms no <code>.html</code> reaches the manifest, and every <code>rel=&quot;canonical&quot;</code> points the right way &mdash; and the <code>.html</code> twin serves anyway, because <strong>no file-level guard can see what the edge actually answers.</strong> A guard that probes the served site is the thing this audit says we are missing.</p>
+      <p class="qe-accession-note"><strong>The largest finding was ours twice over, and it is closed below.</strong> Every sheet answers <code>200</code> at two addresses &mdash; <code>/on-being-ill</code> and <code>/on-being-ill.html</code>, byte-identical, same <code>ETag</code>. That is exactly the shape <code>_redirects</code> describes in its own comments, found on Star Stuff on 15 August and fixed here for the hostnames on 7 September: <q>byte-identical documents at four URLs, which is a duplicate-content problem and an ambiguity about which address is the real one.</q> We wrote that down, fixed the hostname layer, and did not check the path layer. The house rule says addresses are extensionless, <code>check-sitemap.mjs</code> confirms no <code>.html</code> reaches the manifest, and every <code>rel=&quot;canonical&quot;</code> points the right way &mdash; and the <code>.html</code> twin serves anyway, because <strong>no file-level guard can see what the edge actually answers.</strong> A guard that probes the served site was the thing this audit said we were missing, and there is one now.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">One address per sheet at last, and a fourth gate that asks the site instead of the files</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Netlify shadows a redirect with a real file, and <code>on-being-ill.html</code> is a real file.</strong> That is the whole mechanism, and it is why writing the rule down four times over did not enforce it: the house style says addresses are extensionless, <code>check-sitemap.mjs</code> reported <q>locs still carrying .html &mdash; none</q>, every <code>rel=&quot;canonical&quot;</code> pointed the right way, and <code>check-markup.mjs</code> had nothing to say. All four were correct. <strong>None of them can see what the edge answers.</strong> <code>_redirects</code> now carries a forced <code>301!</code> for each of the ten sheets and for <code>/index.html</code>, enumerated rather than globbed so that a sheet without a rule is reportable by name.</p>
+          <p><strong>The site was already redirecting the misspelled extension and serving the correct one.</strong> Netlify got every near miss on its own &mdash; <code>/on-being-ill/</code> with the trailing slash and <code>/on-being-ill.HTML</code> in the wrong case both <code>301</code> here properly, because neither has a file to hide behind. Only the exact-case extension did. That is how this sat unnoticed from the day the domain was attached: the defect was invisible precisely where the file system agreed with the request.</p>
+          <p><code>tools/check-addresses.mjs</code> is the fourth gate and <strong>the only one that knows what the edge answers</strong>. Offline by default, like the other three: it reads <code>_redirects</code> against the pages on disk and reports a missing rule, an unforced one, a wrong target, a stale one, an internal address carrying <code>.html</code>, and a root-relative asset. With <code>--live</code> it goes and asks the site, because <strong>a redirect loop is how this file fails</strong> and a loop cannot be seen offline. All six detectors were made to fail before the gate was believed &mdash; an unforced rule reported as <q>needs 301! &mdash; on-being-ill.html is a real file and shadows an unforced rule</q>, which is the failure that would otherwise look green.</p>
+          <p>Two smaller inconsistencies went with it, both found by Ryan browsing the files locally rather than by any check. The <strong>two favicons and the touch icon were root-relative</strong> while <code>queering.css</code> and <code>queering.js</code> were not &mdash; one rule applied two ways, and now guarded. And the index at the foot of this page pointed at <code>/index</code>, which took a needless hop and was a third address for the plate. <strong>The local-browsing question has no fix and that is the trade:</strong> nothing on disk is named <code>on-being-ill</code>, so relative links would not help either. Extensionless addresses need a server, which is what <code>tools/serve.mjs</code> is for, and <code>CLAUDE.md</code> now says so instead of leaving it to be rediscovered.</p>
+        </div>
+      </div>
 
       <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
         <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Two response headers the site had simply never sent, and a policy that carries exactly one directive on purpose</span></div>
@@ -1040,7 +1050,7 @@
         <ul></ul>
       </div>
       <div class="qe-index-group" data-sheet="index" hidden>
-        <h3 class="qe-index-sheet"><a href="/index">Queering.Earth</a> <span class="qe-index-kicker">the plate</span></h3>
+        <h3 class="qe-index-sheet"><a href="/">Queering.Earth</a> <span class="qe-index-kicker">the plate</span></h3>
         <ul></ul>
       </div>
       <div class="qe-index-group" data-sheet="design" hidden>

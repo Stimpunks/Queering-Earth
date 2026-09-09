@@ -48,7 +48,7 @@ decoration, texture, or plain view. The spec does not know that texture under te
 
 | | count |
 |---|---|
-| **Findings** | **8** — 2 remediated 2026-09-09, 6 open |
+| **Findings** | **8** — 4 remediated 2026-09-09, 4 open |
 | Passing, verified | 22 |
 | Not applicable, with reasons | 5 |
 | Deferred — needs field data | 1 |
@@ -72,6 +72,24 @@ Ordered by how much they cost, not by category.
 `stable-urls` (required) · `redirects` (required)
 · [stable-urls](https://specification.website/spec/agent-readiness/stable-urls/) (updated 2026-05-29)
 · [redirects](https://specification.website/spec/seo/redirects/)
+
+> **Remediated 2026-09-09.** `_redirects` now carries a forced `301!` for each of the ten
+> sheets and for `/index.html`, enumerated rather than globbed so a sheet without a rule is
+> reportable by name. **The `!` is the load-bearing part** — Netlify shadows a redirect with
+> a real file, so an unforced rule would never fire.
+>
+> **`tools/check-addresses.mjs` is the gate this finding argued for**, and the only one here
+> that knows what the edge answers rather than what the files say. Offline by default like
+> the other three; `--live` probes the deployed site, because a redirect loop is how
+> `_redirects` fails and a loop is invisible offline. All six detectors were made to fail
+> before the gate was trusted.
+>
+> The two related items also closed: the two favicons and the touch icon are now
+> document-relative, matching `queering.css` and `queering.js` and guarded against
+> regression, and the sheet index no longer points at `/index`. **The `file://` browsing
+> problem has no fix and is the trade** — nothing on disk is named `on-being-ill`, so
+> relative links would not help; extensionless addresses need a server. `CLAUDE.md` now says
+> so.
 
 **This is the same defect `_redirects` was written to fix, one layer down.**
 
