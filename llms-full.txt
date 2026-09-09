@@ -2174,6 +2174,18 @@ The fix is a token rather than a second selector, because this is the fourth tim
 
 **The mark is in flow, at the head of the provenance line, and the corner version was refused.** A stamp belongs in a corner of a real sheet, and an absolutely positioned one lands on the prose — at a narrow width, at 400% zoom, or under a long heading — which nothing in this repository can currently see happen. Star Stuff has `check-overlap` for exactly that, and the house rule is to port a check when the failure it catches becomes possible here. **Not floating the stamp is cheaper than porting the gate**, and the accession block reads better as one object regardless.
 
+Label correctedThe stylesheet was cached for five minutes longer than the markup that needed it, and the first reader of the stamp saw the consequence
+
+**The stamp shipped and Ryan could not see it.** The markup was live and correct, the stylesheet on the server was live and correct, and the browser had one of each from either side of the deploy: a paragraph of three unstyled spans where an oval should have been. A force reload fixed it, which is the signature. **Every page here revalidates on every visit; `queering.css` was cached for three hundred seconds.** For five minutes after any deploy, a returning reader got new markup with the old rules.
+
+**The comment in `\_headers` predicted this exact event, in these words:** “a change that adds a class and its rule together would render unstyled for one visit.” It was a known, deliberate trade, and the entry in `DECISIONS.md` that made it is careful and mostly right — fingerprinting the assets really would churn twelve HTML files per stylesheet edit and cost this register the legible diffs it depends on. That refusal stands.
+
+**What was missing was a third option rather than a better answer to the two.** The choice was posed as *fingerprint* against *bound the cache*, and nobody weighed giving the shared assets the same `max-age=0, must-revalidate` the HTML already has. It needs no generator, no rewritten pages and no gate, so it costs nothing the refusal was protecting; it closes the window to zero rather than to five minutes; and it is *more* bustable than three hundred seconds, which was the stated priority. The price is one conditional request per visit that returns `304` with an empty body, alongside the revalidation the page is already doing.
+
+**The reason this is coherent and not merely tidy: they fail when the page fails.** No `stale-if-error` on the stylesheet — RFC 9111 forbids pairing it with `must-revalidate`, and it would buy nothing anyway, because the HTML fails closed and an unreachable origin leaves no document for a held-back stylesheet to apply itself to.
+
+**`search-index.json` had the same defect and needed the opposite directive.** It was ten minutes, and it is derived from the sheets — so it is exactly the case the old note's own rule excluded: staleness where the stale copy can disagree with the fresh HTML. After a prose edit it could hand a searcher a snippet quoting a sentence that is no longer on the page it cites, and on this site that is the worst available failure. It is `max-age=0` now **without** `must-revalidate`, which is deliberate: zero removes the skew, and omitting the stricter directive is what keeps `stale-if-error` legal. The index is fetched *after* the page has rendered, by a reader who has typed something, so the document exists either way and a finding aid a few minutes behind is better than one that fails closed. That judgement was in the original note and it survives.
+
 CabinetThe finding aid does not index the stamp, which is the masthead decision arriving one component further down
 
 Indexed, eight stamps put eight near-identical records **carrying the site’s own name** into the aid — “Queering Earth Sheet No. 4 Accessioned 8 Sep 2026” — which is most of what a search for “Queering Earth” would then return. That is precisely why `.qe-masthead` is already skipped, and the reasoning transfers without amendment.
@@ -3213,7 +3225,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-94 entries across 20 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+95 entries across 20 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

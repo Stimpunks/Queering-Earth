@@ -332,6 +332,28 @@ numbers to three decimals. Neither family has a **greek** subset, so the Sappho 
 `.woff2`; production sends `nosniff`, so a type this server guesses is one the live site
 cannot recover from.
 
+### Nothing the markup depends on may outlive the markup in cache
+
+Every page is `max-age=0, must-revalidate`, and **so are `queering.css`, `queering.js` and
+`queering-search.js`**, because markup and the rules that style it ship in one commit. The
+stylesheet was `max-age=300` until 2026-09-09, which meant that for five minutes after any
+deploy a returning reader got the new markup with the old rules — and that is not
+hypothetical: the accession stamp shipped and rendered as a paragraph of three unstyled
+spans, which is how the window was found. `_headers` carries the reasoning beside each rule.
+
+**The invariant is the thing to keep, not the numbers.** An asset the served HTML depends on
+must not be cacheable for longer than that HTML. Anything derived from the pages is included:
+`search-index.json` was ten minutes and could hand a searcher a snippet quoting a sentence no
+longer on the page it cites. Fingerprinting would license long caches and is refused for a
+stated reason — it would churn twelve HTML files per stylesheet edit and cost this register
+its legible diffs. See `DECISIONS.md`.
+
+**`must-revalidate` and `stale-if-error` cancel** — RFC 9111 forbids serving a stale
+`must-revalidate` response, and the head of `_headers` says so. Which one a file gets is a
+real decision: the stylesheet fails when the page fails, so resilience buys it nothing and it
+takes `must-revalidate`; the search index is fetched *after* the page renders, so it takes
+plain `max-age=0` and keeps `stale-if-error`. **No gate checks any of this yet.**
+
 ### Python touches pixels; Node does everything else
 
 **That boundary replaced "the one Python tool here" on 2026-09-09**, when the plates

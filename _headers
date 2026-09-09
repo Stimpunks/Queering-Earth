@@ -109,29 +109,59 @@
 # reader moving through several sheets in one sitting revalidates once instead of once
 # per sheet, and a bad palette reaches everyone within five minutes.
 #
-# NO `stale-while-revalidate` on these two, on purpose. The HTML revalidates every
-# visit and would be fresh while the stylesheet was a visit behind, so a change that
-# adds a class and its rule together would render unstyled for one visit. Fingerprinting
-# would fix that properly and costs a generator, twelve rewritten pages per CSS edit,
-# and a gate — for 31 KB. See DECISIONS.md.
+# THE STYLESHEET SHARES THE HTML'S POLICY BECAUSE IT SHARES THE HTML'S FATE, and this
+# replaced `max-age=300` on 2026-09-09 after the five-minute window fired for real: the
+# accession stamp shipped, and a reader with the previous stylesheet still cached got the
+# new markup with none of its rules — a `p` of three unstyled spans where an oval should
+# have been. The comment that used to sit here PREDICTED that exact event and priced it as
+# acceptable. It is not: a silent styling failure is this site's characteristic failure,
+# which is why the HTML revalidates in the first place, and the markup and the rule that
+# styles it ship in one commit.
+#
+# Fingerprinting is still refused for the reason DECISIONS.md gives — it would churn twelve
+# HTML files per CSS edit and make the diff of a one-line palette fix unreadable, and the
+# register depends on those diffs being legible. This is the option that entry did not
+# weigh, and it dominates: no generator, no rewritten pages, no gate, and the skew window
+# closes to zero rather than to five minutes. The cost is one conditional request per visit
+# that comes back 304 with an empty body, issued alongside the HTML's own revalidation.
+#
+# NO `stale-if-error` and NO `stale-while-revalidate`, for two reasons that agree. The
+# first is mechanical: RFC 9111 forbids serving a stale `must-revalidate` response, so the
+# pairing cancels — see the note at the head of this file. The second is why matching the
+# HTML is coherent rather than merely tidy: the HTML is `must-revalidate` and fails closed,
+# so when the origin cannot be reached there is no document to style, and a stale
+# stylesheet held back for that case would have nothing to apply itself to. These fail
+# exactly when the page they belong to fails.
 /queering.css
-  Cache-Control: public, max-age=300
+  Cache-Control: public, max-age=0, must-revalidate
 
 /queering.js
-  Cache-Control: public, max-age=300
+  Cache-Control: public, max-age=0, must-revalidate
 
 # ── The search index ──────────────────────────────────────────────────────────
 # 357 KB uncompressed and brotli'd to a fraction of it, fetched only by /search and
-# only once a reader types. Derived from the pages, so it goes stale exactly when
-# they change: the same ten minutes /llms.txt takes, for the same reason, and
-# stale-if-error because a finding aid that fails closed is worse than one a few
-# minutes behind.
+# only once a reader types. DERIVED FROM THE PAGES, which is the whole problem with
+# caching it: this file's own rule is that staleness is safe only where the stale copy
+# cannot disagree with the fresh HTML, and an index built from the sheets disagrees with
+# them the moment one is edited. At `max-age=600` a searcher could be handed a snippet
+# quoting a sentence that is no longer on the page it cites — on a site whose one stated
+# correctness requirement is attribution, that is the wrong ten minutes to save.
+#
+# `max-age=0` AND NOT `must-revalidate`, and the difference is the point. Zero means a
+# cache revalidates before reusing it, so there is no skew in normal operation. Leaving
+# `must-revalidate` off is what keeps `stale-if-error` legal, and here that resilience is
+# worth having where it is not for the stylesheet: this file is fetched AFTER the page has
+# already rendered, by a reader who has typed something. The document exists either way,
+# so a finding aid a few minutes behind really is better than one that fails closed —
+# which is the judgement the previous note made, and it survives intact.
 /search-index.json
   Content-Type: application/json; charset=UTF-8
-  Cache-Control: public, max-age=600, stale-if-error=604800
+  Cache-Control: public, max-age=0, stale-if-error=604800
 
+# Loaded by /search alone, and it clones templates authored in that page — so it is
+# skewable against the markup exactly the way the stylesheet is, and shares its fate.
 /queering-search.js
-  Cache-Control: public, max-age=300
+  Cache-Control: public, max-age=0, must-revalidate
 
 # ── The faces ─────────────────────────────────────────────────────────────────
 # Self-hosted since 2026-09-09 so the site makes no third-party request. The type is

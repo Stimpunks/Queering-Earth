@@ -295,8 +295,49 @@ gold seam on a sheet nobody corrected. **Thirty days is a claim we can keep.** I
 ever rescanned, the honest move is a new filename — but nothing forces that, which is exactly
 why the promise is not made.
 
-Revisit when either file is fingerprinted for another reason, or when the stylesheet is large
-enough that 300 seconds of caching is measurably costing something.
+**Amended the same day, after the five minutes fired.** The accession stamp shipped, and a
+reader holding the previous stylesheet got the new markup with none of its rules — a
+paragraph of three unstyled spans where an oval should have been. The paragraph above
+predicted that event in those words and priced it as acceptable. It is not, and the entry's
+own reasoning is what overturns it: if this site's characteristic failure is a change that
+breaks pages silently, then a five-minute window in which every reader sees exactly that is
+the wrong bound, not a safe one.
+
+**What was missing was a third option, not a better answer to the two.** The choice above is
+posed as fingerprinting versus a bounded cache, and both refusals still stand — fingerprinting
+would churn twelve HTML files per CSS edit and cost the register its legible diffs. But
+`max-age=0, must-revalidate` on the two shared assets, the same policy the HTML already has,
+was never weighed. It needs no generator, no rewritten pages and no gate, so it costs nothing
+the refusal above was protecting, and it closes the skew to zero rather than to five minutes.
+It is also *more* bustable than 300 seconds, which was the stated priority.
+
+The cost is the one thing the five minutes bought: a reader moving through several sheets
+revalidates once per sheet instead of once per sitting. That is a conditional request
+returning 304 with an empty body, issued alongside the revalidation the HTML is already
+doing. At 31 KB brotli'd, correctness is worth the round trip.
+
+**No `stale-if-error` on those two, and the mechanical reason has a matching one.** RFC 9111
+forbids serving a stale `must-revalidate` response, so the pairing cancels. It would also buy
+nothing: the HTML is `must-revalidate` and fails closed, so when the origin is unreachable
+there is no document for a held-back stylesheet to apply itself to. **They fail exactly when
+the page they belong to fails**, which is what makes matching the HTML coherent rather than
+merely consistent.
+
+**`search-index.json` had the same defect and takes a different fix.** It was
+`max-age=600`, and it is *derived from the sheets* — so it is precisely the case this
+entry's own rule excludes, staleness where the stale copy can disagree with the fresh HTML.
+After a prose edit it could hand a searcher a snippet quoting a sentence no longer on the
+page it cites, which on this site is the failure that matters most. It is now `max-age=0`
+**without** `must-revalidate`, which is not an oversight: zero removes the skew, and leaving
+the stricter directive off is what keeps `stale-if-error` legal. That resilience is worth
+having here and not on the stylesheet, because the index is fetched *after* the page has
+rendered, by a reader who has typed something. The document exists either way, so a finding
+aid a few minutes behind genuinely is better than one that fails closed — the judgement the
+original note made, and it survives. `queering-search.js` clones templates authored in
+`search.html`, so it is skewable against the markup the way the stylesheet is and follows it.
+
+Revisit when either file is fingerprinted for another reason, or when a conditional request
+per sheet is measurably costing something.
 
 ### Sheet No. 8 is a wall, which is a third kind of sheet (2026-09-09)
 
