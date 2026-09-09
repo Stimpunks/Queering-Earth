@@ -2214,3 +2214,176 @@ html.plain .qe-correction blockquote { font-variation-settings: normal; }
   .qe-provenance--mended { border-top: 1.5pt solid #555; }
   .qe-provenance a { color: #000; }
 }
+
+/* ─────────────────────────────────────────────── contents, and section addresses
+ *
+ * ON THIS SHEET — the within-page twin of `.qe-elsewhere`, which is the same idea
+ * pointed at other sheets. Long sheets get one; short ones do not, and a page
+ * declares that by including the container or leaving it out. Kanso: no furniture
+ * on an 1,850-word sheet.
+ *
+ * AND NOT ON /changelog, which is the longest page on the site and looks like the
+ * strongest case until it is measured. A register's accession headline is a
+ * SENTENCE — that is the register's own design decision, written down where it is
+ * made — so its labels average 148 characters against 22 to 34 on a sheet, and the
+ * block came out 1,293px against 319–510px everywhere else. It is the same
+ * component costing three times as much, and it delayed the first entry by three
+ * and a half screens. The two ways to shrink it were both forbidden: truncating a
+ * label is this site's characteristic failure applied to itself, and writing a
+ * short label beside each heading is the second copy that drifts. So the register
+ * keeps its section marks and its addresses, and has no contents list. What it
+ * actually wants is an index BY SHEET, which is a different artifact and is logged
+ * as open rather than approximated with this one.
+ *
+ * THE LIST IS DERIVED, NEVER TYPED. queering.js builds it from the <h2>s already
+ * on the page. A hand-kept contents list is a SECOND COPY OF EVERY HEADING, and
+ * this file's oldest rule is that two copies of the same words drift and the
+ * accessible one is the copy that rots. Deriving it also means the served HTML
+ * carries no contents list at all, so the SKS mirror never indexes a heading
+ * twice — which is why this may sit inside <main> where `.qe-elsewhere` may not:
+ * the rule that keeps navigation out of the landmark is there to stop ONE sheet's
+ * nav being indexed as ANOTHER sheet's content, and a self-referential list of
+ * this page's own headings cannot do that.
+ *
+ * IT IS NOT CONTENT, so "prefer server-rendered content" is not in play: every
+ * heading is fully present server-side and the script only reflects them. Lose the
+ * script and you lose the shortcut, nothing else.
+ *
+ * THE ADDRESSES ARE AUTHORED AND THE LABELS ARE DERIVED. Each <h2> carries a short
+ * topical `id` written in the markup — `#eden`, `#the-colon`, `#wabi-sabi` — and
+ * NOT a slug of its own title. A slug dies the moment anybody rewords the heading,
+ * and every link a reader shared dies with it. An id is a stated fact about a
+ * section, the way `--rot` is a fact about a slip; the wording above it is free to
+ * change. The permanent thing is authored, the derived thing is computed, and
+ * nothing is written twice.
+ *
+ * NONSTICKY, IN THE BODY, AT THE TOP. NN/g couples the first two — a rail wants to
+ * be sticky, the body wants not to be — and the body is right here: the empty
+ * margins either side of the measure are the negative space this sheet spent an
+ * accession clearing, and a rail would fill them with permanent furniture. Sticky
+ * also eats viewport height at 400% zoom, which is a WCAG 1.4.10 problem this site
+ * does not need to have. Placed straight after the lede, so the sheet's opening
+ * sentence still comes first.
+ *
+ * NO SCROLL-SPY, and that is deliberate rather than unfinished. Highlighting the
+ * current section as a reader scrolls means a listener, a moving mark, and a
+ * second thing on screen that never settles. `:target` marks where a reader
+ * LANDED, which is the case that actually matters for a shared link, and it costs
+ * no motion. Same argument the register makes: no new motion.
+ *
+ * NOT AN ACCORDION. Fully open at first paint, always. A ledger you have to open
+ * is a ledger nobody reads, and yūgen earned by hiding a list is not yūgen.
+ */
+
+.qe-contents {
+  margin: var(--qe-space-5) 0;
+  padding: var(--qe-space-2) 0 var(--qe-space-3);
+  border-top: 1px solid var(--qe-rule);
+  border-bottom: 1px solid var(--qe-rule);
+}
+
+.qe-contents h2 {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: var(--qe-body);
+  font-variation-settings: normal;
+  color: var(--qe-moss);
+  margin: 0 0 var(--qe-space-2);
+}
+
+.qe-contents ol {
+  margin: 0;
+  padding-left: 1.6rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.qe-contents li { margin: 0 0 var(--qe-space-1); }
+.qe-contents li:last-child { margin-bottom: 0; }
+/* Moss, not an accent: a marker is a glyph and takes a text token. The register
+   already paid for this one — see the note there. */
+.qe-contents li::marker { color: var(--qe-moss); }
+/* NN/g: contents links are coloured AND underlined. They inherit both here. */
+.qe-contents a { color: var(--qe-rust); }
+
+/* ── the section address
+ *
+ * A section mark beside each heading that is a link to that heading — the thing a
+ * reader copies to share a deep link.
+ *
+ * ALWAYS VISIBLE, NEVER HOVER-GATED. The usual pattern reveals a `#` on hover,
+ * which hands the feature to mouse users and to nobody else: no keyboard, no
+ * touch, no screen reader. It is small and quiet instead, which is what a printed
+ * section mark looks like on a Victorian page anyway.
+ *
+ * THE GLYPH IS DRAWN WITH AN EMPTY ALT STRING, the same device as the chain arrow
+ * in the restaging section, so the section sign never lands in the accessibility
+ * tree as a character. The link's name comes from the visually hidden span, so it
+ * announces as "Link to this section". That does append those four words to the
+ * heading's own accessible name, which is the accepted trade for the affordance
+ * working at all without a pointer.
+ */
+.qe-anchor {
+  text-decoration: none;
+  /* 0.15em, not 0.4: there is now a REAL space before this element in the markup,
+     and it is load-bearing. Without it the heading's accessible name computes as
+     "…the windsLink to this section" — the words run together, because CSS margin
+     is not whitespace and the accessibility tree does not see it. */
+  margin-left: 0.15em;
+  vertical-align: 0.08em;
+}
+.qe-anchor::after {
+  content: "\00A7" / "";
+  font-family: var(--qe-body);
+  font-size: 0.62em;
+  font-variation-settings: normal;
+  color: var(--qe-moss);
+}
+.qe-anchor:hover::after { color: var(--qe-rust); }
+.qe-anchor:focus-visible {
+  outline: 3px solid var(--qe-rust);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Visually hidden, still read. The one utility class on this site; it exists
+   because the section mark needs a name and the name must not be visible. */
+.qe-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* A landed anchor, marked. Smooth scrolling is already gated on reduced motion at
+   the top of this file, and this leaves a little air above the heading a reader
+   was sent to rather than jamming it against the viewport edge. */
+h2[id] { scroll-margin-top: var(--qe-space-4); position: relative; }
+
+/* Drawn in the gutter and absolutely positioned, so arriving at a heading does not
+   SHIFT it. A border-left plus padding would move the words sideways at the end of
+   a smooth scroll, which is the one moment a reader is looking straight at them.
+   -0.85rem stays inside main's padding at the narrowest gutter (1.25rem). */
+h2[id]:target::before {
+  content: "";
+  position: absolute;
+  left: -0.85rem;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 3px;
+  background: var(--qe-rust);
+}
+
+@media print {
+  /* On paper there is nowhere to navigate to — the same reason .qe-elsewhere goes.
+     A contents list without page numbers is a list of headings the reader is about
+     to read anyway, and a section mark is a link that cannot be followed. */
+  .qe-contents { display: none; }
+  .qe-anchor { display: none; }
+  h2[id]:target::before { display: none; }
+}

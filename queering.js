@@ -1,4 +1,13 @@
-/* queering.js — the two view controls, and nothing else.
+/* queering.js — the view controls and the contents list. It may derive navigation
+ * from the DOM; it may never create words.
+ *
+ * That boundary replaced an earlier one, "the two view controls, and nothing else",
+ * on 2026-09-09. A count of features is a rule that gets quietly broken the first
+ * time a third thing is worth having; a boundary says what the file is FOR. The
+ * prohibition that actually matters is unchanged and is stronger stated this way:
+ * nothing here may put content on a page. `.qe-contents` is built from headings
+ * that are already in the served HTML, so a reader without this script loses a
+ * shortcut and loses no words.
  *
  * Plain view is a class on <html>, not a second document. Everything decorative
  * is switched off in queering.css under `html.plain`, so the words never move
@@ -85,5 +94,65 @@
     }
 
     paintGround();
+  }
+
+  /* ── on this sheet
+   *
+   * Built from the page's own <h2>s, never typed. See the long note in
+   * queering.css for why a hand-kept contents list is the one thing this site's
+   * oldest rule forbids.
+   *
+   * A PAGE OPTS IN by including the container. There is no word-count threshold
+   * here deciding for it: which sheets are long enough to want contents is an
+   * editorial call, stated in the markup like every other fact on this site.
+   *
+   * THREE HEADINGS MUST NOT LAND IN THE LIST, and none of them is caught by a
+   * guard:
+   *   · `.qe-elsewhere h2` — the sibling nav's own heading, which lives OUTSIDE
+   *     <main>. Scoping the query to main is what excludes it.
+   *   · `.qe-contents h2` — this component's own heading, which is inside main
+   *     and would otherwise list itself.
+   *   · any <h2> without an id, because there would be nothing to link to.
+   *
+   * THE LABEL IS THE HEADING, VERBATIM. The <h2> is cloned and its section mark
+   * removed before the text is read — no truncation, no shortened restatement. On
+   * a sheet whose headings are quotations the list reads as a strange poem, and on
+   * /changelog it reads as sixteen full sentences. Both are the heading doing its
+   * job. A shortened label would be a second copy of the words, free to drift, and
+   * a truncated one would be this site's characteristic failure applied to itself.
+   */
+
+  var contents = document.querySelector('.qe-contents');
+  if (contents) {
+    var list = contents.querySelector('ol');
+    var heads = document.querySelectorAll('main h2[id]');
+    var made = 0;
+
+    for (var i = 0; i < heads.length; i++) {
+      var h = heads[i];
+      if (h.closest('.qe-contents')) continue;
+
+      /* Clone rather than read textContent off the live heading: the section mark
+         is a child of it, and its accessible name would arrive in the label. */
+      var copy = h.cloneNode(true);
+      var mark = copy.querySelector('.qe-anchor');
+      if (mark) mark.remove();
+      var label = copy.textContent.replace(/\s+/g, ' ').trim();
+      if (!label) continue;
+
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.setAttribute('href', '#' + h.id);
+      a.textContent = label;
+      li.appendChild(a);
+      list.appendChild(li);
+      made++;
+    }
+
+    /* Hidden in the markup so a reader without this script never sees an empty
+       ruled box, and still hidden if the page asked for contents and has no
+       headings to put in them — which is a markup mistake, and showing an empty
+       list is not how to report it. */
+    if (made) contents.hidden = false;
   }
 })();

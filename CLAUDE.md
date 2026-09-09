@@ -60,8 +60,12 @@ held to the same standard as anything on Star Stuff, and arguably a stricter one
   - **`queering.css`** — the **canonical palette tokens** (`--qe-*`, the single source of
     truth for every recurring colour), the type stack, the shared layout, the botanical
     art styles, and the print sheet.
-  - **`queering.js`** — the two view controls (plain view, and the ground), and
-    nothing else.
+  - **`queering.js`** — the view controls (plain view, and the ground) and the
+    contents list. **It may derive navigation from the DOM; it may never create
+    words.** That boundary replaced "the two view controls, and nothing else" on
+    2026-09-09: a count of features is a rule that gets quietly broken the first
+    time a third thing is worth having, and the prohibition that matters — nothing
+    here puts content on a page — is stronger stated as a boundary.
 - Local render checks: `node tools/serve.mjs 8766`, or the Browser pane via
   `.claude/launch.json`. `serve.mjs` roots itself at the repo, not at `process.cwd()`, so it
   is correct from any directory.
@@ -227,6 +231,42 @@ Four kinds of entry, each with one accent token spent on a rule and **never on t
 `Mounted`, `Re-determined`, `Label corrected`, `Cabinet`. Group by accession, not by commit: a
 sheet, its corrections, and the CSS it needed are one dated entry. See `DECISIONS.md` for why
 it is a register rather than a list of releases.
+
+### A long page gets contents, and the list is derived while the addresses are authored
+
+`.qe-contents` — **On this sheet**, the within-page twin of `.qe-elsewhere`. A page opts in
+by including the empty `<nav>`; `queering.js` fills it from that page's own `<h2>`s.
+
+- **Never type the list.** A hand-kept contents list is a second copy of every heading, and
+  the copy that rots. Deriving it also means the served HTML carries no list, so the mirror
+  never indexes a heading twice — which is why this may sit inside `<main>` where
+  `.qe-elsewhere` may not: that rule stops *one* sheet's nav being indexed as *another*
+  sheet's content, and a self-referential list cannot do that.
+- **Authored ids, derived labels.** Each `<h2>` carries a short *topical* id written in the
+  markup — `#eden`, `#the-colon`, `#wabi-sabi` — **not a slug of its own title.** A slug dies
+  when anybody rewords the heading, and every link a reader shared dies with it. The
+  permanent thing is authored; the label is computed; nothing is written twice.
+- **Nonsticky, in the body, straight after the lede.** NN/g couples rail↔sticky; the body is
+  right here because the margins either side of the measure are the negative space the
+  spacing work cleared, and sticky eats viewport height at 400% zoom (WCAG 1.4.10).
+- **No scroll-spy, no accordion.** Open at first paint, always. `:target` marks where a
+  reader *landed*, which is the case a shared link creates, and costs no motion.
+- **The section mark is always visible, never hover-gated** — hover hands the feature to
+  mice and to nobody else. The `§` is drawn with an empty alt string (the chain-arrow
+  device) and named by a `.qe-sr` span, so it announces as "Link to this section". **The
+  real space before the `<a>` in the markup is load-bearing**: without it the heading's
+  accessible name computes as "…the windsLink to this section", because CSS margin is not
+  whitespace.
+- **Three headings must not land in the list and no guard catches any of them:**
+  `.qe-elsewhere h2` (outside `<main>` — scoping the query to main is what excludes it),
+  `.qe-contents`' own heading, and any `<h2>` with no id.
+- **Not on `/changelog`**, which looks like the strongest case and is not. A register's
+  accession headline is a sentence by design, so its labels average 148 characters against
+  22–34 on a sheet: the block measured 1,293px against 319–510px elsewhere and delayed the
+  first entry by three and a half screens. Truncating a label is this site's characteristic
+  failure applied to itself, and a short second label is the drift. The register keeps its
+  section marks and its addresses. An index **by sheet** is what it actually wants, and that
+  is logged open rather than approximated with this component.
 
 ### Every page needs exactly one `<main>`, and the sitemap is the manifest
 

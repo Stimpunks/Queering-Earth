@@ -99,6 +99,105 @@ Hers to correct on her own site; ours to check against the book before any sheet
 
 ## Settled
 
+### Contents on the long sheets: derived list, authored addresses (2026-09-09)
+
+Ryan wanted to see what is coming on a long sheet, jump around it, and share deep links to
+headings. Three axes were on the table from [NN/g's guide](https://www.nngroup.com/articles/table-of-contents/):
+rail vs body, sticky vs nonsticky, top vs in-body.
+
+**The three are really two.** NN/g couples the first two — *"If the table of contents is…in a
+left or right rail…then the table of contents should be…sticky. In the main body…nonsticky."*
+So the choice is rail-or-body and sticky follows. Top it calls the "safe choice".
+
+**Body, nonsticky, straight after the lede.** A rail would fill the margins either side of
+the 34rem measure, and those margins are the negative space the spacing work had just spent
+an accession clearing. Sticky also eats viewport height at 400% zoom, which is a WCAG 1.4.10
+problem this site does not need to invent. NN/g's own testing adds that "many users failed to
+notice the sticky table of contents" on mobile. Placed after the lede rather than before it,
+so the sheet's opening sentence still comes first.
+
+**Which principles actually bear, and which do not.** *Kanso* and *seijaku* are genuinely
+against a rail: permanent furniture, and furniture that never leaves the screen. *Yūgen* gives
+one hard rule — open at first paint, never an accordion, which is the register's existing
+"a ledger you have to open is a ledger nobody reads". **And *fukinsei* mildly favours a
+rail**, since an off-centre two-column composition is more asymmetric than a centred one; it
+was overridden rather than pretended into agreement. *Koko* and *shizen* are neutral here.
+Stacking all seven onto one side would have been the tightening this site keeps logging.
+
+**The two decisions that mattered more, and NN/g covers neither.**
+
+**1. The list is derived from the DOM, never typed.** A hand-kept contents list is a second
+copy of every heading, and this repo's oldest rule is that two copies drift and the
+accessible one rots. With no build step that leaves client generation, and three good things
+fall out: it is *not content* (every heading is fully server-rendered; the script only
+reflects them), the served HTML carries no list so **the SKS mirror never indexes a heading
+twice**, and losing the script loses a shortcut and no words.
+
+That last point is also why this may live inside `<main>` when `.qe-elsewhere` may not. The
+outside-`<main>` rule exists to stop *one* sheet's navigation being indexed as *another*
+sheet's content — a cross-page contamination. A self-referential list of this page's own
+headings cannot cause it, and since the list is never in the served HTML the question is
+moot anyway.
+
+**2. The ids are authored, not slugified.** This is the half that breaks quietly. An id
+derived from heading text dies the moment anybody rewords the heading, and every link a
+reader shared dies with it. So each `<h2>` carries a short *topical* id stated in the markup
+— `#eden`, `#the-colon`, `#quetelet`, `#wabi-sabi` — the way `--rot` is a fact about a slip.
+**The permanent thing is authored, the derived thing is computed, and nothing is written
+twice.** `check-markup.mjs` already guards duplicate ids, so the guard for this existed
+before the feature did.
+
+**The section mark, and the trade it takes.** A `§` beside each heading, linking to it.
+Always visible rather than revealed on hover, because hover hands the affordance to mouse
+users and to nobody else — no keyboard, no touch. The glyph is drawn with an empty alt string
+(the chain-arrow device) and the link is named by a visually hidden span, so it announces as
+"Link to this section". **That does append four words to every heading's accessible name**,
+which is the accepted cost and is what MDN and GitHub do; the alternative is the affordance
+not existing for most people. A **real space before the `<a>`** in the markup is load-bearing:
+without it the name computes as "…the windsLink to this section", because CSS margin is not
+whitespace. Found by reading the accessibility tree, not by looking at the page.
+
+**No scroll-spy.** NN/g says highlighting the current section helps. It also means a scroll
+listener, a mark that moves, and a second thing on screen that never settles — against the
+register's standing "no new motion". `:target` marks where a reader *landed*, which is the
+case a shared link actually creates, and it is drawn in the gutter with absolute positioning
+so arriving at a heading does not **shift** it: a border-left plus padding would move the
+words sideways at the end of a smooth scroll, the one moment a reader is looking straight at
+them.
+
+**Not on `/changelog`, and this is the decision worth keeping.** The register is the longest
+page on the site (16,052 words) and looked like the strongest case. Built and measured, it
+was the worst: its labels average **148 characters** against 22–34 on a sheet, so the block
+came out **1,293px** against 319–510px everywhere else, and it pushed the first accession
+three and a half screens down. The cause is not a bug — a register's accession headline *is*
+a sentence, which is that component's own written design decision.
+
+Both ways to shrink it were forbidden. **Truncating a label is this site's characteristic
+failure applied to itself.** **A short second label beside each heading is the drift.** So the
+register keeps its section marks and its sixteen addresses — deep links there work, which was
+half of what was asked — and has no contents list. Removed after measuring rather than
+shipped because it had been built.
+
+**Open, and left open on purpose: the register wants an index by sheet, not a contents list.**
+What a reader of `/changelog` wants is usually "what happened to sheet X", and the accessions
+are grouped by date. That is a different artifact, it needs a real editorial decision about
+how a sheet's entries are gathered across accessions, and approximating it with a contents
+list is what the measurement just talked us out of.
+
+**A wrinkle flagged and deliberately not solved.** On the sheets the headings are often
+quotations, so the Tempest's contents reads *Assembled, not born · A household of three · O,
+I have suffered with those that I saw suffer · Abhorred slave · O, brave new world*. That is
+lovely and it is **not scannable**, which is NN/g's whole purpose for the thing. The fix is
+not a second short label — it is better headings, and rewriting headings on shipped sheets is
+an editorial call rather than a design one. Named here so it is a choice rather than an
+oversight.
+
+**One rule amended rather than smuggled past.** `CLAUDE.md` said `queering.js` was "the two
+view controls, and nothing else". This breaks that, so the rule became a boundary instead of
+a tally: **it may derive navigation from the DOM; it may never create words.** A count of
+features is a rule that gets quietly broken the first time a third thing is worth having.
+
+
 ### Three surfaces, a spacing scale, and patina as a record (2026-09-09)
 
 Prompted by Ryan reading on wabi-sabi in web design and asking how this site scores against

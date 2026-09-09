@@ -118,6 +118,7 @@
 
   <p class="qe-lede">A herbarium keeps a register: a ledger of every specimen as it entered the collection, and of every annotation slip pinned to a sheet afterwards &mdash; a name re-read off the plate, a locality corrected, an identification withdrawn. This is that book for this site. It is backfilled from the whole commit history and kept up from here.</p>
 
+
   <p>It records four kinds of change: a <strong>sheet mounted</strong>, a sheet <strong>re-determined</strong> &mdash; reworked enough that what it shows is different &mdash; a <strong>label corrected</strong>, and work on the <strong>cabinet</strong>, meaning the site itself. Typo passes and small tidying are left out. Anything that changes what a sheet <em>claims</em> is in.</p>
 
   <p>The full working &mdash; every quotation, whose it is, where it came from, and the day somebody read the primary and confirmed the wording &mdash; is in <code>ATTRIBUTIONS.md</code>; the reasoning behind every settled and open question is in <code>DECISIONS.md</code>. Both are in <a href="https://github.com/Stimpunks/Queering-Earth">the repository</a>, which is the source of truth for this site. If something on a sheet is wrong, it belongs in this register. <a href="https://github.com/Stimpunks/Queering-Earth/issues">Say so</a>, and it will be.</p>
@@ -139,7 +140,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-09-patina">
       <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
-      <h2 id="a-2026-09-09-patina">Fifteen panels wore the specimen&rsquo;s clothes, twenty-five margin values passed for a hand-kept register, and the site&rsquo;s gold was being spent on the least interesting thing that happens to a sheet</h2>
+      <h2 id="a-2026-09-09-patina">Fifteen panels wore the specimen&rsquo;s clothes, twenty-five margin values passed for a hand-kept register, and the site&rsquo;s gold was being spent on the least interesting thing that happens to a sheet <a class="qe-anchor" href="#a-2026-09-09-patina"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Prompted by Ryan reading on wabi-sabi in web design, and by a scoring of this site against the seven aesthetic principles that article names. Six of the seven were already here &mdash; two of them, <em>fukinsei</em> and <em>datsuzoku</em>, more thoroughly than the article states them. <em>Seijaku</em>, the quiet, was measurably the weakest. And the list circulating as <q>the seven principles of wabi-sabi</q> turns out to be Hisamatsu Shin&rsquo;ichi&rsquo;s seven characteristics of <strong>Zen art</strong>, relabelled somewhere in transmission &mdash; with the third of them, the one about age, glossed in the design advice with <strong>no age left in it</strong>. That is why <q>patina</q> recurs in that literature without ever becoming a principle, and this accession is mostly about that hole. The <a href="/design">colophon</a> now carries the scoring, and says what we can and cannot vouch for in the thing we are borrowing.</p>
 
@@ -200,6 +201,25 @@
       </div>
 
       <div class="qe-entry qe-entry--mounted">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">Long sheets carry a contents list, every section has an address you can share, and the register has the addresses but not the list</span></div>
+        <div class="qe-entry-body">
+          <p><strong>On this sheet</strong> &mdash; the within-page twin of <em>Elsewhere on the plate</em> &mdash; now sits after the lede on the five longest sheets and on the colophon. Every <code>&lt;h2&gt;</code> on those pages, and every accession on this one, carries a small <code>&sect;</code> beside it that is a link to itself, so a reader can send somebody straight to <a href="/wild-nights#missing-word">a word missing from the copy you will find</a> or to <a href="/design#wabi-sabi">the wabi-sabi section</a>.</p>
+          <p><strong>The list is derived and the addresses are authored, and the split is the whole design.</strong> A hand-kept contents list is a second copy of every heading, and the oldest rule here is that two copies drift and the accessible one rots &mdash; so the list is built from the page&rsquo;s own headings and never typed. But an id derived the same way would die the moment anybody reworded a heading, taking every link a reader had shared with it. So the ids are short, topical, and <em>written in the markup</em> &mdash; <code>#eden</code>, <code>#the-colon</code>, <code>#quetelet</code> &mdash; the way a slip&rsquo;s angle is written there. <strong>The permanent thing is authored, the label is computed, and nothing is written twice.</strong></p>
+          <p>In the body, not a rail: the empty margins either side of the measure are the negative space the entry above spent its whole argument clearing. Not sticky, which also keeps it out of the way at 400% zoom. Not an accordion, and no highlight that follows the scroll &mdash; <strong>no new motion</strong>, the same rule this register already holds. <code>:target</code> marks where a reader <em>landed</em> instead, drawn in the gutter so arriving at a heading does not shift the words sideways.</p>
+          <p>The section mark is <strong>always visible rather than revealed on hover</strong>, because a hover affordance is one handed to mouse users and to nobody else.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The register looked like the strongest case for a contents list and measured as the worst one, so it was built, measured, and taken out again</span></div>
+        <div class="qe-entry-body">
+          <p>This is the longest page on the site &mdash; sixteen thousand words &mdash; so it got the contents list first. Then it was measured. <strong>An accession headline here is a sentence</strong>, which is this register&rsquo;s own design decision written down where it was made, so the labels average <strong>148 characters</strong> against 22 to 34 on a sheet. The block came out <strong>1,293px</strong> against 319 to 510 everywhere else, and it pushed the first entry three and a half screens down the page.</p>
+          <p>Both ways to shrink it were closed. <strong>Truncating a label is this site&rsquo;s characteristic failure applied to itself.</strong> Writing a short label beside each headline is the second copy that drifts. So the register keeps its section marks and its sixteen addresses, and has no contents list. <strong>Removed after measuring, rather than kept because it had been built.</strong></p>
+          <p><strong>What this page actually wants is an index by sheet, and that is left open rather than approximated.</strong> A reader here is usually asking what happened to one sheet, and the accessions are grouped by date. Gathering a sheet&rsquo;s entries across accessions is a real editorial decision, not a layout one, and the measurement above is precisely the argument against reaching for the nearest component instead.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--mounted">
         <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">The colophon scores this site against the seven principles, including the two it fails, and names what it cannot vouch for in them</span></div>
         <div class="qe-entry-body">
           <p>A new section on <a href="/design">the colophon</a>: what wabi-sabi is, which of the seven principles this sheet actually manages, and which two it was weak on. <strong>Six of the seven were here by accident</strong> &mdash; a herbarium sheet is already foxed paper, a faded specimen, a hand-lettered label and a mount that has been handled &mdash; so the honest framing is that we found the vocabulary after the fact and it told us which one we had been getting wrong.</p>
@@ -250,7 +270,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-cabinet">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-cabinet">The sheet has a second ground, and it is the drawer shut rather than the lamp switched off</h2>
+      <h2 id="a-2026-09-08-cabinet">The sheet has a second ground, and it is the drawer shut rather than the lamp switched off <a class="qe-anchor" href="#a-2026-09-08-cabinet"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">A dark ground was refused once, in the entry for Sheet No.&nbsp;5, on the grounds that this site has one ground and it is paper. That entry stands as a description of what it refused &mdash; a generic inverted palette arriving with a draft &mdash; and the decision has been amended rather than reversed. The cabinet is a herbarium object: dark warm brown, the drawer a sheet is filed in, and the dark-ground plate whose specimens are printed on near-black so that pale forms read.</p>
 
@@ -301,7 +321,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-labels">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-labels">A first-person account that ends the moment two words fit had nothing under it about what a word that fits is for, and the writers who answer that were gathered on Stimpunks pages that are a finding aid and not a citation</h2>
+      <h2 id="a-2026-09-08-labels">A first-person account that ends the moment two words fit had nothing under it about what a word that fits is for, and the writers who answer that were gathered on Stimpunks pages that are a finding aid and not a citation <a class="qe-anchor" href="#a-2026-09-08-labels"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">The <a href="/coming-to-terms">Coming to Terms</a> sheet carried Ryan Boren&rsquo;s 2022 essay with every other writer&rsquo;s words stripped out of it, which left it thin. A treatment on labels is now mounted below the essay: the copia, the smorgasbord, the arrangement of building materials, and the direction of travel that decides whether a word is invention or classification.</p>
 
@@ -336,7 +356,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-flowercodes">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-flowercodes">The most-quoted sentence about lavender and Abraham Lincoln is word for word what Carl Sandburg wrote, and the man it describes is Joshua Speed</h2>
+      <h2 id="a-2026-09-08-flowercodes">The most-quoted sentence about lavender and Abraham Lincoln is word for word what Carl Sandburg wrote, and the man it describes is Joshua Speed <a class="qe-anchor" href="#a-2026-09-08-flowercodes"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Sheet No. 7 reads violet, pansy, green carnation, and lavender as one process caught at four moments: a description becomes a code, the code is read by the people it was meant to escape, and what is left is a name in somebody else&rsquo;s mouth. Four public-domain plates, two of which are the wrong object and say so.</p>
 
@@ -370,7 +390,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-vine">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-vine">Four flowers people wore when saying it in words was dangerous, drawn onto the corners of the plate of sheets</h2>
+      <h2 id="a-2026-09-08-vine">Four flowers people wore when saying it in words was dangerous, drawn onto the corners of the plate of sheets <a class="qe-anchor" href="#a-2026-09-08-vine"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Front-page furniture. The plate of sheets in <em>What grows here</em> now sits inside a ruled frame with a botanical sprig on each corner: violet, pansy, green carnation, lavender.</p>
 
@@ -395,7 +415,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-typeplays">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-typeplays">A heading that says the type plays was set in the same even measure as every other heading, which is a claim arguing against itself</h2>
+      <h2 id="a-2026-09-08-typeplays">A heading that says the type plays was set in the same even measure as every other heading, which is a claim arguing against itself <a class="qe-anchor" href="#a-2026-09-08-typeplays"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Front-page typography only. Nothing a sheet claims about a text has changed.</p>
 
@@ -411,7 +431,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-dickinson">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-dickinson">Higginson wrote <q>let us alter as little as possible</q> and then printed Dickinson&rsquo;s poem with eight of its nine dashes gone &mdash; and the copy a reader will find today has lost a word out of the line that asks to be moored</h2>
+      <h2 id="a-2026-09-08-dickinson">Higginson wrote <q>let us alter as little as possible</q> and then printed Dickinson&rsquo;s poem with eight of its nine dashes gone &mdash; and the copy a reader will find today has lost a word out of the line that asks to be moored <a class="qe-anchor" href="#a-2026-09-08-dickinson"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Sheet No. 6 reads <cite>Wild nights &ndash; Wild nights!</cite> as co-regulation and answers it with a poem of Ryan&rsquo;s. It mounts the Houghton leaf in facsimile, which makes it the first plate here that is licensed rather than public domain.</p>
 
@@ -474,7 +494,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-demory">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-demory">A scholar cut her own sentence down to fit a later argument, marked every cut, and in doing so demonstrated the thing the sentence says</h2>
+      <h2 id="a-2026-09-08-demory">A scholar cut her own sentence down to fit a later argument, marked every cut, and in doing so demonstrated the thing the sentence says <a class="qe-anchor" href="#a-2026-09-08-demory"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">The front page gained two sections on Pamela Demory&rsquo;s <cite>Queer/Adaptation</cite>. One of the two quotations is a quotation of the other, five years apart, by the same person.</p>
 
@@ -505,7 +525,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-miranda">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-miranda">An editor in 1733 decided Miranda&rsquo;s hardest speech was not credible coming from her, moved it into her father&rsquo;s mouth, and three centuries of editions followed him</h2>
+      <h2 id="a-2026-09-08-miranda">An editor in 1733 decided Miranda&rsquo;s hardest speech was not credible coming from her, moved it into her father&rsquo;s mouth, and three centuries of editions followed him <a class="qe-anchor" href="#a-2026-09-08-miranda"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Sheet No. 5 reads Shakespeare&rsquo;s <cite>The Tempest</cite> alongside Waterhouse&rsquo;s 1916 canvas. The layout came from Helen Edgar&rsquo;s own Claude session and was adopted as she sent it; two citations in it did not survive checking.</p>
 
@@ -544,7 +564,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-register">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-register">A site that publishes a ledger of everyone else&rsquo;s words was keeping the account of its own mistakes in a file only we could read</h2>
+      <h2 id="a-2026-09-08-register">A site that publishes a ledger of everyone else&rsquo;s words was keeping the account of its own mistakes in a file only we could read <a class="qe-anchor" href="#a-2026-09-08-register"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Four sheets in, the corrections had piled up in the repository and nowhere else. This page is the fix.</p>
 
@@ -559,7 +579,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-wyrd">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-wyrd">A sheet shipped with Helen Edgar&rsquo;s name over prose she did not write &mdash; she declined the credit, and the answer had been written in our own colophon before the sheet was made</h2>
+      <h2 id="a-2026-09-08-wyrd">A sheet shipped with Helen Edgar&rsquo;s name over prose she did not write &mdash; she declined the credit, and the answer had been written in our own colophon before the sheet was made <a class="qe-anchor" href="#a-2026-09-08-wyrd"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Sheet No. 4 reads Helen Edgar&rsquo;s <cite>Wyrd, Weird, and the Invention of Normal</cite>: before <em>weird</em> meant strange, <em>wyrd</em> meant fate, and the thing that got invented in between was normal.</p>
 
@@ -646,7 +666,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-plates">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-plates">Two grey woodcuts came off a colour sheet, and the drawing above them was rebuilt twice before it stopped standing to attention</h2>
+      <h2 id="a-2026-09-08-plates">Two grey woodcuts came off a colour sheet, and the drawing above them was rebuilt twice before it stopped standing to attention <a class="qe-anchor" href="#a-2026-09-08-plates"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Both changes are about looks rather than accuracy, and both turned out to be the sheet&rsquo;s own argument correcting the page.</p>
 
@@ -680,7 +700,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-08-rossetti">
       <p class="qe-accession-date">2026 &middot; 8 September</p>
-      <h2 id="a-2026-09-08-rossetti">The first printing of <cite>Promises like Pie-crust</cite> ends line 20 with a colon, every copy in circulation ends it with a full stop, and the line is the one about breaking the chain</h2>
+      <h2 id="a-2026-09-08-rossetti">The first printing of <cite>Promises like Pie-crust</cite> ends line 20 with a colon, every copy in circulation ends it with a full stop, and the line is the one about breaking the chain <a class="qe-anchor" href="#a-2026-09-08-rossetti"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Sheet No. 3 reads Christina Rossetti&rsquo;s poem of 20 April 1861 next to a 2026 paper on supporting Autistic adults&rsquo; intimate lives.</p>
 
@@ -750,7 +770,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-07-colophon">
       <p class="qe-accession-date">2026 &middot; 7 September</p>
-      <h2 id="a-2026-09-07-colophon">The site was linking to one address and declaring a different one canonical, and nobody would have found it by reading the repository</h2>
+      <h2 id="a-2026-09-07-colophon">The site was linking to one address and declaring a different one canonical, and nobody would have found it by reading the repository <a class="qe-anchor" href="#a-2026-09-07-colophon"><span class="qe-sr">Link to this section</span></a></h2>
 
       <div class="qe-entry qe-entry--cabinet">
         <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Addresses on this site are extensionless</span></div>
@@ -777,7 +797,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-07-sheets">
       <p class="qe-accession-date">2026 &middot; 7 September</p>
-      <h2 id="a-2026-09-07-sheets">The phrase on the masthead turned out to be one hyphen away from the subtitle of a book we quote on the same page</h2>
+      <h2 id="a-2026-09-07-sheets">The phrase on the masthead turned out to be one hyphen away from the subtitle of a book we quote on the same page <a class="qe-anchor" href="#a-2026-09-07-sheets"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">The first two sheets went up and were mounted on the plate as numbered cards.</p>
 
@@ -837,7 +857,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-07-planted">
       <p class="qe-accession-date">2026 &middot; 7 September</p>
-      <h2 id="a-2026-09-07-planted">For six minutes at a time the site looked deployed: a green dashboard, auto-publishing on, and a commit several pushes stale</h2>
+      <h2 id="a-2026-09-07-planted">For six minutes at a time the site looked deployed: a green dashboard, auto-publishing on, and a commit several pushes stale <a class="qe-anchor" href="#a-2026-09-07-planted"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">The site was planted and the domain went live the same day. Between those two things, three separate wrong answers about why pushes were doing nothing.</p>
 
