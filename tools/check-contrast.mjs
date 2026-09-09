@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * check-contrast.mjs — measures WCAG text contrast on every page, on SCREEN and
- * under PRINT emulation.
+ * check-contrast.mjs — measures WCAG text contrast on every page, on SCREEN in
+ * both grounds and under PRINT emulation.
  *
  * WHY THIS EXISTS
  * CLAUDE.md says three things that only mean something if a script enforces them:
@@ -18,9 +18,19 @@
  *   2. Every SVG <text>/<tspan> fill, composited against the shapes actually
  *      painted behind it. `color` never reaches `fill`, so the CSS pass is blind
  *      to diagrams; this is the pass that would have caught bf317cd.
- *   3. Both of the above again with Emulation.setEmulatedMedia {media:'print'} —
+ *   3. Both of the above again on the CABINET ground — screen media with
+ *      prefers-color-scheme: dark. Two grounds are two palettes, and measuring
+ *      only the daylight one measures half the site. This is also the pass that
+ *      catches the card inversion: in daylight a card is lighter than the page,
+ *      so text on it gains contrast, and on a dark ground a lifted card loses
+ *      it. The cabinet's cards are recessed for that reason and this is what
+ *      would notice them drifting back up.
+ *   4. Both of the above again with Emulation.setEmulatedMedia {media:'print'} —
  *      where a page that hardcodes hexes instead of aliasing the --qe-* tokens
- *      shows up as white-on-white.
+ *      shows up as white-on-white. The dark preference is left SET for this pass
+ *      on purpose: both ground switches are @media screen, so paper is daylight
+ *      whatever the machine asked for, and a regression that let the cabinet
+ *      reach paper would land here as black-on-brown.
  *
  * WHAT "PRINT" MEANS HERE, EXACTLY
  * Browsers leave *Background graphics* off by default, so the paper a reader
@@ -614,10 +624,31 @@ async function main() {
           'screen measure'
         );
 
-        /* Print: hand the page back its own state, then let the print stylesheet
-           reveal what it reveals. */
+        /* The cabinet: the same screen measurement on the dark ground. The two
+           grounds are two palettes and only one of them is measured by the pass
+           above. A dark ground also inverts the card rule — in daylight a card
+           is LIGHTER than the page so text on it gains contrast, and on the
+           cabinet ground a lifted card would lose it — so this pass is the one
+           that would catch a card drifting back up. */
+        await send('Emulation.setEmulatedMedia', {
+          media: 'screen',
+          features: [{ name: 'prefers-color-scheme', value: 'dark' }],
+        });
+        await sleep(400);
+        const cabinet = evaluated(
+          await send('Runtime.evaluate', { expression: `${MEASURE}('screen')`, returnByValue: true }),
+          'cabinet measure'
+        );
+
+        /* Print, WITH the dark preference still set. Both ground switches are
+           @media screen, so paper is daylight whatever the reader's machine
+           asks for — and this is the pass that proves it rather than trusting
+           the selector. A reader in the cabinet who hits Print gets ink. */
         evaluated(await send('Runtime.evaluate', { expression: UNREVEAL, returnByValue: true }), 'unreveal');
-        await send('Emulation.setEmulatedMedia', { media: 'print' });
+        await send('Emulation.setEmulatedMedia', {
+          media: 'print',
+          features: [{ name: 'prefers-color-scheme', value: 'dark' }],
+        });
         await sleep(400);
         const print = evaluated(
           await send('Runtime.evaluate', { expression: `${MEASURE}('paper')`, returnByValue: true }),
@@ -627,8 +658,8 @@ async function main() {
           await send('Runtime.evaluate', { expression: `${MEASURE}('paper-bg')`, returnByValue: true }),
           'print+backgrounds measure'
         );
-        await send('Emulation.setEmulatedMedia', { media: '' });
-        return { screen, print, printBg, settledChars };
+        await send('Emulation.setEmulatedMedia', { media: '', features: [] });
+        return { screen, cabinet, print, printBg, settledChars };
       });
 
       results.push([f, out]);
@@ -653,19 +684,20 @@ async function main() {
          this the hard way: when the only output is "it worked", a page indexing 12%
          of itself is indistinguishable from a healthy one. Counts of what was
          actually measured are the part that makes a silent regression visible. */
-      const s = out.screen, p = out.print, pb = out.printBg;
-      const bad = s.fails.length + p.fails.length;
-      const un = s.unmeasured.length + p.unmeasured.length;
+      const s = out.screen, c = out.cabinet, p = out.print, pb = out.printBg;
+      const bad = s.fails.length + c.fails.length + p.fails.length;
+      const un = s.unmeasured.length + c.unmeasured.length + p.unmeasured.length;
       process.stdout.write(
         `  ${f.padEnd(42)} ${notMeasured ? 'UNREAD' : bad ? 'FAIL  ' : 'ok    '}` +
           `  screen ${String(s.fails.length).padStart(3)}/${String(s.checkedCss + s.checkedSvg).padEnd(4)}` +
+          `  cabinet ${String(c.fails.length).padStart(3)}/${String(c.checkedCss + c.checkedSvg).padEnd(4)}` +
           `  print ${String(p.fails.length).padStart(3)}/${String(p.checkedCss + p.checkedSvg).padEnd(4)}` +
           `  svg ${String(s.checkedSvg).padStart(3)}` +
           (pb.fails.length ? `  +bg ${pb.fails.length}` : '') +
           (un ? `  ~${un} unmeasured` : '') +
           '\n'
       );
-      for (const [label, res] of [['screen', s], ['print', p]]) {
+      for (const [label, res] of [['screen', s], ['cabinet', c], ['print', p]]) {
         if (!res.fails.length) continue;
         console.log(`    ${label}:`);
         for (const x of res.fails.slice(0, 8)) console.log(detail(x));
@@ -678,21 +710,24 @@ async function main() {
 
   const tot = (k, m) => results.reduce((a, [, o]) => a + o[m][k].length, 0);
   const sum = (k, m) => results.reduce((a, [, o]) => a + o[m][k], 0);
+  const MODES = ['screen', 'cabinet', 'print'];
+  const across = (fn) => MODES.reduce((a, m) => a + fn(m), 0);
   const screenFails = tot('fails', 'screen');
+  const cabinetFails = tot('fails', 'cabinet');
   const printFails = tot('fails', 'print');
-  const checked = sum('checkedCss', 'screen') + sum('checkedSvg', 'screen') +
-    sum('checkedCss', 'print') + sum('checkedSvg', 'print');
-  const svgChecked = sum('checkedSvg', 'screen') + sum('checkedSvg', 'print');
-  const unmeasured = tot('unmeasured', 'screen') + tot('unmeasured', 'print');
-  const overImage = sum('overImage', 'screen') + sum('overImage', 'print');
-  const exempt = sum('exempt', 'screen') + sum('exempt', 'print');
-  const decorative = sum('decorative', 'screen') + sum('decorative', 'print');
+  const checked = across((m) => sum('checkedCss', m) + sum('checkedSvg', m));
+  const svgChecked = across((m) => sum('checkedSvg', m));
+  const unmeasured = across((m) => tot('unmeasured', m));
+  const overImage = across((m) => sum('overImage', m));
+  const exempt = across((m) => sum('exempt', m));
+  const decorative = across((m) => sum('decorative', m));
   const bgWarn = results.filter(([, o]) => o.printBg.fails.length);
 
   console.log(
     `\n${results.length} pages · ${checked.toLocaleString()} text elements measured ` +
       `(${svgChecked.toLocaleString()} SVG labels) · ` +
-      `${screenFails} screen failure(s), ${printFails} print failure(s)`
+      `${screenFails} screen failure(s), ${cabinetFails} cabinet failure(s), ` +
+      `${printFails} print failure(s)`
   );
   if (exempt) {
     console.log(
@@ -760,7 +795,7 @@ async function main() {
     );
   }
 
-  const failures = screenFails + printFails;
+  const failures = screenFails + cabinetFails + printFails;
   if (CHECK) {
     if (unread.length) {
       console.error(`\nFAIL — ${unread.length} page(s) not measured; the run is incomplete.`);
@@ -770,7 +805,7 @@ async function main() {
       console.error(`\nFAIL — ${failures} element(s) under WCAG AA (4.5:1, or 3.0:1 for large text).`);
       process.exit(1);
     }
-    console.log('\nPASS — every measured text element clears WCAG AA on screen and in print.');
+    console.log('\nPASS — every measured text element clears WCAG AA in both grounds and in print.');
     process.exit(0);
   }
   if (failures) {

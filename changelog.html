@@ -6,8 +6,9 @@
 <title>The accession register &mdash; Queering Earth</title>
 <meta name="description" content="The changelog for Queering Earth: every sheet as it was mounted, every plate that came off again, and every label we corrected — including the attributions we got wrong and exactly how they were fixed.">
 <link rel="canonical" href="https://queering.earth/changelog">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#f5efe2">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Queering Earth">
@@ -36,13 +37,18 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;display=swap">
 <link rel="stylesheet" href="queering.css">
 
-<script>try{if(localStorage.getItem('qe-plain')==='1')document.documentElement.classList.add('plain')}catch(e){}</script>
+<!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
+     either one would flash the wrong page: the decorated page at someone who
+     turned it off, or the daylight sheet at someone who asked for the cabinet.
+     With no stored ground, neither class is set and the media query decides. -->
+<script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
 </head>
 <body>
 
 <a class="qe-skip" href="#main">Skip to the page</a>
 
 <div class="qe-controls">
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
   <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
 </div>
 
@@ -127,8 +133,59 @@
 
   <div class="qe-register">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-08-labels">
+    <section class="qe-accession" aria-labelledby="a-2026-09-08-cabinet">
       <p class="qe-accession-date">2026 &middot; 8 September &middot; latest</p>
+      <h2 id="a-2026-09-08-cabinet">The sheet has a second ground, and it is the drawer shut rather than the lamp switched off</h2>
+
+      <p class="qe-accession-note">A dark ground was refused once, in the entry for Sheet No.&nbsp;5, on the grounds that this site has one ground and it is paper. That entry stands as a description of what it refused &mdash; a generic inverted palette arriving with a draft &mdash; and the decision has been amended rather than reversed. The cabinet is a herbarium object: dark warm brown, the drawer a sheet is filed in, and the dark-ground plate whose specimens are printed on near-black so that pale forms read.</p>
+
+      <div class="qe-entry qe-entry--cabinet">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Brown rather than green, and the reason is measurable rather than a preference</span></div>
+        <div class="qe-entry-body">
+          <p><strong>A dark green ground takes the separation out of the colours this site is built from.</strong> Moss, lichen, and verdigris share their hue with it, and every accent measures worse against it than against brown for no gain: moss text at 7.1:1 rather than 7.2, rust at 6.2:1 rather than 7.3. Push the green to a real forest tone and nothing but cream clears 7:1 at all. <strong>A green ground makes green unusable</strong>, which is a plain result and not a matter of taste.</p>
+          <p><strong>Brown was already the palette&rsquo;s ground and nobody had noticed.</strong> The dark-ground botanical print that prompted this is drawn in cream, sage, marigold, and coral on near-black &mdash; which is <code>--qe-ink</code>, <code>--qe-lichen</code>, <code>--qe-marigold</code>, and <code>--qe-coral</code> as they already stood. The five decorative tokens are therefore carried across unchanged and <strong>deliberately still saturated</strong>. Only ink, moss, and rust are lifted, to 12.8:1, 7.2:1, and 7.3:1. Lifting the decoration to the same target was tried first and turns every flower chalky: <strong>7:1 is a rule for letters</strong>, and the brightness belongs to the text.</p>
+          <p>It earns the mounted plates as well. The scans on these sheets are cream vellum, and cream vellum on dark brown reads as a plate lying lit on a shelf. On green it reads as a plate pasted onto green.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">A card is lighter than the page in daylight and would be darker than it here, which is a trap and not a taste</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The contrast target has to be measured against the lightest surface any text sits on, and on a dark ground that is not the page.</strong> In daylight <code>--qe-card</code> is lighter than <code>--qe-paper</code>, so text on a card gains contrast and the page is the worst case. Invert the palette and keep the instinct &mdash; a card lifted above the ground &mdash; and text on a card <em>loses</em> contrast instead. Solving 7:1 against a lifted panel drags rust to <code>#eab1a3</code>, a pale pink with no rust left in it.</p>
+          <p><strong>So the cabinet&rsquo;s cards are recessed</strong>, the ground is the lightest surface again, rust stays an ember, and the lift is carried by the hairline the cards already had. It reads better than the lifted version anyway: compartments in a drawer rather than paper stacked on wood.</p>
+          <p>Three things were not token flips and are now tokens, which is the same lesson the print sheet taught in 2026: the foxed-paper wash (<code>--qe-wash-a</code> through <code>-d</code>), the shadow a lifted sheet casts (<code>--qe-shade</code>, a near-black that did nothing on a near-black ground), and <strong>the pale flesh of a specimen</strong> (<code>--qe-flesh</code>). The last was the visible bug: a mushroom&rsquo;s stipe was filled with <code>--qe-paper-deep</code>, which it only ever matched by coincidence, so on the dark ground the stems of the four mushrooms on <a href="/invention-of-normal">Sheet No.&nbsp;4</a> became holes and the caps floated. They are cream now, which is what the dark-ground plate does with them.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">A discreet control, a machine that decides when nobody has, and paper that is daylight whatever either of them says</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The ground is a class on <code>&lt;html&gt;</code>, the palette is entirely in <code>queering.css</code>, and the words do not know what they are lying on</strong> &mdash; the same shape as plain view, and for the same reason. Every hex has one copy: the cabinet values are defined once as <code>--qe-cab-*</code> and the two switch rules carry nothing but aliases of them, so a drifted switch is a missing ground and never a wrong colour.</p>
+          <p><strong>Three states, one word.</strong> With no stored choice the machine decides, from CSS alone and with no script involved, so a reader who has never touched the control still gets the ground their machine asked for. The control then names the ground they can <em>see</em> rather than a preference they have not expressed, and clicking it writes the other one down; the stored choice wins over the machine in both directions. It is the quieter of the two controls on purpose &mdash; plain view changes what the page <em>is</em> and keeps the pill, this changes what the page is lying on and gets a word and a hairline. Its label is restored before first paint by the inline snippet in every <code>&lt;head&gt;</code>, which now carries both preferences: deferred to <code>queering.js</code> it would flash the daylight sheet at somebody who asked for the cabinet.</p>
+          <p><strong>Paper is daylight, always.</strong> Both switches are <code>@media screen</code>, so the print sheet cannot inherit a ground and a reader in the cabinet who hits Print gets ink on white.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">Two claims about this site&rsquo;s own measurements were describing the daylight sheet only, and one of them was describing a check that does not exist</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The design page said three tokens clear 7:1 <q>against the paper</q>, and quoted 14.3:1, 7.8:1, and 7.0:1 without saying what they were against.</strong> True of one ground out of two. The prose now says <q>against the ground</q>, those three ratios are labelled <em>on paper</em>, and a new section carries the cabinet&rsquo;s own numbers. The swatch chips needed no change at all: they are drawn with the tokens rather than with copies of them, so they restate themselves in whichever ground you are reading in.</p>
+          <p><strong>And the contrast checker gates at WCAG AA, not at 7:1.</strong> <code>CLAUDE.md</code> puts the 7:1 target and <code>tools/check-contrast.mjs</code> in the same breath, which reads as though the script enforces the house target; it measures every element and fails them at 4.5:1, or 3:1 for large text. The 7:1 figure is held by hand-chosen tokens and by nothing else. That was found by breaking a token on purpose to see the new pass fail, watching it pass at 6.0:1, and going to look at why &mdash; which is the argument for the exercise. It is <strong>logged and not fixed</strong>: raising the gate is a separate job with its own list of things it would newly fail, and doing it inside this entry would have buried it.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The guard measures both grounds, and it was made to fail before it was believed</span></div>
+        <div class="qe-entry-body">
+          <p><code>tools/check-contrast.mjs</code> measured one palette on screen and one on paper. Two grounds are two palettes, so it now runs the screen measurement again under <code>prefers-color-scheme: dark</code> &mdash; 2,840 more text elements, and the pass that would notice a cabinet card drifting back up above the ground. <strong>The print pass now runs with the dark preference deliberately left set</strong>, so a regression that let the cabinet reach paper lands as black-on-brown in the pass that already gates.</p>
+          <p><strong>A new pass that reports without gating is decoration</strong>, and this one nearly was: the failure total it feeds counted screen and print only, so the cabinet column would have printed its numbers and never stopped a ship. Both are in the gate now, and the pass was verified by lifting <code>--qe-cab-ink</code> to a value near the ground and watching 1,675 cabinet failures appear against zero on screen and zero in print.</p>
+          <p><code>tools/make-images.py</code> reads the palette out of <code>queering.css</code> with a search for each token name, which returns whichever copy appears first in the file. Two palettes in one stylesheet make that a loaded gun: reordering the sheet would silently turn every social card brown. The lookup is anchored to the <code>:root</code> block that holds the daylight values &mdash; <strong>a social card is a herbarium sheet, not the drawer it is filed in</strong> &mdash; and every generated file is byte-for-byte what it was.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-08-labels">
+      <p class="qe-accession-date">2026 &middot; 8 September</p>
       <h2 id="a-2026-09-08-labels">A first-person account that ends the moment two words fit had nothing under it about what a word that fits is for, and the writers who answer that were gathered on Stimpunks pages that are a finding aid and not a citation</h2>
 
       <p class="qe-accession-note">The <a href="/coming-to-terms">Coming to Terms</a> sheet carried Ryan Boren&rsquo;s 2022 essay with every other writer&rsquo;s words stripped out of it, which left it thin. A treatment on labels is now mounted below the essay: the copia, the smorgasbord, the arrangement of building materials, and the direction of travel that decides whether a word is invention or classification.</p>

@@ -60,7 +60,8 @@ held to the same standard as anything on Star Stuff, and arguably a stricter one
   - **`queering.css`** — the **canonical palette tokens** (`--qe-*`, the single source of
     truth for every recurring colour), the type stack, the shared layout, the botanical
     art styles, and the print sheet.
-  - **`queering.js`** — the plain-view control, and nothing else.
+  - **`queering.js`** — the two view controls (plain view, and the ground), and
+    nothing else.
 - Local render checks: `node tools/serve.mjs 8766`, or the Browser pane via
   `.claude/launch.json`. `serve.mjs` roots itself at the repo, not at `process.cwd()`, so it
   is correct from any directory.
@@ -74,17 +75,38 @@ tidiness: Star Stuff shipped 44 of 46 pages that **printed blank** because they 
 colours the print sheet could not reach. `tools/check-contrast.mjs` measures both media.
 
 **Contrast target is 7:1, not 4.5:1** — the [Stimpunks house style guide](https://stimpunks.org/fieldguide/editorial/style-guide/)
-asks for it. Every text token in `queering.css` clears it against `--qe-paper`; the three
-that are text (`--qe-ink` 14.3:1, `--qe-moss` 7.8:1, `--qe-rust` 7.0:1) are chosen for it.
-The decorative tokens — lichen, verdigris, marigold, coral, violet — **are not for text.**
+asks for it. Every text token in `queering.css` clears it against the ground; the three
+that are text (`--qe-ink` 14.3:1, `--qe-moss` 7.8:1, `--qe-rust` 7.0:1 in daylight; 12.8:1,
+7.2:1, 7.3:1 in the cabinet) are chosen for it. The decorative tokens — lichen, verdigris,
+marigold, coral, violet — **are not for text**, in either ground.
 
-### The ground is paper. Keep the two sites unmistakable
+**`check-contrast.mjs` gates at WCAG AA (4.5:1), NOT at 7:1.** The house target is held by
+hand-chosen tokens and by nothing else, so do not cite the script as evidence of it. Logged
+open in `DECISIONS.md`.
+
+### The ground is paper, and its other state is the cabinet
 
 Star Stuff is a night sky. This is a herbarium sheet in daylight: warm vellum, dark ink line
 art, saturated jewel accents, specimens arranged like a Victorian plate. Green is the ground
 note — moss and lichen and oxidized copper, not a logo green. **"The same site in green" is
 the failure mode.** If a change makes this page look like Star Stuff with the hue rotated,
 it is wrong.
+
+**Dark mode is `--qe-cab-*`, and it is the drawer shut, not the lamp switched off** — dark
+warm brown, the dark-ground Victorian plate. **Not dark green**: green ground shares its hue
+with moss, lichen and verdigris and measures worse for every accent. Values live once in
+`:root`; the two `@media screen` switch rules carry only aliases. Three rules that are easy
+to get wrong:
+
+- **The gating surface is the lightest thing text sits on, and inverting flips which that
+  is.** In daylight a card is lighter than the page. In the cabinet the cards are
+  **recessed** so the page stays the worst case — lift one and rust has to go pale pink to
+  clear 7:1.
+- **Decoration stays saturated.** 7:1 is a rule for letters; lifting the decorative five to
+  it turns every flower chalky.
+- **Paper is daylight always.** Both switches are `@media screen`. Anything that is a
+  daylight object by nature — the print sheet, the social cards — must not reach the cabinet
+  palette.
 
 ### Plain view is a stylesheet. There is never a second document
 
@@ -94,9 +116,10 @@ the argument, and it lives **entirely in CSS**, layered over ordinary semantic H
 - **Never an image of text.** Never a decorative copy and an accessible copy.
 - Everything decorative switches off under `html.plain` — the wonk, the rotation, the
   display faces, the paper wash, the motion.
-- Every page gets the toggle, and the inline `<head>` snippet that applies the stored
-  preference **before first paint**. Deferring it to `queering.js` flashes the decorated
-  page at the reader who turned it off.
+- Every page gets both toggles, and the inline `<head>` snippet that applies **both**
+  stored preferences **before first paint**. Deferring either to `queering.js` flashes the
+  wrong page: the decorated one at the reader who turned it off, or the daylight sheet at
+  the reader who asked for the cabinet.
 - **Two copies of the same words drift, and the accessible one is always the copy that
   rots.** That is the whole reason for this rule.
 
@@ -115,7 +138,9 @@ inner `<g class="sprout">`. Getting this wrong collapses every sprout onto the o
 `favicon.ico`, `apple-touch-icon.png` and every `images/og-*.png` come out of
 **`tools/make-images.py`** — the one Python tool here, because it has to rasterise and
 nothing may need `npm install`. It reads the `--qe-*` values straight out of `queering.css`,
-so the cards cannot drift from the palette.
+so the cards cannot drift from the palette. **The lookup is anchored to the `:root` block on
+purpose**: a social card is a herbarium sheet, not the drawer it is filed in, and an
+unanchored search would return whichever palette appeared first in the file.
 
 **A new sheet needs a new card.** Add an `og_card(...)` line, re-run `python3 tools/make-images.py`,
 and point the page's `og:image` and `twitter:image` at it. A sheet that ships without one
@@ -179,7 +204,7 @@ Run before shipping. All three are browser-free or Chrome-only; nothing needs `n
 ```bash
 node tools/check-markup.mjs     # parser-rewriting markup, duplicate ids, exactly one <main>
 node tools/check-sitemap.mjs    # every page listed once, every entry resolves
-node tools/check-contrast.mjs   # WCAG contrast on screen AND under print emulation
+node tools/check-contrast.mjs   # WCAG contrast in BOTH grounds and under print emulation
 ```
 
 Star Stuff has five more (`check-classes`, `check-overlap`, `check-sheets`, `check-embeds`,

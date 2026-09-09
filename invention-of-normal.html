@@ -6,8 +6,9 @@
 <title>Wyrd, Weird, and the Invention of Normal — Queering Earth</title>
 <meta name="description" content="Wyrd was Old English for fate. It became weird, and then weird became a diagnosis. A sheet on the demotion of a word, the Weird Sisters, changelings, refusal, and an idea of normal barely two centuries old.">
 <link rel="canonical" href="https://queering.earth/invention-of-normal">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#f5efe2">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Queering Earth">
@@ -39,15 +40,18 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;display=swap">
 <link rel="stylesheet" href="queering.css">
 
-<!-- Restore the reader's plain-view choice BEFORE first paint. Deferred to
-     queering.js it would flash the decorated page at someone who turned it off. -->
-<script>try{if(localStorage.getItem('qe-plain')==='1')document.documentElement.classList.add('plain')}catch(e){}</script>
+<!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
+     either one would flash the wrong page: the decorated page at someone who
+     turned it off, or the daylight sheet at someone who asked for the cabinet.
+     With no stored ground, neither class is set and the media query decides. -->
+<script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
 </head>
 <body>
 
 <a class="qe-skip" href="#main">Skip to the page</a>
 
 <div class="qe-controls">
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
   <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
 </div>
 

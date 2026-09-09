@@ -6,8 +6,9 @@
 <title>How this site is made — Queering Earth</title>
 <meta name="description" content="The design of Queering Earth: a Victorian herbarium sheet as the model, biophilic ground rules, the palette, the type, the drawings, and what we mean by specimen, sheet, plate, and label.">
 <link rel="canonical" href="https://queering.earth/design">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#f5efe2">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Queering Earth">
@@ -36,13 +37,18 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;display=swap">
 <link rel="stylesheet" href="queering.css">
 
-<script>try{if(localStorage.getItem('qe-plain')==='1')document.documentElement.classList.add('plain')}catch(e){}</script>
+<!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
+     either one would flash the wrong page: the decorated page at someone who
+     turned it off, or the daylight sheet at someone who asked for the cabinet.
+     With no stored ground, neither class is set and the media query decides. -->
+<script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
 </head>
 <body>
 
 <a class="qe-skip" href="#main">Skip to the page</a>
 
 <div class="qe-controls">
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
   <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
 </div>
 
@@ -118,14 +124,16 @@
 
   <p>Every colour on the site is a token in one stylesheet, and no page writes a hex. That is not tidiness. Star Stuff once shipped forty-four of forty-six pages that <em>printed blank</em>, because they hardcoded colours the print sheet could not reach.</p>
 
-  <p>The house style asks for a contrast ratio of <strong>7:1</strong>, not the usual 4.5:1. Three tokens clear it against the paper and are allowed to carry text. The rest are decoration — line art, rules, the tape on a card — and are never set as type.</p>
+  <p>The house style asks for a contrast ratio of <strong>7:1</strong>, not the usual 4.5:1. Three tokens clear it against the ground and are allowed to carry text. The rest are decoration — line art, rules, the tape on a card — and are never set as type.</p>
+
+  <p>The chips below are drawn with the tokens themselves rather than with copies of them, so they show <em>the ground you are reading in</em>. Switch grounds with the control at the top of the page and this list restates itself.</p>
 
   <ul class="qe-swatches">
     <li><span class="qe-swatch-chip" style="--swatch: var(--qe-paper)"></span><span class="qe-swatch-name">Paper</span><span class="qe-swatch-note">The ground. <code>--qe-paper</code></span></li>
     <li><span class="qe-swatch-chip" style="--swatch: var(--qe-card)"></span><span class="qe-swatch-name">Card</span><span class="qe-swatch-note">Boxes and labels. <code>--qe-card</code></span></li>
-    <li><span class="qe-swatch-chip" style="--swatch: var(--qe-ink)"></span><span class="qe-swatch-name">Ink</span><span class="qe-swatch-note">Body text — 14.3:1. <code>--qe-ink</code></span></li>
-    <li><span class="qe-swatch-chip" style="--swatch: var(--qe-moss)"></span><span class="qe-swatch-name">Moss</span><span class="qe-swatch-note">Headings, secondary — 7.8:1. <code>--qe-moss</code></span></li>
-    <li><span class="qe-swatch-chip" style="--swatch: var(--qe-rust)"></span><span class="qe-swatch-name">Rust</span><span class="qe-swatch-note">Links and emphasis — 7.0:1. <code>--qe-rust</code></span></li>
+    <li><span class="qe-swatch-chip" style="--swatch: var(--qe-ink)"></span><span class="qe-swatch-name">Ink</span><span class="qe-swatch-note">Body text — 14.3:1 on paper. <code>--qe-ink</code></span></li>
+    <li><span class="qe-swatch-chip" style="--swatch: var(--qe-moss)"></span><span class="qe-swatch-name">Moss</span><span class="qe-swatch-note">Headings, secondary — 7.8:1 on paper. <code>--qe-moss</code></span></li>
+    <li><span class="qe-swatch-chip" style="--swatch: var(--qe-rust)"></span><span class="qe-swatch-name">Rust</span><span class="qe-swatch-note">Links and emphasis — 7.0:1 on paper. <code>--qe-rust</code></span></li>
     <li><span class="qe-swatch-chip" style="--swatch: var(--qe-lichen)"></span><span class="qe-swatch-name">Lichen</span><span class="qe-swatch-note">Decoration only. <code>--qe-lichen</code></span></li>
     <li><span class="qe-swatch-chip" style="--swatch: var(--qe-verdigris)"></span><span class="qe-swatch-name">Verdigris</span><span class="qe-swatch-note">Decoration only. <code>--qe-verdigris</code></span></li>
     <li><span class="qe-swatch-chip" style="--swatch: var(--qe-marigold)"></span><span class="qe-swatch-name">Marigold</span><span class="qe-swatch-note">Decoration only. <code>--qe-marigold</code></span></li>
@@ -134,6 +142,16 @@
   </ul>
 
   <p>The five decorative colours are the ones a butterfly wing gives you. They are used sparingly and never all at once.</p>
+
+  <h2>The two grounds</h2>
+
+  <p>The sheet has a <strong>daylight</strong> ground and a <strong>cabinet</strong> ground, and the cabinet is not the daylight sheet with the lamp switched off. It is the drawer shut: a herbarium cabinet is dark warm brown, and a Victorian dark-ground plate prints its specimens on near-black precisely so that pale forms read. The accents on this site were always the accents of such a plate — sage foliage, marigold leaves, coral caps, cream bodies — which is the argument for brown and against a dark green. Green ground shares its hue with moss, lichen, and verdigris, and takes the separation out of the colours the site is built from.</p>
+
+  <p>Two numbers move and the rest do not. Ink, moss, and rust are lifted to clear 7:1 on the new ground — <strong>12.8:1</strong>, <strong>7.2:1</strong>, and <strong>7.3:1</strong> respectively. The five decorative tokens stay where they are, still saturated. <strong>7:1 is a rule for letters.</strong> Applying it to the drawings turns every flower chalky and washes the plates out; the brightness belongs to the text.</p>
+
+  <p>One inversion is worth naming, because it is a trap rather than a taste. In daylight a card is <em>lighter</em> than the page, so text sitting on one gains contrast. On a dark ground that instinct is backwards — a lifted card <em>loses</em> it, and solving for 7:1 on a lifted panel drags rust up into a pale pink with no rust left in it. The cabinet's cards are recessed instead, which keeps every token above target and reads better anyway: compartments in a drawer.</p>
+
+  <p><strong>Paper is always daylight.</strong> Both ground switches are screen-only, so a reader in the cabinet who hits Print gets ink on white — the print sheet builds its own black-on-white from scratch and never inherits a ground.</p>
 
   <h2>The type</h2>
 

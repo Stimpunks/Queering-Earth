@@ -26,10 +26,21 @@ REPO = pathlib.Path(__file__).resolve().parent.parent
 
 # ── the palette, read from queering.css so it cannot drift ────────────────────
 css = (REPO / "queering.css").read_text(encoding="utf-8")
+# The cards are daylight objects: a social card is a herbarium sheet, not the
+# drawer it is filed in. queering.css now holds two palettes, so the lookup is
+# anchored to the :root block that carries the daylight values — re.search would
+# otherwise return whichever copy happens to appear first in the file, and the
+# next person to reorder that stylesheet would silently flip every card to brown.
+_ROOT = re.search(r":root\s*\{(.*?)\n\}", css, re.S)
+if not _ROOT:
+    sys.exit(":root block not found in queering.css")
+_DAYLIGHT = _ROOT.group(1)
+
+
 def token(name):
-    m = re.search(r"--qe-%s:\s*(#[0-9a-fA-F]{6})" % re.escape(name), css)
+    m = re.search(r"--qe-%s:\s*(#[0-9a-fA-F]{6})" % re.escape(name), _DAYLIGHT)
     if not m:
-        sys.exit("token --qe-%s not found in queering.css" % name)
+        sys.exit("token --qe-%s not found in the :root block of queering.css" % name)
     return m.group(1)
 
 PAPER      = token("paper")

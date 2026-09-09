@@ -44,6 +44,22 @@
 
   /* Structure */
   --qe-rule: #cdbfa4;
+
+  /* The pale flesh of a specimen — a mushroom's stipe, a cut stem. It is not the
+     ground, it only happened to match it in daylight, so it gets its own token. */
+  --qe-flesh: #ece1cd;
+
+  /* The foxed-paper wash: four soft stains, tokenised so the cabinet can restain
+     them. Decoration, painted under everything, never behind text alone. */
+  --qe-wash-a: rgba(154, 132, 92, 0.10);
+  --qe-wash-b: rgba(120, 140, 100, 0.09);
+  --qe-wash-c: rgba(160, 120, 80, 0.08);
+  --qe-wash-d: rgba(110, 130, 110, 0.07);
+
+  /* The shadow a lifted sheet casts. Near-black on paper; on the cabinet ground
+     a near-black shadow is invisible, so this is a token and not a literal. */
+  --qe-shade: rgba(36, 31, 26, 0.55);
+
   --qe-measure: 34rem;       /* ~66 characters at the body size */
   --qe-gutter: clamp(1.25rem, 5vw, 3rem);
 
@@ -51,6 +67,103 @@
      norm on purpose. Using it for the display face is not a coincidence. */
   --qe-display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --qe-body: "Newsreader", "Iowan Old Style", Georgia, serif;
+
+  /* ── THE CABINET. The dark ground, and the only copy of its values.
+     Not the daylight sheet with the lamp off: the drawer shut. A herbarium
+     cabinet is dark warm brown, and a Victorian dark-ground plate prints its
+     specimens on near-black precisely so pale forms read. Nothing aliases these
+     names directly — the two rules under "the ground switch" do it. */
+  --qe-cab-paper: #2a1d19;      /* the cabinet itself */
+  --qe-cab-paper-deep: #1f1512; /* a compartment, recessed */
+  --qe-cab-card: #241a16;
+
+  /* Text. 7:1 is measured against --qe-cab-paper, which is the LIGHTEST surface
+     any text sits on here. That is the inversion to watch: in daylight a card is
+     lighter than the page, so text on it gains contrast; on a dark ground a
+     lifted card loses it. The cards are recessed for exactly this reason. */
+  --qe-cab-ink: #eee3d0;        /* 12.8:1 */
+  --qe-cab-moss: #90b784;       /*  7.2:1 */
+  --qe-cab-rust: #e49b89;       /*  7.3:1 */
+
+  /* Decoration only, same as in daylight, and deliberately still saturated.
+     7:1 is a rule for letters. Lifting these to clear it turns every flower
+     chalky and washes the plates out — the dark-ground plate keeps its
+     specimens saturated and spends the brightness on the text. */
+  --qe-cab-lichen: #9caa86;
+  --qe-cab-verdigris: #57a08b;
+  --qe-cab-marigold: #c9922e;
+  --qe-cab-coral: #cf6142;
+  --qe-cab-violet: #8f6fb5;
+
+  --qe-cab-rule: #4a382f;
+  --qe-cab-flesh: #d8c9ae;
+  --qe-cab-wash-a: rgba(214, 165, 76, 0.09);
+  --qe-cab-wash-b: rgba(144, 183, 132, 0.08);
+  --qe-cab-wash-c: rgba(228, 155, 137, 0.07);
+  --qe-cab-wash-d: rgba(127, 184, 167, 0.06);
+  --qe-cab-shade: rgba(0, 0, 0, 0.55);
+}
+
+/* ─────────────────────────────────────────────── the ground switch
+
+   Two rules, because CSS cannot set a class from a media query. They carry no
+   colour of their own — every one is an alias of a --qe-cab-* value defined
+   once above, so the switch cannot drift from the palette. A drifted alias here
+   is a missing switch, never a wrong colour.
+
+   BOTH ARE `@media screen`. Print is daylight, always: the print sheet builds
+   its own black-on-white from scratch and must not inherit a ground.
+
+   The reader's own choice wins over the system's in both directions —
+   `html.daylight` opts out of a dark system, `html.cabinet` opts in on a light
+   one. Absent either class the system decides, so a reader who has never
+   touched the control still gets the ground their machine asked for, with no
+   script involved. */
+
+@media screen and (prefers-color-scheme: dark) {
+  :root:not(.daylight) {
+    --qe-paper: var(--qe-cab-paper);
+    --qe-paper-deep: var(--qe-cab-paper-deep);
+    --qe-card: var(--qe-cab-card);
+    --qe-ink: var(--qe-cab-ink);
+    --qe-moss: var(--qe-cab-moss);
+    --qe-rust: var(--qe-cab-rust);
+    --qe-lichen: var(--qe-cab-lichen);
+    --qe-verdigris: var(--qe-cab-verdigris);
+    --qe-marigold: var(--qe-cab-marigold);
+    --qe-coral: var(--qe-cab-coral);
+    --qe-violet: var(--qe-cab-violet);
+    --qe-rule: var(--qe-cab-rule);
+    --qe-flesh: var(--qe-cab-flesh);
+    --qe-wash-a: var(--qe-cab-wash-a);
+    --qe-wash-b: var(--qe-cab-wash-b);
+    --qe-wash-c: var(--qe-cab-wash-c);
+    --qe-wash-d: var(--qe-cab-wash-d);
+    --qe-shade: var(--qe-cab-shade);
+  }
+}
+
+@media screen {
+  :root.cabinet {
+    --qe-paper: var(--qe-cab-paper);
+    --qe-paper-deep: var(--qe-cab-paper-deep);
+    --qe-card: var(--qe-cab-card);
+    --qe-ink: var(--qe-cab-ink);
+    --qe-moss: var(--qe-cab-moss);
+    --qe-rust: var(--qe-cab-rust);
+    --qe-lichen: var(--qe-cab-lichen);
+    --qe-verdigris: var(--qe-cab-verdigris);
+    --qe-marigold: var(--qe-cab-marigold);
+    --qe-coral: var(--qe-cab-coral);
+    --qe-violet: var(--qe-cab-violet);
+    --qe-rule: var(--qe-cab-rule);
+    --qe-flesh: var(--qe-cab-flesh);
+    --qe-wash-a: var(--qe-cab-wash-a);
+    --qe-wash-b: var(--qe-cab-wash-b);
+    --qe-wash-c: var(--qe-cab-wash-c);
+    --qe-wash-d: var(--qe-cab-wash-d);
+    --qe-shade: var(--qe-cab-shade);
+  }
 }
 
 /* Plain view swaps the faces for the reader's own, and nothing else about the
@@ -94,10 +207,10 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-image:
-    radial-gradient(58rem 42rem at 12% 8%, rgba(154, 132, 92, 0.10), transparent 70%),
-    radial-gradient(46rem 38rem at 92% 22%, rgba(120, 140, 100, 0.09), transparent 72%),
-    radial-gradient(52rem 40rem at 78% 96%, rgba(160, 120, 80, 0.08), transparent 70%),
-    radial-gradient(40rem 34rem at 4% 82%, rgba(110, 130, 110, 0.07), transparent 74%);
+    radial-gradient(58rem 42rem at 12% 8%, var(--qe-wash-a), transparent 70%),
+    radial-gradient(46rem 38rem at 92% 22%, var(--qe-wash-b), transparent 72%),
+    radial-gradient(52rem 40rem at 78% 96%, var(--qe-wash-c), transparent 70%),
+    radial-gradient(40rem 34rem at 4% 82%, var(--qe-wash-d), transparent 74%);
 }
 html.plain body::before { display: none; }
 
@@ -116,13 +229,38 @@ html.plain body::before { display: none; }
 }
 .qe-skip:focus { left: 0.5rem; top: 0.5rem; }
 
-/* ─────────────────────────────────────────────── plain-view control */
+/* ─────────────────────────────────────────────── the controls */
 
 .qe-controls {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 0.85rem;
   padding: 0.9rem var(--qe-gutter) 0;
 }
+
+/* The ground control, deliberately the quieter of the two. Plain view changes
+   what the page IS — it takes the pill. This only changes what the page is lying
+   on, so it is a word and a hairline. Its label is where the click goes, which is
+   the convention the plain-view button already set. */
+.qe-ground-toggle {
+  font-family: var(--qe-body);
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: var(--qe-moss);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--qe-rule);
+  border-radius: 0;
+  padding: 0.2rem 0.15rem;
+  cursor: pointer;
+}
+.qe-ground-toggle:hover { border-bottom-color: var(--qe-moss); }
+.qe-ground-toggle:focus-visible {
+  outline: 3px solid var(--qe-rust);
+  outline-offset: 2px;
+}
+
 
 .qe-plain-toggle {
   font-family: var(--qe-body);
@@ -587,7 +725,7 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
  */
 .qe-botanical .cap     { fill: var(--qe-coral);    stroke: var(--qe-moss); stroke-width: 1.1; }
 .qe-botanical .cap-alt { fill: var(--qe-marigold); stroke: var(--qe-moss); stroke-width: 1.1; }
-.qe-botanical .stipe   { fill: var(--qe-paper-deep); stroke: var(--qe-moss); stroke-width: 1; }
+.qe-botanical .stipe   { fill: var(--qe-flesh); stroke: var(--qe-moss); stroke-width: 1; }
 
 /* There is no `.gills` class. The first draft had one, drawing the underside of
    the cap as a single horizontal rule, and that rule was the most rigid line on
@@ -1255,7 +1393,7 @@ html.plain .qe-poem .qe-stanza { font-variation-settings: normal; }
   background: var(--qe-card);
   border: 1px solid var(--qe-rule);
   border-radius: 1px;
-  box-shadow: 0 1px 0 var(--qe-paper-deep), 0 8px 16px -12px rgba(36, 31, 26, 0.55);
+  box-shadow: 0 1px 0 var(--qe-paper-deep), 0 8px 16px -12px var(--qe-shade);
   transform: rotate(var(--rot, 0deg));
 }
 

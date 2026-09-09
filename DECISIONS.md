@@ -831,6 +831,13 @@ This site has one ground and it is paper: a dark mode is not a missing feature h
 other site. The draft's `body.plain` became `html.plain`, which is where the class actually
 goes.
 
+> **Amended 2026-09-08 — the ground has a second state, and this entry was right about what
+> it refused.** See *The cabinet is the drawer shut, not the lamp switched off* below. What
+> arrived with the draft was a generic inverted palette in hex with its own toggle script,
+> and every word above about *that* still holds. What is shipped now is a herbarium object
+> reached from the tokens: the daylight sheet is still the canonical ground and still the
+> default in print, in the social cards, and for anyone whose machine has no opinion.
+
 **Three things the draft got wrong, all of them accessibility rather than taste:**
 
 - **The chain was a row of spans with `→` between them.** Five decorative arrows in the
@@ -1004,3 +1011,73 @@ by a different pipeline.** Two of those three is not enough.
 which Internet Archive item, and the identifier suffix that gave it away — `dickrich` on both —
 is a convention, not a contract. It is a reading rule, and the place for it is here and in the
 ledger.
+
+### The cabinet is the drawer shut, not the lamp switched off (2026-09-08)
+
+Ryan asked what a dark mode here would be, having seen a dark-ground botanical print, and
+the answer that survived contact with the measurements was **dark warm brown**, called the
+cabinet. `changelog.html` had already been using the word for a year as its fourth entry
+kind, which is how we knew the idea had a place to live.
+
+**A dark green ground was the obvious first guess and it is the wrong one, for a reason that
+is measurable rather than a matter of taste.** Green ground shares its hue with moss, lichen
+and verdigris — three of the tokens the site is built from — and every accent measures worse
+against it for no gain: moss text 7.1:1 against brown's 7.2, rust 6.2:1 against brown's 7.3.
+Pushed to a real forest tone (`#223026`) nothing but cream clears 7:1 at all. **A green
+ground makes green unusable.** It also reads as a stock eco dark theme, which is the "same
+site in green" failure the palette rules already name, arriving from the other direction.
+
+**Brown was the palette's ground all along.** The print that prompted this draws its
+specimens in cream, sage, marigold and coral on near-black — `--qe-ink`, `--qe-lichen`,
+`--qe-marigold`, `--qe-coral` as they already stood. The decorative five cross over
+unchanged, and **deliberately still saturated**: lifting them to 7:1 was tried first and
+turns every flower chalky. **7:1 is a rule for letters.** Only ink, moss and rust move.
+
+**The inversion worth writing down: in daylight a card is lighter than the page, so the page
+is the worst case for contrast; on a dark ground a lifted card is the worst case instead.**
+Keeping the "cards lift" instinct and solving 7:1 against a lifted panel drags rust to
+`#eab1a3`, a pale pink with no rust in it. The cabinet's cards are **recessed**, which puts
+the ground back as the lightest surface, keeps rust an ember, and reads better anyway —
+compartments in a drawer.
+
+**Every hex has one copy.** The cabinet values are defined once as `--qe-cab-*` inside
+`:root`; the two switch rules — `@media screen and (prefers-color-scheme: dark)` on
+`:root:not(.daylight)`, and `@media screen` on `:root.cabinet` — contain nothing but aliases
+of them. There are two switch rules because **CSS cannot set a class from a media query**,
+and the alias indirection is what makes that duplication safe: a drifted switch is a missing
+ground, never a wrong colour. Both are `@media screen`, so **paper is daylight always** and
+the print sheet cannot inherit a ground.
+
+**Three things were not token flips**, and all three are now tokens rather than literals:
+the foxed-paper wash, the drop shadow (a near-black that vanishes on a near-black ground),
+and `--qe-flesh`, the pale flesh of a specimen. The last was a real bug: a mushroom's stipe
+was filled with `--qe-paper-deep`, a colour it matched only by coincidence, so on the dark
+ground four mushroom stems became holes.
+
+**The toggle is three states behind one word, and it is the quieter of the two controls.**
+Plain view changes what the page *is* and keeps the pill; this changes what the page is lying
+on, so it is a word and a hairline. With neither class set the machine decides *in CSS with
+no script involved* — which is the reason the media query was kept instead of letting the
+pre-paint snippet resolve everything and collapsing the stylesheet to one block. A reader
+with light sensitivity and no JavaScript is exactly the reader who should not be handed the
+bright page. The button therefore names the ground the reader can **see**, not a preference
+they have not expressed, and clicking writes the opposite one down.
+
+**And a check that only reports is decoration.** The new cabinet pass in
+`tools/check-contrast.mjs` was wired to print a column before it was wired into the failure
+total, which would have made it exactly the "check nobody reads" this repo keeps warning
+about. It is in the gate, and it was verified by breaking a token on purpose.
+
+### `tools/check-contrast.mjs` gates at WCAG AA, not at the house 7:1 (2026-09-08, open)
+
+Found while trying to make the new cabinet pass fail: a card lifted to 6.0:1 sailed through.
+`CLAUDE.md` names the 7:1 target and `check-contrast.mjs` in the same breath, which reads as
+though the script enforces the house standard. It does not — `needFor()` returns 4.5, or 3.0
+for large text, and the summary line says AA in as many words. **The 7:1 figure is held by
+hand-chosen tokens and by nothing else.**
+
+This is **logged and not fixed.** Raising the gate is its own job: it needs a run to find out
+what it newly fails, a decision about the decorative-adjacent text that will surface, and
+possibly a two-tier report (AA gating, 7:1 warning) rather than a single threshold. Doing it
+inside the cabinet work would have buried both. The thing to avoid meanwhile is *citing*
+the script as evidence of 7:1 compliance, which it is not.
