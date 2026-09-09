@@ -44,7 +44,7 @@ const ORIGIN = 'https://queering.earth';
 const GROUPS = [
   ['The readings', ['on-being-ill', 'coming-to-terms', 'promises-like-pie-crust', 'invention-of-normal',
                     'the-tempest', 'wild-nights', 'flower-codes', 'monotropa-uniflora']],
-  ['The cabinet itself', ['index', 'design', 'changelog']],
+  ['The cabinet itself', ['index', 'design', 'changelog', 'privacy']],
 ];
 
 /* Every named entity these pages actually use, plus a few near neighbours. The lookup is

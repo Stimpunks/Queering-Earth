@@ -312,6 +312,8 @@ og_card(REPO/"images"/"og-design.png", "How this site is made", "Colophon",
         "A Victorian herbarium sheet as the model: the palette, the type, the drawings.", MARIGOLD)
 og_card(REPO/"images"/"og-changelog.png", "The accession register", "Register · the changelog",
         "Every sheet as it was mounted, and every label we corrected.", CORAL)
+og_card(REPO/"images"/"og-privacy.png", "What this site knows about you", "Privacy",
+        "Almost nothing, and the whole of it: two view preferences and a hosting log.", VERDIGRIS)
 
 # The report enumerates WHAT WAS ACTUALLY WRITTEN, not a hand-kept list of what
 # ought to have been. It was a hand-kept list until 2026-09-09, and the ghost pipe

@@ -1,0 +1,86 @@
+{
+  "fraunces-italic-vietnamese.woff2": {
+    "sha256": "d7a49baf574c46db65f5a1754a578506c5643b3f40090e423bbfff843c1a0470",
+    "bytes": 40160,
+    "family": "Fraunces",
+    "style": "italic",
+    "subset": "vietnamese"
+  },
+  "fraunces-italic-latin-ext.woff2": {
+    "sha256": "6e929bb741281c850e883e874c7c91d620227e01b70a424fd62617e018f87d0f",
+    "bytes": 130100,
+    "family": "Fraunces",
+    "style": "italic",
+    "subset": "latin-ext"
+  },
+  "fraunces-italic-latin.woff2": {
+    "sha256": "f6cb5ecfce80bdb07f44a1a330e7258d0c7618eb6b0a8043b7ba2afe19fcbfa8",
+    "bytes": 149512,
+    "family": "Fraunces",
+    "style": "italic",
+    "subset": "latin"
+  },
+  "fraunces-vietnamese.woff2": {
+    "sha256": "bc5c1f2dca610837c6a11a164ae3cc7ed51b0a0d209eb0cbf705d7f63e87a2c4",
+    "bytes": 34308,
+    "family": "Fraunces",
+    "style": "normal",
+    "subset": "vietnamese"
+  },
+  "fraunces-latin-ext.woff2": {
+    "sha256": "bfbcc574c88f5008f497dd150b7d043db484b5d5866c949b1c6e64f50a085ad8",
+    "bytes": 105476,
+    "family": "Fraunces",
+    "style": "normal",
+    "subset": "latin-ext"
+  },
+  "fraunces-latin.woff2": {
+    "sha256": "94bb7e04bb1a32237a67935c72526e42a3e52ee4aebd50299802b18a93114251",
+    "bytes": 120800,
+    "family": "Fraunces",
+    "style": "normal",
+    "subset": "latin"
+  },
+  "newsreader-italic-vietnamese.woff2": {
+    "sha256": "d5a170a88bdb4e21bcc743e8cf1a64835c8351f8e1d32dadd9cac77f2e718fbb",
+    "bytes": 28036,
+    "family": "Newsreader",
+    "style": "italic",
+    "subset": "vietnamese"
+  },
+  "newsreader-italic-latin-ext.woff2": {
+    "sha256": "750e9629f56ae71980f1dde315f5bdb6c81b49b13a8fec3246a4392853aa7ccd",
+    "bytes": 95412,
+    "family": "Newsreader",
+    "style": "italic",
+    "subset": "latin-ext"
+  },
+  "newsreader-italic-latin.woff2": {
+    "sha256": "a99fb127682b9af538780d21420037452197b0d37dfd273eb108f8a3665d5501",
+    "bytes": 147060,
+    "family": "Newsreader",
+    "style": "italic",
+    "subset": "latin"
+  },
+  "newsreader-vietnamese.woff2": {
+    "sha256": "68ef9a14f1462e2218ecd03c39d26236402ff6a9e78da39ba5591a430a229824",
+    "bytes": 27204,
+    "family": "Newsreader",
+    "style": "normal",
+    "subset": "vietnamese"
+  },
+  "newsreader-latin-ext.woff2": {
+    "sha256": "cbca001188852d514d8654be7ddc97868f039bdf986b926ec5c985c117853cfd",
+    "bytes": 86628,
+    "family": "Newsreader",
+    "style": "normal",
+    "subset": "latin-ext"
+  },
+  "newsreader-latin.woff2": {
+    "sha256": "01817351be3edfc1714fe6d60ddea6a22a169a5ebd033b50c7f9495e5d9c386a",
+    "bytes": 131848,
+    "family": "Newsreader",
+    "style": "normal",
+    "subset": "latin"
+  }
+}

@@ -35,6 +35,7 @@ const TYPES = {
   // live site cannot recover from — and <picture> does NOT fall through to the next
   // <source> when one fails to decode; the choice is made on type, before the fetch.
   '.avif': 'image/avif',
+  '.woff2': 'font/woff2',
   '.md': 'text/markdown; charset=utf-8',
   '.xml': 'application/xml; charset=utf-8',
   '.txt': 'text/plain; charset=utf-8',

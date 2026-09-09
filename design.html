@@ -32,9 +32,11 @@
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;display=swap">
+<!-- The faces are self-hosted and declared in queering.css. Preloading the body
+     roman is the one that pays: it is the first thing every page needs, and there
+     is no cross-origin handshake to wait on any more. crossorigin is required
+     even same-origin — a font is always fetched in CORS mode. -->
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="queering.css">
 
 <!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
@@ -380,6 +382,7 @@
   <p>Our words and drawings licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. The borrowed plates are in the public domain and were never ours to license.</p>
   <p><a href="/design">How this site is made</a> &mdash; the herbarium sheet, the palette, the type, and the borrowed plates.</p>
   <p><a href="/changelog">The accession register</a> &mdash; every sheet as it was mounted, and every label we corrected.</p>
+  <p><a href="/privacy">What this site knows about you</a> &mdash; almost nothing, and the whole of it.</p>
 </footer>
 
 <script src="queering.js"></script>

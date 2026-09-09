@@ -42,7 +42,18 @@
  *    reader while the JPEG fallback nobody fetches shows the new one. Nothing looks
  *    broken and the two disagree.
  *
- * (1) and (6) are both freshness, which is why they live in one gate: every derived
+ * 7. THIRD PARTY — no page may FETCH from another origin. /privacy states that this
+ *    site makes no third-party requests, and a privacy policy is a binding statement,
+ *    so the claim is enforced here rather than trusted. Until 2026-09-09 it would have
+ *    failed: the pages pulled two typefaces from Google's font CDN, disclosing every
+ *    reader's IP and user agent before a word was read. Anchor hrefs are exempt — a
+ *    link the reader chooses to follow is not a request the page made.
+ * 8. FONTS — every self-hosted face exists, still hashes to what it was downloaded as,
+ *    and is referenced by the generated @font-face block. A missing woff2 falls back to
+ *    a system serif silently, which is a typographic regression nobody would notice in
+ *    a diff.
+ *
+ * (1), (6) and (8) are all freshness, which is why they live in one gate: every derived
  * artefact here — Markdown, indexes, feed, plate variants — is only true until somebody
  * edits a source and does not re-run the tool.
  */
@@ -197,6 +208,42 @@ try {
   fail('plates', `cannot verify the plates: ${e.message}`);
 }
 
+/* ── 7. no third-party requests ────────────────────────────────────────────────
+ * Only the attributes that make the browser fetch something. `<a href>` is excluded on
+ * purpose, and so are meta values: og:image naming our own origin is a declaration,
+ * not a fetch. */
+const FETCHING = /<(?:link|script|img|source|iframe|video|audio|embed|object)\b[^>]*>/g;
+for (const f of [...files, '404.html']) {
+  const html = (await readFile(join(ROOT, f), 'utf8')).replace(/<!--[\s\S]*?-->/g, '');
+  for (const tag of html.match(FETCHING) ?? []) {
+    // A <link> only fetches for some rel values; canonical/describedby/alternate declare.
+    if (/^<link/.test(tag) && !/rel="(?:stylesheet|preconnect|preload|dns-prefetch|modulepreload|prefetch|prerender)"/.test(tag))
+      continue;
+    for (const m of tag.matchAll(/(?:href|src|srcset|data)="([^"]+)"/g))
+      for (const url of m[1].split(/[,\s]+/))
+        if (/^(?:https?:)?\/\//.test(url) && !/^https:\/\/queering\.earth\//.test(url))
+          fail('thirdparty', `${f} fetches from another origin: ${url} — /privacy says it does not`);
+  }
+}
+
+/* ── 8. the self-hosted faces ─────────────────────────────────────────────────── */
+try {
+  const fonts = JSON.parse(await readFile(join(ROOT, 'tools', 'font-files.json'), 'utf8'));
+  const sheet = await readFile(join(ROOT, 'queering.css'), 'utf8');
+  for (const [file, meta] of Object.entries(fonts)) {
+    const buf = await readFile(join(ROOT, 'fonts', file)).catch(() => null);
+    if (!buf) { fail('fonts', `fonts/${file} is missing — run: node tools/make-fonts.mjs`); continue; }
+    if (createHash('sha256').update(buf).digest('hex') !== meta.sha256)
+      fail('fonts', `fonts/${file} is not the file it was downloaded as — run: node tools/make-fonts.mjs`);
+    if (!sheet.includes(`url(fonts/${file})`))
+      fail('fonts', `fonts/${file} exists but no @font-face in queering.css references it`);
+  }
+  for (const m of sheet.matchAll(/url\(fonts\/([^)]+)\)/g))
+    if (!fonts[m[1]]) fail('fonts', `queering.css references fonts/${m[1]}, which is not in the manifest`);
+} catch (e) {
+  fail('fonts', `cannot verify the self-hosted faces: ${e.message}`);
+}
+
 /* ── report ────────────────────────────────────────────────────────────────────── */
 const line = (l, v) => console.log(`  ${l.padEnd(42)} ${v}`);
 console.log(`\n  ${files.length} page(s) · ${GENERATED.length} generated file(s) · ${plateCount} plate figure(s)\n`);
@@ -207,6 +254,8 @@ for (const [kind, label] of [
   ['attribution', 'JSON-LD misattributions'],
   ['discovery', 'missing or wrong discovery links'],
   ['plates', 'plate encoding or markup problems'],
+  ['thirdparty', 'third-party requests'],
+  ['fonts', 'self-hosted face problems'],
 ]) {
   const hits = problems.filter((p) => p.kind === kind);
   line(label, hits.length ? `${hits.length}` : 'none');

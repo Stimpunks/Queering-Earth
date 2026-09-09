@@ -48,7 +48,7 @@ decoration, texture, or plain view. The spec does not know that texture under te
 
 | | count |
 |---|---|
-| **Findings** | **8** — 7 remediated 2026-09-09, 1 open |
+| **Findings** | **8** — 8 remediated 2026-09-09, 0 open |
 | Passing, verified | 22 |
 | Not applicable, with reasons | 5 |
 | Deferred — needs field data | 1 |
@@ -321,8 +321,37 @@ different answers rather than pretending the whole thing is one switch.
 
 There is no policy page and no footer link to one.
 
-**This is the finding I am least certain belongs on the required tier for this site, and I
-want the reasoning visible rather than the verdict.** The spec's trigger is *"If you collect
+> **Remediated 2026-09-09**, and the audit was wrong about one fact on the way in.
+>
+> **This finding said "no third-party script of any kind." That was accurate about
+> scripts and misleading as a privacy claim.** Every page loaded Fraunces and Newsreader
+> from `fonts.googleapis.com`, which disclosed each reader's IP address and user agent to
+> Google before a word was read — the only third-party request the site made, and the
+> pattern a Munich court ruled against in 2022. Corrected here rather than quietly fixed.
+>
+> Ryan's decision was to **remove the flow rather than disclose it**. The faces are now
+> served from this domain by `tools/make-fonts.mjs`, keeping all three of Google's
+> subsets and its own `unicode-range` values — verified as a perfect substitution by
+> measuring text metrics against the still-Google-served live site and matching to three
+> decimals.
+>
+> `/privacy` is live and linked from the footer of all 13 pages. It states what the code
+> does: two `localStorage` view preferences that never leave the browser, a Netlify
+> access log we neither use nor control the retention of, no analytics, no cookies, no
+> forms, and no third-party requests. **That last claim is enforced by
+> `check-metadata.mjs`**, which fails on any fetching attribute pointing off-origin and
+> exempts `<a href>`, so a site built on citations can still cite.
+>
+> **One item on the spec's required list is deliberately not there: a postal address.**
+> Ryan's call was existing channels only — the two organisations' own sites and the
+> repository's issues. Recorded as outstanding against the spec rather than presented as
+> complete.
+>
+> The page carries no legal review. It describes the code and was checked against the
+> code, and it says so on its face.
+
+**This was the finding I was least certain belonged on the required tier, and the
+reasoning is left visible rather than replaced by the verdict.** The spec's trigger is *"If you collect
 any personal data — names, email addresses, IP addresses, cookies tied to a user, form
 submissions."* Taking that clause by clause against what this site actually does:
 
