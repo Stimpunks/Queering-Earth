@@ -1257,6 +1257,233 @@ Helen's page. They add no words and change no line.
 
 ----
 
+### Sarah Prager (2020) — the set of four, and the sentence we quote of hers
+
+**Quoted on:** `flower-codes.html`, `index.html`
+
+The whole of Sheet No. 7 exists because Prager put violet, pansy, green carnation and lavender
+on one table in [*Four Flowering Plants That Have Been Decidedly Queered*](https://daily.jstor.org/four-flowering-plants-decidedly-queered/),
+JSTOR Daily, 29 January 2020. **The gathering is hers and is credited as hers on both pages.**
+The reading — that the four are one process caught at four moments — is ours.
+
+Two sentences of hers are quoted directly, both read from the live article on 2026-09-08 by
+fetching the page and reading the body text rather than a summary of it:
+
+> The green carnation became a queer symbol in 1892 when Oscar Wilde instructed a handful of
+> his friends to wear them on their lapels to the opening night of his comedy *Lady
+> Windermere's Fan*.
+
+> One of the most notable uses of "lavender" comes from the historian Carl Sandburg, who wrote
+> in 1926 of Abraham Lincoln: "A streak of lavender ran through him; he had spots soft as May
+> violets."
+
+**Read the article, not a summary of it.** The first pass at this sheet took her Sandburg
+sentence from an automated summary of the page, which rendered it accurately but would not
+have supported quoting her. A summariser is a transcription, and this ledger already holds an
+entry (the Kelly/Eno warning inherited from Star Stuff) about what transcriptions do to
+wording. The quotations above come from the article's own HTML.
+
+----
+
+### Carl Sandburg (1926) — the streak of lavender, and the man it is about
+
+**Quoted on:** `flower-codes.html`
+
+> Joshua Speed was a deep-chested man of large sockets, with broad measurement between the
+> ears. A streak of lavender ran through him; he had spots soft as May violets. And he and
+> Abraham Lincoln told each other their secrets about women. Lincoln too had tough physical
+> shanks and large sockets, also a streak of lavender, and spots soft as May violets.
+
+**Source:** Carl Sandburg, *Abraham Lincoln: The Prairie Years*, volume 1 (Harcourt, Brace,
+1926), page 265, opening Chapter 54. On page 266 the figure returns for both men at once:
+"had given these two men streaks of lavender, spots soft as May violets."
+
+**Verified:** 2026-09-08, in **two independently digitised copies from different holding
+institutions**: the University of British Columbia Library's copy, scanned at the University
+of Toronto (`abrahamlincolnpr01sand`), and an Internet Archive copy scanned at Cebu
+(`abrahamlincolnpr0001carl`). Both read identically; the only differences are OCR artefacts
+on the word *May*. 1926 first-edition text, US public domain.
+
+**Three further Internet Archive copies were checked first and thrown out as witnesses.** All
+three were scanned at the same centre, which is one pipeline and therefore one witness. That
+is the rule the Dickinson entry in this file wrote down after two copies from the same library
+agreed on a broken piece of type; this is the first time it has been applied before an error
+rather than after one.
+
+**The correction, and it is the point of the sheet.** The sentence in circulation —
+including in Prager's article, and in a great many other places — is presented as Sandburg
+writing *of Abraham Lincoln*. **The words are exactly Sandburg's and the "him" is Joshua
+Speed.** Sandburg does extend the figure to Lincoln, in the next sentence but one and again on
+the following page, in different words each time.
+
+**This is not a fabrication and must not be written up as one.** No word was altered, the
+author, book and year are right, and Sandburg did say it of Lincoln too, so the substance of
+the claim survives intact. What moved is the referent. Prager names Speed in her very next
+sentence and her book is partly about him, so this is compression in a much-retold line rather
+than ignorance — which is precisely why the sheet frames it as the site's own failure mode
+found in the wild, and not as a gotcha. **If this entry is ever summarised, keep that framing
+with it.**
+
+----
+
+### Lord Alfred Douglas — *Two Loves*, and the line the court flattened
+
+**Quoted on:** `flower-codes.html`. The sheet's title is taken from line 3.
+
+> I dreamed I stood upon a little hill, / And at my feet there lay a ground, that seemed /
+> Like a waste garden, flowering at its will / With buds and blossoms. There were pools that
+> dreamed / Black and unruffled; there were white lilies / A few, and crocuses, and violets /
+> Purple or pale, snake-like fritillaries / Scarce seen for the rank grass…
+
+**Source:** Lord Alfred Douglas, *Two Loves*, first published in *The Chameleon*, December
+1894. Public domain.
+
+**Verified:** 2026-09-08, from the [Wikisource transcription](https://en.wikisource.org/wiki/Two_Loves_(1894_poem)),
+read as raw wikitext rather than through a summariser. **This is a single transcription and
+not a scan, which is weaker than everything else on this sheet.** It is recorded here as such.
+
+**Corroborated in part.** The poem's existence, its title, its author and its venue — *The
+Chameleon*, alongside Douglas's *In Praise of Shame* — are confirmed independently in *The
+Trial of Oscar Wilde: From the Shorthand Reports* (Paris, privately printed, 1906), read from
+the Internet Archive scan `trialofoscarwild00wildrich`. The final line is quoted there in
+court, which corroborates that line and no other.
+
+**A real variant, and the sheet makes something of it.** The poem reads "I am the **Love**
+that dare not speak its name" — capitalised, a personified figure who has just given his name.
+The 1906 shorthand report has prosecuting counsel quoting it as "the **love**", lower case.
+The sheet quotes each source with its own capitalisation and says what the difference does.
+
+**Open, and cheap to close:** a scan of *The Chameleon* itself would upgrade the garden lines
+from one transcription to a primary. Not found in the sources searched on 2026-09-08.
+
+----
+
+### Wilde's answer in court, April 1895
+
+**Quoted on:** `flower-codes.html`
+
+> **Mr. Gill.** — "I daresay! There is another sonnet. What construction can be put on the
+> line, 'I am the love that dare not speak its name'?"
+>
+> **Witness.** — "I think the writer's meaning is quite unambiguous. The love he alluded to
+> was that between an elder and younger man, as between David and Jonathan; such love as Plato
+> made the basis of his philosophy; such as was sung in the sonnets of Shakespeare and Michael
+> Angelo; that deep spiritual affection that was as pure as it was perfect."
+
+**Source:** *The Trial of Oscar Wilde: From the Shorthand Reports* (Paris, privately printed,
+1906), pages 58–59. Public domain.
+
+**Verified:** 2026-09-08, from the Internet Archive scan `trialofoscarwild00wildrich`, read as
+OCR text. **The answer is quoted from where it is cut, not to where it ends** — Wilde's speech
+continues past "perfect" for two more sentences. Stopping a quotation early at a sentence
+boundary needs no mark by ordinary practice, but **an ellipsis is set there anyway and the
+caption says why**, because this is a sheet about quotations that got shorter on their way
+through the world. If a future pass wants the rest, it is in the same paragraph. The reporter's own note that Wilde spoke "with great emphasis and some signs of
+emotion" and that the gallery answered with "a medley of applause and hisses" is quoted in the
+caption from the same page.
+
+**One thing the sheet corrects in passing:** Gill calls *Two Loves* a sonnet in open court. It
+is not one. The sheet says so.
+
+----
+
+### Alcaeus on Sappho, and Wharton's note on garlands
+
+**Quoted on:** `flower-codes.html`
+
+> Violet-weaving, pure, soft-smiling Sappho, I want to say something, but shame prevents me…
+
+**Source:** Henry Thornton Wharton, *Sappho: Memoir, Text, Selected Renderings and a Literal
+Translation* (London, 1885), rendering a fragment of Alcaeus. Wharton glosses the epithet
+ἰόπλοκος as "violet-weaving" and notes the manuscript variant ἰοπλόκαμος, "with violet locks".
+The second quotation, "that plaiting wreaths was a sign of being in love," is Wharton's
+rendering of the ancient commentary on a different fragment. Public domain.
+
+**Verified:** 2026-09-08, from the Project Gutenberg text of Wharton (ebook 57390).
+
+**Two things the sheet is careful about.** The epithet is **Alcaeus describing Sappho**, not
+Sappho describing herself, and the sheet says so. And the famous "many crowns of violets"
+fragment is **not in Wharton at all** — its fuller text came off a papyrus published in 1902,
+seventeen years after this edition — so it is not quoted here. A later pass wanting that
+fragment needs a post-1902 public-domain translation, not this one.
+
+----
+
+### The four botanical plates on the flower codes sheet
+
+**Mounted on:** `flower-codes.html`
+
+All four are public domain in the United States and all four are captioned with artist,
+publication and year on the page.
+
+| Plate | Source | Note |
+|---|---|---|
+| Birdfoot violet, *Viola pedata* | Homer D. House, *Wild Flowers of New York* (University of the State of New York, 1918); photographs by Walter B. Starr and Harold H. Snyder | **Wrong species for the argument** |
+| Pansy, *Viola tricolor* var. *maxima* | Plate 33, Edward Step, *Favourite Flowers of Garden and Greenhouse* (Frederick Warne, 1896), plates arranged by D. Bois; BHL | — |
+| Carnations, *Dianthus caryophyllus* | *Birds and Nature* (A. W. Mumford, Chicago, 1902), page 533; Smithsonian Institution Libraries copy | **Wrong colour, and there is no right one** |
+| Lavender, *Lavandula* | Plate 10, F. Edward Hulme and Shirley Hibberd, *Familiar Garden Flowers*, first series, 1907; BHL | — |
+
+**Both of the flagged plates are captioned with the problem on the page, in the caption, not
+in this file only.** The violet is an American species standing in for a Mediterranean one and
+the caption says so. The carnations are pink and white because **a green carnation is a white
+one stood in dye** — no botanical plate of the flower Wilde's friends wore exists or could.
+Mounting either without the caption would be the quiet generalization this file exists to
+catch: an object standing in for a different object with the label left attached.
+
+The violet is logged as **Open**, below.
+
+----
+
+### Claims on the flower codes sheet that are named as somebody else's and not asserted
+
+**On:** `flower-codes.html`
+
+The sheet's own rule, stated in a note on the page: where a claim belongs to a scholar and we
+have not read the primary, the claim is named as theirs and not repeated as ours. What that
+covers, all of it from Prager's article:
+
+- **Wilde and the green carnations at *Lady Windermere's Fan*, 1892.** Quoted as her sentence,
+  in quotation marks, with "we have not read that back to a primary and do not assert it here
+  as our own" beside it.
+- **George Chauncey and the pansy craze.** Named as the source Prager cites, with *Gay New
+  York* named as where the account lives, and "we have not read it, so we are pointing at it
+  rather than reporting it."
+- **The violets in *The Captive*, 1926; the Lavender Scare; Betty Friedan's "lavender menace";
+  the Lavender Menace action of 1970.** Listed on the sheet as things her article carries,
+  with the reader sent to her for them. The closing section says plainly that the taking-back
+  of lavender "is Prager's to tell in her piece and the historians' to tell in theirs; we have
+  not read it to a primary and so we do not tell it here."
+
+**The `.qe-drift` list near the foot of the sheet is the one place this gets close to the
+line.** Its lavender card compresses the arc into "a purge in the 1950s, an insult meant to
+frighten a movement in 1969, and a slogan printed on a shirt in 1970" — dates that come from
+Prager and are not sourced on our page. It reads as summary rather than assertion and the
+paragraph immediately under it disclaims it, **but if any part of this sheet needs a
+`credit-source` pass before it grows, it is that card.**
+
+----
+
+### The pansy etymology
+
+**On:** `flower-codes.html`
+
+> thought, remembrance
+
+> regarded as a symbol of thought or remembrance
+
+**Source:** the [Online Etymology Dictionary entry for *pansy*](https://www.etymonline.com/word/pansy),
+read 2026-09-08. Old French *pensee*/*pencee*, from *penser* "to think", from Latin *pensare*
+"consider"; into English mid-15c. as *pense*; the slang sense "recorded by 1929", which is
+linked at the point of use on the page.
+
+**Not a dictionary of record.** Etymonline is a compilation, and for a claim carrying this
+much of a section's weight the OED would be better. The derivation is uncontroversial and the
+1929 date is the load-bearing part, since it is what puts the word's turn inside the same
+decade as the drag scene that took the flower's name. **If anyone here has OED access, this is
+a five-minute upgrade.**
+
+----
+
 ## Open
 
 ### Two sentences on the Miranda sheet claim a little more than their source does
@@ -1294,3 +1521,20 @@ puts the citation on the half it actually covers.
 etymology — *To Be Wondered With* is a one-preposition move on *to be wondered at* — so the
 gerundive is not a decorative aside, it is the load-bearing claim of the whole sheet, and it
 is the one claim on the page with nothing verified under it.
+
+----
+
+### The wrong violet is mounted on the flower codes sheet
+
+**On:** `flower-codes.html`, first plate. **Found:** 2026-09-08, while choosing the plates.
+**Mounted anyway, with the problem in the caption.**
+
+The violet the sheet is about is the Mediterranean sweet violet, *Viola odorata*. The plate
+mounted is *Viola pedata*, the American birdfoot violet, photographed for a New York state
+museum survey in 1918. It was the public-domain violet plate to hand.
+
+**The caption carries the correction** — "This is not Sappho's violet… The plant is the genus,
+not the poem" — so nothing on the page claims otherwise, and a note at the foot of the sheet
+asks readers for a better plate. **The fix is one line of markup and a new caption** the day a
+public-domain *Viola odorata* plate turns up. Until then this is the only object on the site
+standing in for a different object, and it is doing so out loud.

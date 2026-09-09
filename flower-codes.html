@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Waste Garden, Flowering at Its Will &mdash; Queering Earth</title>
+<meta name="description" content="Violet, pansy, green carnation, and lavender were worn as code. Each was read by the people it was meant to escape and turned into the word that named you, and each was picked up again afterwards. With the 1926 sentence about a streak of lavender, and the man it is actually about.">
+<link rel="canonical" href="https://queering.earth/flower-codes">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5efe2">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Queering Earth">
+<meta property="og:title" content="A Waste Garden, Flowering at Its Will">
+<meta property="og:description" content="Four flowers worn as code — violet, pansy, green carnation, lavender — and what happened to each one after the wrong people learned to read it.">
+<meta property="og:url" content="https://queering.earth/flower-codes">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://queering.earth/images/og-flower-codes.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sheet, a reading: A Waste Garden, Flowering at Its Will. Violet, pansy, green carnation, and lavender, and what a code becomes once it is read.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Waste Garden, Flowering at Its Will">
+<meta name="twitter:description" content="Four flowers worn as code — violet, pansy, green carnation, lavender — and what happened to each one after the wrong people learned to read it.">
+<meta name="twitter:image" content="https://queering.earth/images/og-flower-codes.png">
+<meta name="twitter:image:alt" content="Sheet, a reading: A Waste Garden, Flowering at Its Will. Violet, pansy, green carnation, and lavender, and what a code becomes once it is read.">
+
+<!-- The mark is a pressed leaf pinned with the wordmark's rust dot. SVG first for
+     anything that takes it; the .ico carries 16/32/48/64 for everything else.
+     All of them are drawn by tools/make-images.py — do not hand-edit the rasters. -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;display=swap">
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's plain-view choice BEFORE first paint. Deferred to
+     queering.js it would flash the decorated page at someone who turned it off. -->
+<script>try{if(localStorage.getItem('qe-plain')==='1')document.documentElement.classList.add('plain')}catch(e){}</script>
+</head>
+<body>
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+</div>
+
+<main id="main">
+
+  <header class="qe-masthead qe-masthead-sheet">
+    <p class="qe-home"><a href="/">Queering Earth</a></p>
+    <p class="qe-kicker">Sheet &middot; a reading</p>
+    <h1><span class="qe-lean" style="--rot:-1.8deg">A Waste Garden,</span> Flowering <span class="qe-lean qe-lean-accent" style="--rot:1.6deg; --dy:2px">at Its Will</span></h1>
+
+    <!-- FOUR PLANTS IN A ROW, GROWING OUT OF ONE GROUND LINE. The same four the
+         front page carries on the corners of the plate, drawn here at size and in
+         the order the sheet reads them: violet, pansy, carnation, lavender.
+
+         The ground line is a single .stem so it draws itself on first and the four
+         rise out of something already there. Positioning is on the outer <g> and
+         the animation on the inner <g class="sprout"> — a CSS transform animation
+         overrides an SVG transform attribute on the same element, and getting that
+         wrong collapses every plant onto the origin. See CLAUDE.md. -->
+    <svg class="qe-botanical" viewBox="0 0 560 200" role="img" aria-label="Four plants growing in a row from one wavy ground line: a violet with five-petalled flowers, a pansy with a broad blotched face, a fringed carnation, and a lavender spike." focusable="false">
+      <path class="stem" style="--len:525" stroke-width="2.2" d="M18 172 C 88 164, 148 178, 218 170 C 288 162, 348 176, 418 168 C 468 162, 510 170, 542 166"/>
+
+      <!-- the violet -->
+      <path class="stem" style="--len:70" stroke-width="1.8" d="M96 170 C 92 144, 90 122, 93 100"/>
+      <path class="stem" style="--len:54" stroke-width="1.5" d="M96 170 C 106 152, 114 138, 120 122"/>
+      <g transform="translate(93 100)"><g class="sprout" style="--i:5">
+        <path class="petal-violet" d="M0 0 C -4.5 -2.5, -7.5 -9, -4 -13.5 C -1.5 -16.5, 1.5 -16.5, 4 -13.5 C 7.5 -9, 4.5 -2.5, 0 0 Z"/>
+        <path class="petal-violet" transform="rotate(72)" d="M0 0 C -4.5 -2.5, -7.5 -9, -4 -13.5 C -1.5 -16.5, 1.5 -16.5, 4 -13.5 C 7.5 -9, 4.5 -2.5, 0 0 Z"/>
+        <path class="petal-violet" transform="rotate(144)" d="M0 0 C -4.5 -2.5, -7.5 -9, -4 -13.5 C -1.5 -16.5, 1.5 -16.5, 4 -13.5 C 7.5 -9, 4.5 -2.5, 0 0 Z"/>
+        <path class="petal-violet" transform="rotate(216)" d="M0 0 C -4.5 -2.5, -7.5 -9, -4 -13.5 C -1.5 -16.5, 1.5 -16.5, 4 -13.5 C 7.5 -9, 4.5 -2.5, 0 0 Z"/>
+        <path class="petal-violet" transform="rotate(288)" d="M0 0 C -4.5 -2.5, -7.5 -9, -4 -13.5 C -1.5 -16.5, 1.5 -16.5, 4 -13.5 C 7.5 -9, 4.5 -2.5, 0 0 Z"/>
+        <circle class="body" cx="0" cy="0" r="2.1"/>
+      </g></g>
+      <g transform="translate(120 122) rotate(-16) scale(0.72)"><g class="sprout" style="--i:6">
+        <path class="petal-violet" d="M0 0 C -4.5 -2.5, -7.5 -9, -4 -13.5 C -1.5 -16.5, 1.5 -16.5, 4 -13.5 C 7.5 -9, 4.5 -2.5, 0 0 Z"/>
+        <path class="petal-violet" transform="rotate(72)" d="M0 0 C -4.5 -2.5, -7.5 -9, -4 -13.5 C -1.5 -16.5, 1.5 -16.5, 4 -13.5 C 7.5 -9, 4.5 -2.5, 0 0 Z"/>
+        <path class="petal-violet" transform="rotate(144)" d="M0 0 C -4.5 -2.5, -7.5 -9, -4 -13.5 C -1.5 -16.5, 1.5 -16.5, 4 -13.5 C 7.5 -9, 4.5 -2.5, 0 0 Z"/>
+        <path class="petal-violet" transform="rotate(216)" d="M0 0 C -4.5 -2.5, -7.5 -9, -4 -13.5 C -1.5 -16.5, 1.5 -16.5, 4 -13.5 C 7.5 -9, 4.5 -2.5, 0 0 Z"/>
+        <path class="petal-violet" transform="rotate(288)" d="M0 0 C -4.5 -2.5, -7.5 -9, -4 -13.5 C -1.5 -16.5, 1.5 -16.5, 4 -13.5 C 7.5 -9, 4.5 -2.5, 0 0 Z"/>
+        <circle class="body" cx="0" cy="0" r="2.1"/>
+      </g></g>
+      <g transform="translate(84 158) rotate(196)"><g class="sprout sprout-leaf" style="--i:1"><path class="leaf" d="M0 0 C 4 -6, 8 -13, 16 -12 C 23 -11, 27 -6, 30 0 C 27 6, 23 11, 16 12 C 8 13, 4 6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 28 0"/></g></g>
+      <g transform="translate(106 162) rotate(-16)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" d="M0 0 C 4 -6, 8 -13, 16 -12 C 23 -11, 27 -6, 30 0 C 27 6, 23 11, 16 12 C 8 13, 4 6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 28 0"/></g></g>
+
+      <!-- the pansy -->
+      <path class="stem" style="--len:76" stroke-width="1.8" d="M216 170 C 212 142, 210 118, 214 94"/>
+      <path class="stem" style="--len:48" stroke-width="1.5" d="M216 170 C 226 154, 234 142, 240 128"/>
+      <g transform="translate(214 94)"><g class="sprout" style="--i:7">
+        <path class="petal-pansy" transform="rotate(150)" d="M0 0 C -7 -3, -11 -11, -6 -16 C -2 -19.5, 2 -19.5, 6 -16 C 11 -11, 7 -3, 0 0 Z"/>
+        <path class="petal-pansy" transform="rotate(210)" d="M0 0 C -7 -3, -11 -11, -6 -16 C -2 -19.5, 2 -19.5, 6 -16 C 11 -11, 7 -3, 0 0 Z"/>
+        <path class="petal-pansy" transform="rotate(75)" d="M0 0 C -8 -3, -12 -12, -7 -17.5 C -3 -21, 3 -21, 7 -17.5 C 12 -12, 8 -3, 0 0 Z"/>
+        <path class="petal-pansy" transform="rotate(285)" d="M0 0 C -8 -3, -12 -12, -7 -17.5 C -3 -21, 3 -21, 7 -17.5 C 12 -12, 8 -3, 0 0 Z"/>
+        <path class="petal-pansy" transform="rotate(0)" d="M0 0 C -9 -3, -13 -13, -8 -19 C -3 -23, 3 -23, 8 -19 C 13 -13, 9 -3, 0 0 Z"/>
+        <circle class="face" cx="0" cy="-2" r="4.4"/>
+      </g></g>
+      <g transform="translate(240 128) rotate(18) scale(0.66)"><g class="sprout" style="--i:8">
+        <path class="petal-pansy" transform="rotate(150)" d="M0 0 C -7 -3, -11 -11, -6 -16 C -2 -19.5, 2 -19.5, 6 -16 C 11 -11, 7 -3, 0 0 Z"/>
+        <path class="petal-pansy" transform="rotate(210)" d="M0 0 C -7 -3, -11 -11, -6 -16 C -2 -19.5, 2 -19.5, 6 -16 C 11 -11, 7 -3, 0 0 Z"/>
+        <path class="petal-pansy" transform="rotate(75)" d="M0 0 C -8 -3, -12 -12, -7 -17.5 C -3 -21, 3 -21, 7 -17.5 C 12 -12, 8 -3, 0 0 Z"/>
+        <path class="petal-pansy" transform="rotate(285)" d="M0 0 C -8 -3, -12 -12, -7 -17.5 C -3 -21, 3 -21, 7 -17.5 C 12 -12, 8 -3, 0 0 Z"/>
+        <path class="petal-pansy" transform="rotate(0)" d="M0 0 C -9 -3, -13 -13, -8 -19 C -3 -23, 3 -23, 8 -19 C 13 -13, 9 -3, 0 0 Z"/>
+        <circle class="face" cx="0" cy="-2" r="4.4"/>
+      </g></g>
+      <g transform="translate(204 160) rotate(200) scale(0.9)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" d="M0 0 C 4 -6, 8 -13, 16 -12 C 23 -11, 27 -6, 30 0 C 27 6, 23 11, 16 12 C 8 13, 4 6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 28 0"/></g></g>
+
+      <!-- the carnation -->
+      <path class="stem" style="--len:68" stroke-width="1.8" d="M340 174 C 337 150, 335 128, 338 106"/>
+      <path class="stem" style="--len:47" stroke-width="1.5" d="M340 174 C 350 158, 356 146, 360 132"/>
+      <g transform="translate(338 106)"><g class="sprout" style="--i:9">
+        <path class="petal-carnation" d="M-4.5 0 C -6 -6, -6 -12, -5 -16 L 5 -16 C 6 -12, 6 -6, 4.5 0 Z"/>
+        <path class="petal-carnation" d="M-16 -16 C -17 -25, -12 -31, -8 -32.5 L -6.5 -29 L -3 -33 L -1 -29.5 L 2 -33.5 L 4 -29.5 L 7.5 -33 L 9 -29.5 C 13 -31, 17 -25, 16 -16 Z"/>
+        <path class="rib" stroke-width="0.8" d="M-8 -17 C -7 -22, -6 -25, -5 -28"/>
+        <path class="rib" stroke-width="0.8" d="M0 -17 L 0 -28"/>
+        <path class="rib" stroke-width="0.8" d="M8 -17 C 7 -22, 6 -25, 5 -28"/>
+      </g></g>
+      <g transform="translate(360 132) rotate(20) scale(0.8)"><g class="sprout" style="--i:10">
+        <path class="petal-carnation" d="M-4 0 C -5.5 -6, -5.5 -12, -3.5 -16 C -1.5 -19, 1.5 -19, 3.5 -16 C 5.5 -12, 5.5 -6, 4 0 Z"/>
+        <path class="rib" stroke-width="0.8" d="M0 -2 L 0 -15"/>
+      </g></g>
+      <g transform="translate(330 164) rotate(198)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf-narrow" d="M0 0 C 6 -4, 18 -6, 33 -2 C 18 2, 6 4, 0 0 Z"/></g></g>
+      <g transform="translate(348 168) rotate(-14)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf-narrow" d="M0 0 C 6 -4, 18 -6, 33 -2 C 18 2, 6 4, 0 0 Z"/></g></g>
+
+      <!-- the lavender -->
+      <path class="stem" style="--len:68" stroke-width="1.7" d="M462 168 C 459 144, 457 122, 460 100"/>
+      <path class="stem" style="--len:56" stroke-width="1.5" d="M462 168 C 474 150, 482 136, 486 118"/>
+      <g transform="translate(460 100) rotate(-4) scale(1.15)"><g class="sprout" style="--i:11">
+        <ellipse class="floret-lavender" cx="-3.6" cy="-2" rx="3.4" ry="2.6"/>
+        <ellipse class="floret-lavender" cx="3.6" cy="-5" rx="3.4" ry="2.6"/>
+        <ellipse class="floret-lavender" cx="-3.4" cy="-8.5" rx="3.2" ry="2.5"/>
+        <ellipse class="floret-lavender" cx="3.4" cy="-12" rx="3.2" ry="2.5"/>
+        <ellipse class="floret-lavender" cx="-3" cy="-15.5" rx="3" ry="2.3"/>
+        <ellipse class="floret-lavender" cx="2.9" cy="-19" rx="2.9" ry="2.2"/>
+        <ellipse class="floret-lavender" cx="-0.2" cy="-22.5" rx="2.7" ry="2.1"/>
+      </g></g>
+      <g transform="translate(486 118) rotate(14) scale(0.9)"><g class="sprout" style="--i:12">
+        <ellipse class="floret-lavender" cx="-3.6" cy="-2" rx="3.4" ry="2.6"/>
+        <ellipse class="floret-lavender" cx="3.6" cy="-5" rx="3.4" ry="2.6"/>
+        <ellipse class="floret-lavender" cx="-3.4" cy="-8.5" rx="3.2" ry="2.5"/>
+        <ellipse class="floret-lavender" cx="3.4" cy="-12" rx="3.2" ry="2.5"/>
+        <ellipse class="floret-lavender" cx="-3" cy="-15.5" rx="3" ry="2.3"/>
+        <ellipse class="floret-lavender" cx="2.9" cy="-19" rx="2.9" ry="2.2"/>
+      </g></g>
+      <g transform="translate(452 162) rotate(202)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf-narrow" d="M0 0 C 6 -4, 18 -6, 33 -2 C 18 2, 6 4, 0 0 Z"/></g></g>
+      <g transform="translate(470 166) rotate(-18)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf-narrow" d="M0 0 C 6 -4, 18 -6, 33 -2 C 18 2, 6 4, 0 0 Z"/></g></g>
+    </svg>
+
+    <p class="qe-sheet-sub">Violet, pansy, green carnation, and lavender were worn where they could be seen. Each was read in the end by the people it was meant to slip past, and each was picked up again afterwards by the people it had been used against.</p>
+  </header>
+
+  <p class="qe-lede">A code you wear is a code you do not control. The whole point of a flower in a buttonhole is that it passes: it is legible to the people it is for and invisible to everyone else, and it costs nothing to put down. That is its strength for exactly as long as it lasts, and it never lasts.</p>
+
+  <p>These four went the same way, in the same order, a century apart from each other. A word or an object gets picked up because it is safe. It stops being safe. It becomes the name for the thing it was hiding &mdash; not a description any more but a charge, something a newspaper can print and a court can enter into evidence. And then, later, sometimes much later, the people it was used against pick it up again on purpose and wear it in the open, which is the only move left once the secret is gone.</p>
+
+  <p><strong>The flower does not change.</strong> What changes is who is holding the meaning, and on this evidence it changes hands at least twice.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">Somebody else gathered these four</span></h2>
+
+  <p>The set is not ours. Violet, pansy, green carnation, and lavender are assembled as a group by Sarah Prager in <a href="https://daily.jstor.org/four-flowering-plants-decidedly-queered/"><cite>Four Flowering Plants That Have Been Decidedly Queered</cite></a>, JSTOR Daily, 29 January 2020, and this sheet exists because that piece put them on one table. Go and read it: it carries a good deal that is not here, including the violets sent on stage in <cite>The Captive</cite> in 1926, George Chauncey&rsquo;s pansy craze, the Lavender Scare, and the Lavender Menace action of 1970.</p>
+
+  <p><strong>What is hers is the gathering. What is ours is the reading</strong> &mdash; that these four are one process caught at four different moments, and that the process runs the same way each time. And one other thing is ours, further down, and it is a correction.</p>
+
+  <div class="qe-register-note">
+    <span class="qe-register-note-label">What this sheet quotes, and what it does not</span>
+    <p>Every quotation below was read in the work it comes from and is logged in the site&rsquo;s <a href="https://github.com/Stimpunks/Queering-Earth/blob/main/ATTRIBUTIONS.md">attribution ledger</a> with the date and the copy. Where a claim belongs to a scholar and we have not read the primary, the claim is named as theirs and not repeated as ours. <strong>There is more history here than this sheet asserts</strong>, and the gap is deliberate.</p>
+  </div>
+
+  <h2 class="qe-section"><span class="qe-wobble">The violet, which was a description before it was a code</span></h2>
+
+  <figure class="qe-plate">
+    <img src="images/violet-viola-pedata-house-wild-flowers-of-new-york-1918.jpg" width="1000" height="999" loading="lazy" decoding="async"
+         alt="Six pale blue-violet flowers on slender stalks rising from a low clump of deeply divided leaves, the whole plant lifted on a clod of earth and photographed against a plain pale ground.">
+    <figcaption>Birdfoot violet, <cite>Viola pedata</cite>, from Homer D. House, <cite>Wild Flowers of New York</cite> (University of the State of New York, Albany, 1918), photographed by Walter B. Starr and Harold H. Snyder. <strong>This is not Sappho&rsquo;s violet.</strong> It is an American species, photographed for a state museum survey twenty-five centuries later, and it is on this page because a public-domain plate of the right violet was not to hand. The plant is the genus, not the poem.</figcaption>
+  </figure>
+
+  <p>The oldest of the four is the one that was never a code to begin with. Sappho&rsquo;s violets are just violets &mdash; worn, plaited, remembered &mdash; and what makes them the root of a symbol is that somebody else described her that way and the description stuck.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the epithet</span>
+    <blockquote>
+      <p>Violet-weaving, pure, soft-smiling Sappho, I want to say something, but shame prevents me&hellip;</p>
+    </blockquote>
+    <figcaption>Alcaeus, addressing Sappho, in Henry Thornton Wharton, <cite>Sappho: Memoir, Text, Selected Renderings and a Literal Translation</cite> (London, 1885). Wharton notes that the Greek epithet is <span lang="grc">ἰόπλοκος</span> &mdash; violet-weaving &mdash; and that some manuscripts read <span lang="grc">ἰοπλόκαμος</span>, <em>with violet locks</em>. The two readings are a hair apart and mean different things: one is what she does, the other is what she looks like.</figcaption>
+  </figure>
+
+  <p>Wharton, annotating a different fragment about girls plaiting garlands, records the ancient commentary matter-of-factly: <q>that plaiting wreaths was a sign of being in love.</q> That is the whole mechanism, six centuries before the common era. A thing women did with flowers was understood to mean something, by people who were not being coy about it, and it did not need to be a signal because nothing yet required it to be concealed.</p>
+
+  <p><strong>A code is what a description becomes when the description gets you into trouble.</strong> Nothing about the violet changed between Sappho&rsquo;s island and a Broadway theatre in 1926. What changed is that by 1926 it had to be a code.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">The pansy, which became the word</span></h2>
+
+  <figure class="qe-plate">
+    <img src="images/pansy-viola-tricolor-step-favourite-flowers-1896.jpg" width="1000" height="1595" loading="lazy" decoding="async"
+         alt="A chromolithograph of eight garden pansies in yellow, mahogany, cream, and dusty rose, each with a dark blotched face, arranged with buds, leaves, a seedling, and a seed at the foot of the plate.">
+    <figcaption>Pansy, <cite>Viola tricolor</cite> var. <cite>maxima</cite>, Plate 33 of Edward Step, <cite>Favourite Flowers of Garden and Greenhouse</cite> (Frederick Warne, 1896), plates selected and arranged by D. Bois. Digitised by the Biodiversity Heritage Library. The same genus as the violet above, bred up into a face.</figcaption>
+  </figure>
+
+  <p>The pansy is the violet&rsquo;s garden cousin and it had the shortest journey of the four, because it did not stay an object. It became a word, and the word is still in use as an insult in a way that <em>violet</em> and <em>lavender</em> never quite managed.</p>
+
+  <p>The etymology is worth a moment, because it is the joke the language played. <em>Pansy</em> is the English of the Old French <span lang="fr">pens&eacute;e</span> &mdash; <q>thought, remembrance</q> &mdash; from <span lang="fr">penser</span>, to think, and it arrives in English in the middle of the fifteenth century as <em>pense</em>, the flower <q>regarded as a symbol of thought or remembrance</q>. Something under five centuries later the same word is <a href="https://www.etymonline.com/word/pansy">recorded by 1929</a> in its other sense, and the insult keeps the shape of the flower&rsquo;s own meaning: <strong>the charge is not what he does, it is what he is understood to have in mind.</strong></p>
+
+  <p>The 1920s and 1930s American drag scene that took the flower&rsquo;s name is not ours to summarise. The historian George Chauncey is the source Prager cites for the <em>pansy craze</em>, and his <cite>Gay New York</cite> is where that account lives. We have not read it, so we are pointing at it rather than reporting it.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">The green carnation, which no plate can show</span></h2>
+
+  <figure class="qe-plate">
+    <img src="images/carnation-dianthus-birds-and-nature-1902.jpg" width="1000" height="1413" loading="lazy" decoding="async"
+         alt="Four carnations, two deep pink and two white, on long grey-green stems with narrow leaves, printed on a book page numbered 533 and captioned Carnations, Dianthus caryophyllus.">
+    <figcaption>Carnations, <cite>Dianthus caryophyllus</cite>, from <cite>Birds and Nature</cite> (A. W. Mumford, Chicago, 1902), page 533; digitised from the Smithsonian Institution Libraries&rsquo; copy. <strong>These are the wrong colour and there is no right one.</strong> A green carnation is a white carnation stood in dye. No botanical plate of the flower Wilde&rsquo;s friends wore exists, because the flower they wore does not grow &mdash; which is a fair description of the code itself.</figcaption>
+  </figure>
+
+  <p>Prager writes that <q>the green carnation became a queer symbol in 1892 when Oscar Wilde instructed a handful of his friends to wear them on their lapels to the opening night of his comedy <cite>Lady Windermere&rsquo;s Fan</cite>.</q> We have not read that back to a primary and do not assert it here as our own. What we have read is the poem, and the transcript of the morning the poem was read out in court.</p>
+
+  <p>Lord Alfred Douglas published <cite>Two Loves</cite> in <cite>The Chameleon</cite> in December 1894. It opens in a garden, and the garden is full of the flowers this sheet is about.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the garden</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">I dreamed I stood upon a little hill,</span><span class="l">And at my feet there lay a ground, that seemed</span><span class="l">Like a waste garden, flowering at its will</span><span class="l">With buds and blossoms. There were pools that dreamed</span><span class="l">Black and unruffled; there were white lilies</span><span class="l">A few, and crocuses, and violets</span><span class="l">Purple or pale, snake-like fritillaries</span><span class="l">Scarce seen for the rank grass&hellip;</span></p>
+    </blockquote>
+    <figcaption>Lord Alfred Douglas, <cite>Two Loves</cite>, first published in <cite>The Chameleon</cite>, December 1894. The poem ends: <q>I am the Love that dare not speak its name.</q></figcaption>
+  </figure>
+
+  <p><strong>The violets are already in the poem.</strong> Douglas is not building a code; he is describing a garden that grows what it likes, and the phrase this sheet takes its title from says so plainly &mdash; <em>a waste garden, flowering at its will</em>. Waste, in 1894, means uncultivated. Nobody arranged it. Nobody is coming to weed it.</p>
+
+  <p>Four months later the poem was uncultivated ground no longer. At the Old Bailey in April 1895, prosecuting counsel put the last line to Wilde as a question, and the reply is on the record in the shorthand reports.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the same line, in court</span>
+    <blockquote>
+      <p><strong>Mr. Gill.</strong> &mdash; &ldquo;I daresay! There is another sonnet. What construction can be put on the line, &lsquo;I am the love that dare not speak its name&rsquo;?&rdquo;</p>
+      <p><strong>Witness.</strong> &mdash; &ldquo;I think the writer&rsquo;s meaning is quite unambiguous. The love he alluded to was that between an elder and younger man, as between David and Jonathan; such love as Plato made the basis of his philosophy; such as was sung in the sonnets of Shakespeare and Michael Angelo; that deep spiritual affection that was as pure as it was perfect&hellip;&rdquo;</p>
+    </blockquote>
+    <figcaption><cite>The Trial of Oscar Wilde: From the Shorthand Reports</cite> (Paris, privately printed, 1906), pages 58&ndash;59. <strong>His answer runs on past where we stop it</strong>, through two more sentences about Michelangelo and Shakespeare, and the ellipsis marks that rather than any cut inside what is quoted. The report adds that Wilde spoke <q>with great emphasis and some signs of emotion</q>, and that the gallery answered with <q>a medley of applause and hisses</q> which the judge ordered suppressed.</figcaption>
+  </figure>
+
+  <p>Two small things in that exchange are worth keeping. Gill calls it a sonnet, and it is not one &mdash; <cite>Two Loves</cite> runs to seventy-odd lines. And the line as spoken in court reads <em>the love</em>, lower case, where the poem has <em>the Love</em>, a capitalised figure who has just given his name. The court flattened a character into a category, which is precisely what the trial did to the man in the box.</p>
+
+  <p>That is the turn, and it took under five months. In December the flowers are in a poem. By April the poem is an exhibit, and the buttonhole that had been a private joke among friends is a thing the newspapers can describe.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">The lavender, and the man the sentence is actually about</span></h2>
+
+  <figure class="qe-plate">
+    <img src="images/lavender-lavandula-hulme-familiar-garden-flowers-1907.jpg" width="1000" height="1632" loading="lazy" decoding="async"
+         alt="Two lavender spikes in dusty violet rising above narrow grey-green leaves on a cream ground, captioned Lavender in small type at the foot of the plate.">
+    <figcaption>Lavender, <cite>Lavandula</cite>, Plate 10 of <cite>Familiar Garden Flowers</cite>, figured by F. Edward Hulme and described by Shirley Hibberd, first series with coloured plates, 1907. Digitised by the Biodiversity Heritage Library.</figcaption>
+  </figure>
+
+  <p>One sentence carries most of the weight of lavender&rsquo;s reputation, and it is quoted constantly. Prager quotes it: <q>One of the most notable uses of &lsquo;lavender&rsquo; comes from the historian Carl Sandburg, who wrote in 1926 of Abraham Lincoln: &lsquo;A streak of lavender ran through him; he had spots soft as May violets.&rsquo;</q></p>
+
+  <p><strong>The words are Sandburg&rsquo;s, exactly. The <em>him</em> is not Lincoln.</strong> Here is the paragraph the sentence comes from, which opens Chapter 54 on page 265 of the first volume.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the whole paragraph</span>
+    <blockquote>
+      <p>Joshua Speed was a deep-chested man of large sockets, with broad measurement between the ears. A streak of lavender ran through him; he had spots soft as May violets. And he and Abraham Lincoln told each other their secrets about women. Lincoln too had tough physical shanks and large sockets, also a streak of lavender, and spots soft as May violets.</p>
+    </blockquote>
+    <figcaption>Carl Sandburg, <cite>Abraham Lincoln: The Prairie Years</cite>, volume 1 (Harcourt, Brace, 1926), page 265. Read in two independently digitised copies: the University of British Columbia Library&rsquo;s copy, scanned at the University of Toronto, and an Internet Archive copy scanned at Cebu. On page 266 Sandburg says it a third time, of both of them at once &mdash; <q>had given these two men streaks of lavender, spots soft as May violets.</q></figcaption>
+  </figure>
+
+  <p>So the celebrated sentence describes Joshua Speed, and Sandburg extends it to Lincoln in the next sentence but one, in different words, and then to the pair of them on the following page. <strong>The substance of the claim survives the correction entirely.</strong> Sandburg did write that of Lincoln. He did not write <em>that sentence</em> of Lincoln.</p>
+
+  <p>This is not a gotcha and we are not offering it as one. Prager names Speed herself in her very next sentence, and her book is partly about him; she plainly knows whose paragraph this is. What happened to the quotation is compression &mdash; the line got attached to the more famous of the two men on its way through a hundred retellings, and it arrives looking like a sentence about Lincoln because everybody has met it as one.</p>
+
+  <p><strong>That is this site&rsquo;s own failure mode, and it is why we noticed.</strong> The risk here is never an invented source; it is a true quotation whose object has quietly moved. Nothing was fabricated, no word was altered, and the citation is still correct at the level of book and author and year. Only the referent slipped, and the referent is the whole meaning: a sentence about two men in one bed in Springfield is a different sentence from a sentence about a president.</p>
+
+  <p>It is also, read the other way, a small demonstration of the thing this sheet is about. A phrase that meant one man is now doing service for another, because a code in circulation belongs to whoever is circulating it.</p>
+
+  <h2 class="qe-section"><span class="qe-wobble">The garden does not stay uncultivated</span></h2>
+
+  <p>Line up the four and the shape is the same every time, only the interval changes.</p>
+
+  <ul class="qe-drift">
+    <li style="--rot:-1.3deg; --slip-color: var(--qe-violet)">
+      <p class="qe-drift-word">violet</p>
+      <p class="qe-drift-when">description &rarr; code</p>
+      <p class="qe-drift-gloss">Plaited into garlands with nothing to hide, and still a plain description in Wharton&rsquo;s notes in 1885. A signal only once there was something to signal past.</p>
+    </li>
+    <li style="--rot:0.9deg; --slip-color: var(--qe-marigold)">
+      <p class="qe-drift-word">pansy</p>
+      <p class="qe-drift-when">code &rarr; slur</p>
+      <p class="qe-drift-gloss">The only one of the four that stopped being an object and became a word. Named for a thought, and used to name a man by what he is presumed to be thinking.</p>
+    </li>
+    <li style="--rot:-0.7deg; --slip-color: var(--qe-verdigris)">
+      <p class="qe-drift-word">carnation</p>
+      <p class="qe-drift-when">code &rarr; evidence</p>
+      <p class="qe-drift-gloss">A flower that had to be dyed to mean anything, worn for two years and then read out in a courtroom. Nothing in nature to point at, which was the point.</p>
+    </li>
+    <li style="--rot:1.5deg; --slip-color: var(--qe-lichen)">
+      <p class="qe-drift-word">lavender</p>
+      <p class="qe-drift-when">code &rarr; scare &rarr; banner</p>
+      <p class="qe-drift-gloss">The one that has been all the way round: a soft word in 1926, a purge in the 1950s, an insult meant to frighten a movement in 1969, and a slogan printed on a shirt in 1970.</p>
+    </li>
+  </ul>
+
+  <p>The last of those is the only one of the four with a documented moment of somebody taking it back on purpose, and it belongs to the women who wore the shirts. That history is Prager&rsquo;s to tell in her piece and the historians&rsquo; to tell in theirs; we have not read it to a primary and so we do not tell it here.</p>
+
+  <p>What we will say is the pattern, because the pattern is the reading. <strong>A code fails by succeeding.</strong> It works until enough people are using it, and the number of people who make it useful is the same number who make it legible from the outside. Then it is not a code any more, it is a name, and the name is in somebody else&rsquo;s mouth.</p>
+
+  <p>And then the last move, the one that is not in the logic of codes at all: you keep wearing it anyway. Not because it hides you &mdash; it has stopped hiding anybody &mdash; but because a thing worn openly by enough people stops being an accusation and goes back to being a description. Which is where the violet started.</p>
+
+  <p>Douglas&rsquo;s garden is the better image for it than any of the four flowers alone. Waste ground, growing what it likes, nobody&rsquo;s scheme, <q>flowering at its will</q>. It is the most ordinary sentence in the poem and it is the only line in it nobody put on trial.</p>
+
+  <div class="qe-register-note">
+    <span class="qe-register-note-label">One thing we would like to fix and cannot from here</span>
+    <p>The right plate for the first section is a European sweet violet, <cite>Viola odorata</cite> &mdash; the violet of the Mediterranean, not the birdfoot violet of a New York state survey. The plate mounted above is the one we had, and the caption says so rather than letting the genus stand in silently for the species. <strong>If you know of a public-domain <cite>Viola odorata</cite> plate</strong>, it belongs here, and swapping it in is one line of markup and a caption. Say so in <a href="https://github.com/Stimpunks/Queering-Earth/issues">the repository</a> and it will be.</p>
+  </div>
+
+</main>
+
+<!-- Elsewhere on the plate. OUTSIDE <main> on purpose: the SKS mirror takes page
+     content from the <main> landmark and nowhere else, so navigation placed inside
+     it would be indexed as this sheet's own content. See CLAUDE.md. -->
+<nav class="qe-elsewhere" aria-labelledby="qe-elsewhere-h">
+  <h2 id="qe-elsewhere-h">Elsewhere on the plate</h2>
+  <ul class="qe-elsewhere-grid">
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/on-being-ill">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;1</span>
+          </span>
+          <span class="qe-card-title">The Army of the Upright</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-violet)">
+        <a class="card" href="/coming-to-terms">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Essay</span>
+            <span class="qe-card-no">No.&nbsp;2</span>
+          </span>
+          <span class="qe-card-title">Coming to Terms</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-coral)">
+        <a class="card" href="/promises-like-pie-crust">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;3</span>
+          </span>
+          <span class="qe-card-title">The Die Uncast</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-marigold)">
+        <a class="card" href="/invention-of-normal">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;4</span>
+          </span>
+          <span class="qe-card-title">Wyrd, Weird, and the Invention of Normal</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-lichen)">
+        <a class="card" href="/the-tempest">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;5</span>
+          </span>
+          <span class="qe-card-title">Miranda: To Be Wondered With</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/wild-nights">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;6</span>
+          </span>
+          <span class="qe-card-title">The Swell and the Dwell</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<footer class="qe-footer">
+  <p><a href="/">Queering Earth</a> is a collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+  <p>Douglas&rsquo;s poem was read in the Wikisource transcription of <cite>The Chameleon</cite> text and its final line corroborated in the 1906 shorthand reports of the trial; Wilde&rsquo;s answer was read in those reports; Alcaeus and the note on garlands were read in Wharton&rsquo;s 1885 <cite>Sappho</cite>; Sandburg&rsquo;s paragraph was read in two independently digitised 1926 copies from different holding institutions. All of it is logged in the site&rsquo;s attribution ledger, along with the claims quoted at one remove and named as such.</p>
+  <p>Our words licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Sappho, Alcaeus, Wharton, Douglas, the trial reports, and Sandburg&rsquo;s 1926 text are in the public domain, as are all four botanical plates. Sarah Prager&rsquo;s words are hers, quoted here under fair dealing with her article linked at every use.</p>
+  <p><a href="/design">How this site is made</a> &mdash; the herbarium sheet, the palette, the type, and the borrowed plates.</p>
+  <p><a href="/changelog">The accession register</a> &mdash; every sheet as it was mounted, and every label we corrected.</p>
+</footer>
+
+<script src="queering.js"></script>
+</body>
+</html>

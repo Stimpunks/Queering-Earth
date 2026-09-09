@@ -226,6 +226,10 @@ og_card(REPO/"images"/"og-wild-nights.png", "The Swell and the Dwell",
         "Sheet · a reading",
         "Dickinson asks for one night in harbour, and not a lifetime.",
         VERDIGRIS)
+og_card(REPO/"images"/"og-flower-codes.png", "A Waste Garden, Flowering at Its Will",
+        "Sheet · a reading",
+        "Four flowers worn as code, and what a code becomes once read.",
+        VIOLET)
 og_card(REPO/"images"/"og-design.png", "How this site is made", "Colophon",
         "A Victorian herbarium sheet as the model: the palette, the type, the drawings.", MARIGOLD)
 og_card(REPO/"images"/"og-changelog.png", "The accession register", "Register · the changelog",
@@ -233,6 +237,7 @@ og_card(REPO/"images"/"og-changelog.png", "The accession register", "Register ·
 
 for p in ("favicon.ico", "apple-touch-icon.png", "images/icon-512.png",
           "images/og-index.png", "images/og-on-being-ill.png", "images/og-coming-to-terms.png",
+          "images/og-flower-codes.png",
           "images/og-design.png", "images/og-promises-like-pie-crust.png",
           "images/og-invention-of-normal.png", "images/og-the-tempest.png",
           "images/og-wild-nights.png",
