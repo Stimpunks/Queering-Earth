@@ -39,7 +39,7 @@
 <!-- Restore the reader's choices BEFORE first paint. A reader who asked for the
      cabinet asked for it here too — an error page is the worst place to flash the
      wrong ground, because it is the page they did not choose to be on. -->
-<script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);['motion','contrast','spacing'].forEach(function(k){var v=L.getItem('qe-'+k);if(v==='on'||v==='off')d.classList.add('qe-'+k+'-'+v)})}catch(e){}</script>
 </head>
 <body>
 
@@ -49,6 +49,27 @@
   <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
   <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
   <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+  <details class="qe-reading">
+    <summary class="qe-reading-summary">Reading</summary>
+    <div class="qe-reading-panel">
+      <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
+      <ul class="qe-reading-list">
+        <li>
+          <label><input type="checkbox" id="qe-set-motion"> <span>Reduce motion</span></label>
+          <span class="qe-reading-hint">The drawings appear finished instead of drawing themselves on.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-contrast"> <span>More contrast</span></label>
+          <span class="qe-reading-hint">Darker ink, firmer rules, and the foxing lifted off the paper.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
+          <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+      </ul>
+      <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
 </div>
 
 <main id="main" tabindex="-1">
@@ -83,7 +104,7 @@
 
   <h2 id="where">Where to look instead <a class="qe-anchor" href="#where"><span class="qe-sr">Link to this section</span></a></h2>
 
-  <p><strong>There is no search box here, and that is deliberate.</strong> With eleven pages, the plate <em>is</em> the index: <a href="/">the front page</a> lays out every sheet as a numbered card, which is faster to read than any query would be. When there is enough here to need searching, that will be worth building and this paragraph will be wrong.</p>
+  <p><strong>There is a search now</strong>, which there was not when this page was written: <a href="/search">the finding aid</a>. It runs entirely in your own browser &mdash; the sheet you are looking for is probably one query away. The plate is still the other way in: <a href="/">the front page</a> lays every sheet out as a numbered card.</p>
 
   <p>Otherwise: <a href="/design">the colophon</a> explains how this site is made &mdash; the herbarium sheet, the palette, the type, and the borrowed plates. <a href="/changelog">The register</a> is the ledger. Every sheet is carded below.</p>
 

@@ -29,6 +29,9 @@ Two values, in your browser’s local storage, put there only if you press one o
 **`qe-plain`**
 : Whether you asked for plain view, which switches off the display faces, the wonk, the rotation and the motion. Holds `1`, or is absent.
 
+**`qe-motion`, `qe-contrast`, `qe-spacing`**
+: The three **reading settings**, under *Reading* at the top of every page. Each holds `on` or `off`, or is absent — and **absent is the state that matters**: it means we follow whatever your own device asks for, and only a choice made here overrides it. *Follow my device again* removes all three and hands you back to your device.
+
 **Neither is a cookie and neither is ever sent anywhere.** Local storage is not attached to requests the way a cookie is; these two values stay in the browser that wrote them, on the device that wrote them. We cannot read them, and nothing on this site tries to. Clearing your site data removes them and the page goes back to following your system’s own light or dark preference.
 
 They identify nobody. There is no visitor id here, random or otherwise, and no way to recognise a returning reader.

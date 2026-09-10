@@ -46,7 +46,7 @@
      either one would flash the wrong page: the decorated page at someone who
      turned it off, or the daylight sheet at someone who asked for the cabinet.
      With no stored ground, neither class is set and the media query decides. -->
-<script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);['motion','contrast','spacing'].forEach(function(k){var v=L.getItem('qe-'+k);if(v==='on'||v==='off')d.classList.add('qe-'+k+'-'+v)})}catch(e){}</script>
 <!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
      rel=alternate points an agent at this page's Markdown source, derived from this
      page's own main landmark by tools/make-markdown.mjs.
@@ -120,6 +120,27 @@
   <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
   <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
   <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+  <details class="qe-reading">
+    <summary class="qe-reading-summary">Reading</summary>
+    <div class="qe-reading-panel">
+      <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
+      <ul class="qe-reading-list">
+        <li>
+          <label><input type="checkbox" id="qe-set-motion"> <span>Reduce motion</span></label>
+          <span class="qe-reading-hint">The drawings appear finished instead of drawing themselves on.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-contrast"> <span>More contrast</span></label>
+          <span class="qe-reading-hint">Darker ink, firmer rules, and the foxing lifted off the paper.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
+          <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+      </ul>
+      <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
 </div>
 
 <!-- The drift rail: this page's own h2s, in the left margin, above 77rem and

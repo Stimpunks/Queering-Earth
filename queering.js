@@ -96,6 +96,124 @@
     paintGround();
   }
 
+  /* ── the reading settings
+   *
+   * DEFAULT TO THE SYSTEM. ALLOW IN-THE-MOMENT CONFIGURATION. Implementing
+   * prefers-reduced-motion and prefers-contrast perfectly still only reaches the
+   * readers who know those switches exist, and most have never opened that menu.
+   * A setting chosen once, months ago, also cannot know that today is a bad day.
+   * So each row below starts from the media query and the reader may say otherwise.
+   *
+   * THE STORED VALUE IS THREE-STATE, and that is the part worth getting right.
+   * Absent means "follow the system" — not "off". Only an explicit 'on' or 'off'
+   * overrides, which is why the reset can hand a reader back to their own device
+   * rather than freezing today's answer forever.
+   *
+   * This file may never create words: every label and hint is in the markup, and
+   * all this does is set checked states, classes and storage.
+   */
+
+  var READING = [
+    { key: 'motion',   box: 'qe-set-motion',
+      query: '(prefers-reduced-motion: reduce)', whenChecked: 'off', whenClear: 'on'  },
+    { key: 'contrast', box: 'qe-set-contrast',
+      query: '(prefers-contrast: more)',         whenChecked: 'on',  whenClear: 'off' },
+    /* No system signal exists for this one, which is the argument for having it in
+       the panel at all: a reading preference the device cannot express. */
+    { key: 'spacing',  box: 'qe-set-spacing',
+      query: null,                                whenChecked: 'on',  whenClear: 'off' }
+  ];
+
+  var panel = document.querySelector('.qe-reading');
+  if (panel) {
+    var reset = document.getElementById('qe-reading-reset');
+
+    var stored = function (key) {
+      try {
+        var v = localStorage.getItem('qe-' + key);
+        return (v === 'on' || v === 'off') ? v : null;
+      } catch (e) { return null; }
+    };
+
+    var forget = function (key) {
+      try { localStorage.removeItem('qe-' + key); } catch (e) {}
+    };
+
+    var systemWants = function (row) {
+      return row.query ? window.matchMedia(row.query).matches : false;
+    };
+
+    /* The class is written only for an override. With nothing stored, no class is
+       added and the stylesheet's own media query decides — which is what keeps the
+       no-JavaScript answer and the JavaScript answer the same answer. */
+    var applyClass = function (row) {
+      var v = stored(row.key);
+      root.classList.remove('qe-' + row.key + '-on', 'qe-' + row.key + '-off');
+      if (v) root.classList.add('qe-' + row.key + '-' + v);
+    };
+
+    var isChecked = function (row) {
+      var v = stored(row.key);
+      return v ? v === row.whenChecked : systemWants(row);
+    };
+
+    var paintReset = function () {
+      if (!reset) return;
+      var overridden = READING.some(function (row) { return stored(row.key) !== null; });
+      reset.disabled = !overridden;
+    };
+
+    READING.forEach(function (row) {
+      var box = document.getElementById(row.box);
+      if (!box) return;
+      row.el = box;
+      box.checked = isChecked(row);
+
+      box.addEventListener('change', function () {
+        remember('qe-' + row.key, box.checked ? row.whenChecked : row.whenClear);
+        applyClass(row);
+        paintReset();
+      });
+
+      /* If the device's own setting changes while the page is open and the reader
+         has not overridden it, follow along rather than showing a stale tick. */
+      if (row.query && window.matchMedia(row.query).addEventListener) {
+        window.matchMedia(row.query).addEventListener('change', function () {
+          if (stored(row.key) === null) box.checked = systemWants(row);
+        });
+      }
+    });
+
+    if (reset) {
+      reset.addEventListener('click', function () {
+        READING.forEach(function (row) {
+          forget(row.key);
+          applyClass(row);
+          if (row.el) row.el.checked = systemWants(row);
+        });
+        paintReset();
+      });
+    }
+
+    paintReset();
+
+    /* <details> gives keyboard and screen-reader behaviour for free, which is the
+       whole reason this is not a hand-built menu. Escape and click-away are the two
+       things it does not do, and they are conveniences on top of something that
+       already works without them. */
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && panel.open) {
+        panel.open = false;
+        var summary = panel.querySelector('summary');
+        if (summary) summary.focus();
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (panel.open && !panel.contains(e.target)) panel.open = false;
+    });
+  }
+
   /* ── on this sheet, and in the margin
    *
    * Two views of one derivation: the contents list inside the measure, and the

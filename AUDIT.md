@@ -573,6 +573,48 @@ now asks for **hybrid post-quantum key agreement** (`X25519MLKEM768`). That is N
 termination, not a repo setting — nothing to fix here, worth knowing it is now on the list
 and is someone else's configuration.
 
+## Added after the fact — `accessibility`, `recommended` tier
+
+### `forced-colors` — found 2026-09-10, remediated the same day
+
+`forced-colors` (recommended) · [spec](https://specification.website/spec/accessibility/forced-colors/) (updated 2026-06-22)
+
+**Raised by Ryan, not by this audit, and legitimately outside its scope.** The pass covered
+`required` across all ten categories plus `agent-readiness` in full; the note at the top
+says the absence of a finding is not a pass for `recommended` items elsewhere. This is that
+caveat earning its keep rather than an oversight — but it is a real gap and it sat there.
+
+The site had no `@media (forced-colors: active)` block at all. It degraded *reasonably*
+on decisions taken for other reasons — every control is a real `<button>` with a real
+border, and the register's four kinds carry words as well as an accent, so the rule that
+puts colour on the rule and never on the glyph paid a debt it was not taken out for.
+
+Repaired: the card hover, which was a background change and nothing else and so vanished
+outright; the edges that leaned on a `box-shadow`; and focus, which now tracks `Highlight`.
+The botanical art is deliberately *allowed* to be forced — colour is not information in a
+drawing of a leaf, and the spec reserves `forced-color-adjust` for where the colour **is**
+the information. `prefers-contrast: more` is now honoured too, which the spec asks to be
+paired with it.
+
+**`forced-colors` is not a setting the site can offer**, and the reading settings panel
+deliberately does not contain one. It reports an OS state and a page can only respond.
+
+### The reading settings, and what they are not
+
+Shipped the same day: **Reduce motion**, **More contrast**, **Looser lines**, in a native
+`<details>` beside the view controls. Not a spec item — a decision that the media queries
+alone only reach readers who know their own system menus, and that access needs move during
+a day. Default to the device, allow the override, three-state storage so *follow my device
+again* is a real answer rather than a frozen one.
+
+Every reading setting is **additive** — more contrast, more space, less motion — because
+`check-contrast.mjs` measures the two grounds and cannot see a class it was never told
+about. A setting that could lower a ratio would need the gate taught first.
+
+`check-metadata.mjs` gained a ninth detector: **every `qe-*` storage key must be named on
+`/privacy`**, found both from literal `getItem` calls and from the `html.qe-*-on` classes,
+because the settings build their keys from a table and appear as no literal anywhere.
+
 ## Next delta check
 
 The spec is hand-curated and changes often, and a **status promotion can fail a

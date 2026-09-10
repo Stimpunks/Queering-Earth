@@ -478,6 +478,126 @@ body::before {
 }
 html.plain body::before { display: none; }
 
+/* ══════════════════════════════════════════════════════════════════════════════
+   READING SETTINGS — the system decides, and the reader may say otherwise
+   ══════════════════════════════════════════════════════════════════════════════
+
+   DEFAULT TO THE SYSTEM. ALLOW IN-THE-MOMENT CONFIGURATION. Implementing
+   prefers-reduced-motion and prefers-contrast perfectly still only reaches the
+   people who know those switches exist — most have never opened that menu. And a
+   setting chosen once, months ago, cannot know that today is a migraine day. So the
+   media queries below are the DEFAULT, and each has a class that overrides it in
+   either direction, set from /the reading settings and remembered per browser.
+
+   Every one of these is additive contrast or additive space. Nothing here lowers a
+   ratio, so the 7:1 the palette already clears is a floor these states cannot dip
+   under — which matters because check-contrast.mjs measures the two grounds and
+   cannot see a class it was never told about. Keep it that way: a reading setting
+   that could REDUCE contrast would need the gate taught about it first. */
+
+/* ── More contrast ───────────────────────────────────────────────────────────
+   The daylight palette already clears the house 7:1. This goes further for readers
+   who ask: ink to black, the two accents down onto the ink's own darkness, rules
+   darkened so a boundary is unmistakable, and the foxing lifted off the paper. */
+html.qe-contrast-on,
+html.qe-contrast-on.daylight {
+  --qe-ink: #000000;         /* 20.4:1 */
+  --qe-moss: #1e3018;        /* 13.6:1 — still moss, still not black */
+  --qe-rust: #6b2415;        /* 11.1:1 */
+  --qe-rule: #6f6350;
+  --qe-paper: #fffdf7;
+  --qe-paper-deep: #f2ead8;
+  --qe-card: #ffffff;
+}
+html.qe-contrast-on.cabinet {
+  --qe-ink: #fffdf7;
+  --qe-moss: #cfe3c4;
+  --qe-rust: #ffc9b4;
+  --qe-rule: #9d8f7c;
+  --qe-paper: #150e0b;
+  --qe-paper-deep: #241a15;
+  --qe-card: #0d0806;
+}
+/* The wash is a texture, and texture never goes under text. At higher contrast it
+   is the first thing to go: it varies effective luminance per pixel, which is the
+   one thing check-contrast.mjs cannot see. */
+html.qe-contrast-on body::before { display: none; }
+
+/* The system asked for more contrast and the reader has not said otherwise. Same
+   declarations, reached the other way; the values live once, above. */
+@media (prefers-contrast: more) {
+  html:not(.qe-contrast-off):not(.cabinet) {
+    --qe-ink: #000000; --qe-moss: #1e3018; --qe-rust: #6b2415;
+    --qe-rule: #6f6350; --qe-paper: #fffdf7; --qe-paper-deep: #f2ead8; --qe-card: #ffffff;
+  }
+  html:not(.qe-contrast-off).cabinet {
+    --qe-ink: #fffdf7; --qe-moss: #cfe3c4; --qe-rust: #ffc9b4;
+    --qe-rule: #9d8f7c; --qe-paper: #150e0b; --qe-paper-deep: #241a15; --qe-card: #0d0806;
+  }
+  html:not(.qe-contrast-off) body::before { display: none; }
+}
+
+/* ── Looser lines ────────────────────────────────────────────────────────────
+   WCAG 1.4.12 asks that content survive a reader forcing line-height to 1.5 and
+   paragraph spacing to 2em. The body sits at 1.65 already, so this is not remedial —
+   it is the same request made by someone who wants more air than the sheet's own
+   setting, which is a reading preference no system setting expresses. */
+html.qe-spacing-on {
+  --qe-line: 1.95;
+  --qe-para-gap: 1.9rem;
+  letter-spacing: 0.012em;
+  word-spacing: 0.045em;
+}
+html.qe-spacing-on p,
+html.qe-spacing-on li,
+html.qe-spacing-on dd,
+html.qe-spacing-on blockquote { line-height: var(--qe-line, 1.65); }
+html.qe-spacing-on p + p { margin-top: var(--qe-para-gap, 1.47rem); }
+
+/* ── Forced colours ──────────────────────────────────────────────────────────
+   NOT A SETTING WE OFFER, and it cannot be: forced-colors reports an operating
+   system state — Windows Contrast Themes and its kin — where the browser
+   substitutes the reader's own palette for everything we declared. A page can only
+   respond to it. That is the point of it, and the reason there is no toggle for it
+   in the panel while there is one for contrast.
+
+   Most of this site survives the substitution already, because of decisions taken
+   for other reasons: every control is a real <button> with a real border, and the
+   register's four kinds carry WORDS as well as an accent, so a palette that
+   flattens their colours does not flatten their meaning. What follows repairs the
+   places where the substitution takes away a boundary colour was carrying alone. */
+@media (forced-colors: active) {
+  /* The hover state on a card was a background change and nothing else, so it
+     vanished entirely. An outline is the repair the spec asks for. */
+  a.card:hover,
+  a.card:focus-visible { outline: 2px solid Highlight; outline-offset: 2px; }
+
+  /* Shadows are dropped in this mode. Anything that leaned on one for its edge
+     gets a real border in the reader's own text colour. */
+  .qe-plate img,
+  .card-wrap,
+  .qe-tag { border: 1px solid CanvasText; }
+
+  /* Focus must track the reader's palette, not our rust. */
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible,
+  input:focus-visible,
+  .qe-anchor:focus-visible { outline: 3px solid Highlight; outline-offset: 2px; }
+
+  /* The foxing and the paper tint are decoration that the mode flattens anyway;
+     removing them outright avoids a muddy composite behind text. */
+  body::before { display: none; }
+
+  /* The botanical art is DECORATION, so it is allowed to be forced to the reader's
+     ink. Colour is not information in a drawing of a leaf, and the spec is explicit
+     that forced-color-adjust is for the rare case where the colour IS the
+     information. Nothing here qualifies, so nothing here opts out. */
+
+  /* The reading panel is a box whose edge was a rule token. */
+  .qe-reading-panel { border: 1px solid CanvasText; }
+}
+
 /* ─────────────────────────────────────────────── skip link */
 
 .qe-skip {
@@ -640,6 +760,118 @@ html.plain body::before { display: none; }
   outline-offset: 2px;
 }
 
+/* ── The reading settings panel ───────────────────────────────────────────────
+   A NATIVE <details>, not a menu widget. A custom dropdown needs focus trapping, a
+   roving tabindex, aria-expanded kept in sync and an Escape handler, and getting any
+   of that wrong would make the accessibility panel the least accessible thing on the
+   sheet. <details> ships all of it in the browser. queering.js adds only Escape and
+   click-away, which are conveniences on top of something already working.
+
+   Every word in it is authored in the markup. The script sets checked states and
+   classes; it does not write labels. */
+.qe-reading { position: relative; }
+
+.qe-reading-summary {
+  font-family: var(--qe-body);
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: var(--qe-moss);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--qe-rule);
+  padding: 0.2rem 0.15rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.qe-reading-summary::-webkit-details-marker { display: none; }
+.qe-reading-summary::after {
+  content: "";
+  display: inline-block;
+  width: 0.42em; height: 0.42em;
+  margin-left: 0.45em;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-0.15em) rotate(45deg);
+}
+.qe-reading[open] > .qe-reading-summary::after { transform: translateY(0.1em) rotate(-135deg); }
+.qe-reading-summary:hover { border-bottom-color: var(--qe-moss); }
+.qe-reading-summary:focus-visible { outline: 3px solid var(--qe-rust); outline-offset: 2px; }
+
+.qe-reading-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  z-index: 20;
+  width: 17rem;
+  max-width: calc(100vw - 2rem);
+  text-align: left;
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-radius: var(--qe-corner-b, 2px);
+  box-shadow: 0 2px 0 var(--qe-paper-deep);
+  padding: var(--qe-space-3, 1.47rem);
+}
+.qe-reading-note {
+  margin: 0 0 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--qe-moss);
+}
+.qe-reading-list { margin: 0; padding: 0; list-style: none; }
+.qe-reading-list li + li { margin-top: 0.85rem; }
+
+/* The label is the target, and it is the whole row: a 24px minimum is the floor and
+   a row you can hit anywhere is better than a box you have to find. */
+.qe-reading-list label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 1.6rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--qe-ink);
+  cursor: pointer;
+}
+.qe-reading-list input[type="checkbox"] {
+  flex: none;
+  width: 1.1rem; height: 1.1rem;
+  margin: 0;
+  accent-color: var(--qe-moss);
+  cursor: pointer;
+}
+.qe-reading-list input[type="checkbox"]:focus-visible { outline: 3px solid var(--qe-rust); outline-offset: 2px; }
+.qe-reading-hint {
+  display: block;
+  margin: 0.15rem 0 0 1.65rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--qe-moss);
+}
+
+.qe-reading-reset {
+  margin-top: 1.1rem;
+  font-family: var(--qe-body);
+  font-size: 0.82rem;
+  line-height: 1.3;
+  color: var(--qe-moss);
+  background: transparent;
+  border: 1px solid var(--qe-rule);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+}
+.qe-reading-reset:hover:not([disabled]) { border-color: var(--qe-moss); }
+.qe-reading-reset:focus-visible { outline: 3px solid var(--qe-rust); outline-offset: 2px; }
+/* Disabled rather than hidden: a control that vanishes is a control the reader has
+   to rediscover, and its label explains what the panel does even when nothing is
+   overridden. --qe-moss at 7.8:1 stays legible; this is not greyed out to 3:1. */
+.qe-reading-reset[disabled] { opacity: 1; border-style: dashed; cursor: default; }
+
+/* Plain view keeps the panel; it is not decoration. It only loses the chevron's
+   rotation, which is motion, and that is handled by the motion variables. */
+@media print { .qe-reading { display: none; } }
+
 /* ─────────────────────────────────────────────── layout */
 
 main {
@@ -731,25 +963,77 @@ html.plain .qe-wordmark { font-variation-settings: normal; font-weight: 700; }
 /* Growth, not twinkle: the stems draw themselves on, the leaves and wings open
    after. Gated on prefers-reduced-motion — the reduced state is the finished
    drawing, never a missing one. */
-@media (prefers-reduced-motion: no-preference) {
-  html:not(.plain) .qe-botanical .stem {
-    stroke-dasharray: var(--len, 400);
-    stroke-dashoffset: var(--len, 400);
-    animation: qe-draw 2.2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
-  }
-  /* One animation per sprout GROUP, never per shape. A butterfly is six paths;
-     animating each one separately scales six pieces apart from each other. */
-  html:not(.plain) .qe-botanical .sprout {
-    opacity: 0;
-    animation: qe-unfurl 0.9s ease-out forwards;
-    animation-delay: calc(0.55s + var(--i, 0) * 0.075s);
-    transform-box: fill-box;
-    transform-origin: center;
-  }
-  /* A leaf opens from where it meets the stem, not from its own middle. Its base
-     is the left edge of its own box, because that is where the path starts. */
-  html:not(.plain) .qe-botanical .sprout-leaf { transform-origin: 0 50%; }
+/* MOTION IS OFF UNTIL SOMETHING TURNS IT ON, and that inversion is the whole trick.
+   The declarations below name `none` and a finished opacity by default, so a reader
+   with no CSS variables, no JavaScript, or a system asking to reduce motion gets the
+   FINISHED DRAWING and never a missing one — which is the rule this file has always
+   had, now expressed as a default rather than as a media query wrapping every rule.
+
+   Two things then switch it on, and only two:
+     · the system says it is fine AND the reader has not overridden it, or
+     · the reader asked for motion, from /the reading settings, on a system that asks
+       to reduce it.
+   The second exists because a system setting is a blunt instrument set once, months
+   ago, in a menu most people have never opened — and because needs change during a
+   day. Default to the system; allow the reader to say otherwise in the moment.
+
+   THE TIMINGS ARE WRITTEN ONCE, in --qe-anim-*, and the two blocks below only MAP
+   them. A duplicated cubic-bezier is a drift waiting to happen; a duplicated mapping
+   is three lines that either work or obviously do not. */
+:root {
+  --qe-anim-draw: qe-draw 2.2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  --qe-anim-unfurl: qe-unfurl 0.9s ease-out forwards;
+  --qe-anim-stamp: qe-stamp-press 0.5s var(--qe-ease, ease-out) both;
+
+  --qe-draw: none;
+  --qe-unfurl: none;
+  --qe-stamp-anim: none;
+  --qe-sprout-start: 1;        /* the finished drawing */
+  --qe-rail-fade: none;
 }
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.qe-motion-off) {
+    --qe-draw: var(--qe-anim-draw);
+    --qe-unfurl: var(--qe-anim-unfurl);
+    --qe-stamp-anim: var(--qe-anim-stamp);
+    --qe-sprout-start: 0;
+    --qe-rail-fade: opacity 0.14s ease-out;
+  }
+}
+html.qe-motion-on {
+  --qe-draw: var(--qe-anim-draw);
+  --qe-unfurl: var(--qe-anim-unfurl);
+  --qe-stamp-anim: var(--qe-anim-stamp);
+  --qe-sprout-start: 0;
+  --qe-rail-fade: opacity 0.14s ease-out;
+}
+/* Plain view still strips motion along with everything else decorative. */
+html.plain { --qe-draw: none; --qe-unfurl: none; --qe-stamp-anim: none; --qe-sprout-start: 1; }
+
+.qe-botanical .stem {
+  stroke-dasharray: var(--len, 400);
+  stroke-dashoffset: var(--len, 400);
+  animation: var(--qe-draw, none);
+}
+/* With no animation the dash offset would hide the stem entirely, so the static
+   state has to put it back. This is the one place the inversion needs a hand. */
+html.plain .qe-botanical .stem,
+html.qe-motion-off .qe-botanical .stem { stroke-dashoffset: 0; }
+@media (prefers-reduced-motion: reduce) {
+  html:not(.qe-motion-on) .qe-botanical .stem { stroke-dashoffset: 0; }
+}
+/* One animation per sprout GROUP, never per shape. A butterfly is six paths;
+   animating each one separately scales six pieces apart from each other. */
+.qe-botanical .sprout {
+  opacity: var(--qe-sprout-start, 1);
+  animation: var(--qe-unfurl, none);
+  animation-delay: calc(0.55s + var(--i, 0) * 0.075s);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+/* A leaf opens from where it meets the stem, not from its own middle. Its base
+   is the left edge of its own box, because that is where the path starts. */
+.qe-botanical .sprout-leaf { transform-origin: 0 50%; }
 
 @keyframes qe-draw { to { stroke-dashoffset: 0; } }
 @keyframes qe-unfurl {
@@ -3193,16 +3477,13 @@ html.plain .qe-stamp-date {
   margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  /* The impression lands. It is a press, not a growth, so it is the one motion here
-     that is not a stem drawing itself on — and like every other, the reduced state
-     is the finished mark and never a missing one. */
-  .qe-stamp { animation: qe-stamp-press 0.5s var(--qe-ease, ease-out) both; }
-  @keyframes qe-stamp-press {
-    from { transform: rotate(var(--qe-stamp-rot)) scale(1.08); opacity: 0; }
-    to   { transform: rotate(var(--qe-stamp-rot)) scale(1); opacity: 1; }
-  }
-  html.plain .qe-stamp { animation: none; }
+/* The impression lands. It is a press, not a growth, so it is the one motion here
+   that is not a stem drawing itself on — and like every other, the reduced state
+   is the finished mark and never a missing one. */
+.qe-stamp { animation: var(--qe-stamp-anim, none); }
+@keyframes qe-stamp-press {
+  from { transform: rotate(var(--qe-stamp-rot)) scale(1.08); opacity: 0; }
+  to   { transform: rotate(var(--qe-stamp-rot)) scale(1); opacity: 1; }
 }
 
 @media print {
@@ -3562,10 +3843,8 @@ html.plain .qe-rail li::before { transform: none; }
 .qe-rail:focus-within li::before,
 .qe-rail.qe-rail-open li::before { opacity: 0; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .qe-rail a,
-  .qe-rail li::before { transition: opacity 0.14s ease-out; }
-}
+.qe-rail a,
+.qe-rail li::before { transition: var(--qe-rail-fade, none); }
 
 /* A pointer that cannot hover can never bring the rail up, so it never goes down.
    Plain view is the same argument from the other side: it is the view that switches

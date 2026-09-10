@@ -262,11 +262,66 @@ the argument, and it lives **entirely in CSS**, layered over ordinary semantic H
 - **Two copies of the same words drift, and the accessible one is always the copy that
   rots.** That is the whole reason for this rule.
 
+### Default to the device; let the reader say otherwise in the moment
+
+`/the reading settings` — the **Reading** disclosure beside the two view controls —
+carries **Reduce motion**, **More contrast** and **Looser lines**. Added 2026-09-10.
+
+**The argument for it, since it cuts against "just respect the system":** implementing
+`prefers-reduced-motion` and `prefers-contrast` perfectly still only reaches readers who
+know those switches exist, and most have never opened that menu. A setting chosen once,
+months ago, also cannot know that today is a bad day. **Accessibility needs are dynamic.**
+So the media query is the default and the panel is the override.
+
+**The stored value is three-state, and that is the part to get right.** Absent means
+*follow the device* — not *off*. Only an explicit `on`/`off` overrides, which is what lets
+*Follow my device again* hand a reader back rather than freezing today's answer forever.
+The class is written **only** for an override, so with nothing stored the stylesheet's own
+media query decides and the no-JavaScript answer and the JavaScript answer are the same.
+
+**Every reading setting must be additive** — more contrast, more space, less motion.
+Nothing here may *lower* a ratio, because `check-contrast.mjs` measures the two grounds
+and cannot see a class it was never told about. A setting that could reduce contrast needs
+the gate taught about it first.
+
+**A new key must be named on `/privacy`.** `check-metadata.mjs` finds them two ways —
+literal `getItem('qe-x')` calls and the `html.qe-x-on`/`-off` classes in the stylesheet —
+because the reading settings build their keys from a table and appear as no literal at all.
+The policy is a binding statement; a key it does not list is a key it is wrong about.
+
+**It is a native `<details>`, and it must stay one.** A hand-built menu needs focus
+trapping, a roving tabindex, `aria-expanded` kept in sync and an Escape handler, and
+getting any of it wrong would make the accessibility panel the least accessible thing on
+the sheet. Escape and click-away are the only additions, and both are conveniences over
+something that already works.
+
+**`forced-colors` is NOT in the panel and cannot be.** It reports an operating-system
+state — the browser substituting the reader's own palette for everything we declared — and
+a page can only respond to it. That is the point of it. `@media (forced-colors: active)`
+repairs the places the substitution takes a boundary away: the card hover, which was a
+background change and nothing else; the edges that leaned on a `box-shadow`; and focus,
+which must track `Highlight` rather than our rust. The botanical art is *allowed* to be
+forced — colour is not information in a drawing of a leaf.
+
 ### Motion is growth, and it is gated
 
-Botanical art draws itself on — stems first, then leaves and wings unfurling. All of it sits
-inside `@media (prefers-reduced-motion: no-preference)`, so the reduced state is the
-**finished drawing**, never a missing one. Never put an `opacity: 0` outside that query.
+Botanical art draws itself on — stems first, then leaves and wings unfurling. The reduced
+state is the **finished drawing**, never a missing one.
+
+**The gating inverted on 2026-09-10 and the rule survived the change.** It used to be that
+every animation lived inside `@media (prefers-reduced-motion: no-preference)`. That cannot
+express *the reader asked for motion on a device that asks to reduce it*, which the reading
+settings need. So motion is now **off by default** — `--qe-draw`, `--qe-unfurl`,
+`--qe-stamp-anim` are `none` and `--qe-sprout-start` is `1` in `:root` — and exactly two
+things switch it on: the media query, and `html.qe-motion-on`. **The timings live once in
+`--qe-anim-*`; the two blocks only map them**, so a cubic-bezier cannot drift between them.
+
+The rule that replaced "never put an `opacity: 0` outside that query" is stronger and says
+why: **the default must be the finished drawing.** A reader with no CSS variables, no
+JavaScript, or a device asking for reduced motion gets a complete drawing because that is
+what `:root` says, not because a query wrapped the rules. One place needs a hand: an
+un-animated stem would stay hidden behind its own `stroke-dashoffset`, so the static state
+puts it back to `0`.
 
 One trap, already paid for: **a CSS `transform` animation overrides an SVG `transform`
 attribute on the same element.** Positioning goes on an outer `<g>`, the animation on an

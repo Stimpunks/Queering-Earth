@@ -34,7 +34,41 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Label corrected
 - Cabinet
 
-2026 · 9 September · latest
+2026 · 10 September · latest
+
+## The device decides, and the reader may say otherwise: three reading settings, and a motion rule that had to be turned inside out to allow the second answer
+
+Prompted by Ryan asking whether the site supported forced colours and whether the accessibility settings buried in system menus could be surfaced on the page. **The answer to the first was no** — not one `@media (forced-colors: active)` anywhere — and it was outside the audit’s stated scope rather than missed by it, which is the one time a scope caveat has actually earned its keep here. The answer to the second was an argument, and the argument was lost: “respect the system setting” only reaches the readers who know the system setting exists. **Default to the device; allow configuration in the moment.**
+
+MountedReduce motion, more contrast and looser lines, each starting from what the device already asks for
+
+**The case against putting these on the page is a good one, and it is wrong here.** A site reimplementing a setting the operating system already has only helps the readers who find the widget, and it shifts the work of configuring accessibility onto the person who needs it. That argument is why *plain view* was defensible and a settings menu was not: plain view turns off *this sheet’s* wonk and rotation and display faces, which no system setting could know about.
+
+What it misses is that **most people have never opened that menu.** Implementing `prefers-reduced-motion` perfectly still only catches the readers who have already been to System Settings and found the switch. And a preference set once, months ago, cannot know that today is a migraine day — **access needs move during a day**, which is not a subtlety for a site made by two Disabled people. So the media query is the default and the panel is the override, in that order.
+
+**The stored value is three-state, and that is the whole design.** Absent does not mean *off*; it means *follow the device*. Only an explicit `on` or `off` writes a class, so with nothing stored the stylesheet’s own media query decides and the answer without JavaScript is the same answer as with it. *Follow my device again* removes all three keys and hands the reader back to their own machine, rather than freezing today’s answer as though it were permanent.
+
+**Reduce motion is deliberately not plain view.** Ryan’s point, and he is right: you might want the motion gone and want to keep the display faces, the wonk and the leaning slips. They were one control because motion was one of the things decoration happened to include, not because they are one preference.
+
+It is a native `<details>`, and it must stay one. A hand-built menu needs focus trapping, a roving tabindex, `aria-expanded` kept in sync and an Escape handler, and getting any of that wrong would make **the accessibility panel the least accessible thing on the sheet.** The browser ships all of it. Escape and click-away are the only additions and both are conveniences over something already working. Every word in it is authored in the markup; the script sets checked states and classes and writes nothing.
+
+Re-determinedMotion is off by default now, and the rule that guarded it came out of the change stronger than it went in
+
+Every animation on this site lived inside `@media (prefers-reduced-motion: no-preference)`, and the rule beside it read: “the reduced state is the finished drawing, never a missing one. Never put an `opacity: 0` outside that query.” That structure is correct and it **cannot express the second answer** — a reader who asked for motion on a device that asks to reduce it. There is no way to add a class to a media query.
+
+So the gating inverted. **Motion is now off in `:root`**: `--qe-draw` and its siblings are `none`, `--qe-sprout-start` is `1`, and exactly two things switch them on — the media query, and `html.qe-motion-on`. The timings are written once in `--qe-anim-\*` and the two blocks only *map* them, because a duplicated cubic-bezier is a drift waiting to happen and a duplicated mapping is three lines that either work or obviously do not.
+
+**The rule that replaced the old one is stronger, and it says why rather than what.** Not “never put an `opacity: 0` outside that query” but **the default must be the finished drawing** — so a reader with no CSS variables, no JavaScript, or a device asking for less motion gets a complete drawing because that is what `:root` says, not because a query happened to wrap the rules. One place needed a hand: an un-animated stem would have stayed invisible behind its own `stroke-dashoffset`, so the static state puts it back to zero. Verified in the browser in both directions, and the reduced state reports `animation: none` with `stroke-dashoffset: 0px`.
+
+CabinetForced colours, which is the one setting here that is not ours to offer — and a gate that makes /privacy name every key the site keeps
+
+**There is no toggle for forced colours and there cannot be.** It reports an operating-system state — Windows Contrast Themes and its kin substituting the reader’s own palette for everything we declared — and a page can only respond to it. That is the point of the feature: the reader’s choice outranks the site’s. It sits beside *More contrast* in the panel as the thing the panel deliberately does not contain.
+
+Most of this sheet survived the substitution already, on decisions taken for other reasons: every control is a real `<button>` with a real border, and **the register’s four kinds carry words as well as an accent**, so a palette that flattens their colours does not flatten their meaning. The rule that put the colour on the rule and never on the glyph paid a debt it was not taken out for. What needed repair was the card hover, which was a background change and nothing else and therefore vanished outright; the edges that leaned on a `box-shadow`; and focus, which now tracks `Highlight` rather than our rust. The botanical art is *allowed* to be forced — colour is not information in a drawing of a leaf, and the spec reserves opting out for the case where the colour *is* the information.
+
+**Three new keys meant `/privacy` was one edit away from being wrong about its own site**, which is the failure this register exists for. So the policy names them, and a gate now enforces that it always will: every `qe-\*` key the site reads or writes must appear on that page. It finds them two ways, because one is not enough — literal `getItem` calls, and the `html.qe-\*-on` classes in the stylesheet, since the reading settings build their keys from a table and appear as no string literal anywhere. Proved by adding an undocumented setting and watching it be named in the failure. It is the sibling of the third-party-origin check mounted yesterday: **not forbidden, named.**
+
+2026 · 9 September
 
 ## The manifesto, adapted under its own licence — and a tightened quotation found on our own foundation’s page while sourcing it
 

@@ -7,7 +7,16 @@
     <description>Every sheet as it was mounted, every plate that came off again, and every label we corrected. Generated from the register itself by tools/make-markdown.mjs.</description>
     <language>en</language>
     <copyright>CC BY-SA 4.0</copyright>
-    <lastBuildDate>Wed, 09 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>The device decides, and the reader may say otherwise: three reading settings, and a motion rule that had to be turned inside out to allow the second answer</title>
+      <link>https://queering.earth/changelog#a-2026-09-10-reading</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-10-reading</guid>
+      <pubDate>Thu, 10 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: Reduce motion, more contrast and looser lines, each starting from what the device already asks for
+Re-determined: Motion is off by default now, and the rule that guarded it came out of the change stronger than it went in
+Cabinet: Forced colours, which is the one setting here that is not ours to offer — and a gate that makes /privacy name every key the site keeps</description>
+    </item>
     <item>
       <title>The manifesto, adapted under its own licence — and a tightened quotation found on our own foundation’s page while sourcing it</title>
       <link>https://queering.earth/changelog#a-2026-09-09-manifesto</link>

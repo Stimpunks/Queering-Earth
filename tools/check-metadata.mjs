@@ -48,7 +48,15 @@
  *    failed: the pages pulled two typefaces from Google's font CDN, disclosing every
  *    reader's IP and user agent before a word was read. Anchor hrefs are exempt — a
  *    link the reader chooses to follow is not a request the page made.
- * 8. FONTS — every self-hosted face exists, still hashes to what it was downloaded as,
+ * 8. STORAGE — every `qe-*` key this site reads or writes must be named on /privacy.
+ *    The policy lists what the browser keeps, and that list is a copy of a fact about
+ *    the code, so it goes stale the moment a feature adds a key. This is the sibling
+ *    of the third-party-origin check: not forbidden, NAMED. Keys are gathered two
+ *    ways, because one is not enough — literal `getItem('qe-x')` calls, and the
+ *    `html.qe-x-on` / `qe-x-off` override classes in the stylesheet, which is how the
+ *    reading settings are found at all: they build their key as `'qe-' + row.key`
+ *    from a table, so a scan for string literals alone would miss all three.
+ * 9. FONTS — every self-hosted face exists, still hashes to what it was downloaded as,
  *    and is referenced by the generated @font-face block. A missing woff2 falls back to
  *    a system serif silently, which is a typographic regression nobody would notice in
  *    a diff.
@@ -185,6 +193,7 @@ for (const f of files) {
 
 /* ── 6. the plates ────────────────────────────────────────────────────────────── */
 let plateCount = 0;
+let storageKeys = 0;
 try {
   const manifest = JSON.parse(await readFile(join(ROOT, 'tools', 'plate-variants.json'), 'utf8'));
 
@@ -310,9 +319,38 @@ try {
   fail('fonts', `cannot verify the self-hosted faces: ${e.message}`);
 }
 
+/* ── 8. every storage key is named on /privacy ─────────────────────────────── */
+try {
+  const policy = await readFile(join(ROOT, 'privacy.html'), 'utf8');
+  const keys = new Set();
+
+  // (a) literal reads and writes, anywhere a script lives.
+  const scripts = [await readFile(join(ROOT, 'queering.js'), 'utf8').catch(() => '')];
+  for (const f of await readdir(ROOT))
+    if (f.endsWith('.js') && f !== 'queering.js')
+      scripts.push(await readFile(join(ROOT, f), 'utf8'));
+  for (const f of files) scripts.push(await readFile(join(ROOT, f), 'utf8'));
+  for (const src of scripts)
+    for (const m of src.matchAll(/(?:get|set|remove)Item\(\s*['"](qe-[a-z-]+)['"]/g))
+      keys.add(m[1]);
+
+  // (b) the override classes, which are the authoritative record of the reading
+  //     settings — their keys are assembled at runtime and never appear as literals.
+  const sheet = await readFile(join(ROOT, 'queering.css'), 'utf8');
+  for (const m of sheet.matchAll(/html\.(qe-[a-z]+)-(?:on|off)\b/g)) keys.add(m[1]);
+
+  for (const key of [...keys].sort())
+    if (!policy.includes(`<code>${key}</code>`))
+      fail('storage', `${key} is read or written by this site and is not named on /privacy — ` +
+        `the policy is a binding statement, and a key it does not list is a key it is wrong about`);
+  storageKeys = keys.size;
+} catch (e) {
+  fail('storage', `cannot verify the storage keys against /privacy: ${e.message}`);
+}
+
 /* ── report ────────────────────────────────────────────────────────────────────── */
 const line = (l, v) => console.log(`  ${l.padEnd(42)} ${v}`);
-console.log(`\n  ${files.length} page(s) · ${GENERATED.length} generated file(s) · ${plateCount} plate figure(s)\n`);
+console.log(`\n  ${files.length} page(s) · ${GENERATED.length} generated file(s) · ${plateCount} plate figure(s) · ${storageKeys} storage key(s)\n`);
 for (const [kind, label] of [
   ['stale', 'generated files out of date'],
   ['digest', 'Agent Skill digest problems'],
@@ -322,6 +360,7 @@ for (const [kind, label] of [
   ['plates', 'plate encoding or markup problems'],
   ['thirdparty', 'third-party requests'],
   ['fonts', 'self-hosted face problems'],
+  ['storage', 'storage keys not named on /privacy'],
 ]) {
   const hits = problems.filter((p) => p.kind === kind);
   line(label, hits.length ? `${hits.length}` : 'none');

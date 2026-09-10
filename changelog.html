@@ -43,7 +43,7 @@
      either one would flash the wrong page: the decorated page at someone who
      turned it off, or the daylight sheet at someone who asked for the cabinet.
      With no stored ground, neither class is set and the media query decides. -->
-<script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);['motion','contrast','spacing'].forEach(function(k){var v=L.getItem('qe-'+k);if(v==='on'||v==='off')d.classList.add('qe-'+k+'-'+v)})}catch(e){}</script>
 <!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
      rel=alternate points an agent at this page's Markdown source, derived from this
      page's own main landmark by tools/make-markdown.mjs.
@@ -103,6 +103,27 @@
   <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
   <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
   <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+  <details class="qe-reading">
+    <summary class="qe-reading-summary">Reading</summary>
+    <div class="qe-reading-panel">
+      <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
+      <ul class="qe-reading-list">
+        <li>
+          <label><input type="checkbox" id="qe-set-motion"> <span>Reduce motion</span></label>
+          <span class="qe-reading-hint">The drawings appear finished instead of drawing themselves on.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-contrast"> <span>More contrast</span></label>
+          <span class="qe-reading-hint">Darker ink, firmer rules, and the foxing lifted off the paper.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
+          <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+      </ul>
+      <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
 </div>
 
 <main id="main" tabindex="-1">
@@ -202,8 +223,45 @@
        stale because nothing about it is a copy of anything. It needs no script either,
        which a derived href would have. -->
   <div class="qe-register" id="latest">
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-10-reading">
+      <p class="qe-accession-date">2026 &middot; 10 September &middot; latest</p>
+      <h2 id="a-2026-09-10-reading">The device decides, and the reader may say otherwise: three reading settings, and a motion rule that had to be turned inside out to allow the second answer <a class="qe-anchor" href="#a-2026-09-10-reading"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Prompted by Ryan asking whether the site supported forced colours and whether the accessibility settings buried in system menus could be surfaced on the page. <strong>The answer to the first was no</strong> &mdash; not one <code>@media (forced-colors: active)</code> anywhere &mdash; and it was outside the audit&rsquo;s stated scope rather than missed by it, which is the one time a scope caveat has actually earned its keep here. The answer to the second was an argument, and the argument was lost: <q>respect the system setting</q> only reaches the readers who know the system setting exists. <strong>Default to the device; allow configuration in the moment.</strong></p>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">Reduce motion, more contrast and looser lines, each starting from what the device already asks for</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The case against putting these on the page is a good one, and it is wrong here.</strong> A site reimplementing a setting the operating system already has only helps the readers who find the widget, and it shifts the work of configuring accessibility onto the person who needs it. That argument is why <em>plain view</em> was defensible and a settings menu was not: plain view turns off <em>this sheet&rsquo;s</em> wonk and rotation and display faces, which no system setting could know about.</p>
+          <p>What it misses is that <strong>most people have never opened that menu.</strong> Implementing <code>prefers-reduced-motion</code> perfectly still only catches the readers who have already been to System Settings and found the switch. And a preference set once, months ago, cannot know that today is a migraine day &mdash; <strong>access needs move during a day</strong>, which is not a subtlety for a site made by two Disabled people. So the media query is the default and the panel is the override, in that order.</p>
+          <p><strong>The stored value is three-state, and that is the whole design.</strong> Absent does not mean <em>off</em>; it means <em>follow the device</em>. Only an explicit <code>on</code> or <code>off</code> writes a class, so with nothing stored the stylesheet&rsquo;s own media query decides and the answer without JavaScript is the same answer as with it. <em>Follow my device again</em> removes all three keys and hands the reader back to their own machine, rather than freezing today&rsquo;s answer as though it were permanent.</p>
+          <p><strong>Reduce motion is deliberately not plain view.</strong> Ryan&rsquo;s point, and he is right: you might want the motion gone and want to keep the display faces, the wonk and the leaning slips. They were one control because motion was one of the things decoration happened to include, not because they are one preference.</p>
+          <p>It is a native <code>&lt;details&gt;</code>, and it must stay one. A hand-built menu needs focus trapping, a roving tabindex, <code>aria-expanded</code> kept in sync and an Escape handler, and getting any of that wrong would make <strong>the accessibility panel the least accessible thing on the sheet.</strong> The browser ships all of it. Escape and click-away are the only additions and both are conveniences over something already working. Every word in it is authored in the markup; the script sets checked states and classes and writes nothing.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--redet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--redet">Re-determined</span><span class="qe-entry-name">Motion is off by default now, and the rule that guarded it came out of the change stronger than it went in</span></div>
+        <div class="qe-entry-body">
+          <p>Every animation on this site lived inside <code>@media (prefers-reduced-motion: no-preference)</code>, and the rule beside it read: <q>the reduced state is the finished drawing, never a missing one. Never put an <code>opacity: 0</code> outside that query.</q> That structure is correct and it <strong>cannot express the second answer</strong> &mdash; a reader who asked for motion on a device that asks to reduce it. There is no way to add a class to a media query.</p>
+          <p>So the gating inverted. <strong>Motion is now off in <code>:root</code></strong>: <code>--qe-draw</code> and its siblings are <code>none</code>, <code>--qe-sprout-start</code> is <code>1</code>, and exactly two things switch them on &mdash; the media query, and <code>html.qe-motion-on</code>. The timings are written once in <code>--qe-anim-*</code> and the two blocks only <em>map</em> them, because a duplicated cubic-bezier is a drift waiting to happen and a duplicated mapping is three lines that either work or obviously do not.</p>
+          <p><strong>The rule that replaced the old one is stronger, and it says why rather than what.</strong> Not <q>never put an <code>opacity: 0</code> outside that query</q> but <strong>the default must be the finished drawing</strong> &mdash; so a reader with no CSS variables, no JavaScript, or a device asking for less motion gets a complete drawing because that is what <code>:root</code> says, not because a query happened to wrap the rules. One place needed a hand: an un-animated stem would have stayed invisible behind its own <code>stroke-dashoffset</code>, so the static state puts it back to zero. Verified in the browser in both directions, and the reduced state reports <code>animation: none</code> with <code>stroke-dashoffset: 0px</code>.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Forced colours, which is the one setting here that is not ours to offer &mdash; and a gate that makes /privacy name every key the site keeps</span></div>
+        <div class="qe-entry-body">
+          <p><strong>There is no toggle for forced colours and there cannot be.</strong> It reports an operating-system state &mdash; Windows Contrast Themes and its kin substituting the reader&rsquo;s own palette for everything we declared &mdash; and a page can only respond to it. That is the point of the feature: the reader&rsquo;s choice outranks the site&rsquo;s. It sits beside <em>More contrast</em> in the panel as the thing the panel deliberately does not contain.</p>
+          <p>Most of this sheet survived the substitution already, on decisions taken for other reasons: every control is a real <code>&lt;button&gt;</code> with a real border, and <strong>the register&rsquo;s four kinds carry words as well as an accent</strong>, so a palette that flattens their colours does not flatten their meaning. The rule that put the colour on the rule and never on the glyph paid a debt it was not taken out for. What needed repair was the card hover, which was a background change and nothing else and therefore vanished outright; the edges that leaned on a <code>box-shadow</code>; and focus, which now tracks <code>Highlight</code> rather than our rust. The botanical art is <em>allowed</em> to be forced &mdash; colour is not information in a drawing of a leaf, and the spec reserves opting out for the case where the colour <em>is</em> the information.</p>
+          <p><strong>Three new keys meant <code>/privacy</code> was one edit away from being wrong about its own site</strong>, which is the failure this register exists for. So the policy names them, and a gate now enforces that it always will: every <code>qe-*</code> key the site reads or writes must appear on that page. It finds them two ways, because one is not enough &mdash; literal <code>getItem</code> calls, and the <code>html.qe-*-on</code> classes in the stylesheet, since the reading settings build their keys from a table and appear as no string literal anywhere. Proved by adding an undocumented setting and watching it be named in the failure. It is the sibling of the third-party-origin check mounted yesterday: <strong>not forbidden, named.</strong></p>
+        </div>
+      </div>
+    </section>
+
     <section class="qe-accession" aria-labelledby="a-2026-09-09-manifesto">
-      <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <p class="qe-accession-date">2026 &middot; 9 September</p>
       <h2 id="a-2026-09-09-manifesto">The manifesto, adapted under its own licence &mdash; and a tightened quotation found on our own foundation&rsquo;s page while sourcing it <a class="qe-anchor" href="#a-2026-09-09-manifesto"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">The founding papers had one page in them. <a href="/manifesto">The second</a> is the argument the aims rest on, adapted from the <a href="https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/">Neuroqueer Learning Spaces Manifesto</a> &mdash; a nine-author community document under CC BY-SA 4.0, initiated by the two people who make this site. <strong>Sourcing one quotation for it turned up a drift in our own house.</strong></p>
