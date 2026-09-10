@@ -31,7 +31,7 @@ The set is not ours. Violet, pansy, green carnation, and lavender are assembled 
 
 What this sheet quotes, and what it does not
 
-Every quotation below was read in the work it comes from and is logged in the site’s [attribution ledger](https://github.com/Stimpunks/Queering-Earth/blob/main/ATTRIBUTIONS.md) with the date and the copy. Where a claim belongs to a scholar and we have not read the primary, the claim is named as theirs and not repeated as ours. **There is more history here than this sheet asserts**, and the gap is deliberate.
+Every quotation below was read in the work it comes from and is logged in the site’s [attribution ledger](https://queering.earth/ledger) with the date and the copy. Where a claim belongs to a scholar and we have not read the primary, the claim is named as theirs and not repeated as ours. **There is more history here than this sheet asserts**, and the gap is deliberate.
 
 ## The violet, which was a description before it was a code
 

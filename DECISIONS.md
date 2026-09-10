@@ -244,6 +244,66 @@ the one closest to the bar — a class with no rule renders black and no gate he
 it, and it happened twice in one afternoon — but unlike this one it needs a browser,
 because it wants the real cascade.
 
+### The ledger and the decision log became pages, generated backwards (2026-09-09)
+
+`/mission` aim 12 claims the site works in public with the working-out left in, and
+pointed at two files on GitHub because they were reachable no other way. **An aim whose
+receipt is on somebody else's website is the thinnest receipt on that page.** So
+`ATTRIBUTIONS.md` is now `/ledger` and `DECISIONS.md` is now `/what-is-settled`.
+
+**Generated, not transcribed, and the direction is inverted on purpose.** Every other
+generator reads a page's landmark and writes the Markdown beside it. `make-records.mjs`
+reads the Markdown and writes the page body between markers, because these two are
+working documents: the `credit-source` skill appends to one, every session that settles
+something appends to the other. Making the page the source would mean editing a ledger
+entry in HTML — which is how a ledger stops being kept. Either direction is fine. Two
+hand-kept copies is the thing this house is organised against.
+
+**THE SLUGS ARE A FILESYSTEM FACT, NOT A PREFERENCE.** macOS is case-insensitive by
+default. `/decisions` is `decisions.html`; `make-markdown.mjs` writes `<name>.md` beside
+every page; `decisions.md` **is** `DECISIONS.md`. The generator would have silently
+overwritten its own source with a round-tripped copy of itself, on the first run, with
+git as the only way back. `attributions.md` collides identically. Checked with a temp
+directory before a line was written. `/ledger` is the site's own name for that file in
+every footer it appears in; `/what-is-settled` is the other file's own opening line.
+
+**The proof was wrong more often than the converter, which is the interesting part.**
+The tool compares each block's words against the rendered text before writing. It fired
+five times: once on a real fault — `**The lower-case *g* is kept**`, emphasis nested
+inside emphasis, where the inner pair is a letter being quoted and the first pass
+refused the nesting rather than reading it — and **four times on the proof itself**,
+which was stripping a list bullet, a table's pipes, the underscores out of
+`Photon Pulse_he_him` (a study participant's pseudonym the converter was right to keep),
+and the `{#anchor}` out of a pinned heading. **A guard that cries wolf gets relaxed**,
+so the proof was rewritten to model the converter rather than approximate it.
+
+**Heading ids are slugged, against the house rule, with an escape hatch.** The rule is
+that an id is authored because a slug dies when the heading is reworded. It cannot be
+met by a generator over ~120 entry headings with nowhere in Markdown to author one. So
+`### Title {#anchor}` is honoured where written and a slug is used where it is not — one
+line to pin an address somebody has actually shared, no schema. Two headings that slug
+alike stop the run naming both, because `check-markup.mjs` would report the duplicate id
+as a symptom on a generated file while only this tool knows the two titles.
+
+**Both walkers learned `pre` the same afternoon**, and the Markdown one needed more than
+the tag: its text handler collapses whitespace and escapes punctuation, which is right
+everywhere except inside a fence — the first output put a shell command and its
+continuation on one line with backslashes through the quoting. The search walker indexes
+the block rather than skipping it; a command in the decision log is content.
+
+**The search index roughly doubled and that is stated rather than hidden**, in the
+register and here: 154 KB gzipped to 249 KB. It is fetched after render with
+`max-age=0`, so an unchanged index is a 304 and no bytes move — the cost is paid when it
+changes, not per visit. Both records were indexed rather than only the ledger, because a
+decision nobody can search is close to a decision nobody published. **`/search`'s lede
+moved in the same commit**, for the third time a page that binds us has had to.
+
+**Still open:** neither page has an index of its own entries. `/ledger` runs to 55 of
+them under two headings, so `.qe-contents` — which derives from `h2`s — would show two
+useless lines. The register solved the same problem with `.qe-sheet-index` as back
+matter, and that is the shape to copy when somebody wants it. Not built rather than
+half-built.
+
 ### The cabinet's own pages came out of the footer (2026-09-09)
 
 `/design`, `/changelog`, `/search` and `/privacy` were reachable only from the footer of

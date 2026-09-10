@@ -99,7 +99,13 @@ const SKIP_CLASS = new Set(['qe-anchor', 'qe-sr', 'qe-contents', 'qe-sheet-index
 const BLOCK = new Set(['p', 'div', 'section', 'header', 'footer', 'article', 'aside',
   'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'dl', 'dt', 'dd',
   'blockquote', 'figure', 'figcaption', 'table', 'thead', 'tbody', 'tfoot',
-  'tr', 'th', 'td', 'caption', 'nav', 'hr', 'br', 'img', 'main', 'picture', 'source']);
+  'tr', 'th', 'td', 'caption', 'nav', 'hr', 'br', 'img', 'main', 'picture', 'source',
+  /* INDEXED, NOT SKIPPED. /what-is-settled carries a shell block, and a searcher
+     looking for `netlify` or a hook name should find the page that runs it. The
+     alternative was the skip list, which would have been the quieter choice and the
+     wrong one: a command in the decision log is content, and this is the file that
+     refuses to let a copy say less than its page. */
+  'pre']);
 
 /* Inline elements this prose actually uses. Unknown tags THROW, for make-markdown's
  * reason: a converter that silently drops an element is how a derived copy comes to

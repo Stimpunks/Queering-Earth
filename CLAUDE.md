@@ -355,6 +355,29 @@ tightened source `ATTRIBUTIONS.md` exists to prevent, one per result. **A retrac
 attribution is not indexed** — only the restored half of a `del`/`ins` pair — because
 plain text cannot say *this is the reading we got wrong*.
 
+**`tools/make-records.mjs` runs the other way, and that is the design.** Every other
+generator here reads a page and writes Markdown beside it. This one reads
+`ATTRIBUTIONS.md` and `DECISIONS.md` and writes the bodies of **`/ledger`** and
+**`/what-is-settled`** between markers, because those two are working documents — the
+`credit-source` skill appends to the ledger, every session that settles something
+appends to the other, and making the page the source would mean editing a ledger entry
+in HTML, which is how a ledger stops being kept. Either direction is fine; two
+hand-kept copies is not. It throws on a line it cannot classify and then **proves no
+block was dropped**, comparing words with the whitespace removed.
+
+**THE ADDRESSES ARE NOT `/attributions` AND `/decisions`, AND THAT IS A FILESYSTEM FACT.**
+macOS is case-insensitive: `/decisions` would be `decisions.html`, `make-markdown.mjs`
+writes a `.md` beside every page, and `decisions.md` **is** `DECISIONS.md`. The
+generator would have overwritten its own source with a round-tripped copy, silently, on
+the first run. Verified with a temp directory before anything was written. **Check this
+before adding any page whose slug matches a repo-root file.**
+
+**Run the generators in order: `make-records` → `make-search-index` → `make-markdown`.**
+The record pages are an input to the other two, and `search.html`'s manifest is an input
+to its own `.md`. `check-metadata.mjs` checks them in that order for the same reason —
+otherwise a stale record page reports as a stale `.md`, which is the symptom and points
+at the wrong tool.
+
 **`tools/html.mjs` and `tools/pages.mjs` are shared, and that is the point of them.**
 The entity table is case-sensitive because the sheets quote Old English, so a second
 copy is a letter one generator learns and the other does not; the page order is
@@ -713,6 +736,12 @@ anything that needs fixing there in `DECISIONS.md` instead.
 
 Run before shipping. All eight are browser-free or Chrome-only; nothing needs `npm install`,
 and the default path of every one of them is offline.
+
+Regenerate first, in this order — `check-metadata.mjs` fails on any of them being stale:
+
+```bash
+node tools/make-records.mjs && node tools/make-search-index.mjs && node tools/make-markdown.mjs
+```
 
 ```bash
 node tools/check-markup.mjs             # parser-rewriting markup, duplicate ids, exactly one <main>

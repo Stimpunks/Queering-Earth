@@ -219,7 +219,7 @@ Two rules govern them, and the second one has teeth.
 
 A sheet has a label rather than a byline, and the difference is the point. **Maker** is whoever made the specimen — Woolf, Rossetti, Helen Edgar. **Read by** is whoever did the reading and is answerable for what the sheet says about it. Those are two different people on two different rows, and no sheet collapses them into one name at the top.
 
-The reading, the editing, and the deciding are Helen Edgar’s and Ryan Boren’s. The drafting is done in sessions with [Claude](https://claude.com/claude-code), directed and edited by whoever is named on the *Read by* row. Nothing reaches a page unread: every quotation on this site is checked against a primary source by a person, and logged with the date it was checked in the [attribution ledger](https://github.com/Stimpunks/Queering-Earth/blob/main/ATTRIBUTIONS.md), which is public for the same reason this page is.
+The reading, the editing, and the deciding are Helen Edgar’s and Ryan Boren’s. The drafting is done in sessions with [Claude](https://claude.com/claude-code), directed and edited by whoever is named on the *Read by* row. Nothing reaches a page unread: every quotation on this site is checked against a primary source by a person, and logged with the date it was checked in the [attribution ledger](https://queering.earth/ledger), which is public for the same reason this page is.
 
 A tool does not get a row on the label, because a byline is responsibility and a tool cannot carry any. **But saying so here rather than nowhere is the same rule the ledger runs on.** The risk this site carries is a wrong attribution, and a site that keeps a ledger of everyone else’s words owes an honest account of where its own came from.
 

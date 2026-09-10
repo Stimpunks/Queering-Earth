@@ -36,6 +36,38 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page
+
+[Aim 12](https://queering.earth/mission) says this site works in public with the working-out left in, and it pointed at two files on GitHub, because that was the only way to reach them. **An aim whose receipt is on somebody else’s website is not much of a receipt.** [The attribution ledger](https://queering.earth/ledger) and [the decision log](https://queering.earth/what-is-settled) are now pages here — generated from the Markdown rather than retyped from it, because two hand-kept copies is the failure this whole house is organised against.
+
+MountedA generator that runs backwards, because the Markdown is the thing being kept and the page is the copy
+
+**Every other generator here reads a page and writes Markdown beside it.** This one reads Markdown and writes the page, and the direction is the design: those two files are working documents. The `credit-source` skill appends to the ledger; every session that settles something appends to the other. Making the page the source would mean editing a ledger entry in HTML, **which is how a ledger stops being kept.** Either direction is fine; two hand-kept copies is not.
+
+**It throws on a line it does not recognise, and then proves it did not drop one.** Every block’s words are checked against the rendered text before anything is written — whitespace removed on both sides, because tags are word boundaries in the source and not in the output. That proof caught four faults in its own author on the way here, and three of them were the proof being wrong rather than the converter: it stripped a bullet, a table’s pipes, and then the underscores out of `Photon Pulse\_he\_him`, a study participant’s pseudonym the converter was right to leave alone. **A guard that cries wolf gets relaxed**, so the proof was made to model the converter rather than approximate it.
+
+The real fault it found was `\*\*The lower-case \*g\* is kept\*\*` in the ledger — emphasis nested inside emphasis, where the inner pair is a letter being quoted. The first pass refused the nesting instead of reading it.
+
+CabinetThe addresses are not /attributions and /decisions, and that is a filesystem fact rather than a preference
+
+**macOS is case-insensitive by default.** A page at `/decisions` is `decisions.html`, and `make-markdown.mjs` writes a `.md` beside every page — so it would have written `decisions.md`, **which is the same file as `DECISIONS.md`**. The generator would have silently overwritten its own source with a round-tripped copy of itself, on the first run, with no error and nothing to restore from but git. `attributions.md` collides with `ATTRIBUTIONS.md` the same way.
+
+Checked before a line was written, by creating `AAA.md` in a temp directory and asking for `aaa.md`. The addresses are [`/ledger`](https://queering.earth/ledger) — the site’s own name for that file in every footer it appears in — and [`/what-is-settled`](https://queering.earth/what-is-settled), which is the other file’s own opening line.
+
+Label correctedThe finding aid was describing a smaller cabinet than it searches
+
+Its lede named the eight sheets, the colophon, the privacy policy and the register. It now also searches the aims, every attribution we have traced and every decision we have written down, so the sentence was false the moment the index was rebuilt. **This is the third time a page that binds us has had to move in the same commit as the capability that changed it** — after the privacy page twice. The pattern is the lesson: a claim only a human remembers is a claim that will eventually be false.
+
+**The index roughly doubled, and that is a real cost stated rather than hidden.** 154 KB gzipped to 249 KB. It is fetched after the page renders and carries `max-age=0`, so an unchanged index is a 304 and no bytes move — the increase is paid when it changes, not on every visit. Both records were indexed rather than only the ledger, because a decision nobody can search is close to a decision nobody published.
+
+CabinetBoth walkers learned a tag on the same afternoon, and one of them had to learn not to tidy
+
+The decision log carries one shell block, so `make-markdown.mjs` and `make-search-index.mjs` both threw on `pre` — the throw-rather-than-drop rule working exactly as intended, in two tools, within a minute of each other. **The Markdown converter needed more than the tag.** Its text handler collapses whitespace and escapes punctuation, which is right everywhere except inside a fence: the first output put a shell command and its continuation on one line with backslashes through the quoting. A fenced block is the one place in Markdown where neither pass is wanted.
+
+The search walker indexes the block rather than skipping it. Skipping was the quieter choice and the wrong one — a command in the decision log is content, and a searcher looking for the deploy hook should find the page that runs it.
+
+2026 · 9 September
+
 ## A cabinet that publishes an attribution ledger, a privacy policy and a register of its own errors had never written down what any of it was for
 
 There was a page for what the cabinet holds, a page for how it is made, a page for everything we have got wrong, and a page for what the site knows about you. **There was no page saying what we are trying to do.** That absence is not neutral, and this site already knows why: a project with no stated aim is a project whose aims can drift with nobody able to point at the drift, which is the objection it makes to a quotation nobody can trace and a number nobody can re-derive. [Sheet-less, numberless, and now written down.](https://queering.earth/mission)
@@ -1185,6 +1217,10 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [Queering.Earth](https://queering.earth/) the plate
 
 ### [What this cabinet is for](https://queering.earth/mission) the founding papers
+
+### [The attribution ledger](https://queering.earth/ledger) every quotation traced
+
+### [What is settled, and what is open](https://queering.earth/what-is-settled) the decision log
 
 ### [How this site is made](https://queering.earth/design) the colophon
 

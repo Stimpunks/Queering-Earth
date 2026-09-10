@@ -88,7 +88,7 @@ const BLOCK = new Set(['p', 'div', 'section', 'header', 'footer', 'article', 'as
   'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'dl', 'dt', 'dd',
   'blockquote', 'figure', 'figcaption', 'table', 'thead', 'tbody', 'tfoot',
   'tr', 'th', 'td', 'caption', 'nav', 'hr', 'br', 'img', 'main', 'a', 'colgroup', 'col',
-  'picture', 'source']);
+  'picture', 'source', 'pre']);
 
 /** Convert one <main> inner HTML to Markdown. */
 function toMarkdown(html, file) {
@@ -96,6 +96,7 @@ function toMarkdown(html, file) {
 
   let out = '';
   let skipDepth = 0, skipTag = null;
+  let inPre = false;
   const stack = [];
   const listStack = [];          // { ordered, n }
   let inHeading = 0, quoteDepth = 0, link = null, cells = null, rowIsHeader = false, tableDepth = 0;
@@ -114,6 +115,11 @@ function toMarkdown(html, file) {
 
     if (t.text !== undefined) {
       let s = decode(t.text);
+      /* INSIDE A FENCE, TEXT IS VERBATIM. Collapsing its whitespace put a shell
+         command and its continuation on one line, and escaping its punctuation put
+         backslashes into code somebody is meant to paste and run. A fenced block is
+         the one place in Markdown where neither pass is wanted. */
+      if (inPre) { out += s.replace(/^\n/, ''); continue; }
       if (!/\S/.test(s)) { if (!atLineStart() && /\s/.test(s)) out += ' '; continue; }
       s = s.replace(/\s+/g, ' ');
       if (atLineStart()) { s = s.replace(/^ /, ''); out += prefix(); }
@@ -138,6 +144,7 @@ function toMarkdown(html, file) {
     }
 
     if (INLINE[t.tag]) {
+      if (inPre && t.tag === 'code') continue;   // the fence is already the marker
       const spec = INLINE[t.tag];
       let mark = '';
       if (spec.kind) {
@@ -240,6 +247,16 @@ function toMarkdown(html, file) {
         break;
       }
       case 'figcaption': if (t.close) nl(2); else { nl(2); out += prefix(); } break;
+      /* A FENCE, NOT AN INDENT, and the inner <code> must not also write backticks.
+         /what-is-settled carries a shell block, and `code` is in the INLINE table, so
+         without this the block came out as a single ``` -wrapped line with a stray
+         inline backtick pair inside it. `inPre` suppresses the inline marker for the
+         duration, which is the same "outermost wins" idea the emphasis tracker uses. */
+      case 'pre': {
+        if (t.close) { inPre = false; nl(1); out += prefix() + '```'; nl(2); }
+        else { inPre = true; nl(2); out += prefix() + '```'; nl(1); }
+        break;
+      }
       // thead/tbody/tfoot/colgroup/col are structure, not content. A blank line between
       // the separator row and the first body row ends the table, so inside a table these
       // close up to a single newline.

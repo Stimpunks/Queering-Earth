@@ -51,6 +51,8 @@ http://queering-earth.netlify.app/*   https://queering.earth/:splat  301!
 /on-being-ill.html                /on-being-ill                 301!
 /promises-like-pie-crust.html     /promises-like-pie-crust      301!
 /search.html                      /search                       301!
+/ledger.html                      /ledger                       301!
+/what-is-settled.html             /what-is-settled              301!
 /mission.html                     /mission                      301!
 /privacy.html                     /privacy                      301!
 /the-tempest.html                 /the-tempest                  301!

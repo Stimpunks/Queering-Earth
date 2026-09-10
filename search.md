@@ -15,7 +15,7 @@ generated_by: "tools/make-markdown.mjs from the page's own <main> landmark"
 
 Every sheet, every quotation, and every correction.
 
-This is the finding aid. It searches the whole cabinet — the eight sheets, the colophon, the privacy policy, and every entry in [the accession register](https://queering.earth/changelog) — and it lands you on the section, not the top of the page. **The searching happens inside your browser**, so it needs JavaScript; what you type is never sent to a server, ours or anybody’s. If the field is not working, the whole cabinet is listed in full further down, and that needs nothing.
+This is the finding aid. It searches the whole cabinet — the eight sheets, [the aims](https://queering.earth/mission), the colophon, the privacy policy, every entry in [the accession register](https://queering.earth/changelog), and both working records: [every attribution we have traced](https://queering.earth/ledger) and [every decision we have written down](https://queering.earth/what-is-settled) — and it lands you on the section, not the top of the page. **The searching happens inside your browser**, so it needs JavaScript; what you type is never sent to a server, ours or anybody’s. If the field is not working, the whole cabinet is listed in full further down, and that needs nothing.
 
 ## The whole cabinet
 
@@ -197,7 +197,21 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-118 entries across 27 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+122 entries across 28 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+
+-
+
+[The attribution ledger](https://queering.earth/ledger)
+
+  - [Verified](https://queering.earth/ledger#verified)
+  - [Open](https://queering.earth/ledger#open)
+
+-
+
+[What is settled, and what is open](https://queering.earth/what-is-settled)
+
+  - [Open](https://queering.earth/what-is-settled#open)
+  - [Settled](https://queering.earth/what-is-settled#settled)
 
 -
 

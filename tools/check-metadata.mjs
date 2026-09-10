@@ -103,6 +103,14 @@ async function freshness(tool, outputs) {
   }
 }
 
+/* THE RECORD PAGES COME FIRST, because they are an INPUT to the two generators below.
+ * /ledger and /what-is-settled have their bodies written from ATTRIBUTIONS.md and
+ * DECISIONS.md between markers; make-markdown.mjs then reads those pages' landmarks to
+ * write their .md siblings, and make-search-index.mjs indexes the same landmarks.
+ * Checked in the other order, a stale record page reports as a stale .md — the symptom
+ * rather than the cause, pointing at the wrong tool. */
+await freshness('make-records.mjs', ['ledger.html', 'what-is-settled.html']);
+
 await freshness('make-markdown.mjs', GENERATED);
 
 /* THE SEARCH INDEX AND THE FINDING AID'S MANIFEST, and search.html is the one on this

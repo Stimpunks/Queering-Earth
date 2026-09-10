@@ -25,7 +25,7 @@ export const GROUPS = [
   ['The readings', ['on-being-ill', 'coming-to-terms', 'promises-like-pie-crust', 'invention-of-normal',
                     'the-tempest', 'wild-nights', 'flower-codes', 'monotropa-uniflora']],
   ['The founding papers', ['mission']],
-  ['The cabinet itself', ['index', 'design', 'changelog', 'search', 'privacy']],
+  ['The cabinet itself', ['index', 'design', 'changelog', 'search', 'ledger', 'what-is-settled', 'privacy']],
 ];
 
 /** The register keeps its own back matter, and the finding aid defers to it. */

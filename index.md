@@ -155,5 +155,11 @@ Four pages that are not specimens. They are the cabinet — how it is made, what
 **[Find a word in the cabinet](https://queering.earth/search)**
 : Every sheet, every quotation, and every correction, searched in your own browser. A quotation comes back whole with its source or not at all, and nothing you type is sent anywhere.
 
+**[The attribution ledger](https://queering.earth/ledger)**
+: Every quotation on the site, whose it is, where it came from, and the day somebody read the primary and confirmed the wording — including the ones we got wrong. Generated from the file a session edits, so it cannot drift from it.
+
+**[What is settled, and what is open](https://queering.earth/what-is-settled)**
+: The reasoning behind the decisions, kept so the same question is not re-litigated in three weeks — including the designs that were refused and why.
+
 **[What this site knows about you](https://queering.earth/privacy)**
 : Almost nothing, and the whole of it: no analytics, no cookies, no accounts, and exactly one thing on the site that can reach anybody else — which waits until you press it.

@@ -1855,6 +1855,88 @@ html.plain .qe-aims > li::marker { font-family: var(--qe-body); }
   .qe-aims > li { break-inside: avoid; }
 }
 
+/* ─────────────────────────────────────────────── the two working records
+ *
+ * /ledger and /what-is-settled. Both bodies are GENERATED from the Markdown in the
+ * repository by tools/make-records.mjs — the one generator here whose direction is
+ * Markdown to HTML rather than the other way round, because those two files are
+ * working documents that sessions append to. See that tool's header.
+ *
+ * There is very little here on purpose. Both pages are long, plain, and read from the
+ * top or jumped into by address; what they need is a legible entry rhythm and nothing
+ * competing with it. BARE TIER throughout: no fill, no box, no card. The only marks
+ * are the rules that separate one entry from the next, which is the third tier's
+ * device and correct here for the same reason it is on the register — these are the
+ * cabinet's own housekeeping talking about itself.
+ */
+
+/* An entry heading. Smaller than an h2 and in the ink rather than the moss, so the
+   two levels are told apart by weight and colour rather than by size alone — the
+   sections are Verified / Open and the entries under them run to fifty-odd. */
+.qe-record h3 {
+  font-family: var(--qe-display);
+  font-weight: 600;
+  font-size: 1.28rem;
+  line-height: 1.25;
+  color: var(--qe-ink);
+  margin: var(--qe-space-5) 0 var(--qe-space-2);
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+}
+html.plain .qe-record h3 { font-variation-settings: normal; font-weight: 700; }
+
+/* THE SEPARATOR IS THE SOURCE'S OWN. Both files rule off between entries with `----`,
+   which is a decision somebody made in the Markdown, so it survives rather than being
+   re-invented here. Nearly all of its space goes above, because it belongs to the
+   entry it introduces and a rule floating midway between two entries belongs to
+   neither. */
+.qe-record hr {
+  border: 0;
+  border-top: 1px solid var(--qe-rule);
+  margin: var(--qe-space-6) 0 0;
+}
+/* The rule immediately before an h3 would double with that heading's own top margin. */
+.qe-record hr + h3 { margin-top: var(--qe-space-4); }
+
+.qe-record blockquote {
+  margin: var(--qe-space-3) 0;
+  padding-left: var(--qe-space-3);
+  border-left: 2px solid var(--qe-rule);
+  color: var(--qe-ink);
+}
+.qe-record blockquote p:last-child { margin-bottom: 0; }
+
+.qe-record ul, .qe-record ol { margin: var(--qe-space-3) 0; padding-left: 1.6rem; }
+.qe-record li { margin-bottom: var(--qe-space-2); }
+.qe-record li:last-child { margin-bottom: 0; }
+
+/* A fenced block. Scrolls rather than wraps: these are shell commands, and a wrapped
+   command line is one somebody pastes wrong. */
+.qe-record pre {
+  overflow-x: auto;
+  margin: var(--qe-space-3) 0;
+  padding: var(--qe-space-2) var(--qe-space-3);
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-radius: var(--qe-corner-c);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+/* The inline `code` rule paints a background and a border on every span; inside a
+   block that already has both, it would draw a box per line. */
+.qe-record pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 1em;
+  color: var(--qe-ink);
+}
+
+@media print {
+  /* An entry and its heading stay together, and the fence keeps its box. */
+  .qe-record h3 { break-after: avoid; }
+  .qe-record hr { break-before: auto; }
+}
+
 /* ─────────────────────────────────────────────── the colophon
  *
  * Components used only by /design. They are here rather than in that page because

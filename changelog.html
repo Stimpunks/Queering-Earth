@@ -190,8 +190,48 @@
 
   <div class="qe-register">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-09-mission">
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-records">
       <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <h2 id="a-2026-09-09-records">The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page <a class="qe-anchor" href="#a-2026-09-09-records"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note"><a href="/mission">Aim 12</a> says this site works in public with the working-out left in, and it pointed at two files on GitHub, because that was the only way to reach them. <strong>An aim whose receipt is on somebody else&rsquo;s website is not much of a receipt.</strong> <a href="/ledger">The attribution ledger</a> and <a href="/what-is-settled">the decision log</a> are now pages here &mdash; generated from the Markdown rather than retyped from it, because two hand-kept copies is the failure this whole house is organised against.</p>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="ledger what-is-settled">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">A generator that runs backwards, because the Markdown is the thing being kept and the page is the copy</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Every other generator here reads a page and writes Markdown beside it.</strong> This one reads Markdown and writes the page, and the direction is the design: those two files are working documents. The <code>credit-source</code> skill appends to the ledger; every session that settles something appends to the other. Making the page the source would mean editing a ledger entry in HTML, <strong>which is how a ledger stops being kept.</strong> Either direction is fine; two hand-kept copies is not.</p>
+          <p><strong>It throws on a line it does not recognise, and then proves it did not drop one.</strong> Every block&rsquo;s words are checked against the rendered text before anything is written &mdash; whitespace removed on both sides, because tags are word boundaries in the source and not in the output. That proof caught four faults in its own author on the way here, and three of them were the proof being wrong rather than the converter: it stripped a bullet, a table&rsquo;s pipes, and then the underscores out of <code>Photon Pulse_he_him</code>, a study participant&rsquo;s pseudonym the converter was right to leave alone. <strong>A guard that cries wolf gets relaxed</strong>, so the proof was made to model the converter rather than approximate it.</p>
+          <p>The real fault it found was <code>**The lower-case *g* is kept**</code> in the ledger &mdash; emphasis nested inside emphasis, where the inner pair is a letter being quoted. The first pass refused the nesting instead of reading it.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The addresses are not /attributions and /decisions, and that is a filesystem fact rather than a preference</span></div>
+        <div class="qe-entry-body">
+          <p><strong>macOS is case-insensitive by default.</strong> A page at <code>/decisions</code> is <code>decisions.html</code>, and <code>make-markdown.mjs</code> writes a <code>.md</code> beside every page &mdash; so it would have written <code>decisions.md</code>, <strong>which is the same file as <code>DECISIONS.md</code></strong>. The generator would have silently overwritten its own source with a round-tripped copy of itself, on the first run, with no error and nothing to restore from but git. <code>attributions.md</code> collides with <code>ATTRIBUTIONS.md</code> the same way.</p>
+          <p>Checked before a line was written, by creating <code>AAA.md</code> in a temp directory and asking for <code>aaa.md</code>. The addresses are <a href="/ledger"><code>/ledger</code></a> &mdash; the site&rsquo;s own name for that file in every footer it appears in &mdash; and <a href="/what-is-settled"><code>/what-is-settled</code></a>, which is the other file&rsquo;s own opening line.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="search">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">The finding aid was describing a smaller cabinet than it searches</span></div>
+        <div class="qe-entry-body">
+          <p>Its lede named the eight sheets, the colophon, the privacy policy and the register. It now also searches the aims, every attribution we have traced and every decision we have written down, so the sentence was false the moment the index was rebuilt. <strong>This is the third time a page that binds us has had to move in the same commit as the capability that changed it</strong> &mdash; after the privacy page twice. The pattern is the lesson: a claim only a human remembers is a claim that will eventually be false.</p>
+          <p><strong>The index roughly doubled, and that is a real cost stated rather than hidden.</strong> 154 KB gzipped to 249 KB. It is fetched after the page renders and carries <code>max-age=0</code>, so an unchanged index is a 304 and no bytes move &mdash; the increase is paid when it changes, not on every visit. Both records were indexed rather than only the ledger, because a decision nobody can search is close to a decision nobody published.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Both walkers learned a tag on the same afternoon, and one of them had to learn not to tidy</span></div>
+        <div class="qe-entry-body">
+          <p>The decision log carries one shell block, so <code>make-markdown.mjs</code> and <code>make-search-index.mjs</code> both threw on <code>pre</code> &mdash; the throw-rather-than-drop rule working exactly as intended, in two tools, within a minute of each other. <strong>The Markdown converter needed more than the tag.</strong> Its text handler collapses whitespace and escapes punctuation, which is right everywhere except inside a fence: the first output put a shell command and its continuation on one line with backslashes through the quoting. A fenced block is the one place in Markdown where neither pass is wanted.</p>
+          <p>The search walker indexes the block rather than skipping it. Skipping was the quieter choice and the wrong one &mdash; a command in the decision log is content, and a searcher looking for the deploy hook should find the page that runs it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-mission">
+      <p class="qe-accession-date">2026 &middot; 9 September</p>
       <h2 id="a-2026-09-09-mission">A cabinet that publishes an attribution ledger, a privacy policy and a register of its own errors had never written down what any of it was for <a class="qe-anchor" href="#a-2026-09-09-mission"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">There was a page for what the cabinet holds, a page for how it is made, a page for everything we have got wrong, and a page for what the site knows about you. <strong>There was no page saying what we are trying to do.</strong> That absence is not neutral, and this site already knows why: a project with no stated aim is a project whose aims can drift with nobody able to point at the drift, which is the objection it makes to a quotation nobody can trace and a number nobody can re-derive. <a href="/mission">Sheet-less, numberless, and now written down.</a></p>
@@ -1522,6 +1562,14 @@
       </div>
       <div class="qe-index-group" data-sheet="mission" hidden>
         <h3 class="qe-index-sheet"><a href="/mission">What this cabinet is for</a> <span class="qe-index-kicker">the founding papers</span></h3>
+        <ul></ul>
+      </div>
+      <div class="qe-index-group" data-sheet="ledger" hidden>
+        <h3 class="qe-index-sheet"><a href="/ledger">The attribution ledger</a> <span class="qe-index-kicker">every quotation traced</span></h3>
+        <ul></ul>
+      </div>
+      <div class="qe-index-group" data-sheet="what-is-settled" hidden>
+        <h3 class="qe-index-sheet"><a href="/what-is-settled">What is settled, and what is open</a> <span class="qe-index-kicker">the decision log</span></h3>
         <ul></ul>
       </div>
       <div class="qe-index-group" data-sheet="design" hidden>

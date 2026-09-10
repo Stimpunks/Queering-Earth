@@ -314,6 +314,10 @@ og_card(REPO/"images"/"og-design.png", "How this site is made", "Colophon",
         "A Victorian herbarium sheet as the model: the palette, the type, the drawings.", MARIGOLD)
 og_card(REPO/"images"/"og-changelog.png", "The accession register", "Register · the changelog",
         "Every sheet as it was mounted, and every label we corrected.", CORAL)
+og_card(REPO/"images"/"og-ledger.png", "The attribution ledger", "The cabinet itself",
+        "What we quoted, whose it is, and the day somebody read the primary.", RUST)
+og_card(REPO/"images"/"og-settled.png", "What is settled, and what is open", "The cabinet itself",
+        "The reasoning, kept so the same question is not re-litigated in three weeks.", MOSS)
 og_card(REPO/"images"/"og-privacy.png", "What this site knows about you", "Privacy",
         "Almost nothing, and the whole of it: two view preferences and a hosting log.", VERDIGRIS)
 og_card(REPO/"images"/"og-search.png", "Find a word in the cabinet", "Finding aid",
