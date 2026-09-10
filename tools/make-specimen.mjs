@@ -29,58 +29,58 @@ const GL = 'https://gitlab.com/bye-bye-binary';
 /* Each candidate says WHY it is a candidate, because a picker of pretty fonts is not
    what was asked for. The note is the argument; the file is only the evidence. */
 const SHEET_ONE = [
-  { id: 'fraunces', family: 'Fraunces', local: 'fonts/fraunces-latin.woff2', fmt: 'woff2',
+  { id: 'fraunces', source: 'https://github.com/undercasetype/Fraunces', family: 'Fraunces', local: 'fonts/fraunces-latin.woff2', fmt: 'woff2',
     by: 'Undercase Type, Phaedra Charles, Flavia Zimbardi', licence: 'OFL-1.1',
     role: 'display', kind: 'baseline',
     note: 'What the sheet already uses. Its WONK axis exposes deviant letterforms as a setting you turn up — deviation as a control rather than a defect.' },
-  { id: 'newsreader', family: 'Newsreader', local: 'fonts/newsreader-latin.woff2', fmt: 'woff2',
+  { id: 'newsreader', source: 'https://github.com/productiontype/Newsreader', family: 'Newsreader', local: 'fonts/newsreader-latin.woff2', fmt: 'woff2',
     by: 'Production Type', licence: 'OFL-1.1', role: 'body', kind: 'baseline',
     note: 'What you are reading now. The comparison every other body option has to win against.' },
 
-  { id: 'redaction-inclusive', family: 'Redaction Inclusive', fmt: 'woff2',
+  { id: 'redaction-inclusive', source: 'https://gitlab.com/bye-bye-binary/redaction-inclusive', family: 'Redaction Inclusive', fmt: 'woff2',
     url: `${GL}/redaction-inclusive/-/raw/HEAD/fonts/webfonts/Redaction-Inclusive-Regular.woff2`,
     licenceUrl: `${GL}/redaction-inclusive/-/raw/HEAD/OFL.txt`,
     by: 'Bye Bye Binary, after Redaction by Jeremy Mickel / MCKL', licence: 'OFL-1.1',
     role: 'both', kind: 'erasure',
     note: 'Redaction was drawn for Titus Kaphar and Reginald Dwayne Betts’ project on the carceral state — a face about what gets taken out. Bye Bye Binary then added inclusive glyphs to it. Type about erasure, re-cut to say what the grammar refuses.' },
 
-  { id: 'unormative-fraktur', family: 'Unormative Fraktur', fmt: 'opentype',
+  { id: 'unormative-fraktur', source: 'https://gitlab.com/bye-bye-binary/unormative-fraktur', family: 'Unormative Fraktur', fmt: 'opentype',
     url: `${GL}/unormative-fraktur/-/raw/HEAD/otf/UnormativeFraktur.otf`,
     licenceUrl: `${GL}/unormative-fraktur/-/raw/HEAD/OFL.txt`,
     by: 'Bye Bye Binary', licence: 'OFL-1.1', role: 'display', kind: 'othered',
     note: 'Blackletter is the othered Latin script — coded archaic, banned by the Nazis in 1941 for being “Jewish letters”. Recut here as “unormative”. The most loaded option on the page, and it should be argued about.' },
 
-  { id: 'enby-gertrude', family: 'Enby Gertrude', fmt: 'opentype',
+  { id: 'enby-gertrude', source: 'https://gitlab.com/bye-bye-binary/enby-gertrude', family: 'Enby Gertrude', fmt: 'opentype',
     url: `${GL}/enby-gertrude/-/raw/HEAD/otf/Enby_Gertrude_roman.otf`,
     licenceUrl: `${GL}/enby-gertrude/-/raw/HEAD/README.md`,
     by: 'Bye Bye Binary', licence: 'stated in the README, no separate licence file upstream',
     role: 'display', kind: 'inclusive',
     note: 'A non-binary cut of Gertrude. The name is the thesis.' },
 
-  { id: 'insolente', family: 'Insolente', fmt: 'opentype',
+  { id: 'insolente', source: 'https://gitlab.com/bye-bye-binary/insolente', family: 'Insolente', fmt: 'opentype',
     url: `${GL}/insolente/-/raw/HEAD/otf/Insolente-Regular.otf`,
     licenceUrl: `${GL}/insolente/-/raw/HEAD/README.md`,
     by: 'Bye Bye Binary', licence: 'stated in the README, no separate licence file upstream',
     role: 'display', kind: 'attitude',
     note: 'Insolent. Mientjes’ “attitude in the face of conformity”, named outright.' },
 
-  { id: 'love', family: 'BBB Love', fmt: 'opentype',
+  { id: 'love', source: 'https://gitlab.com/bye-bye-binary/bbb-love-and-rage', family: 'BBB Love', fmt: 'opentype',
     url: `${GL}/bbb-love-and-rage/-/raw/HEAD/otf/BBBLove%26Rage-LOVE.otf`,
     licenceUrl: `${GL}/bbb-love-and-rage/-/raw/HEAD/LICENSE_CUTE.md`,
     by: 'Bye Bye Binary', licence: 'LICENSE_CUTE', role: 'display', kind: 'attitude',
     note: 'Love and Rage ship as two cuts of one family. A typeface that makes you choose which one the sentence is in.' },
-  { id: 'rage', family: 'BBB Rage', fmt: 'opentype',
+  { id: 'rage', source: 'https://gitlab.com/bye-bye-binary/bbb-love-and-rage', family: 'BBB Rage', fmt: 'opentype',
     url: `${GL}/bbb-love-and-rage/-/raw/HEAD/otf/BBBLove%26Rage-RAGE.otf`,
     licenceUrl: `${GL}/bbb-love-and-rage/-/raw/HEAD/LICENSE_CUTE.md`,
     by: 'Bye Bye Binary', licence: 'LICENSE_CUTE', role: 'display', kind: 'attitude',
     note: 'The other cut. Same family, opposite temperature.' },
 
-  { id: 'atkinson', family: 'Atkinson Hyperlegible', fmt: 'woff2', google: 'Atkinson+Hyperlegible',
+  { id: 'atkinson', source: 'https://github.com/googlefonts/atkinson-hyperlegible', family: 'Atkinson Hyperlegible', fmt: 'woff2', google: 'Atkinson+Hyperlegible',
     licenceUrl: 'https://raw.githubusercontent.com/google/fonts/main/ofl/atkinsonhyperlegible/OFL.txt',
     by: 'Braille Institute of America', licence: 'OFL-1.1', role: 'body', kind: 'legibility',
     note: 'Drawn for low vision by maximising how unlike each other the letters are. It refuses the modernist ideal of harmonious uniformity in favour of letters that insist on being themselves — which is the same refusal, arrived at from the other direction.' },
 
-  { id: 'comic-neue', family: 'Comic Neue', fmt: 'woff2', google: 'Comic+Neue',
+  { id: 'comic-neue', source: 'https://github.com/crozynski/comicneue', family: 'Comic Neue', fmt: 'woff2', google: 'Comic+Neue',
     licenceUrl: 'https://raw.githubusercontent.com/google/fonts/main/ofl/comicneue/OFL.txt',
     by: 'Craig Rozynski', licence: 'OFL-1.1', role: 'body', kind: 'provocation',
     note: 'The redrawn Comic Sans. Universally derided, quietly relied on by many dyslexic readers, and completely unbothered about looking serious. Included to be argued with, not to be safe.' },
@@ -97,27 +97,27 @@ const SHEET_ONE = [
    because velvetyne.fr timed out on every request from here — worth knowing before
    anything depends on that domain. */
 const SHEET_TWO = [
-  { id: 'baskervvol', family: 'BBB Baskervvol', fmt: 'opentype',
+  { id: 'baskervvol', source: 'https://gitlab.com/bye-bye-binary/baskervvol', family: 'BBB Baskervvol', fmt: 'opentype',
     url: `${GL}/baskervvol/-/raw/HEAD/otf/BBBBaskervvol-Regular.otf`,
     licenceUrl: `${GL}/baskervvol/-/raw/HEAD/2024_BBB_CUTE-EN.pdf`, licenceExt: 'pdf',
     by: 'Bye Bye Binary', licence: 'CUTE (Collective Use, Transformation, Emancipation)',
     role: 'both', kind: 'inclusive',
     note: 'A Baskerville carrying inclusive ligatures — the one I most wanted on the first sheet and could not find, because the repo hides its OTFs behind two hundred UFO glyph folders. Baskerville is about as canonical as a text face gets; recutting it to say what the grammar refuses is the argument made inside the canon rather than against it.' },
 
-  { id: 'homoneta', family: 'Homoneta', fmt: 'opentype',
+  { id: 'homoneta', source: 'https://gitlab.com/bye-bye-binary/homoneta', family: 'Homoneta', fmt: 'opentype',
     url: `${GL}/homoneta/-/raw/HEAD/otf/Homoneta-Italic.otf`,
     licenceUrl: `${GL}/homoneta/-/raw/HEAD/Licence-CUTE-fr.pdf`, licenceExt: 'pdf',
     by: 'Bye Bye Binary', licence: 'CUTE, French text only', role: 'display', kind: 'inclusive',
     note: 'Italic only, which makes it a face with no upright to be measured against. Worth noticing that this is the one candidate whose licence upstream is in French alone.' },
 
-  { id: 'adelphe', family: 'Adelphe', fmt: 'opentype',
+  { id: 'adelphe', source: 'https://gitlab.com/bye-bye-binary/adelphe', family: 'Adelphe', fmt: 'opentype',
     url: `${GL}/adelphe/-/raw/HEAD/otf/Adelphe-FlorealBold.otf`,
     licenceUrl: `${GL}/adelphe/-/raw/HEAD/README.md`,
     by: 'Bye Bye Binary', licence: 'stated in the README, no separate licence file upstream',
     role: 'display', kind: 'inclusive',
     note: '“Adelphe” is the French neutral for sibling — the word coined because frère and sœur leave nowhere to stand. The cut here is Floréal, after the revolutionary calendar’s month of flowering, which lands oddly well on a herbarium sheet.' },
 
-  { id: 'bbb-karrik', family: 'BBB Karrik', fmt: 'opentype',
+  { id: 'bbb-karrik', source: 'https://gitlab.com/bye-bye-binary/bbb-karrik', family: 'BBB Karrik', fmt: 'opentype',
     url: `${GL}/bbb-karrik/-/raw/HEAD/otf/BBB_Karrik.otf`,
     licenceUrl: `${GL}/bbb-karrik/-/raw/HEAD/README.md`,
     by: 'Bye Bye Binary, after Karrik by Jean-Baptiste Morizot and Lucas Le Bihan',
@@ -125,37 +125,37 @@ const SHEET_TWO = [
     role: 'body', kind: 'inclusive',
     note: 'Karrik is a deliberately irregular grotesque — letterforms that refuse to be regularised. Recut with inclusive glyphs. Of everything across both sheets this is the most plausible BODY face that is also making an argument.' },
 
-  { id: 'coxinelle', family: 'Coxinel·le', fmt: 'opentype',
+  { id: 'coxinelle', source: 'https://gitlab.com/bye-bye-binary/coxinel-le', family: 'Coxinel·le', fmt: 'opentype',
     url: `${GL}/coxinel-le/-/raw/HEAD/otf/Coxinelle-Black.otf`,
     licenceUrl: `${GL}/coxinel-le/-/raw/HEAD/Licence.pdf`, licenceExt: 'pdf',
     by: 'Bye Bye Binary', licence: 'CUTE', role: 'display', kind: 'inclusive',
     note: 'The repository is called coxinel-le, and the interpunct in the name is the inclusive marker itself — the typographic mark French uses to hold two endings at once, promoted from punctuation to the name of the thing.' },
 
-  { id: 'ouvrieres', family: 'Ouvrières', fmt: 'opentype',
+  { id: 'ouvrieres', source: 'https://gitlab.com/bye-bye-binary/ouvrieres', family: 'Ouvrières', fmt: 'opentype',
     url: `${GL}/ouvrieres/-/raw/HEAD/fonts/font-formations/Ouvrieres-agricultrices.otf`,
     licenceUrl: `${GL}/ouvrieres/-/raw/HEAD/2024_BBB_CUTE-EN.pdf`, licenceExt: 'pdf',
     by: 'Bye Bye Binary', licence: 'CUTE', role: 'display', kind: 'attitude',
     note: 'Women workers, in the feminine plural, and this cut is agricultrices — farm workers. Labour and gender in the same word, and the only candidate whose name is about work.' },
 
-  { id: 'sporting', family: 'Sporting Grotesque', fmt: 'opentype',
+  { id: 'sporting', source: 'https://github.com/velvetyne/Sporting-Grotesque', family: 'Sporting Grotesque', fmt: 'opentype',
     url: 'https://raw.githubusercontent.com/velvetyne/Sporting-Grotesque/HEAD/fonts/SportingGrotesque-Bold.otf',
     licenceUrl: 'https://raw.githubusercontent.com/velvetyne/Sporting-Grotesque/HEAD/LICENSE.txt',
     by: 'Lucas Le Bihan, Velvetyne', licence: 'OFL-1.1', role: 'display', kind: 'attitude',
     note: 'Velvetyne’s best-known face: a grotesque that will not sit still, with letterforms that look drawn rather than drafted. A libre foundry that treats type as commons rather than product.' },
 
-  { id: 'trickster', family: 'Trickster', fmt: 'opentype',
+  { id: 'trickster', source: 'https://github.com/velvetyne/Trickster', family: 'Trickster', fmt: 'opentype',
     url: 'https://raw.githubusercontent.com/velvetyne/Trickster/HEAD/fonts/Trickster-Reg.otf',
     licenceUrl: 'https://raw.githubusercontent.com/velvetyne/Trickster/HEAD/LICENSE.txt',
     by: 'Jean-Baptiste Morizot, Velvetyne', licence: 'OFL-1.1', role: 'display', kind: 'attitude',
     note: 'Named for the figure that crosses every boundary it meets and belongs to no category — which is a fair description of what is being asked of a face here.' },
 
-  { id: 'victorianna', family: 'Victorianna', fmt: 'opentype',
+  { id: 'victorianna', source: 'https://github.com/velvetyne/Victorianna', family: 'Victorianna', fmt: 'opentype',
     url: 'https://raw.githubusercontent.com/velvetyne/Victorianna/HEAD/fonts/VictoriannaThin_Desktop_OTF/VTF%20victorianna%20thin.otf',
     licenceUrl: 'https://raw.githubusercontent.com/velvetyne/Victorianna/HEAD/LICENSE.txt',
     by: 'Velvetyne', licence: 'OFL-1.1', role: 'display', kind: 'othered',
     note: 'A Victorian display face, libre. The one candidate that could pass for what a herbarium plate was actually lettered in — which makes it the opposite proposition to the rest: not a face that argues with the sheet, but one that agrees with it so completely it might be a period reproduction.' },
 
-  { id: 'resistance', family: 'Résistance Générale', fmt: 'woff2',
+  { id: 'resistance', source: 'https://github.com/velvetyne/resistance-generale', family: 'Résistance Générale', fmt: 'woff2',
     url: 'https://raw.githubusercontent.com/velvetyne/resistance-generale/HEAD/fonts/webfonts/resistance_generale-webfont.woff2',
     licenceUrl: 'https://raw.githubusercontent.com/velvetyne/resistance-generale/HEAD/LICENSE.txt',
     by: 'Velvetyne', licence: 'OFL-1.1', role: 'display', kind: 'attitude',
@@ -256,7 +256,7 @@ const cards = rows.map((r) => `
     <header class="spec-head">
       <p class="spec-kind">${esc(KINDS[r.kind] || r.kind)}</p>
       <h2>${esc(r.family)}</h2>
-      <p class="spec-meta"><strong>${esc(r.by)}</strong> &middot; ${esc(r.licence)}${
+      <p class="spec-meta"><strong>${esc(r.by)}</strong> &middot; <a href="${r.source}">source</a> &middot; ${esc(r.licence)}${
         r.licenceFile ? ` &middot; <a href="${r.licenceFile}">licence</a>` : ''
       } &middot; ${Math.round(r.bytes / 1024)}&nbsp;KB${
         r.role === 'body' ? ' &middot; proposed for body' : r.role === 'display' ? ' &middot; proposed for display' : ' &middot; could do either'
@@ -335,8 +335,20 @@ ${faces}
     <code>sitemap.xml</code>, and it should be deleted once the choice is made &mdash; a specimen
     kept after the decision is a second, stale account of what the site&rsquo;s type is.
     Regenerate with <code>node tools/make-specimen.mjs</code>. Licences were fetched with the
-    files; two families state their terms only in a README and are marked as such, which needs
-    reading before either ships.
+    files, and every candidate links its original publication source &mdash; which
+    <strong>CUTE requires</strong> and the OFL merely encourages.
+  </p>
+  <p style="font-family:'Newsreader',Georgia,serif;font-size:0.95rem;line-height:1.6;color:var(--qe-moss)">
+    <strong>The Bye Bye Binary families are under CUTE, not the OFL</strong>, and it is not a
+    permissive licence with a different name. It permits use, modification and commercial use;
+    it also states outright that it is <q>not technically compatible with any FLOSS license to
+    date</q>. Three of its conditions bind anything shipped from here: <strong>credit and link
+    the source</strong>; <strong>share complete files</strong> rather than a lone
+    <code>.otf</code>; and <strong>do not delete the post-binary characters or the OpenType
+    features that activate them</strong> &mdash; which forbids the latin-only subsetting the
+    two production faces get. It also asks for a donation on a sliding scale as a condition
+    rather than a suggestion. None of that rules the fonts out; all of it has to be decided
+    rather than assumed.
   </p>
 </main>
 

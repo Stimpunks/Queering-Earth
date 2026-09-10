@@ -1,6 +1,7 @@
 [
   {
     "id": "fraunces",
+    "source": "https://github.com/undercasetype/Fraunces",
     "family": "Fraunces",
     "local": "fonts/fraunces-latin.woff2",
     "fmt": "woff2",
@@ -15,6 +16,7 @@
   },
   {
     "id": "newsreader",
+    "source": "https://github.com/productiontype/Newsreader",
     "family": "Newsreader",
     "local": "fonts/newsreader-latin.woff2",
     "fmt": "woff2",
@@ -29,6 +31,7 @@
   },
   {
     "id": "redaction-inclusive",
+    "source": "https://gitlab.com/bye-bye-binary/redaction-inclusive",
     "family": "Redaction Inclusive",
     "fmt": "woff2",
     "url": "https://gitlab.com/bye-bye-binary/redaction-inclusive/-/raw/HEAD/fonts/webfonts/Redaction-Inclusive-Regular.woff2",
@@ -44,6 +47,7 @@
   },
   {
     "id": "unormative-fraktur",
+    "source": "https://gitlab.com/bye-bye-binary/unormative-fraktur",
     "family": "Unormative Fraktur",
     "fmt": "opentype",
     "url": "https://gitlab.com/bye-bye-binary/unormative-fraktur/-/raw/HEAD/otf/UnormativeFraktur.otf",
@@ -59,6 +63,7 @@
   },
   {
     "id": "enby-gertrude",
+    "source": "https://gitlab.com/bye-bye-binary/enby-gertrude",
     "family": "Enby Gertrude",
     "fmt": "opentype",
     "url": "https://gitlab.com/bye-bye-binary/enby-gertrude/-/raw/HEAD/otf/Enby_Gertrude_roman.otf",
@@ -74,6 +79,7 @@
   },
   {
     "id": "insolente",
+    "source": "https://gitlab.com/bye-bye-binary/insolente",
     "family": "Insolente",
     "fmt": "opentype",
     "url": "https://gitlab.com/bye-bye-binary/insolente/-/raw/HEAD/otf/Insolente-Regular.otf",
@@ -89,6 +95,7 @@
   },
   {
     "id": "love",
+    "source": "https://gitlab.com/bye-bye-binary/bbb-love-and-rage",
     "family": "BBB Love",
     "fmt": "opentype",
     "url": "https://gitlab.com/bye-bye-binary/bbb-love-and-rage/-/raw/HEAD/otf/BBBLove%26Rage-LOVE.otf",
@@ -104,6 +111,7 @@
   },
   {
     "id": "rage",
+    "source": "https://gitlab.com/bye-bye-binary/bbb-love-and-rage",
     "family": "BBB Rage",
     "fmt": "opentype",
     "url": "https://gitlab.com/bye-bye-binary/bbb-love-and-rage/-/raw/HEAD/otf/BBBLove%26Rage-RAGE.otf",
@@ -119,6 +127,7 @@
   },
   {
     "id": "atkinson",
+    "source": "https://github.com/googlefonts/atkinson-hyperlegible",
     "family": "Atkinson Hyperlegible",
     "fmt": "woff2",
     "google": "Atkinson+Hyperlegible",
@@ -134,6 +143,7 @@
   },
   {
     "id": "comic-neue",
+    "source": "https://github.com/crozynski/comicneue",
     "family": "Comic Neue",
     "fmt": "woff2",
     "google": "Comic+Neue",

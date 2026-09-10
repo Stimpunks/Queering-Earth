@@ -1,6 +1,7 @@
 [
   {
     "id": "baskervvol",
+    "source": "https://gitlab.com/bye-bye-binary/baskervvol",
     "family": "BBB Baskervvol",
     "fmt": "opentype",
     "url": "https://gitlab.com/bye-bye-binary/baskervvol/-/raw/HEAD/otf/BBBBaskervvol-Regular.otf",
@@ -17,6 +18,7 @@
   },
   {
     "id": "homoneta",
+    "source": "https://gitlab.com/bye-bye-binary/homoneta",
     "family": "Homoneta",
     "fmt": "opentype",
     "url": "https://gitlab.com/bye-bye-binary/homoneta/-/raw/HEAD/otf/Homoneta-Italic.otf",
@@ -33,6 +35,7 @@
   },
   {
     "id": "adelphe",
+    "source": "https://gitlab.com/bye-bye-binary/adelphe",
     "family": "Adelphe",
     "fmt": "opentype",
     "url": "https://gitlab.com/bye-bye-binary/adelphe/-/raw/HEAD/otf/Adelphe-FlorealBold.otf",
@@ -48,6 +51,7 @@
   },
   {
     "id": "bbb-karrik",
+    "source": "https://gitlab.com/bye-bye-binary/bbb-karrik",
     "family": "BBB Karrik",
     "fmt": "opentype",
     "url": "https://gitlab.com/bye-bye-binary/bbb-karrik/-/raw/HEAD/otf/BBB_Karrik.otf",
@@ -63,6 +67,7 @@
   },
   {
     "id": "coxinelle",
+    "source": "https://gitlab.com/bye-bye-binary/coxinel-le",
     "family": "Coxinel·le",
     "fmt": "opentype",
     "url": "https://gitlab.com/bye-bye-binary/coxinel-le/-/raw/HEAD/otf/Coxinelle-Black.otf",
@@ -79,6 +84,7 @@
   },
   {
     "id": "ouvrieres",
+    "source": "https://gitlab.com/bye-bye-binary/ouvrieres",
     "family": "Ouvrières",
     "fmt": "opentype",
     "url": "https://gitlab.com/bye-bye-binary/ouvrieres/-/raw/HEAD/fonts/font-formations/Ouvrieres-agricultrices.otf",
@@ -95,6 +101,7 @@
   },
   {
     "id": "sporting",
+    "source": "https://github.com/velvetyne/Sporting-Grotesque",
     "family": "Sporting Grotesque",
     "fmt": "opentype",
     "url": "https://raw.githubusercontent.com/velvetyne/Sporting-Grotesque/HEAD/fonts/SportingGrotesque-Bold.otf",
@@ -110,6 +117,7 @@
   },
   {
     "id": "trickster",
+    "source": "https://github.com/velvetyne/Trickster",
     "family": "Trickster",
     "fmt": "opentype",
     "url": "https://raw.githubusercontent.com/velvetyne/Trickster/HEAD/fonts/Trickster-Reg.otf",
@@ -125,6 +133,7 @@
   },
   {
     "id": "victorianna",
+    "source": "https://github.com/velvetyne/Victorianna",
     "family": "Victorianna",
     "fmt": "opentype",
     "url": "https://raw.githubusercontent.com/velvetyne/Victorianna/HEAD/fonts/VictoriannaThin_Desktop_OTF/VTF%20victorianna%20thin.otf",
@@ -140,6 +149,7 @@
   },
   {
     "id": "resistance",
+    "source": "https://github.com/velvetyne/resistance-generale",
     "family": "Résistance Générale",
     "fmt": "woff2",
     "url": "https://raw.githubusercontent.com/velvetyne/resistance-generale/HEAD/fonts/webfonts/resistance_generale-webfont.woff2",
