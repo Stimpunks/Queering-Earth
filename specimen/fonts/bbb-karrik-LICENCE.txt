@@ -1,0 +1,4 @@
+# BBB Karrik
+
+
+Le BBB Karrik est un fork réalisé par Clara Sambot et Quentin Lamouroux du Karrik de Jean-Baptiste Morizot et Lucas Le Bihan, diffusé sous licence libre sur Velvetyne Type Foundry. Ce fork est le fruit d’une invitation faite à Bye Bye Binary par Kidnap Your Designer, qui réalise l’identité visuelle du théâtre La Balsamine à Bruxelles. Le dessin des glyphes inclusifs se compose de caractères coupés et décalés de la ligne de base en indices et exposants, opérant ainsi une perturbation du gris typographique. Le BBB Karrik est « qunifié » et disponible sur la typothèque Bye Bye Binary.
