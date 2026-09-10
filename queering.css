@@ -3200,6 +3200,201 @@ html.plain .qe-stamp-date {
 /* NN/g: contents links are coloured AND underlined. They inherit both here. */
 .qe-contents a { color: var(--qe-rust); }
 
+/* ─────────────────────────────────────────────── the drift rail
+ *
+ * The same headings as `.qe-contents`, in the left margin, fixed, on every page
+ * but the register. It is the one navigational thing here that does not scroll
+ * away, and it exists because the plate and the cabinet are eight and fourteen
+ * screens down the home page and there was no way back up to them.
+ *
+ * BOTH LISTS SHOW, AND THAT IS AUTHORED RATHER THAN OVERLOOKED. The obvious
+ * reading — two lists of the same links on one screen is the defect this file
+ * names when it refuses a contents list for the home page — is the wrong one
+ * here, because the two are not the same object. The contents list is FRONT
+ * MATTER: it is read once, in sequence, before the sheet begins, and it is set
+ * in the measure at reading size. The rail is an INSTRUMENT: it is not read at
+ * all, it is glanced at from the middle of a sheet nine thousand words in. The
+ * home-page defect was two lists competing to be read. These do not compete,
+ * because only one of them is for reading. Ryan's call, 2026-09-09; see
+ * DECISIONS.md.
+ *
+ * So the whole design job here is making the rail unmistakably not-the-list:
+ * smaller, mossy rather than rust, unnumbered, unlabelled, and pushed out past
+ * the measure into space no line of text ever occupies. A reader who wants the
+ * contents reads the contents; a reader who wants to leave uses the rail.
+ *
+ * IT IS UNLABELLED ON PURPOSE, and that is the Ma. A visible heading would be a
+ * third copy of the words "On this sheet" and the one free to drift; the nav's
+ * `aria-label` is authored in the markup, once per page, and names it for anyone
+ * who cannot see that it is a column of this page's own headings.
+ *
+ * NO SCROLL-SPY. Unchanged from `.qe-contents`, and this is where it would cost
+ * most: a mark that moves as the reader scrolls is a second thing on screen that
+ * never settles, permanently in the corner of the eye. `:target` still marks
+ * where a reader landed.
+ *
+ * THE HIT AREA IS REAL PADDING, NOT THE `::after` BOX. `.qe-controls` grows its
+ * targets with an absolutely positioned 44px box behind each control, and that
+ * instrument is wrong here: these links are STACKED, so the boxes would overlap
+ * one another, the topmost would take every tap, and the rule that asks for 44px
+ * would have produced a rail where most entries cannot be pressed at all. Each
+ * link is a block padded to 44px instead. A wrapped label is taller and that is
+ * free. Measured on the widest case, /design at fifteen entries: 660px of rail
+ * in a 900px viewport, which is why the height is clamped and scrolls.
+ *
+ * WHY 77rem. The widest block on any page is `.qe-wide` at 46rem, centred, so
+ * the rail needs 12rem of column plus 2.5rem of air — 37.5rem out from the
+ * centre line — before it can exist without touching the words. 77rem leaves it
+ * 1rem off the window edge at the breakpoint and more thereafter. Below that it
+ * is gone rather than squeezed, which is also what satisfies WCAG 1.4.10: at
+ * 400% zoom the viewport is 320px wide and the rail has already vanished, so it
+ * cannot eat the height a reflowed page needs. check-overlap.mjs measures screen
+ * at 1280px = 80rem, so the rail is LIVE in that pass and gets measured.
+ */
+
+.qe-rail { display: none; }
+
+@media screen and (min-width: 77rem) {
+  .qe-rail {
+    display: block;
+    position: fixed;
+    z-index: 5;              /* under the skip link, which is 20 and must win */
+    top: 50%;
+    transform: translateY(-50%);
+    /* 23rem is half of .qe-wide, 2.5rem is the air, 12rem is the column. */
+    left: calc(50% - 23rem - 2.5rem - 12rem);
+    width: 12rem;
+    max-height: calc(100vh - var(--qe-space-8) * 2);
+    overflow-y: auto;
+    /* A rail that has reached its end must not then scroll the page under it. */
+    overscroll-behavior: contain;
+    padding-left: var(--qe-space-2);
+    border-left: 1px solid var(--qe-rule);
+  }
+}
+
+/* Higher specificity than the rule above, so a page whose rail was never filled
+   stays gone at every width. The script unhides it only once it has entries. */
+.qe-rail[hidden] { display: none; }
+
+.qe-rail ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── collapsed, and the tick is the whole collapsed state
+ *
+ * The rail reads as a column of short rules until a pointer enters it, and then
+ * the headings themselves fade up. That is what Ryan asked for and it is not what
+ * "no scroll-spy" was refusing: SPY is a mark that tracks the reader down the page
+ * on its own, unprompted, forever. This moves only when a reader asks it to, and
+ * stops when they leave. Nothing here follows the scroll.
+ *
+ * THE LABEL STAYS IN FLOW AT opacity 0, and that single decision is what makes the
+ * whole thing safe. The obvious build — the one the reference site uses — puts each
+ * label in an absolutely positioned pill so the ticks can sit at an even 44px. It
+ * was refused here for a reason found by working out what the gates would see: the
+ * pills would then be laid over one another, so the moment REVEAL turned them on
+ * for measurement, check-overlap.mjs would report every label sitting on the next
+ * one. Left in flow, the revealed state IS the expanded rail that was already
+ * measured clean at 1280px, and the gate is looking at the real thing.
+ *
+ * The cost is paid in the collapsed state: a row is as tall as its own label, so a
+ * three-line heading spaces its neighbours further apart and the ticks are not
+ * evenly pitched. On this site that is one row on the home page and three on
+ * /flower-codes. A ruled column with an uneven pitch looks hand-drawn, which is the
+ * register this house is in anyway; overlapping labels would be a defect.
+ *
+ * NO LAYOUT MOVES ON HOVER. The label occupies its space whether it is painted or
+ * not, so the rail cannot reflow, jump or push the ticks about. Only opacity
+ * changes — and the fade is inside the reduced-motion query, so the reduced state
+ * is the finished thing appearing at once rather than a missing one.
+ */
+
+.qe-rail li {
+  position: relative;
+}
+
+/* The tick. It is a RULE and never a glyph, which is why it may take a token that
+   would be illegal on a letter — though moss is a text token anyway and clears 7:1
+   in both grounds, so this one is honest at any size. Absolutely positioned and
+   centred on its own row, so it does not enter the flow the label defines. */
+.qe-rail li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 22px;              /* half of the 44px minimum row, so a one-line row centres */
+  width: 24px;
+  height: 1px;
+  background: var(--qe-moss);
+}
+
+.qe-rail a {
+  display: block;
+  /* A 0.82rem line at 1.35 is 17.71px, so 0.83rem of padding either side brings
+     the box to 44.3px — the interactive area WCAG 2.5.5 asks for. MEASURED, not
+     reasoned: the first draft used 0.42rem on the arithmetic of a 1rem line and
+     shipped 31.1px targets, which is the exact failure the note above describes
+     happening to the control that was written to avoid it. The ink stays small;
+     the box does not. A wrapped label is taller and that is free. */
+  padding: 0.83rem 0 0.83rem 0.55rem;
+  font-family: var(--qe-body);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  /* Moss, not rust: the contents list is the loud one and it has the measure to
+     be loud in. Moss is 7.8:1 on paper and 7.2:1 in the drawer — a text token,
+     which is the only kind a letter may take. */
+  color: var(--qe-moss);
+  text-decoration: none;
+  border-radius: var(--qe-corner-chip);
+  /* Collapsed. The link keeps its box and its pointer target at full width, so the
+     invisible label is what a reader hovers to bring the rail up. */
+  opacity: 0;
+}
+
+/* Revealed: by a pointer anywhere in the rail, by a keyboard reaching any link in
+   it, by plain view, by a pointer that cannot hover at all, and by the gates.
+   FOCUS-WITHIN IS NOT OPTIONAL. This file already says a hover-gated affordance is
+   handed to mice and to nobody else — that is why the section mark is always
+   visible. The rail is allowed to collapse only because every other way in stays
+   open: the heading text is in the DOM at all times, so a screen reader has the
+   link name whatever the opacity says; a keyboard brings the rail up by arriving
+   in it; a device with no hover never collapses it; and plain view never does. */
+.qe-rail:hover a,
+.qe-rail:focus-within a,
+.qe-rail.qe-rail-open a { opacity: 1; }
+
+.qe-rail:hover li::before,
+.qe-rail:focus-within li::before,
+.qe-rail.qe-rail-open li::before { opacity: 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .qe-rail a,
+  .qe-rail li::before { transition: opacity 0.14s ease-out; }
+}
+
+/* A pointer that cannot hover can never bring the rail up, so it never goes down.
+   Plain view is the same argument from the other side: it is the view that switches
+   off everything conditional, and a label you have to earn is conditional. */
+@media (hover: none) {
+  .qe-rail a { opacity: 1; }
+  .qe-rail li::before { opacity: 0; }
+}
+html.plain .qe-rail a { opacity: 1; }
+html.plain .qe-rail li::before { opacity: 0; }
+
+.qe-rail a:hover { color: var(--qe-rust); text-decoration: underline; }
+.qe-rail a:focus-visible {
+  outline: 3px solid var(--qe-rust);
+  outline-offset: -1px;
+}
+
+@media print {
+  /* Nowhere to navigate to on paper — the same reason .qe-contents goes. */
+  .qe-rail { display: none; }
+}
+
 /* ── the section address
  *
  * A section mark beside each heading that is a link to that heading — the thing a

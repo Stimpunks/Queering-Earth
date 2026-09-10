@@ -190,8 +190,42 @@
 
   <div class="qe-register">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-09-records">
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-rail">
       <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <h2 id="a-2026-09-09-rail">The plate was eight screens down its own home page and there was no way back up to it <a class="qe-anchor" href="#a-2026-09-09-rail"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Every heading here has had an authored address since the contents list was built, and <a href="/#what-grows-here">the plate</a> and <a href="/#the-cabinet-itself">the cabinet</a> were reachable all along &mdash; by anyone who already knew the address. <strong>A link nobody can find is close to a link that does not exist</strong>, which is the objection this house makes to an untraceable quotation, arriving as a navigation problem. There is now a rail in the left margin on every page but this one: a column of short rules that becomes the page&rsquo;s own headings when a pointer or a keyboard enters it.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Two contents lists on one screen, on purpose, and the argument for why they are not the same object</span></div>
+        <div class="qe-entry-body">
+          <p>This file already refuses a contents list for the home page because <strong>two competing navigational lists is a defect</strong>, and the rail plainly puts a second list beside the first on seven pages. The refusal stands and does not reach this: the contents list is <strong>front matter</strong> &mdash; read once, in sequence, in the measure, before the sheet begins. The rail is an <strong>instrument</strong>, glanced at from the middle of a sheet nine thousand words in. The home-page defect was two lists competing <em>to be read</em>; only one of these is for reading. <strong>Ryan&rsquo;s call, against the recommendation to hide one</strong>, and the design work went into making them unmistakably different objects rather than into hiding either: the rail is smaller, mossy rather than rust, unnumbered, unlabelled, and out past the measure in space no line of text occupies.</p>
+          <p>It is unlabelled because a visible heading would be a third copy of the words <em>On this sheet</em> and the one free to drift. The <code>aria-label</code> is authored in the markup, once per page, and <code>queering.js</code> still writes no words &mdash; one builder now fills either container, because a second loop would be a second place for the three heading exclusions to be got right.</p>
+          <p><strong>The register is the page that does not get one</strong>, for the reason it has no contents list either: twenty-eight headings averaging 147 characters, longest 226. In a 12rem column with no truncation allowed that is a four-thousand-pixel rail. <a href="#a-2026-09-09-patina">The same measurement that sent this page&rsquo;s index to the foot</a> keeps the rail off it.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The rule that says grow the hit area was followed with the wrong instrument, and then with the wrong arithmetic</span></div>
+        <div class="qe-entry-body">
+          <p>Two mistakes in the one rule this house wrote down because no gate enforces it. <strong>The instrument first:</strong> the view controls grow their targets with an absolutely positioned 44px box behind each control, and reaching for it here would have been wrong &mdash; rail links are <em>stacked</em>, so the boxes would overlap, the topmost would take every tap, and the rule asking for 44px would have produced a rail where most entries could not be pressed at all. Stacked targets take real padding.</p>
+          <p><strong>Then the arithmetic.</strong> The padding was set from the measurements of a 1rem line and shipped 44px in a comment above targets that measured <strong>31.1px</strong> &mdash; a control whose own note explains the failure, committing it. Found by measuring the rendered box rather than by reading the rule back, which is the whole reason this site measures. A 0.82rem line at 1.35 is 17.71px, so the padding is 0.83rem either side and the box is 44.3px. Verified after: no two hit areas overlap, and the tallest rail on the site &mdash; <a href="/design">the colophon</a> at fourteen entries, 690px &mdash; still clears a 900px viewport before the clamp scrolls it.</p>
+          <p>The rail lives outside the landmark, so <strong>no generator changed a single byte</strong> when all three were re-run &mdash; checked rather than assumed.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Built at runtime is free; hidden is not, and the rail was both in the same afternoon</span></div>
+        <div class="qe-entry-body">
+          <p>The rail shipped showing every label all the time, and <strong>needed nothing from <code>tools/reveal.mjs</code></strong> &mdash; both Chrome gates load over <code>file://</code> and <code>queering.js</code> is fetched by relative URL, so it runs and the labels were measured like any other text. That was proved rather than assumed, by putting a 2.9:1 colour on the contents list and watching the contrast gate report exactly one failure per heading on seven pages.</p>
+          <p><strong>Then it was collapsed to hover, and all 109 labels went into the blind spot at once.</strong> A gate skips what it cannot see, and <code>opacity: 0</code> is invisible. Proved both ways with a probe colour on the rail: <strong>with</strong> the new reveal line, 109 failures caught; <strong>without</strong> it, a clean <code>PASS</code> and 218 elements silently dropped from the count. The distinction is the thing worth keeping &mdash; <code>REVEAL</code> is for a <strong>fetch</strong> or a <strong>hidden state</strong>, and never for anything merely built at runtime.</p>
+          <p><strong>The labels are left in flow at zero opacity rather than floated in pills, and that is what makes the reveal safe for the other gate.</strong> Pills would let the ticks sit at an even pitch, as they do on the page this was modelled on &mdash; and the moment the reveal turned them on for measurement they would lie over one another, so <code>check-overlap.mjs</code> would report every label sitting on the next. In flow, what the gates measure is the expanded rail that was already clean at 1280px. The pitch is uneven instead, because a row is as tall as its own label: one row on the home page, three on <a href="/flower-codes">the waste garden</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-records">
+      <p class="qe-accession-date">2026 &middot; 9 September</p>
       <h2 id="a-2026-09-09-records">The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page <a class="qe-anchor" href="#a-2026-09-09-records"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note"><a href="/mission">Aim 12</a> says this site works in public with the working-out left in, and it pointed at two files on GitHub, because that was the only way to reach them. <strong>An aim whose receipt is on somebody else&rsquo;s website is not much of a receipt.</strong> <a href="/ledger">The attribution ledger</a> and <a href="/what-is-settled">the decision log</a> are now pages here &mdash; generated from the Markdown rather than retyped from it, because two hand-kept copies is the failure this whole house is organised against.</p>

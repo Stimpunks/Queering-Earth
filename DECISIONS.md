@@ -196,6 +196,113 @@ entries.
 
 ## Settled
 
+### A rail of the page's own headings, and both contents lists shown at once (2026-09-09)
+
+**Settled, and the interesting half was overruled.**
+
+Every `<h2>` here has carried an authored id since the contents list was built, so
+`/#what-grows-here` and `/#the-cabinet-itself` were already addresses. What was missing was
+the affordance: the plate is eight screens down the home page and the cabinet fourteen,
+and nothing on screen said either could be jumped to. **A link nobody can find is close to
+a link that does not exist** — the objection this site makes to an untraceable quotation,
+arriving as a navigation problem.
+
+**`.qe-rail` is fixed in the left margin above 77rem and absent below it.** Same
+derivation as `.qe-contents` — the page's own headings, in document order, labelled with
+their own words — through one builder in `queering.js`, because a second loop would be a
+second place for the three heading exclusions to be got right.
+
+**IT COLLAPSES TO TICKS, AND THE HEADINGS COME UP ON HOVER.** The first build showed
+every label all the time; Ryan wanted the reference site's behaviour, which is a column
+of short rules that becomes a list of headings when a pointer enters it. **This is not
+what "no scroll-spy" was refusing** — that refusal is about a mark which tracks the reader
+down the page on its own, unprompted, forever. The rail moves only when a reader asks it
+to. Nothing here follows the scroll.
+
+**The labels stay in flow at `opacity: 0`, and that one decision is what makes it safe.**
+The reference site puts each label in an absolutely positioned pill so its ticks can sit
+at an even 20px pitch. Refused here, by working out what the gates would see: revealed
+for measurement, those pills would lie over one another and `check-overlap.mjs` would
+report every label sitting on the next. Left in flow, **the revealed state is exactly the
+expanded rail already measured clean at 1280px**. The cost is paid in the collapsed
+state — a row is as tall as its own label, so the ticks are not evenly pitched. That is
+one row on the home page and three on `/flower-codes`; a hand-ruled pitch suits this
+house, and overlapping labels would be a defect.
+
+**Hover-gating is only allowed because every other way in stays open.** This repo already
+refuses a hover-gated section mark, on the grounds that hover hands a feature to mice and
+to nobody else. The rail is exempt because nothing is actually withheld: the heading text
+is in the DOM at all times, so a screen reader has every link name whatever the opacity
+says; `:focus-within` brings the rail up when a keyboard arrives in it;
+`@media (hover: none)` never collapses it on a device that cannot hover; and plain view
+never collapses it either. **Take any one of those away and the collapse becomes the
+thing this file forbids.**
+
+**BOTH LISTS SHOW, AND THAT WAS RYAN'S CALL AGAINST THE RECOMMENDATION.** The
+recommendation was to hide the in-body list wherever the rail is up, on the grounds that
+this file already refuses a contents list for the home page because two competing
+navigational lists is a defect. Ryan overruled it: he wants both. The refusal still
+stands and does not reach this case, and the reason is worth keeping because it is the
+argument that makes the overrule right rather than merely instructed —
+
+- The contents list is **front matter**: read once, in sequence, in the measure, before
+  the sheet begins.
+- The rail is an **instrument**: not read at all, glanced at from the middle of a sheet
+  nine thousand words in.
+- The home-page defect was two lists competing **to be read**. Only one of these is for
+  reading.
+
+So the design work went into making them unmistakably different objects instead of into
+hiding one: the rail is smaller, moss rather than rust, unnumbered, unlabelled, and set
+out past the measure in space no line of text ever occupies. **It is unlabelled because a
+visible heading would be a third copy of the words "On this sheet" and the one free to
+drift**; the `aria-label` is authored in the markup, once per page.
+
+**The register does not get one**, for the reason it has no contents list either:
+28 headings averaging 147 characters, longest 226, which in a 12rem column with no
+truncation allowed is a four-thousand-pixel rail.
+
+**No scroll-spy, unchanged and for the same reason** — a mark that moves as the reader
+scrolls is a second thing on screen that never settles, and a rail is where that costs
+most. `:target` still marks where a reader landed.
+
+**77rem is arithmetic, not taste.** The widest block on any page is `.qe-wide` at 46rem,
+centred, so the rail needs 12rem of column plus 2.5rem of air — 37.5rem out from the
+centre line. 77rem leaves it 1rem off the window edge at the breakpoint. Measured at the
+boundary: `display: none` at 1231px, `block` at 1232px with 136px of clearance.
+Vanishing below it is also what satisfies WCAG 1.4.10 — at 400% zoom the viewport is
+320px wide and the rail is already gone, so it cannot eat the height a reflowed page
+needs.
+
+**Two costs came out free, and both were checked rather than assumed.**
+
+- The rail sits outside the landmark, so no generator changed a byte when all three were
+  re-run. `make-markdown.mjs` and `make-search-index.mjs` already skip `nav.qe-contents`
+  by class; the rail needed no equivalent because it is never reached.
+- **Being built at runtime cost nothing; hiding the labels cost a `REVEAL` line.** Those
+  are two different things and the difference is the lesson. Both Chrome gates load over
+  `file://` and `queering.js` is included by relative URL, so it runs — the always-visible
+  first build was measured in full with no help at all, proved by injecting a 2.9:1 colour
+  into `.qe-contents a` and watching `check-contrast.mjs` report 68 failures, exactly each
+  page's heading count minus one. **Collapsing the labels to `opacity: 0` put all 109 of
+  them back in the blind spot**, which is the hidden-state case `REVEAL` exists for. Proved
+  both ways with a probe colour on `.qe-rail a`: with the line, 109 failures caught;
+  without it, a clean `PASS` and 218 elements silently dropped from the count. **`REVEAL`
+  is for a fetch or a hidden state — never for anything merely built at runtime.**
+
+**The hit-area rule was got wrong twice, in one control.**
+
+- **Wrong instrument.** `.qe-controls` grows its targets with an absolutely positioned
+  44px box behind each control. Rail links are **stacked**, so those boxes would overlap,
+  the topmost would take every tap, and the rule asking for 44px would have produced a
+  rail where most entries could not be pressed. Stacked targets take real padding.
+- **Wrong arithmetic.** The padding was then set from the measurements of a 1rem line, so
+  the control shipped a comment claiming 44px above targets measuring **31.1px**. Caught
+  by measuring the rendered box. A 0.82rem line at 1.35 is 17.71px, so 0.83rem either
+  side gives 44.3px. Re-measured after: no two hit areas overlap, and the tallest rail on
+  the site — `/design` at fourteen entries, 690px — clears a 900px viewport before the
+  clamp scrolls it.
+
 ### An eighth gate: check-card-order, and why the port is a rewrite (2026-09-09)
 
 The plate shipped `1-6, 8, 7` and `/the-tempest` shipped `4, 1, 2, 3`. **All seven other

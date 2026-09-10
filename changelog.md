@@ -36,6 +36,36 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## The plate was eight screens down its own home page and there was no way back up to it
+
+Every heading here has had an authored address since the contents list was built, and [the plate](https://queering.earth/#what-grows-here) and [the cabinet](https://queering.earth/#the-cabinet-itself) were reachable all along — by anyone who already knew the address. **A link nobody can find is close to a link that does not exist**, which is the objection this house makes to an untraceable quotation, arriving as a navigation problem. There is now a rail in the left margin on every page but this one: a column of short rules that becomes the page’s own headings when a pointer or a keyboard enters it.
+
+CabinetTwo contents lists on one screen, on purpose, and the argument for why they are not the same object
+
+This file already refuses a contents list for the home page because **two competing navigational lists is a defect**, and the rail plainly puts a second list beside the first on seven pages. The refusal stands and does not reach this: the contents list is **front matter** — read once, in sequence, in the measure, before the sheet begins. The rail is an **instrument**, glanced at from the middle of a sheet nine thousand words in. The home-page defect was two lists competing *to be read*; only one of these is for reading. **Ryan’s call, against the recommendation to hide one**, and the design work went into making them unmistakably different objects rather than into hiding either: the rail is smaller, mossy rather than rust, unnumbered, unlabelled, and out past the measure in space no line of text occupies.
+
+It is unlabelled because a visible heading would be a third copy of the words *On this sheet* and the one free to drift. The `aria-label` is authored in the markup, once per page, and `queering.js` still writes no words — one builder now fills either container, because a second loop would be a second place for the three heading exclusions to be got right.
+
+**The register is the page that does not get one**, for the reason it has no contents list either: twenty-eight headings averaging 147 characters, longest 226. In a 12rem column with no truncation allowed that is a four-thousand-pixel rail. [The same measurement that sent this page’s index to the foot](#a-2026-09-09-patina) keeps the rail off it.
+
+CabinetThe rule that says grow the hit area was followed with the wrong instrument, and then with the wrong arithmetic
+
+Two mistakes in the one rule this house wrote down because no gate enforces it. **The instrument first:** the view controls grow their targets with an absolutely positioned 44px box behind each control, and reaching for it here would have been wrong — rail links are *stacked*, so the boxes would overlap, the topmost would take every tap, and the rule asking for 44px would have produced a rail where most entries could not be pressed at all. Stacked targets take real padding.
+
+**Then the arithmetic.** The padding was set from the measurements of a 1rem line and shipped 44px in a comment above targets that measured **31.1px** — a control whose own note explains the failure, committing it. Found by measuring the rendered box rather than by reading the rule back, which is the whole reason this site measures. A 0.82rem line at 1.35 is 17.71px, so the padding is 0.83rem either side and the box is 44.3px. Verified after: no two hit areas overlap, and the tallest rail on the site — [the colophon](https://queering.earth/design) at fourteen entries, 690px — still clears a 900px viewport before the clamp scrolls it.
+
+The rail lives outside the landmark, so **no generator changed a single byte** when all three were re-run — checked rather than assumed.
+
+CabinetBuilt at runtime is free; hidden is not, and the rail was both in the same afternoon
+
+The rail shipped showing every label all the time, and **needed nothing from `tools/reveal.mjs`** — both Chrome gates load over `file://` and `queering.js` is fetched by relative URL, so it runs and the labels were measured like any other text. That was proved rather than assumed, by putting a 2.9:1 colour on the contents list and watching the contrast gate report exactly one failure per heading on seven pages.
+
+**Then it was collapsed to hover, and all 109 labels went into the blind spot at once.** A gate skips what it cannot see, and `opacity: 0` is invisible. Proved both ways with a probe colour on the rail: **with** the new reveal line, 109 failures caught; **without** it, a clean `PASS` and 218 elements silently dropped from the count. The distinction is the thing worth keeping — `REVEAL` is for a **fetch** or a **hidden state**, and never for anything merely built at runtime.
+
+**The labels are left in flow at zero opacity rather than floated in pills, and that is what makes the reveal safe for the other gate.** Pills would let the ticks sit at an even pitch, as they do on the page this was modelled on — and the moment the reveal turned them on for measurement they would lie over one another, so `check-overlap.mjs` would report every label sitting on the next. In flow, what the gates measure is the expanded rail that was already clean at 1280px. The pitch is uneven instead, because a row is as tall as its own label: one row on the home page, three on [the waste garden](https://queering.earth/flower-codes).
+
+2026 · 9 September
+
 ## The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page
 
 [Aim 12](https://queering.earth/mission) says this site works in public with the working-out left in, and it pointed at two files on GitHub, because that was the only way to reach them. **An aim whose receipt is on somebody else’s website is not much of a receipt.** [The attribution ledger](https://queering.earth/ledger) and [the decision log](https://queering.earth/what-is-settled) are now pages here — generated from the Markdown rather than retyped from it, because two hand-kept copies is the failure this whole house is organised against.

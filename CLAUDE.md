@@ -86,8 +86,8 @@ held to the same standard as anything on Star Stuff, and arguably a stricter one
   - **`queering.css`** — the **canonical palette tokens** (`--qe-*`, the single source of
     truth for every recurring colour), the type stack, the shared layout, the botanical
     art styles, and the print sheet.
-  - **`queering.js`** — the view controls (plain view, and the ground) and the
-    contents list. **`queering-search.js` is a third file, loaded only by `/search`**,
+  - **`queering.js`** — the view controls (plain view, and the ground), the
+    contents list, and the drift rail. **`queering-search.js` is a third file, loaded only by `/search`**,
     because a result is a sentence from *another* page put onto this one, which is past
     the boundary below however carefully it is done — and widening the boundary to fit
     would have cost the boundary. It writes no label either: every word a searcher sees
@@ -555,7 +555,8 @@ it is a register rather than a list of releases.
   section a reader cannot link to is a section nobody can cite, and the register was italicising
   three home-page section names it had no way to reach.
 - **A contents list goes only on a page long enough to want one**, and the page declares that
-  by including the container. Six pages have one; five do not.
+  by including the container. Seven pages have one; nine do not — the count said six
+  until `/mission` was mounted, which is what a count in a rule does.
 
 **The home page is the case that separates them.** Its own content *is* a contents list — the
 plate of eight numbered cards — so a `.qe-contents` above the prose would put two competing
@@ -597,6 +598,65 @@ by including the empty `<nav>`; `queering.js` fills it from that page's own `<h2
   first entry by three and a half screens. Truncating a label is this site's characteristic
   failure applied to itself, and a short second label is the drift. The register keeps its
   section marks and its addresses, and gets `.qe-sheet-index` instead — see below.
+
+### The rail is the same headings as an instrument, not as front matter
+
+`.qe-rail` is fixed in the left margin above **77rem** and absent below it, on every page
+but `/changelog`. Same derivation as `.qe-contents` through one builder in `queering.js`,
+so **a new page needs the empty `nav` and its `aria-label`** and nothing else — mount it,
+list it, log it, file it, route it, group it, **rail it**.
+
+**Both lists show on the seven pages that have a contents list, and that is authored.**
+The rule above refuses two competing navigational lists on the home page and it still
+holds: a contents list is read once, in sequence, in the measure; a rail is glanced at
+from the middle of a sheet. Only one of them is for reading. **So the rail must stay
+unmistakably not-the-list** — smaller, moss rather than rust, unnumbered, unlabelled, out
+past the measure. Ryan's call, over the recommendation to hide one; see `DECISIONS.md`.
+
+**The register does not get one**, for the reason it has no contents list: 28 headings
+averaging 147 characters is a four-thousand-pixel column, and truncating is the failure
+this site is organised against.
+
+**IT COLLAPSES TO TICKS AND THE HEADINGS COME UP ON HOVER**, which is not what the
+no-scroll-spy rule refuses: a spy tracks the reader down the page unprompted and forever,
+and this moves only when a reader asks. **The labels stay in flow at `opacity: 0`** rather
+than floating in absolutely positioned pills, and that is load-bearing rather than
+stylistic — pills would lie over one another the moment `REVEAL` turned them on, and
+`check-overlap.mjs` would report every label sitting on the next. In flow, the revealed
+state is the expanded rail already measured clean. The price is an uneven tick pitch,
+because a row is as tall as its own label.
+
+**HOVER-GATING IS LICENSED HERE BY FOUR THINGS AT ONCE, AND REMOVING ANY ONE BREAKS IT.**
+This file forbids a hover-gated section mark because hover hands a feature to mice and to
+nobody else. The rail is exempt only because nothing is withheld: the heading text is in
+the DOM at all times so a screen reader always has the link name; `:focus-within` raises
+it for a keyboard; `@media (hover: none)` never collapses it where hover does not exist;
+and `html.plain` never collapses it either.
+
+**77rem is arithmetic.** `.qe-wide` is 46rem centred, the column is 12rem, the air is
+2.5rem — 37.5rem out from the centre line. Below the breakpoint it is gone rather than
+squeezed, which is also what keeps WCAG 1.4.10 satisfied at 400% zoom. `check-overlap.mjs`
+measures screen at 1280px, so **the rail is live in that pass** and a collision is
+reportable.
+
+**It sits outside the landmark, so no generator sees it** — re-running all three changed
+no byte.
+
+**BUILT AT RUNTIME IS FREE; HIDDEN IS NOT, AND THOSE ARE DIFFERENT THINGS.** Both Chrome
+gates load over `file://` and `queering.js` is included by relative URL, so it runs — the
+always-visible first draft of this rail was measured in full with no help at all.
+Collapsing the labels to `opacity: 0` put all 109 of them straight back into the blind
+spot, and `tools/reveal.mjs` carries the line that brings them out. Proved both ways with
+a probe colour: with the line, 109 failures caught; without it, a clean `PASS` and 218
+elements silently dropped. **`REVEAL` is for a fetch or a hidden state — never for
+anything merely built at runtime.**
+
+**STACKED TARGETS TAKE REAL PADDING, NOT THE `::after` BOX.** The hit-area rule above was
+followed with the wrong instrument and then the wrong arithmetic in one pass: the
+`.qe-controls` technique would have overlapped every box so the topmost took every tap,
+and the padding was then set from a 1rem line and shipped **31.1px** targets under a
+comment claiming 44. A 0.82rem line at 1.35 is 17.71px; 0.83rem either side is 44.3px.
+**Measure the rendered box, and check no two hit areas overlap.**
 
 ### A contents list is front matter; an index is back matter
 

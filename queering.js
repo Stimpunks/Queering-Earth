@@ -1,5 +1,5 @@
-/* queering.js — the view controls and the contents list. It may derive navigation
- * from the DOM; it may never create words.
+/* queering.js — the view controls, the contents list and the drift rail. It may
+ * derive navigation from the DOM; it may never create words.
  *
  * That boundary replaced an earlier one, "the two view controls, and nothing else",
  * on 2026-09-09. A count of features is a rule that gets quietly broken the first
@@ -96,9 +96,11 @@
     paintGround();
   }
 
-  /* ── on this sheet
+  /* ── on this sheet, and in the margin
    *
-   * Built from the page's own <h2>s, never typed. See the long note in
+   * Two views of one derivation: the contents list inside the measure, and the
+   * drift rail out in the left margin above 77rem. Both are built from the page's
+   * own <h2>s, never typed. See the long note in
    * queering.css for why a hand-kept contents list is the one thing this site's
    * oldest rule forbids.
    *
@@ -122,9 +124,20 @@
    * a truncated one would be this site's characteristic failure applied to itself.
    */
 
-  var contents = document.querySelector('.qe-contents');
-  if (contents) {
-    var list = contents.querySelector('ol');
+  /* ONE BUILDER, TWO CONTAINERS. The contents list and the drift rail are the
+   * same derivation — this page's own <h2>s, in document order, labelled with
+   * their own words — shown twice in two registers. A second loop would be a
+   * second place for the three exclusions below to be got right, and the one
+   * that fell behind would be the one nobody was looking at.
+   *
+   * Both containers hold an empty <ol> in the served markup and both stay hidden
+   * until this fills them, so a reader without this script sees neither an empty
+   * ruled box nor an empty rail.
+   */
+  function fillHeadings(container) {
+    var list = container.querySelector('ol');
+    if (!list) return 0;
+
     var heads = document.querySelectorAll('main h2[id]');
     var made = 0;
 
@@ -149,12 +162,19 @@
       made++;
     }
 
-    /* Hidden in the markup so a reader without this script never sees an empty
-       ruled box, and still hidden if the page asked for contents and has no
-       headings to put in them — which is a markup mistake, and showing an empty
-       list is not how to report it. */
-    if (made) contents.hidden = false;
+    if (made) container.hidden = false;
+    return made;
   }
+
+  var contents = document.querySelector('.qe-contents');
+  if (contents) fillHeadings(contents);
+
+  /* The rail lives OUTSIDE <main>, which is what keeps it out of the mirror, out
+     of search-index.json and out of every .md — and is why it needed no line in
+     either generator's skip list. It is hidden in the markup for the same reason
+     the contents list is. */
+  var rail = document.querySelector('.qe-rail');
+  if (rail) fillHeadings(rail);
 
   /* ── index by sheet
    *

@@ -59,6 +59,27 @@ export const REVEAL = String.raw`(() => {
     d.open = true; d.setAttribute('data-ss-revealed', 'details'); entries++;
   }
 
+  /* THE DRIFT RAIL, whose labels sit at opacity 0 until a pointer or a keyboard
+     brings them up. That is the hidden-state case this comment block asks for, and
+     it arrived one component after the note was written: the rail ships 109 links
+     across fifteen pages and every one of them is invisible to a gate that skips
+     what it cannot see. An earlier, always-visible draft of the same component
+     needed nothing here, which is the distinction worth keeping — REVEAL is for a
+     fetch or a hidden state, not for anything merely built at runtime.
+
+     THE LABELS ARE LEFT IN FLOW BY THE STYLESHEET SO THAT THIS IS SAFE FOR BOTH
+     GATES. Revealing them changes no geometry: the rail measured here is the same
+     expanded rail check-overlap.mjs measures at 1280px, rather than a stack of
+     absolutely positioned pills laid over one another, which is what this would
+     have had to switch on had the labels floated. */
+  let rails = 0;
+  for (const r of document.querySelectorAll('.qe-rail')) {
+    if (r.hidden) continue;
+    r.classList.add('qe-rail-open');
+    r.setAttribute('data-ss-revealed', 'qe-rail-open');
+    rails++;
+  }
+
   /* THE FINDING AID, whose entire result UI is built at runtime and is therefore
      invisible to this gate as the page is served. That is the case the paragraph
      above describes, and it is the worst version of it: /search measures 193 clean
@@ -144,7 +165,7 @@ export const REVEAL = String.raw`(() => {
     results = into.querySelectorAll('.qe-result').length;
   }
 
-  return JSON.stringify({ spreads, entries, results });
+  return JSON.stringify({ spreads, entries, results, rails });
 })()`;
 
 export const UNREVEAL = String.raw`(() => {
