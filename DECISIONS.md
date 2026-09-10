@@ -149,6 +149,54 @@ editorial and neither needs deciding before the page exists.
 
 ## Settled
 
+### An eighth gate: check-card-order, and why the port is a rewrite (2026-09-09)
+
+The plate shipped `1-6, 8, 7` and `/the-tempest` shipped `4, 1, 2, 3`. **All seven other
+gates passed both**, and none was wrong to — order is not colour, position, freshness,
+routing, structure, headers or the manifest. The house rule is to port a Star Stuff check
+when the failure becomes possible here; this one had already happened twice.
+
+**The port could not be a copy.** Upstream checks ascending order *within each series*,
+because a collection there interleaves Zine and Field Guide numbers deliberately. This
+site has no series: one accession run, kind chip as a label. No. 8 is a Wall and No. 7 a
+Reading, so under the series split the broken plate is two perfectly ascending sequences
+and **the gate would have certified the page that prompted it**. Verified by patching the
+split in and watching it report `ok · 0 problem(s)`, then taking it out and watching the
+same plate fail. *Recorded because the next port will look equally straightforward.*
+
+**Three rules, each made to fail before being believed:** ascending within a grid (the
+restored plate); cards outside any grid (one card moved out); every card agreeing with the
+plate about a sheet's number and kind. Plus the empty-authority guard — break the card
+selector on `index.html` and it reports NOT MEASURED rather than clean, which is the
+overlap gate's empty-pass lesson arriving in a second tool — and `--check` both ways,
+exit 1 with, exit 0 without.
+
+**Rule 3 earned its place on its first honest run**, the same way the upstream tool's
+second check did. Fifteen cards disagreed with the plate: `/404` filed `/coming-to-terms`
+as a Reading when it is Ryan's own essay, and `/monotropa-uniflora` as a Reading where the
+plate says Wall; and the No. 8 accession had written its kind chips with articles — "A
+wall" on seven pages, "A reading" and "An essay" through its own nav — against bare nouns
+on the fifty cards before it. **The plate is the authority and not the majority**: a vote
+among sibling navs would have let a fault copied onto seven pages outrank the one page
+whose subject is what the cabinet holds.
+
+**Where the plate is silent, mutual agreement is still required.** It does not card itself,
+so nothing could arbitrate `/` being "Plate" on one nav and "The plate" on another. That is
+reported apart and counted once per address, not once per page, because printing it twice
+invites somebody to fix whichever file they opened first. No other kind chip carries an
+article, so "Plate".
+
+**Refused: checking the plate against `tools/pages.mjs`.** They agree today, which is why
+it is tempting. They are two different facts — the number records when a sheet was
+accessioned, the group records the order a reader should meet the pages — and mounting
+Sheet No. 9 third would diverge them legitimately. Coupling them makes an editorial
+decision a build failure.
+
+**Still not ported:** `check-classes`, `check-sheets`, `check-embeds`. `check-classes` is
+the one closest to the bar — a class with no rule renders black and no gate here catches
+it, and it happened twice in one afternoon — but unlike this one it needs a browser,
+because it wants the real cascade.
+
 ### The cabinet's own pages came out of the footer (2026-09-09)
 
 `/design`, `/changelog`, `/search` and `/privacy` were reachable only from the footer of

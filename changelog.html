@@ -190,8 +190,42 @@
 
   <div class="qe-register">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-09-plate">
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-cardorder">
       <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <h2 id="a-2026-09-09-cardorder">An eighth gate, ported the same day the failure it catches happened twice &mdash; and its first honest run found fifteen more <a class="qe-anchor" href="#a-2026-09-09-cardorder"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">The house rule is to port a Star Stuff check when the failure it catches becomes <em>possible</em> here. <code>check-card-order.mjs</code> did not clear that bar; it cleared a higher one. The plate shipped out of sequence, a sibling nav shipped out of sequence, and <strong>all seven existing gates passed both</strong> &mdash; correctly, because order is not colour, position, freshness, routing, structure, headers or the manifest, and a grid in the wrong order looks exactly like a grid in the right one.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The upstream tool would have certified the exact plate that prompted it, and finding that out was most of the port</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Star Stuff checks ascending order <em>within each series</em></strong>, because one of its collections interleaves Zine and Field Guide numbers on purpose and a single merged sequence would fail a page for doing what it means to do. <strong>This site has no series.</strong> There is one accession run and the kind chip is a label on it &mdash; No. 1 a Reading, No. 2 an Essay, No. 8 a Wall &mdash; and they ascend together.</p>
+          <p><strong>Ported unchanged, that split would have been worse than no gate.</strong> No. 8 is a Wall and No. 7 is a Reading, so <code>1, 2, 3, 4, 5, 6, 8, 7</code> is two perfectly ascending series. <strong>Proved rather than reasoned about:</strong> the broken plate was put back, the series split was patched into the tool, and it reported <code>ok &middot; 0 problem(s)</code> on it. Then the split came out and the same plate reported <code>No. 7 follows No. 8</code>. A port is a rewrite when the thing being ported encodes an assumption the new site does not share.</p>
+          <p><strong>Every rule was made to fail before it was believed.</strong> Rule 1 on the restored plate; rule 2 by dropping a card outside every grid; the empty-authority guard by breaking the card selector on the plate and watching it report NOT MEASURED rather than clean &mdash; the overlap gate&rsquo;s empty-pass lesson arriving in a second tool. <strong>And <code>--check</code> both ways</strong>, because that flag has now been load-bearing and missing twice in this repo: exit 1 with it, exit 0 without.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">Fifteen cards called a sheet something the plate does not call it, including an essay filed as a reading</span></div>
+        <div class="qe-entry-body">
+          <p>A sheet&rsquo;s number and kind are written out once on every page that cards it &mdash; ten copies of one fact, which is the drift this site names in every rule it has. So the gate got a third rule: <strong>every card must agree with the plate about the sheet it points at.</strong> Rule 1 is only as good as the numbers it sorts, and a grid ordered by a wrong number ascends perfectly.</p>
+          <p><strong>It found two mislabels and thirteen drifts on its first run.</strong> <code>/404</code> called <a href="/coming-to-terms">Sheet No.&nbsp;2</a> a <q>Reading</q> &mdash; it is Ryan&rsquo;s own essay, and the plate says Essay &mdash; and called <a href="/monotropa-uniflora">Sheet No.&nbsp;8</a> a <q>Reading</q> where the plate says Wall. Separately, the No.&nbsp;8 accession wrote its kind chips with articles, <q>A wall</q> on seven pages and <q>A reading</q> and <q>An essay</q> throughout its own sibling nav, against bare nouns on the fifty cards that came before. All fifteen now say what the plate says.</p>
+          <p><strong>The plate is the authority, not the majority.</strong> A vote among sibling navs would have let <q>A wall</q>, copied onto seven pages, outrank the one page whose subject is what this cabinet holds.</p>
+          <p><strong>And where the plate is silent, the copies must still agree with each other.</strong> The plate does not card itself, so nothing could arbitrate <code>/</code> being a <q>Plate</q> on one nav and <q>The plate</q> on another; that is reported apart, once per address rather than once per page, because printing it twice invites somebody to fix whichever file they read first. No other kind chip here carries an article, so it is <q>Plate</q>.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">What it refuses to check, and the one that looks most like an omission</span></div>
+        <div class="qe-entry-body">
+          <p><strong>It does not check the plate against <code>tools/pages.mjs</code>.</strong> They agree today and the temptation is obvious, but they are two different facts: the number records <em>when a sheet was accessioned</em> and <code>pages.mjs</code> records <em>the order a reader should meet the pages</em>. Mount Sheet No.&nbsp;9 and decide it reads best third, and the two diverge legitimately. Coupling them would turn an editorial decision into a build failure.</p>
+          <p>It also declines to order the unnumbered cards &mdash; there is no mechanical answer to where the colophon belongs relative to the register &mdash; and it says so in the summary rather than quietly leaving six cards out of the denominator.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-plate">
+      <p class="qe-accession-date">2026 &middot; 9 September</p>
       <h2 id="a-2026-09-09-plate">The plate said seven and carried eight, and two of them were in the wrong order &mdash; on the one page whose job is to say what is here <a class="qe-anchor" href="#a-2026-09-09-plate"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Sheet No.&nbsp;8 was mounted, carded and logged, and the sentence above the plate was left saying <q>Seven sheets, so far.</q> The card went in at the end of the list rather than in its place, so the plate ran 1&ndash;6, 8, 7. <strong>Neither is a hard fact getting away from us; both are the register&rsquo;s own bookkeeping getting away from us</strong>, which on a site that publishes an accession register is the more embarrassing of the two.</p>

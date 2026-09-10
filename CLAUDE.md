@@ -697,7 +697,7 @@ anything that needs fixing there in `DECISIONS.md` instead.
 
 ## The checks
 
-Run before shipping. All seven are browser-free or Chrome-only; nothing needs `npm install`,
+Run before shipping. All eight are browser-free or Chrome-only; nothing needs `npm install`,
 and the default path of every one of them is offline.
 
 ```bash
@@ -708,6 +708,7 @@ node tools/check-addresses.mjs          # one address per page: a forced 301! pe
 node tools/check-metadata.mjs           # derived files current, JSON-LD agreeing, credit correct
 node tools/check-cache.mjs              # no markup-coupled asset outliving the markup
 node tools/check-overlap.mjs --check    # no text on text, on screen and on paper, nothing clipped
+node tools/check-card-order.mjs --check # every grid ascends, every card agrees with the plate
 ```
 
 **`--check` is load-bearing on the contrast gate and this file left it off until
@@ -726,10 +727,37 @@ them tells every agent on the web that we wrote Woolf.
 after any change to `_redirects`, because **a redirect loop is how that file fails** and a
 loop is invisible offline. It asserts each twin is a single hop and not a chain.
 
-Star Stuff has four more (`check-classes`, `check-sheets`, `check-embeds`,
-`check-card-order`). **Port one when the failure it catches becomes possible here** — not
-before. A check that cannot fail is a check nobody reads. `check-cache.mjs` is native and
-exists because the failure happened, which is the same bar.
+Star Stuff has three more (`check-classes`, `check-sheets`, `check-embeds`).
+**Port one when the failure it catches becomes possible here** — not before. A check that
+cannot fail is a check nobody reads. `check-cache.mjs` is native and exists because the
+failure happened, which is the same bar.
+
+**`check-card-order.mjs` was ported on 2026-09-09**, and it did not clear that bar so much
+as fall over it: the plate shipped `1–6, 8, 7` and a sibling nav shipped `4, 1, 2, 3`, and
+all seven other gates passed both. Three things about the port are load-bearing:
+
+- **A PORT IS A REWRITE WHEN THE ORIGINAL ENCODES AN ASSUMPTION THIS SITE DOES NOT SHARE.**
+  Upstream checks ascending order *within each series*, because a collection there
+  interleaves Zine and Field Guide numbers on purpose. **This site has no series** — one
+  accession run, with the kind chip as a label on it. Ported unchanged, No. 8 being a Wall
+  and No. 7 a Reading makes the broken plate two perfectly ascending series, and the gate
+  would have certified the exact page that prompted it. Proved by patching the split back
+  in and watching it report `ok`, not by reading the code.
+- **The plate is the authority for a sheet's number and kind, and it is not a vote.**
+  Rule 1 is only as good as the numbers it sorts. The first honest run found fifteen cards
+  disagreeing with `index.html`, including `/coming-to-terms` filed as a Reading when it is
+  Ryan's own essay. A majority among sibling navs would have let a fault copied onto seven
+  pages outrank the one page whose subject is what the cabinet holds. Where the plate is
+  silent — it does not card itself — the copies must still agree with each other, and that
+  is reported once per address rather than once per page.
+- **It does not check the plate against `tools/pages.mjs`, on purpose.** They agree today
+  and they are two different facts: the number says when a sheet was accessioned, the group
+  says the order a reader should meet the pages. Mount Sheet No. 9 and decide it reads best
+  third and they diverge legitimately. Coupling them would make an editorial decision a
+  build failure.
+
+**A new card needs its number in the right place and its kind copied from the plate**, and
+a new sheet needs a card on every page that cards its siblings.
 
 **`check-overlap.mjs` was ported on 2026-09-09**, because a corner-floated accession stamp
 was designed, measured and refused partly for want of it — and refusing a design for want of

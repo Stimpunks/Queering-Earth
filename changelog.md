@@ -36,6 +36,36 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## An eighth gate, ported the same day the failure it catches happened twice — and its first honest run found fifteen more
+
+The house rule is to port a Star Stuff check when the failure it catches becomes *possible* here. `check-card-order.mjs` did not clear that bar; it cleared a higher one. The plate shipped out of sequence, a sibling nav shipped out of sequence, and **all seven existing gates passed both** — correctly, because order is not colour, position, freshness, routing, structure, headers or the manifest, and a grid in the wrong order looks exactly like a grid in the right one.
+
+CabinetThe upstream tool would have certified the exact plate that prompted it, and finding that out was most of the port
+
+**Star Stuff checks ascending order *within each series***, because one of its collections interleaves Zine and Field Guide numbers on purpose and a single merged sequence would fail a page for doing what it means to do. **This site has no series.** There is one accession run and the kind chip is a label on it — No. 1 a Reading, No. 2 an Essay, No. 8 a Wall — and they ascend together.
+
+**Ported unchanged, that split would have been worse than no gate.** No. 8 is a Wall and No. 7 is a Reading, so `1, 2, 3, 4, 5, 6, 8, 7` is two perfectly ascending series. **Proved rather than reasoned about:** the broken plate was put back, the series split was patched into the tool, and it reported `ok · 0 problem(s)` on it. Then the split came out and the same plate reported `No. 7 follows No. 8`. A port is a rewrite when the thing being ported encodes an assumption the new site does not share.
+
+**Every rule was made to fail before it was believed.** Rule 1 on the restored plate; rule 2 by dropping a card outside every grid; the empty-authority guard by breaking the card selector on the plate and watching it report NOT MEASURED rather than clean — the overlap gate’s empty-pass lesson arriving in a second tool. **And `--check` both ways**, because that flag has now been load-bearing and missing twice in this repo: exit 1 with it, exit 0 without.
+
+Label correctedFifteen cards called a sheet something the plate does not call it, including an essay filed as a reading
+
+A sheet’s number and kind are written out once on every page that cards it — ten copies of one fact, which is the drift this site names in every rule it has. So the gate got a third rule: **every card must agree with the plate about the sheet it points at.** Rule 1 is only as good as the numbers it sorts, and a grid ordered by a wrong number ascends perfectly.
+
+**It found two mislabels and thirteen drifts on its first run.** `/404` called [Sheet No. 2](https://queering.earth/coming-to-terms) a “Reading” — it is Ryan’s own essay, and the plate says Essay — and called [Sheet No. 8](https://queering.earth/monotropa-uniflora) a “Reading” where the plate says Wall. Separately, the No. 8 accession wrote its kind chips with articles, “A wall” on seven pages and “A reading” and “An essay” throughout its own sibling nav, against bare nouns on the fifty cards that came before. All fifteen now say what the plate says.
+
+**The plate is the authority, not the majority.** A vote among sibling navs would have let “A wall”, copied onto seven pages, outrank the one page whose subject is what this cabinet holds.
+
+**And where the plate is silent, the copies must still agree with each other.** The plate does not card itself, so nothing could arbitrate `/` being a “Plate” on one nav and “The plate” on another; that is reported apart, once per address rather than once per page, because printing it twice invites somebody to fix whichever file they read first. No other kind chip here carries an article, so it is “Plate”.
+
+CabinetWhat it refuses to check, and the one that looks most like an omission
+
+**It does not check the plate against `tools/pages.mjs`.** They agree today and the temptation is obvious, but they are two different facts: the number records *when a sheet was accessioned* and `pages.mjs` records *the order a reader should meet the pages*. Mount Sheet No. 9 and decide it reads best third, and the two diverge legitimately. Coupling them would turn an editorial decision into a build failure.
+
+It also declines to order the unnumbered cards — there is no mechanical answer to where the colophon belongs relative to the register — and it says so in the summary rather than quietly leaving six cards out of the denominator.
+
+2026 · 9 September
+
 ## The plate said seven and carried eight, and two of them were in the wrong order — on the one page whose job is to say what is here
 
 Sheet No. 8 was mounted, carded and logged, and the sentence above the plate was left saying “Seven sheets, so far.” The card went in at the end of the list rather than in its place, so the plate ran 1–6, 8, 7. **Neither is a hard fact getting away from us; both are the register’s own bookkeeping getting away from us**, which on a site that publishes an accession register is the more embarrassing of the two.
