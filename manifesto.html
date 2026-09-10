@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nothing here was inevitable &mdash; Queering Earth</title>
+<meta name="description" content="The manifesto of queering.earth: normal is an arrangement and arrangements have authors, weird is a verb, and a reading is where an arrangement gets contested. Adapted from the Neuroqueer Learning Spaces Manifesto under its own licence.">
+<link rel="canonical" href="https://queering.earth/manifesto">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Queering Earth">
+<meta property="og:title" content="Nothing here was inevitable">
+<meta property="og:description" content="Normal is an arrangement and arrangements have authors. Weird is a verb. A reading is where an arrangement gets contested.">
+<meta property="og:url" content="https://queering.earth/manifesto">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://queering.earth/images/og-manifesto.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nothing here was inevitable. Normal is an arrangement and arrangements have authors. Weird is a verb. A reading is where an arrangement gets contested.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nothing here was inevitable">
+<meta name="twitter:description" content="Normal is an arrangement and arrangements have authors. Weird is a verb. A reading is where an arrangement gets contested.">
+<meta name="twitter:image" content="https://queering.earth/images/og-manifesto.png">
+<meta name="twitter:image:alt" content="Nothing here was inevitable. Normal is an arrangement and arrangements have authors. Weird is a verb. A reading is where an arrangement gets contested.">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- The faces are self-hosted and declared in queering.css. Preloading the body
+     roman is the one that pays: it is the first thing every page needs, and there
+     is no cross-origin handshake to wait on any more. crossorigin is required
+     even same-origin — a font is always fetched in CORS mode. -->
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
+     either one would flash the wrong page: the decorated sheet at a reader who
+     turned it off, or the daylight sheet at one who asked for the drawer. -->
+<script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
+<!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
+     rel=alternate points an agent at this page's Markdown source, derived from this
+     page's own main landmark by tools/make-markdown.mjs.
+
+     NO ANGLE-BRACKET TAG NAMES IN A COMMENT NEAR THE HEAD. Writing the landmark's name
+     with brackets here made a /<main[^>]*>/ extractor match inside this very comment
+     and take the head as the page body. The SKS mirror reads that landmark too. -->
+<link rel="describedby" href="/llms.txt" type="text/markdown" title="Site index for agents">
+<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Queering Earth — the accession register">
+<link rel="alternate" href="https://queering.earth/manifesto.md" type="text/markdown" title="What this cabinet is for — Markdown source">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://queering.earth/manifesto#page",
+  "name": "Nothing here was inevitable",
+  "description": "The manifesto of queering.earth: normal is an arrangement and arrangements have authors, weird is a verb, and a reading is where an arrangement gets contested. Adapted from the Neuroqueer Learning Spaces Manifesto under its own licence.",
+  "url": "https://queering.earth/manifesto",
+  "inLanguage": "en",
+  "isFamilyFriendly": true,
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "publisher": [
+    {
+      "@type": "Organization",
+      "name": "Stimpunks Foundation",
+      "url": "https://stimpunks.org/"
+    },
+    {
+      "@type": "Organization",
+      "name": "More Realms",
+      "url": "https://morerealms.com/"
+    }
+  ],
+  "dateModified": "2026-09-09",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Queering Earth",
+    "url": "https://queering.earth/"
+  },
+  "encoding": {
+    "@type": "MediaObject",
+    "encodingFormat": "text/markdown",
+    "contentUrl": "https://queering.earth/manifesto.md"
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+</div>
+
+<!-- The drift rail: this page's own h2s, in the left margin, above 77rem and
+     nowhere below it. Empty here and filled by queering.js — one derivation, two
+     views, the other being the contents list inside the measure. OUTSIDE the
+     landmark, like every other nav here, so the mirror never reads it. -->
+<nav class="qe-rail" aria-label="On this page" hidden>
+  <ol></ol>
+  <svg class="qe-botanical qe-rail-sprig" viewBox="0 0 28 27" aria-hidden="true" focusable="false">
+    <path class="stem" style="--len:34" d="M0.6,0 C0.7,7.2 1.9,13.4 4.6,18.4 C6.1,21.2 7.8,23.2 9.6,24.6"/>
+    <g class="sprout sprout-leaf" style="--i:0">
+      <path d="M1.7,7.9 C5.1,5.5 8.9,6.6 10.8,10.2 C7.3,11.3 3.6,10.4 1.7,7.9 Z"/>
+    </g>
+    <g class="sprout sprout-leaf" style="--i:1">
+      <path d="M3.5,14.6 C7.2,12.8 11.2,14.1 13.2,17.9 C9.5,18.8 5.6,17.4 3.5,14.6 Z"/>
+    </g>
+    <g class="sprout" style="--i:2">
+      <circle cx="10.4" cy="25.4" r="1.5"/>
+    </g>
+  </svg>
+</nav>
+
+<main id="main" tabindex="-1">
+
+  <header class="qe-masthead">
+    <p class="qe-kicker"><a href="/">Queering Earth</a> &middot; The founding papers</p>
+    <h1>Nothing here was inevitable</h1>
+    <p class="qe-tagline">The argument the aims rest on.</p>
+  </header>
+
+  <p class="qe-lede"><a href="/mission">The mission</a> lists what this cabinet is for and names the page keeping each aim. This is the argument underneath them. It is <a href="#where-this-comes-from">adapted from a manifesto about learning spaces</a> &mdash; written by the two people who make this site together with seven others, and licensed for exactly this &mdash; carried off that subject and pointed at reading instead.</p>
+
+  <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
+    <h2 id="qe-contents-h">On this sheet</h2>
+    <ol></ol>
+  </nav>
+
+  <h2 id="a-beginning">This begins and does not end <a class="qe-anchor" href="#a-beginning"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; how a manifesto opens</span>
+    <blockquote cite="https://playradical.com/a-playful-manifesto/">
+      <p>This is a manifesto that begins but will never end. This is a translation of my world to yours. This is a celebration of existence; mine, yours and theirs. This is a public display of affection for each and every creature. This is a protest of the notion that there is any correct way to live. This is a public display of rejection of the idea that one&rsquo;s usefulness is a measure of their humanity. This is a love letter to joy to sadness to fear and discovery.</p>
+      <p>But, most of all, this is a call to play.</p>
+    </blockquote>
+    <figcaption>Max Alexander, <a href="https://playradical.com/a-playful-manifesto/"><cite>A Playful Manifesto</cite></a>, Play Radical. Read at source 9 September 2026.</figcaption>
+  </figure>
+
+  <p class="qe-register-note"><span class="qe-register-note-label">Quoted whole, and here is why that is worth a note</span> The version of these sentences that circulates &mdash; <a href="https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/">including on our own foundation&rsquo;s page</a> &mdash; runs them together as <q>a translation of my world <em>into</em> yours&hellip;.This is a protest</q>. Alexander wrote <em>to</em> yours, and three sentences stand between that one and the protest. <strong>One preposition and an ellipsis</strong> &mdash; which is precisely the size of the failure <a href="/ledger">this site keeps a ledger to catch</a>, and it is instructive that we found it in our own house first. Logged there.</p>
+
+  <p>Two of those sentences are the whole of our position, and we are taking the move rather than the words. <strong>A protest of the notion that there is any correct way to live</strong> is what a queering lens is for. <strong>A rejection of the idea that one&rsquo;s usefulness is a measure of their humanity</strong> is why the readings here keep arriving at illness, at refusal, at lying down.</p>
+
+  <p>And a manifesto that begins but will never end is the right shape for a cabinet. <strong>There is no last sheet</strong>, because there is no last thing that could have been otherwise.</p>
+
+  <h2 id="normal">Normal is an arrangement, and arrangements have authors <a class="qe-anchor" href="#normal"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The word is barely two centuries old in the sense everyone now uses it. It arrived with the statistician rather than the physician, and it displaced older words that meant something else entirely: <i>wyrd</i> meant <em>fate</em> &mdash; what befalls you &mdash; before it was demoted to <em>weird</em> and then to defect.</p>
+
+  <p><strong>A thing that was invented can be read as an invention.</strong> That is a different act from complaining about it, and a much more useful one. Somebody arranged this. The arrangement has a date, a discipline and a set of interests behind it, and every one of those is legible if you go and look.</p>
+
+  <p>So we do not accept that the way things are arranged is the way things are. Not in a canon, not in a diagnosis, not in a syllabus, and not in the sentence you were handed about what your body is for. <a href="/invention-of-normal">Sheet No.&nbsp;4</a> is that history at length; this is the claim it licences.</p>
+
+  <h2 id="weird">Weird is a verb <a class="qe-anchor" href="#weird"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The site&rsquo;s own word is <em>queering</em>, taken from <a href="https://neuroqueer.com/">Nick Walker</a> as a verb and not a noun. He has said the same of <em>weird</em>, and the pairing is the reason Sheet No.&nbsp;4 exists.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; weirding, as a verb</span>
+    <blockquote>
+      <p>And so weird, I think about it like the word Queer, as a verb. There&rsquo;s this act of weirding, of letting the Magic in, of making cracks in the normal to let all the magic in.</p>
+    </blockquote>
+    <figcaption>Nick Walker, in conversation on the Weird Pride Day panel of <cite>David&rsquo;s Divergent Discussions</cite>. <strong>Quoted from the transcription in the <a href="https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/">Neuroqueer Learning Spaces Manifesto</a>, which describes it as edited, and not checked here against the recording.</strong> The citation is the transcription, not the tape.</figcaption>
+  </figure>
+
+  <p><strong>A crack in the normal is what a reading is.</strong> Not a demolition &mdash; nobody here is arguing that <cite>The Tempest</cite> should not have been written, or that Woolf was wrong about her own illness. A crack is narrower and more useful than that: it is the place where the arrangement admits it is one.</p>
+
+  <h2 id="who-can-speak">Whose reading is allowed to count <a class="qe-anchor" href="#who-can-speak"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>A canon is not only a list of works. It is a settled set of readings of those works, and the settling was done by particular people under particular conditions. Grada Kilomba puts the mechanism in two lines that need no gloss.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the hierarchy in the words</span>
+    <blockquote>
+      <p class="qe-verse"><span class="l">They have facts, we have opinions.</span><span class="l">They have knowledges, we have experiences.</span></p>
+    </blockquote>
+    <figcaption>Grada Kilomba, <cite>Who Can Speak?</cite>, in <cite>Decolonizing Knowledge</cite> (2016). <strong>Quoted from the rendering in the <a href="https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/">Neuroqueer Learning Spaces Manifesto</a>; the primary has not been read here.</strong> Two contiguous lines of a longer passage, so nothing is elided inside the quotation.</figcaption>
+  </figure>
+
+  <p><strong>Interpretation is where that hierarchy is enforced, so interpretation is where it can be contested.</strong> This site&rsquo;s method &mdash; a reading, cited to the primary, signed by whoever made it, with the working left in &mdash; is not neutral procedure. It is a claim that a reading made from a bodymind the canon was not written for is a reading, and not merely an experience.</p>
+
+  <h2 id="the-method-is-the-argument">The method is the argument <a class="qe-anchor" href="#the-method-is-the-argument"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Everything this cabinet does procedurally is also something it is asserting.</p>
+
+  <p><strong>We cite to the primary</strong> because <q>they have facts, we have opinions</q> is answered by producing the fact. <strong>We publish every correction</strong> because a reading that cannot be wrong is not a reading, it is a ruling &mdash; the thing we object to, wearing our own coat. <strong>We sign the reading and name the maker separately</strong> because collapsing them is how an interpretation becomes the work. <strong>We make it printable, and legible in two grounds, and free</strong> because an argument about who is allowed to read is not made by a page somebody cannot read.</p>
+
+  <p>None of that is generosity. It is the argument, carried out in the only form that can carry it.</p>
+
+  <h2 id="refusals">What we refuse <a class="qe-anchor" href="#refusals"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <ul class="qe-aims">
+    <li><strong>That a text has one reading and somebody already found it.</strong> A work that can be read only one way has stopped being a work and become a ruling.</li>
+    <li><strong>That a source can be tightened to fit.</strong> Trim a definition to fit a masthead and leave the name attached, and you have written somebody else&rsquo;s sentence for them. If we changed the words, they are ours.</li>
+    <li><strong>That usefulness measures a person.</strong> Alexander&rsquo;s sentence, and the reason illness and refusal keep turning up on the plate.</li>
+    <li><strong>That access is a favour.</strong> Plain view is not a concession to somebody else; it is one of the two ways this site is meant to be read.</li>
+    <li><strong>That a finished thing should hide how it was made.</strong> The register, the ledger and the decision log are all public, including the parts where we were wrong.</li>
+    <li><strong>That this could be completed.</strong> See above, and see Alexander.</li>
+  </ul>
+
+  <h2 id="where-this-comes-from">Where this comes from <a class="qe-anchor" href="#where-this-comes-from"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Most of the frame above is adapted from the <a href="https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/"><cite>Neuroqueer Learning Spaces Manifesto</cite></a>, a community project initiated by Ryan Boren and Helen Edgar &mdash; the two people who make this site &mdash; <strong>together with seven other contributors</strong>: David Gray-Hammond, Kay Louise Aldred, Dan Aldred, Pernille Fraser, Max Alexander, Je&rsquo;anna Clements and Jorn Bettin. It is licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, which is why this adaptation exists and why this page carries the same licence.</p>
+
+  <p class="qe-register-note"><span class="qe-register-note-label">Why the credit is not a formality</span> Two of that manifesto&rsquo;s authors also wrote this page, and it would be easy to treat the whole thing as ours to carry across. <strong>It is not.</strong> Nine people wrote it, its argument about learning spaces is theirs collectively, and what has been done here is to take that argument off its subject and point it at reading &mdash; which is an adaptation, and adaptations get named. The share-alike clause is not a technicality either: it is the reason this site can do this at all, and the reason anyone may do the same to this page.</p>
+
+  <p>The original is about classrooms, bodyminds and who holds a space. This is about texts, canons and who settled a reading. <strong>The shared claim is the one worth carrying:</strong> that the arrangement is an arrangement, that the people it was not built for are the ones who can see its edges, and that nothing about it was inevitable.</p>
+
+</main>
+
+<nav class="qe-elsewhere" aria-labelledby="qe-elsewhere-h">
+  <h2 id="qe-elsewhere-h">Elsewhere on the plate</h2>
+  <ul class="qe-elsewhere-grid">
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Plate</span>
+            <span class="qe-card-no">the front</span>
+          </span>
+          <span class="qe-card-title">Queering Earth</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-marigold)">
+        <a class="card" href="/design">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Colophon</span>
+            <span class="qe-card-no">the cabinet</span>
+          </span>
+          <span class="qe-card-title">How this site is made</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-coral)">
+        <a class="card" href="/changelog">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Register</span>
+            <span class="qe-card-no">the changelog</span>
+          </span>
+          <span class="qe-card-title">The accession register</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<footer class="qe-footer">
+  <p class="qe-footer-nav">
+    <a href="/">Queering Earth</a>
+    <a href="/mission">Mission</a>
+    <a href="/manifesto" aria-current="page">Manifesto</a>
+    <a href="/design">Colophon</a>
+    <a href="/changelog">Register</a>
+    <a href="/ledger">Ledger</a>
+    <a href="/what-is-settled">Decisions</a>
+    <a href="/search">Search</a>
+    <a href="/privacy">Privacy</a>
+  </p>
+
+  <p>A collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+
+  <p>Our words licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. The words quoted above belong to the people who wrote them, and both are traced in the site&rsquo;s <a href="/ledger">attribution ledger</a>.</p>
+
+  <a class="qe-totop" href="#main">
+    <span class="qe-totop-label">Scroll to top</span>
+    <svg class="qe-botanical qe-totop-mark" viewBox="0 0 160 66" aria-hidden="true" focusable="false">
+      <path class="stem" style="--len:21" d="M22,64 C24,56 25,51 24,45"/>
+      <path class="stem" style="--len:24" d="M33,64 C32,55 30,49 28,43"/>
+      <path class="stem" style="--len:25" d="M44,64 C46,54 48,48 50,42"/>
+      <path class="stem" style="--len:52" d="M58,64 C60,46 67,32 77,21"/>
+      <path class="stem" style="--len:32" d="M68,64 C69,50 70,42 71,34"/>
+      <path class="stem" style="--len:44" d="M80,64 C79.4,48 80.6,34 80,22"/>
+      <path class="stem" style="--len:32" d="M92,64 C91,50 90,42 89,34"/>
+      <path class="stem" style="--len:52" d="M102,64 C100,46 93,32 83,21"/>
+      <path class="stem" style="--len:25" d="M116,64 C114,54 112,48 110,42"/>
+      <path class="stem" style="--len:24" d="M127,64 C128,55 130,49 132,43"/>
+      <path class="stem" style="--len:21" d="M138,64 C136,56 135,51 136,45"/>
+      <g class="sprout" style="--i:3">
+        <path class="head" d="M80,5 C77.4,11 77.4,18 80,25 C82.6,18 82.6,11 80,5 Z"/>
+      </g>
+    </svg>
+  </a>
+</footer>
+
+<script src="queering.js"></script>
+</body>
+</html>

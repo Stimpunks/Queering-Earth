@@ -160,6 +160,18 @@ Monotropa uniflora, Dickinson, and monotropism
   - [How you could tell if we stopped](https://queering.earth/mission#stopped)
   - [Who wrote this, and with what](https://queering.earth/mission#who-wrote-this)
 
+-
+
+[Nothing here was inevitable](https://queering.earth/manifesto)
+
+  - [This begins and does not end](https://queering.earth/manifesto#a-beginning)
+  - [Normal is an arrangement, and arrangements have authors](https://queering.earth/manifesto#normal)
+  - [Weird is a verb](https://queering.earth/manifesto#weird)
+  - [Whose reading is allowed to count](https://queering.earth/manifesto#who-can-speak)
+  - [The method is the argument](https://queering.earth/manifesto#the-method-is-the-argument)
+  - [What we refuse](https://queering.earth/manifesto#refusals)
+  - [Where this comes from](https://queering.earth/manifesto#where-this-comes-from)
+
 ### The cabinet itself
 
 -
@@ -198,7 +210,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-149 entries across 38 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+152 entries across 39 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

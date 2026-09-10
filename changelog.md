@@ -36,6 +36,36 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## The manifesto, adapted under its own licence — and a tightened quotation found on our own foundation’s page while sourcing it
+
+The founding papers had one page in them. [The second](https://queering.earth/manifesto) is the argument the aims rest on, adapted from the [Neuroqueer Learning Spaces Manifesto](https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/) — a nine-author community document under CC BY-SA 4.0, initiated by the two people who make this site. **Sourcing one quotation for it turned up a drift in our own house.**
+
+Label correctedOne preposition and an undeclared ellipsis, in the version of Max Alexander this site was handed
+
+Ryan supplied the *Playful Manifesto* quotation as “a translation of my world *into* yours….This is a protest of the notion that there is any correct way to live”, which is what [stimpunks.org](https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/) carries. **Alexander wrote *to* yours**, and three sentences stand between that one and the protest.
+
+**A translation *to* somebody is offered; a translation *into* them is done to them.** One word, and the image inverts. The ellipsis is the more ordinary fault: compressing is defensible, doing it with `….` and no note is how a reader comes to believe two sentences are adjacent.
+
+**So the sheet quotes the opening whole and says on its face that the circulating version is tightened, naming our own page as where we found it.** A ledger that only catches other people’s tightening is not a ledger, it is a defence. The fix on stimpunks.org is one word and a fuller quotation; that is not this repository and is [recorded as an open item](https://queering.earth/what-is-settled) rather than acted on, the same way an SKS finding is.
+
+MountedTwo quotations that cannot be verified, carried anyway, with the transcription named instead of the tape
+
+Nick Walker on *weirding* comes from a recorded panel nobody here has listened to; Grada Kilomba’s *Who Can Speak?* from a 2016 book nobody here has opened. Both reach the page through the NQLS manifesto’s rendering. **This file’s own rule permits that** — *where the primary is not reachable, quote it with the citation attached and name whose transcription it is* — and both figcaptions name the transcription rather than the source, in bold, on the page rather than only in the ledger.
+
+**The Kilomba excerpt is two contiguous lines out of twenty-odd, and contiguous matters more than short.** Picking the most striking lines from across the passage would have produced a tightened Kilomba on the page whose subject is tightening. Two that sit together elide nothing inside the quotation, and quoting the passage entire would be a substantial reproduction of a copyrighted work to make a two-line point.
+
+Walker’s definition of *neuroqueer* as a verb is already on the home page and verified at source. This extends the same move to *weird*, which is what [Sheet No. 4](https://queering.earth/invention-of-normal) is about: *wyrd* was demoted from fate to defect, and turning *weird* back into a verb is that history running the other way.
+
+CabinetTwo of the nine authors wrote this page, which is exactly why the credit is not a formality
+
+It would be easy to treat a document Ryan and Helen initiated as theirs to carry across without ceremony. **Nine people wrote it.** The foot of the sheet names every contributor and the licence, in the page rather than only in the ledger, and says plainly that what happened here is an adaptation: no sentence carried over verbatim, the argument taken off learning spaces and pointed at reading.
+
+**Share-alike is the reason this exists and the reason it is not the end of anything.** CC BY-SA 4.0 is why the adaptation is permitted, and the same clause is why anybody may do this again to our page.
+
+**It does not restate the home page**, which was the risk the mission page was shaped to avoid. The home page explains what queering is; the aims list what we are for and where each is kept; this argues why any of it follows. Three genres, one subject, no duplicated paragraphs.
+
+2026 · 9 September
+
 ## A new accession goes at the top, anchored on the register, and this one proves it
 
 The entry below records four accessions ending up in the wrong order and the two assertions added to catch it. **Neither assertion can see the case that caused it** — within a single day the order is editorial and nothing mechanical can verify it. This is the part that closes: a written rule about *where the insert goes*.

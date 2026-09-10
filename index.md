@@ -142,6 +142,9 @@ Why this cabinet exists, and what it is for.
 **[What this cabinet is for](https://queering.earth/mission)**
 : Thirteen aims, each one naming the page where it is already being kept — and, for each, the observation that would show we had quietly stopped. An aim you cannot fail is not an aim.
 
+**[Nothing here was inevitable](https://queering.earth/manifesto)**
+: The manifesto, and the argument the aims rest on: normal is an arrangement and arrangements have authors, weird is a verb, and a reading is where an arrangement gets contested.
+
 ## The cabinet itself
 
 Four pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything.

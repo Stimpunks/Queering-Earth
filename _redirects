@@ -53,6 +53,7 @@ http://queering-earth.netlify.app/*   https://queering.earth/:splat  301!
 /search.html                      /search                       301!
 /ledger.html                      /ledger                       301!
 /what-is-settled.html             /what-is-settled              301!
+/manifesto.html                   /manifesto                    301!
 /mission.html                     /mission                      301!
 /privacy.html                     /privacy                      301!
 /the-tempest.html                 /the-tempest                  301!

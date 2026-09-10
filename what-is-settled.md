@@ -138,6 +138,14 @@ Much of the material already exists and is already checkable — cite to the pri
 
 **Still open:** whether either section keeps a prose intro once it holds more than four entries.
 
+### The Playful Manifesto quotation on stimpunks.org wants fixing there
+
+**Not this repo, and not editable from here.** The [Neuroqueer Learning Spaces Manifesto](https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/) quotes Max Alexander as *"a translation of my world **into** yours….This is a protest"*. The [primary](https://playradical.com/a-playful-manifesto/) reads *"a translation of my world **to** yours"*, and three sentences stand between that one and the protest.
+
+**One preposition and an undeclared elision** — the exact size and shape of the failure `ATTRIBUTIONS.md` exists to catch, found in our own foundation's page while sourcing a quotation for `/manifesto`. It is a WordPress page Ryan can edit; recorded here rather than acted on, the same way SKS findings are.
+
+**The fix is one word and a fuller quotation**, or the ellipsis marked as eliding three sentences. Neither changes the manifesto's argument, which is why it survived this long.
+
 ---
 
 ## Settled

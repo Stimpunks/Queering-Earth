@@ -310,6 +310,8 @@ og_card(REPO/"images"/"og-monotropa-uniflora.png", "The Preferred Flower of Life
         LICHEN, sprig=ghost_pipes)
 og_card(REPO/"images"/"og-mission.png", "What this cabinet is for", "The founding papers",
         "Thirteen aims, each with the page where it is already being kept.", VIOLET)
+og_card(REPO/"images"/"og-manifesto.png", "Nothing here was inevitable", "The founding papers",
+        "Normal is an arrangement, weird is a verb, and a reading is where it is contested.", CORAL)
 og_card(REPO/"images"/"og-design.png", "How this site is made", "Colophon",
         "A Victorian herbarium sheet as the model: the palette, the type, the drawings.", MARIGOLD)
 og_card(REPO/"images"/"og-changelog.png", "The accession register", "Register · the changelog",

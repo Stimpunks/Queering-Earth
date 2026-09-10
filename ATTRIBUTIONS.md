@@ -2168,6 +2168,127 @@ her rather than restating it, which would have made our sentence look like the o
 
 ----
 
+### Max Alexander — *A Playful Manifesto*, and one preposition
+
+**Quoted on:** `manifesto.html`
+
+> This is a manifesto that begins but will never end. This is a translation of my world to
+> yours. This is a celebration of existence; mine, yours and theirs. This is a public display
+> of affection for each and every creature. This is a protest of the notion that there is any
+> correct way to live. This is a public display of rejection of the idea that one's usefulness
+> is a measure of their humanity. This is a love letter to joy to sadness to fear and
+> discovery.
+>
+> But, most of all, this is a call to play.
+
+**Source:** Max Alexander, [*A Playful Manifesto*](https://playradical.com/a-playful-manifesto/),
+Play Radical. Written and illustrated by Alexander; the site sells a print copy.
+
+**Verified:** 2026-09-09, read at source.
+
+**THE CIRCULATING VERSION HAS DRIFTED, AND IT DRIFTED IN OUR OWN HOUSE.** Ryan supplied the
+quotation for this page as:
+
+> "This is a manifesto that begins but will never end. This is a translation of my world into
+> yours….This is a protest of the notion that there is any correct way to live."
+
+which is what the [Neuroqueer Learning Spaces Manifesto](https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/)
+on stimpunks.org carries. Two departures from the source, both small and both the
+characteristic kind:
+
+1. **`into yours` for `to yours`.** One preposition, and it changes the image — a translation
+   *to* somebody is offered; a translation *into* them is done to them. Alexander wrote the
+   first.
+2. **An ellipsis swallowing three sentences.** Between "yours" and "This is a protest" stand
+   the celebration of existence, the public display of affection, and nothing else worth
+   losing. Compressing them is defensible; doing it with `….` and no note is how a reader
+   comes to think the two sentences are adjacent.
+
+**So this page quotes the opening whole** and says on the face of it that the circulating
+version is tightened, naming our own foundation's page as where we found it. **A ledger that
+only catches other people's tightening is not a ledger, it is a defence.** Nothing here is a
+criticism of the NQLS manifesto, which is a community document doing a different job; but
+stimpunks.org is editable by the people who run this site, and this entry is the record that
+it wants fixing there too. `DECISIONS.md` carries that as an open item.
+
+----
+
+### Nick Walker — weirding, from a recorded conversation we have not heard
+
+**Quoted on:** `manifesto.html`
+
+> And so weird, I think about it like the word Queer, as a verb. There's this act of weirding,
+> of letting the Magic in, of making cracks in the normal to let all the magic in.
+
+**Source:** Nick Walker, in conversation on the Weird Pride Day panel of *David's Divergent
+Discussions*.
+
+**NOT VERIFIED AGAINST THE PRIMARY, AND THE PAGE SAYS SO.** This is quoted from the
+transcription in the [Neuroqueer Learning Spaces Manifesto](https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/),
+which labels it *"in conversation, edited"*. The primary is a recording; nobody here has
+listened to it and checked the words. Under this file's own rule — *where the primary is not
+reachable, quote it with the citation attached and name whose transcription it is* — that is
+permitted, and the figcaption on the sheet names the transcription rather than the tape.
+
+**Why it is worth carrying anyway.** Walker's own definition of *neuroqueer* as a verb is
+already quoted on the home page and verified at source; this extends the same move to *weird*,
+which is the subject of Sheet No. 4. The sheet's whole argument is that *wyrd* was demoted
+from fate to defect, and Walker turning *weird* back into a verb is that history running the
+other way.
+
+**What would upgrade it:** somebody listening to the panel and confirming the wording, or
+Walker's own written statement of the same point. Until then the citation is the
+transcription, and the page does not pretend otherwise.
+
+----
+
+### Grada Kilomba — *Who Can Speak?*, two contiguous lines
+
+**Quoted on:** `manifesto.html`
+
+> They have facts, we have opinions.
+> They have knowledges, we have experiences.
+
+**Source:** Grada Kilomba, "Who Can Speak?", in *Decolonizing Knowledge* (2016).
+
+**NOT VERIFIED AGAINST THE PRIMARY.** Quoted from the rendering in the
+[Neuroqueer Learning Spaces Manifesto](https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/);
+the book has not been opened here. Named on the sheet as such.
+
+**Two contiguous lines out of a longer passage, deliberately.** The full passage is twenty-odd
+lines of paired clauses and quoting it entire would be a substantial reproduction of a
+copyrighted work on a page that needs two lines to make its point. **Contiguous matters more
+than short:** selecting the most striking lines from across the passage would produce a
+tightened Kilomba — the failure this file exists for — where taking two that sit together
+leaves the rhythm and the argument intact and elides nothing inside the quotation.
+
+----
+
+### The Neuroqueer Learning Spaces Manifesto — the source this page adapts
+
+**Adapted on:** `manifesto.html`
+
+**Source:** ["Neuroqueer Learning Spaces Manifesto"](https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/)
+by Stimpunks Foundation, Autistic Realms, et al., licensed
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). A community project initiated
+by Ryan Boren (Stimpunks) and Helen Edgar (Autistic Realms), with contributions from David
+Gray-Hammond, Kay Louise Aldred, Dan Aldred, Pernille Fraser, Max Alexander, Je'anna Clements
+and Jorn Bettin. Read at source 2026-09-09.
+
+**Not a quotation but an adaptation, which is the harder case.** `/manifesto` takes the
+frame — normal as an arrangement, weirding as a verb, whose knowledge is allowed to count —
+off the subject of learning spaces and points it at reading. No sentence is carried across
+verbatim; the argument is.
+
+**TWO OF THE NINE AUTHORS WROTE THIS PAGE, AND THAT IS EXACTLY WHY THE CREDIT MATTERS.** It
+would be easy to treat a document Ryan and Helen initiated as theirs to carry over without
+ceremony. Nine people wrote it. Its argument is theirs collectively, the share-alike clause is
+the reason this adaptation is permitted at all, and the same clause is why anyone may do this
+again to our page. The section at the foot of `/manifesto` names every contributor and the
+licence, in the page itself rather than only here.
+
+----
+
 ## Open
 
 ### Two sentences on the Miranda sheet claim a little more than their source does
