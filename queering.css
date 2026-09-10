@@ -3847,13 +3847,6 @@ html.plain .qe-index-sheet { font-variation-settings: normal; font-weight: 700; 
  * second set of near-identical rules is a second place for the next change to be
  * got right. Only what genuinely differs is below.
  */
-/* The pointer up in the front matter. `.qe-index-link` is shaped for the register,
-   where it is the last thing before the entries begin and needs no bottom margin.
-   Here the record body follows it immediately, so it needs one — otherwise the line
-   reads as the opening of the paragraph beneath rather than as a note about the
-   foot of the page. */
-.qe-record-page .qe-index-link { margin-bottom: var(--qe-space-4); }
-
 .qe-entry-index {
   margin: var(--qe-space-8) 0 0;
   padding: var(--qe-space-3) 0 0;

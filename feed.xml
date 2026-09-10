@@ -46,11 +46,15 @@ Label corrected: This register said a rule did nothing, having measured it on sc
 Cabinet: Three sheets had no contents list and no reason for not having one</description>
     </item>
     <item>
-      <title>The entry index announced itself in the drift rail, because the exclusion was a list of class names</title>
+      <title>A feature was mistaken for a fault, removed, and put back within the hour</title>
       <link>https://queering.earth/changelog#a-2026-09-09-navheads</link>
       <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-navheads</guid>
       <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: The test is the element now, not the class, so the next navigation block needs no line</description>
+      <description>Label corrected: The test is the element now, not the class, so the next navigation block needs no line
+Re-determined: It was not a fault. Ryan liked the rail pointing at the index, and a destination inside a nav is still a destination
+Mounted: And the two record pages got the contents list they could not have had an hour earlier
+Cabinet: The two-heading threshold is retired, because it measured the wrong thing
+Label corrected: The removal also broke the rail’s tick scale in the quietest way available, because the derivation existed twice</description>
     </item>
     <item>
       <title>The two longest pages on the site could not be surveyed without reading all of them</title>

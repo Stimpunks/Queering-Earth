@@ -17,8 +17,6 @@ Every quotation, whose it is, and the day somebody read the primary.
 
 This page is the working ledger, generated from `ATTRIBUTIONS.md` in the repository rather than retyped from it, so the copy you are reading cannot drift from the copy a session edits. **Its risk is a wrong attribution**, and the entries below are what a reader has instead of taking our word for it.
 
-Every entry is listed by name in [the index at the foot of this page](#qe-entry-index-h).
-
 The ledger for every quotation and credited idea on this site: what we quoted, whose it is, where it came from, and the day somebody read the primary and confirmed the wording.
 
 **Why this file exists.** Star Stuff keeps a `FACTCHECK.md` because its risk is a wrong *fact*. This site's risk is a wrong *attribution* — a definition trimmed to fit, an object generalized, a paraphrase left wearing somebody's name. Queering Earth re-reads other people's work, so nearly every page carries somebody else's words, and the citation is the only evidence a reader has.

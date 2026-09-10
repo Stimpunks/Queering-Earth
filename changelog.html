@@ -338,7 +338,7 @@
 
     <section class="qe-accession" aria-labelledby="a-2026-09-09-navheads">
       <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
-      <h2 id="a-2026-09-09-navheads">The entry index announced itself in the drift rail, because the exclusion was a list of class names <a class="qe-anchor" href="#a-2026-09-09-navheads"><span class="qe-sr">Link to this section</span></a></h2>
+      <h2 id="a-2026-09-09-navheads">A feature was mistaken for a fault, removed, and put back within the hour <a class="qe-anchor" href="#a-2026-09-09-navheads"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">The rail on <a href="/ledger">the ledger</a> read <q>Verified &middot; Open &middot; Every attribution on this page</q> &mdash; the third of those being the index&rsquo;s own heading, listing itself inside the navigation beside it. <strong>Two components built in parallel, each correct on its own.</strong> The rail excludes <code>.qe-contents</code> by name; the entry index arrived as a second navigation block inside the landmark and nothing knew to skip it.</p>
 
@@ -348,6 +348,42 @@
           <p><strong>A heading that labels a navigation block is not a section of the page.</strong> That was always the rule; it was written down as <code>.qe-contents</code> because that was the only case when it was written. <strong>A list of class names is a rule that gets quietly broken by the next component</strong> &mdash; the same shape as <q>the two view controls, and nothing else</q> and <q>the one Python tool here</q>, both of which this file has already had to correct into boundaries. Every navigational block on this site is a <code>nav</code>, including the rail and the index themselves, so the element is the test.</p>
           <p><strong>Proved in both directions rather than one.</strong> The ledger&rsquo;s rail is <q>Verified &middot; Open</q> and its entry index still fills 53 and 2; <a href="/on-being-ill">Sheet No.&nbsp;1</a>&rsquo;s contents list and rail are unchanged at seven each. A fix to a shared derivation that is only checked on the page that was broken is a fix that breaks fourteen others quietly.</p>
           <p><strong>Worth recording as a hazard rather than only as a bug.</strong> Both components were built the same afternoon in two sessions against one working tree, and neither was wrong about its own page. The failure lives in the seam, which is the one place a gate here does not look: <code>check-markup.mjs</code> validates the served markup, and this list does not exist until a script runs.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--redet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--redet">Re-determined</span><span class="qe-entry-name">It was not a fault. Ryan liked the rail pointing at the index, and a destination inside a nav is still a destination</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The entry above determined a feature to be a bug, and the determination was wrong.</strong> The rail on <a href="/ledger">the ledger</a> listed <q>Every attribution on this page</q>, this session called it self-announcement and removed it, and Ryan said plainly that he had found it useful. He is right: on a page of 130KB, a link from the rail straight down to an index of all fifty-five entries is the most useful thing in it.</p>
+          <p><strong>Two cases that look identical and are not.</strong> A contents list containing <q>On this sheet</q> is a list pointing at itself. A rail containing <q>Every attribution on this page</q> is a list pointing somewhere a reader wants to go. Collapsing both into <q>any heading inside a nav</q> was a generalisation that read as principled and cost a feature; the honest rule is narrower and older &mdash; <strong>a list must not contain its own heading</strong>, and <code>.qe-contents</code> and <code>.qe-rail</code> are one derivation shown twice.</p>
+          <p><strong>The reversal is the entry, not a quiet edit to the one above it.</strong> That entry stands as written, because a register that revises its own determinations in place is a register that cannot be checked &mdash; which is the argument this whole page is built on. This is the third re-determination here and the first where the thing re-determined was our own judgement rather than a source.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="ledger what-is-settled">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">And the two record pages got the contents list they could not have had an hour earlier</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The re-determination above is what made this possible</strong>, which is a pleasant way for a mistake to end. With two <code>h2</code>s a contents list on <a href="/ledger">the ledger</a> would have read <em>Verified</em> and <em>Open</em> and told a reader nothing &mdash; the stated reason both record pages went without one when they shipped. With the entry index&rsquo;s heading back in the derivation it lists three, and the third is a jump straight to all fifty-five entries.</p>
+          <p><strong>The standalone pointer came out in the same pass.</strong> It said <q>every entry is listed by name in the index at the foot of this page</q> and sat immediately above a contents list whose third item is a link to exactly that. Two links to one place, adjacent, is the kind of thing that reads as a mistake even when both are correct.</p>
+          <p>Twelve of seventeen pages carried one at that point, and checking which four declined turned up <a href="/privacy">a page with eight headings and no list</a>.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The two-heading threshold is retired, because it measured the wrong thing</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Ryan&rsquo;s call, and it is the right one.</strong> <q>A contents list needs more than two headings</q> was the stated reason both record pages shipped without one, and it counts the wrong quantity: <strong>the reader&rsquo;s problem on a twenty-thousand-word page is length, not heading count.</strong> Two entries that save twenty screens of scrolling are worth more than seven that save two. The question is only ever whether the page is long enough to want one.</p>
+          <p><strong>Retiring a rule is a good moment to check what it was hiding.</strong> <a href="/privacy">The privacy page</a> is 2,058 words with eight headings and had no list &mdash; longer than <a href="/on-being-ill">Sheet No.&nbsp;1</a> at 2,045, which has one. It was never a decision, just a page nobody counted. It has one now.</p>
+          <p><strong>Four pages still decline and not one of them declines on heading count.</strong> The error page; the home page, whose plate is already a contents list; this register, whose accession headlines average 148 characters and measured 1,293px against 319 to 510 elsewhere &mdash; it gets its index as back matter instead; and <a href="/search">the finding aid</a> at 1,307 words, the shortest page here that is not an error page and well under the 2,045 of the shortest page that has one.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">The removal also broke the rail&rsquo;s tick scale in the quietest way available, because the derivation existed twice</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Found by checking the deployed file rather than the local one.</strong> The live <code>queering.js</code> carried the new <code>nav</code> test <em>and</em> the old class-name test, which meant a second copy of the same derivation somewhere else in the file. It was in <code>measureTicks</code>, which sizes the rail&rsquo;s ticks to the sections they stand for.</p>
+          <p><strong>It failed safe and therefore silently.</strong> That function re-derived the heading set with the old exclusion, counted three against the rail&rsquo;s two, and hit its own <code>heads.length !== items.length</code> guard &mdash; so on both record pages the ticks were simply never measured. No error, nothing visibly broken, a rail of default-sized marks where a scale drawing belonged. <strong>A guard that fails safe still fails.</strong></p>
+          <p><strong>One derivation, one place.</strong> Both callers now use a single <code>sectionHeads()</code>, so there is no second copy left to fall behind. Verified on both pages afterwards: the ledger&rsquo;s ticks read 32.0px and 9.0px &mdash; correctly saying that <em>Verified</em> holds fifty-three entries and <em>Open</em> holds two &mdash; and Sheet No.&nbsp;1&rsquo;s seven are unchanged.</p>
         </div>
       </div>
     </section>

@@ -166,7 +166,7 @@ CabinetThree sheets had no contents list and no reason for not having one
 
 2026 · 9 September · latest
 
-## The entry index announced itself in the drift rail, because the exclusion was a list of class names
+## A feature was mistaken for a fault, removed, and put back within the hour
 
 The rail on [the ledger](https://queering.earth/ledger) read “Verified · Open · Every attribution on this page” — the third of those being the index’s own heading, listing itself inside the navigation beside it. **Two components built in parallel, each correct on its own.** The rail excludes `.qe-contents` by name; the entry index arrived as a second navigation block inside the landmark and nothing knew to skip it.
 
@@ -177,6 +177,38 @@ Label correctedThe test is the element now, not the class, so the next navigatio
 **Proved in both directions rather than one.** The ledger’s rail is “Verified · Open” and its entry index still fills 53 and 2; [Sheet No. 1](https://queering.earth/on-being-ill)’s contents list and rail are unchanged at seven each. A fix to a shared derivation that is only checked on the page that was broken is a fix that breaks fourteen others quietly.
 
 **Worth recording as a hazard rather than only as a bug.** Both components were built the same afternoon in two sessions against one working tree, and neither was wrong about its own page. The failure lives in the seam, which is the one place a gate here does not look: `check-markup.mjs` validates the served markup, and this list does not exist until a script runs.
+
+Re-determinedIt was not a fault. Ryan liked the rail pointing at the index, and a destination inside a nav is still a destination
+
+**The entry above determined a feature to be a bug, and the determination was wrong.** The rail on [the ledger](https://queering.earth/ledger) listed “Every attribution on this page”, this session called it self-announcement and removed it, and Ryan said plainly that he had found it useful. He is right: on a page of 130KB, a link from the rail straight down to an index of all fifty-five entries is the most useful thing in it.
+
+**Two cases that look identical and are not.** A contents list containing “On this sheet” is a list pointing at itself. A rail containing “Every attribution on this page” is a list pointing somewhere a reader wants to go. Collapsing both into “any heading inside a nav” was a generalisation that read as principled and cost a feature; the honest rule is narrower and older — **a list must not contain its own heading**, and `.qe-contents` and `.qe-rail` are one derivation shown twice.
+
+**The reversal is the entry, not a quiet edit to the one above it.** That entry stands as written, because a register that revises its own determinations in place is a register that cannot be checked — which is the argument this whole page is built on. This is the third re-determination here and the first where the thing re-determined was our own judgement rather than a source.
+
+MountedAnd the two record pages got the contents list they could not have had an hour earlier
+
+**The re-determination above is what made this possible**, which is a pleasant way for a mistake to end. With two `h2`s a contents list on [the ledger](https://queering.earth/ledger) would have read *Verified* and *Open* and told a reader nothing — the stated reason both record pages went without one when they shipped. With the entry index’s heading back in the derivation it lists three, and the third is a jump straight to all fifty-five entries.
+
+**The standalone pointer came out in the same pass.** It said “every entry is listed by name in the index at the foot of this page” and sat immediately above a contents list whose third item is a link to exactly that. Two links to one place, adjacent, is the kind of thing that reads as a mistake even when both are correct.
+
+Twelve of seventeen pages carried one at that point, and checking which four declined turned up [a page with eight headings and no list](https://queering.earth/privacy).
+
+CabinetThe two-heading threshold is retired, because it measured the wrong thing
+
+**Ryan’s call, and it is the right one.** “A contents list needs more than two headings” was the stated reason both record pages shipped without one, and it counts the wrong quantity: **the reader’s problem on a twenty-thousand-word page is length, not heading count.** Two entries that save twenty screens of scrolling are worth more than seven that save two. The question is only ever whether the page is long enough to want one.
+
+**Retiring a rule is a good moment to check what it was hiding.** [The privacy page](https://queering.earth/privacy) is 2,058 words with eight headings and had no list — longer than [Sheet No. 1](https://queering.earth/on-being-ill) at 2,045, which has one. It was never a decision, just a page nobody counted. It has one now.
+
+**Four pages still decline and not one of them declines on heading count.** The error page; the home page, whose plate is already a contents list; this register, whose accession headlines average 148 characters and measured 1,293px against 319 to 510 elsewhere — it gets its index as back matter instead; and [the finding aid](https://queering.earth/search) at 1,307 words, the shortest page here that is not an error page and well under the 2,045 of the shortest page that has one.
+
+Label correctedThe removal also broke the rail’s tick scale in the quietest way available, because the derivation existed twice
+
+**Found by checking the deployed file rather than the local one.** The live `queering.js` carried the new `nav` test *and* the old class-name test, which meant a second copy of the same derivation somewhere else in the file. It was in `measureTicks`, which sizes the rail’s ticks to the sections they stand for.
+
+**It failed safe and therefore silently.** That function re-derived the heading set with the old exclusion, counted three against the rail’s two, and hit its own `heads.length !== items.length` guard — so on both record pages the ticks were simply never measured. No error, nothing visibly broken, a rail of default-sized marks where a scale drawing belonged. **A guard that fails safe still fails.**
+
+**One derivation, one place.** Both callers now use a single `sectionHeads()`, so there is no second copy left to fall behind. Verified on both pages afterwards: the ledger’s ticks read 32.0px and 9.0px — correctly saying that *Verified* holds fifty-three entries and *Open* holds two — and Sheet No. 1’s seven are unchanged.
 
 2026 · 9 September
 

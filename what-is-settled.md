@@ -17,8 +17,6 @@ The reasoning, kept so the same question is not re-litigated in three weeks.
 
 This page is the decision log, generated from `DECISIONS.md` in the repository rather than retyped from it. It exists so the same question is not re-litigated in three weeks, and it is public for the reason the register is: **a decision whose reasoning nobody can read is a decision that will be made again badly.**
 
-Every decision is listed by name in [the index at the foot of this page](#qe-entry-index-h).
-
 What is settled, what is open, and the reasoning for each — so the same question is not re-litigated in three weeks.
 
 ---

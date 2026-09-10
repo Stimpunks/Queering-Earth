@@ -554,14 +554,24 @@ it is a register rather than a list of releases.
 - **Every `<h2>` on every page gets an authored `id` and a `.qe-anchor`.** No threshold. A
   section a reader cannot link to is a section nobody can cite, and the register was italicising
   three home-page section names it had no way to reach.
-- **EVERY SHEET HAS A CONTENTS LIST**, as of 2026-09-09, plus `/design` and `/mission` — ten
-  pages. Three of the eight were missing one for no reason anybody could reconstruct: Nos. 1,
-  2 and 7, at 2,045 to 3,098 words against 2,495 to 5,018 on the five that had one. **The
-  page still declares it by including the container** — nothing derives it from a word count,
-  because which pages want one is editorial. What changed is that the answer for a *sheet* is
-  now always yes, and the pages that decline are the ones with a stated reason: the home page
-  (its plate is already a contents list), `/changelog` (148-character headings), and the four
-  with two headings each.
+- **EVERY SHEET HAS A CONTENTS LIST**, as of 2026-09-09, plus `/design`, `/mission`,
+  `/ledger` and `/what-is-settled` — twelve pages. Three of the eight sheets were missing one
+  for no reason anybody could reconstruct: Nos. 1, 2 and 7, at 2,045 to 3,098 words against
+  2,495 to 5,018 on the five that had one. **The page still declares it by including the
+  container** — nothing derives it from a word count, because which pages want one is
+  editorial. What changed is that the answer for a *sheet* is now always yes.
+- **THE "MORE THAN TWO HEADINGS" THRESHOLD IS RETIRED**, on Ryan's call, 2026-09-09. It was
+  the stated reason `/ledger` and `/what-is-settled` shipped without one, and it measures the
+  wrong thing: **the reader's problem on a 20,000-word page is length, not heading count.**
+  Two entries that save twenty screens of scrolling are worth more than seven that save two.
+  The question is only ever *is this page long enough to want one*.
+- **Retiring it found a real omission.** `/privacy` is 2,058 words with eight headings and had
+  no list — longer than `/on-being-ill` at 2,045, which has one. It has one now.
+- **Four pages decline, each with a reason that is not about heading count.** `/404` (an error
+  page), the home page (its plate is already a contents list), `/changelog` (148-character
+  headings, measured at 1,293px and three and a half screens — it gets `.qe-sheet-index` as
+  back matter instead), and `/search` at 1,307 words, the shortest page on the site that is
+  not the error page and well under the 2,045 of the shortest page that has one.
 
 **The home page is the case that separates them.** Its own content *is* a contents list — the
 plate of eight numbered cards — so a `.qe-contents` above the prose would put two competing
@@ -605,13 +615,22 @@ by including the empty `<nav>`; `queering.js` fills it from that page's own `<h2
   real space before the `<a>` in the markup is load-bearing**: without it the heading's
   accessible name computes as "…the windsLink to this section", because CSS margin is not
   whitespace.
-- **Three kinds of heading must not land in the list and no guard catches any of them:**
+- **Three headings must not land in the list and no guard catches any of them:**
   `.qe-elsewhere h2` (outside `<main>` — scoping the query to main is what excludes it),
-  **any `<h2>` inside a `nav`**, and any `<h2>` with no id. The middle one was written as
-  `.qe-contents` by name until a second in-main nav arrived and the rail on `/ledger`
-  listed *"Every attribution on this page"* — the entry index announcing itself inside
-  the navigation beside it. **A list of class names is a rule the next component breaks**,
-  the same correction `queering.js`'s own boundary and the Python rule already took.
+  `.qe-contents`' own heading, and any `<h2>` with no id. **A list must not contain its
+  own heading, and that is the whole of the exclusion** — `.qe-contents` and `.qe-rail`
+  are one derivation shown twice, so the label on the thing doing the listing is not a
+  section of the page.
+- **THE ENTRY INDEX'S HEADING IS NOT EXCLUDED, AND GENERALISING TO "ANY `<h2>` IN A
+  `nav`" WAS WRONG.** That version was written, shipped and reverted the same hour: it
+  also dropped `/ledger`'s index of all 55 entries out of the rail, and on a 130KB page
+  a link straight to that index is the most useful thing in it. **A destination inside
+  a `nav` is still a destination.** The two cases look identical and are not — one is a
+  list pointing at itself, the other is a list pointing somewhere a reader wants to go.
+- **Both views derive from one `sectionHeads()`.** They did not, and changing one broke
+  the other silently: `measureTicks` re-derived the set with the older exclusion, counted
+  three headings against the rail's two, hit its own length guard and simply stopped
+  drawing the tick scale. **A guard that fails safe still fails.**
 - **Not on `/changelog`**, which looks like the strongest case and is not. A register's
   accession headline is a sentence by design, so its labels average 148 characters against
   22–34 on a sheet: the block measured 1,293px against 319–510px elsewhere and delayed the

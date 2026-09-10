@@ -112,10 +112,10 @@
    * guard:
    *   · `.qe-elsewhere h2` — the sibling nav's own heading, which lives OUTSIDE
    *     <main>. Scoping the query to main is what excludes it.
-   *   · any `h2` inside a `nav` — this component's own heading, and the entry
-   *     index's on the two record pages. Both are inside main and would otherwise
-   *     list themselves. Tested by element rather than by class name, because the
-   *     class-name version silently missed the second one.
+   *   · `.qe-contents`' own heading — inside main, and the label on the thing
+   *     doing the listing rather than a section of the page. The entry index's
+   *     heading is NOT excluded: it is a destination, and a link from the rail to
+   *     an index of 55 entries is the most useful thing on a page that long.
    *   · any <h2> without an id, because there would be nothing to link to.
    *
    * THE LABEL IS THE HEADING, VERBATIM. The <h2> is cloned and its section mark
@@ -136,23 +136,45 @@
    * until this fills them, so a reader without this script sees neither an empty
    * ruled box nor an empty rail.
    */
+  /* THE SECTIONS OF THIS PAGE, DERIVED ONCE.
+   *
+   * A LIST MUST NOT CONTAIN ITS OWN HEADING, and that is the whole of the exclusion.
+   * `.qe-contents` and `.qe-rail` are one derivation shown twice, so the contents
+   * list's own "On this sheet" is skipped in both — it is not a section of the page,
+   * it is the label on the thing doing the listing.
+   *
+   * IT IS NOT "ANY HEADING INSIDE A NAV", WHICH WAS TRIED AND WAS WRONG. That version
+   * also dropped the entry index at the foot of /ledger and /what-is-settled, and on
+   * a page of 130KB a link from the rail down to an index of all 55 entries is the
+   * most useful thing in it. Ryan asked for it back. The two cases look alike and are
+   * not: one is a list pointing at itself, the other is a list pointing somewhere a
+   * reader wants to go. **A destination inside a `nav` is still a destination.**
+   *
+   * IT LIVES IN ONE FUNCTION BECAUSE IT USED TO LIVE IN TWO, and changing one of them
+   * broke the other in the quietest way available: `measureTicks` re-derived the same
+   * set with the older exclusion, counted three headings against the rail's two, and
+   * hit its own `heads.length !== items.length` guard — so the tick scale stopped
+   * being drawn on both record pages, with no error and nothing visibly wrong. A
+   * guard that fails safe still fails. One derivation, one place.
+   */
+  function sectionHeads() {
+    var out = [];
+    var all = document.querySelectorAll('main h2[id]');
+    for (var i = 0; i < all.length; i++) {
+      if (!all[i].closest('.qe-contents, .qe-rail')) out.push(all[i]);
+    }
+    return out;
+  }
+
   function fillHeadings(container) {
     var list = container.querySelector('ol');
     if (!list) return 0;
 
-    var heads = document.querySelectorAll('main h2[id]');
+    var heads = sectionHeads();
     var made = 0;
 
     for (var i = 0; i < heads.length; i++) {
       var h = heads[i];
-      /* A HEADING THAT LABELS A NAVIGATION BLOCK IS NOT A SECTION OF THE PAGE.
-         This was `.qe-contents` by name until a second in-main nav arrived and the
-         rail on /ledger listed "Every attribution on this page" — the entry index
-         announcing itself inside the navigation it sits beside. A list of class
-         names is a rule that gets quietly broken by the next component; every
-         navigational block on this site is a `nav`, including this one, so the
-         element is the test and the next one needs no line here. */
-      if (h.closest('nav')) continue;
 
       /* Clone rather than read textContent off the live heading: the section mark
          is a child of it, and its accessible name would arrive in the label. */
@@ -222,11 +244,7 @@
     var main = document.querySelector('main');
     if (!items.length || !main) return;
 
-    var heads = [];
-    var all = document.querySelectorAll('main h2[id]');
-    for (var i = 0; i < all.length; i++) {
-      if (!all[i].closest('.qe-contents')) heads.push(all[i]);
-    }
+    var heads = sectionHeads();
     if (heads.length !== items.length) return;
 
     var y = function (el) { return el.getBoundingClientRect().top + window.pageYOffset; };
