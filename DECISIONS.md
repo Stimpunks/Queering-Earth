@@ -263,19 +263,28 @@ placing anything: five of the existing lists carry opening prose *after* them �
 `/wild-nights` nineteen blocks, `/invention-of-normal` thirteen. The list is front matter for
 the sections, and the lede is not a section.
 
-**`/coming-to-terms` is the exception, and it is authored rather than incidental.** It has no
-lede at all, and every one of its six headings sits in the 2026 commentary; the 2022 essay
-above them is unheaded and **stays** unheaded, because the register note directly above it
-says Ryan's words are unchanged and a heading dropped into them would not be. So a list at
-the top would name six sections beginning a fifth of the way down the page and say nothing
-whatever about the essay, which is the reason the sheet exists — a contents list
-misrepresenting its own page. It sits immediately after the register note instead, at the
-point where the sheet announces it is changing hands, and maps exactly what follows it.
-Measured after placing: a fifth of the way down, so it still reads as front matter rather
-than as something buried.
+**`/coming-to-terms` was the exception for a week, and then stopped being one.** It had no
+lede at all, and every one of its six headings sat in the 2026 commentary, so a list at the
+top would have named six sections beginning a fifth of the way down and said nothing about
+the essay — a contents list misrepresenting its own page. It went after the register note
+instead. The note said the essay needed a heading of its own before it could be listed, and
+that **this was a decision about Ryan's 2022 text that nobody should take on the way past.**
 
-**If the essay should appear in that list, it needs a heading of its own**, and that is a
-separate decision about Ryan's 2022 text that nobody should take on the way past.
+**Ryan took it on 2026-09-09**: the sheet now has a lede and the essay is a section called
+**Against My Grind**. Three things about that are worth keeping.
+
+- **The heading is his own phrase**, lifted from the anecdote inside the essay, where he
+  writes of the ways norms went against his grind. A heading invented for somebody else's
+  text is a small piece of us wearing their voice, which is exactly what `ATTRIBUTIONS.md`
+  exists to catch. A heading taken from the text is the text naming itself. His words are
+  still untouched.
+- **"Everything above is the essay" binds a claim to a POSITION**, and a position is the
+  most fragile thing to bind to — it broke the moment a lede and a heading sat above it. The
+  note now names the section instead, and says which parts are ours. Fourth time this house
+  has learned that a claim that binds must move in the commit that breaks it, and the first
+  time on a sheet rather than on `/privacy`.
+- **The list moved back to the standard position**, straight after the lede: a twelfth of the
+  way down instead of a fifth. The exception is gone, and so is the rule describing it.
 
 ### A rail of the page's own headings, and both contents lists shown at once (2026-09-09)
 

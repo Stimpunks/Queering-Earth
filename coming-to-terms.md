@@ -33,6 +33,10 @@ Sheet · an essay
 **Terms**
 : [Autigender](https://stimpunks.org/glossary/autigender/) · [Neuroqueer](https://stimpunks.org/glossary/neuroqueer/)
 
+A kid in Southern Baptist Texas in the 1970s and 80s has no vocabulary for what he is, only a steady refusal of rules that strike him as senseless. The one bit of colour he risks — a pink tint on a new pair of glasses — his father has removed. Decades later, two words fit: autigender and neuroqueer. This sheet mounts the essay he published in 2022, his words unchanged and under a heading taken from his own sentence, and then takes up what it stops short of: what a word that fits is *for*, and what it charges.
+
+## Against My Grind
+
 I didn’t have the vocabulary for what I felt back in Southern Baptist Texas in the 1970s and 80s, but I was uncomfortable with and resistant to gender norms as a kid. They felt: silly, arbitrary, oppressive, confining, unnecessary, counter-productive, irrational. They did not make sense. They did not fit.
 
 A small, shareable anecdote of the ways norms went against my grind, from a lifetime collection:
@@ -49,7 +53,7 @@ Several burnouts and a retirement later, I have zero capacity for masking, for a
 
 Appended four years later
 
-Everything above is the essay of 25 September 2022 — Ryan’s words, unchanged. What follows was written for this sheet in September 2026, because the account above stops at the moment two words fitted and says nothing about what a word that fits is *for*, or what it charges. **Every quotation below was read in the work it comes from** and is logged in the site’s [attribution ledger](https://queering.earth/ledger). Most of it was gathered first from the [Stimpunks glossary](https://stimpunks.org/glossary/labels/) and the [gender copia page](https://stimpunks.org/gender/copia/), where Ryan has been collecting these quotations for years. **Each one names the copy it was read in**, which is the part that matters: the Jack passages come from a scan of the printed article, and the print punctuates her differently from the digital text — the [register](https://queering.earth/changelog) has that. One line is a transcription of speech and says so.
+The section above — *Against My Grind* — is the essay of 25 September 2022, Ryan’s words unchanged. **Its heading is his own phrase**, lifted from the anecdote inside it; the lede at the head of the sheet is ours. What follows was written for this sheet in September 2026, because the account above stops at the moment two words fitted and says nothing about what a word that fits is *for*, or what it charges. **Every quotation below was read in the work it comes from** and is logged in the site’s [attribution ledger](https://queering.earth/ledger). Most of it was gathered first from the [Stimpunks glossary](https://stimpunks.org/glossary/labels/) and the [gender copia page](https://stimpunks.org/gender/copia/), where Ryan has been collecting these quotations for years. **Each one names the copy it was read in**, which is the part that matters: the Jack passages come from a scan of the printed article, and the print punctuates her differently from the digital text — the [register](https://queering.earth/changelog) has that. One line is a transcription of speech and says so.
 
 ## A copia, not a category
 
@@ -197,4 +201,4 @@ Wise, S. J. (2024, September 27). *The neurodiversity smorgasbord: An alternativ
 
 Queering Earth Sheet No. 2 Accessioned 7 Sep 2026
 
-Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09-07-sheets). [Label corrected once](https://queering.earth/changelog#a-2026-09-08-labels), when a second text was appended under the essay and the label was still describing one.
+Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09-07-sheets). [Label corrected once](https://queering.earth/changelog#a-2026-09-08-labels), when a second text was appended under the essay and the label was still describing one, and [once again](https://queering.earth/changelog#a-2026-09-09-grind) when the essay was given a heading of its own and the note below it stopped being true.

@@ -587,13 +587,14 @@ by including the empty `<nav>`; `queering.js` fills it from that page's own `<h2
   are different places and five of the ten lists prove it: `/wild-nights` carries nineteen
   blocks of opening prose between its list and its first `<h2>`, `/invention-of-normal`
   thirteen. The list is front matter for the sections; the lede is not a section.
-  **`/coming-to-terms` is the one exception and it is authored.** It has no lede, and all six
-  of its headings are in the 2026 commentary — the 2022 essay above them is unheaded and
-  stays that way, because the register note says Ryan's words are unchanged and a heading
-  dropped into them would not be. A list at the top would name six sections that start a
-  fifth of the way down and say nothing about the essay, which is why the sheet exists. It
-  goes immediately after the register note instead, at the point the sheet says out loud that
-  it is changing hands, so it maps exactly what follows it. NN/g couples rail↔sticky; the body is
+  **There is no longer an exception, and how `/coming-to-terms` stopped being one is the
+  useful part.** It had no lede and all six headings in its 2026 commentary, so its list sat
+  after the register note — the only place it could sit without misrepresenting the page.
+  The fix was not to move the list but to give the sheet what it was missing: a lede, and a
+  heading for the essay. **The heading is Ryan's own phrase**, taken from the anecdote inside
+  the essay, because a heading invented for somebody else's text is a piece of us wearing
+  their voice. **A note that says "everything above" binds itself to a position**, so it had
+  to be rebound to a section the moment anything sat above the essay — see `DECISIONS.md`. NN/g couples rail↔sticky; the body is
   right here because the margins either side of the measure are the negative space the
   spacing work cleared, and sticky eats viewport height at 400% zoom (WCAG 1.4.10).
 - **No scroll-spy, no accordion.** Open at first paint, always. `:target` marks where a

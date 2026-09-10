@@ -43,6 +43,7 @@ No. 2 [Coming to Terms](https://queering.earth/coming-to-terms) Essay
 
 Ryan Boren, 2022
 
+  - [Against My Grind](https://queering.earth/coming-to-terms#the-essay)
   - [A copia, not a category](https://queering.earth/coming-to-terms#copia)
   - [The same materials, arranged differently](https://queering.earth/coming-to-terms#same-materials)
   - [Self-applied, or it is a different object entirely](https://queering.earth/coming-to-terms#self-applied)
@@ -197,7 +198,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-130 entries across 29 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+131 entries across 30 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

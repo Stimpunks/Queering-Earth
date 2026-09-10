@@ -36,6 +36,20 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## Sheet No. 2 had no lede and an essay with no heading, so its own contents list could not name the reason it exists
+
+When every sheet got a contents list, [this one](https://queering.earth/coming-to-terms) could not have a normal one: all six of its headings were in the 2026 commentary, and Ryan’s 2022 essay above them was unheaded, so a list at the top would have named six sections beginning a fifth of the way down and said nothing about the essay. **That was left open rather than patched, because giving the essay a heading is a decision about Ryan’s text and not a defect to sweep up.** He has now taken it.
+
+Label correctedA heading in the author’s own words, and a note that stopped being true the moment anything sat above the essay
+
+The essay is now a section called **Against My Grind**, and **the phrase is Ryan’s own** — it is lifted from the anecdote inside it, where he writes of the ways norms went against his grind. A heading invented for somebody else’s text would be a small piece of us wearing their voice, which is the failure [the ledger](https://queering.earth/ledger) exists to catch; a heading taken from the text is the text naming itself. The essay’s words are still untouched.
+
+**The note below it said “everything above is the essay”, and that stopped being true in the same edit.** A lede and a heading now sit above it, and neither is his 2022 writing. The note names the section instead of the position, and says in as many words which parts are ours — a claim that binds is a claim to move in the commit that breaks it, which is the fourth time this cabinet has learned that and the first time on a sheet rather than [the privacy page](https://queering.earth/privacy).
+
+With a lede and seven headings the sheet is now shaped like every other, so **its contents list moved back to where every other sheet keeps one** — straight after the lede, at a twelfth of the way down the page rather than a fifth. The exception it needed a week ago no longer exists, and the note describing that exception has gone with it.
+
+2026 · 9 September
+
 ## The plate was eight screens down its own home page and there was no way back up to it
 
 Every heading here has had an authored address since the contents list was built, and [the plate](https://queering.earth/#what-grows-here) and [the cabinet](https://queering.earth/#the-cabinet-itself) were reachable all along — by anyone who already knew the address. **A link nobody can find is close to a link that does not exist**, which is the objection this house makes to an untraceable quotation, arriving as a navigation problem. There is now a rail in the left margin on every page but this one: a column of short rules that becomes the page’s own headings when a pointer or a keyboard enters it.
