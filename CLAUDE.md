@@ -554,9 +554,14 @@ it is a register rather than a list of releases.
 - **Every `<h2>` on every page gets an authored `id` and a `.qe-anchor`.** No threshold. A
   section a reader cannot link to is a section nobody can cite, and the register was italicising
   three home-page section names it had no way to reach.
-- **A contents list goes only on a page long enough to want one**, and the page declares that
-  by including the container. Seven pages have one; nine do not — the count said six
-  until `/mission` was mounted, which is what a count in a rule does.
+- **EVERY SHEET HAS A CONTENTS LIST**, as of 2026-09-09, plus `/design` and `/mission` — ten
+  pages. Three of the eight were missing one for no reason anybody could reconstruct: Nos. 1,
+  2 and 7, at 2,045 to 3,098 words against 2,495 to 5,018 on the five that had one. **The
+  page still declares it by including the container** — nothing derives it from a word count,
+  because which pages want one is editorial. What changed is that the answer for a *sheet* is
+  now always yes, and the pages that decline are the ones with a stated reason: the home page
+  (its plate is already a contents list), `/changelog` (148-character headings), and the four
+  with two headings each.
 
 **The home page is the case that separates them.** Its own content *is* a contents list — the
 plate of eight numbered cards — so a `.qe-contents` above the prose would put two competing
@@ -578,7 +583,17 @@ by including the empty `<nav>`; `queering.js` fills it from that page's own `<h2
   markup — `#eden`, `#the-colon`, `#wabi-sabi` — **not a slug of its own title.** A slug dies
   when anybody rewords the heading, and every link a reader shared dies with it. The
   permanent thing is authored; the label is computed; nothing is written twice.
-- **Nonsticky, in the body, straight after the lede.** NN/g couples rail↔sticky; the body is
+- **Nonsticky, in the body, straight after the lede — NOT before the first heading.** Those
+  are different places and five of the ten lists prove it: `/wild-nights` carries nineteen
+  blocks of opening prose between its list and its first `<h2>`, `/invention-of-normal`
+  thirteen. The list is front matter for the sections; the lede is not a section.
+  **`/coming-to-terms` is the one exception and it is authored.** It has no lede, and all six
+  of its headings are in the 2026 commentary — the 2022 essay above them is unheaded and
+  stays that way, because the register note says Ryan's words are unchanged and a heading
+  dropped into them would not be. A list at the top would name six sections that start a
+  fifth of the way down and say nothing about the essay, which is why the sheet exists. It
+  goes immediately after the register note instead, at the point the sheet says out loud that
+  it is changing hands, so it maps exactly what follows it. NN/g couples rail↔sticky; the body is
   right here because the margins either side of the measure are the negative space the
   spacing work cleared, and sticky eats viewport height at 400% zoom (WCAG 1.4.10).
 - **No scroll-spy, no accordion.** Open at first paint, always. `:target` marks where a

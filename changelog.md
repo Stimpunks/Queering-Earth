@@ -102,6 +102,14 @@ The entry above went out saying `.qe-wide` *does nothing*. **That was an overcor
 
 **The lesson arrives here from a third direction.** [The colophon](https://queering.earth/design) already says paper is a medium this house has been burned by, and both browser gates measure it separately for exactly this reason: paper is not a wider screen. The notes in `queering.css` and the guidance file now describe the rule as the paper-only narrowing it is, and the rule itself is unchanged — whether the provocation should break the measure on screen stays a design question rather than a defect.
 
+CabinetThree sheets had no contents list and no reason for not having one
+
+[No. 1](https://queering.earth/on-being-ill), [No. 2](https://queering.earth/coming-to-terms) and [No. 7](https://queering.earth/flower-codes) were missing their *On this sheet* list. They run 2,045 to 3,098 words against 2,495 to 5,018 on the five that had one, **so the bar the existing sheets set was already cleared** and the gap was an oversight rather than a decision. All eight sheets carry one now. The opt-in stays in the markup: nothing derives a contents list from a word count, because which pages want one is editorial, and the pages that still decline all have a reason on the record.
+
+**“After the lede” turned out not to mean “before the first heading”**, which was checked before anything was placed. Five of the existing lists carry opening prose after them — [the Dickinson sheet](https://queering.earth/wild-nights) nineteen blocks, [the Quetelet sheet](https://queering.earth/invention-of-normal) thirteen. A contents list is front matter for the sections, and the lede is not a section.
+
+**No. 2 puts its list somewhere no other sheet does, and that is authored.** It has no lede, and all six of its headings are in the 2026 commentary — the 2022 essay above them is unheaded and stays that way, because the note directly above it says Ryan’s words are unchanged and a heading dropped into them would not be. A list at the top would name six sections that begin a fifth of the way down and say nothing at all about the essay, which is the reason the sheet exists. It sits immediately after that note instead, where the sheet says out loud that it is changing hands, and maps exactly what follows it.
+
 2026 · 9 September
 
 ## The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page
