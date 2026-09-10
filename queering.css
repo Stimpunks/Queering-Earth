@@ -772,6 +772,30 @@ html.qe-spacing-on p + p { margin-top: var(--qe-para-gap, 1.47rem); }
 .qe-reading { position: relative; }
 
 .qe-reading-summary {
+  /* THIS SUMMARY MUST BE POSITIONED OR IT NEVER RECEIVES A CLICK, and the bug it fixes
+     shipped once. Inside `.qe-controls` — a flex row — a trusted click over the summary
+     arrives with `event.target` set to the DETAILS, not the SUMMARY, so the disclosure
+     never toggles and the panel simply does not open. Positioning the summary lifts it
+     into the hit test and the click lands where it should.
+
+     WHAT IS ACTUALLY ESTABLISHED, because the mechanism is not:
+       · a pristine <details> in <body> opens on a real click;
+       · the same pristine <details> inside this flex row does not;
+       · nor does one with no content at all, so it is not the content slot;
+       · making the DETAILS `position: static` does not help, so it is not the
+         positioned parent;
+       · positioning the SUMMARY fixes it, every time.
+     Reproduced and fixed by real clicks with instrumented event targets, not by
+     reading. If this rule ever looks redundant, that is what it looks like when it is
+     working — check with a trusted click before removing it.
+
+     AND THE REASON IT SHIPPED: every test that passed used `summary.click()`, which
+     bypasses hit testing entirely, plus a screenshot taken after forcing `open = true`
+     in script. Both report success on a control no reader can operate. A disclosure is
+     not verified until a real pointer and a real Tab-and-Enter have opened it. */
+  position: relative;
+  z-index: 1;
+
   font-family: var(--qe-body);
   font-size: 0.85rem;
   line-height: 1.3;

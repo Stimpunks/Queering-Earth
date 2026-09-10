@@ -40,6 +40,16 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 Prompted by Ryan asking whether the site supported forced colours and whether the accessibility settings buried in system menus could be surfaced on the page. **The answer to the first was no** — not one `@media (forced-colors: active)` anywhere — and it was outside the audit’s stated scope rather than missed by it, which is the one time a scope caveat has actually earned its keep here. The answer to the second was an argument, and the argument was lost: “respect the system setting” only reaches the readers who know the system setting exists. **Default to the device; allow configuration in the moment.**
 
+Label correctedThe panel shipped unable to open, and every test that passed had bypassed the thing that was broken
+
+**It went out not working.** Ryan pressed *Reading* on the live site and nothing happened. Inside `.qe-controls` — the flex row the controls sit in — a real click over the summary arrives with `event.target` set to the `DETAILS` rather than the `SUMMARY`, so the disclosure never toggles. Positioning the summary lifts it into the hit test and the click lands. One rule, and it is commented, because a rule that looks redundant is exactly what a working fix for this looks like.
+
+**What is established is narrower than an explanation, and the comment says so.** A pristine `<details>` in `<body>` opens on a real click; the same one inside this flex row does not; nor does one with no content at all, so it is not the content slot; making the `DETAILS` static does not help, so it is not the positioned parent. Positioning the `SUMMARY` fixes it every time. The mechanism is not proved and is not asserted.
+
+**The interesting part is why the verification passed.** Every check run before shipping used `summary.click()`, which dispatches a click directly at the element and *skips hit testing entirely* — the one thing that was broken. The screenshot that showed the panel open had been taken after setting `open = true` from the console. Both are green lights on a control no reader can operate. Two earlier clicks in the same session landed on the wrong button because the pane’s screenshot frame is 800px wide while the page is 593, and both were read as evidence rather than as a mis-aimed click.
+
+**The rule that comes out of it:** a control is not verified until a real pointer has operated it. A synthetic `.click()` proves the handler runs; it proves nothing about whether anybody can reach the handler. The keyboard path could not be verified at all here — a pristine details at body level does not respond to a synthesised Enter either, so the harness is the limit rather than the site, and it is recorded as unverified rather than as passing.
+
 MountedReduce motion, more contrast and looser lines, each starting from what the device already asks for
 
 **The case against putting these on the page is a good one, and it is wrong here.** A site reimplementing a setting the operating system already has only helps the readers who find the widget, and it shifts the work of configuring accessibility onto the person who needs it. That argument is why *plain view* was defensible and a settings menu was not: plain view turns off *this sheet’s* wonk and rotation and display faces, which no system setting could know about.
