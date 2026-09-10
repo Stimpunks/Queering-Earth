@@ -631,12 +631,25 @@ by including the empty `<nav>`; `queering.js` fills it from that page's own `<h2
   the other silently: `measureTicks` re-derived the set with the older exclusion, counted
   three headings against the rail's two, hit its own length guard and simply stopped
   drawing the tick scale. **A guard that fails safe still fails.**
-- **Not on `/changelog`**, which looks like the strongest case and is not. A register's
-  accession headline is a sentence by design, so its labels average 148 characters against
-  22–34 on a sheet: the block measured 1,293px against 319–510px elsewhere and delayed the
-  first entry by three and a half screens. Truncating a label is this site's characteristic
-  failure applied to itself, and a short second label is the drift. The register keeps its
-  section marks and its addresses, and gets `.qe-sheet-index` instead — see below.
+- **`/changelog` HAS ONE AS OF 2026-09-09, reversing the entry that said it must not.** The
+  old reasoning was measured and correct about its own number and wrong about what the number
+  meant: a register's accession headline is a sentence by design, its 33 labels average 140
+  characters, and the block measures **2,322px — 4.8 screens before the first entry**. That
+  was read as disqualifying. It is not. **The page is 40,408 words, about 120 screens**, so
+  the list costs 2.7 screens to save up to a hundred, which is the trade a contents list
+  exists to make. The same correction as retiring the two-heading threshold, from the other
+  end: heading *count* was the wrong measure there, block *height* is the wrong measure here.
+  **Page length is the question in both.**
+- **Columns were tried and do not help, measured rather than assumed:** 2,322px in one
+  column, 2,213 in two, 2,302 in three. Narrowing a column makes a 140-character sentence
+  wrap proportionally more, so width traded for wraps is a wash. **Labels stay verbatim** —
+  truncating one is this site's characteristic failure applied to itself, and a short second
+  label is the drift.
+- **The register keeps `.qe-sheet-index` as back matter as well**, and the two do different
+  jobs: the contents list is chronological, by accession, and the index files the same
+  entries by which sheet they happened to. Its one-line pointer came out, because the
+  contents list's last item is now a link to it and two adjacent links to one place read as
+  a mistake.
 
 ### The rail is the same headings as an instrument, not as front matter
 

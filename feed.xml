@@ -46,6 +46,13 @@ Label corrected: This register said a rule did nothing, having measured it on sc
 Cabinet: Three sheets had no contents list and no reason for not having one</description>
     </item>
     <item>
+      <title>This register now has the contents list an earlier entry measured, refused, and wrote a rule against</title>
+      <link>https://queering.earth/changelog#a-2026-09-09-registertoc</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-registertoc</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Re-determined: Block height was the wrong measure, the same way heading count was the wrong measure an hour ago</description>
+    </item>
+    <item>
       <title>A feature was mistaken for a fault, removed, and put back within the hour</title>
       <link>https://queering.earth/changelog#a-2026-09-09-navheads</link>
       <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-navheads</guid>

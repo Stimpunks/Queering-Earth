@@ -2322,8 +2322,6 @@ Our sibling site [Star Stuff](https://starstuff.earth/) risks a wrong fact. This
 
 So the errors are entries like any other. A byline that put Helen Edgar’s name on prose she did not write. A journal citation handed to us with the wrong issue and the wrong pages. A caption that said Miranda had never seen anybody but her father and Caliban, when the play has her half-remembering four or five women. Each one is named below with what it said, what it says now, and how it was caught. The working has always been in the repository. **This page is the account of it that a reader can actually reach.**
 
-[Index by sheet](#qe-index-h) — the same entries filed by what they happened to, at the foot of the page.
-
 - Mounted
 - Re-determined
 - Label corrected
@@ -2460,6 +2458,22 @@ CabinetThree sheets had no contents list and no reason for not having one
 **No. 2 puts its list somewhere no other sheet does, and that is authored.** It has no lede, and all six of its headings are in the 2026 commentary — the 2022 essay above them is unheaded and stays that way, because the note directly above it says Ryan’s words are unchanged and a heading dropped into them would not be. A list at the top would name six sections that begin a fifth of the way down and say nothing at all about the essay, which is the reason the sheet exists. It sits immediately after that note instead, where the sheet says out loud that it is changing hands, and maps exactly what follows it.
 
 2026 · 9 September · latest
+
+## This register now has the contents list an earlier entry measured, refused, and wrote a rule against
+
+Ryan asked for it. The old refusal was **right about its number and wrong about what the number meant** — which is a more interesting way to be wrong than simply not having measured.
+
+Re-determinedBlock height was the wrong measure, the same way heading count was the wrong measure an hour ago
+
+**The figures, re-measured rather than quoted.** Thirty-three accession headlines averaging 140 characters; the list renders **2,322px** and puts the first entry **4.8 screens** down. Both worse than the 1,293px and three and a half screens that got it refused, because ten accessions have been added since.
+
+**And it does not matter, because the page is 40,408 words.** That is roughly a hundred and twenty screens. A list that costs 2.7 of them to reach any one of thirty-three accessions directly is the trade a contents list exists to make. The refusal compared the block against other pages’ blocks; the comparison that decides it is the block against *its own page*. **This is the two-heading threshold’s mistake from the other end** — count was the wrong measure there, height is the wrong measure here, and page length is the question in both.
+
+**Columns were tried and do not help.** 2,322px in one column, 2,213 in two, 2,302 in three. Narrowing a column makes a 140-character sentence wrap proportionally more, so width traded for wraps is a wash. Measured in the browser before the CSS was considered, and then not written. **The labels stay verbatim**: truncating one is this site’s characteristic failure applied to itself, and a short second label is the drift the derivation exists to prevent.
+
+**Both indexes stay, and they do different jobs.** The contents list is chronological, by accession, at the top; [the index by sheet](#qe-index-h) is at the foot and files the same entries by what they happened to. Front matter and back matter, which is how a bound volume carries both. The one-line pointer that used to sit by the legend came out — the contents list’s last item is a link to that index, and two adjacent links to one place read as a mistake even when both are right.
+
+2026 · 9 September
 
 ## A feature was mistaken for a fault, removed, and put back within the hour
 
@@ -3920,7 +3934,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-142 entries across 34 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+143 entries across 35 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
