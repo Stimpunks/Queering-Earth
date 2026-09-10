@@ -245,6 +245,38 @@ entries.
 
 ## Settled
 
+### Back to the top, drawn as growth rather than as a chevron (2026-09-09)
+
+**Settled.** Ryan wanted a way back up after finishing a piece, and asked for a footer
+illustration of grasses whose taller stems form an arrow, with *Scroll to top* above them.
+
+**The arrowhead is a seed head.** A chevron drawn over grass is a UI arrow in a costume, and
+this site already has a native idiom for "up": growth, stems drawing themselves on from the
+ground. Two tall blades arc up and converge at the middle stem's head, and the silhouette is
+an arrow without one being drawn. **The first attempt put two short awns on the head and read
+as a small figure with its arms raised** — looked at, and redrawn, which is what this repo's
+own rule about judging a drawing at its shipped size is for.
+
+**No script, and no new motion.** A plain anchor scrolls; `scroll-behavior: smooth` is
+already set once and already switched off under `prefers-reduced-motion`. The mark wears
+`.qe-botanical`, so the blades draw themselves on with the same gating as every other drawing
+here.
+
+**A note on how this one was reviewed.** The first pass treated the phrase Ryan used to
+describe the look — *a grassy waste garden* — as though it were about to be printed on the
+page, and refused it on attribution grounds at length in four files. It was never going to be
+printed: the footer says *Scroll to top*, and a drawing of grass quotes nobody. **Design
+vocabulary in conversation is not a publication, and reading it as one makes the work harder
+to talk about for no gain.** `ATTRIBUTIONS.md` governs what the site says to a reader. It does
+not govern how we describe a feel to each other.
+
+**`main` gained `tabindex="-1"`, and it is the quiet half of this change.** Two in-page links
+now aim at that landmark. A landmark that cannot take focus leaves a keyboard reader's focus
+in the footer while the page scrolls away from it, so their next Tab resumes at the bottom of
+a page they just left. Verified after the change: activating the link scrolls 9,952px, sets
+the hash, and moves focus to `main`. **The skip link has wanted this since it was written**
+and nobody had noticed, because the failure is invisible to anyone using a mouse.
+
 ### Every sheet gets a contents list, and one of them puts it in an odd place (2026-09-09)
 
 **Settled.** Three of the eight sheets had no *On this sheet* list — Nos. 1, 2 and 7 — and

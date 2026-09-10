@@ -121,7 +121,7 @@
   </svg>
 </nav>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
   <header class="qe-masthead">
     <p class="qe-kicker"><a href="/">Queering Earth</a> &middot; The cabinet itself</p>
@@ -187,6 +187,12 @@
 <p><strong>Still open:</strong> whether either section keeps a prose intro once it holds more than four entries.</p>
 <hr>
 <h2 id="settled">Settled <a class="qe-anchor" href="#settled"><span class="qe-sr">Link to this section</span></a></h2>
+<h3 id="back-to-the-top-drawn-as-growth-rather-than-as-a-chevron-2026-09-09">Back to the top, drawn as growth rather than as a chevron (2026-09-09) <a class="qe-anchor" href="#back-to-the-top-drawn-as-growth-rather-than-as-a-chevron-2026-09-09"><span class="qe-sr">Link to this section</span></a></h3>
+<p><strong>Settled.</strong> Ryan wanted a way back up after finishing a piece, and asked for a footer illustration of grasses whose taller stems form an arrow, with <em>Scroll to top</em> above them.</p>
+<p><strong>The arrowhead is a seed head.</strong> A chevron drawn over grass is a UI arrow in a costume, and this site already has a native idiom for "up": growth, stems drawing themselves on from the ground. Two tall blades arc up and converge at the middle stem's head, and the silhouette is an arrow without one being drawn. <strong>The first attempt put two short awns on the head and read as a small figure with its arms raised</strong> — looked at, and redrawn, which is what this repo's own rule about judging a drawing at its shipped size is for.</p>
+<p><strong>No script, and no new motion.</strong> A plain anchor scrolls; <code>scroll-behavior: smooth</code> is already set once and already switched off under <code>prefers-reduced-motion</code>. The mark wears <code>.qe-botanical</code>, so the blades draw themselves on with the same gating as every other drawing here.</p>
+<p><strong>A note on how this one was reviewed.</strong> The first pass treated the phrase Ryan used to describe the look — <em>a grassy waste garden</em> — as though it were about to be printed on the page, and refused it on attribution grounds at length in four files. It was never going to be printed: the footer says <em>Scroll to top</em>, and a drawing of grass quotes nobody. <strong>Design vocabulary in conversation is not a publication, and reading it as one makes the work harder to talk about for no gain.</strong> <code>ATTRIBUTIONS.md</code> governs what the site says to a reader. It does not govern how we describe a feel to each other.</p>
+<p><strong><code>main</code> gained <code>tabindex="-1"</code>, and it is the quiet half of this change.</strong> Two in-page links now aim at that landmark. A landmark that cannot take focus leaves a keyboard reader's focus in the footer while the page scrolls away from it, so their next Tab resumes at the bottom of a page they just left. Verified after the change: activating the link scrolls 9,952px, sets the hash, and moves focus to <code>main</code>. <strong>The skip link has wanted this since it was written</strong> and nobody had noticed, because the failure is invisible to anyone using a mouse.</p>
 <h3 id="every-sheet-gets-a-contents-list-and-one-of-them-puts-it-in-an-odd-place">Every sheet gets a contents list, and one of them puts it in an odd place (2026-09-09) <a class="qe-anchor" href="#every-sheet-gets-a-contents-list-and-one-of-them-puts-it-in-an-odd-place"><span class="qe-sr">Link to this section</span></a></h3>
 <p><strong>Settled.</strong> Three of the eight sheets had no <em>On this sheet</em> list — Nos. 1, 2 and 7 — and no reconstructible reason for the gap. They run 2,045 to 3,098 words against 2,495 to 5,018 on the five that had one, so the bar the existing pages set was already cleared. All eight now have one, plus <code>/design</code> and <code>/mission</code>: ten pages.</p>
 <p><strong>The opt-in stays in the markup.</strong> Nothing derives the list from a word count, because which pages want one is an editorial call. What is now settled is only that the answer for a <em>sheet</em> is always yes. The pages that decline all have a stated reason: the home page, whose plate is already a contents list; <code>/changelog</code>, whose headings average 148 characters; and the four pages with two headings each.</p>
@@ -655,6 +661,26 @@ netlify api getSite --data '{"site_id":"4115815c-5811-4df6-8f6f-9598e85d2d72"}' 
   <p><a href="/changelog">The accession register</a> &mdash; every sheet as it was mounted, and every label we corrected.</p>
   <p><a href="/search">Find a word in the cabinet</a> &mdash; every sheet, every quotation, and every correction, searched in your own browser.</p>
   <p><a href="/privacy">What this site knows about you</a> &mdash; almost nothing, and the whole of it.</p>
+
+  <a class="qe-totop" href="#main">
+    <span class="qe-totop-label">Scroll to top</span>
+    <svg class="qe-botanical qe-totop-mark" viewBox="0 0 160 66" aria-hidden="true" focusable="false">
+      <path class="stem" style="--len:21" d="M22,64 C24,56 25,51 24,45"/>
+      <path class="stem" style="--len:24" d="M33,64 C32,55 30,49 28,43"/>
+      <path class="stem" style="--len:25" d="M44,64 C46,54 48,48 50,42"/>
+      <path class="stem" style="--len:52" d="M58,64 C60,46 67,32 77,21"/>
+      <path class="stem" style="--len:32" d="M68,64 C69,50 70,42 71,34"/>
+      <path class="stem" style="--len:44" d="M80,64 C79.4,48 80.6,34 80,22"/>
+      <path class="stem" style="--len:32" d="M92,64 C91,50 90,42 89,34"/>
+      <path class="stem" style="--len:52" d="M102,64 C100,46 93,32 83,21"/>
+      <path class="stem" style="--len:25" d="M116,64 C114,54 112,48 110,42"/>
+      <path class="stem" style="--len:24" d="M127,64 C128,55 130,49 132,43"/>
+      <path class="stem" style="--len:21" d="M138,64 C136,56 135,51 136,45"/>
+      <g class="sprout" style="--i:3">
+        <path class="head" d="M80,5 C77.4,11 77.4,18 80,25 C82.6,18 82.6,11 80,5 Z"/>
+      </g>
+    </svg>
+  </a>
 </footer>
 <script src="queering.js"></script>
 </body>

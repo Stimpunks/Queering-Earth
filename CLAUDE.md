@@ -758,6 +758,30 @@ delays none. A one-line pointer up by the legend is how a book does it.
 - **A new entry needs its `data-sheet`** in the same pass that writes it. Mount it, card it,
   log it, **file it**.
 
+### Back to the top is a link, and its arrowhead is a seed head
+
+`.qe-totop` closes every footer: real text reading **Scroll to top**, a drawn mark under it,
+the whole thing one `<a href="#main">`. **No script** — an anchor already scrolls, and
+`scroll-behavior` is set once at the top of `queering.css` and switched off under reduced
+motion, so smoothness is inherited rather than restated.
+
+**The arrowhead is a seed head, and that is the whole trick.** A chevron laid over grass is a
+UI arrow in a costume. This site's own idiom for "up" is growth — stems draw themselves on
+from the ground — so two tall blades simply arc up and meet at the middle stem's head, and
+the silhouette is an arrow already. Nothing is imported and nothing is faked. **Drawn wrong
+first**: the earlier version put two short awns on the head and read as a small figure with
+its arms up.
+
+**The words carry the meaning; the drawing carries none.** The mark is `aria-hidden`, the
+link is named by real text, and a reader who sees only grass has lost an ornament rather than
+a control — the same split as the rail's ticks and its lean.
+
+**`main` GAINED `tabindex="-1"` AND THAT IS NOT COSMETIC.** Two in-page links now aim at that
+landmark, and a landmark that cannot take focus leaves a keyboard reader's focus in the
+footer while the page scrolls to the top — their next Tab resumes from the bottom. Proved
+after: activating the link scrolls 9,952px and moves focus to `main`, so Tab resumes at the
+top of the content. **The skip link has wanted this since it was written.**
+
 ### A page that is not a reading is listed on the home page, not carded
 
 The plate names readings. Everything else is listed at the **foot of the home page** in

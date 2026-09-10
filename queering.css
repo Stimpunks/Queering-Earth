@@ -1195,6 +1195,79 @@ html.plain .qe-specimen blockquote { font-variation-settings: normal; }
 .qe-footer p { margin: 0 0 0.75rem; }
 .qe-footer a { color: var(--qe-rust); }
 
+
+/* ─────────────────────────────────────────────── back to the top
+ *
+ * A plain in-page link at the foot of every footer, aimed at the same landmark
+ * the skip link uses. No script: an anchor already scrolls, and `scroll-behavior`
+ * is set once at the top of this file and switched off under reduced motion, so
+ * the smoothness is inherited rather than restated.
+ *
+ * THE ARROWHEAD IS A SEED HEAD, WHICH IS THE WHOLE TRICK. A chevron drawn over
+ * grass is a UI arrow in a costume; this site's own idiom for "up" is growth —
+ * the stems draw themselves on from the ground. So the middle stem simply runs
+ * taller than the rest and ends in a seed head whose two awns give the silhouette
+ * an arrow already. Nothing is imported and nothing is faked.
+ *
+ * THE WORDS CARRY THE MEANING AND THE DRAWING CARRIES NOTHING. The mark is
+ * `aria-hidden`, the link is named by real text, and a reader who sees only the
+ * grass has lost an ornament rather than a control — the same split as the rail's
+ * ticks and its lean.
+ */
+.qe-totop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--qe-space-1);
+  width: max-content;
+  margin: var(--qe-space-6) auto 0;
+  /* Netted out of the scale: the label alone is 17px of ink, and this brings the
+     whole target past 44px without the drawing having to be bigger. */
+  padding: 0.6rem 1.5rem 0.2rem;
+  text-decoration: none;
+  color: var(--qe-moss);
+  font-family: var(--qe-body);
+  font-size: 0.78rem;
+  line-height: 1.3;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: var(--qe-corner-b);
+}
+/* `.qe-footer a` is a class plus a type and beats a bare class, so it was painting
+   this rust along with the footer's prose links. That is the right colour for a
+   sentence and the wrong one for a plant: every drawing on this site is moss, and
+   this is not a prose link but a control. Named specifically enough to win, and
+   the hover then goes where every other link here goes. */
+.qe-footer .qe-totop { color: var(--qe-moss); }
+.qe-footer .qe-totop:hover { color: var(--qe-rust); }
+.qe-totop:hover .qe-totop-label { text-decoration: underline; }
+.qe-totop:focus-visible {
+  outline: 3px solid var(--qe-rust);
+  outline-offset: 2px;
+}
+
+/* .qe-botanical is width:100%; every drawing that is not a masthead overrides it,
+   as the moth and the rail's terminus do. */
+.qe-totop-mark {
+  display: block;
+  width: 9.5rem;
+  height: auto;
+  margin: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* The seed head is the one filled shape, as the bud is on the rail's terminus and
+   the rivet is on the loupe. It follows the link's colour rather than naming one. */
+.qe-totop-mark .head { fill: currentColor; stroke: none; }
+
+@media print {
+  /* Nowhere to scroll on paper. */
+  .qe-totop { display: none; }
+}
+
 /* ─────────────────────────────────────────────── paper */
 
 @media print {
