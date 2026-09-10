@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Font specimen &mdash; a scratch page for Queering Earth</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../queering.css">
+<style>
+@font-face {
+  font-family: 'Fraunces Spec';
+  src: url(../fonts/fraunces-latin.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Newsreader Spec';
+  src: url(../fonts/newsreader-latin.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Redaction Inclusive Spec';
+  src: url(fonts/redaction-inclusive.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Unormative Fraktur Spec';
+  src: url(fonts/unormative-fraktur.otf) format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Enby Gertrude Spec';
+  src: url(fonts/enby-gertrude.otf) format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Insolente Spec';
+  src: url(fonts/insolente.otf) format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BBB Love Spec';
+  src: url(fonts/love.otf) format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BBB Rage Spec';
+  src: url(fonts/rage.otf) format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Spec';
+  src: url(fonts/atkinson.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Comic Neue Spec';
+  src: url(fonts/comic-neue.woff2) format('woff2');
+  font-display: swap;
+}
+
+/* Scratch styling only. Everything that matters — the palette, the wash, the corners,
+   the spacing scale — comes from ../queering.css, unaltered. */
+.spec-bar { display: flex; gap: 0.85rem; justify-content: flex-end; align-items: center;
+  padding: 0.9rem var(--qe-gutter) 0; }
+.spec-bar button { font-family: var(--qe-body); font-size: 0.85rem; color: var(--qe-moss);
+  background: transparent; border: 1px solid var(--qe-rule); border-radius: 999px;
+  padding: 0.35rem 0.9rem; cursor: pointer; }
+.spec-bar button:focus-visible { outline: 3px solid var(--qe-rust); outline-offset: 2px; }
+.spec-intro { max-width: var(--qe-measure); margin: 0 auto; padding: 0 var(--qe-gutter); }
+.spec { max-width: var(--qe-measure); margin: var(--qe-space-8) auto; padding: 0 var(--qe-gutter); }
+.spec + .spec { border-top: 1px solid var(--qe-rule); padding-top: var(--qe-space-6); }
+.spec-head { font-family: var(--qe-body-fallback, "Newsreader"), Georgia, serif; }
+.spec-kind { font-family: "Newsreader", Georgia, serif; font-size: 0.78rem;
+  letter-spacing: 0.09em; text-transform: uppercase; color: var(--qe-moss); margin: 0 0 0.3rem; }
+.spec h2 { font-family: "Newsreader", Georgia, serif; font-size: 1.35rem; margin: 0 0 0.35rem; color: var(--qe-ink); }
+.spec-meta { font-family: "Newsreader", Georgia, serif; font-size: 0.85rem; color: var(--qe-moss); margin: 0 0 0.6rem; }
+.spec-note { font-family: "Newsreader", Georgia, serif; font-size: 0.95rem; line-height: 1.6;
+  color: var(--qe-ink); margin: 0 0 var(--qe-space-4); }
+.spec-display { font-family: var(--qe-display); font-size: clamp(2.2rem, 7vw, 3.6rem);
+  line-height: 1.05; margin: 0 0 var(--qe-space-2); color: var(--qe-ink);
+  font-variation-settings: 'SOFT' 60, 'WONK' 1; }
+.spec-dot { color: var(--qe-rust); }
+.spec-quote { font-family: var(--qe-display); font-size: 1.6rem; line-height: 1.3;
+  margin: 0 0 var(--qe-space-3); color: var(--qe-moss); }
+.spec-body { font-family: var(--qe-body); font-size: 1.19rem; line-height: 1.65;
+  margin: 0 0 var(--qe-space-2); color: var(--qe-ink); }
+.spec-small { font-family: var(--qe-body); font-size: 0.9rem; line-height: 1.5;
+  color: var(--qe-moss); margin: 0; }
+</style>
+<script>try{var g=localStorage.getItem('qe-ground');if(g==='cabinet'||g==='daylight')document.documentElement.classList.add(g)}catch(e){}</script>
+</head>
+<body>
+
+<div class="spec-bar">
+  <button type="button" id="ground">Cabinet</button>
+</div>
+
+<main class="spec-intro">
+  <h1 style="font-family:'Newsreader',Georgia,serif">Font specimen</h1>
+  <p style="font-family:'Newsreader',Georgia,serif;font-size:1.19rem;line-height:1.65">
+    Candidates for a font picker, set in this site&rsquo;s own palette at its own sizes, on its
+    own paper. Each block overrides only <code>--qe-display</code> and <code>--qe-body</code>,
+    which is exactly what a picker would do &mdash; so what you see here is what you would get.
+    Toggle the ground; body text is 1.19rem at 1.65, the same as a sheet.
+  </p>
+  <p style="font-family:'Newsreader',Georgia,serif;font-size:0.95rem;line-height:1.6;color:var(--qe-moss)">
+    <strong>This is a scratch page.</strong> It is <code>noindex</code>, it is not in
+    <code>sitemap.xml</code>, and it should be deleted once the choice is made &mdash; a specimen
+    kept after the decision is a second, stale account of what the site&rsquo;s type is.
+    Regenerate with <code>node tools/make-specimen.mjs</code>. Licences were fetched with the
+    files; two families state their terms only in a README and are marked as such, which needs
+    reading before either ships.
+  </p>
+</main>
+
+
+  <section class="spec" style="--qe-display: 'Fraunces Spec', Georgia, serif; --qe-body: 'Fraunces Spec', Georgia, serif">
+    <header class="spec-head">
+      <p class="spec-kind">What the sheet uses now</p>
+      <h2>Fraunces</h2>
+      <p class="spec-meta"><strong>Undercase Type, Phaedra Charles, Flavia Zimbardi</strong> &middot; OFL-1.1 &middot; 118&nbsp;KB &middot; proposed for display</p>
+      <p class="spec-note">What the sheet already uses. Its WONK axis exposes deviant letterforms as a setting you turn up — deviation as a control rather than a defect.</p>
+    </header>
+    <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
+    <p class="spec-quote">Wild nights &ndash; Wild nights!</p>
+    <p class="spec-body">Woolf wrote the essay about illness that English did not have, complained inside it that English could not hold one, and then went back four years later and quietly made her own sentences stranger.</p>
+    <p class="spec-small">Specimen &middot; Maker &middot; First printed &middot; Read by &mdash; 0123456789 &mdash; æþð &œ fi ffl</p>
+  </section>
+
+  <section class="spec" style="--qe-display: 'Newsreader Spec', Georgia, serif; --qe-body: 'Newsreader Spec', Georgia, serif">
+    <header class="spec-head">
+      <p class="spec-kind">What the sheet uses now</p>
+      <h2>Newsreader</h2>
+      <p class="spec-meta"><strong>Production Type</strong> &middot; OFL-1.1 &middot; 129&nbsp;KB &middot; proposed for body</p>
+      <p class="spec-note">What you are reading now. The comparison every other body option has to win against.</p>
+    </header>
+    <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
+    <p class="spec-quote">Wild nights &ndash; Wild nights!</p>
+    <p class="spec-body">Woolf wrote the essay about illness that English did not have, complained inside it that English could not hold one, and then went back four years later and quietly made her own sentences stranger.</p>
+    <p class="spec-small">Specimen &middot; Maker &middot; First printed &middot; Read by &mdash; 0123456789 &mdash; æþð &œ fi ffl</p>
+  </section>
+
+  <section class="spec" style="--qe-display: 'Redaction Inclusive Spec', Georgia, serif; --qe-body: 'Redaction Inclusive Spec', Georgia, serif">
+    <header class="spec-head">
+      <p class="spec-kind">Type about what was taken out</p>
+      <h2>Redaction Inclusive</h2>
+      <p class="spec-meta"><strong>Bye Bye Binary, after Redaction by Jeremy Mickel / MCKL</strong> &middot; OFL-1.1 &middot; <a href="fonts/redaction-inclusive-LICENCE.txt">licence</a> &middot; 32&nbsp;KB &middot; could do either</p>
+      <p class="spec-note">Redaction was drawn for Titus Kaphar and Reginald Dwayne Betts’ project on the carceral state — a face about what gets taken out. Bye Bye Binary then added inclusive glyphs to it. Type about erasure, re-cut to say what the grammar refuses.</p>
+    </header>
+    <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
+    <p class="spec-quote">Wild nights &ndash; Wild nights!</p>
+    <p class="spec-body">Woolf wrote the essay about illness that English did not have, complained inside it that English could not hold one, and then went back four years later and quietly made her own sentences stranger.</p>
+    <p class="spec-small">Specimen &middot; Maker &middot; First printed &middot; Read by &mdash; 0123456789 &mdash; æþð &œ fi ffl</p>
+  </section>
+
+  <section class="spec" style="--qe-display: 'Unormative Fraktur Spec', Georgia, serif; --qe-body: 'Unormative Fraktur Spec', Georgia, serif">
+    <header class="spec-head">
+      <p class="spec-kind">The othered script</p>
+      <h2>Unormative Fraktur</h2>
+      <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; OFL-1.1 &middot; <a href="fonts/unormative-fraktur-LICENCE.txt">licence</a> &middot; 405&nbsp;KB &middot; proposed for display</p>
+      <p class="spec-note">Blackletter is the othered Latin script — coded archaic, banned by the Nazis in 1941 for being “Jewish letters”. Recut here as “unormative”. The most loaded option on the page, and it should be argued about.</p>
+    </header>
+    <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
+    <p class="spec-quote">Wild nights &ndash; Wild nights!</p>
+    <p class="spec-body">Woolf wrote the essay about illness that English did not have, complained inside it that English could not hold one, and then went back four years later and quietly made her own sentences stranger.</p>
+    <p class="spec-small">Specimen &middot; Maker &middot; First printed &middot; Read by &mdash; 0123456789 &mdash; æþð &œ fi ffl</p>
+  </section>
+
+  <section class="spec" style="--qe-display: 'Enby Gertrude Spec', Georgia, serif; --qe-body: 'Enby Gertrude Spec', Georgia, serif">
+    <header class="spec-head">
+      <p class="spec-kind">Glyphs the grammar refuses</p>
+      <h2>Enby Gertrude</h2>
+      <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; stated in the README, no separate licence file upstream &middot; <a href="fonts/enby-gertrude-LICENCE.txt">licence</a> &middot; 52&nbsp;KB &middot; proposed for display</p>
+      <p class="spec-note">A non-binary cut of Gertrude. The name is the thesis.</p>
+    </header>
+    <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
+    <p class="spec-quote">Wild nights &ndash; Wild nights!</p>
+    <p class="spec-body">Woolf wrote the essay about illness that English did not have, complained inside it that English could not hold one, and then went back four years later and quietly made her own sentences stranger.</p>
+    <p class="spec-small">Specimen &middot; Maker &middot; First printed &middot; Read by &mdash; 0123456789 &mdash; æþð &œ fi ffl</p>
+  </section>
+
+  <section class="spec" style="--qe-display: 'Insolente Spec', Georgia, serif; --qe-body: 'Insolente Spec', Georgia, serif">
+    <header class="spec-head">
+      <p class="spec-kind">Attitude, named outright</p>
+      <h2>Insolente</h2>
+      <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; stated in the README, no separate licence file upstream &middot; <a href="fonts/insolente-LICENCE.txt">licence</a> &middot; 61&nbsp;KB &middot; proposed for display</p>
+      <p class="spec-note">Insolent. Mientjes’ “attitude in the face of conformity”, named outright.</p>
+    </header>
+    <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
+    <p class="spec-quote">Wild nights &ndash; Wild nights!</p>
+    <p class="spec-body">Woolf wrote the essay about illness that English did not have, complained inside it that English could not hold one, and then went back four years later and quietly made her own sentences stranger.</p>
+    <p class="spec-small">Specimen &middot; Maker &middot; First printed &middot; Read by &mdash; 0123456789 &mdash; æþð &œ fi ffl</p>
+  </section>
+
+  <section class="spec" style="--qe-display: 'BBB Love Spec', Georgia, serif; --qe-body: 'BBB Love Spec', Georgia, serif">
+    <header class="spec-head">
+      <p class="spec-kind">Attitude, named outright</p>
+      <h2>BBB Love</h2>
+      <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; LICENSE_CUTE &middot; <a href="fonts/love-LICENCE.txt">licence</a> &middot; 53&nbsp;KB &middot; proposed for display</p>
+      <p class="spec-note">Love and Rage ship as two cuts of one family. A typeface that makes you choose which one the sentence is in.</p>
+    </header>
+    <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
+    <p class="spec-quote">Wild nights &ndash; Wild nights!</p>
+    <p class="spec-body">Woolf wrote the essay about illness that English did not have, complained inside it that English could not hold one, and then went back four years later and quietly made her own sentences stranger.</p>
+    <p class="spec-small">Specimen &middot; Maker &middot; First printed &middot; Read by &mdash; 0123456789 &mdash; æþð &œ fi ffl</p>
+  </section>
+
+  <section class="spec" style="--qe-display: 'BBB Rage Spec', Georgia, serif; --qe-body: 'BBB Rage Spec', Georgia, serif">
+    <header class="spec-head">
+      <p class="spec-kind">Attitude, named outright</p>
+      <h2>BBB Rage</h2>
+      <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; LICENSE_CUTE &middot; <a href="fonts/rage-LICENCE.txt">licence</a> &middot; 72&nbsp;KB &middot; proposed for display</p>
+      <p class="spec-note">The other cut. Same family, opposite temperature.</p>
+    </header>
+    <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
+    <p class="spec-quote">Wild nights &ndash; Wild nights!</p>
+    <p class="spec-body">Woolf wrote the essay about illness that English did not have, complained inside it that English could not hold one, and then went back four years later and quietly made her own sentences stranger.</p>
+    <p class="spec-small">Specimen &middot; Maker &middot; First printed &middot; Read by &mdash; 0123456789 &mdash; æþð &œ fi ffl</p>
+  </section>
+
+  <section class="spec" style="--qe-display: 'Atkinson Hyperlegible Spec', Georgia, serif; --qe-body: 'Atkinson Hyperlegible Spec', Georgia, serif">
+    <header class="spec-head">
+      <p class="spec-kind">Letters that insist on being themselves</p>
+      <h2>Atkinson Hyperlegible</h2>
+      <p class="spec-meta"><strong>Braille Institute of America</strong> &middot; OFL-1.1 &middot; <a href="fonts/atkinson-LICENCE.txt">licence</a> &middot; 11&nbsp;KB &middot; proposed for body</p>
+      <p class="spec-note">Drawn for low vision by maximising how unlike each other the letters are. It refuses the modernist ideal of harmonious uniformity in favour of letters that insist on being themselves — which is the same refusal, arrived at from the other direction.</p>
+    </header>
+    <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
+    <p class="spec-quote">Wild nights &ndash; Wild nights!</p>
+    <p class="spec-body">Woolf wrote the essay about illness that English did not have, complained inside it that English could not hold one, and then went back four years later and quietly made her own sentences stranger.</p>
+    <p class="spec-small">Specimen &middot; Maker &middot; First printed &middot; Read by &mdash; 0123456789 &mdash; æþð &œ fi ffl</p>
+  </section>
+
+  <section class="spec" style="--qe-display: 'Comic Neue Spec', Georgia, serif; --qe-body: 'Comic Neue Spec', Georgia, serif">
+    <header class="spec-head">
+      <p class="spec-kind">Included to be argued with</p>
+      <h2>Comic Neue</h2>
+      <p class="spec-meta"><strong>Craig Rozynski</strong> &middot; OFL-1.1 &middot; <a href="fonts/comic-neue-LICENCE.txt">licence</a> &middot; 13&nbsp;KB &middot; proposed for body</p>
+      <p class="spec-note">The redrawn Comic Sans. Universally derided, quietly relied on by many dyslexic readers, and completely unbothered about looking serious. Included to be argued with, not to be safe.</p>
+    </header>
+    <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
+    <p class="spec-quote">Wild nights &ndash; Wild nights!</p>
+    <p class="spec-body">Woolf wrote the essay about illness that English did not have, complained inside it that English could not hold one, and then went back four years later and quietly made her own sentences stranger.</p>
+    <p class="spec-small">Specimen &middot; Maker &middot; First printed &middot; Read by &mdash; 0123456789 &mdash; æþð &œ fi ffl</p>
+  </section>
+
+<script>
+  var b = document.getElementById('ground'), r = document.documentElement;
+  var inCab = function () {
+    return r.classList.contains('cabinet') ||
+      (!r.classList.contains('daylight') && matchMedia('(prefers-color-scheme: dark)').matches);
+  };
+  var paint = function () { b.textContent = inCab() ? 'Daylight' : 'Cabinet'; };
+  b.addEventListener('click', function () {
+    var next = inCab() ? 'daylight' : 'cabinet';
+    r.classList.remove('cabinet', 'daylight'); r.classList.add(next);
+    try { localStorage.setItem('qe-ground', next); } catch (e) {}
+    paint();
+  });
+  paint();
+</script>
+</body>
+</html>

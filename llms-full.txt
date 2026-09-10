@@ -2322,7 +2322,7 @@ And it names the reason this belongs on *this* site rather than being imported w
 
 ## The type
 
-Two families, both variable, both with real fallback stacks. **[Fraunces](https://fonts.google.com/specimen/Fraunces)** sets the display, and it was chosen for one reason: it carries an axis called `WONK`, which exposes letterforms that deviate from the norm as a setting you can turn up. A site about queering normativity setting its masthead with the deviation axis open is the argument made in the type rather than described in prose.
+Two families, both variable, both with real fallback stacks. **[Fraunces](https://github.com/undercasetype/Fraunces)**, by **Undercase Type, Phaedra Charles and Flavia Zimbardi**, sets the display, and it was chosen for one reason: it carries an axis called `WONK`, which exposes letterforms that deviate from the norm as a setting you can turn up. A site about queering normativity setting its masthead with the deviation axis open is the argument made in the type rather than described in prose.
 
 Fraunces italic — wonk and soft, turned up
 
@@ -2340,7 +2340,9 @@ Newsreader — the reading face
 
 Considering how common illness is, how tremendous the spiritual change that it brings, how astonishing, when the lights of health go down, the undiscovered countries that are then disclosed.
 
-**[Newsreader](https://fonts.google.com/specimen/Newsreader)** sets everything you actually read: body text at about 19px, line spacing 1.65, and a measure of roughly 66 characters. Body text on this site never goes below 18px and must survive 200% zoom.
+**[Newsreader](https://github.com/productiontype/Newsreader)**, by **Production Type**, sets everything you actually read: body text at about 19px, line spacing 1.65, and a measure of roughly 66 characters. Body text on this site never goes below 18px and must survive 200% zoom.
+
+Both are served from this domain rather than from a font CDN, and **both are under the SIL Open Font Licence**, whose text sits beside them in `fonts/` because the licence has to travel with the files wherever they are redistributed — and a public repository serving them over HTTP is redistribution. They went a day without it. The designers above are read out of upstream metadata by `tools/make-fonts.mjs` rather than from anybody’s memory, which is the same rule every other name on this site is held to.
 
 ## Plain view
 
@@ -2426,6 +2428,16 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 ## The device decides, and the reader may say otherwise: three reading settings, and a motion rule that had to be turned inside out to allow the second answer
 
 Prompted by Ryan asking whether the site supported forced colours and whether the accessibility settings buried in system menus could be surfaced on the page. **The answer to the first was no** — not one `@media (forced-colors: active)` anywhere — and it was outside the audit’s stated scope rather than missed by it, which is the one time a scope caveat has actually earned its keep here. The answer to the second was an argument, and the argument was lost: “respect the system setting” only reaches the readers who know the system setting exists. **Default to the device; allow configuration in the moment.**
+
+Label correctedThe fonts were redistributed for a day with no licence beside them, and their designers were credited to a search engine
+
+**Self-hosting the two faces on 9 September stopped the site disclosing every reader’s address to Google, and introduced a licensing fault in the same move.** Both are under the SIL Open Font Licence, which requires the licence text to accompany the fonts *wherever they are redistributed* — and a public repository serving `woff2` over HTTP is redistribution. For a day they had none. `fonts/Fraunces-OFL.txt` and `fonts/Newsreader-OFL.txt` are there now, each family’s own file with its own copyright line, because a generic copy of the licence carrying somebody else’s copyright would be a gesture at compliance rather than compliance.
+
+**And the colophon credited both faces to a search engine.** It linked “Fraunces” and “Newsreader” to their Google Fonts pages and named nobody. On a site whose one stated correctness requirement is that credit reaches the person it belongs to, that is the fault it exists to catch, committed against the people whose letters every word here is set in. **Fraunces is by Undercase Type, Phaedra Charles and Flavia Zimbardi. Newsreader is by Production Type.** Both are now on [the colophon](https://queering.earth/design), in `ATTRIBUTIONS.md`, and in a `fonts/README.md` so the provenance is legible to anyone who opens the folder.
+
+**The names are read out of upstream metadata, not out of anybody’s memory.** `tools/make-fonts.mjs` fetches each family’s `OFL.txt` and its `METADATA.pb` and refuses to write a licence file it cannot recognise as an OFL, or a credit with no designer in it. So the attribution cannot drift from the files actually being served, which is the same standard every quotation on every sheet is held to. `check-metadata.mjs` fails if a family’s licence file goes missing or its designer is unrecorded — proved by moving one out of the way.
+
+The occasion was Ryan asking what a font picker might hold: faces that queer the design, after Robin Mientjes by way of Paul Soulellis — “an attitude in the face of conformity”. Sourcing candidates for that meant reading licences, which is what turned this up. **The candidates are set out at `/specimen`**, in this site’s palette at its own sizes on its own paper, weighted heavily towards [Bye Bye Binary](https://gitlab.com/bye-bye-binary), a collective drawing glyphs for inclusive and non-binary French — letterforms that exist because the grammar refused the person. It is a scratch page: `noindex`, absent from the sitemap, and **to be deleted once the choice is made**, because a specimen kept after the decision becomes a second, stale account of what the type is. Two of its candidates state their terms only in a README and are marked as such rather than assumed into the OFL.
 
 Label correctedThe panel shipped unable to open, and every test that passed had bypassed the thing that was broken
 
@@ -4182,7 +4194,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-157 entries across 40 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+158 entries across 40 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -4256,6 +4268,19 @@ It is **not** a rule that Ryan's quote collection is unusable. A direct quotatio
 ---
 
 ## Verified
+
+### The two typefaces — designers, and the licence that has to travel with them
+
+**Used on:** every page, self-hosted in `fonts/`
+
+- **Fraunces** — designed by **Undercase Type, Phaedra Charles and Flavia Zimbardi**. *Copyright 2018 The Fraunces Project Authors*, [github.com/undercasetype/Fraunces](https://github.com/undercasetype/Fraunces).
+- **Newsreader** — designed by **Production Type**. *Copyright 2020 The Newsreader Project Authors*, [github.com/productiontype/Newsreader](https://github.com/productiontype/Newsreader).
+
+Both under the **SIL Open Font Licence 1.1**, with the licence text in `fonts/Fraunces-OFL.txt` and `fonts/Newsreader-OFL.txt`.
+
+**How this was checked:** the copyright lines are the first line of each family's own upstream `OFL.txt`, and the designer credits come from each family's upstream `METADATA.pb`. Both are fetched by `tools/make-fonts.mjs` rather than typed, so the credit cannot drift from the files actually being served. Read 10 September 2026.
+
+**Why it is here at all.** The fonts were self-hosted on 9 September to stop the site disclosing every reader's IP address to Google, and for a day they were redistributed with no licence file beside them — which the OFL does not permit. A public repository serving woff2 over HTTP is redistribution. Fixed 10 September, and `check-metadata.mjs` now fails if a family's licence file goes missing or its designer is unrecorded.
 
 ### Nick Walker — neuroqueering as a verb
 

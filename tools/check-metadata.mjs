@@ -305,7 +305,23 @@ for (const f of [...files, '404.html']) {
 try {
   const fonts = JSON.parse(await readFile(join(ROOT, 'tools', 'font-files.json'), 'utf8'));
   const sheet = await readFile(join(ROOT, 'queering.css'), 'utf8');
-  for (const [file, meta] of Object.entries(fonts)) {
+
+  /* THE LICENCE MUST TRAVEL WITH THE FILES. The OFL requires it wherever the fonts are
+   * redistributed, and a public repo serving woff2 is redistribution. The repo shipped
+   * a day without it, which is why this is a gate and not a note: a compliance gap is
+   * invisible on the rendered page, so nothing else would ever report it. The credit
+   * is checked too, because a licence file with no named designer beside it satisfies
+   * the licence and not this site's own standard. */
+  for (const [family, meta] of Object.entries(fonts.families ?? {})) {
+    if (!(await exists(`fonts/${meta.licence_file}`)))
+      fail('fonts', `fonts/${meta.licence_file} is missing — ${family} is redistributed here and its licence must travel with it`);
+    if (!meta.designer)
+      fail('fonts', `${family} has no designer recorded — run: node tools/make-fonts.mjs`);
+  }
+  if (!Object.keys(fonts.families ?? {}).length)
+    fail('fonts', 'tools/font-files.json records no families — run: node tools/make-fonts.mjs');
+
+  for (const [file, meta] of Object.entries(fonts.files ?? {})) {
     const buf = await readFile(join(ROOT, 'fonts', file)).catch(() => null);
     if (!buf) { fail('fonts', `fonts/${file} is missing — run: node tools/make-fonts.mjs`); continue; }
     if (createHash('sha256').update(buf).digest('hex') !== meta.sha256)
@@ -314,7 +330,7 @@ try {
       fail('fonts', `fonts/${file} exists but no @font-face in queering.css references it`);
   }
   for (const m of sheet.matchAll(/url\(fonts\/([^)]+)\)/g))
-    if (!fonts[m[1]]) fail('fonts', `queering.css references fonts/${m[1]}, which is not in the manifest`);
+    if (!(fonts.files ?? {})[m[1]]) fail('fonts', `queering.css references fonts/${m[1]}, which is not in the manifest`);
 } catch (e) {
   fail('fonts', `cannot verify the self-hosted faces: ${e.message}`);
 }

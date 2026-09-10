@@ -41,6 +41,10 @@ const TYPES = {
   // <source> when one fails to decode; the choice is made on type, before the fetch.
   '.avif': 'image/avif',
   '.woff2': 'font/woff2',
+  // The specimen page carries OTF candidates. Production sends nosniff, so a type this
+  // server guesses is a type the live site cannot recover from — the .avif lesson.
+  '.woff': 'font/woff',
+  '.otf': 'font/otf',
   '.md': 'text/markdown; charset=utf-8',
   '.xml': 'application/xml; charset=utf-8',
   '.txt': 'text/plain; charset=utf-8',

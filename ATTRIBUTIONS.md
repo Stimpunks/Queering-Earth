@@ -31,6 +31,31 @@ has to be right.
 
 ## Verified
 
+### The two typefaces — designers, and the licence that has to travel with them
+
+**Used on:** every page, self-hosted in `fonts/`
+
+- **Fraunces** — designed by **Undercase Type, Phaedra Charles and Flavia Zimbardi**.
+  *Copyright 2018 The Fraunces Project Authors*,
+  [github.com/undercasetype/Fraunces](https://github.com/undercasetype/Fraunces).
+- **Newsreader** — designed by **Production Type**.
+  *Copyright 2020 The Newsreader Project Authors*,
+  [github.com/productiontype/Newsreader](https://github.com/productiontype/Newsreader).
+
+Both under the **SIL Open Font Licence 1.1**, with the licence text in
+`fonts/Fraunces-OFL.txt` and `fonts/Newsreader-OFL.txt`.
+
+**How this was checked:** the copyright lines are the first line of each family's own
+upstream `OFL.txt`, and the designer credits come from each family's upstream
+`METADATA.pb`. Both are fetched by `tools/make-fonts.mjs` rather than typed, so the credit
+cannot drift from the files actually being served. Read 10 September 2026.
+
+**Why it is here at all.** The fonts were self-hosted on 9 September to stop the site
+disclosing every reader's IP address to Google, and for a day they were redistributed with
+no licence file beside them — which the OFL does not permit. A public repository serving
+woff2 over HTTP is redistribution. Fixed 10 September, and `check-metadata.mjs` now fails
+if a family's licence file goes missing or its designer is unrecorded.
+
 ### Nick Walker — neuroqueering as a verb
 
 **Quoted on:** `index.html`

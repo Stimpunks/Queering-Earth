@@ -161,7 +161,7 @@ And it names the reason this belongs on *this* site rather than being imported w
 
 ## The type
 
-Two families, both variable, both with real fallback stacks. **[Fraunces](https://fonts.google.com/specimen/Fraunces)** sets the display, and it was chosen for one reason: it carries an axis called `WONK`, which exposes letterforms that deviate from the norm as a setting you can turn up. A site about queering normativity setting its masthead with the deviation axis open is the argument made in the type rather than described in prose.
+Two families, both variable, both with real fallback stacks. **[Fraunces](https://github.com/undercasetype/Fraunces)**, by **Undercase Type, Phaedra Charles and Flavia Zimbardi**, sets the display, and it was chosen for one reason: it carries an axis called `WONK`, which exposes letterforms that deviate from the norm as a setting you can turn up. A site about queering normativity setting its masthead with the deviation axis open is the argument made in the type rather than described in prose.
 
 Fraunces italic — wonk and soft, turned up
 
@@ -179,7 +179,9 @@ Newsreader — the reading face
 
 Considering how common illness is, how tremendous the spiritual change that it brings, how astonishing, when the lights of health go down, the undiscovered countries that are then disclosed.
 
-**[Newsreader](https://fonts.google.com/specimen/Newsreader)** sets everything you actually read: body text at about 19px, line spacing 1.65, and a measure of roughly 66 characters. Body text on this site never goes below 18px and must survive 200% zoom.
+**[Newsreader](https://github.com/productiontype/Newsreader)**, by **Production Type**, sets everything you actually read: body text at about 19px, line spacing 1.65, and a measure of roughly 66 characters. Body text on this site never goes below 18px and must survive 200% zoom.
+
+Both are served from this domain rather than from a font CDN, and **both are under the SIL Open Font Licence**, whose text sits beside them in `fonts/` because the licence has to travel with the files wherever they are redistributed — and a public repository serving them over HTTP is redistribution. They went a day without it. The designers above are read out of upstream metadata by `tools/make-fonts.mjs` rather than from anybody’s memory, which is the same rule every other name on this site is held to.
 
 ## Plain view
 
