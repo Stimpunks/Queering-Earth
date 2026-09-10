@@ -17,6 +17,8 @@ Register · the changelog
 
 A herbarium keeps a register: a ledger of every specimen as it entered the collection, and of every annotation slip pinned to a sheet afterwards — a name re-read off the plate, a locality corrected, an identification withdrawn. This is that book for this site. It is backfilled from the whole commit history and kept up from here.
 
+[Straight to the latest accession](#latest) — the register runs newest first, so that is the top of it. The list below is every accession in the same order.
+
 It records four kinds of change: a **sheet mounted**, a sheet **re-determined** — reworked enough that what it shows is different — a **label corrected**, and work on the **cabinet**, meaning the site itself. Typo passes and small tidying are left out. Anything that changes what a sheet *claims* is in.
 
 The full working — every quotation, whose it is, where it came from, and the day somebody read the primary and confirmed the wording — is in `ATTRIBUTIONS.md`; the reasoning behind every settled and open question is in `DECISIONS.md`. Both are in [the repository](https://github.com/Stimpunks/Queering-Earth), which is the source of truth for this site. If something on a sheet is wrong, it belongs in this register. [Say so](https://github.com/Stimpunks/Queering-Earth/issues), and it will be.
@@ -31,6 +33,134 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Re-determined
 - Label corrected
 - Cabinet
+
+2026 · 9 September · latest
+
+## A way straight to the newest accession, and the discovery that it was not where the page said it was
+
+The contents list added an hour ago put the newest accession 4.8 screens down, so [a jump](#latest) was wanted. Building it exposed something worse: **the register was out of chronological order and had been for the whole evening.**
+
+MountedThe address is on the register, not on the newest accession, which is what makes it permanent
+
+**A link to the newest entry’s own id would be a hand-kept pointer at a moving target** — stale the next time anything is mounted, in the file that exists to record exactly that kind of failure. The register runs newest first, so *the top of the register* is the latest by definition. `#latest` sits on the register itself and cannot go stale, because nothing about it is a copy of anything. It needs no script, which a derived `href` would have, and it gives the newest accession a permanent shareable address for the first time.
+
+**It sits directly under the lede, and that took a measurement.** Placed after the register’s own housekeeping note it landed at 1,587px on an 866px viewport — below the fold, which is no use to somebody arriving to see what changed. Under the lede it is at 680px. **Second time today a link was put somewhere reasonable-looking and measured out of sight**, after the finding aid’s search box.
+
+Label correctedFour accessions written after 22:43 were sitting below four written before it
+
+**Two sessions were appending to this file at the same time**, and each anchored its insert on the last accession *it* had written. Both were locally correct; the page was globally wrong. The four accessions from 22:43 onwards sat beneath the four from 20:46 to 22:33, and `· latest` was on the fifth section down. Re-ordered against the commit timestamps rather than against anybody’s memory.
+
+**This is the card-order fault again, in the one file that gate does not look at** — the third time today that a list correct in every part has been wrong as a whole. And it now matters more than it did this morning, because `#latest` is a published address that depends on the order being right.
+
+CabinetTwo assertions on the register’s order, and only one of them would have caught this
+
+`check-markup.mjs` now checks that accession dates do not increase down the page, and that **exactly one accession is marked `latest` and it is the first**. The date check is worth having and was blind to this: every accession that day carries the same date. **The marker check is the one that bites.** Within a single day the order is editorial and nothing can verify it — but which section is newest is a claim the page makes out loud, and a claim can be checked. Both were made to fail before being believed, the first by putting this evening’s actual fault back.
+
+**It also turned up a third entity table.** This gate carried its own six-entity decoder, which did not know `&middot;` and handed the date check back a raw entity. `tools/html.mjs` was written to stop precisely that — “an entity table is a lookup that one tool teaches and the other does not” — and the gate simply was not using it. It imports the shared one now, which throws on anything it does not know rather than passing it through, and all seventeen pages still pass.
+
+2026 · 9 September
+
+## The finding aid gets one too, and three thresholds in a row turn out to have been the same mistake
+
+Every page on this site now carries a contents list except two, and neither of those declines on a threshold. **The pattern is worth more than any of the three rules it replaced.**
+
+CabinetThree thresholds tried, three retired, each measuring the list instead of the reader
+
+**They went in this order, over about two hours.** *More than two headings* — retired, because two entries that save twenty screens beat seven that save two. *The block must not be too tall* — retired, because 2,322px against a 120-screen page is a bargain and the comparison that decides it is the block against its own page. *The page must be long enough* — retired now, with [the finding aid](https://queering.earth/search) at 1,307 words.
+
+**Each of the three measured the list. None of them measured the reader.** What is left is structural and has one instance: *does this page already have a better index of itself?* The home page answers yes — its plate of eight numbered cards is a contents list, and a second one above it would put two competing lists on one page. The error page is an error page. **Everything else has one.**
+
+Label correctedStraight after the lede put the search box below the fold, on the page that is a search box
+
+The house puts a contents list directly under the lede, and following that here pushed the input to **970px on an 866px viewport** — out of sight on load, on the one page whose entire purpose is that field. **Caught by measuring rather than by looking**, which matters: the screenshot looked perfectly reasonable, because a screenshot of the top of a page always does.
+
+It sits below the form and the results now, immediately before the sections it lists, and the input is back at **804px**. A reader with results in front of them is not looking for a contents list; a reader scrolling past them is. **The exception is recorded rather than left as a quirk of one file**, because the next person to tidy this page will otherwise move it back.
+
+2026 · 9 September
+
+## This register now has the contents list an earlier entry measured, refused, and wrote a rule against
+
+Ryan asked for it. The old refusal was **right about its number and wrong about what the number meant** — which is a more interesting way to be wrong than simply not having measured.
+
+Re-determinedBlock height was the wrong measure, the same way heading count was the wrong measure an hour ago
+
+**The figures, re-measured rather than quoted.** Thirty-three accession headlines averaging 140 characters; the list renders **2,322px** and puts the first entry **4.8 screens** down. Both worse than the 1,293px and three and a half screens that got it refused, because ten accessions have been added since.
+
+**And it does not matter, because the page is 40,408 words.** That is roughly a hundred and twenty screens. A list that costs 2.7 of them to reach any one of thirty-three accessions directly is the trade a contents list exists to make. The refusal compared the block against other pages’ blocks; the comparison that decides it is the block against *its own page*. **This is the two-heading threshold’s mistake from the other end** — count was the wrong measure there, height is the wrong measure here, and page length is the question in both.
+
+**Columns were tried and do not help.** 2,322px in one column, 2,213 in two, 2,302 in three. Narrowing a column makes a 140-character sentence wrap proportionally more, so width traded for wraps is a wash. Measured in the browser before the CSS was considered, and then not written. **The labels stay verbatim**: truncating one is this site’s characteristic failure applied to itself, and a short second label is the drift the derivation exists to prevent.
+
+**Both indexes stay, and they do different jobs.** The contents list is chronological, by accession, at the top; [the index by sheet](#qe-index-h) is at the foot and files the same entries by what they happened to. Front matter and back matter, which is how a bound volume carries both. The one-line pointer that used to sit by the legend came out — the contents list’s last item is a link to that index, and two adjacent links to one place read as a mistake even when both are right.
+
+2026 · 9 September
+
+## A feature was mistaken for a fault, removed, and put back within the hour
+
+The rail on [the ledger](https://queering.earth/ledger) read “Verified · Open · Every attribution on this page” — the third of those being the index’s own heading, listing itself inside the navigation beside it. **Two components built in parallel, each correct on its own.** The rail excludes `.qe-contents` by name; the entry index arrived as a second navigation block inside the landmark and nothing knew to skip it.
+
+Label correctedThe test is the element now, not the class, so the next navigation block needs no line
+
+**A heading that labels a navigation block is not a section of the page.** That was always the rule; it was written down as `.qe-contents` because that was the only case when it was written. **A list of class names is a rule that gets quietly broken by the next component** — the same shape as “the two view controls, and nothing else” and “the one Python tool here”, both of which this file has already had to correct into boundaries. Every navigational block on this site is a `nav`, including the rail and the index themselves, so the element is the test.
+
+**Proved in both directions rather than one.** The ledger’s rail is “Verified · Open” and its entry index still fills 53 and 2; [Sheet No. 1](https://queering.earth/on-being-ill)’s contents list and rail are unchanged at seven each. A fix to a shared derivation that is only checked on the page that was broken is a fix that breaks fourteen others quietly.
+
+**Worth recording as a hazard rather than only as a bug.** Both components were built the same afternoon in two sessions against one working tree, and neither was wrong about its own page. The failure lives in the seam, which is the one place a gate here does not look: `check-markup.mjs` validates the served markup, and this list does not exist until a script runs.
+
+Re-determinedIt was not a fault. Ryan liked the rail pointing at the index, and a destination inside a nav is still a destination
+
+**The entry above determined a feature to be a bug, and the determination was wrong.** The rail on [the ledger](https://queering.earth/ledger) listed “Every attribution on this page”, this session called it self-announcement and removed it, and Ryan said plainly that he had found it useful. He is right: on a page of 130KB, a link from the rail straight down to an index of all fifty-five entries is the most useful thing in it.
+
+**Two cases that look identical and are not.** A contents list containing “On this sheet” is a list pointing at itself. A rail containing “Every attribution on this page” is a list pointing somewhere a reader wants to go. Collapsing both into “any heading inside a nav” was a generalisation that read as principled and cost a feature; the honest rule is narrower and older — **a list must not contain its own heading**, and `.qe-contents` and `.qe-rail` are one derivation shown twice.
+
+**The reversal is the entry, not a quiet edit to the one above it.** That entry stands as written, because a register that revises its own determinations in place is a register that cannot be checked — which is the argument this whole page is built on. This is the third re-determination here and the first where the thing re-determined was our own judgement rather than a source.
+
+MountedAnd the two record pages got the contents list they could not have had an hour earlier
+
+**The re-determination above is what made this possible**, which is a pleasant way for a mistake to end. With two `h2`s a contents list on [the ledger](https://queering.earth/ledger) would have read *Verified* and *Open* and told a reader nothing — the stated reason both record pages went without one when they shipped. With the entry index’s heading back in the derivation it lists three, and the third is a jump straight to all fifty-five entries.
+
+**The standalone pointer came out in the same pass.** It said “every entry is listed by name in the index at the foot of this page” and sat immediately above a contents list whose third item is a link to exactly that. Two links to one place, adjacent, is the kind of thing that reads as a mistake even when both are correct.
+
+Twelve of seventeen pages carried one at that point, and checking which four declined turned up [a page with eight headings and no list](https://queering.earth/privacy).
+
+CabinetThe two-heading threshold is retired, because it measured the wrong thing
+
+**Ryan’s call, and it is the right one.** “A contents list needs more than two headings” was the stated reason both record pages shipped without one, and it counts the wrong quantity: **the reader’s problem on a twenty-thousand-word page is length, not heading count.** Two entries that save twenty screens of scrolling are worth more than seven that save two. The question is only ever whether the page is long enough to want one.
+
+**Retiring a rule is a good moment to check what it was hiding.** [The privacy page](https://queering.earth/privacy) is 2,058 words with eight headings and had no list — longer than [Sheet No. 1](https://queering.earth/on-being-ill) at 2,045, which has one. It was never a decision, just a page nobody counted. It has one now.
+
+**Four pages still decline and not one of them declines on heading count.** The error page; the home page, whose plate is already a contents list; this register, whose accession headlines average 148 characters and measured 1,293px against 319 to 510 elsewhere — it gets its index as back matter instead; and [the finding aid](https://queering.earth/search) at 1,307 words, the shortest page here that is not an error page and well under the 2,045 of the shortest page that has one.
+
+Label correctedThe removal also broke the rail’s tick scale in the quietest way available, because the derivation existed twice
+
+**Found by checking the deployed file rather than the local one.** The live `queering.js` carried the new `nav` test *and* the old class-name test, which meant a second copy of the same derivation somewhere else in the file. It was in `measureTicks`, which sizes the rail’s ticks to the sections they stand for.
+
+**It failed safe and therefore silently.** That function re-derived the heading set with the old exclusion, counted three against the rail’s two, and hit its own `heads.length !== items.length` guard — so on both record pages the ticks were simply never measured. No error, nothing visibly broken, a rail of default-sized marks where a scale drawing belonged. **A guard that fails safe still fails.**
+
+**One derivation, one place.** Both callers now use a single `sectionHeads()`, so there is no second copy left to fall behind. Verified on both pages afterwards: the ledger’s ticks read 32.0px and 9.0px — correctly saying that *Verified* holds fifty-three entries and *Open* holds two — and Sheet No. 1’s seven are unchanged.
+
+2026 · 9 September
+
+## The two longest pages on the site could not be surveyed without reading all of them
+
+A reader wanting to know whether the ledger holds an entry on Rossetti had one option: scroll 130KB of it. Both record pages now carry **an index of their own entries** at the foot — 55 on [the ledger](https://queering.earth/ledger), 71 on [the decision log](https://queering.earth/what-is-settled) — with a one-line pointer up in the front matter, the way a bound volume does it.
+
+MountedBack matter again, and built at runtime for the reason the contents list is
+
+**A contents list was the wrong reach and this page already knows why.** `.qe-contents` derives from a page’s `h2`s, and both records have two — it would have shown *Verified* and *Open* and delayed every reader to say nothing. What a reader wants is the entries. So it is the register’s `.qe-sheet-index` shape a second time: **back matter, ruled off, at the foot**, because front matter costs every reader and back matter costs none.
+
+**Generated into the HTML it would have double-indexed all 121 headings.** The SKS mirror and `search-index.json` both read the landmark, and a list of every heading sitting beside those headings is a second copy of each — the exact reason the contents list is built at runtime rather than written down. So the served container is empty, `queering.js` fills it, and both generators skip it so the `.md` does not announce a list it has no room for.
+
+**The group headings are derived here, where the register’s are authored.** That is the one real difference between the two indexes and it is not a relaxation: the register’s groups are sheet names, which are editorial words `queering.js` may not write, whereas these groups are the page’s own `h2`s and every label is a clone of text the reader can see above it. Nothing is composed, summarised or truncated — the same standing the contents list has.
+
+**A group heading is a paragraph and not a heading**, which looks like a downgrade and is the opposite. These are clones of headings the reader has already passed; putting them back into the outline would give the page a shadow contents made of duplicates, which is worse for a screen reader’s rotor than having none. It wears `.qe-index-sheet`, so it still looks like what it is.
+
+CabinetNo line in REVEAL, and that was checked rather than assumed
+
+`reveal.mjs` says in its own comment that it is “for a fetch or a hidden state, not for anything merely built at runtime”, and this component ships hidden — which reads like a case for it. It is not: the drift rail’s `if (r.hidden) continue` is only sensible if `queering.js` has already run under the gate, so anything that unhides *itself* is measured without help. **Confirmed by counting rather than by reading the source:** `/ledger` went from 1,782 measured elements to 1,845 with the index in, and its print count did not move, because the index is `display: none` on paper.
+
+**Two columns above 34rem, one below.** Fifty-five short names in a single column is a screen and a half of nothing but links with the measure wasted on them; two columns of wrapped link text on a phone is a column of three-word fragments. The divider is a `column-rule` rather than a gap, because a bare gap between two lists of links reads as one ragged list. `check-overlap.mjs` was the thing to watch here and reports zero collisions across all three passes.
+
+One spacing fault came out of looking: `.qe-index-link` is shaped for the register, where the pointer is the last thing before the entries and needs no bottom margin. Here the body follows it immediately, so the line read as the opening of the paragraph beneath it.
 
 2026 · 9 September
 
@@ -161,110 +291,6 @@ CabinetThree sheets had no contents list and no reason for not having one
 **“After the lede” turned out not to mean “before the first heading”**, which was checked before anything was placed. Five of the existing lists carry opening prose after them — [the Dickinson sheet](https://queering.earth/wild-nights) nineteen blocks, [the Quetelet sheet](https://queering.earth/invention-of-normal) thirteen. A contents list is front matter for the sections, and the lede is not a section.
 
 **No. 2 puts its list somewhere no other sheet does, and that is authored.** It has no lede, and all six of its headings are in the 2026 commentary — the 2022 essay above them is unheaded and stays that way, because the note directly above it says Ryan’s words are unchanged and a heading dropped into them would not be. A list at the top would name six sections that begin a fifth of the way down and say nothing at all about the essay, which is the reason the sheet exists. It sits immediately after that note instead, where the sheet says out loud that it is changing hands, and maps exactly what follows it.
-
-2026 · 9 September · latest
-
-## The finding aid gets one too, and three thresholds in a row turn out to have been the same mistake
-
-Every page on this site now carries a contents list except two, and neither of those declines on a threshold. **The pattern is worth more than any of the three rules it replaced.**
-
-CabinetThree thresholds tried, three retired, each measuring the list instead of the reader
-
-**They went in this order, over about two hours.** *More than two headings* — retired, because two entries that save twenty screens beat seven that save two. *The block must not be too tall* — retired, because 2,322px against a 120-screen page is a bargain and the comparison that decides it is the block against its own page. *The page must be long enough* — retired now, with [the finding aid](https://queering.earth/search) at 1,307 words.
-
-**Each of the three measured the list. None of them measured the reader.** What is left is structural and has one instance: *does this page already have a better index of itself?* The home page answers yes — its plate of eight numbered cards is a contents list, and a second one above it would put two competing lists on one page. The error page is an error page. **Everything else has one.**
-
-Label correctedStraight after the lede put the search box below the fold, on the page that is a search box
-
-The house puts a contents list directly under the lede, and following that here pushed the input to **970px on an 866px viewport** — out of sight on load, on the one page whose entire purpose is that field. **Caught by measuring rather than by looking**, which matters: the screenshot looked perfectly reasonable, because a screenshot of the top of a page always does.
-
-It sits below the form and the results now, immediately before the sections it lists, and the input is back at **804px**. A reader with results in front of them is not looking for a contents list; a reader scrolling past them is. **The exception is recorded rather than left as a quirk of one file**, because the next person to tidy this page will otherwise move it back.
-
-2026 · 9 September
-
-## This register now has the contents list an earlier entry measured, refused, and wrote a rule against
-
-Ryan asked for it. The old refusal was **right about its number and wrong about what the number meant** — which is a more interesting way to be wrong than simply not having measured.
-
-Re-determinedBlock height was the wrong measure, the same way heading count was the wrong measure an hour ago
-
-**The figures, re-measured rather than quoted.** Thirty-three accession headlines averaging 140 characters; the list renders **2,322px** and puts the first entry **4.8 screens** down. Both worse than the 1,293px and three and a half screens that got it refused, because ten accessions have been added since.
-
-**And it does not matter, because the page is 40,408 words.** That is roughly a hundred and twenty screens. A list that costs 2.7 of them to reach any one of thirty-three accessions directly is the trade a contents list exists to make. The refusal compared the block against other pages’ blocks; the comparison that decides it is the block against *its own page*. **This is the two-heading threshold’s mistake from the other end** — count was the wrong measure there, height is the wrong measure here, and page length is the question in both.
-
-**Columns were tried and do not help.** 2,322px in one column, 2,213 in two, 2,302 in three. Narrowing a column makes a 140-character sentence wrap proportionally more, so width traded for wraps is a wash. Measured in the browser before the CSS was considered, and then not written. **The labels stay verbatim**: truncating one is this site’s characteristic failure applied to itself, and a short second label is the drift the derivation exists to prevent.
-
-**Both indexes stay, and they do different jobs.** The contents list is chronological, by accession, at the top; [the index by sheet](#qe-index-h) is at the foot and files the same entries by what they happened to. Front matter and back matter, which is how a bound volume carries both. The one-line pointer that used to sit by the legend came out — the contents list’s last item is a link to that index, and two adjacent links to one place read as a mistake even when both are right.
-
-2026 · 9 September
-
-## A feature was mistaken for a fault, removed, and put back within the hour
-
-The rail on [the ledger](https://queering.earth/ledger) read “Verified · Open · Every attribution on this page” — the third of those being the index’s own heading, listing itself inside the navigation beside it. **Two components built in parallel, each correct on its own.** The rail excludes `.qe-contents` by name; the entry index arrived as a second navigation block inside the landmark and nothing knew to skip it.
-
-Label correctedThe test is the element now, not the class, so the next navigation block needs no line
-
-**A heading that labels a navigation block is not a section of the page.** That was always the rule; it was written down as `.qe-contents` because that was the only case when it was written. **A list of class names is a rule that gets quietly broken by the next component** — the same shape as “the two view controls, and nothing else” and “the one Python tool here”, both of which this file has already had to correct into boundaries. Every navigational block on this site is a `nav`, including the rail and the index themselves, so the element is the test.
-
-**Proved in both directions rather than one.** The ledger’s rail is “Verified · Open” and its entry index still fills 53 and 2; [Sheet No. 1](https://queering.earth/on-being-ill)’s contents list and rail are unchanged at seven each. A fix to a shared derivation that is only checked on the page that was broken is a fix that breaks fourteen others quietly.
-
-**Worth recording as a hazard rather than only as a bug.** Both components were built the same afternoon in two sessions against one working tree, and neither was wrong about its own page. The failure lives in the seam, which is the one place a gate here does not look: `check-markup.mjs` validates the served markup, and this list does not exist until a script runs.
-
-Re-determinedIt was not a fault. Ryan liked the rail pointing at the index, and a destination inside a nav is still a destination
-
-**The entry above determined a feature to be a bug, and the determination was wrong.** The rail on [the ledger](https://queering.earth/ledger) listed “Every attribution on this page”, this session called it self-announcement and removed it, and Ryan said plainly that he had found it useful. He is right: on a page of 130KB, a link from the rail straight down to an index of all fifty-five entries is the most useful thing in it.
-
-**Two cases that look identical and are not.** A contents list containing “On this sheet” is a list pointing at itself. A rail containing “Every attribution on this page” is a list pointing somewhere a reader wants to go. Collapsing both into “any heading inside a nav” was a generalisation that read as principled and cost a feature; the honest rule is narrower and older — **a list must not contain its own heading**, and `.qe-contents` and `.qe-rail` are one derivation shown twice.
-
-**The reversal is the entry, not a quiet edit to the one above it.** That entry stands as written, because a register that revises its own determinations in place is a register that cannot be checked — which is the argument this whole page is built on. This is the third re-determination here and the first where the thing re-determined was our own judgement rather than a source.
-
-MountedAnd the two record pages got the contents list they could not have had an hour earlier
-
-**The re-determination above is what made this possible**, which is a pleasant way for a mistake to end. With two `h2`s a contents list on [the ledger](https://queering.earth/ledger) would have read *Verified* and *Open* and told a reader nothing — the stated reason both record pages went without one when they shipped. With the entry index’s heading back in the derivation it lists three, and the third is a jump straight to all fifty-five entries.
-
-**The standalone pointer came out in the same pass.** It said “every entry is listed by name in the index at the foot of this page” and sat immediately above a contents list whose third item is a link to exactly that. Two links to one place, adjacent, is the kind of thing that reads as a mistake even when both are correct.
-
-Twelve of seventeen pages carried one at that point, and checking which four declined turned up [a page with eight headings and no list](https://queering.earth/privacy).
-
-CabinetThe two-heading threshold is retired, because it measured the wrong thing
-
-**Ryan’s call, and it is the right one.** “A contents list needs more than two headings” was the stated reason both record pages shipped without one, and it counts the wrong quantity: **the reader’s problem on a twenty-thousand-word page is length, not heading count.** Two entries that save twenty screens of scrolling are worth more than seven that save two. The question is only ever whether the page is long enough to want one.
-
-**Retiring a rule is a good moment to check what it was hiding.** [The privacy page](https://queering.earth/privacy) is 2,058 words with eight headings and had no list — longer than [Sheet No. 1](https://queering.earth/on-being-ill) at 2,045, which has one. It was never a decision, just a page nobody counted. It has one now.
-
-**Four pages still decline and not one of them declines on heading count.** The error page; the home page, whose plate is already a contents list; this register, whose accession headlines average 148 characters and measured 1,293px against 319 to 510 elsewhere — it gets its index as back matter instead; and [the finding aid](https://queering.earth/search) at 1,307 words, the shortest page here that is not an error page and well under the 2,045 of the shortest page that has one.
-
-Label correctedThe removal also broke the rail’s tick scale in the quietest way available, because the derivation existed twice
-
-**Found by checking the deployed file rather than the local one.** The live `queering.js` carried the new `nav` test *and* the old class-name test, which meant a second copy of the same derivation somewhere else in the file. It was in `measureTicks`, which sizes the rail’s ticks to the sections they stand for.
-
-**It failed safe and therefore silently.** That function re-derived the heading set with the old exclusion, counted three against the rail’s two, and hit its own `heads.length !== items.length` guard — so on both record pages the ticks were simply never measured. No error, nothing visibly broken, a rail of default-sized marks where a scale drawing belonged. **A guard that fails safe still fails.**
-
-**One derivation, one place.** Both callers now use a single `sectionHeads()`, so there is no second copy left to fall behind. Verified on both pages afterwards: the ledger’s ticks read 32.0px and 9.0px — correctly saying that *Verified* holds fifty-three entries and *Open* holds two — and Sheet No. 1’s seven are unchanged.
-
-2026 · 9 September
-
-## The two longest pages on the site could not be surveyed without reading all of them
-
-A reader wanting to know whether the ledger holds an entry on Rossetti had one option: scroll 130KB of it. Both record pages now carry **an index of their own entries** at the foot — 55 on [the ledger](https://queering.earth/ledger), 71 on [the decision log](https://queering.earth/what-is-settled) — with a one-line pointer up in the front matter, the way a bound volume does it.
-
-MountedBack matter again, and built at runtime for the reason the contents list is
-
-**A contents list was the wrong reach and this page already knows why.** `.qe-contents` derives from a page’s `h2`s, and both records have two — it would have shown *Verified* and *Open* and delayed every reader to say nothing. What a reader wants is the entries. So it is the register’s `.qe-sheet-index` shape a second time: **back matter, ruled off, at the foot**, because front matter costs every reader and back matter costs none.
-
-**Generated into the HTML it would have double-indexed all 121 headings.** The SKS mirror and `search-index.json` both read the landmark, and a list of every heading sitting beside those headings is a second copy of each — the exact reason the contents list is built at runtime rather than written down. So the served container is empty, `queering.js` fills it, and both generators skip it so the `.md` does not announce a list it has no room for.
-
-**The group headings are derived here, where the register’s are authored.** That is the one real difference between the two indexes and it is not a relaxation: the register’s groups are sheet names, which are editorial words `queering.js` may not write, whereas these groups are the page’s own `h2`s and every label is a clone of text the reader can see above it. Nothing is composed, summarised or truncated — the same standing the contents list has.
-
-**A group heading is a paragraph and not a heading**, which looks like a downgrade and is the opposite. These are clones of headings the reader has already passed; putting them back into the outline would give the page a shadow contents made of duplicates, which is worse for a screen reader’s rotor than having none. It wears `.qe-index-sheet`, so it still looks like what it is.
-
-CabinetNo line in REVEAL, and that was checked rather than assumed
-
-`reveal.mjs` says in its own comment that it is “for a fetch or a hidden state, not for anything merely built at runtime”, and this component ships hidden — which reads like a case for it. It is not: the drift rail’s `if (r.hidden) continue` is only sensible if `queering.js` has already run under the gate, so anything that unhides *itself* is measured without help. **Confirmed by counting rather than by reading the source:** `/ledger` went from 1,782 measured elements to 1,845 with the index in, and its print count did not move, because the index is `display: none` on paper.
-
-**Two columns above 34rem, one below.** Fifty-five short names in a single column is a screen and a half of nothing but links with the measure wasted on them; two columns of wrapped link text on a phone is a column of three-word fragments. The divider is a `column-rule` rather than a gap, because a bare gap between two lists of links reads as one ragged list. `check-overlap.mjs` was the thing to watch here and reports zero collisions across all three passes.
-
-One spacing fault came out of looking: `.qe-index-link` is shaped for the register, where the pointer is the last thing before the entries and needs no bottom margin. Here the body follows it immediately, so the line read as the opening of the paragraph beneath it.
 
 2026 · 9 September
 

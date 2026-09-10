@@ -113,6 +113,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { decode } from './html.mjs';
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -237,9 +238,12 @@ const hasClass = (raw, cls) => {
   return (m[2] ?? m[3] ?? m[4] ?? '').trim().split(/\s+/).includes(cls);
 };
 
-const decode = (s) =>
-  s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/&nbsp;/g, ' ');
+/* IMPORTED, NOT RESTATED. This file carried its own six-entity decoder until an
+   accession-date check asked it for `&middot;` and got the raw entity back — the third
+   entity table in the tree, which is the exact drift html.mjs's own header says it
+   exists to prevent: "an entity table is a lookup that one tool teaches and the other
+   does not". The shared one throws on an entity it does not know rather than passing it
+   through, which is stricter than what was here and is the point. */
 
 const collectionFiles = fs.readdirSync(REPO).filter((f) => COLLECTION_RE.test(f)).sort();
 const cardedBy = new Map(); // member page -> [collection file, …]
@@ -655,6 +659,63 @@ for (const file of targets) {
      on one page rather than forty-five thousand across a repo, so the O(n) slice
      the loop's comment warns about does not apply here. */
   const lineOfIndex = (idx) => src.slice(0, idx).split('\n').length;
+
+  /* ── THE REGISTER RUNS NEWEST FIRST, AND NOTHING WAS CHECKING THAT ────────────────
+   *
+   * On 2026-09-09 four accessions written after 22:43 sat BELOW four written before
+   * it, and `· latest` was on the fifth section down. Two sessions were appending to
+   * this file at once and each anchored its insert on the last accession *it* had
+   * written, so both were locally correct and the page was globally wrong. It is the
+   * same fault `check-card-order.mjs` was ported for that morning, in the one file
+   * that gate does not look at, and `/changelog#latest` is now a published address
+   * that depends on it.
+   *
+   * TWO ASSERTIONS, AND ONLY ONE OF THEM WOULD HAVE CAUGHT IT. Dates must not
+   * increase down the page — true and worth having, but every accession that day
+   * carried the same date, so it was blind to this. The marker check is the one that
+   * bites: exactly one `· latest`, on the first accession. Within a single day the
+   * order is editorial and nothing can verify it; which section is the newest is a
+   * claim the page makes out loud, and a claim can be checked. */
+  if (file === 'changelog.html') {
+    const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june',
+      'july', 'august', 'september', 'october', 'november', 'december'];
+    const dates = [...src.matchAll(/<p class="qe-accession-date">([^<]*)<\/p>/g)];
+    let prev = null;
+    dates.forEach((m, i) => {
+      const text = decode(m[1]).replace(/\s+/g, ' ').trim();
+      const isLatest = /·\s*latest$/.test(text);
+      if (isLatest && i !== 0) {
+        problems.push(
+          `the accession at line ${lineOfIndex(m.index)} is marked "latest" and is number ${i + 1} down the page — the register runs newest first, so either it is in the wrong place or the marker is`
+        );
+      }
+      if (i === 0 && !isLatest) {
+        problems.push(
+          `the first accession (line ${lineOfIndex(m.index)}) is not marked "latest" — the register runs newest first, so the top one is the latest by definition`
+        );
+      }
+      const d = /^(\d{4}) · (\d{1,2}) ([A-Za-z]+)/.exec(text);
+      if (!d) {
+        problems.push(`accession date at line ${lineOfIndex(m.index)} is not "YYYY · D Month": ${text}`);
+        return;
+      }
+      const mi = MONTHS.indexOf(d[3].toLowerCase());
+      if (mi === -1) {
+        problems.push(`accession date at line ${lineOfIndex(m.index)} names no month I know: ${d[3]}`);
+        return;
+      }
+      const when = Date.UTC(+d[1], mi, +d[2]);
+      if (prev !== null && when > prev) {
+        problems.push(
+          `the accession at line ${lineOfIndex(m.index)} is dated later than the one above it — the register runs newest first`
+        );
+      }
+      prev = when;
+    });
+    if (dates.length && dates.filter((m) => /·\s*latest\s*$/.test(decode(m[1]).trim())).length !== 1) {
+      problems.push('the register must mark exactly one accession "latest"');
+    }
+  }
   const sheetTokens = new Set();
   for (const m of src.matchAll(/<div class="qe-entry[^"]*"\s+data-sheet="([^"]*)"/g)) {
     const line = lineOfIndex(m.index);

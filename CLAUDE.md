@@ -379,6 +379,10 @@ otherwise a stale record page reports as a stale `.md`, which is the symptom and
 at the wrong tool.
 
 **`tools/html.mjs` and `tools/pages.mjs` are shared, and that is the point of them.**
+**`check-markup.mjs` was not using the shared one and grew a third entity table** — six
+entries, no `&middot;`, found when a new check asked it for one and got the raw entity
+back. It imports `decode` from `html.mjs` now. If a tool here needs an entity, teach the
+shared table; the fact that a private six-line version *works* is how the drift starts.
 The entity table is case-sensitive because the sheets quote Old English, so a second
 copy is a letter one generator learns and the other does not; the page order is
 editorial, so a second copy is a sheet announced to agents and missing from the
@@ -783,6 +787,30 @@ followed with the wrong instrument and then the wrong arithmetic in one pass: th
 and the padding was then set from a 1rem line and shipped **31.1px** targets under a
 comment claiming 44. A 0.82rem line at 1.35 is 17.71px; 0.83rem either side is 44.3px.
 **Measure the rendered box, and check no two hit areas overlap.**
+
+### `/changelog#latest` is a permanent address for a moving target
+
+The register runs newest first, so **the top of the register is the latest by
+definition**. `id="latest"` sits on `.qe-register` itself, and the jump under the lede
+points at it. **A link to the newest accession's own id would be a hand-kept pointer at
+a moving target** — stale the next time anything is mounted, in the file that exists to
+record that kind of failure. This cannot go stale because nothing about it is a copy of
+anything, and it needs no script, which a derived `href` would have.
+
+**It sits directly under the lede because anywhere lower is off the screen.** After the
+register's housekeeping note it measured 1,587px on an 866px viewport; under the lede,
+680px. Second time in one evening a link was put somewhere reasonable-looking and
+measured out of sight, after the finding aid's search box.
+
+**`check-markup.mjs` guards the order this depends on**, and a new accession must keep
+it: dates must not increase down the page, and **exactly one accession carries
+`· latest`, the first one**. Within a single day the order is editorial and unverifiable
+— but which section is newest is a claim the page makes out loud, and a claim can be
+checked. It exists because two sessions appended to this file at once, each anchoring on
+the last accession *it* had written, and four accessions ended up below four older ones
+with the marker five sections down. **Both were locally correct and the page was
+globally wrong** — the card-order fault a third time, in the one file that gate does not
+read.
 
 ### A contents list is front matter; an index is back matter
 

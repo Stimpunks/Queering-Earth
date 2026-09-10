@@ -9,6 +9,49 @@
     <copyright>CC BY-SA 4.0</copyright>
     <lastBuildDate>Wed, 09 Sep 2026 12:00:00 GMT</lastBuildDate>
     <item>
+      <title>A way straight to the newest accession, and the discovery that it was not where the page said it was</title>
+      <link>https://queering.earth/changelog#a-2026-09-09-latest</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-latest</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: The address is on the register, not on the newest accession, which is what makes it permanent
+Label corrected: Four accessions written after 22:43 were sitting below four written before it
+Cabinet: Two assertions on the register’s order, and only one of them would have caught this</description>
+    </item>
+    <item>
+      <title>The finding aid gets one too, and three thresholds in a row turn out to have been the same mistake</title>
+      <link>https://queering.earth/changelog#a-2026-09-09-searchtoc</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-searchtoc</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: Three thresholds tried, three retired, each measuring the list instead of the reader
+Label corrected: Straight after the lede put the search box below the fold, on the page that is a search box</description>
+    </item>
+    <item>
+      <title>This register now has the contents list an earlier entry measured, refused, and wrote a rule against</title>
+      <link>https://queering.earth/changelog#a-2026-09-09-registertoc</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-registertoc</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Re-determined: Block height was the wrong measure, the same way heading count was the wrong measure an hour ago</description>
+    </item>
+    <item>
+      <title>A feature was mistaken for a fault, removed, and put back within the hour</title>
+      <link>https://queering.earth/changelog#a-2026-09-09-navheads</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-navheads</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Label corrected: The test is the element now, not the class, so the next navigation block needs no line
+Re-determined: It was not a fault. Ryan liked the rail pointing at the index, and a destination inside a nav is still a destination
+Mounted: And the two record pages got the contents list they could not have had an hour earlier
+Cabinet: The two-heading threshold is retired, because it measured the wrong thing
+Label corrected: The removal also broke the rail’s tick scale in the quietest way available, because the derivation existed twice</description>
+    </item>
+    <item>
+      <title>The two longest pages on the site could not be surveyed without reading all of them</title>
+      <link>https://queering.earth/changelog#a-2026-09-09-entryindex</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-entryindex</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: Back matter again, and built at runtime for the reason the contents list is
+Cabinet: No line in REVEAL, and that was checked rather than assumed</description>
+    </item>
+    <item>
       <title>Two pages of this cabinet had addresses, were listed on the home page, and were reachable from the foot of nothing</title>
       <link>https://queering.earth/changelog#a-2026-09-09-footers</link>
       <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-footers</guid>
@@ -44,40 +87,6 @@ Cabinet: The rail’s ticks became a scale drawing of the sheet, because an impe
 Cabinet: The rail’s rule ends in a leaf now, and the doodles that were asked for were drawn and refused
 Label corrected: This register said a rule did nothing, having measured it on screen and never on paper
 Cabinet: Three sheets had no contents list and no reason for not having one</description>
-    </item>
-    <item>
-      <title>The finding aid gets one too, and three thresholds in a row turn out to have been the same mistake</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-searchtoc</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-searchtoc</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: Three thresholds tried, three retired, each measuring the list instead of the reader
-Label corrected: Straight after the lede put the search box below the fold, on the page that is a search box</description>
-    </item>
-    <item>
-      <title>This register now has the contents list an earlier entry measured, refused, and wrote a rule against</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-registertoc</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-registertoc</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Re-determined: Block height was the wrong measure, the same way heading count was the wrong measure an hour ago</description>
-    </item>
-    <item>
-      <title>A feature was mistaken for a fault, removed, and put back within the hour</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-navheads</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-navheads</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: The test is the element now, not the class, so the next navigation block needs no line
-Re-determined: It was not a fault. Ryan liked the rail pointing at the index, and a destination inside a nav is still a destination
-Mounted: And the two record pages got the contents list they could not have had an hour earlier
-Cabinet: The two-heading threshold is retired, because it measured the wrong thing
-Label corrected: The removal also broke the rail’s tick scale in the quietest way available, because the derivation existed twice</description>
-    </item>
-    <item>
-      <title>The two longest pages on the site could not be surveyed without reading all of them</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-entryindex</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-entryindex</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Back matter again, and built at runtime for the reason the contents list is
-Cabinet: No line in REVEAL, and that was checked rather than assumed</description>
     </item>
     <item>
       <title>The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page</title>
