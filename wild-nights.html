@@ -46,7 +46,7 @@
      either one would flash the wrong page: the decorated page at someone who
      turned it off, or the daylight sheet at someone who asked for the cabinet.
      With no stored ground, neither class is set and the media query decides. -->
-<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);['motion','contrast','spacing'].forEach(function(k){var v=L.getItem('qe-'+k);if(v==='on'||v==='off')d.classList.add('qe-'+k+'-'+v)})}catch(e){}</script>
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
 <!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
      rel=alternate points an agent at this page's Markdown source, derived from this
      page's own main landmark by tools/make-markdown.mjs.
@@ -136,6 +136,17 @@
         <li>
           <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
           <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-textsize">Text size</label>
+            <select class="qe-reading-select" id="qe-set-textsize">
+              <option value="">Your device&rsquo;s size</option>
+              <option value="larger">Larger</option>
+              <option value="largest">Largest</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
         </li>
       </ul>
       <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>

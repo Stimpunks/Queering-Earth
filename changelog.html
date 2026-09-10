@@ -43,7 +43,7 @@
      either one would flash the wrong page: the decorated page at someone who
      turned it off, or the daylight sheet at someone who asked for the cabinet.
      With no stored ground, neither class is set and the media query decides. -->
-<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);['motion','contrast','spacing'].forEach(function(k){var v=L.getItem('qe-'+k);if(v==='on'||v==='off')d.classList.add('qe-'+k+'-'+v)})}catch(e){}</script>
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
 <!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
      rel=alternate points an agent at this page's Markdown source, derived from this
      page's own main landmark by tools/make-markdown.mjs.
@@ -119,6 +119,17 @@
         <li>
           <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
           <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-textsize">Text size</label>
+            <select class="qe-reading-select" id="qe-set-textsize">
+              <option value="">Your device&rsquo;s size</option>
+              <option value="larger">Larger</option>
+              <option value="largest">Largest</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
         </li>
       </ul>
       <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
@@ -248,6 +259,17 @@
           <p><strong>The stored value is three-state, and that is the whole design.</strong> Absent does not mean <em>off</em>; it means <em>follow the device</em>. Only an explicit <code>on</code> or <code>off</code> writes a class, so with nothing stored the stylesheet&rsquo;s own media query decides and the answer without JavaScript is the same answer as with it. <em>Follow my device again</em> removes all three keys and hands the reader back to their own machine, rather than freezing today&rsquo;s answer as though it were permanent.</p>
           <p><strong>Reduce motion is deliberately not plain view.</strong> Ryan&rsquo;s point, and he is right: you might want the motion gone and want to keep the display faces, the wonk and the leaning slips. They were one control because motion was one of the things decoration happened to include, not because they are one preference.</p>
           <p>It is a native <code>&lt;details&gt;</code>, and it must stay one. A hand-built menu needs focus trapping, a roving tabindex, <code>aria-expanded</code> kept in sync and an Escape handler, and getting any of that wrong would make <strong>the accessibility panel the least accessible thing on the sheet.</strong> The browser ships all of it. Escape and click-away are the only additions and both are conveniences over something already working. Every word in it is authored in the markup; the script sets checked states and classes and writes nothing.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Text size, which the sheet already followed &mdash; and the first setting that is not a yes or a no</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The first option is not a no-op, and that is the whole reason it is worth showing.</strong> <code>html</code> is set to <code>font-size: 100%</code>, which inherits whatever size the reader&rsquo;s browser is already set to, and every one of the 129 type sizes on this sheet is in <code>rem</code> &mdash; not one in <code>px</code>. So are the spacing scale and the measure. Raising the root therefore moves the line height, the gaps and the 66-character measure together, rather than swelling the words inside a box that stays where it was.</p>
+          <p><strong>Larger only, and that is a house rule rather than a shortcut.</strong> The style guide puts body text at 18&ndash;20px and this sheet sits at <code>1.19rem</code>, which is 19px on a default browser. A <em>smaller</em> option would take it under that floor, so the panel does not offer one. A reader who wants less turns their own browser down and the sheet follows &mdash; which is precisely what the first option names.</p>
+          <p>It is a <code>&lt;select&gt;</code> because two steps is not a checkbox, and native for the same reason the panel is a native <code>&lt;details&gt;</code>. It also makes something visible that was implicit: for the three checkboxes, <q>follow your device</q> is the <em>absence</em> of a stored value and a reader has no way to see it. Here it is an option they can choose by name.</p>
+          <p><strong>The gate caught this key one setting after it was written, which is the point of it.</strong> The storage check found settings by their <code>html.qe-*-on</code> and <code>-off</code> classes, and text size stores <code>larger</code> and <code>largest</code> &mdash; so the pattern would have let <code>qe-textsize</code> go undocumented on <code>/privacy</code> while reporting green. Widened to any state, it failed immediately and by name. A check written for the cases that existed is a check with a blind spot for the next one.</p>
+          <p>Verified the way the last one should have been: a real click opened the panel, the control was confirmed to be the top hit target at the point a reader would press &mdash; the check that would have caught last night&rsquo;s bug &mdash; and a real keypress moved it through both steps, 16px to 18 to 20, with the class, the storage and the reset button following. A real click on <em>Follow my device again</em> put all four back.</p>
         </div>
       </div>
 

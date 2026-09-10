@@ -265,7 +265,22 @@ the argument, and it lives **entirely in CSS**, layered over ordinary semantic H
 ### Default to the device; let the reader say otherwise in the moment
 
 `/the reading settings` — the **Reading** disclosure beside the two view controls —
-carries **Reduce motion**, **More contrast** and **Looser lines**. Added 2026-09-10.
+carries **Reduce motion**, **More contrast**, **Looser lines** and **Text size**.
+Added 2026-09-10.
+
+**Not every setting is a yes or a no.** Text size has two steps, so its row is a native
+`<select>` whose stored values are `larger` and `largest`. The class is `qe-<key>-<state>`
+either way, so the stylesheet and the gate see one shape. Its first option — *your
+device's size* — is worth the extra control on its own: for the checkboxes, "follow the
+device" is the unstated absence of a choice, and here it is a thing the reader can see
+and pick.
+
+**Text size goes up only, and that is a house rule.** The style guide sets body text at
+18–20px and the sheet is `1.19rem`. A *smaller* option would take it under that floor.
+A reader who wants less turns their own browser down — which works, because
+`html { font-size: 100% }` and all 129 type sizes are `rem`, so the sheet already
+follows the browser's default. The steps are percentages **of that**, not replacements
+for it.
 
 **The argument for it, since it cuts against "just respect the system":** implementing
 `prefers-reduced-motion` and `prefers-contrast` perfectly still only reaches readers who
@@ -285,7 +300,10 @@ and cannot see a class it was never told about. A setting that could reduce cont
 the gate taught about it first.
 
 **A new key must be named on `/privacy`.** `check-metadata.mjs` finds them two ways —
-literal `getItem('qe-x')` calls and the `html.qe-x-on`/`-off` classes in the stylesheet —
+literal `getItem('qe-x')` calls and the `html.qe-x-<state>` classes in the stylesheet —
+where `<state>` is **any** word, not just `on`/`off`: the pattern knew only the booleans
+until text size arrived, and would have let its key go undocumented one setting after the
+check was written. It caught `qe-textsize` the moment it was widened.
 because the reading settings build their keys from a table and appear as no literal at all.
 The policy is a binding statement; a key it does not list is a key it is wrong about.
 

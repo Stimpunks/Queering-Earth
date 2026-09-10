@@ -62,6 +62,18 @@ What it misses is that **most people have never opened that menu.** Implementing
 
 It is a native `<details>`, and it must stay one. A hand-built menu needs focus trapping, a roving tabindex, `aria-expanded` kept in sync and an Escape handler, and getting any of that wrong would make **the accessibility panel the least accessible thing on the sheet.** The browser ships all of it. Escape and click-away are the only additions and both are conveniences over something already working. Every word in it is authored in the markup; the script sets checked states and classes and writes nothing.
 
+CabinetText size, which the sheet already followed — and the first setting that is not a yes or a no
+
+**The first option is not a no-op, and that is the whole reason it is worth showing.** `html` is set to `font-size: 100%`, which inherits whatever size the reader’s browser is already set to, and every one of the 129 type sizes on this sheet is in `rem` — not one in `px`. So are the spacing scale and the measure. Raising the root therefore moves the line height, the gaps and the 66-character measure together, rather than swelling the words inside a box that stays where it was.
+
+**Larger only, and that is a house rule rather than a shortcut.** The style guide puts body text at 18–20px and this sheet sits at `1.19rem`, which is 19px on a default browser. A *smaller* option would take it under that floor, so the panel does not offer one. A reader who wants less turns their own browser down and the sheet follows — which is precisely what the first option names.
+
+It is a `<select>` because two steps is not a checkbox, and native for the same reason the panel is a native `<details>`. It also makes something visible that was implicit: for the three checkboxes, “follow your device” is the *absence* of a stored value and a reader has no way to see it. Here it is an option they can choose by name.
+
+**The gate caught this key one setting after it was written, which is the point of it.** The storage check found settings by their `html.qe-\*-on` and `-off` classes, and text size stores `larger` and `largest` — so the pattern would have let `qe-textsize` go undocumented on `/privacy` while reporting green. Widened to any state, it failed immediately and by name. A check written for the cases that existed is a check with a blind spot for the next one.
+
+Verified the way the last one should have been: a real click opened the panel, the control was confirmed to be the top hit target at the point a reader would press — the check that would have caught last night’s bug — and a real keypress moved it through both steps, 16px to 18 to 20, with the class, the storage and the reset button following. A real click on *Follow my device again* put all four back.
+
 Re-determinedMotion is off by default now, and the rule that guarded it came out of the change stronger than it went in
 
 Every animation on this site lived inside `@media (prefers-reduced-motion: no-preference)`, and the rule beside it read: “the reduced state is the finished drawing, never a missing one. Never put an `opacity: 0` outside that query.” That structure is correct and it **cannot express the second answer** — a reader who asked for motion on a device that asks to reduce it. There is no way to add a class to a media query.

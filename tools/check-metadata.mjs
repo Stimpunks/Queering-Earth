@@ -337,7 +337,10 @@ try {
   // (b) the override classes, which are the authoritative record of the reading
   //     settings — their keys are assembled at runtime and never appear as literals.
   const sheet = await readFile(join(ROOT, 'queering.css'), 'utf8');
-  for (const m of sheet.matchAll(/html\.(qe-[a-z]+)-(?:on|off)\b/g)) keys.add(m[1]);
+  // ANY state, not just on/off: text size stores 'larger'/'largest', and a pattern
+  // that only knew the booleans would have let its key go undocumented — which is
+  // precisely the failure this check exists to prevent, one setting later.
+  for (const m of sheet.matchAll(/html\.(qe-[a-z]+)-[a-z]+\b/g)) keys.add(m[1]);
 
   for (const key of [...keys].sort())
     if (!policy.includes(`<code>${key}</code>`))

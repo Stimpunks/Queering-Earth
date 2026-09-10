@@ -105,38 +105,48 @@
    * So each row below starts from the media query and the reader may say otherwise.
    *
    * THE STORED VALUE IS THREE-STATE, and that is the part worth getting right.
-   * Absent means "follow the system" — not "off". Only an explicit 'on' or 'off'
-   * overrides, which is why the reset can hand a reader back to their own device
-   * rather than freezing today's answer forever.
+   * Absent means "follow the device" — not "off". Only a value the row itself
+   * declares in `states` overrides, which is why the reset can hand a reader back to
+   * their own device rather than freezing today's answer forever.
    *
-   * This file may never create words: every label and hint is in the markup, and
-   * all this does is set checked states, classes and storage.
+   * NOT EVERY SETTING IS A YES OR A NO. Text size has two steps above the reader's
+   * own browser size, so its row is a <select> and its `states` are the step names.
+   * The class is `qe-<key>-<state>` either way, so the stylesheet and the gate that
+   * checks /privacy both see one shape rather than two.
+   *
+   * This file may never create words: every label, hint and option is in the markup,
+   * and all this does is set values, classes and storage.
    */
 
   var READING = [
-    { key: 'motion',   box: 'qe-set-motion',
+    { key: 'motion',   box: 'qe-set-motion',   kind: 'checkbox', states: ['on', 'off'],
       query: '(prefers-reduced-motion: reduce)', whenChecked: 'off', whenClear: 'on'  },
-    { key: 'contrast', box: 'qe-set-contrast',
-      query: '(prefers-contrast: more)',         whenChecked: 'on',  whenClear: 'off' },
-    /* No system signal exists for this one, which is the argument for having it in
-       the panel at all: a reading preference the device cannot express. */
-    { key: 'spacing',  box: 'qe-set-spacing',
-      query: null,                                whenChecked: 'on',  whenClear: 'off' }
+    { key: 'contrast', box: 'qe-set-contrast', kind: 'checkbox', states: ['on', 'off'],
+      query: '(prefers-contrast: more)',        whenChecked: 'on',  whenClear: 'off' },
+    /* No system signal exists for these two, which is the argument for having them in
+       the panel at all: reading preferences the device cannot express. Text size is
+       the exception that proves it — the device DOES express that one, as the browser's
+       own default size, and because every size here is in `rem` the sheet already
+       follows it. These steps are percentages of that, not replacements for it. */
+    { key: 'spacing',  box: 'qe-set-spacing',  kind: 'checkbox', states: ['on', 'off'],
+      query: null,                              whenChecked: 'on',  whenClear: 'off' },
+    { key: 'textsize', box: 'qe-set-textsize', kind: 'select',   states: ['larger', 'largest'],
+      query: null }
   ];
 
   var panel = document.querySelector('.qe-reading');
   if (panel) {
     var reset = document.getElementById('qe-reading-reset');
 
-    var stored = function (key) {
+    var stored = function (row) {
       try {
-        var v = localStorage.getItem('qe-' + key);
-        return (v === 'on' || v === 'off') ? v : null;
+        var v = localStorage.getItem('qe-' + row.key);
+        return row.states.indexOf(v) > -1 ? v : null;
       } catch (e) { return null; }
     };
 
-    var forget = function (key) {
-      try { localStorage.removeItem('qe-' + key); } catch (e) {}
+    var forget = function (row) {
+      try { localStorage.removeItem('qe-' + row.key); } catch (e) {}
     };
 
     var systemWants = function (row) {
@@ -144,33 +154,50 @@
     };
 
     /* The class is written only for an override. With nothing stored, no class is
-       added and the stylesheet's own media query decides — which is what keeps the
-       no-JavaScript answer and the JavaScript answer the same answer. */
+       added and the stylesheet's own media query — or, for text size, the browser's
+       own font size — decides. That is what keeps the no-JavaScript answer and the
+       JavaScript answer the same answer. */
     var applyClass = function (row) {
-      var v = stored(row.key);
-      root.classList.remove('qe-' + row.key + '-on', 'qe-' + row.key + '-off');
+      var v = stored(row);
+      for (var i = 0; i < row.states.length; i++)
+        root.classList.remove('qe-' + row.key + '-' + row.states[i]);
       if (v) root.classList.add('qe-' + row.key + '-' + v);
     };
 
     var isChecked = function (row) {
-      var v = stored(row.key);
+      var v = stored(row);
       return v ? v === row.whenChecked : systemWants(row);
     };
 
     var paintReset = function () {
       if (!reset) return;
-      var overridden = READING.some(function (row) { return stored(row.key) !== null; });
+      var overridden = false;
+      for (var i = 0; i < READING.length; i++)
+        if (stored(READING[i]) !== null) overridden = true;
       reset.disabled = !overridden;
     };
 
-    READING.forEach(function (row) {
-      var box = document.getElementById(row.box);
-      if (!box) return;
-      row.el = box;
-      box.checked = isChecked(row);
+    /* Put the control back to what the stored value (or its absence) says. */
+    var paintRow = function (row) {
+      if (!row.el) return;
+      if (row.kind === 'select') row.el.value = stored(row) || '';
+      else row.el.checked = isChecked(row);
+    };
 
-      box.addEventListener('change', function () {
-        remember('qe-' + row.key, box.checked ? row.whenChecked : row.whenClear);
+    READING.forEach(function (row) {
+      var el = document.getElementById(row.box);
+      if (!el) return;
+      row.el = el;
+      paintRow(row);
+
+      el.addEventListener('change', function () {
+        if (row.kind === 'select') {
+          /* The empty option is "your device's size", which is an absence rather than
+             a value — the same state a checkbox is in before it is ever touched. */
+          if (el.value) remember('qe-' + row.key, el.value); else forget(row);
+        } else {
+          remember('qe-' + row.key, el.checked ? row.whenChecked : row.whenClear);
+        }
         applyClass(row);
         paintReset();
       });
@@ -179,7 +206,7 @@
          has not overridden it, follow along rather than showing a stale tick. */
       if (row.query && window.matchMedia(row.query).addEventListener) {
         window.matchMedia(row.query).addEventListener('change', function () {
-          if (stored(row.key) === null) box.checked = systemWants(row);
+          if (stored(row) === null) paintRow(row);
         });
       }
     });
@@ -187,9 +214,9 @@
     if (reset) {
       reset.addEventListener('click', function () {
         READING.forEach(function (row) {
-          forget(row.key);
+          forget(row);
           applyClass(row);
-          if (row.el) row.el.checked = systemWants(row);
+          paintRow(row);
         });
         paintReset();
       });

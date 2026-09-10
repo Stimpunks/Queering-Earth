@@ -537,6 +537,25 @@ html.qe-contrast-on body::before { display: none; }
   html:not(.qe-contrast-off) body::before { display: none; }
 }
 
+/* ── Text size ───────────────────────────────────────────────────────────────
+   THE SITE ALREADY FOLLOWS THE BROWSER'S OWN SIZE, and that is why the first option
+   is not a no-op. `html { font-size: 100% }` inherits whatever the reader set as
+   their default, every type size on the sheet is in `rem` (129 of them; not one in
+   `px`), and the spacing scale and the measure are `rem` too — so raising the root
+   moves the line height, the gaps and the 66-character measure with it, instead of
+   swelling the words inside a box that stays put.
+
+   LARGER ONLY, AND THAT IS A HOUSE RULE RATHER THAN AN OMISSION. The Stimpunks style
+   guide sets body text at 18-20px and the sheet sits at 1.19rem, which is 19px at a
+   default browser. A "smaller" option would take it under that floor, so the panel
+   does not offer one; a reader who wants less can turn their own browser down and
+   this sheet will follow, which is the mechanism the first option names.
+
+   These are percentages of the reader's OWN default, not absolute sizes. Someone
+   running a 20px browser gets 22.5px and 25px, not 18 and 20. */
+html.qe-textsize-larger  { font-size: 112.5%; }
+html.qe-textsize-largest { font-size: 125%; }
+
 /* ── Looser lines ────────────────────────────────────────────────────────────
    WCAG 1.4.12 asks that content survive a reader forcing line-height to 1.5 and
    paragraph spacing to 2em. The body sits at 1.65 already, so this is not remedial —
@@ -872,6 +891,39 @@ html.qe-spacing-on p + p { margin-top: var(--qe-para-gap, 1.47rem); }
   line-height: 1.45;
   color: var(--qe-moss);
 }
+
+/* The one control here that is not a checkbox, because text size is not a yes or a
+   no. A native <select> for the same reason the panel is a native <details>: the
+   keyboard behaviour, the touch behaviour and the screen-reader announcement all
+   arrive built, and its first option makes "follow your device" a thing a reader can
+   SEE and choose, where for the checkboxes it is the unstated absence of a choice. */
+.qe-reading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  min-height: 1.6rem;
+}
+.qe-reading-row label {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--qe-ink);
+  cursor: pointer;
+}
+.qe-reading-select {
+  font-family: var(--qe-body);
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: var(--qe-ink);
+  background: var(--qe-paper);
+  border: 1px solid var(--qe-rule);
+  border-radius: var(--qe-corner-chip, 2px);
+  padding: 0.25rem 0.4rem;
+  min-height: 1.6rem;
+  cursor: pointer;
+}
+.qe-reading-select:hover { border-color: var(--qe-moss); }
+.qe-reading-select:focus-visible { outline: 3px solid var(--qe-rust); outline-offset: 2px; }
 
 .qe-reading-reset {
   margin-top: 1.1rem;

@@ -35,7 +35,7 @@
 <link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="queering.css">
 
-<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);['motion','contrast','spacing'].forEach(function(k){var v=L.getItem('qe-'+k);if(v==='on'||v==='off')d.classList.add('qe-'+k+'-'+v)})}catch(e){}</script>
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
 <link rel="describedby" href="/llms.txt" type="text/markdown" title="Site index for agents">
 <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Queering Earth — the accession register">
 <link rel="alternate" href="https://queering.earth/search.md" type="text/markdown" title="Find a word in the cabinet — Markdown source">
@@ -101,6 +101,17 @@
         <li>
           <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
           <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-textsize">Text size</label>
+            <select class="qe-reading-select" id="qe-set-textsize">
+              <option value="">Your device&rsquo;s size</option>
+              <option value="larger">Larger</option>
+              <option value="largest">Largest</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
         </li>
       </ul>
       <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
@@ -356,7 +367,7 @@
     </li>
     <li>
       <p class="qe-manifest-head"><a href="/changelog">The accession register</a> <span class="qe-manifest-kind">Register · the changelog</span></p>
-      <p class="qe-manifest-sub">156 entries across 40 accessions, each one dated on <a href="/changelog">the register itself</a> and filed by sheet in <a href="/changelog#qe-index-h">its index</a>. They are searchable above.</p>
+      <p class="qe-manifest-sub">157 entries across 40 accessions, each one dated on <a href="/changelog">the register itself</a> and filed by sheet in <a href="/changelog#qe-index-h">its index</a>. They are searchable above.</p>
     </li>
     <li>
       <p class="qe-manifest-head"><a href="/ledger">The attribution ledger</a></p>
