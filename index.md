@@ -57,6 +57,8 @@ She arrives where Walker is standing, by the other road: “If we think of queer
 
 That is this site’s method described from the outside. Every sheet here is an adaptation: Woolf read through illness, Rossetti read through solo polyamory, Miranda read as somebody to be wondered *with*. Demory’s useful insistence is that this is not a lesser thing to do to a text. Adaptation and queerness both, she writes, “suffer from the stereotype of being secondary, somehow less authentic” — a copy held against an original, a life held against a norm. It is one charge made twice, and it is the charge this site declines.
 
+Drawn after the crooked tree in *Wristcutters: A Love Story* (2006, dir. Goran Dukić, from Etgar Keret’s *Kneller’s Happy Campers*), [spoken by Tom Waits](https://www.youtube.com/watch?v=uAov-G-zHlc): the straight tree spends its life telling the crooked one what it is, until the lumberjacks arrive and are told to cut all the straight trees. The crooked one is still there, “growing strong and growing strange”. **Whether the speech is Waits’ own or the screenplay’s, we have not established** — the question is open in `ATTRIBUTIONS.md` rather than settled here.
+
 ## The sentence adapts itself
 
 Five years later Demory quotes that sentence back, in a chapter on Apple TV+’s *Dickinson*. She does not quote it whole. She cuts it to what the new argument needs, marks every cut, and leaves her own name on what is left.

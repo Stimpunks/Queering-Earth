@@ -2052,6 +2052,8 @@ She arrives where Walker is standing, by the other road: “If we think of queer
 
 That is this site’s method described from the outside. Every sheet here is an adaptation: Woolf read through illness, Rossetti read through solo polyamory, Miranda read as somebody to be wondered *with*. Demory’s useful insistence is that this is not a lesser thing to do to a text. Adaptation and queerness both, she writes, “suffer from the stereotype of being secondary, somehow less authentic” — a copy held against an original, a life held against a norm. It is one charge made twice, and it is the charge this site declines.
 
+Drawn after the crooked tree in *Wristcutters: A Love Story* (2006, dir. Goran Dukić, from Etgar Keret’s *Kneller’s Happy Campers*), [spoken by Tom Waits](https://www.youtube.com/watch?v=uAov-G-zHlc): the straight tree spends its life telling the crooked one what it is, until the lumberjacks arrive and are told to cut all the straight trees. The crooked one is still there, “growing strong and growing strange”. **Whether the speech is Waits’ own or the screenplay’s, we have not established** — the question is open in `ATTRIBUTIONS.md` rather than settled here.
+
 ## The sentence adapts itself
 
 Five years later Demory quotes that sentence back, in a chapter on Apple TV+’s *Dickinson*. She does not quote it whole. She cuts it to what the new argument needs, marks every cut, and leaves her own name on what is left.
@@ -2428,6 +2430,30 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Cabinet
 
 2026 · 10 September · latest
+
+## A crooked tree for the sheet that says queering is adaptation, and the stump of the straight one beside it
+
+At Ryan’s note, after the monologue Tom Waits speaks in *Wristcutters: A Love Story*. It went into [To queer is to adapt](https://queering.earth/#to-queer-is-to-adapt) rather than the typography section, because that section already says queering something is “to make it strange or odd” and the monologue answers it: the crooked one is the tree still standing, “growing strong and growing strange”.
+
+MountedThe drawing is the pair, because a crooked tree on its own is only a picture of a crooked tree
+
+**The stump is the argument.** Waits’ story is not about a bent tree; it is about what happened to the straight one that spent its life narrating the bent one’s deficiency. So the plate is two trees: on the left, all that is left of the straight one — a flat cut and two growth rings, and no leaf on it. On the right the crooked one, whole and in leaf, its lowest branch reaching back over the space where its neighbour used to be.
+
+**The first two drafts were not crooked.** They swung the bezier *handles* wide and left the trunk’s endpoints where they started, which reads as a wavy sapling — a tree that has second thoughts and corrects them. The endpoints zigzag now, thirty units of lateral lurch a segment, and never come back to the vertical. **A trunk that corrects itself is a straight tree with extra steps**, which is the note left in the markup for whoever redraws it.
+
+Built entirely from classes this stylesheet already has — `.stem`, `.rib`, `.leaf`, `.sprout` — so **it adds no new gap in the print sheet and none in forced colours**. That was the reason for the constraint rather than a happy result of it: a new art class needs a new print rule reaching it by name, and a fill the print sheet cannot reach is how Star Stuff printed forty-four blank pages. Only `.trunk` and `.ground-line` are new, and both are scoped to this drawing, like the lilac bush’s.
+
+`--len` on every stem is the length measured off `getTotalLength()`. The trunk was declared at 255 and is 270, and a declared length shorter than the real one makes the dash pattern repeat — the branch draws itself on with gaps in it. Checked in all four states the site owes: the trunk inks in `--qe-ink` on paper and inverts to the pale cabinet ink on the dark ground, and both plain view and reduced motion report `stroke-dashoffset: 0` with the leaves at full opacity, which is the finished drawing and never a missing one.
+
+Label correctedFour words have an author, and we do not know whose these are
+
+The caption quotes four words — “growing strong and growing strange” — and the easy caption would have read “Tom Waits” and left a reader to assume he wrote what he said. **That is this site’s characteristic failure in miniature:** an attribution true about the speaking, silent about the writing, and left to be read as a claim about both.
+
+What is established: the monologue is spoken by Tom Waits as Kneller in *Wristcutters: A Love Story* (2006), written and directed by Goran Dukić, adapted from Etgar Keret’s *Kneller’s Happy Campers*. **What is not established is who wrote it.** It is widely repeated that Waits improvised the speech and that claim was not found in any primary source — not an interview with Waits, not with Dukić, not the published screenplay. It may equally be Dukić’s writing, or descend from Keret.
+
+So it is logged **Open** in `ATTRIBUTIONS.md` rather than Verified, the caption says *spoken by* and claims nothing about authorship, and the caption says on its face that the question is unsettled. A drawing would not have needed the answer at all; quoting four words is what put the site on the hook for it.
+
+2026 · 10 September
 
 ## Nine typefaces a reader can set the sheet in, six of them drawing letters that exist because the grammar refused the person
 
@@ -4222,7 +4248,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-160 entries across 41 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+162 entries across 42 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -5529,6 +5555,18 @@ which is what the [Neuroqueer Learning Spaces Manifesto](https://stimpunks.org/p
 ---
 
 ## Open
+
+### Who wrote the crooked tree — Waits, the screenplay, or Keret
+
+**Drawn after on:** `index.html`, `#to-queer-is-to-adapt`. **Phrase quoted:** four words, <q>growing strong and growing strange</q>.
+
+The monologue is spoken by **Tom Waits**, as Kneller, in ***Wristcutters: A Love Story*** (2006), written and directed by **Goran Dukić**, adapted from **Etgar Keret's** novella *Kneller's Happy Campers*. A straight tree spends its life telling a crooked one what it is; the lumberjacks arrive and are told to cut all the straight trees; the crooked one is still there.
+
+**What is not established is who wrote it.** It is widely repeated online that Waits improvised the speech, and we have not found that claim in a primary source — not in an interview with Waits, not with Dukić, and not in the published screenplay. It is equally possible it is Dukić's writing, or that it descends from Keret. **A drawing does not require the answer, which is why the figure is captioned as *spoken by* Waits and makes no claim about authorship.** But the site quotes four of the words, and four words have an author.
+
+**What would settle it:** the screenplay, or an interview where Waits or Dukić says whose it is. Until then the caption says what we know — who said it, in what, directed by whom, from whose story — and says openly that we do not know who wrote it.
+
+**Why this is Open and not Verified.** The tempting move was to caption it "Tom Waits" and let a reader assume he wrote what he said. That is this site's characteristic failure in miniature: an attribution that is true about the speaking and silent about the writing, left to be read as a claim about both.
 
 ### Two sentences on the Miranda sheet claim a little more than their source does
 

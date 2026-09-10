@@ -456,6 +456,54 @@
 
   <p>That is this site&rsquo;s method described from the outside. Every sheet here is an adaptation: Woolf read through illness, Rossetti read through solo polyamory, Miranda read as somebody to be wondered <em>with</em>. Demory&rsquo;s useful insistence is that this is not a lesser thing to do to a text. Adaptation and queerness both, she writes, <q>suffer from the stereotype of being secondary, somehow less authentic</q> — a copy held against an original, a life held against a norm. It is one charge made twice, and it is the charge this site declines.</p>
 
+  <!-- THE STUMP IS THE ARGUMENT, not the tree. A crooked tree alone is a picture of a
+       crooked tree; beside the flat-cut stump of a straight one it is the whole of what
+       Waits says. Built from classes this stylesheet already prints and already forces
+       to system colours - .stem, .rib, .leaf, .sprout - so it adds no new gap in the
+       print sheet or in forced colours. --len on each stem is the measured path length
+       read off getTotalLength(), not an estimate: too small and the dash pattern repeats
+       and the branch draws on with gaps in it. -->
+  <figure class="qe-crooked-tree-figure">
+    <svg class="qe-botanical qe-crooked-tree" viewBox="0 0 560 210" role="img" aria-label="Two trees drawn as a herbarium plate. On the left, all that remains of a straight tree is a short stump cut flat across the top, its growth rings showing as two concentric ovals, with no leaf on it. On the right a crooked tree stands whole: its thick trunk lurches left, then right, then left, then right again as it climbs, never correcting itself, and five branches reach from the bends carrying fifteen leaves. The lowest branch reaches back over the stump. A wavy line marks the ground under both." focusable="false">
+      <path class="ground-line" d="M24 186 C 130 181, 300 190, 536 184"/>
+
+      <!-- The straight tree. It spent its life saying look at me, and this is all that
+           is left of it: a flat cut and two rings. No leaf. -->
+      <path class="stem trunk" style="--len:48" stroke-width="2.6" d="M140 186 C 141 168, 141 152, 142 138"/>
+      <path class="stem trunk" style="--len:48" stroke-width="2.6" d="M172 186 C 171 168, 171 152, 170 138"/>
+      <ellipse class="rib" stroke-width="1.5" cx="156" cy="137" rx="15" ry="4.6"/>
+      <ellipse class="rib" stroke-width="1" cx="156" cy="137" rx="7.5" ry="2.3"/>
+
+      <!-- The crooked one. THE ENDPOINTS ZIGZAG, not just the control handles: a first
+           draft swung its handles wide and left the spine where it started, which reads
+           as a wavy sapling rather than a crooked tree. A trunk that corrects itself is
+           a straight tree with extra steps. -->
+      <path class="stem trunk" style="--len:270" stroke-width="4.4" d="M330 186 C 322 172, 304 164, 300 150 C 296 134, 350 132, 356 116 C 362 100, 312 96, 316 80 C 320 62, 356 62, 360 46 C 363 33, 340 32, 338 18"/>
+      <path class="stem" style="--len:111" stroke-width="2.1" d="M300 150 C 264 148, 224 138, 190 134"/>
+      <path class="stem" style="--len:123" stroke-width="2" d="M356 116 C 398 114, 440 104, 478 100"/>
+      <path class="stem" style="--len:77" stroke-width="1.8" d="M316 80 C 288 74, 262 66, 240 66"/>
+      <path class="stem" style="--len:85" stroke-width="1.7" d="M360 46 C 392 42, 420 34, 444 32"/>
+      <path class="stem" style="--len:43" stroke-width="1.4" d="M338 18 C 322 12, 308 10, 296 12"/>
+
+      <g transform="translate(272 146) rotate(-166)"><g class="sprout sprout-leaf" style="--i:1"><path class="leaf" stroke-width="1.1" d="M0 0 C 7.2 -9.4, 22 -9.9, 28.6 0 C 22 9.9, 7.2 9.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 27.5 0"/></g></g>
+      <g transform="translate(240 140) rotate(168)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" stroke-width="1.1" d="M0 0 C 5.9 -7.6, 18 -8.1, 23.4 0 C 18 8.1, 5.9 7.7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 22.5 0"/></g></g>
+      <g transform="translate(212 136) rotate(-174)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" stroke-width="1.1" d="M0 0 C 4.6 -5.9, 14 -6.3, 18.2 0 C 14 6.3, 4.6 5.9, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 17.5 0"/></g></g>
+      <g transform="translate(192 134) rotate(178)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf" stroke-width="1.1" d="M0 0 C 3.9 -5.1, 12 -5.4, 15.6 0 C 12 5.4, 3.9 5.1, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 15.0 0"/></g></g>
+      <g transform="translate(398 113) rotate(-14)"><g class="sprout sprout-leaf" style="--i:5"><path class="leaf" stroke-width="1.1" d="M0 0 C 7.2 -9.4, 22 -9.9, 28.6 0 C 22 9.9, 7.2 9.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 27.5 0"/></g></g>
+      <g transform="translate(436 105) rotate(14)"><g class="sprout sprout-leaf" style="--i:6"><path class="leaf" stroke-width="1.1" d="M0 0 C 5.9 -7.6, 18 -8.1, 23.4 0 C 18 8.1, 5.9 7.7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 22.5 0"/></g></g>
+      <g transform="translate(462 101) rotate(-10)"><g class="sprout sprout-leaf" style="--i:7"><path class="leaf" stroke-width="1.1" d="M0 0 C 4.6 -5.9, 14 -6.3, 18.2 0 C 14 6.3, 4.6 5.9, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 17.5 0"/></g></g>
+      <g transform="translate(478 100) rotate(8)"><g class="sprout sprout-leaf" style="--i:8"><path class="leaf" stroke-width="1.1" d="M0 0 C 3.9 -5.1, 12 -5.4, 15.6 0 C 12 5.4, 3.9 5.1, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 15.0 0"/></g></g>
+      <g transform="translate(292 76) rotate(-170)"><g class="sprout sprout-leaf" style="--i:9"><path class="leaf" stroke-width="1.1" d="M0 0 C 5.9 -7.6, 18 -8.1, 23.4 0 C 18 8.1, 5.9 7.7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 22.5 0"/></g></g>
+      <g transform="translate(264 68) rotate(172)"><g class="sprout sprout-leaf" style="--i:10"><path class="leaf" stroke-width="1.1" d="M0 0 C 4.6 -5.9, 14 -6.3, 18.2 0 C 14 6.3, 4.6 5.9, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 17.5 0"/></g></g>
+      <g transform="translate(242 66) rotate(-176)"><g class="sprout sprout-leaf" style="--i:11"><path class="leaf" stroke-width="1.1" d="M0 0 C 3.9 -5.1, 12 -5.4, 15.6 0 C 12 5.4, 3.9 5.1, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 15.0 0"/></g></g>
+      <g transform="translate(392 42) rotate(-16)"><g class="sprout sprout-leaf" style="--i:12"><path class="leaf" stroke-width="1.1" d="M0 0 C 5.9 -7.6, 18 -8.1, 23.4 0 C 18 8.1, 5.9 7.7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 22.5 0"/></g></g>
+      <g transform="translate(420 35) rotate(12)"><g class="sprout sprout-leaf" style="--i:13"><path class="leaf" stroke-width="1.1" d="M0 0 C 4.6 -5.9, 14 -6.3, 18.2 0 C 14 6.3, 4.6 5.9, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 17.5 0"/></g></g>
+      <g transform="translate(444 32) rotate(-8)"><g class="sprout sprout-leaf" style="--i:14"><path class="leaf" stroke-width="1.1" d="M0 0 C 3.9 -5.1, 12 -5.4, 15.6 0 C 12 5.4, 3.9 5.1, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 15.0 0"/></g></g>
+      <g transform="translate(318 13) rotate(-168)"><g class="sprout sprout-leaf" style="--i:15"><path class="leaf" stroke-width="1.1" d="M0 0 C 3.9 -5.1, 12 -5.4, 15.6 0 C 12 5.4, 3.9 5.1, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 15.0 0"/></g></g>
+    </svg>
+    <figcaption>Drawn after the crooked tree in <cite>Wristcutters: A Love Story</cite> (2006, dir. Goran Duki&#263;, from Etgar Keret&rsquo;s <cite>Kneller&rsquo;s Happy Campers</cite>), <a href="https://www.youtube.com/watch?v=uAov-G-zHlc">spoken by Tom Waits</a>: the straight tree spends its life telling the crooked one what it is, until the lumberjacks arrive and are told to cut all the straight trees. The crooked one is still there, <q>growing strong and growing strange</q>. <strong>Whether the speech is Waits&rsquo; own or the screenplay&rsquo;s, we have not established</strong> &mdash; the question is open in <code>ATTRIBUTIONS.md</code> rather than settled here.</figcaption>
+  </figure>
+
   <h2 id="the-sentence-adapts">The sentence adapts itself <a class="qe-anchor" href="#the-sentence-adapts"><span class="qe-sr">Link to this section</span></a></h2>
 
   <p>Five years later Demory quotes that sentence back, in a chapter on Apple TV+&rsquo;s <cite>Dickinson</cite>. She does not quote it whole. She cuts it to what the new argument needs, marks every cut, and leaves her own name on what is left.</p>

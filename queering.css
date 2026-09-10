@@ -1598,6 +1598,42 @@ html.plain .qe-botanical { opacity: 0.85; }
   .qe-lilac-bush-figure figcaption { color: #222; }
 }
 
+/* ─────────────────────────────────────────────── the crooked tree
+ *
+ * For #to-queer-is-to-adapt, at Ryan's note, after the Tom Waits monologue in
+ * Wristcutters. The section it sits in says that to queer something is "to make it
+ * strange or odd"; the monologue answers that the crooked tree is the one still
+ * standing, "growing strong and growing strange". The drawing is the pair, not the
+ * tree: the stump is what happened to the straight one.
+ *
+ * Scoped classes, like the lilac bush, so `.trunk` and `.ground-line` do not leak
+ * into every other plate. Everything else is the shared vocabulary, which is why
+ * there is no new print rule and no new forced-colours rule to write: `.stem`,
+ * `.rib` and `.leaf` are already reached by both. */
+.qe-crooked-tree-figure { margin: var(--qe-space-6) 0 var(--qe-space-4); }
+.qe-crooked-tree-figure figcaption {
+  font-family: var(--qe-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--qe-moss);
+  max-width: 32rem;
+  margin: var(--qe-space-2) auto 0;
+  text-align: left;
+}
+.qe-crooked-tree .trunk { stroke: var(--qe-ink); stroke-linecap: round; }
+.qe-crooked-tree .ground-line {
+  fill: none;
+  stroke: var(--qe-lichen);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+@media print {
+  .qe-crooked-tree .trunk { stroke: #444; }
+  .qe-crooked-tree .ground-line { stroke: #777; }
+  .qe-crooked-tree-figure figcaption { color: #222; }
+}
+
 /* ─────────────────────────────────────────────── the provocation */
 
 .qe-provocation {

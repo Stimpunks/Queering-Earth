@@ -36,6 +36,30 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 10 September · latest
 
+## A crooked tree for the sheet that says queering is adaptation, and the stump of the straight one beside it
+
+At Ryan’s note, after the monologue Tom Waits speaks in *Wristcutters: A Love Story*. It went into [To queer is to adapt](https://queering.earth/#to-queer-is-to-adapt) rather than the typography section, because that section already says queering something is “to make it strange or odd” and the monologue answers it: the crooked one is the tree still standing, “growing strong and growing strange”.
+
+MountedThe drawing is the pair, because a crooked tree on its own is only a picture of a crooked tree
+
+**The stump is the argument.** Waits’ story is not about a bent tree; it is about what happened to the straight one that spent its life narrating the bent one’s deficiency. So the plate is two trees: on the left, all that is left of the straight one — a flat cut and two growth rings, and no leaf on it. On the right the crooked one, whole and in leaf, its lowest branch reaching back over the space where its neighbour used to be.
+
+**The first two drafts were not crooked.** They swung the bezier *handles* wide and left the trunk’s endpoints where they started, which reads as a wavy sapling — a tree that has second thoughts and corrects them. The endpoints zigzag now, thirty units of lateral lurch a segment, and never come back to the vertical. **A trunk that corrects itself is a straight tree with extra steps**, which is the note left in the markup for whoever redraws it.
+
+Built entirely from classes this stylesheet already has — `.stem`, `.rib`, `.leaf`, `.sprout` — so **it adds no new gap in the print sheet and none in forced colours**. That was the reason for the constraint rather than a happy result of it: a new art class needs a new print rule reaching it by name, and a fill the print sheet cannot reach is how Star Stuff printed forty-four blank pages. Only `.trunk` and `.ground-line` are new, and both are scoped to this drawing, like the lilac bush’s.
+
+`--len` on every stem is the length measured off `getTotalLength()`. The trunk was declared at 255 and is 270, and a declared length shorter than the real one makes the dash pattern repeat — the branch draws itself on with gaps in it. Checked in all four states the site owes: the trunk inks in `--qe-ink` on paper and inverts to the pale cabinet ink on the dark ground, and both plain view and reduced motion report `stroke-dashoffset: 0` with the leaves at full opacity, which is the finished drawing and never a missing one.
+
+Label correctedFour words have an author, and we do not know whose these are
+
+The caption quotes four words — “growing strong and growing strange” — and the easy caption would have read “Tom Waits” and left a reader to assume he wrote what he said. **That is this site’s characteristic failure in miniature:** an attribution true about the speaking, silent about the writing, and left to be read as a claim about both.
+
+What is established: the monologue is spoken by Tom Waits as Kneller in *Wristcutters: A Love Story* (2006), written and directed by Goran Dukić, adapted from Etgar Keret’s *Kneller’s Happy Campers*. **What is not established is who wrote it.** It is widely repeated that Waits improvised the speech and that claim was not found in any primary source — not an interview with Waits, not with Dukić, not the published screenplay. It may equally be Dukić’s writing, or descend from Keret.
+
+So it is logged **Open** in `ATTRIBUTIONS.md` rather than Verified, the caption says *spoken by* and claims nothing about authorship, and the caption says on its face that the question is unsettled. A drawing would not have needed the answer at all; quoting four words is what put the site on the hook for it.
+
+2026 · 10 September
+
 ## Nine typefaces a reader can set the sheet in, six of them drawing letters that exist because the grammar refused the person
 
 Ryan asked what fonts *queer design* — after Robin Mientjes by way of Paul Soulellis: “an attitude in the face of conformity, an attitude in the sea of passivity, an attitude to say yes when others say no.” Twenty candidates went onto two specimen sheets; nine were kept. **Six are from [Bye Bye Binary](https://gitlab.com/bye-bye-binary)**, a collective drawing glyphs for inclusive and non-binary French. The rest are from Velvetyne and the Braille Institute.

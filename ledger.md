@@ -1266,6 +1266,18 @@ which is what the [Neuroqueer Learning Spaces Manifesto](https://stimpunks.org/p
 
 ## Open
 
+### Who wrote the crooked tree — Waits, the screenplay, or Keret
+
+**Drawn after on:** `index.html`, `#to-queer-is-to-adapt`. **Phrase quoted:** four words, <q>growing strong and growing strange</q>.
+
+The monologue is spoken by **Tom Waits**, as Kneller, in ***Wristcutters: A Love Story*** (2006), written and directed by **Goran Dukić**, adapted from **Etgar Keret's** novella *Kneller's Happy Campers*. A straight tree spends its life telling a crooked one what it is; the lumberjacks arrive and are told to cut all the straight trees; the crooked one is still there.
+
+**What is not established is who wrote it.** It is widely repeated online that Waits improvised the speech, and we have not found that claim in a primary source — not in an interview with Waits, not with Dukić, and not in the published screenplay. It is equally possible it is Dukić's writing, or that it descends from Keret. **A drawing does not require the answer, which is why the figure is captioned as *spoken by* Waits and makes no claim about authorship.** But the site quotes four of the words, and four words have an author.
+
+**What would settle it:** the screenplay, or an interview where Waits or Dukić says whose it is. Until then the caption says what we know — who said it, in what, directed by whom, from whose story — and says openly that we do not know who wrote it.
+
+**Why this is Open and not Verified.** The tempting move was to caption it "Tom Waits" and let a reader assume he wrote what he said. That is this site's characteristic failure in miniature: an attribution that is true about the speaking and silent about the writing, left to be read as a claim about both.
+
 ### Two sentences on the Miranda sheet claim a little more than their source does
 
 **On:** `the-tempest.html`, second paragraph. **Found:** 2026-09-08, while verifying the draft. **Left as sent** — fixing either means changing Helen's words, which is not this session's call.
