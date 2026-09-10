@@ -282,7 +282,7 @@ built out of citations — setting one as the reading face would put a faux slan
 **`tools/make-fonts.mjs` owns all of it** — the faces, the `@font-face` blocks, the
 `html.qe-font-*` class rules, the licence files, the designer credits and the manifest,
 generated from one table so the stylesheet cannot declare a family the picker does not
-offer. **The option list lives in the markup on eighteen pages**, so
+offer. **The option list lives in the markup on nineteen pages**, so
 `check-metadata.mjs` compares the two: an option with no face behind it offers a
 typeface that will not load, a face with no option is weight nobody can reach, and both
 are silent. **Narrowing the nine is exactly when that happens** — re-run the tool, edit
@@ -643,10 +643,12 @@ ledger, and a correction nobody can read is a correction that only exists for us
 
 A sheet also needs its **`.qe-provenance` line**, and a correction logged here needs that line
 updated — the count on the sheet and the entries on this page are two views of one fact, and
-the sheet is the copy that will drift. All eight sheets carry `--mended` today, because all
+the sheet is the copy that will drift. Eight of the nine sheets carry `--mended`, because
 eight have been corrected — Sheet No. 8 was predicted to arrive clean and did not. **The
-unmended state has still never shipped**, so it is the state to check by hand when a sheet
-is mounted, not one you can copy off a neighbour.
+unmended state finally shipped on 2026-09-10 with Sheet No. 9**: a solid hairline, moss ink,
+reading `Mounted 10 September 2026. Not yet corrected.` It had never rendered before that
+day, which is why it was the thing to check by hand rather than copy off a neighbour — and
+that is still the advice for the next new state, not for this one.
 
 **A NEW ACCESSION GOES AT THE TOP OF THE REGISTER, ANCHORED ON `<div class="qe-register"
 id="latest">` — NEVER RELATIVE TO THE LAST ENTRY YOU WROTE.** The register runs newest

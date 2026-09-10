@@ -36,6 +36,82 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 10 September · latest
 
+## Sheet No. 9, on a definition recited for a beast nobody has seen, and on the coiner an empty word leaves behind
+
+Helen’s idea, from John C. Brady’s two-part reading of *Logique du sens* in Epoché — she asked for a sheet on names, labels, and how things get coined, and said the Deleuze–Carroll link “may be a stretch”. It is not: Deleuze makes the identification himself, on p. 31 of the French. Ryan proposed it as a complement to [Sheet No. 2](https://queering.earth/coming-to-terms), which asks whether a label fits; this one asks where the label came from.
+
+MountedThe primary was not in the house, and the answer was the French rather than a summary
+
+*The Logic of Sense* is not sold as an ebook and Ryan does not have it, so the first plan was to build on Brady and correct the sheet later against Deleuze. **That plan was wrong and the reason is worth keeping.** Build-now-verify-later is fine when the later edit is an *upgrade* to a citation that was honest when it shipped; it is not fine when the later edit could change what the sheet *claims*, and a section resting on Deleuze’s theory of sense sourced entirely to somebody’s summary of it is the second kind.
+
+**The original was reachable the whole time.** *Logique du sens* (Minuit, 1969) is openly readable at the Internet Archive; the two scans of Mark Lester’s English are restricted to print-disabled patrons. So the sheet quotes the French primary and **every English rendering on it is ours, labelled a gloss rather than a translation** — the same treatment the wyrd half-line gets on [Sheet No. 4](https://queering.earth/invention-of-normal). Quoting Lester’s English through Brady would have put a translator’s authored choices in Deleuze’s mouth at a page number nobody here could open.
+
+**Four quotations were read off the page images and not off a text layer**, because this scan’s optical transcription drops accents and breaks words across lines. Pages 31, 60, 64 and 65, each confirmed by its running head. The page numbers are the French ones and will not match an English copy, which the sheet says out loud.
+
+What the primary added that a summary could not: Deleuze grants that *Snark* is a portmanteau of *shark* and *snake* and then says it is one “secondairement ou accessoirement” only — the packing is not what the word does. **A paraphrase reading “Deleuze calls the Snark a portmanteau word” would have been true and would have lost the argument**, which is this site’s characteristic failure in one clause.
+
+MountedFive mounting straps and no specimen, after the diagonal version was drawn, measured, and thrown away
+
+The masthead is the herbarium furniture with the plant absent: five gummed paper bands across the sheet, squared off at their inner ends, and one narrow channel running down through all five where a stem would have been strapped. **Nothing may ever be added in the middle**, which is the note left in the markup.
+
+**Three passes put the straps along a rising diagonal and all three failed, for a reason worth writing down.** Each strap sat perpendicular to a cubic Bézier, so the five gaps lay exactly on one curve — correct as geometry, and on the page it read as ten scattered tick marks. **Five dashes 15 units wide and 100 units apart will not join into a line however precisely they are aligned.** Horizontal straps stacked at five heights put every gap at nearly the same x, about 34 units wide, so the vacancy is one column the eye takes in at a glance. The first draft before that had rounded inner ends and looked like a tray of pills; square inner ends are what make a channel a channel.
+
+Built from `.stem`, `.rib` and `.sprout` and nothing else, so it adds no gap in the print sheet and none in forced colours. `--len` on all ten bands is the real `getTotalLength()` read off the live DOM, and the bounding box is asserted rather than eyeballed: x 40.2 to 509.7, y 29.1 to 231.1 inside 560 × 260. No `.sprout` carries a transform attribute, because a CSS transform animation would override it and collapse every strap onto the origin.
+
+MountedThe unmended provenance line ships for the first time, on the ninth sheet
+
+All eight earlier sheets carry `--mended`, because all eight have been corrected — Sheet No. 8 was predicted to arrive clean and did not. `CLAUDE.md` has been saying for a while that the unmended state **had still never shipped** and was therefore the one to check by hand rather than copy off a neighbour. It has now shipped: solid hairline, moss ink, reading “Mounted 10 September 2026. Not yet corrected.” Checked in both grounds.
+
+The stamp reads Sheet No. 9 and its `mix-blend-mode` resolves to `multiply` on paper and `normal` in the cabinet, which is the token doing the job it was made for — multiply darkens towards the ground, and in the drawer the ground is the dark thing.
+
+MountedTwo of Henry Holiday’s 1876 engravings, one of which is an empty square and the other of which is the Snark wearing a wig
+
+Ryan asked whether any public-domain art would fit and pointed at Plate 6. Two others fit far better, and both change what the sheet can argue rather than illustrating what it already said.
+
+**The Ocean-Chart is Deleuze’s *case vide*, drawn ninety-three years early.** A heavy rule enclosing nothing, with every term of reference a chart can carry — latitude, longitude, meridian, equator, both poles, zenith, nadir, a Scale of Miles that is five dots — arranged around the outside of the blank. It sits in [the section on the empty square](https://queering.earth/five-unmistakable-marks#the-empty-square), facing Deleuze’s “une place sans occupant”, and it comes with Carroll’s crew being *grateful* for it in the same Fit as the five marks: “he’s bought us the best— / A perfect and absolute blank!”
+
+**The Barrister’s Dream is the only depiction of the Snark in the book, and there is no animal in it.** A wig on top of drapery, a hand holding a brief, papers lettered *Trespass*, *Libel* and *Contempt*. Nine illustrations for a poem about hunting a creature, and the creature appears once, in someone else’s dream, dressed as a lawyer. It closes [the section on the definition delivered before the thing](https://queering.earth/five-unmistakable-marks#the-marks).
+
+**Two dates in each caption, because the scan and the engraving are different objects** — Holiday cut these for the 1876 first edition and the paper photographed is a Macmillan printing of 1931. And **the stored originals are downsampled, which departs from this file’s own rule** that the JPEG is the archival copy: the Commons masters are 4.9 and 8.3 MB against 116–341 KB for every other plate here, and an `img` fallback is the one image path no `srcset` protects. They are stored at 2,176 px, twice the 1,088 px top rung, so the largest variant is a clean 2:1 downsample. The masters stay at Commons with their dimensions and hashes in [the ledger](https://queering.earth/ledger).
+
+**A claim on Sheet No. 8 stopped being true and was corrected in the same commit.** It said every mounted image on this site is a public-domain botanical print or painting. Two wood engravings and, before them, a manuscript leaf say otherwise; it now says every mounted image is public domain and names the kinds.
+
+Label correctedThe story everybody tells about Carroll refusing the Boojum drops three words, and the three words are the point
+
+Ryan asked for the 1898 article to be found. It was: *The Academy* No. 1343, 29 January 1898, vol. 53, pp. 128–129, openly readable at the Internet Archive, signed by Holiday twelve days after Carroll died. **Reading it did not confirm what the sheet had been carrying as an unverified report. It corrected it.**
+
+Every secondary account says Carroll rejected Holiday’s Boojum as “inadmissible”, which reads as distaste. Holiday wrote that Carroll called it “a delightful monster, but that it was inadmissible”. **He liked the drawing and refused it anyway**, to keep the creature unimaginable — “All his descriptions of the Boojum were quite unimaginable, and he wanted the creature to remain so.” That is not distaste, it is an author protecting a vacancy on purpose, and it is the sheet’s whole subject. **A tightened source, found in the wild, in the version of the story everyone repeats.**
+
+**The scan’s text layer would have reproduced the same error by another route.** Its OCR of this page renders “Mr. Dodgson” as “Mr. ey” and loses “delightful monster” entirely, so an automated read of the primary would have reported the short version as verified. **The page image is the source and the text layer is a finding aid** — the rule the Deleuze quotations already ran on, now paid for a second time and by a different mechanism.
+
+Holiday also supplies the fact that reorders the sheet: **the last line came first.** Carroll was walking alone one evening when “For the Snark was a Boojum, you see,” arrived in his head, and “the poem was written up to them”. So the hunt was built backwards to reach a word that meant nothing — which is what [the closing section](https://queering.earth/five-unmistakable-marks#the-vanishing) now says, against the section on [a series running short](https://queering.earth/five-unmistakable-marks#one-more-desire).
+
+CabinetA half-hour reading of the poem is linked and not embedded, and the reader is named
+
+Robert Garrison read the whole poem for LibriVox — 29 minutes 24 seconds — and released it into the public domain. It is in the sheet’s label block as a link.
+
+**A player was considered and declined on capability grounds, not taste.** It would need a second encoding, because Ogg Vorbis alone is unreliable in Safari and nothing here transcodes audio; a MIME type taught to `serve.mjs`, which has no audio entry and would send `application/octet-stream` under `nosniff` — the `.avif` trap for the third time; a rule in `\_headers`; a line in `check-cache.mjs`; and 18 MB in a repository smaller than that. **`/privacy` exempts `a href`** because a link the reader chooses to follow is not a request the page made, so the link costs nothing and adds no capability at all.
+
+**He is credited as the performer rather than as a licence.** Somebody read a poem aloud for half an hour; filing that under “a public-domain recording” on a sheet about coinages losing their coiners would have been the sheet doing the thing it condemns, one section below the place it condemns it.
+
+Label correctedA sentence of Carroll’s preface is quoted around rather than repaired
+
+Project Gutenberg’s transcription of the 1876 preface reads “leave it unsettled which you will first”, which appears to want a word. Whether the gap is Carroll’s or the transcriber’s is not established here, so **the quotation starts after it** and the sheet says why at the foot. Silently inserting the word that makes a sentence read better is the tightening this cabinet is organised against, and it is no less so when the source is out of copyright and the fix looks obvious.
+
+**Lévi-Strauss is still quoted at one remove** — his *floating signifier* reached us inside Deleuze’s book, and his 1950 introduction to the work of Marcel Mauss has not been read here. The sheet says so.
+
+**Asasumasu’s post was going to be described rather than quoted, and Ryan asked for it to be read.** That was right, and reading it changed the sheet rather than decorating it: she explains the coinage as an act of widening — the words in use had no room for more ways of having a brain — and then defends the word’s emptiness as the specification, “not another damn tool of exclusion”. **Her sentences make the sheet’s own argument better than our paraphrase of them did**, which is the case for reading a source rather than summarising it, put more plainly than the Deleuze entry above manages.
+
+Two facts only a reading could produce, both now on the sheet and in [the ledger](https://queering.earth/ledger). **The post is signed *Neurodivergent K of Radical Neurodivergence Speaking*, not *Kassiane Asasumasu***, and the identification of the two is Helen’s glossary’s rather than ours. And **Tumblr publishes no absolute date for it** — only “Posted 11 years ago”, read on 10 September 2026 — so it is cited undated with the timestamp and the reading date recorded, rather than with the 2015 our arithmetic would give. Her wording is kept exactly, ampersand, lowercase and profanity included.
+
+CabinetThe masthead’s own borrowed coinage is now a section of a sheet, not just a ledger entry
+
+A sheet arguing that coinages get separated from their coiners has to show its own working, so [one section is about this site](https://queering.earth/five-unmistakable-marks#our-own-masthead): *Post-normal possibilities* is Helen’s phrase from the founding brainstorm, one hyphen from the end of Nick Walker’s subtitle, with a third lineage in post-normal science nobody here has read in the primary. The masthead says *after Nick Walker* — not *his phrase*, which would take the coinage off Helen, and not silence, which is how it shipped at first.
+
+Nothing about the credit changed. What changed is that the reasoning is now on a sheet a reader will actually meet, instead of only in [the ledger](https://queering.earth/ledger) where it was logged on 7 September.
+
+2026 · 10 September
+
 ## A crooked tree for the sheet that says queering is adaptation, and the stump of the straight one beside it
 
 At Ryan’s note, after the monologue Tom Waits speaks in *Wristcutters: A Love Story*. It went into [To queer is to adapt](https://queering.earth/#to-queer-is-to-adapt) rather than the typography section, because that section already says queering something is “to make it strange or odd” and the monologue answers it: the crooked one is the tree still standing, “growing strong and growing strange”.

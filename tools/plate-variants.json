@@ -135,6 +135,40 @@
       678
     ]
   },
+  "holiday-1876-snark-barristers-dream-macmillan-1931.jpg": {
+    "native": [
+      2176,
+      1511
+    ],
+    "sha256": "2f94cb4e2129634bf11a9e9d3e5f6e82608ccfa0ceb6b7385e230f898ebbca03",
+    "variants": [
+      "holiday-1876-snark-barristers-dream-macmillan-1931-544.avif",
+      "holiday-1876-snark-barristers-dream-macmillan-1931-544.webp",
+      "holiday-1876-snark-barristers-dream-macmillan-1931-1088.avif",
+      "holiday-1876-snark-barristers-dream-macmillan-1931-1088.webp"
+    ],
+    "widths": [
+      544,
+      1088
+    ]
+  },
+  "holiday-1876-snark-ocean-chart-macmillan-1931.jpg": {
+    "native": [
+      2176,
+      3641
+    ],
+    "sha256": "3990f6d98a24b6712a784ac119329bc6ac2b3a30823d457f7302c79d20a0b243",
+    "variants": [
+      "holiday-1876-snark-ocean-chart-macmillan-1931-544.avif",
+      "holiday-1876-snark-ocean-chart-macmillan-1931-544.webp",
+      "holiday-1876-snark-ocean-chart-macmillan-1931-1088.avif",
+      "holiday-1876-snark-ocean-chart-macmillan-1931-1088.webp"
+    ],
+    "widths": [
+      544,
+      1088
+    ]
+  },
   "hughes-1908-midsummer-eve.jpg": {
     "native": [
       960,

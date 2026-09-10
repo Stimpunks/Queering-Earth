@@ -143,6 +143,21 @@ Monotropa uniflora, Dickinson, and monotropism
   - [She kept a herbarium, which is what this site is](https://queering.earth/monotropa-uniflora#a-herbarium)
   - [Not a tragedy](https://queering.earth/monotropa-uniflora#not-a-tragedy)
 
+-
+
+No. 9 [The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks) Reading
+
+Lewis Carroll, The Hunting of the Snark, 1876
+
+  - [A definition delivered before the thing](https://queering.earth/five-unmistakable-marks#the-marks)
+  - [The link is Deleuze’s, not ours](https://queering.earth/five-unmistakable-marks#the-snark-is-sense)
+  - [A place with no occupant](https://queering.earth/five-unmistakable-marks#the-empty-square)
+  - [Carroll’s own theory of coining, and Deleuze refusing it](https://queering.earth/five-unmistakable-marks#portmanteau)
+  - [One more desire, with no place in the series](https://queering.earth/five-unmistakable-marks#one-more-desire)
+  - [The bill, and who it lands on](https://queering.earth/five-unmistakable-marks#the-actual-coiner)
+  - [This site is holding a borrowed coinage](https://queering.earth/five-unmistakable-marks#our-own-masthead)
+  - [In the midst of the word](https://queering.earth/five-unmistakable-marks#the-vanishing)
+
 ### The founding papers
 
 -
@@ -210,7 +225,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-162 entries across 42 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+170 entries across 43 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

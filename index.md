@@ -115,6 +115,10 @@ Eight sheets, so far, mounted and numbered on the plate below.
 
 [  Wall No. 8  The Preferred Flower of Life Monotropa uniflora, Dickinson, and monotropism A plant that will not photosynthesise, the flower Dickinson kept in her herbarium, and one Greek root shared by a 1753 binomial and a theory of Autistic attention. ](https://queering.earth/monotropa-uniflora)
 
+-
+
+[  Reading No. 9  The Five Unmistakable Marks Lewis Carroll, *The Hunting of the Snark*, 1876 A definition recited for a beast nobody has seen, a word that works by being empty, and the coiner who gets dropped in transit. ](https://queering.earth/five-unmistakable-marks)
+
 The border is four flowers that were once a way of saying it without saying it: *violet*, *pansy*, *green carnation*, *lavender*. Gathered as a set by Sarah Prager in [*Four Flowering Plants That Have Been Decidedly Queered*](https://daily.jstor.org/four-flowering-plants-decidedly-queered/), JSTOR Daily, 29 January 2020.
 
 What follows will be made the way [Star Stuff](https://starstuff.earth/) is made — a piece at a time, in public, with the working-out left in, by [Helen Edgar](https://morerealms.com/) and the [Stimpunks Foundation](https://stimpunks.org/). Come back and watch it fill in.

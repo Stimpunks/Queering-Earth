@@ -55,7 +55,19 @@ FORCE = "--force" in sys.argv
 
 # The wide plate is the only one that breaks 23rem, and it is named rather than detected
 # so that adding a .qe-plate-wide figure is a decision somebody makes here too.
-WIDE = {"waterhouse-1916-miranda-the-tempest"}
+WIDE = {"waterhouse-1916-miranda-the-tempest",
+        # Both Snark plates are wide. MEASURED, because the first version of this
+        # comment claimed the chart needed 544px and that is not what a wide plate
+        # gets: a normal plate's box is 368px and a wide one's is 448px, capped by
+        # main's content box rather than by its own 34rem. So the gain is 22% and
+        # not 48%, and it is still worth having twice over — the Ocean-Chart IS its
+        # lettering, and the Barrister's Dream is dense wood engraving whose fine
+        # hatching goes first. The ladder matters more than the class here: a 448px
+        # box at DPR 2 wants ~896px, which only the wide ladder's 1088 rung reaches.
+        # A normal plate is exactly 368 and 736, which is why that ladder is right
+        # for a 368px box and short for this one.
+        "holiday-1876-snark-ocean-chart-macmillan-1931",
+        "holiday-1876-snark-barristers-dream-macmillan-1931"}
 LADDER_NORMAL = (368, 736)
 LADDER_WIDE = (544, 1088)
 

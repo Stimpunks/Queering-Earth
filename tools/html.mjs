@@ -38,6 +38,12 @@ export const ENTITIES = {
   ouml: 'ö', Ouml: 'Ö', oslash: 'ø', Oslash: 'Ø',
   uacute: 'ú', Uacute: 'Ú', uuml: 'ü', Uuml: 'Ü',
   ccedil: 'ç', Ccedil: 'Ç', ntilde: 'ñ', Ntilde: 'Ñ',
+  // The circumflex and the diaeresis, for the French on Sheet No. 9: Deleuze is
+  // quoted in the original, so `apparaître`, `peut-être` and `coïncide` all appear.
+  acirc: 'â', Acirc: 'Â', ecirc: 'ê', Ecirc: 'Ê',
+  icirc: 'î', Icirc: 'Î', ocirc: 'ô', Ocirc: 'Ô',
+  ucirc: 'û', Ucirc: 'Û', ugrave: 'ù', Ugrave: 'Ù',
+  euml: 'ë', Euml: 'Ë', iuml: 'ï', Iuml: 'Ï', yuml: 'ÿ',
   szlig: 'ß', thinsp: ' ', ensp: ' ', emsp: ' ', shy: '­',
 };
 

@@ -26,6 +26,7 @@ tools/make-markdown.mjs; nothing here is hand-kept.
 - [The Swell and the Dwell](https://queering.earth/wild-nights): Emily Dickinson's Wild nights – Wild nights! read as co-regulation: the winds futile rather than stilled, the compass and the chart put down, and one night asked for instead of a lifetime. With a reply in verse, and what her first editor tidied in 1891. [Markdown](https://queering.earth/wild-nights.md)
 - [A Waste Garden, Flowering at Its Will](https://queering.earth/flower-codes): Violet, pansy, green carnation, and lavender were worn as code. Each was read by the people it was meant to escape and turned into the word that named you, and each was picked up again afterwards. With the 1926 sentence about a streak of lavender, and the man it is actually about. [Markdown](https://queering.earth/flower-codes.md)
 - [The Preferred Flower of Life](https://queering.earth/monotropa-uniflora): Monotropa uniflora, the ghost pipe: a plant with no chlorophyll that feeds off fungi, the flower Emily Dickinson called the preferred flower of life, and the Greek root it shares with monotropism. [Markdown](https://queering.earth/monotropa-uniflora.md)
+- [The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks): Lewis Carroll's Snark, a creature named before anybody saw it; Deleuze's empty square; and Kassiane Asasumasu, who coined neurodivergent and had to say so out loud. [Markdown](https://queering.earth/five-unmistakable-marks.md)
 
 ## The founding papers
 

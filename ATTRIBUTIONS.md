@@ -2341,6 +2341,137 @@ the reason this adaptation is permitted at all, and the same clause is why anyon
 again to our page. The section at the foot of `/manifesto` names every contributor and the
 licence, in the page itself rather than only here.
 
+### Sheet No. 9 — Carroll, Deleuze, Lévi-Strauss, and Brady
+
+**Quoted on:** `five-unmistakable-marks.html`. Nine mounted specimens. **Verified:** 2026-09-10.
+
+**The Deleuze quotations are from the FRENCH primary, and every English rendering on the sheet
+is ours.** `The Logic of Sense` is not sold as an ebook and Ryan does not have it; Mark Lester's
+English exists and **has not been read here**, so it is not quoted. Quoting Lester through a
+secondary source would put a translator's authored choices in Deleuze's mouth at a page number
+nobody here could open — a sharper version of the failure this file exists to catch, because a
+translation is itself somebody's authorship. The English is labelled a gloss rather than a
+translation on the sheet, the same treatment as the `wyrd bið ful ārǣd` half-line on Sheet No. 4.
+
+**Read off the page images, not the text layer.** This scan's optical transcription drops accents
+and breaks words across lines, so every French quotation was read from the rendered page and the
+page number confirmed against the running head. **The page numbers are the French ones and will
+not match an English copy**, which the sheet states.
+
+| quoted | credited to | where it was read | page |
+|---|---|---|---|
+| <q lang="fr">le sens est le Snark</q>, and the hunt as the search for sense | **Gilles Deleuze** | *Logique du sens* (Les Éditions de Minuit, 1969), third series, *De la proposition* | p. 31 |
+| <q lang="fr">Snark est un mot-valise…</q> and the qualification <q lang="fr">secondairement ou accessoirement</q> | **Gilles Deleuze** | same, eleventh series, *Du non-sens* | p. 60 |
+| the empty square — <q lang="fr">une case vide, une place sans occupant</q> | **Gilles Deleuze** | same, eighth series, *De la structure* | p. 65 |
+| the floating signifier — <q lang="fr">un signifiant flottant…</q> and <q lang="fr">en elle-même vide de sens…</q> | **Claude Lévi-Strauss**, quoted by Deleuze | *Logique du sens*, in Deleuze's quotation marks | pp. 64–65 |
+| the five unmistakable marks | **Lewis Carroll** | *The Hunting of the Snark*, Fit the Second, in [Project Gutenberg's transcription](https://www.gutenberg.org/ebooks/13) of the 1876 first edition | — |
+| Humpty-Dumpty's portmanteau theory, and *frumious* | **Lewis Carroll** | same, the preface | — |
+| <q>For the Snark <em>was</em> a Boojum, you see.</q> | **Lewis Carroll** | same, Fit the Eighth | — |
+| the supermarket-and-blender passage on the indeterminacy of desire | **John C. Brady** | [*Deleuze on Sense, Series, Structures, Signifiers and Snarks (Part B)*](https://epochemagazine.org/03/deleuze-on-sense-series-structures-signifiers-and-snarks-part-b/), Epoché Magazine 03, June 2017, section *Reversing Sense* | read in place |
+| the coining of *neurodivergent*, and <q>Neurodivergent is for all of us.</q> | **Kassiane Asasumasu**, writing as **Neurodivergent K** | [*PSA from the actual coiner of "neurodivergent"*](https://sherlocksflataffect.tumblr.com/post/121295972384/psa-from-the-actual-coiner-of-neurodivergent), on the blog *Lost in my Mind TARDIS* | undated — see below |
+| <q>I originally conceived of *neuroqueer* as a verb…</q> | **Nick Walker** | already verified above — see *Nick Walker — neuroqueering as a verb* | — |
+
+**Three things are labelled on the sheet rather than smoothed over, and all three are the
+characteristic failure caught early:**
+
+1. **Lévi-Strauss is at one remove.** His words reached us inside Deleuze's book. The primary is
+   his 1950 introduction to the work of Marcel Mauss, **not read here**, so the *floating
+   signifier* is credited to him on Deleuze's authority and not on ours.
+2. **One sentence of Carroll's preface is quoted around, not through.** Gutenberg's transcription
+   reads <q>leave it unsettled which you will first</q>, which appears to want a word. Whether the
+   gap is Carroll's or the transcriber's is **not established**, so the quotation starts after it.
+   **Inserting the obvious word would be a tightened source**, and it is no less so because the
+   text is out of copyright and the repair looks harmless.
+3. **Kassiane Asasumasu's post was read in place on 2026-09-10 and is quoted from that reading.**
+   Her wording is preserved exactly — the ampersand, the lowercase *autistic*, the capitalised
+   *ALL*, and the profanity. Tidying any of it would be the tightening this file exists to catch,
+   and doing it to an Autistic activist's post about her own word would be that failure at its
+   worst. Two things about the citation need saying, and both are on the sheet.
+
+**The post is signed *Neurodivergent K of Radical Neurodivergence Speaking*, not *Kassiane
+Asasumasu*.** The blog's display name is *Lost in my Mind TARDIS*. **The identification is not
+ours**: it comes from the reference list of Helen Edgar's [neuro-affirming language glossary](https://autisticrealms.com/neuro-affirming-language-avoiding-the-harm-of-neurodiversity-lite/),
+which cites *Asasumasu, K.* at exactly this address. Credit goes to her under the name she is known
+by, with the signature recorded, because **a sheet about coiners losing their coinages should not
+quietly drop the name she actually signed.**
+
+**The post carries no absolute date.** Tumblr displays only a relative timestamp, which read
+<q>Posted 11 years ago</q> when the page was fetched on 2026-09-10. The post id is 121295972384.
+The earliest Wayback capture found is 2021-05-03, which bounds it and no more. **So it is cited
+undated, with the timestamp and the reading date recorded rather than a year derived from them** —
+the derivation would land on 2015 and would be ours, presented as the page's. Her dating of the
+*coinage* is hers, and the sheet leans on it rather than on our inference: <q>before tumblr was even
+a thing, like a decade or more ago</q>. The sheet says *the 2000s*, which is also how Helen's
+glossary dates it.
+
+**Deleuze's etymology for *Snark* and Brady's do not agree**, and the sheet says so rather than
+picking one: Deleuze gives *shark* + *snake*, Brady suggests an antiquated verb *to snark*, to
+snort. **Carroll explained *frumious* and left *Snark* alone.** Neither reading is presented as his.
+
+**Read, and it corrected the sheet rather than confirming it:** *why* the Snark is barely drawn. See Holiday's 1898 article above. **What remains unread** is Anne Clark's biography (pp. 196–97), which Wikipedia cites for the veto and which nothing on the sheet now depends on, and the 1932 first publication of the refused drawing, of which no public-domain copy was found.
+
+**Two plates and a recording, added the same day.** All three are public domain and all three
+are credited to a person rather than to a licence.
+
+| object | credited to | source | provenance |
+|---|---|---|---|
+| the Ocean-Chart, a ruled frame with nothing inside it | **Henry Holiday** (1839–1927) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lewis_Carroll_-_Henry_Holiday_-_Hunting_of_the_Snark_-_Plate_4.jpg) | engraved for the 1876 first edition; scanned from a Macmillan printing of **1931**. Master 3,540 × 5,924, sha256 `d869a579d703891630e751bf77eb2e21b35c2154d1110bb48e4cb55821ccfe6e` |
+| the Barrister's Dream, the only depiction of the Snark in the book | **Henry Holiday** | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lewis_Carroll_-_Henry_Holiday_-_Hunting_of_the_Snark_-_Plate_8.jpg) | same edition and printing. Master 5,184 × 3,600, sha256 `2ff9687316b0eb4342c4708949a6860a91e2084458ea2406f1e7bcead9483d09` |
+| a reading of the whole poem, 29 min 24 s | **Robert Garrison**, reader | [the file page](https://en.wikipedia.org/wiki/File:The_Hunting_of_the_Snark.ogg), recorded for LibriVox | released into the public domain by the reader. **Linked, never embedded** — see below |
+
+**The captions carry two dates because the scan and the engraving are different objects.** The
+illustrations are Holiday's, cut for the 1876 first edition; the paper photographed is a 1931
+Macmillan printing. Saying only *1876* would credit the engraving and misdescribe the scan, and
+saying only *1931* would do the reverse. **Holiday died in 1927, so the engravings are public
+domain on life-plus-seventy** regardless of which printing was photographed.
+
+**The stored originals are downsampled and that is a deliberate departure.** `CLAUDE.md` calls the
+original JPEG the archival copy, and these two masters are 4.9 MB and 8.3 MB against 116–341 KB for
+every other plate here. An `img` fallback is the one image path no `srcset` protects, so the stored
+copies are 2,176 px wide — exactly twice the 1,088 px top rung, so the largest variant is a clean
+2:1 downsample. **The masters stay at Commons, and their dimensions and hashes are recorded above**,
+which is provenance by citation. Every other plate on this site already relies on it.
+
+**The recording is a link and not a player, and the reason is a capability rather than a taste.**
+An embedded player would need a second encoding (Ogg Vorbis alone is unreliable in Safari), a MIME
+type taught to `serve.mjs`, a cache rule in `_headers`, a line in `check-cache.mjs`, and 18 MB in
+the repo — more than the whole site. `/privacy` exempts `<a href>` because a link the reader
+chooses to follow is not a request the page made, so a link costs nothing and adds no capability.
+
+**Garrison is named on the sheet, in the label block, as the performer.** A recording released into
+the public domain still had somebody read it aloud for half an hour. **On a sheet about coinages
+losing their coiners, filing his work under <q>a public-domain recording</q> would have been the
+sheet doing the thing it condemns**, one line below a section about exactly that.
+
+**Henry Holiday's 1898 article, found and read.** *The Snark's Significance*, [*The Academy*
+No. 1343](https://archive.org/details/sim_academy-and-literature_1898-01-29_53_1343) (Saturday,
+29 January 1898), vol. 53, pp. 128–129, signed and dated 26 January 1898 — **twelve days after
+Carroll died.** Two passages are quoted on the sheet, both **read off the page images**, which
+matters here more than usual: the Internet Archive scan's text layer mangles this exact passage,
+rendering *Mr. Dodgson* as *Mr. ey* and dropping *a delightful monster* altogether.
+
+| quoted | where |
+|---|---|
+| the Boojum drawing: <q>a delightful monster, but that it was inadmissible</q>, and Holiday's hope that a future Darwin will vindicate him | p. 129 |
+| the poem's origin: the last line arrived first and <q>the poem was written up to them</q> | p. 129 |
+
+**THE VERSION IN CIRCULATION DROPS THREE WORDS AND CHANGES THE ACT.** Secondary accounts have
+Carroll rejecting the drawing as <q>inadmissible</q>, which reads as distaste. Holiday wrote that
+Carroll called it **<q>a delightful monster, but that it was inadmissible</q>** — he liked it and
+refused it anyway, to keep the creature unimaginable. **That is a tightened source in the wild**,
+of exactly the kind this file exists to catch, and it was caught only by reading the primary: the
+sheet had been carrying the shortened version as an explicitly unverified report, and the fix was
+not to verify it but to find that it was wrong.
+
+**A second lesson, about how the primary nearly failed us the same way.** The OCR of this page
+loses *delightful monster*. **An automated read of the primary would have reproduced the secondary
+version's error by a different route**, and reported it as verified. On this site the page image is
+the source and the text layer is a finding aid — the same rule the Deleuze quotations run on, now
+paid for twice.
+
+**Closed by this:** the sheet no longer asserts the veto as an unverified report, and no longer
+needs Anne Clark's biography, which Wikipedia cites for it and which remains unread here.
+
 ----
 
 ## Open

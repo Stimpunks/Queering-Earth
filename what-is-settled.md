@@ -23,6 +23,18 @@ What is settled, what is open, and the reasoning for each — so the same questi
 
 ## Open
 
+### One source on Sheet No. 9 is still at one remove (2026-09-10)
+
+**Claude Lévi-Strauss on the floating signifier.** Quoted inside Deleuze (pp. 64–65), so the words are credited to Lévi-Strauss on Deleuze's authority and not on ours. The primary is his 1950 introduction to the work of Marcel Mauss, **not read here**. It weakens no credit; it would strengthen the evidence, and the sheet says so in its own untidy block rather than leaving it here.
+
+**Closed the same day: Asasumasu's post was read in place and is quoted.** It was mounted described rather than quoted, on the grounds that it had reached us through Helen's glossary. Ryan asked for it to be read and quoted, which was right — **a sheet about coiners losing their coinages should quote the coiner in her own words**, and hers turn out to make the sheet's own argument better than our paraphrase did: she explains the coinage as an act of widening because the words in use had no room for more ways of having a brain, and then defends the emptiness as the specification. Two things came out of reading it that a description could not have produced: **the post is signed *Neurodivergent K* and not *Kassiane Asasumasu***, and **Tumblr publishes no absolute date for it**. Both are recorded in `ATTRIBUTIONS.md` and on the sheet.
+
+**Closed 2026-09-10, and it did not go the way an open question usually goes.** Ryan asked for the 1898 *Academy* article to be found. It was: the Internet Archive has the issue, openly, and Holiday's account of the veto is on p. 129. **Reading it did not confirm the sheet's unverified report — it corrected it.** The circulating version has Carroll rejecting the drawing as <q>inadmissible</q>; Holiday wrote that Carroll called it <q>a delightful monster, but that it was inadmissible</q>. He liked it and refused it anyway. **The three missing words are the difference between distaste and deliberate protection of an emptiness**, which is the sheet's subject, so the sheet gained an argument rather than a footnote.
+
+**What remains unread:** Anne Clark's biography, pp. 196–97, which Wikipedia cites for the veto and which nothing now depends on; and the 1932 first publication of the refused drawing, of which no public-domain copy was found.
+
+---
+
 ### The wordmark and the tagline
 
 The masthead currently reads **Queering.Earth** with **"Post-normal possibilities."** under it. Both are provisional.
@@ -149,6 +161,37 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### A wide plate is 448px on screen, not 544, and the ladder is why it matters (2026-09-10)
+
+Measured while mounting the two Snark plates, after a comment was written asserting the wrong number and then checked.
+
+- **`.qe-plate` renders at 368px** — its own `max-width: 23rem` — and the 368/736 ladder is therefore exactly 1x and 2x. Nothing to improve.
+- **`.qe-plate-wide` renders at 448px, never at its own 544px.** `main`'s content box is 448px (34rem less its padding) at every screen width, so the wide class is capped by the measure and not by itself. The gain over a normal plate is **22%, not 48%**.
+- **The ladder is doing more work than the class.** A 448px box at DPR 2 wants ~896px. The normal ladder tops out at 736 and would be soft; the wide ladder's 1088 rung covers it. So naming a plate wide buys a modestly larger box on screen and **the right rung for that box**.
+- **On paper it is not capped**, because `@media print` sets `main { max-width: none }` — the same condition that makes `.qe-wide` a cap rather than a no-op, recorded above. A wide plate is the only kind that can actually approach 34rem, and it can only do it on a printed sheet.
+
+**The general lesson is the one this file keeps relearning:** a `max-width` on a child of a narrower parent is a number that looks load-bearing and is not. `.qe-wide` was the first case, `.qe-plate-wide` is the second, and both were found by measuring the rendered box instead of reading the stylesheet.
+
+---
+
+### A primary in a language we read beats a translation quoted through a summary (2026-09-10)
+
+**The case.** Sheet No. 9 rests on Deleuze's account of sense. `The Logic of Sense` is not sold as an ebook, Ryan does not have it, and Helen was asked whether she does. The proposal was to build on John C. Brady's Epoché reading of it and correct the sheet later against Deleuze.
+
+**Settled: no, and the sheet shipped with no provisional citation in it.** Two things decided it.
+
+**One — build-now-verify-later has a boundary, and this was on the wrong side of it.** It is fine when the later edit is an *upgrade* to a citation that was honest when it shipped; `ATTRIBUTIONS.md` already says re-reading is an upgrade rather than a precondition, and two sources on the Dickinson sheet ship confirmed bibliographically and not read. **It is not fine when the later edit could change what the page claims.** A section resting on a theory sourced entirely to somebody's summary of it is the second kind.
+
+**Two — the primary was reachable the whole time, in French.** `Logique du sens` (Minuit, 1969) is openly readable at the Internet Archive; the two scans of Mark Lester's English are restricted to print-disabled patrons. So the sheet quotes the French and **every English rendering on it is ours, labelled a gloss rather than a translation** — the treatment the `wyrd bið ful ārǣd` half-line already gets on Sheet No. 4. Quoting Lester's English through Brady would have put **a translator's authored choices in Deleuze's mouth**, at a page number nobody here could open. A translation is itself somebody's authorship, which makes quoting one at second hand a sharper version of this site's characteristic failure rather than a milder one.
+
+**What the primary bought that a summary could not.** Deleuze makes the Carroll identification himself — *le sens est le Snark*, p. 31 — so the pairing the sheet is built on is his and not our taste. And he grants that *Snark* is a portmanteau and then says it is one only *secondairement ou accessoirement*. **A paraphrase reading "Deleuze calls the Snark a portmanteau word" would have been true and would have lost the argument.**
+
+**The rule, generalised.** Where a primary exists in a language somebody here reads, read it and gloss it in our own words, marked as ours. Do not quote a translation you have not opened, however standard it is and however carefully the secondary source handled it. **Page numbers follow the copy actually read**, and the page says which copy that was.
+
+**One consequence to remember rather than rediscover: adding a source later is not a correction.** If Helen's copy arrives and the English gets cited alongside the French, that is a `Mounted` addition in the register and **not** a `Re-determined` with a marigold seam. Nothing was wrong. A gold join on a sheet nobody corrected is decoration asserting a fact, and it makes the real mends unfindable.
+
+---
 
 ### One footer, and why sourcing does not move into the provenance line (2026-09-09)
 
