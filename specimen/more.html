@@ -11,7 +11,7 @@
 <style>
 @font-face {
   font-family: 'BBB Baskervvol Spec';
-  src: url(fonts/baskervvol.otf) format('opentype');
+  src: url(../fonts/baskervvol-regular.otf) format('opentype');
   font-display: swap;
 }
 @font-face {
@@ -21,7 +21,7 @@
 }
 @font-face {
   font-family: 'Adelphe Spec';
-  src: url(fonts/adelphe.otf) format('opentype');
+  src: url(../fonts/adelphe-regular.otf) format('opentype');
   font-display: swap;
 }
 @font-face {
@@ -31,7 +31,7 @@
 }
 @font-face {
   font-family: 'Coxinel·le Spec';
-  src: url(fonts/coxinelle.otf) format('opentype');
+  src: url(../fonts/coxinelle-regular.otf) format('opentype');
   font-display: swap;
 }
 @font-face {
@@ -41,17 +41,17 @@
 }
 @font-face {
   font-family: 'Sporting Grotesque Spec';
-  src: url(fonts/sporting.otf) format('opentype');
+  src: url(../fonts/sporting-regular.woff2) format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: 'Trickster Spec';
-  src: url(fonts/trickster.otf) format('opentype');
+  src: url(../fonts/trickster-regular.woff2) format('woff2');
   font-display: swap;
 }
 @font-face {
   font-family: 'Victorianna Spec';
-  src: url(fonts/victorianna.otf) format('opentype');
+  src: url(../fonts/victorianna-regular.otf) format('opentype');
   font-display: swap;
 }
 @font-face {
@@ -109,6 +109,15 @@
     &rarr; <a href="index.html">First sheet: Redaction Inclusive, Unormative Fraktur, Atkinson</a>
   </p>
   <p style="font-family:'Newsreader',Georgia,serif;font-size:0.95rem;line-height:1.6;color:var(--qe-moss)">
+    <strong>Nine of these are now in the picker under <em>Reading</em>, and they render here
+    from the very files the site serves</strong> &mdash; not a second download of the same
+    family, so what you judge is exactly what a reader gets. That also corrected three faces
+    shown in the wrong weight on the first pass: Adelphe as Floréal Bold, Coxinel&middot;le as
+    Black and Sporting Grotesque as Bold, because those filenames sorted first in their
+    repositories. Two full text families presented as heavy display faces. The rest are
+    marked <em>not kept</em> and stay for comparison.
+  </p>
+  <p style="font-family:'Newsreader',Georgia,serif;font-size:0.95rem;line-height:1.6;color:var(--qe-moss)">
     <strong>This is a scratch page.</strong> It is <code>noindex</code>, it is not in
     <code>sitemap.xml</code>, and it should be deleted once the choice is made &mdash; a specimen
     kept after the decision is a second, stale account of what the site&rsquo;s type is.
@@ -133,9 +142,9 @@
 
   <section class="spec" style="--qe-display: 'BBB Baskervvol Spec', Georgia, serif; --qe-body: 'BBB Baskervvol Spec', Georgia, serif">
     <header class="spec-head">
-      <p class="spec-kind">Glyphs the grammar refuses</p>
+      <p class="spec-kind">Glyphs the grammar refuses &middot; <strong>in the picker</strong></p>
       <h2>BBB Baskervvol</h2>
-      <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; <a href="https://gitlab.com/bye-bye-binary/baskervvol">source</a> &middot; CUTE (Collective Use, Transformation, Emancipation) &middot; <a href="fonts/baskervvol-LICENCE.pdf">licence</a> &middot; 124&nbsp;KB &middot; could do either</p>
+      <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; <a href="https://gitlab.com/bye-bye-binary/baskervvol">source</a> &middot; CUTE (Collective Use, Transformation, Emancipation) &middot; <a href="../fonts/BBBBaskervvol-LICENCE.pdf">licence</a> &middot; 124&nbsp;KB &middot; <strong>sets both faces</strong></p>
       <p class="spec-note">A Baskerville carrying inclusive ligatures — the one I most wanted on the first sheet and could not find, because the repo hides its OTFs behind two hundred UFO glyph folders. Baskerville is about as canonical as a text face gets; recutting it to say what the grammar refuses is the argument made inside the canon rather than against it.</p>
     </header>
     <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
@@ -146,7 +155,7 @@
 
   <section class="spec" style="--qe-display: 'Homoneta Spec', Georgia, serif; --qe-body: 'Homoneta Spec', Georgia, serif">
     <header class="spec-head">
-      <p class="spec-kind">Glyphs the grammar refuses</p>
+      <p class="spec-kind">Glyphs the grammar refuses &middot; not kept</p>
       <h2>Homoneta</h2>
       <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; <a href="https://gitlab.com/bye-bye-binary/homoneta">source</a> &middot; CUTE, French text only &middot; <a href="fonts/homoneta-LICENCE.pdf">licence</a> &middot; 40&nbsp;KB &middot; proposed for display</p>
       <p class="spec-note">Italic only, which makes it a face with no upright to be measured against. Worth noticing that this is the one candidate whose licence upstream is in French alone.</p>
@@ -159,9 +168,9 @@
 
   <section class="spec" style="--qe-display: 'Adelphe Spec', Georgia, serif; --qe-body: 'Adelphe Spec', Georgia, serif">
     <header class="spec-head">
-      <p class="spec-kind">Glyphs the grammar refuses</p>
+      <p class="spec-kind">Glyphs the grammar refuses &middot; <strong>in the picker</strong></p>
       <h2>Adelphe</h2>
-      <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; <a href="https://gitlab.com/bye-bye-binary/adelphe">source</a> &middot; stated in the README, no separate licence file upstream &middot; <a href="fonts/adelphe-LICENCE.txt">licence</a> &middot; 61&nbsp;KB &middot; proposed for display</p>
+      <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; <a href="https://gitlab.com/bye-bye-binary/adelphe">source</a> &middot; stated in the README, no separate licence file upstream &middot; <a href="../fonts/Adelphe-LICENCE.txt">licence</a> &middot; 60&nbsp;KB &middot; <strong>sets both faces</strong></p>
       <p class="spec-note">“Adelphe” is the French neutral for sibling — the word coined because frère and sœur leave nowhere to stand. The cut here is Floréal, after the revolutionary calendar’s month of flowering, which lands oddly well on a herbarium sheet.</p>
     </header>
     <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
@@ -172,7 +181,7 @@
 
   <section class="spec" style="--qe-display: 'BBB Karrik Spec', Georgia, serif; --qe-body: 'BBB Karrik Spec', Georgia, serif">
     <header class="spec-head">
-      <p class="spec-kind">Glyphs the grammar refuses</p>
+      <p class="spec-kind">Glyphs the grammar refuses &middot; not kept</p>
       <h2>BBB Karrik</h2>
       <p class="spec-meta"><strong>Bye Bye Binary, after Karrik by Jean-Baptiste Morizot and Lucas Le Bihan</strong> &middot; <a href="https://gitlab.com/bye-bye-binary/bbb-karrik">source</a> &middot; stated in the README, no separate licence file upstream &middot; <a href="fonts/bbb-karrik-LICENCE.txt">licence</a> &middot; 88&nbsp;KB &middot; proposed for body</p>
       <p class="spec-note">Karrik is a deliberately irregular grotesque — letterforms that refuse to be regularised. Recut with inclusive glyphs. Of everything across both sheets this is the most plausible BODY face that is also making an argument.</p>
@@ -185,9 +194,9 @@
 
   <section class="spec" style="--qe-display: 'Coxinel·le Spec', Georgia, serif; --qe-body: 'Coxinel·le Spec', Georgia, serif">
     <header class="spec-head">
-      <p class="spec-kind">Glyphs the grammar refuses</p>
+      <p class="spec-kind">Glyphs the grammar refuses &middot; <strong>in the picker</strong></p>
       <h2>Coxinel·le</h2>
-      <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; <a href="https://gitlab.com/bye-bye-binary/coxinel-le">source</a> &middot; CUTE &middot; <a href="fonts/coxinelle-LICENCE.pdf">licence</a> &middot; 44&nbsp;KB &middot; proposed for display</p>
+      <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; <a href="https://gitlab.com/bye-bye-binary/coxinel-le">source</a> &middot; CUTE &middot; <a href="../fonts/Coxinelle-LICENCE.pdf">licence</a> &middot; 44&nbsp;KB &middot; <strong>sets both faces</strong></p>
       <p class="spec-note">The repository is called coxinel-le, and the interpunct in the name is the inclusive marker itself — the typographic mark French uses to hold two endings at once, promoted from punctuation to the name of the thing.</p>
     </header>
     <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
@@ -198,7 +207,7 @@
 
   <section class="spec" style="--qe-display: 'Ouvrières Spec', Georgia, serif; --qe-body: 'Ouvrières Spec', Georgia, serif">
     <header class="spec-head">
-      <p class="spec-kind">Attitude, named outright</p>
+      <p class="spec-kind">Attitude, named outright &middot; not kept</p>
       <h2>Ouvrières</h2>
       <p class="spec-meta"><strong>Bye Bye Binary</strong> &middot; <a href="https://gitlab.com/bye-bye-binary/ouvrieres">source</a> &middot; CUTE &middot; <a href="fonts/ouvrieres-LICENCE.pdf">licence</a> &middot; 765&nbsp;KB &middot; proposed for display</p>
       <p class="spec-note">Women workers, in the feminine plural, and this cut is agricultrices — farm workers. Labour and gender in the same word, and the only candidate whose name is about work.</p>
@@ -211,9 +220,9 @@
 
   <section class="spec" style="--qe-display: 'Sporting Grotesque Spec', Georgia, serif; --qe-body: 'Sporting Grotesque Spec', Georgia, serif">
     <header class="spec-head">
-      <p class="spec-kind">Attitude, named outright</p>
+      <p class="spec-kind">Attitude, named outright &middot; <strong>in the picker</strong></p>
       <h2>Sporting Grotesque</h2>
-      <p class="spec-meta"><strong>Lucas Le Bihan, Velvetyne</strong> &middot; <a href="https://github.com/velvetyne/Sporting-Grotesque">source</a> &middot; OFL-1.1 &middot; <a href="fonts/sporting-LICENCE.txt">licence</a> &middot; 29&nbsp;KB &middot; proposed for display</p>
+      <p class="spec-meta"><strong>Lucas Le Bihan, Velvetyne</strong> &middot; <a href="https://github.com/velvetyne/Sporting-Grotesque">source</a> &middot; OFL-1.1 &middot; <a href="../fonts/SportingGrotesque-LICENCE.txt">licence</a> &middot; 23&nbsp;KB &middot; <strong>display only</strong></p>
       <p class="spec-note">Velvetyne’s best-known face: a grotesque that will not sit still, with letterforms that look drawn rather than drafted. A libre foundry that treats type as commons rather than product.</p>
     </header>
     <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
@@ -224,9 +233,9 @@
 
   <section class="spec" style="--qe-display: 'Trickster Spec', Georgia, serif; --qe-body: 'Trickster Spec', Georgia, serif">
     <header class="spec-head">
-      <p class="spec-kind">Attitude, named outright</p>
+      <p class="spec-kind">Attitude, named outright &middot; <strong>in the picker</strong></p>
       <h2>Trickster</h2>
-      <p class="spec-meta"><strong>Jean-Baptiste Morizot, Velvetyne</strong> &middot; <a href="https://github.com/velvetyne/Trickster">source</a> &middot; OFL-1.1 &middot; <a href="fonts/trickster-LICENCE.txt">licence</a> &middot; 57&nbsp;KB &middot; proposed for display</p>
+      <p class="spec-meta"><strong>Jean-Baptiste Morizot, Velvetyne</strong> &middot; <a href="https://github.com/velvetyne/Trickster">source</a> &middot; OFL-1.1 &middot; <a href="../fonts/Trickster-LICENCE.txt">licence</a> &middot; 31&nbsp;KB &middot; <strong>display only</strong></p>
       <p class="spec-note">Named for the figure that crosses every boundary it meets and belongs to no category — which is a fair description of what is being asked of a face here.</p>
     </header>
     <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
@@ -237,9 +246,9 @@
 
   <section class="spec" style="--qe-display: 'Victorianna Spec', Georgia, serif; --qe-body: 'Victorianna Spec', Georgia, serif">
     <header class="spec-head">
-      <p class="spec-kind">The othered script</p>
+      <p class="spec-kind">The othered script &middot; <strong>in the picker</strong></p>
       <h2>Victorianna</h2>
-      <p class="spec-meta"><strong>Velvetyne</strong> &middot; <a href="https://github.com/velvetyne/Victorianna">source</a> &middot; OFL-1.1 &middot; <a href="fonts/victorianna-LICENCE.txt">licence</a> &middot; 66&nbsp;KB &middot; proposed for display</p>
+      <p class="spec-meta"><strong>Velvetyne</strong> &middot; <a href="https://github.com/velvetyne/Victorianna">source</a> &middot; OFL-1.1 &middot; <a href="../fonts/Victorianna-LICENCE.txt">licence</a> &middot; 66&nbsp;KB &middot; <strong>display only</strong></p>
       <p class="spec-note">A Victorian display face, libre. The one candidate that could pass for what a herbarium plate was actually lettered in — which makes it the opposite proposition to the rest: not a face that argues with the sheet, but one that agrees with it so completely it might be a period reproduction.</p>
     </header>
     <p class="spec-display">Queering<span class="spec-dot">.</span>Earth</p>
@@ -250,7 +259,7 @@
 
   <section class="spec" style="--qe-display: 'Résistance Générale Spec', Georgia, serif; --qe-body: 'Résistance Générale Spec', Georgia, serif">
     <header class="spec-head">
-      <p class="spec-kind">Attitude, named outright</p>
+      <p class="spec-kind">Attitude, named outright &middot; not kept</p>
       <h2>Résistance Générale</h2>
       <p class="spec-meta"><strong>Velvetyne</strong> &middot; <a href="https://github.com/velvetyne/resistance-generale">source</a> &middot; OFL-1.1 &middot; <a href="fonts/resistance-LICENCE.txt">licence</a> &middot; 10&nbsp;KB &middot; proposed for display</p>
       <p class="spec-note">General resistance. A poster face, drawn to be shouted rather than read — so judge it on the masthead line and ignore the paragraph.</p>

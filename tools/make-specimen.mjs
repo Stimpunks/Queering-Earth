@@ -38,8 +38,7 @@ const SHEET_ONE = [
     note: 'What you are reading now. The comparison every other body option has to win against.' },
 
   { id: 'redaction-inclusive', source: 'https://gitlab.com/bye-bye-binary/redaction-inclusive', family: 'Redaction Inclusive', fmt: 'woff2',
-    url: `${GL}/redaction-inclusive/-/raw/HEAD/fonts/webfonts/Redaction-Inclusive-Regular.woff2`,
-    licenceUrl: `${GL}/redaction-inclusive/-/raw/HEAD/OFL.txt`,
+    local: 'fonts/redaction-regular.woff2', kept: true, pickerId: 'redaction',
     by: 'Bye Bye Binary, after Redaction by Jeremy Mickel / MCKL', licence: 'OFL-1.1',
     role: 'both', kind: 'erasure',
     note: 'Redaction was drawn for Titus Kaphar and Reginald Dwayne Betts’ project on the carceral state — a face about what gets taken out. Bye Bye Binary then added inclusive glyphs to it. Type about erasure, re-cut to say what the grammar refuses.' },
@@ -57,8 +56,7 @@ const SHEET_ONE = [
     role: 'display', kind: 'inclusive',
     note: 'A non-binary cut of Gertrude. The name is the thesis.' },
 
-  { id: 'insolente', source: 'https://gitlab.com/bye-bye-binary/insolente', family: 'Insolente', fmt: 'opentype',
-    url: `${GL}/insolente/-/raw/HEAD/otf/Insolente-Regular.otf`,
+  { id: 'insolente', local: 'fonts/insolente-regular.otf', kept: true, source: 'https://gitlab.com/bye-bye-binary/insolente', family: 'Insolente', fmt: 'opentype',
     licenceUrl: `${GL}/insolente/-/raw/HEAD/README.md`,
     by: 'Bye Bye Binary', licence: 'stated in the README, no separate licence file upstream',
     role: 'display', kind: 'attitude',
@@ -75,7 +73,7 @@ const SHEET_ONE = [
     by: 'Bye Bye Binary', licence: 'LICENSE_CUTE', role: 'display', kind: 'attitude',
     note: 'The other cut. Same family, opposite temperature.' },
 
-  { id: 'atkinson', source: 'https://github.com/googlefonts/atkinson-hyperlegible', family: 'Atkinson Hyperlegible', fmt: 'woff2', google: 'Atkinson+Hyperlegible',
+  { id: 'atkinson', local: 'fonts/atkinson-roman-400.woff2', kept: true, source: 'https://github.com/googlefonts/atkinson-hyperlegible', family: 'Atkinson Hyperlegible', fmt: 'woff2', google: 'Atkinson+Hyperlegible',
     licenceUrl: 'https://raw.githubusercontent.com/google/fonts/main/ofl/atkinsonhyperlegible/OFL.txt',
     by: 'Braille Institute of America', licence: 'OFL-1.1', role: 'body', kind: 'legibility',
     note: 'Drawn for low vision by maximising how unlike each other the letters are. It refuses the modernist ideal of harmonious uniformity in favour of letters that insist on being themselves — which is the same refusal, arrived at from the other direction.' },
@@ -97,8 +95,7 @@ const SHEET_ONE = [
    because velvetyne.fr timed out on every request from here — worth knowing before
    anything depends on that domain. */
 const SHEET_TWO = [
-  { id: 'baskervvol', source: 'https://gitlab.com/bye-bye-binary/baskervvol', family: 'BBB Baskervvol', fmt: 'opentype',
-    url: `${GL}/baskervvol/-/raw/HEAD/otf/BBBBaskervvol-Regular.otf`,
+  { id: 'baskervvol', local: 'fonts/baskervvol-regular.otf', kept: true, source: 'https://gitlab.com/bye-bye-binary/baskervvol', family: 'BBB Baskervvol', fmt: 'opentype',
     licenceUrl: `${GL}/baskervvol/-/raw/HEAD/2024_BBB_CUTE-EN.pdf`, licenceExt: 'pdf',
     by: 'Bye Bye Binary', licence: 'CUTE (Collective Use, Transformation, Emancipation)',
     role: 'both', kind: 'inclusive',
@@ -110,8 +107,7 @@ const SHEET_TWO = [
     by: 'Bye Bye Binary', licence: 'CUTE, French text only', role: 'display', kind: 'inclusive',
     note: 'Italic only, which makes it a face with no upright to be measured against. Worth noticing that this is the one candidate whose licence upstream is in French alone.' },
 
-  { id: 'adelphe', source: 'https://gitlab.com/bye-bye-binary/adelphe', family: 'Adelphe', fmt: 'opentype',
-    url: `${GL}/adelphe/-/raw/HEAD/otf/Adelphe-FlorealBold.otf`,
+  { id: 'adelphe', local: 'fonts/adelphe-regular.otf', kept: true, source: 'https://gitlab.com/bye-bye-binary/adelphe', family: 'Adelphe', fmt: 'opentype',
     licenceUrl: `${GL}/adelphe/-/raw/HEAD/README.md`,
     by: 'Bye Bye Binary', licence: 'stated in the README, no separate licence file upstream',
     role: 'display', kind: 'inclusive',
@@ -125,8 +121,7 @@ const SHEET_TWO = [
     role: 'body', kind: 'inclusive',
     note: 'Karrik is a deliberately irregular grotesque — letterforms that refuse to be regularised. Recut with inclusive glyphs. Of everything across both sheets this is the most plausible BODY face that is also making an argument.' },
 
-  { id: 'coxinelle', source: 'https://gitlab.com/bye-bye-binary/coxinel-le', family: 'Coxinel·le', fmt: 'opentype',
-    url: `${GL}/coxinel-le/-/raw/HEAD/otf/Coxinelle-Black.otf`,
+  { id: 'coxinelle', local: 'fonts/coxinelle-regular.otf', kept: true, source: 'https://gitlab.com/bye-bye-binary/coxinel-le', family: 'Coxinel·le', fmt: 'opentype',
     licenceUrl: `${GL}/coxinel-le/-/raw/HEAD/Licence.pdf`, licenceExt: 'pdf',
     by: 'Bye Bye Binary', licence: 'CUTE', role: 'display', kind: 'inclusive',
     note: 'The repository is called coxinel-le, and the interpunct in the name is the inclusive marker itself — the typographic mark French uses to hold two endings at once, promoted from punctuation to the name of the thing.' },
@@ -137,20 +132,17 @@ const SHEET_TWO = [
     by: 'Bye Bye Binary', licence: 'CUTE', role: 'display', kind: 'attitude',
     note: 'Women workers, in the feminine plural, and this cut is agricultrices — farm workers. Labour and gender in the same word, and the only candidate whose name is about work.' },
 
-  { id: 'sporting', source: 'https://github.com/velvetyne/Sporting-Grotesque', family: 'Sporting Grotesque', fmt: 'opentype',
-    url: 'https://raw.githubusercontent.com/velvetyne/Sporting-Grotesque/HEAD/fonts/SportingGrotesque-Bold.otf',
+  { id: 'sporting', local: 'fonts/sporting-regular.woff2', kept: true, source: 'https://github.com/velvetyne/Sporting-Grotesque', family: 'Sporting Grotesque', fmt: 'woff2',
     licenceUrl: 'https://raw.githubusercontent.com/velvetyne/Sporting-Grotesque/HEAD/LICENSE.txt',
     by: 'Lucas Le Bihan, Velvetyne', licence: 'OFL-1.1', role: 'display', kind: 'attitude',
     note: 'Velvetyne’s best-known face: a grotesque that will not sit still, with letterforms that look drawn rather than drafted. A libre foundry that treats type as commons rather than product.' },
 
-  { id: 'trickster', source: 'https://github.com/velvetyne/Trickster', family: 'Trickster', fmt: 'opentype',
-    url: 'https://raw.githubusercontent.com/velvetyne/Trickster/HEAD/fonts/Trickster-Reg.otf',
+  { id: 'trickster', local: 'fonts/trickster-regular.woff2', kept: true, source: 'https://github.com/velvetyne/Trickster', family: 'Trickster', fmt: 'woff2',
     licenceUrl: 'https://raw.githubusercontent.com/velvetyne/Trickster/HEAD/LICENSE.txt',
     by: 'Jean-Baptiste Morizot, Velvetyne', licence: 'OFL-1.1', role: 'display', kind: 'attitude',
     note: 'Named for the figure that crosses every boundary it meets and belongs to no category — which is a fair description of what is being asked of a face here.' },
 
-  { id: 'victorianna', source: 'https://github.com/velvetyne/Victorianna', family: 'Victorianna', fmt: 'opentype',
-    url: 'https://raw.githubusercontent.com/velvetyne/Victorianna/HEAD/fonts/VictoriannaThin_Desktop_OTF/VTF%20victorianna%20thin.otf',
+  { id: 'victorianna', local: 'fonts/victorianna-regular.otf', kept: true, source: 'https://github.com/velvetyne/Victorianna', family: 'Victorianna', fmt: 'opentype',
     licenceUrl: 'https://raw.githubusercontent.com/velvetyne/Victorianna/HEAD/LICENSE.txt',
     by: 'Velvetyne', licence: 'OFL-1.1', role: 'display', kind: 'othered',
     note: 'A Victorian display face, libre. The one candidate that could pass for what a herbarium plate was actually lettered in — which makes it the opposite proposition to the rest: not a face that argues with the sheet, but one that agrees with it so completely it might be a period reproduction.' },
@@ -171,6 +163,9 @@ const SHEETS = [
     blurb: 'The families named in conversation that the first sheet could not carry &mdash; the Bye Bye Binary faces whose names are the inclusive endings themselves, and Velvetyne, whose own site timed out on every request so these come from their GitHub.' },
 ];
 
+const manifestFamilies = JSON.parse(
+  await readFile(join(ROOT, 'tools', 'font-files.json'), 'utf8')).families;
+
 await mkdir(join(OUT, 'fonts'), { recursive: true });
 
 /* HEAD rather than a branch name in every URL: half these repositories are on `main`
@@ -189,9 +184,14 @@ for (const c of sheet.candidates) {
   let buf, file;
   if (c.local) {
     buf = await readFile(join(ROOT, c.local));
-    file = `../${c.local}`;                       // reuse the production face, do not copy it
-    rows.push({ ...c, file, bytes: buf.length, licenceFile: null });
-    console.log(`  ${c.family.padEnd(24)} ${String(Math.round(buf.length / 1024)).padStart(4)} KB  (already self-hosted)`);
+    file = `../${c.local}`;                       // reuse the shipped face, do not copy it
+    /* The licence already travels with the production file, in fonts/, so the specimen
+       links there rather than fetching a second copy of the same document. */
+    const famMeta = Object.values(manifestFamilies).find((m) => m.picker_id === (c.pickerId ?? c.id));
+    rows.push({ ...c, file, bytes: buf.length, setsBody: famMeta ? famMeta.sets_body : undefined,
+                licenceFile: famMeta ? `../fonts/${famMeta.licence_file}` : null });
+    console.log(`  ${c.family.padEnd(24)} ${String(Math.round(buf.length / 1024)).padStart(4)} KB  ` +
+                `${c.kept ? 'IN THE PICKER — same file the site serves' : 'already self-hosted'}`);
     continue;
   }
   if (c.google) {
@@ -254,12 +254,20 @@ const QUOTE = 'Wild nights &ndash; Wild nights!';
 const cards = rows.map((r) => `
   <section class="spec" style="--qe-display: '${r.family} Spec', Georgia, serif; --qe-body: '${r.family} Spec', Georgia, serif">
     <header class="spec-head">
-      <p class="spec-kind">${esc(KINDS[r.kind] || r.kind)}</p>
+      <p class="spec-kind">${esc(KINDS[r.kind] || r.kind)}${
+        r.kept ? ' &middot; <strong>in the picker</strong>' : r.local ? '' : ' &middot; not kept'
+      }</p>
       <h2>${esc(r.family)}</h2>
       <p class="spec-meta"><strong>${esc(r.by)}</strong> &middot; <a href="${r.source}">source</a> &middot; ${esc(r.licence)}${
         r.licenceFile ? ` &middot; <a href="${r.licenceFile}">licence</a>` : ''
       } &middot; ${Math.round(r.bytes / 1024)}&nbsp;KB${
-        r.role === 'body' ? ' &middot; proposed for body' : r.role === 'display' ? ' &middot; proposed for display' : ' &middot; could do either'
+        /* For the nine that shipped, the role is a FACT read out of the manifest, not the
+           guess this sheet made before anybody chose. Adelphe was labelled display and
+           sets both faces; that mismatch is the sort of thing a stale specimen asserts. */
+        r.kept
+          ? (r.setsBody ? ' &middot; <strong>sets both faces</strong>' : ' &middot; <strong>display only</strong>')
+          : r.role === 'body' ? ' &middot; proposed for body'
+          : r.role === 'display' ? ' &middot; proposed for display' : ' &middot; could do either'
       }</p>
       <p class="spec-note">${r.note}</p>
     </header>
@@ -331,6 +339,15 @@ ${faces}
     &rarr; <a href="${sheet.other.file}">${sheet.other.label}</a>
   </p>
   <p style="font-family:'Newsreader',Georgia,serif;font-size:0.95rem;line-height:1.6;color:var(--qe-moss)">
+    <strong>Nine of these are now in the picker under <em>Reading</em>, and they render here
+    from the very files the site serves</strong> &mdash; not a second download of the same
+    family, so what you judge is exactly what a reader gets. That also corrected three faces
+    shown in the wrong weight on the first pass: Adelphe as Floréal Bold, Coxinel&middot;le as
+    Black and Sporting Grotesque as Bold, because those filenames sorted first in their
+    repositories. Two full text families presented as heavy display faces. The rest are
+    marked <em>not kept</em> and stay for comparison.
+  </p>
+  <p style="font-family:'Newsreader',Georgia,serif;font-size:0.95rem;line-height:1.6;color:var(--qe-moss)">
     <strong>This is a scratch page.</strong> It is <code>noindex</code>, it is not in
     <code>sitemap.xml</code>, and it should be deleted once the choice is made &mdash; a specimen
     kept after the decision is a second, stale account of what the site&rsquo;s type is.
@@ -376,5 +393,21 @@ await writeFile(join(OUT, sheet.file), page);
 console.log(`  wrote specimen/${sheet.file} — ${rows.length} candidate(s), ` +
             `${(rows.reduce((n, r) => n + r.bytes, 0) / 1048576).toFixed(2)} MB\n`);
 }
+
+/* Prune what no longer belongs. Nine candidates moved from their own downloads to the
+   shipped faces in fonts/, which left nine orphaned copies here — dead weight that is
+   also a second, divergent version of a face the site serves. A generator that only
+   ever adds is a generator that lies about what its output needs. */
+const { readdir, unlink } = await import('node:fs/promises');
+const referenced = new Set(
+  SHEETS.flatMap((sh) => sh.candidates).flatMap((c) => [
+    c.local ? null : `${c.id}.${c.fmt === 'woff2' ? 'woff2' : 'otf'}`,
+    c.local ? null : `${c.id}-LICENCE.${c.licenceExt ?? 'txt'}`,
+  ]).filter(Boolean));
+let pruned = 0;
+for (const f of await readdir(join(OUT, 'fonts'))) {
+  if (!referenced.has(f)) { await unlink(join(OUT, 'fonts', f)); pruned++; }
+}
+if (pruned) console.log(`  pruned ${pruned} orphaned file(s) from specimen/fonts`);
 
 console.log('View /specimen/ and /specimen/more — and delete the folder once the choice is made.');

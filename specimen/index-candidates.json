@@ -34,16 +34,18 @@
     "source": "https://gitlab.com/bye-bye-binary/redaction-inclusive",
     "family": "Redaction Inclusive",
     "fmt": "woff2",
-    "url": "https://gitlab.com/bye-bye-binary/redaction-inclusive/-/raw/HEAD/fonts/webfonts/Redaction-Inclusive-Regular.woff2",
-    "licenceUrl": "https://gitlab.com/bye-bye-binary/redaction-inclusive/-/raw/HEAD/OFL.txt",
+    "local": "fonts/redaction-regular.woff2",
+    "kept": true,
+    "pickerId": "redaction",
     "by": "Bye Bye Binary, after Redaction by Jeremy Mickel / MCKL",
     "licence": "OFL-1.1",
     "role": "both",
     "kind": "erasure",
     "note": "Redaction was drawn for Titus Kaphar and Reginald Dwayne Betts’ project on the carceral state — a face about what gets taken out. Bye Bye Binary then added inclusive glyphs to it. Type about erasure, re-cut to say what the grammar refuses.",
-    "file": "fonts/redaction-inclusive.woff2",
+    "file": "../fonts/redaction-regular.woff2",
     "bytes": 32448,
-    "licenceFile": "fonts/redaction-inclusive-LICENCE.txt"
+    "setsBody": false,
+    "licenceFile": "../fonts/RedactionInclusive-LICENCE.txt"
   },
   {
     "id": "unormative-fraktur",
@@ -79,19 +81,21 @@
   },
   {
     "id": "insolente",
+    "local": "fonts/insolente-regular.otf",
+    "kept": true,
     "source": "https://gitlab.com/bye-bye-binary/insolente",
     "family": "Insolente",
     "fmt": "opentype",
-    "url": "https://gitlab.com/bye-bye-binary/insolente/-/raw/HEAD/otf/Insolente-Regular.otf",
     "licenceUrl": "https://gitlab.com/bye-bye-binary/insolente/-/raw/HEAD/README.md",
     "by": "Bye Bye Binary",
     "licence": "stated in the README, no separate licence file upstream",
     "role": "display",
     "kind": "attitude",
     "note": "Insolent. Mientjes’ “attitude in the face of conformity”, named outright.",
-    "file": "fonts/insolente.otf",
+    "file": "../fonts/insolente-regular.otf",
     "bytes": 62644,
-    "licenceFile": "fonts/insolente-LICENCE.txt"
+    "setsBody": false,
+    "licenceFile": "../fonts/Insolente-LICENCE.txt"
   },
   {
     "id": "love",
@@ -127,6 +131,8 @@
   },
   {
     "id": "atkinson",
+    "local": "fonts/atkinson-roman-400.woff2",
+    "kept": true,
     "source": "https://github.com/googlefonts/atkinson-hyperlegible",
     "family": "Atkinson Hyperlegible",
     "fmt": "woff2",
@@ -137,9 +143,10 @@
     "role": "body",
     "kind": "legibility",
     "note": "Drawn for low vision by maximising how unlike each other the letters are. It refuses the modernist ideal of harmonious uniformity in favour of letters that insist on being themselves — which is the same refusal, arrived at from the other direction.",
-    "file": "fonts/atkinson.woff2",
+    "file": "../fonts/atkinson-roman-400.woff2",
     "bytes": 11208,
-    "licenceFile": "fonts/atkinson-LICENCE.txt"
+    "setsBody": true,
+    "licenceFile": "../fonts/AtkinsonHyperlegible-LICENCE.txt"
   },
   {
     "id": "comic-neue",
