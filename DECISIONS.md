@@ -256,6 +256,43 @@ state — a row is as tall as its own label, so the ticks are not evenly pitched
 one row on the home page and three on `/flower-codes`; a hand-ruled pitch suits this
 house, and overlapping labels would be a defect.
 
+**THE TICKS CARRY THE SHAPE OF THE PAGE, AND THAT IS WHAT EARNS THE UNEVENNESS.**
+Collapsed, the rail was a column of identical rules at an uneven pitch — uneven because a
+row is as tall as its own label. Ryan's read was that it looked like an imperfection to
+lean into. The problem with leaning into it as it stood is that **asymmetry only reads as
+asymmetry against a norm**, and with nothing else varying the pitch just read as an
+accident.
+
+So the ticks were given the norm to deviate from, and the deviation is inherited from the
+sheet rather than invented: **each tick is as long as its section is tall**, normalised
+9–32px across the page. The rail became a small scale drawing of the document — you can
+see which section is the long one before reading a word of it. Checked on
+`/wild-nights`: the 3032px section draws 32px, the 1635px section draws 9px, monotonic
+across all eight.
+
+**That it means something is the licence for it, not a bonus.** A tick whose length varies
+looks like it encodes something, and this repo refuses decoration asserting a fact it does
+not have. Four options were rendered against the real stylesheet before choosing — flat,
+weight-only, lean-only, and both — and the one that varied length *without* meaning was
+refused for exactly that reason.
+
+**The lean is the other half and it claims nothing**, which is what makes it free to be
+ornament: up to 3.2° per tick, walked by the golden angle so it is deterministic rather
+than random. The same sheet draws the same rail every time, which is what lets a stain be
+a fact about one sheet rather than a dice roll per visit. It is the wonk axis this site
+already runs on its type, applied to a rule instead of a letter.
+
+**They part company under `html.plain`: the lean goes, the lengths stay.** Plain view
+removes decoration; it has never removed information. That distinction is the whole
+argument for splitting the effect in two rather than shipping one varying tick.
+
+**Measured after `document.fonts.ready`.** A webfont swap moves section extents, and a rail
+measured against the fallback is measuring the wrong sheet. Nothing else needs
+re-measuring — `main` is capped at 34rem and the rail only exists above 64rem, so the
+measure never reflows while the rail is visible. A page with no variation in section
+height gets a flat 22px instead of a stretched range: there is no scale to draw, and
+stretching a flat range would invent one.
+
 **Hover-gating is only allowed because every other way in stays open.** This repo already
 refuses a hover-gated section mark, on the grounds that hover hands a feature to mice and
 to nobody else. The rail is exempt because nothing is actually withheld: the heading text

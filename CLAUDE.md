@@ -626,6 +626,26 @@ stylistic — pills would lie over one another the moment `REVEAL` turned them o
 state is the expanded rail already measured clean. The price is an uneven tick pitch,
 because a row is as tall as its own label.
 
+**THE TICKS ARE A SCALE DRAWING OF THE SHEET, AND THE LEAN IS NOT.** Each tick is as long
+as its section is tall, normalised across the page and set by `queering.js` — so a long
+tick means a long section, on every page, always. **That is the licence for it.** A tick
+whose length varies looks like it encodes something, and this house refuses decoration
+that asserts a fact it does not have — a gold join on a sheet nobody corrected. So it had
+better encode the thing it looks like. The per-tick lean, up to 3.2° walked by the golden
+angle, claims nothing at all and is therefore free to be ornament: it is the wonk axis
+already running on this site's type, applied to a rule instead of a letter.
+
+**They part company in plain view, and that split is the rule to keep.** `html.plain` drops
+the lean with every other decorative thing and **keeps the lengths**, because plain view
+removes decoration and has never removed information.
+
+**Measured after `document.fonts.ready`**, since a webfont swap moves section extents and a
+rail measured against the fallback is measuring the wrong sheet. Nothing else needs
+re-measuring: `main` is capped at 34rem and the rail only exists above 64rem, so the
+measure never reflows while the rail is on screen. A page whose sections are all the same
+height gets a flat 22px rather than a stretched range, because there is no scale to draw
+and inventing one would be the fault above.
+
 **HOVER-GATING IS LICENSED HERE BY FOUR THINGS AT ONCE, AND REMOVING ANY ONE BREAKS IT.**
 This file forbids a hover-gated section mark because hover hands a feature to mice and to
 nobody else. The rail is exempt only because nothing is withheld: the heading text is in

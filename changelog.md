@@ -74,6 +74,16 @@ It shipped appearing above 1232px. Ryan uses a browser whose tab sidebar takes i
 
 Measured rather than calculated, which is what should have happened first: at 1024px the leftmost thing inside the landmark across the art-heavy sheets is 277–288px against a rail ending at 172px, so the real clearance is about 108px where the old sum was defending 24. **The rail now appears above 1024px, 208px better than it shipped**, checked on both sides of the boundary.
 
+CabinetThe rail’s ticks became a scale drawing of the sheet, because an imperfection with no norm behind it just reads as an accident
+
+Collapsed, the rail was a column of identical rules at an uneven pitch — uneven because a row is as tall as its own label. Ryan’s read was that this was an imperfection worth leaning into. **The trouble with leaning into it as it stood is that asymmetry only reads as asymmetry against a norm**, and with nothing else varying the pitch read as an accident rather than a hand.
+
+So the ticks were given the norm to deviate from, and the deviation is **inherited from the sheet rather than invented**: each tick is now as long as its section is tall, normalised across the page. The rail is a small scale drawing of the document, and you can see which section is the long one before reading a word. On [the Dickinson sheet](https://queering.earth/wild-nights) the longest section draws 32px and the shortest 9px, monotonic across all eight.
+
+**That it means something is the licence for it, not a bonus.** A tick whose length varies looks like it encodes something, and this cabinet refuses decoration asserting a fact it does not have — a gold join on a sheet nobody corrected. Four treatments were drawn against the real stylesheet before choosing, and the one that varied length *without* meaning was refused for precisely that reason. **The lean beside it claims nothing**, which is what leaves it free to be ornament: up to 3.2 degrees, walked by the golden angle so the same sheet draws the same rail every time rather than rolling dice on each visit.
+
+**The two part company in plain view: the lean goes, the lengths stay.** Plain view removes decoration and has never removed information, and splitting one effect into an honest half and an ornamental half is what makes that line drawable at all.
+
 2026 · 9 September
 
 ## The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page

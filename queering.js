@@ -174,7 +174,74 @@
      either generator's skip list. It is hidden in the markup for the same reason
      the contents list is. */
   var rail = document.querySelector('.qe-rail');
-  if (rail) fillHeadings(rail);
+  if (rail) {
+    fillHeadings(rail);
+    measureTicks(rail);
+  }
+
+  /* ── the ticks are a scale drawing of the sheet
+   *
+   * Each tick is as long as its section is tall, normalised across the page. The
+   * rail collapsed to an even pitch of identical rules and the unevenness that was
+   * left — a row is as tall as its own label — read as an accident, because nothing
+   * else varied and asymmetry only reads as asymmetry against a norm. This gives
+   * the ticks the norm to deviate from, and the deviation is inherited from the
+   * sheet rather than invented.
+   *
+   * IT IS A MEASUREMENT, NOT AN ORNAMENT, AND THAT IS THE WHOLE LICENCE FOR IT.
+   * This house refuses decoration that asserts a fact it does not have — a gold
+   * join on a sheet nobody corrected. A tick that looks like it encodes something
+   * is under exactly that rule, so it had better encode the thing it looks like.
+   * A long tick means a long section, on every page, always.
+   *
+   * THE LEAN IS THE OTHER HALF AND IT CLAIMS NOTHING. A per-tick rotation of up to
+   * 3.2 degrees, walked by the golden angle so it is deterministic rather than
+   * random — the same sheet draws the same rail every time, which is what lets a
+   * stain be a fact about one sheet rather than a dice roll per visit. Because it
+   * asserts nothing it is free to be ornament, and it is the wonk axis this site
+   * already runs on its type, applied to a rule instead of a letter. It switches
+   * off under html.plain with everything else decorative. THE LENGTHS DO NOT: they
+   * are information, and plain view has never removed information.
+   *
+   * MEASURED AFTER THE FONTS LAND. Section extents move when a webfont swaps in,
+   * and a rail measured against the fallback is a rail measuring the wrong sheet.
+   * Nothing else needs re-measuring: main is max-width 34rem and the rail only
+   * exists above 64rem, so the measure never reflows while the rail is on screen.
+   */
+  function measureTicks(container) {
+    var items = container.querySelectorAll('li');
+    var main = document.querySelector('main');
+    if (!items.length || !main) return;
+
+    var heads = [];
+    var all = document.querySelectorAll('main h2[id]');
+    for (var i = 0; i < all.length; i++) {
+      if (!all[i].closest('.qe-contents')) heads.push(all[i]);
+    }
+    if (heads.length !== items.length) return;
+
+    var y = function (el) { return el.getBoundingClientRect().top + window.pageYOffset; };
+    var foot = main.getBoundingClientRect().bottom + window.pageYOffset;
+
+    var spans = [], lo = Infinity, hi = 0;
+    for (var j = 0; j < heads.length; j++) {
+      var span = (j + 1 < heads.length ? y(heads[j + 1]) : foot) - y(heads[j]);
+      if (!(span > 0)) span = 1;
+      spans.push(span);
+      if (span < lo) lo = span;
+      if (span > hi) hi = span;
+    }
+
+    for (var k = 0; k < items.length; k++) {
+      /* A page whose sections are all the same height has no scale to draw, and
+         stretching a flat range across the full span would invent one. */
+      var t = hi > lo ? 9 + 23 * ((spans[k] - lo) / (hi - lo)) : 22;
+      items[k].style.setProperty('--qe-tick', t.toFixed(1) + 'px');
+      /* 2.399 radians is the golden angle: a walk that never repeats a neighbour's
+         angle and never needs a seed. */
+      items[k].style.setProperty('--qe-tick-lean', (Math.sin(k * 2.399) * 3.2).toFixed(2) + 'deg');
+    }
+  }
 
   /* ── index by sheet
    *
@@ -209,6 +276,13 @@
    * AN EMPTY GROUP STAYS HIDDEN. A sheet with no entries is a sheet nothing has
    * happened to, and an empty heading under it reads as a fault.
    */
+
+  /* The first pass runs against whatever face is up; this one runs against the one
+     the reader will actually see. Guarded because document.fonts is not universal
+     and a browser without it has already had a correct-enough measurement. */
+  if (rail && document.fonts && document.fonts.ready && document.fonts.ready.then) {
+    document.fonts.ready.then(function () { measureTicks(rail); });
+  }
 
   var index = document.querySelector('.qe-sheet-index');
   if (index) {

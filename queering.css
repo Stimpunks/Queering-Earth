@@ -3363,10 +3363,22 @@ html.plain .qe-stamp-date {
   position: absolute;
   left: 0;
   top: 22px;              /* half of the 44px minimum row, so a one-line row centres */
-  width: 24px;
+  /* Length is a MEASUREMENT — queering.js sets it from how much of the page the
+     section under that heading covers, so the rail is a scale drawing of the
+     sheet. The fallback is the flat rail it replaced. The lean beside it is
+     ornament and claims nothing; see the long note in queering.js for why the two
+     halves are held apart, and why only one of them survives plain view. */
+  width: var(--qe-tick, 24px);
+  transform: rotate(var(--qe-tick-lean, 0deg));
+  transform-origin: 0 50%;
   height: 1px;
   background: var(--qe-moss);
 }
+
+/* The lean goes with the wonk, the rotation and the display faces. THE LENGTHS
+   STAY: they are information about the sheet, and plain view has never removed
+   information — it removes decoration. */
+html.plain .qe-rail li::before { transform: none; }
 
 .qe-rail a {
   display: block;
