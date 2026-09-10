@@ -646,6 +646,24 @@ measure never reflows while the rail is on screen. A page whose sections are all
 height gets a flat 22px rather than a stretched range, because there is no scale to draw
 and inventing one would be the fault above.
 
+**THE RAIL ENDS IN A TERMINUS, AND THAT IS THE ONLY ORNAMENT IT GETS.** `.qe-rail-sprig`
+is two leaves and a bud continuing the rail's own rule at its foot — not a mark beside the
+rail but the end of the line the rail already draws, which is why it is pulled back by the
+nav's padding to meet the border. **A scatter of marks around the rail was drawn and
+refused**: a cluster at the head lands in the top-left, where a reader's eye starts and
+where the skip link appears on focus, and it makes the rail's decoration the first thing
+on the page. This component's whole licence is Ma. See `DECISIONS.md`.
+
+**It wears `.qe-botanical`, so the motion is inherited rather than restated** — the stem
+draws itself on, the leaves unfurl, already gated on `prefers-reduced-motion` and already
+kept-but-stilled in plain view. Only the size is new, exactly as with the moth. It takes
+`--qe-moss` and so follows the ground with no cabinet rule of its own.
+
+**NO GATE HERE MEASURES A DRAWING AGAINST TEXT.** `check-overlap.mjs` catches text on text,
+so an ornament in the margin is unguarded — which is the argument for keeping this one
+small and *inside the rail's own box*, where the rail's measured clearance already covers
+it, and against anything free-floating. **A new mark out here needs measuring by hand.**
+
 **HOVER-GATING IS LICENSED HERE BY FOUR THINGS AT ONCE, AND REMOVING ANY ONE BREAKS IT.**
 This file forbids a hover-gated section mark because hover hands a feature to mice and to
 nobody else. The rail is exempt only because nothing is withheld: the heading text is in

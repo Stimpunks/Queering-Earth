@@ -3440,6 +3440,52 @@ html.plain .qe-rail li::before { opacity: 0; }
   outline-offset: -1px;
 }
 
+/* ─── the terminus
+ *
+ * ONE MARK, AT THE FOOT, AND NOT A SCATTER. Ryan asked whether small doodles
+ * above and around the rail would add a handwritten feel, and flagged the risk
+ * himself: this component's entire licence is Ma. It is unlabelled so the margin
+ * stays empty, and the margin either side of the measure is the negative space
+ * the spacing work cleared. Both arrangements were drawn and looked at. A cluster
+ * at the head of the rail lands in the top-left corner, which is where a reader's
+ * eye starts and where the skip link appears on focus, and it makes the rail's
+ * DECORATION the first thing on the page. That is the cost he predicted, so it
+ * was refused.
+ *
+ * What survives is the version that is not an addition at all: the rail's rule
+ * already reads as a stem, and a stem that simply stops is the only unbotanical
+ * thing about it. This is its terminus — two leaves and a bud, continuing the
+ * line rather than sitting beside it, which is why it is pulled back by the
+ * padding to meet the rule. It occupies margin nothing else wanted and adds no
+ * second object to the page.
+ *
+ * IT WEARS .qe-botanical, so the motion is inherited rather than restated — the
+ * stem draws itself on and the leaves unfurl after, already gated on
+ * prefers-reduced-motion, already still in plain view. The moth's note says why a
+ * second copy of that idiom is a second thing to keep in step. Only the size is
+ * new, exactly as with the moth.
+ *
+ * NO GATE HERE MEASURES A DRAWING AGAINST TEXT. check-overlap.mjs catches text on
+ * text, so an ornament in the margin is on its own — which is an argument for one
+ * small mark inside the rail's own box, where the rail's measured clearance
+ * already covers it, and against anything free-floating.
+ */
+.qe-rail-sprig {
+  display: block;
+  width: 28px;
+  height: auto;
+  /* Back out to the rule itself: the nav's padding is what separates the ticks
+     from the border, and this is a continuation of the border, not of the ticks. */
+  margin: var(--qe-space-1) 0 0 calc(-1 * var(--qe-space-2) - 1px);
+  fill: none;
+  stroke: var(--qe-moss);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* The bud is the one filled shape, as the rivet is on the loupe. */
+.qe-rail-sprig circle { fill: var(--qe-moss); stroke: none; }
+
 @media print {
   /* Nowhere to navigate to on paper — the same reason .qe-contents goes. */
   .qe-rail { display: none; }

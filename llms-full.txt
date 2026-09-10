@@ -2375,6 +2375,16 @@ So the ticks were given the norm to deviate from, and the deviation is **inherit
 
 **The two part company in plain view: the lean goes, the lengths stay.** Plain view removes decoration and has never removed information, and splitting one effect into an honest half and an ornamental half is what makes that line drawable at all.
 
+CabinetThe rail’s rule ends in a leaf now, and the doodles that were asked for were drawn and refused
+
+The question was whether small doodles above, below or around the rail would add to the handwritten feel — asked with the risk already named: that it might spend the negative space. **Both arrangements were drawn and looked at, and the scatter was the wrong one.** A cluster at the head of the rail lands in the top-left corner of the page, which is where a reader’s eye starts and where the skip link appears on focus, and it makes the rail’s decoration the first thing anyone sees. This component is unlabelled precisely so that margin stays empty; filling it spends the thing that made the rail acceptable.
+
+**What survives is the version that is not an addition at all.** The rail’s rule already reads as a stem, and a stem that simply stops is the only unbotanical thing about it. It now ends in a terminus — two leaves and a bud, continuing the line rather than sitting beside it, pulled back past the nav’s padding to meet the border. Twenty-eight pixels, stroke only, in moss. It occupies margin nothing else wanted and puts no second object on the page.
+
+It wears `.qe-botanical`, so the growth is inherited rather than restated: the stem draws itself on and the leaves unfurl, both already gated on reduced motion and already kept-but-stilled in plain view. Only the size is new, [exactly as with the moth](https://queering.earth/#queering-is-a-verb). Because it takes a palette token it follows the ground with no cabinet rule of its own, which was checked in both.
+
+**That no gate here measures a drawing against text is the reason it is small.** `check-overlap.mjs` catches text sitting on text, so an ornament in the margin is guarded by nothing at all and could drift onto the measure at some width without a word being said. Keeping the mark inside the rail’s own box means the clearance already measured for the rail covers it too. Anything free-floating would need measuring by hand at every breakpoint, which is a standing cost this cabinet has not agreed to pay for decoration.
+
 2026 · 9 September
 
 ## The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page
@@ -3765,7 +3775,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-127 entries across 29 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+128 entries across 29 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -5155,6 +5165,17 @@ So the ticks were given the norm to deviate from, and the deviation is inherited
 **They part company under `html.plain`: the lean goes, the lengths stay.** Plain view removes decoration; it has never removed information. That distinction is the whole argument for splitting the effect in two rather than shipping one varying tick.
 
 **Measured after `document.fonts.ready`.** A webfont swap moves section extents, and a rail measured against the fallback is measuring the wrong sheet. Nothing else needs re-measuring — `main` is capped at 34rem and the rail only exists above 64rem, so the measure never reflows while the rail is visible. A page with no variation in section height gets a flat 22px instead of a stretched range: there is no scale to draw, and stretching a flat range would invent one.
+
+**THE RAIL GETS ONE TERMINUS AND NOT A SCATTER OF DOODLES.** Ryan asked whether small doodles above, below or around the rail would add to the handwritten feel, and flagged the risk in the same breath: that it might compromise the Ma. Both arrangements were drawn against the real stylesheet and looked at, and **his instinct was right about the scatter.**
+
+- A cluster at the head of the rail sits in the **top-left corner of the page** — where a reader's eye starts, and where the skip link appears on focus. It makes the rail's *decoration* the first thing anyone sees.
+- The rail's entire licence is Ma. It is unlabelled specifically so the margin stays empty, and the margin either side of the measure is the negative space the spacing work cleared. Filling it with marks spends the thing that made the rail acceptable.
+
+**What survives is the version that is not an addition at all.** The rail's rule already reads as a stem, and a stem that simply stops is the only unbotanical thing about it. So it now ends in a terminus — two leaves and a bud, continuing the line rather than sitting beside it, pulled back past the nav's padding to meet the border. It occupies margin nothing else wanted and adds no second object to the page. **28px, stroke only, moss.**
+
+It wears `.qe-botanical`, so the growth idiom is inherited rather than restated: the stem draws itself on, the leaves unfurl, and both were already gated on `prefers-reduced-motion` and already kept-but-stilled under `html.plain`. Only the size is new, exactly as with the moth — a second copy of that idiom would be a second thing to keep in step. It takes `--qe-moss` and so follows the ground with no cabinet rule of its own; verified in both, and at 0.85 opacity in plain view.
+
+**The unguarded-ornament problem is real and is why this is small.** `check-overlap.mjs` catches text on text, so a drawing in the margin is measured by nothing — it could drift onto the measure at some width and no gate would say a word. Keeping the mark inside the rail's own box means the rail's own measured clearance covers it. Anything free-floating out there would need measuring by hand at every breakpoint, which is a maintenance cost this site has not agreed to pay for decoration.
 
 **Hover-gating is only allowed because every other way in stays open.** This repo already refuses a hover-gated section mark, on the grounds that hover hands a feature to mice and to nobody else. The rail is exempt because nothing is actually withheld: the heading text is in the DOM at all times, so a screen reader has every link name whatever the opacity says; `:focus-within` brings the rail up when a keyboard arrives in it; `@media (hover: none)` never collapses it on a device that cannot hover; and plain view never collapses it either. **Take any one of those away and the collapse becomes the thing this file forbids.**
 

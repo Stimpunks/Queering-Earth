@@ -84,6 +84,16 @@ So the ticks were given the norm to deviate from, and the deviation is **inherit
 
 **The two part company in plain view: the lean goes, the lengths stay.** Plain view removes decoration and has never removed information, and splitting one effect into an honest half and an ornamental half is what makes that line drawable at all.
 
+CabinetThe rail’s rule ends in a leaf now, and the doodles that were asked for were drawn and refused
+
+The question was whether small doodles above, below or around the rail would add to the handwritten feel — asked with the risk already named: that it might spend the negative space. **Both arrangements were drawn and looked at, and the scatter was the wrong one.** A cluster at the head of the rail lands in the top-left corner of the page, which is where a reader’s eye starts and where the skip link appears on focus, and it makes the rail’s decoration the first thing anyone sees. This component is unlabelled precisely so that margin stays empty; filling it spends the thing that made the rail acceptable.
+
+**What survives is the version that is not an addition at all.** The rail’s rule already reads as a stem, and a stem that simply stops is the only unbotanical thing about it. It now ends in a terminus — two leaves and a bud, continuing the line rather than sitting beside it, pulled back past the nav’s padding to meet the border. Twenty-eight pixels, stroke only, in moss. It occupies margin nothing else wanted and puts no second object on the page.
+
+It wears `.qe-botanical`, so the growth is inherited rather than restated: the stem draws itself on and the leaves unfurl, both already gated on reduced motion and already kept-but-stilled in plain view. Only the size is new, [exactly as with the moth](https://queering.earth/#queering-is-a-verb). Because it takes a palette token it follows the ground with no cabinet rule of its own, which was checked in both.
+
+**That no gate here measures a drawing against text is the reason it is small.** `check-overlap.mjs` catches text sitting on text, so an ornament in the margin is guarded by nothing at all and could drift onto the measure at some width without a word being said. Keeping the mark inside the rail’s own box means the clearance already measured for the rail covers it too. Anything free-floating would need measuring by hand at every breakpoint, which is a standing cost this cabinet has not agreed to pay for decoration.
+
 2026 · 9 September
 
 ## The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page
