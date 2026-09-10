@@ -36,6 +36,38 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## A cabinet that publishes an attribution ledger, a privacy policy and a register of its own errors had never written down what any of it was for
+
+There was a page for what the cabinet holds, a page for how it is made, a page for everything we have got wrong, and a page for what the site knows about you. **There was no page saying what we are trying to do.** That absence is not neutral, and this site already knows why: a project with no stated aim is a project whose aims can drift with nobody able to point at the drift, which is the objection it makes to a quotation nobody can trace and a number nobody can re-derive. [Sheet-less, numberless, and now written down.](https://queering.earth/mission)
+
+MountedThirteen aims, each naming the page already keeping it — and, for each, the observation that would falsify it
+
+**The genre is the whole defence against duplication.** The home page already carries 611 words of manifesto across three sections. A mission written as an argument would have restated most of it, and two copies of the same words drift — the rule this house repeats more than any other. So this is *an index of commitments with receipts*, which structurally cannot duplicate an argument: every aim ends by naming where it is already being practised, and an aim with no page keeping it would be visible as a hole. The form is [Star Stuff’s](https://starstuff.earth/mission), adopted deliberately; the aims are this site’s own and several have no counterpart there.
+
+**An aim you cannot fail is not an aim.** The last section is a table pairing each aim with a condition somebody outside could observe, with no access to what we meant. **Most of them are not hypothetical.** The working tagline was once a paraphrase of Nick Walker wearing his name. Tuck and Yang were carried from settler colonialism to masking and the sheet nearly let their authority cover the move. And the plate said “Seven sheets” above eight cards — a count in our prose nobody could re-derive, which is the last row of that table, committed on this site, this week.
+
+**What it refuses to claim.** Stimpunks’ first programme is direct financial support to individuals, and a section says plainly that this site does none of it and should not be counted as though it did. No sheet here has paid anybody’s rent. The honest claim for a cabinet of readings is narrower and is stated at that width.
+
+It is **the first page in a second list** at the foot of the home page. *The founding papers* is why the cabinet exists; *The cabinet itself* is how it is made and what it knows about you. Purpose above plumbing, and the split is Star Stuff’s too — see the entry below for the day the first list was built.
+
+MountedTwo quotations from our own two organisations, held to the standard everybody else’s words are held to
+
+The page quotes the Stimpunks Foundation’s mission and Helen Edgar’s own landing page rather than paraphrasing either, because **the paraphrase is where a mission goes soft** and paraphrase-wearing-a-name is the failure the ledger exists to prevent. Both were read from the primary the day they were mounted, and both are logged.
+
+**Reading the primary found something, as usual.** Two wordings of the Stimpunks mission sit on the same page — the statement block says the foundation builds tools that *support* people to live with dignity, challenge dehumanizing systems and design environments that honor difference as strength; the Mission Compass further down says *enables* people to live with dignity and stops. We quoted the longer, and the ledger records the discrepancy, because a reader who checks will find both and an unrecorded discrepancy is how a ledger loses its value.
+
+**Their capitalisation and their spelling are kept.** House style capitalises Autistic and Disabled and spells *honour*; the quotation does neither. A quotation is not the place to apply house style, and this is the site that says so.
+
+**And one of their sentences turned out to be about Sheet No. 4.** Stimpunks’ mission says “We enable the weird, feral, chaotic, and magical people.” [Sheet No. 4](https://queering.earth/invention-of-normal) is the history of that word being demoted from *wyrd*, meaning fate, to a name for people who do not fit. The sheet was not written to illustrate the mission; the collision was found by reading the mission properly, which is the argument for reading primaries in one sentence.
+
+CabinetThe Markdown converter now honours a list’s start attribute, because thirteen aims in four groups renumbered themselves four times
+
+The aims run as one sequence across four group headings, which is four `ol` elements with `start` on three of them. The converter ignored the attribute, so the page said thirteen aims numbered 1 to 13 and `/mission.md` said 1–3, 1–5, 1–3, 1–2. **A converter that silently drops an attribute is the same drift as one that silently drops a tag**, which is the rule that already makes it throw on an unknown element — it arrived by the other door. It now reads `start` and throws if it is not a number.
+
+Two components were added for the page and both are the **bare** tier: the one-sentence statement, and the aims list. The statement is *not* a blockquote — nothing is being quoted, it is the site speaking, and marking our own words as a quotation is the mistake most of these rules exist to avoid. The aims use native `ol` numbering rather than a counter on a pseudo-element, so a screen reader announces the position, and **no colour goes on the marker**: a `::marker` is invisible to the contrast gate, which is exactly how this register’s own entry bullets once sat at 2.15:1 unreported.
+
+2026 · 9 September
+
 ## An eighth gate, ported the same day the failure it catches happened twice — and its first honest run found fifteen more
 
 The house rule is to port a Star Stuff check when the failure it catches becomes *possible* here. `check-card-order.mjs` did not clear that bar; it cleared a higher one. The plate shipped out of sequence, a sibling nav shipped out of sequence, and **all seven existing gates passed both** — correctly, because order is not colour, position, freshness, routing, structure, headers or the manifest, and a grid in the wrong order looks exactly like a grid in the right one.
@@ -1151,6 +1183,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [Find a word in the cabinet](https://queering.earth/search) the finding aid
 
 ### [Queering.Earth](https://queering.earth/) the plate
+
+### [What this cabinet is for](https://queering.earth/mission) the founding papers
 
 ### [How this site is made](https://queering.earth/design) the colophon
 

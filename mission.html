@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What this cabinet is for &mdash; Queering Earth</title>
+<meta name="description" content="The mission of queering.earth, in thirteen aims — each with the page where it is already being kept, and the failure that would show we had stopped. Then what a cabinet of readings has to do with a foundation whose first business is paying people's rent, including the half of that a reading cannot do.">
+<link rel="canonical" href="https://queering.earth/mission">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Queering Earth">
+<meta property="og:title" content="What this cabinet is for">
+<meta property="og:description" content="Thirteen aims, each with the page where it is already being kept — and, for each, the failure that would show we had quietly stopped.">
+<meta property="og:url" content="https://queering.earth/mission">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://queering.earth/images/og-mission.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="What this cabinet is for. Thirteen aims, each with the page where it is already being kept.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What this cabinet is for">
+<meta name="twitter:description" content="Thirteen aims, each with the page where it is already being kept — and, for each, the failure that would show we had quietly stopped.">
+<meta name="twitter:image" content="https://queering.earth/images/og-mission.png">
+<meta name="twitter:image:alt" content="What this cabinet is for. Thirteen aims, each with the page where it is already being kept.">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- The faces are self-hosted and declared in queering.css. Preloading the body
+     roman is the one that pays: it is the first thing every page needs, and there
+     is no cross-origin handshake to wait on any more. crossorigin is required
+     even same-origin — a font is always fetched in CORS mode. -->
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
+     either one would flash the wrong page: the decorated sheet at a reader who
+     turned it off, or the daylight sheet at one who asked for the drawer. -->
+<script>try{var d=document.documentElement,g=localStorage.getItem('qe-ground');if(localStorage.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g)}catch(e){}</script>
+<!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
+     rel=alternate points an agent at this page's Markdown source, derived from this
+     page's own main landmark by tools/make-markdown.mjs.
+
+     NO ANGLE-BRACKET TAG NAMES IN A COMMENT NEAR THE HEAD. Writing the landmark's name
+     with brackets here made a /<main[^>]*>/ extractor match inside this very comment
+     and take the head as the page body. The SKS mirror reads that landmark too. -->
+<link rel="describedby" href="/llms.txt" type="text/markdown" title="Site index for agents">
+<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Queering Earth — the accession register">
+<link rel="alternate" href="https://queering.earth/mission.md" type="text/markdown" title="What this cabinet is for — Markdown source">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://queering.earth/mission#page",
+  "name": "What this cabinet is for",
+  "description": "The mission of queering.earth, in thirteen aims — each with the page where it is already being kept, and the failure that would show we had stopped.",
+  "url": "https://queering.earth/mission",
+  "inLanguage": "en",
+  "isFamilyFriendly": true,
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "publisher": [
+    {
+      "@type": "Organization",
+      "name": "Stimpunks Foundation",
+      "url": "https://stimpunks.org/"
+    },
+    {
+      "@type": "Organization",
+      "name": "More Realms",
+      "url": "https://morerealms.com/"
+    }
+  ],
+  "dateModified": "2026-09-09",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Queering Earth",
+    "url": "https://queering.earth/"
+  },
+  "encoding": {
+    "@type": "MediaObject",
+    "encodingFormat": "text/markdown",
+    "contentUrl": "https://queering.earth/mission.md"
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+</div>
+
+<main id="main">
+
+  <header class="qe-masthead">
+    <p class="qe-kicker"><a href="/">Queering Earth</a> &middot; The founding papers</p>
+    <h1>What this cabinet is for</h1>
+    <p class="qe-tagline">Thirteen aims, and where each one is already kept.</p>
+  </header>
+
+  <p class="qe-lede">This site has a page for what it holds, a page for how it is made, a page for everything it has got wrong, and a page for what it knows about you. What it did not have was a page saying, plainly and in one place, what we are <em>trying to do</em>. That absence is not neutral: a project with no stated aim is a project whose aims can drift without anybody being able to point at the drift &mdash; which is the same objection this site makes to a quotation nobody can trace, or a number nobody can re-derive.</p>
+
+  <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
+    <h2 id="qe-contents-h">On this sheet</h2>
+    <ol></ol>
+  </nav>
+
+  <h2 id="in-one-sentence">The whole of it, in one sentence <a class="qe-anchor" href="#in-one-sentence"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p class="qe-pull">Queering Earth reads the canon closely and in public &mdash; art, literature, poetry, politics, people, and history &mdash; and asks what else any of it could have been, so that the arrangements we were handed stop looking like the only ones available.</p>
+
+  <p>Thirteen aims follow, in four groups. <strong>None of them is a hope.</strong> Each one names a page where it is already being practised, because a values list you cannot check against the work is the exact thing this page is trying not to be. And <a href="#stopped">the last section</a> names, for each, the observation that would show we had quietly stopped.</p>
+
+  <h2 id="claiming">What we are claiming <a class="qe-anchor" href="#claiming"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <ol class="qe-aims">
+    <li>
+      <strong>Queering is a verb.</strong> The word reaches us from Queer Theory by way of <a href="https://neuroqueer.com/">Nick Walker</a>, and what we took is the parenthesis: <em>subverting, defying, disrupting, liberating oneself from</em>. It names something you <em>do</em> to a norm, not a category you belong to, and the norms it can be done to are not only the ones about sex and gender. A site that used the word as a synonym for a demographic would be using the noun and calling it the verb.
+      <span class="qe-aim-kept">Kept on <a href="/#queering-is-a-verb">Queering is a verb</a>, where he is quoted exactly rather than paraphrased.</span>
+    </li>
+    <li>
+      <strong>Normal is an invention, and a recent one.</strong> Barely two centuries old, arriving with the statistician rather than the physician, and it displaced older words that meant something else entirely &mdash; <i>wyrd</i> meant <em>fate</em>, what befalls you, before it was demoted to <em>weird</em> and then to defect. <strong>A thing that was invented can be read as an invention</strong>, which is a different act from complaining about it.
+      <span class="qe-aim-kept">Kept on <a href="/invention-of-normal">Sheet No.&nbsp;4</a>, and it is Helen Edgar&rsquo;s reading before it is this site&rsquo;s.</span>
+    </li>
+    <li>
+      <strong>Having been canonised is not the same as having been settled.</strong> Every sheet takes a work that has already been decided about and asks what else it could have been. Not to catch anybody out &mdash; the readings here are affectionate, and several are love letters. But a text that can only be read one way has stopped being a text and become a ruling.
+      <span class="qe-aim-kept">Kept on <a href="/#what-grows-here">the plate</a>, one sheet at a time.</span>
+    </li>
+  </ol>
+
+  <h2 id="right">How we intend to be right <a class="qe-anchor" href="#right"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <ol class="qe-aims" start="4">
+    <li>
+      <strong>Interpretation is the method, and the room left open is the product.</strong> There are no hard facts here for everything, and that is the design brief rather than a lowered bar. Our sibling <a href="https://starstuff.earth/">Star Stuff</a> is built on evidence and risks a wrong fact; this half of the shelf is built on reading and risks a wrong attribution. What replaces the fact is not licence. It is the obligation to <strong>show the reading&rsquo;s working</strong>, so that somebody can disagree with it precisely rather than vaguely.
+      <span class="qe-aim-kept">Kept on <a href="/#what-this-is">What this is</a>, and argued in full on <a href="/design#model">the colophon</a>.</span>
+    </li>
+    <li>
+      <strong>If we changed the words, they are ours.</strong> The characteristic failure on a site like this is not an invented source. It is a <em>tightened</em> one &mdash; a definition trimmed to fit a masthead, an object quietly generalised, a paraphrase left wearing somebody&rsquo;s name. So: credit the concept, quote the original exactly, or write our own line. When we carry somebody&rsquo;s idea to an object they were not writing about, <strong>the sheet says whose move that is</strong> instead of letting their authority cover our argument.
+      <span class="qe-aim-kept">Kept in <a href="https://github.com/Stimpunks/Queering-Earth/blob/main/ATTRIBUTIONS.md">the attribution ledger</a> &mdash; see the Tuck and Yang entry, where the transposition is named on the sheet in a sentence of its own.</span>
+    </li>
+    <li>
+      <strong>Every quotation reaches the page from a primary, or names whose transcription it is.</strong> A search of our own library is not verification: five files agreeing with each other are one witness, not five. Where the primary can be reached we read it and say which copy, because that is how an edition difference gets caught. Where it cannot, the quotation carries the citation and the name of whoever transcribed it, rather than being dropped or quietly smoothed.
+      <span class="qe-aim-kept">Kept in <a href="https://github.com/Stimpunks/Queering-Earth/blob/main/ATTRIBUTIONS.md">the ledger</a>, each entry dated the day a person read the source.</span>
+    </li>
+    <li>
+      <strong>Publish the corrections, and spend the gold on the mend.</strong> Every sheet carries at its foot the date it was mounted and the number of times we have corrected it since, each clause linked to the entry that did it. The seam is marked in the most expensive colour the palette has, because <em>kintsugi</em> is not that the crack shows &mdash; it is that the precious material goes on the break. <strong>A register with no corrections in it is not a clean record. It is a record nobody is keeping.</strong>
+      <span class="qe-aim-kept">Kept in <a href="/changelog">the accession register</a>, and on the provenance line at the foot of every sheet.</span>
+    </li>
+    <li>
+      <strong>A reading is signed, and the reader is not the maker.</strong> Woolf made <cite>On Being Ill</cite>; we made the reading of it. Those are two different people, on two different rows of the label and in two different fields of the machine-readable copy, and no page here collapses them into one name at the top. Getting that wrong would tell every agent on the web that we wrote Woolf.
+      <span class="qe-aim-kept">Kept on <a href="/design#who-writes">Who reads, and who writes</a>, and enforced by a gate that refuses the conflation.</span>
+    </li>
+  </ol>
+
+  <h2 id="owed">What we owe whoever is reading <a class="qe-anchor" href="#owed"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <ol class="qe-aims" start="9">
+    <li>
+      <strong>One document, and two ways to read it.</strong> The type here leans, deviates, and refuses to sit on the line, because a page about normativity set in a tidy grid is arguing against itself. All of that lives in the stylesheet, over ordinary semantic markup, and <strong>plain view switches it off</strong>. Never an image of text. Never a decorative copy beside an accessible one &mdash; two copies of the same words drift, and the accessible one is always the copy that rots.
+      <span class="qe-aim-kept">Kept on <a href="/design#plain-view">Plain view</a>, and on the control at the top of this page.</span>
+    </li>
+    <li>
+      <strong>Accessibility measured, not asserted.</strong> Contrast is held at 7:1 in both grounds and under print emulation &mdash; the house target, not the 4.5:1 floor. Every page has one landmark, real headings, an address for every section, and a printable sheet. None of that is a promise: each claim is checked by a gate that runs before anything ships, and the gates are in the repository where you can run them yourself.
+      <span class="qe-aim-kept">Kept on <a href="/design#built">How it is built</a>, and in <a href="https://github.com/Stimpunks/Queering-Earth/tree/main/tools">the tools directory</a>.</span>
+    </li>
+    <li>
+      <strong>Ask nothing of you.</strong> No analytics, no cookies, no accounts, no comments, no advertising, no newsletter gate, and nothing fetched from anybody else&rsquo;s server unless you press something that says so first. The one field on the site never submits anywhere, and what you search for stays in your own browser.
+      <span class="qe-aim-kept">Kept on <a href="/privacy">What this site knows about you</a>, which is checked against the code every time the code grows a capability.</span>
+    </li>
+  </ol>
+
+  <h2 id="working">How we work <a class="qe-anchor" href="#working"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <ol class="qe-aims" start="12">
+    <li>
+      <strong>In public, with the working-out left in.</strong> The pages, the drawings, the tools, the gates, the attribution ledger, the decision log and every error we have caught in our own work are one public repository at one commit. The register records not only what we mounted but what we took down again and why. Nothing here is finished in private and then presented.
+      <span class="qe-aim-kept">Kept in <a href="https://github.com/Stimpunks/Queering-Earth">the repository</a> and in <a href="/changelog">the register</a>.</span>
+    </li>
+    <li>
+      <strong>Free, forkable, and yes to the machines.</strong> Everything of ours is <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; the works we read belong to the people who made them and were never ours to license. The training crawlers and the retrieval crawlers are named in <code>robots.txt</code> and <strong>allowed</strong>, because a refusal beside a share-alike licence would be a contradiction somebody would eventually have to resolve. <strong>The answer is yes and the ask is attribution</strong> &mdash; so the citation trail is published in the form a machine can actually reach.
+      <span class="qe-aim-kept">Kept in <a href="/robots.txt">robots.txt</a>, in <a href="/llms.txt">llms.txt</a>, and in a Markdown copy beside every page.</span>
+    </li>
+  </ol>
+
+  <h2 id="stimpunks">What a cabinet of readings has to do with Stimpunks <a class="qe-anchor" href="#stimpunks"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Queering Earth is a collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>. Stimpunks is a 501(c)(3) with a mission of its own, published on its own site, and it is worth quoting rather than paraphrasing &mdash; the paraphrase is where a mission usually goes soft, and paraphrase-wearing-a-name is the failure this whole site is organised against.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the foundation&rsquo;s own words</span>
+    <blockquote cite="https://stimpunks.org/mission/">
+      <p>We exist for the direct support and mutual aid of neurodivergent and disabled people.</p>
+      <p>Stimpunks builds accessible infrastructure and public tools that support disabled and neurodivergent people to live with dignity, challenge dehumanizing systems, and design environments that honor difference as strength.</p>
+      <p>We enable the weird, feral, chaotic, and magical people.</p>
+    </blockquote>
+    <figcaption>Stimpunks Foundation, <a href="https://stimpunks.org/mission/"><cite>Mission</cite></a>, read 9 September 2026. Their capitalisation and their spelling.</figcaption>
+  </figure>
+
+  <p><strong>The middle sentence has three verbs in it, and this site is a contribution to each one.</strong> <em>Live with dignity</em> is what a reading does when it hands somebody a word for themselves that is not a deficit. <em>Challenge dehumanizing systems</em> is what Sheet No.&nbsp;4 does to <q>normal</q> and Sheet No.&nbsp;1 does to the army you desert by lying down. <em>Design environments that honor difference as strength</em> is the reason the type on this site plays and the reason plain view exists in the same breath.</p>
+
+  <p>The third sentence is the one that surprised us. <strong>Stimpunks&rsquo; own mission says <q>weird</q></strong> &mdash; and <a href="/invention-of-normal">Sheet No.&nbsp;4</a> is the history of exactly that word being demoted from <i>wyrd</i>, meaning fate, to a name for people who do not fit. The sheet was not written to illustrate the mission. It turned out to be about it.</p>
+
+  <h2 id="more-realms">And what it has to do with More Realms <a class="qe-anchor" href="#more-realms"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The other half is <a href="https://morerealms.com/">Helen Edgar</a>&rsquo;s, and her own landing page states the method this site borrowed before this site existed.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the other masthead</span>
+    <blockquote cite="https://morerealms.com/">
+      <p>This is not a place of conclusions or answers, it&rsquo;s a place to wander, to feel, to think sideways, expand, explore and be inspired.</p>
+    </blockquote>
+    <figcaption>Helen Edgar, <a href="https://morerealms.com/">More Realms</a>, landing page, read 9 September 2026. Her punctuation.</figcaption>
+  </figure>
+
+  <p><q>Not a place of conclusions or answers</q> is the same commitment this site makes when it says there are no hard facts here for everything, arrived at from her side rather than ours. <strong>The tagline on the masthead is hers</strong> &mdash; <q>post-normal possibilities</q>, written in the founding brainstorm &mdash; and the masthead credits Nick Walker beneath it because his book carries the phrase as a subtitle, one hyphen apart. That credit is not an admission of borrowing and does not claim one; it is what you do when a collision is real and a reader will eventually find it.</p>
+
+  <h2 id="the-limit">The limit, said plainly <a class="qe-anchor" href="#the-limit"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p class="qe-register-note"><span class="qe-register-note-label">What this site does not do</span> Stimpunks&rsquo; first programme is direct financial support to individuals &mdash; rent, medical bills, equipment, creator grants, living wages. <strong>This site does none of that and should not be counted as though it did.</strong> No sheet here has paid anybody&rsquo;s rent or replaced anybody&rsquo;s wheelchair. If anything on these pages is worth something to you, the thing that converts it into material help is <a href="https://stimpunks.org/">the foundation</a>, not the artifact.</p>
+
+  <p>The honest claim for a cabinet of readings is narrower, and still worth making. It is what somebody can reach at two in the morning, free, without an account, in a browser, when they have just been told again that the way they are is a defect &mdash; and find a page that takes the question seriously enough to cite its sources.</p>
+
+  <h2 id="stopped">How you could tell if we stopped <a class="qe-anchor" href="#stopped"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p><strong>An aim you cannot fail is not an aim.</strong> Each of these is a condition somebody could observe from outside, with no access to what we meant, which is the only sort of accountability worth publishing.</p>
+
+  <div class="qe-editions-scroll">
+    <table class="qe-editions">
+      <caption>The aim, and the observation that would falsify it</caption>
+      <thead>
+        <tr><th scope="col">Aim</th><th scope="col">What would show we had stopped</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Queering is a verb</th><td>The word used here as a synonym for a demographic, or as something a person <em>is</em> rather than something done to a norm.</td></tr>
+        <tr><th scope="row">Canonised is not settled</th><td>A sheet that arrives at the verdict the work already had, and adds nothing to it but agreement.</td></tr>
+        <tr><th scope="row">The room left open</th><td>A sheet that closes its reading &mdash; that tells you what the poem <em>means</em> rather than what it could mean, and leaves you nothing to disagree with.</td></tr>
+        <tr><th scope="row">If we changed the words</th><td>A quotation here that does not match its source, with the source&rsquo;s name still attached. Or our extension of somebody&rsquo;s idea presented as their reach rather than ours.</td></tr>
+        <tr><th scope="row">Primary sources</th><td>A citation trail that ends at a quote site, an encyclopedia, one of our own pages, or a machine&rsquo;s summary.</td></tr>
+        <tr><th scope="row">Publish the corrections</th><td>A stretch of the register with no corrections in it. We are not that good; a clean run means we stopped looking.</td></tr>
+        <tr><th scope="row">Reader is not the maker</th><td>A page whose byline or metadata names us as the author of the work being read.</td></tr>
+        <tr><th scope="row">One document</th><td>Anything readable only in the decorated version, or an image with words in it that the words are not also in.</td></tr>
+        <tr><th scope="row">Measured, not asserted</th><td>A contrast failure shipped and left standing, a page that comes off a printer blank, or a gate quietly run without its checking flag.</td></tr>
+        <tr><th scope="row">Ask nothing of you</th><td>Any request to a third party that the reader did not choose, or any attempt to find out who is reading.</td></tr>
+        <tr><th scope="row">In public</th><td>A count printed in our prose that nobody can re-derive from the repository.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>Most of those are not hypothetical, and the ones that have already happened here are the reason the list reads the way it does.</strong> This site&rsquo;s working tagline was once a paraphrase of Nick Walker wearing his name, and it was replaced. Eve Tuck and K. Wayne Yang were carried from settler colonialism to masking, and the sheet nearly let their authority cover the move before it was made to say so in a sentence of its own. The plate said <q>Seven sheets</q> above eight cards for as long as the eighth had been up &mdash; a count in our prose that nobody could re-derive, which is the last row of that table, committed by us, on this site, and found only because somebody read down the page and counted.</p>
+
+  <p>Every one of those is in <a href="/changelog">the register</a> with a date on it. That is the point of keeping one.</p>
+
+  <h2 id="who-wrote-this">Who wrote this, and with what <a class="qe-anchor" href="#who-wrote-this"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The reading, the editing, and the deciding are Helen Edgar&rsquo;s and Ryan Boren&rsquo;s; the drafting is done in sessions with an AI assistant, directed and edited by whichever of them is answerable for the sheet. <strong>A tool does not get a row on the label, because a byline is responsibility and a tool cannot carry any</strong> &mdash; but a site that keeps a ledger of everybody else&rsquo;s words owes an honest account of where its own came from, so the arrangement is described rather than left to be inferred.</p>
+
+  <p class="qe-aim-kept">The full statement, including what is never allowed to stand as a citation, is on <a href="/design#who-writes">the colophon</a>.</p>
+
+</main>
+
+<nav class="qe-elsewhere" aria-labelledby="qe-elsewhere-h">
+  <h2 id="qe-elsewhere-h">Elsewhere on the plate</h2>
+  <ul class="qe-elsewhere-grid">
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Plate</span>
+            <span class="qe-card-no">the front</span>
+          </span>
+          <span class="qe-card-title">Queering Earth</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-marigold)">
+        <a class="card" href="/design">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Colophon</span>
+            <span class="qe-card-no">the cabinet</span>
+          </span>
+          <span class="qe-card-title">How this site is made</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-coral)">
+        <a class="card" href="/changelog">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Register</span>
+            <span class="qe-card-no">the changelog</span>
+          </span>
+          <span class="qe-card-title">The accession register</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<footer class="qe-footer">
+  <p><a href="/">Queering Earth</a> is a collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+  <p>Our words licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. The words quoted above belong to the people who wrote them, and both are traced in the site&rsquo;s attribution ledger.</p>
+  <p><a href="/mission">What this cabinet is for</a> &mdash; the aims, each with the page already keeping it, and the failure that would show we had stopped.</p>
+  <p><a href="/design">How this site is made</a> &mdash; the herbarium sheet, the palette, the type, and the borrowed plates.</p>
+  <p><a href="/changelog">The accession register</a> &mdash; every sheet as it was mounted, and every label we corrected.</p>
+  <p><a href="/search">Find a word in the cabinet</a> &mdash; every sheet, every quotation, and every correction, searched in your own browser.</p>
+  <p><a href="/privacy">What this site knows about you</a> &mdash; almost nothing, and the whole of it.</p>
+</footer>
+
+<script src="queering.js"></script>
+</body>
+</html>

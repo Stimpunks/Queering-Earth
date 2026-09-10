@@ -142,6 +142,23 @@ Monotropa uniflora, Dickinson, and monotropism
   - [She kept a herbarium, which is what this site is](https://queering.earth/monotropa-uniflora#a-herbarium)
   - [Not a tragedy](https://queering.earth/monotropa-uniflora#not-a-tragedy)
 
+### The founding papers
+
+-
+
+[What this cabinet is for](https://queering.earth/mission)
+
+  - [The whole of it, in one sentence](https://queering.earth/mission#in-one-sentence)
+  - [What we are claiming](https://queering.earth/mission#claiming)
+  - [How we intend to be right](https://queering.earth/mission#right)
+  - [What we owe whoever is reading](https://queering.earth/mission#owed)
+  - [How we work](https://queering.earth/mission#working)
+  - [What a cabinet of readings has to do with Stimpunks](https://queering.earth/mission#stimpunks)
+  - [And what it has to do with More Realms](https://queering.earth/mission#more-realms)
+  - [The limit, said plainly](https://queering.earth/mission#the-limit)
+  - [How you could tell if we stopped](https://queering.earth/mission#stopped)
+  - [Who wrote this, and with what](https://queering.earth/mission#who-wrote-this)
+
 ### The cabinet itself
 
 -
@@ -154,6 +171,7 @@ Monotropa uniflora, Dickinson, and monotropism
   - [The sentence adapts itself](https://queering.earth/#the-sentence-adapts)
   - [The type plays, and the words do not move](https://queering.earth/#the-type-plays)
   - [What grows here](https://queering.earth/#what-grows-here)
+  - [The founding papers](https://queering.earth/#the-founding-papers)
   - [The cabinet itself](https://queering.earth/#the-cabinet-itself)
 
 -
@@ -179,7 +197,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-115 entries across 26 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+118 entries across 27 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

@@ -190,8 +190,43 @@
 
   <div class="qe-register">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-09-cardorder">
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-mission">
       <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <h2 id="a-2026-09-09-mission">A cabinet that publishes an attribution ledger, a privacy policy and a register of its own errors had never written down what any of it was for <a class="qe-anchor" href="#a-2026-09-09-mission"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">There was a page for what the cabinet holds, a page for how it is made, a page for everything we have got wrong, and a page for what the site knows about you. <strong>There was no page saying what we are trying to do.</strong> That absence is not neutral, and this site already knows why: a project with no stated aim is a project whose aims can drift with nobody able to point at the drift, which is the objection it makes to a quotation nobody can trace and a number nobody can re-derive. <a href="/mission">Sheet-less, numberless, and now written down.</a></p>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="mission">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">Thirteen aims, each naming the page already keeping it &mdash; and, for each, the observation that would falsify it</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The genre is the whole defence against duplication.</strong> The home page already carries 611 words of manifesto across three sections. A mission written as an argument would have restated most of it, and two copies of the same words drift &mdash; the rule this house repeats more than any other. So this is <em>an index of commitments with receipts</em>, which structurally cannot duplicate an argument: every aim ends by naming where it is already being practised, and an aim with no page keeping it would be visible as a hole. The form is <a href="https://starstuff.earth/mission">Star Stuff&rsquo;s</a>, adopted deliberately; the aims are this site&rsquo;s own and several have no counterpart there.</p>
+          <p><strong>An aim you cannot fail is not an aim.</strong> The last section is a table pairing each aim with a condition somebody outside could observe, with no access to what we meant. <strong>Most of them are not hypothetical.</strong> The working tagline was once a paraphrase of Nick Walker wearing his name. Tuck and Yang were carried from settler colonialism to masking and the sheet nearly let their authority cover the move. And the plate said <q>Seven sheets</q> above eight cards &mdash; a count in our prose nobody could re-derive, which is the last row of that table, committed on this site, this week.</p>
+          <p><strong>What it refuses to claim.</strong> Stimpunks&rsquo; first programme is direct financial support to individuals, and a section says plainly that this site does none of it and should not be counted as though it did. No sheet here has paid anybody&rsquo;s rent. The honest claim for a cabinet of readings is narrower and is stated at that width.</p>
+          <p>It is <strong>the first page in a second list</strong> at the foot of the home page. <em>The founding papers</em> is why the cabinet exists; <em>The cabinet itself</em> is how it is made and what it knows about you. Purpose above plumbing, and the split is Star Stuff&rsquo;s too &mdash; see the entry below for the day the first list was built.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">Two quotations from our own two organisations, held to the standard everybody else&rsquo;s words are held to</span></div>
+        <div class="qe-entry-body">
+          <p>The page quotes the Stimpunks Foundation&rsquo;s mission and Helen Edgar&rsquo;s own landing page rather than paraphrasing either, because <strong>the paraphrase is where a mission goes soft</strong> and paraphrase-wearing-a-name is the failure the ledger exists to prevent. Both were read from the primary the day they were mounted, and both are logged.</p>
+          <p><strong>Reading the primary found something, as usual.</strong> Two wordings of the Stimpunks mission sit on the same page &mdash; the statement block says the foundation builds tools that <em>support</em> people to live with dignity, challenge dehumanizing systems and design environments that honor difference as strength; the Mission Compass further down says <em>enables</em> people to live with dignity and stops. We quoted the longer, and the ledger records the discrepancy, because a reader who checks will find both and an unrecorded discrepancy is how a ledger loses its value.</p>
+          <p><strong>Their capitalisation and their spelling are kept.</strong> House style capitalises Autistic and Disabled and spells <i>honour</i>; the quotation does neither. A quotation is not the place to apply house style, and this is the site that says so.</p>
+          <p><strong>And one of their sentences turned out to be about Sheet No.&nbsp;4.</strong> Stimpunks&rsquo; mission says <q>We enable the weird, feral, chaotic, and magical people.</q> <a href="/invention-of-normal">Sheet No.&nbsp;4</a> is the history of that word being demoted from <i>wyrd</i>, meaning fate, to a name for people who do not fit. The sheet was not written to illustrate the mission; the collision was found by reading the mission properly, which is the argument for reading primaries in one sentence.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The Markdown converter now honours a list&rsquo;s start attribute, because thirteen aims in four groups renumbered themselves four times</span></div>
+        <div class="qe-entry-body">
+          <p>The aims run as one sequence across four group headings, which is four <code>ol</code> elements with <code>start</code> on three of them. The converter ignored the attribute, so the page said thirteen aims numbered 1 to 13 and <code>/mission.md</code> said 1&ndash;3, 1&ndash;5, 1&ndash;3, 1&ndash;2. <strong>A converter that silently drops an attribute is the same drift as one that silently drops a tag</strong>, which is the rule that already makes it throw on an unknown element &mdash; it arrived by the other door. It now reads <code>start</code> and throws if it is not a number.</p>
+          <p>Two components were added for the page and both are the <strong>bare</strong> tier: the one-sentence statement, and the aims list. The statement is <em>not</em> a blockquote &mdash; nothing is being quoted, it is the site speaking, and marking our own words as a quotation is the mistake most of these rules exist to avoid. The aims use native <code>ol</code> numbering rather than a counter on a pseudo-element, so a screen reader announces the position, and <strong>no colour goes on the marker</strong>: a <code>::marker</code> is invisible to the contrast gate, which is exactly how this register&rsquo;s own entry bullets once sat at 2.15:1 unreported.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-cardorder">
+      <p class="qe-accession-date">2026 &middot; 9 September</p>
       <h2 id="a-2026-09-09-cardorder">An eighth gate, ported the same day the failure it catches happened twice &mdash; and its first honest run found fifteen more <a class="qe-anchor" href="#a-2026-09-09-cardorder"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">The house rule is to port a Star Stuff check when the failure it catches becomes <em>possible</em> here. <code>check-card-order.mjs</code> did not clear that bar; it cleared a higher one. The plate shipped out of sequence, a sibling nav shipped out of sequence, and <strong>all seven existing gates passed both</strong> &mdash; correctly, because order is not colour, position, freshness, routing, structure, headers or the manifest, and a grid in the wrong order looks exactly like a grid in the right one.</p>
@@ -1485,6 +1520,10 @@
         <h3 class="qe-index-sheet"><a href="/">Queering.Earth</a> <span class="qe-index-kicker">the plate</span></h3>
         <ul></ul>
       </div>
+      <div class="qe-index-group" data-sheet="mission" hidden>
+        <h3 class="qe-index-sheet"><a href="/mission">What this cabinet is for</a> <span class="qe-index-kicker">the founding papers</span></h3>
+        <ul></ul>
+      </div>
       <div class="qe-index-group" data-sheet="design" hidden>
         <h3 class="qe-index-sheet"><a href="/design">How this site is made</a> <span class="qe-index-kicker">the colophon</span></h3>
         <ul></ul>
@@ -1506,6 +1545,7 @@
 <footer class="qe-footer">
   <p><a href="/">Queering Earth</a> is a collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
   <p>Our words licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Everyone quoted above owns their own sentences, and the plates are in the public domain.</p>
+  <p><a href="/mission">What this cabinet is for</a> &mdash; the aims, each with the page already keeping it, and the failure that would show we had stopped.</p>
   <p><a href="/design">How this site is made</a> &mdash; the herbarium sheet, the palette, the type, and the borrowed plates.</p>
   <p><a href="/search">Find a word in the cabinet</a> &mdash; every sheet, every quotation, and every correction, searched in your own browser.</p>
   <p><a href="/privacy">What this site knows about you</a> &mdash; almost nothing, and the whole of it.</p>

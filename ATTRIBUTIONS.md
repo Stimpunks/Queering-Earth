@@ -2110,6 +2110,64 @@ correctly and is where we saw it done.
 
 ----
 
+### Stimpunks Foundation — the mission, and two wordings of it on one page
+
+**Quoted on:** `mission.html`
+
+> We exist for the direct support and mutual aid of neurodivergent and disabled people.
+
+> Stimpunks builds accessible infrastructure and public tools that support disabled and
+> neurodivergent people to live with dignity, challenge dehumanizing systems, and design
+> environments that honor difference as strength.
+
+> We enable the weird, feral, chaotic, and magical people.
+
+**Source:** Stimpunks Foundation, [*Mission*](https://stimpunks.org/mission/), stimpunks.org.
+
+**Verified:** 2026-09-09, read from the page itself rather than from our own library. The
+three sentences are in the "We, Stimpunks" statement blocks; the third heads the *We enable*
+section.
+
+**Their capitalisation and their spelling, kept.** House style capitalises Autistic and
+Disabled and spells *honour*; the quotation does neither, and a quotation is not the place
+to apply house style. `honor` and `dehumanizing` are US spellings on a US foundation's site.
+
+**Two wordings of the mission appear on that one page, and we quoted the longer.** The
+"We, Stimpunks" block says Stimpunks builds tools that **support** people to live with
+dignity, challenge dehumanizing systems, and design environments that honor difference as
+strength. The Mission Compass further down the same page says it **enables** people to live
+with dignity, and stops there. We quoted the first because it is the fuller statement and
+because our page leans on its three verbs; noted here because a reader who checks the
+primary will find both, and discovering a discrepancy unrecorded is how a ledger loses its
+value.
+
+**Not paraphrased, deliberately.** `/mission` says so in the sentence introducing the
+quotation: the paraphrase is where a mission goes soft, and paraphrase-wearing-a-name is the
+failure this whole file exists to prevent.
+
+----
+
+### Helen Edgar — More Realms, and the method stated on her own landing page
+
+**Quoted on:** `mission.html`
+
+> This is not a place of conclusions or answers, it’s a place to wander, to feel, to think
+> sideways, expand, explore and be inspired.
+
+**Source:** Helen Edgar, [More Realms](https://morerealms.com/), landing page.
+
+**Verified:** 2026-09-09, read from the page.
+
+**Her punctuation, including the comma splice and the curly apostrophe.** The sentence joins
+two independent clauses with a comma; that is how it is written and it is not ours to tidy.
+
+**Why it is on our mission page.** Queering Earth says there are no hard facts here for
+everything and that the room left open is the product. Helen had written the same commitment
+on her own site before this one existed, in her words rather than ours — so the page quotes
+her rather than restating it, which would have made our sentence look like the original.
+
+----
+
 ## Open
 
 ### Two sentences on the Miranda sheet claim a little more than their source does

@@ -27,6 +27,10 @@ tools/make-markdown.mjs; nothing here is hand-kept.
 - [A Waste Garden, Flowering at Its Will](https://queering.earth/flower-codes): Violet, pansy, green carnation, and lavender were worn as code. Each was read by the people it was meant to escape and turned into the word that named you, and each was picked up again afterwards. With the 1926 sentence about a streak of lavender, and the man it is actually about. [Markdown](https://queering.earth/flower-codes.md)
 - [The Preferred Flower of Life](https://queering.earth/monotropa-uniflora): Monotropa uniflora, the ghost pipe: a plant with no chlorophyll that feeds off fungi, the flower Emily Dickinson called the preferred flower of life, and the Greek root it shares with monotropism. [Markdown](https://queering.earth/monotropa-uniflora.md)
 
+## The founding papers
+
+- [What this cabinet is for](https://queering.earth/mission): The mission of queering.earth, in thirteen aims — each with the page where it is already being kept, and the failure that would show we had stopped. Then what a cabinet of readings has to do with a foundation whose first business is paying people's rent, including the half of that a reading cannot do. [Markdown](https://queering.earth/mission.md)
+
 ## The cabinet itself
 
 - [Queering Earth](https://queering.earth/): Reading the world through a queering lens — art, literature, poetry, politics, people, history — and asking what else any of it could have been. A Stimpunks Foundation and More Realms collaboration. [Markdown](https://queering.earth/index.md)

@@ -13,10 +13,18 @@
  *
  * A NEW SHEET GOES IN A GROUP. make-markdown.mjs throws on a page in none, which is
  * the reminder.
+ *
+ * THE LAST TWO GROUPS ARE NOT ONE GROUP, and the split is the editorial judgement
+ * this file exists to hold. `The founding papers` is why the cabinet exists; `The
+ * cabinet itself` is how it is made, recorded, searched, and what it knows about
+ * the reader. Purpose above plumbing. The same two headings are the two lists at
+ * the foot of the home page, so a page filed in the wrong one here is announced to
+ * agents under a heading that disagrees with the one a reader sees.
  */
 export const GROUPS = [
   ['The readings', ['on-being-ill', 'coming-to-terms', 'promises-like-pie-crust', 'invention-of-normal',
                     'the-tempest', 'wild-nights', 'flower-codes', 'monotropa-uniflora']],
+  ['The founding papers', ['mission']],
   ['The cabinet itself', ['index', 'design', 'changelog', 'search', 'privacy']],
 ];
 

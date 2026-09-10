@@ -1790,6 +1790,71 @@ html.plain .qe-furniture dt a { font-variation-settings: normal; font-weight: 70
   .qe-elsewhere { display: none; }
 }
 
+/* ─────────────────────────────────────────────── the aims, and the one sentence
+ *
+ * Components used only by /mission. Here rather than on that page because the
+ * palette lives in one file and nothing else may write a hex — the same reason
+ * the colophon's own swatches are here.
+ *
+ * THE STATEMENT. One sentence, set larger than the prose around it, in the
+ * display face. Not a blockquote: nothing is being quoted, it is the site
+ * speaking, and marking our own words as a quotation is the mistake this house
+ * spends most of its rules avoiding. Bare tier — no fill, no box.
+ */
+.qe-pull {
+  font-family: var(--qe-display);
+  font-size: 1.42rem;
+  line-height: 1.42;
+  font-weight: 500;
+  font-variation-settings: "SOFT" 35, "WONK" 1;
+  color: var(--qe-ink);
+  margin: var(--qe-space-4) 0 var(--qe-space-5);
+  max-width: 32rem;
+}
+html.plain .qe-pull { font-variation-settings: normal; font-weight: 600; }
+
+/* THE AIMS. An ordinary ordered list, because it is one and the numbering is the
+ * whole apparatus — the page says thirteen and the reader can count to thirteen.
+ * Native <ol> numbering rather than a counter on a pseudo-element, so a screen
+ * reader announces the position and `start` keeps one sequence running across the
+ * four group headings.
+ *
+ * NO COLOUR ON THE MARKER. A ::marker is not an element with text of its own, so
+ * check-contrast.mjs cannot see it — which is exactly how the register's entry
+ * bullets sat at 2.15:1 unreported. The number inherits --qe-ink and only the face
+ * is changed, which is a property the gate does not need to measure.
+ */
+.qe-aims {
+  margin: var(--qe-space-4) 0 var(--qe-space-5);
+  padding-left: 2.1rem;
+}
+.qe-aims > li {
+  margin-bottom: var(--qe-space-4);
+  padding-left: 0.35rem;
+}
+.qe-aims > li:last-child { margin-bottom: 0; }
+.qe-aims > li::marker {
+  font-family: var(--qe-display);
+  font-weight: 600;
+}
+html.plain .qe-aims > li::marker { font-family: var(--qe-body); }
+
+/* Where the aim is already being kept. Moss at 7.8:1 on paper and 7.2:1 in the
+   drawer — a text token, not one of the decorative seven, because this is a line
+   somebody reads rather than a label they glance at. */
+.qe-aim-kept {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: var(--qe-moss);
+}
+
+@media print {
+  /* An aim and the page keeping it must not be split across a sheet. */
+  .qe-aims > li { break-inside: avoid; }
+}
+
 /* ─────────────────────────────────────────────── the colophon
  *
  * Components used only by /design. They are here rather than in that page because

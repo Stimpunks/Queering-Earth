@@ -308,6 +308,8 @@ og_card(REPO/"images"/"og-monotropa-uniflora.png", "The Preferred Flower of Life
         "Sheet · a wall",
         "A plant that will not photosynthesise, and the word it shares with a mind.",
         LICHEN, sprig=ghost_pipes)
+og_card(REPO/"images"/"og-mission.png", "What this cabinet is for", "The founding papers",
+        "Thirteen aims, each with the page where it is already being kept.", VIOLET)
 og_card(REPO/"images"/"og-design.png", "How this site is made", "Colophon",
         "A Victorian herbarium sheet as the model: the palette, the type, the drawings.", MARIGOLD)
 og_card(REPO/"images"/"og-changelog.png", "The accession register", "Register · the changelog",

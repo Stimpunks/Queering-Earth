@@ -190,8 +190,18 @@ function toMarkdown(html, file) {
         break;
       }
       case 'ul': case 'ol': {
+        /* `start` is honoured because /mission runs one numbered sequence of aims
+           across four <ol>s, one per group heading. Ignoring it renumbered every
+           group from 1, so the page said "thirteen aims" numbered 1-13 and the
+           Markdown an agent fetches said 1-3, 1-5, 1-3, 1-2. A converter that
+           silently drops an attribute is the same drift as one that drops a tag. */
         if (t.close) { listStack.pop(); nl(2); }
-        else { nl(2); listStack.push({ ordered: t.tag === 'ol', n: 0 }); }
+        else {
+          const from = t.tag === 'ol' && a.start !== undefined ? Number(a.start) : 1;
+          if (!Number.isFinite(from)) throw new Error(`${file}: <ol start="${a.start}"> is not a number`);
+          nl(2);
+          listStack.push({ ordered: t.tag === 'ol', n: from - 1 });
+        }
         break;
       }
       case 'li': {

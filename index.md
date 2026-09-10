@@ -135,6 +135,13 @@ Nothing is fetched from YouTube until you press play. Press it and your browser 
 
 Uploaded by [tim24frames](https://www.youtube.com/@tim24frames). Eliot recorded the poem more than once, and we have not established which reading this is or who holds the recording — so it is somebody else’s copy of somebody else’s tape, linked and labelled as exactly that.
 
+## The founding papers
+
+Why this cabinet exists, and what it is for.
+
+**[What this cabinet is for](https://queering.earth/mission)**
+: Thirteen aims, each one naming the page where it is already being kept — and, for each, the observation that would show we had quietly stopped. An aim you cannot fail is not an aim.
+
 ## The cabinet itself
 
 Four pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything.
