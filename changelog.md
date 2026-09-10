@@ -36,6 +36,28 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## Two pages of this cabinet had addresses, were listed on the home page, and were reachable from the foot of nothing
+
+The footers had drifted into three shapes: fifteen carrying the cabinet pages as authored gloss sentences, one carrying a short row of three, and the home page carrying none by design. **The inconsistency was the symptom; the defect underneath it was that [the ledger](https://queering.earth/ledger) and [the decision log](https://queering.earth/what-is-settled) appeared in no footer at all**, two days after they were given addresses. Every footer is now a row of short links, the collaboration line, that page’s own licence sentence, and on the sheets one sentence pointing at the ledger — 32 to 98 words where there were 107 to 226.
+
+CabinetEighty copies of five sentences, and the one place they were supposed to live
+
+Each cabinet page was introduced in the footer by an authored one-line gloss. **Five sentences restated across sixteen pages is eighty copies of editorial prose, every one of them free to drift**, and drift is what happened — which is how two pages could go missing from all of them at once without anybody noticing. The glosses still exist, once, in the furniture list on the home page, which is where this cabinet already said those sentences live.
+
+**The row uses short names, and that is a second name for those pages.** It says *Colophon*, *Register*, *Decisions*; the pages call themselves [How this site is made](https://queering.earth/design), [The accession register](https://queering.earth/changelog) and [What is settled, and what is open](https://queering.earth/what-is-settled). A row of links and a page title are different registers, and the rule against a second name is about the group headings, where a name identifies a set. The addresses are unchanged.
+
+The home page keeps its bare footer: its furniture list sits two paragraphs above, with the same seven pages and their glosses, and a row of the same links directly beneath would be two lists of one thing.
+
+CabinetWhere a sheet says which copy it read, and why that is not the provenance line
+
+Six sheets carried a paragraph of sourcing in the footer — which printing, how many scans, which page. The question was whether it belonged in **the provenance line** instead. It does not, and the reason is worth writing down: **provenance here is accession history** — when the sheet was mounted, how often its label has been corrected, each clause linked to the entry that did it. It is identical in shape on all eight sheets, and that sameness is what lets a reader scan it.
+
+**Which copy we read is a different fact with a different life.** It is about the works the sheet reads rather than the sheet’s life in this collection, and putting it in the provenance line would bury the *mounted, corrected twice* pattern under prose that changes from sheet to sheet. It also already has two homes: the specimen block at the head of every sheet, and the ledger.
+
+So the footer keeps one sentence — every quotation here was read in the work it comes from, and is logged in the ledger — and the trail stays where it was. What is lost is detail like *read in three separately scanned copies*, which is in the ledger, and which the sheets saying it were saying for the third time.
+
+2026 · 9 September
+
 ## A way back to the top, drawn as growth rather than as a chevron
 
 Every footer now ends in a link back to the top of the page: the words *Scroll to top*, a small stand of grass under them, and no script at all — an anchor already scrolls, and this site’s smooth scrolling was gated on reduced motion the day it was written.

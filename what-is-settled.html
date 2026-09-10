@@ -187,6 +187,17 @@
 <p><strong>Still open:</strong> whether either section keeps a prose intro once it holds more than four entries.</p>
 <hr>
 <h2 id="settled">Settled <a class="qe-anchor" href="#settled"><span class="qe-sr">Link to this section</span></a></h2>
+<h3 id="one-footer-and-why-sourcing-does-not-move-into-the-provenance-line-2026">One footer, and why sourcing does not move into the provenance line (2026-09-09) <a class="qe-anchor" href="#one-footer-and-why-sourcing-does-not-move-into-the-provenance-line-2026"><span class="qe-sr">Link to this section</span></a></h3>
+<p><strong>Settled.</strong> Ryan noticed the footers had drifted apart. A survey of all seventeen found three shapes and a hole:</p>
+<div class="qe-editions-scroll"><table class="qe-editions"><thead><tr><th scope="col">shape</th><th scope="col">pages</th></tr></thead><tbody><tr><td>Long — five cabinet links as authored gloss sentences, 6–8 paragraphs</td><td><strong>15</strong>, 107–226 words</td></tr><tr><td>Compact — a row of three, plus two links still as sentences, no licence line</td><td><strong>1</strong> (<code>/monotropa-uniflora</code>)</td></tr><tr><td>Bare — identity and licence only</td><td><strong>1</strong> (<code>/index</code>, deliberate)</td></tr></tbody></table></div>
+<p><strong>And every footer on the site was missing <code>/ledger</code> and <code>/what-is-settled</code></strong> — both had addresses, both were listed on the home page, and neither was reachable from the foot of any page. That was the real defect; the inconsistency was how it stayed invisible.</p>
+<p><strong>Now: a row of short links, the collaboration line, that page's own licence sentence, and on sheets one sourcing sentence.</strong> 32–98 words instead of 107–226. The home page keeps its bare footer, because <code>.qe-furniture</code> sits two paragraphs above it with the same seven pages and their glosses.</p>
+<p><strong>The glosses were the thing worth dropping.</strong> Five authored sentences restated on sixteen pages is eighty copies of editorial prose free to drift, and drift is exactly what happened. They still exist once, on the home page, which is where this repo already said those sentences live.</p>
+<p><strong>Short nav labels are a second name, and that is fine here.</strong> <em>Colophon</em>, <em>Register</em> and <em>Decisions</em> are not what those pages call themselves. A row of links and a page title are different registers; the rule against a second name governs the <strong>group headings</strong>, where the name identifies a set. <code>/what-is-settled</code> keeps its address.</p>
+<p><strong>Sourcing does not move into <code>.qe-provenance</code>, and that was the interesting question.</strong> Ryan asked whether the per-sheet attribution prose belonged there. It does not:</p>
+<ul><li><code>.qe-provenance</code> is <strong>accession history</strong> — when the sheet was mounted, how often its label was corrected, each clause linked to the register entry that did it. It is identical in shape on all eight sheets, and that uniformity is what makes it scannable.</li><li>Sourcing is about <strong>the works the sheet reads</strong>, not the sheet's life in this collection. Different fact, different lifecycle. Merging them buries the <em>mounted / corrected twice</em> pattern under prose that varies per sheet.</li><li>It already has two homes: the <strong>specimen block</strong> at the head of each sheet (<code>MANUSCRIPT</code>, <code>FIRST PRINTED</code>, <code>THIS TEXT</code>) and <strong><code>/ledger</code></strong>.</li></ul>
+<p>So the footer keeps one sentence — <em>every quotation here was read in the work it comes from, and is logged in the attribution ledger</em> — and the trail lives where it already lived. What is lost is per-sheet detail like <em>read in three separately scanned copies</em>; that is in the ledger, and the sheets that said it were saying it a third time.</p>
+<p><strong>One thing to check by eye.</strong> <code>/monotropa-uniflora</code> had no licence line at all — the compact footer had dropped it — so it was given the wording two comparable sheets already use: <em>Our words licensed CC BY-SA 4.0. Everyone else's belong to them, or to nobody.</em> Accurate for what that sheet quotes, but supplied rather than authored.</p>
 <h3 id="back-to-the-top-drawn-as-growth-rather-than-as-a-chevron-2026-09-09">Back to the top, drawn as growth rather than as a chevron (2026-09-09) <a class="qe-anchor" href="#back-to-the-top-drawn-as-growth-rather-than-as-a-chevron-2026-09-09"><span class="qe-sr">Link to this section</span></a></h3>
 <p><strong>Settled.</strong> Ryan wanted a way back up after finishing a piece, and asked for a footer illustration of grasses whose taller stems form an arrow, with <em>Scroll to top</em> above them.</p>
 <p><strong>The arrowhead is a seed head.</strong> A chevron drawn over grass is a UI arrow in a costume, and this site already has a native idiom for "up": growth, stems drawing themselves on from the ground. Two tall blades arc up and converge at the middle stem's head, and the silhouette is an arrow without one being drawn. <strong>The first attempt put two short awns on the head and read as a small figure with its arms raised</strong> — looked at, and redrawn, which is what this repo's own rule about judging a drawing at its shipped size is for.</p>
@@ -654,13 +665,20 @@ netlify api getSite --data '{"site_id":"4115815c-5811-4df6-8f6f-9598e85d2d72"}' 
 </nav>
 
 <footer class="qe-footer">
-  <p>Queering Earth is a collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+  <p class="qe-footer-nav">
+    <a href="/">Queering Earth</a>
+    <a href="/mission">Mission</a>
+    <a href="/design">Colophon</a>
+    <a href="/changelog">Register</a>
+    <a href="/ledger">Ledger</a>
+    <a href="/what-is-settled" aria-current="page">Decisions</a>
+    <a href="/search">Search</a>
+    <a href="/privacy">Privacy</a>
+  </p>
+
+  <p>A collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+
   <p>Words and art licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Take them and make something.</p>
-  <p><a href="/mission">What this cabinet is for</a> &mdash; the aims, each with the page already keeping it, and the failure that would show we had stopped.</p>
-  <p><a href="/design">How this site is made</a> &mdash; the herbarium sheet, the palette, the type, and the borrowed plates.</p>
-  <p><a href="/changelog">The accession register</a> &mdash; every sheet as it was mounted, and every label we corrected.</p>
-  <p><a href="/search">Find a word in the cabinet</a> &mdash; every sheet, every quotation, and every correction, searched in your own browser.</p>
-  <p><a href="/privacy">What this site knows about you</a> &mdash; almost nothing, and the whole of it.</p>
 
   <a class="qe-totop" href="#main">
     <span class="qe-totop-label">Scroll to top</span>

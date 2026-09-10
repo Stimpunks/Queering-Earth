@@ -142,6 +142,34 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
+### One footer, and why sourcing does not move into the provenance line (2026-09-09)
+
+**Settled.** Ryan noticed the footers had drifted apart. A survey of all seventeen found three shapes and a hole:
+
+| shape | pages |
+| --- | --- |
+| Long — five cabinet links as authored gloss sentences, 6–8 paragraphs | **15**, 107–226 words |
+| Compact — a row of three, plus two links still as sentences, no licence line | **1** (`/monotropa-uniflora`) |
+| Bare — identity and licence only | **1** (`/index`, deliberate) |
+
+**And every footer on the site was missing `/ledger` and `/what-is-settled`** — both had addresses, both were listed on the home page, and neither was reachable from the foot of any page. That was the real defect; the inconsistency was how it stayed invisible.
+
+**Now: a row of short links, the collaboration line, that page's own licence sentence, and on sheets one sourcing sentence.** 32–98 words instead of 107–226. The home page keeps its bare footer, because `.qe-furniture` sits two paragraphs above it with the same seven pages and their glosses.
+
+**The glosses were the thing worth dropping.** Five authored sentences restated on sixteen pages is eighty copies of editorial prose free to drift, and drift is exactly what happened. They still exist once, on the home page, which is where this repo already said those sentences live.
+
+**Short nav labels are a second name, and that is fine here.** *Colophon*, *Register* and *Decisions* are not what those pages call themselves. A row of links and a page title are different registers; the rule against a second name governs the **group headings**, where the name identifies a set. `/what-is-settled` keeps its address.
+
+**Sourcing does not move into `.qe-provenance`, and that was the interesting question.** Ryan asked whether the per-sheet attribution prose belonged there. It does not:
+
+- `.qe-provenance` is **accession history** — when the sheet was mounted, how often its label was corrected, each clause linked to the register entry that did it. It is identical in shape on all eight sheets, and that uniformity is what makes it scannable.
+- Sourcing is about **the works the sheet reads**, not the sheet's life in this collection. Different fact, different lifecycle. Merging them buries the *mounted / corrected twice* pattern under prose that varies per sheet.
+- It already has two homes: the **specimen block** at the head of each sheet (`MANUSCRIPT`, `FIRST PRINTED`, `THIS TEXT`) and **`/ledger`**.
+
+So the footer keeps one sentence — *every quotation here was read in the work it comes from, and is logged in the attribution ledger* — and the trail lives where it already lived. What is lost is per-sheet detail like *read in three separately scanned copies*; that is in the ledger, and the sheets that said it were saying it a third time.
+
+**One thing to check by eye.** `/monotropa-uniflora` had no licence line at all — the compact footer had dropped it — so it was given the wording two comparable sheets already use: *Our words licensed CC BY-SA 4.0. Everyone else's belong to them, or to nobody.* Accurate for what that sheet quotes, but supplied rather than authored.
+
 ### Back to the top, drawn as growth rather than as a chevron (2026-09-09)
 
 **Settled.** Ryan wanted a way back up after finishing a piece, and asked for a footer illustration of grasses whose taller stems form an arrow, with *Scroll to top* above them.

@@ -1195,6 +1195,59 @@ html.plain .qe-specimen blockquote { font-variation-settings: normal; }
 .qe-footer p { margin: 0 0 0.75rem; }
 .qe-footer a { color: var(--qe-rust); }
 
+/* ─── the cabinet, in one row
+ *
+ * ONE ROW OF SHORT NAMES, NOT FIVE SENTENCES. Fifteen footers carried the cabinet
+ * pages as authored one-line glosses, one carried three of them as a row, and the
+ * home page carried none — and every one of the seventeen had lost `/ledger` and
+ * `/what-is-settled` entirely, which had addresses and were listed on the home page
+ * and reachable from no footer at all. Five glosses restated on sixteen pages is
+ * eighty copies of authored prose free to drift, and it had drifted. The glosses
+ * still exist, once, in `.qe-furniture` on the home page, which is where this file
+ * already says those sentences live.
+ *
+ * A NAV LABEL AND A PAGE NAME ARE DIFFERENT REGISTERS, which is the one thing to
+ * be careful of here: "Colophon" and "Register" are not what those pages call
+ * themselves. That is allowed for a row of links and is NOT allowed for the group
+ * headings — see the note about a second name for a set that has one. "Decisions"
+ * points at `/what-is-settled`, and the address stays that way for the filesystem
+ * reason recorded elsewhere in this file.
+ *
+ * THE HOME PAGE DOES NOT GET THE ROW. Its furniture list sits two paragraphs above
+ * the footer with all seven of these pages and their glosses; a row of the same
+ * links directly beneath is two lists of one thing.
+ *
+ * THE SEPARATOR IS DRAWN AND NEVER READ — the same alt-text device as the section
+ * mark. It trails its own link rather than leading the next one, so a row that
+ * wraps never starts a line with a stray mark, and it is `inline-block` so the
+ * link.s underline does not run through it. */
+.qe-footer-nav {
+  /* Tall enough that padded targets on adjacent wrapped lines cannot overlap. */
+  line-height: 2.9;
+  margin: 0 0 var(--qe-space-2);
+}
+.qe-footer-nav a {
+  display: inline-block;
+  /* 0.6rem either side of a 0.98rem line brings each to 44px tall. NO horizontal
+     padding, and that is measured rather than tidy: with it the eight links came to
+     636px of ink in a 640px measure and wrapped, orphaning Privacy on a line of its
+     own. Without it, and with the separator at 0.55rem, the row is 575px and sits on
+     one line with room to spare. The row is the only place on this site where eight
+     targets sit side by side, so they were measured after: none overlaps, each is
+     past 44px in both directions, and each takes its own tap. */
+  padding: 0.6rem 0;
+}
+.qe-footer-nav a:not(:last-of-type)::after {
+  content: "\00B7" / "";
+  display: inline-block;
+  margin-left: 0.55rem;
+  color: var(--qe-rule);
+}
+/* You are here. The footer already self-linked on every furniture page; now it says
+   so, as the finding aid.s control in the header does. */
+.qe-footer-nav a[aria-current="page"] { color: var(--qe-ink); }
+
+
 
 /* ─────────────────────────────────────────────── back to the top
  *

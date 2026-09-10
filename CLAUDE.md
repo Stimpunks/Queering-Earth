@@ -817,8 +817,30 @@ sentences are authored, and `queering.js` may not write words. So such a page is
 JSON-LD block — no plate number, no accession stamp, no `.qe-provenance`, because a stamp
 is for a specimen.
 
-**The four links left the home page's footer and no other page's.** On the home page they
-are two paragraphs above it; everywhere else the footer is still the way there.
+**EVERY FOOTER IS THE SAME FOUR BLOCKS, AS OF 2026-09-09**: a row of short links, the
+collaboration line, that page's own licence sentence, and — on the eight sheets — one
+sentence pointing at `/ledger`. **The home page is the exception and keeps a bare footer**,
+because `.qe-furniture` sits two paragraphs above it with all seven of these pages and their
+glosses, and a row of the same links directly beneath is two lists of one thing.
+
+**A NAV LABEL AND A PAGE NAME ARE DIFFERENT REGISTERS.** The row says *Colophon*, *Register*,
+*Decisions*; those pages call themselves *How this site is made*, *The accession register*,
+*What is settled, and what is open*. That is allowed for a row of links and is **not** allowed
+for the group headings above — a second name for a *set* that has one is drift, a short label
+for a *link* is not. *Decisions* points at `/what-is-settled`, and the address stays that way
+for the filesystem reason recorded in this file.
+
+**The glosses live once, in `.qe-furniture`.** They used to be restated on fifteen footers:
+five authored sentences across sixteen pages is eighty copies free to drift, and they had.
+**Two pages were missing from every footer on the site** — `/ledger` and `/what-is-settled`
+had addresses, were listed on the home page, and were reachable from no footer at all.
+
+**Sourcing on a sheet is one sentence pointing at the ledger, and it does NOT go in the
+provenance line.** `.qe-provenance` is accession history — mounted when, corrected how often,
+each clause linked to the register entry that did it — and it is identical in shape across
+all eight sheets, which is what makes it scannable. Which copy we read is a different fact
+with a different lifecycle, and it already has two homes: the specimen block at the head of
+the sheet, and `/ledger`.
 
 **The target is the line, not the letters.** A `<dt>` that is entirely a link is not an
 inline link inside a sentence, so WCAG 2.5.8's inline exception does not cover it. Padding
