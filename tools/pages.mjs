@@ -24,7 +24,7 @@
 export const GROUPS = [
   ['The readings', ['on-being-ill', 'coming-to-terms', 'promises-like-pie-crust', 'invention-of-normal',
                     'the-tempest', 'wild-nights', 'flower-codes', 'monotropa-uniflora',
-                    'five-unmistakable-marks']],
+                    'five-unmistakable-marks', 'other-people-who-have-it']],
   ['The founding papers', ['mission', 'manifesto']],
   ['The cabinet itself', ['index', 'design', 'changelog', 'search', 'ledger', 'what-is-settled', 'privacy']],
 ];

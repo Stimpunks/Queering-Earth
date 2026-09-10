@@ -36,6 +36,72 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 10 September · latest
 
+## Sheet No. 10, on a disability invented because nobody had it, and the readers who do
+
+Ryan’s, from his own reading of Sami Schalk on Octavia E. Butler. Schalk calls hyperempathy “a nonrealist disability that is both mental and physical in origin and manifestation”; Ryan’s note said only “Except, it’s quite real for many Autistic people, including myself,” and asked for a sheet. Four faults surfaced in the sourcing before a word of it was written, and three of them were ours.
+
+MountedThe argument is not that Schalk is wrong, and finding the version that is not cheap took the whole research pass
+
+*Bodyminds Reimagined* chapter 3 is the best thing written about hyperempathy. It clears four “totalizing” readings out of the way, refuses the gift narrative that Lauren Olamina herself refuses in the text, and names the pull behind that narrative exactly — “a liberal compensatory desire to recast disability as ‘specialness’”. **The sheet endorses nearly all of it, and says so in its own words rather than leaving the endorsement implied.**
+
+The argument is with one clause and what rests on it. Schalk’s protective mechanism is that hyperempathy “is not a disability we recognize in our current reality”, so a reader cannot overlay a stereotype they already hold. **That protection is bought with unfamiliarity, which means it is only available to a reader who does not have the thing.** For an Autistic reader it inverts: we do overlay, we cannot help it, and what we overlay is a life rather than a preconception. A claim whose truth depends on who is holding it is this site’s own method turned on a book we admire.
+
+**Schalk names autism in the same paragraph**, by way of Stuart Murray, as the recognised disability whose cultural familiarity gets it flattened. The two claims sit one sentence apart: autism is the familiar thing that gets stereotyped, hyperempathy the unfamiliar thing that cannot be.
+
+**And the fairest account of how it happened is the most damning thing on the sheet, and it is not about Schalk.** *Bodyminds Reimagined* is 2018. The study that put Autistic hyper-empathy on the record says, in 2024, that “there has been limited theoretical and empirical work looking at this as a specific phenomenon worthy of study in its own right.” Autistic people had been saying it for decades; the journals had not written it down. A scrupulous scholar reading the literature as it stood could conclude in good faith that there was no real-world equivalent, because the equivalent was community knowledge and community knowledge was not yet citable. **That gap is the epistemic injustice the chapter is otherwise so good on, arriving from behind and taking the premise.**
+
+MountedOne sprig drawn twice and translated, because a mirrored pair says reflection and this is not a reflection
+
+The masthead is a single cut sprig emitted twice: the left copy in solid ink, the right copy in outline only, identical in geometry and displaced. **The solid copy is the event and the hollow copy is the sensation**, so reading order is causation — the thing happens on the left and is felt again on the right, in a body it did not happen to. Butler’s own gloss is on the sheet: “I get a lot of grief that doesn’t belong to me, and that isn’t real. But it hurts.”
+
+**Translated and never mirrored, which is the one thing that could not slip.** A mirrored pair either side of a meridian is the Rorschach read [the moth](https://queering.earth/#queering-is-a-verb) already paid for three times, and it would have said *reflection* — wrong twice over, because mirror-touch is not a reflection but a recurrence in another body. The displacement is also deliberately not axis-aligned, so the second copy cannot read as a shadow. Nothing here casts anything.
+
+The hollow copy is `.rib`: `fill: none` on a `--qe-moss` stroke, which is exactly the ghost this drawing needed and is already reached by the print sheet and by the forced-colours block. **No new art class, so no new gap in either.** Both copies take `--qe-moss` and neither needs a cabinet rule.
+
+Two things the generator had to be told. **A left-pointing leaf must not wear `.sprout-leaf`**, whose `transform-origin` is the fill-box left edge — a leaf pointing left would unfurl from its tip instead of from where it joins the stem, so the three left leaves are plain `.sprout`. And **both offsets are baked into every coordinate**, because a CSS transform animation overrides an SVG transform attribute on the same element and would collapse all twelve sprouts onto the origin. Leaves sit on the stem’s own normal at five parameters, each rotated toward the tip so none is square to the stem; square leaves read as a fishbone. Bounding box asserted rather than eyeballed: x 84.0 to 475.8, y 32.0 to 227.0 inside 560 × 260.
+
+**The two stems ink on together and that is a limitation, not a choice.** `.stem` has no per-element delay hook and inventing one would mean a new class. The echo is carried by the leaves instead: the solid sprig’s five unfurl, then the hollow sprig’s five.
+
+Label correctedA quotation arrived under the wrong Butler novel, at a page number that was not a page number
+
+The brief cited “Hyperempathy syndrome is a delusional disorder, after all… it hurts like hell” as *Parable of the Sower*, p. 330. **It is *Parable of the Talents*, p. 9.**
+
+**A tooling fault and nobody’s transcription.** The Kindle file for *Sower* carries a publisher’s preview of *Talents* after the novel ends and marks the join nowhere. Highlights run past it; the last line of *Sower* is “decided to call this place Acorn”, and everything after that is the second book — Jarret, Asha Vere, the funeral verses. A Readwise export is titled for the file, so highlights from two books arrive under one heading.
+
+**The visible tell is a page counter that stops.** The reader shows “Page 330 of 330” at 85% of the file, because the print-page map covers *Sower* only and then repeats its own last page. So “p. 330” was not a page number at all, and **re-titling alone would have left a citation wrong in a harder way to catch** — right book, plausible number, no relation to the text. The real page came off the standalone *Talents*, whose own counter reads 9 of 394 under a running head that says so.
+
+The general shape is the part worth keeping: **an appended preview is a second work inside one file**, and every tool in the chain takes the file as the unit — page map, export title, highlight location. A citation is only as good as the assumption that one file is one book, and that assumption is quietly false at the end of most ebooks sold today.
+
+Label correctedThe empathy study is a 2024 article behind a 2023 DOI, and its accepted manuscript is not quotable
+
+Everything convenient said 2023: the DOI slug `aut.2023.0001`, and the repository deposit record for the accepted manuscript. **The issue is 2024.** Kimber, Verrier and Connolly, *Autism in Adulthood* 6, no. 3 (2024), pp. 321–330, Mary Ann Liebert, Inc. Corroborated in Crossref and in the NLM’s PubMed record before it was written down, and then read off the article.
+
+**Second instance of a pattern, so it is now a rule rather than a note.** The first was *Experiences of autistic joy*, where 2025 was the online-first date and the issue was 2026. **Online-first year is not issue year, and a DOI slug is not a date.** A paper newly cited here takes its volume, issue, pages and year from a bibliographic database — never from the PDF, the DOI, or a repository deposit.
+
+**Cite Mary Ann Liebert and not SAGE.** Crossref returns SAGE because SAGE acquired the journal after publication; the article’s own first page says Liebert. Name the imprint on the artefact, which is the reasoning that already makes a sheet name the printing it read.
+
+**The accepted manuscript corroborates the substance and may not supply a word of the wording.** It is the authors’ British-spelled pre-copy-edit text, and the differences are not all orthographic: the Conclusion is a different sentence, “but to better bridge the gap” against “but also better bridge the gap”. Anybody assuming the two states differed only in `-ise` and `-ize` would have quoted it wrong while feeling careful.
+
+**And the version of record disagrees with itself on the headline figure**, which is the detail most likely to be tidied by a later hand: “Seventy-eight percent” in the Results at p. 325, “seventy eight percent” where the Discussion restates it at p. 326. The sheet quotes the Results occurrence, and any sheet quoting both must reproduce both forms.
+
+**The participants are quoted with no identifiers at all** — no pseudonym, number or demographic tag. The ledger elsewhere credits study participants by the names their paper gives them; here there are none, so the sheet’s caption says the anonymity is the paper’s and not our omission. Those two look identical on the page and needed telling apart.
+
+Label correctedTwo glossary pages of our own splice two Butler passages ninety pages apart into one quotation
+
+Found while checking prior art, and **it is on stimpunks.org rather than here**, so it is recorded in [the decision log](https://queering.earth/what-is-settled) for a session in that repository and left alone from this one.
+
+The *Canary* and *Very Grand Emotions* glossary pages both present “I wish I could find other people who have it, and live among them. A biological conscience is better than no conscience at all” and “Maybe it’s like my sharing: One more weirdness…” as a single blockquote under a single citation. They are about ninety pages apart and in the wrong order.
+
+**The splice changes the meaning.** In context Lauren is comparing her emerging Earthseed conviction to her hyperempathy — the “one more weirdness… that I’m stuck with” is the religion, and hyperempathy is what she measures it against. Joined to the biological-conscience line it reads as though the weirdness she is stuck with is the conscience itself. Every word is Butler’s, every sentence is exact, and the quotation says something Butler did not: **this house’s characteristic failure, living on our own site.** This sheet quotes the two separately or not at all.
+
+MountedA section that argues against the sheet it is on
+
+*What this sheet will not tidy* carries five items, and two of them are load-bearing rather than decorative. **Butler’s hyperempathy is a drug injury and Autistic neurology is not** — Lauren has it because her mother abused Paracetco before she was born, and there is a well-supplied market for readings that would let that parallel drift into an aetiology. The sheet says on the page that the parallel is to what the condition does and how it is treated, never to where it came from.
+
+And **Lauren says it is not a power, which cuts against this sheet as hard as against the critics Schalk corrects.** If defending Autistic hyper-empathy turns it into a superpower, the defence has performed Schalk’s “liberal compensatory desire to recast disability as ‘specialness’” in the act of citing her against it. So the strongest line the sheet mounts is not the biological conscience but the question four pages into the sequel — “So why do I miss it now?” — where Butler, in a dream that has finally switched the thing off, argues against her own harshest description of it. **You cannot subtract it and still have Lauren.** That is the claim Autistic people make when they decline to be cured, and nobody had to bring it to the text.
+
+2026 · 10 September
+
 ## Sheet No. 9, on a definition recited for a beast nobody has seen, and on the coiner an empty word leaves behind
 
 Helen’s idea, from John C. Brady’s two-part reading of *Logique du sens* in Epoché — she asked for a sheet on names, labels, and how things get coined, and said the Deleuze–Carroll link “may be a stretch”. It is not: Deleuze makes the identification himself, on p. 31 of the French. Ryan proposed it as a complement to [Sheet No. 2](https://queering.earth/coming-to-terms), which asks whether a label fits; this one asks where the label came from.
@@ -1704,11 +1770,17 @@ The register is kept by accession, which is by date. This is the same entries fi
 
 ### [The Preferred Flower of Life](https://queering.earth/monotropa-uniflora) Sheet No. 8
 
+### [The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks) Sheet No. 9
+
+### [Other People Who Have It](https://queering.earth/other-people-who-have-it) Sheet No. 10
+
 ### [Find a word in the cabinet](https://queering.earth/search) the finding aid
 
 ### [Queering.Earth](https://queering.earth/) the plate
 
 ### [What this cabinet is for](https://queering.earth/mission) the founding papers
+
+### [Nothing here was inevitable](https://queering.earth/manifesto) the founding papers
 
 ### [The attribution ledger](https://queering.earth/ledger) every quotation traced
 

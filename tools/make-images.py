@@ -312,6 +312,10 @@ og_card(REPO/"images"/"og-five-unmistakable-marks.png", "The Five Unmistakable M
         "Sheet · a reading",
         "A definition for a beast nobody has seen.",
         CORAL)
+og_card(REPO/"images"/"og-other-people-who-have-it.png", "Other People Who Have It",
+        "Sheet · a reading",
+        "A disability invented because nobody had it.",
+        VERDIGRIS)
 og_card(REPO/"images"/"og-mission.png", "What this cabinet is for", "The founding papers",
         "Thirteen aims, each with the page where it is already being kept.", VIOLET)
 og_card(REPO/"images"/"og-manifesto.png", "Nothing here was inevitable", "The founding papers",

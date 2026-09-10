@@ -1149,8 +1149,8 @@ node tools/make-records.mjs && node tools/make-search-index.mjs && node tools/ma
 ```
 
 ```bash
-node tools/check-markup.mjs             # parser-rewriting markup, duplicate ids, exactly one <main>
-node tools/check-sitemap.mjs            # every page listed once, every entry resolves
+node tools/check-markup.mjs --check      # parser-rewriting markup, duplicate ids, exactly one <main>
+node tools/check-sitemap.mjs --check     # every page listed once, every entry resolves
 node tools/check-contrast.mjs --check   # 7:1 in BOTH grounds and under print emulation, two tiers
 node tools/check-addresses.mjs          # one address per page: a forced 301! per .html twin
 node tools/check-metadata.mjs           # derived files current, JSON-LD agreeing, credit correct

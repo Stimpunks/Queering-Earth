@@ -27,6 +27,7 @@ tools/make-markdown.mjs; nothing here is hand-kept.
 - [A Waste Garden, Flowering at Its Will](https://queering.earth/flower-codes): Violet, pansy, green carnation, and lavender were worn as code. Each was read by the people it was meant to escape and turned into the word that named you, and each was picked up again afterwards. With the 1926 sentence about a streak of lavender, and the man it is actually about. [Markdown](https://queering.earth/flower-codes.md)
 - [The Preferred Flower of Life](https://queering.earth/monotropa-uniflora): Monotropa uniflora, the ghost pipe: a plant with no chlorophyll that feeds off fungi, the flower Emily Dickinson called the preferred flower of life, and the Greek root it shares with monotropism. [Markdown](https://queering.earth/monotropa-uniflora.md)
 - [The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks): Lewis Carroll's Snark, a creature named before anybody saw it; Deleuze's empty square; and Kassiane Asasumasu, who coined neurodivergent and had to say so out loud. [Markdown](https://queering.earth/five-unmistakable-marks.md)
+- [Other People Who Have It](https://queering.earth/other-people-who-have-it): Octavia Butler's hyperempathy, which Sami Schalk reads as a disability with no real-world equivalent, and the Autistic people who have been describing it under the same name for years. [Markdown](https://queering.earth/other-people-who-have-it.md)
 
 ## The founding papers
 

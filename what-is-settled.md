@@ -23,6 +23,116 @@ What is settled, what is open, and the reasoning for each — so the same questi
 
 ## Open
 
+### The empathy study is a 2024 article with a 2023 DOI, and the accepted manuscript is not quotable (2026-09-10)
+
+The paper the proposed Sheet No. 10 rests its fairest reading of Schalk on. Ryan put the accepted manuscript in the SKS inbox and then the version of record beside it, which is what made the comparison below possible. **Settled; nothing here blocks the sheet.**
+
+**The citation, from the article itself and corroborated in two independent libraries** — Crossref's publisher-deposited record and the NLM's PubMed entry, `PMID 39371354`:
+
+> Kimber, Lesley, Diarmuid Verrier, and Stephen Connolly. "Autistic People's Experience of Empathy and the Autistic Empathy Deficit Narrative." *Autism in Adulthood* 6, no. 3 (2024): 321–330. Mary Ann Liebert, Inc. doi:10.1089/aut.2023.0001
+
+76 autistic participants. **Three authors, and the first is Lesley Kimber** — the accepted manuscript in the inbox is filenamed for the second, which is how a paper acquires the wrong short name.
+
+**The publisher is Mary Ann Liebert, Inc., which is what the article's own first page says.** Crossref now returns SAGE, because SAGE acquired the journal after publication. **Cite the imprint on the artefact, not the current rights holder** — the same reasoning that makes a sheet name the printing it read.
+
+**THE ISSUE YEAR IS 2024 AND EVERYTHING CONVENIENT SAYS 2023.** The DOI slug is `aut.2023.0001`; the accepted manuscript's deposit record at [Sheffield Hallam's archive](https://shura.shu.ac.uk/32342/) cites "(2023)". A citation built from either is wrong by a year and looks perfectly well sourced.
+
+**Second instance of a pattern, which is why this is an entry and not a note.** The first was *Experiences of autistic joy*, recorded below: 2025 was its online-first date and the issue was 2026. **Online-first year is not issue year, and a DOI slug is not a date.** Both were caught only by going to a bibliographic database instead of reading the year off the artefact in hand. **A paper newly cited on this site takes its volume, issue, pages and year from Crossref or PubMed — not from the PDF, not from the DOI, and not from a repository deposit.**
+
+**The four passages the sheet wants, verified in the version of record, with pages:**
+
+| passage | page |
+| --- | --- |
+| "Notably, there was a high proportion of hyper-empathic experiences…" — the abstract's Results | 321 |
+| "Seventy-eight percent of participants responded yes to the yes/no question…" | 325 |
+| "Often, this sense of distress was somatized…" and the four participant quotations | 325 |
+| "As yet, however, there has been limited theoretical and empirical work looking at this as a specific phenomenon worthy of study in its own right." | 326 |
+
+The last is the sentence the sheet leans on hardest — the evidence that in 2018 Schalk was reading a literature that had not caught up with what Autistic people already knew about themselves. **Identical in both states of the paper**, and it carries a superscript reference to intense world theory, which the sheet can follow.
+
+**THE ACCEPTED MANUSCRIPT IS CORROBORATION AND MUST NOT BE THE SOURCE OF ANY WORDING.** It is the authors' pre-copy-edit text, in British spelling; the published article is in US spelling and was edited past orthography:
+
+|  | accepted manuscript | version of record |
+| --- | --- | --- |
+| abstract, Results | "additional **labour**… non-autistic **centred** world" | "additional **labor**… non-autistic **centered** world" |
+| abstract, Methods | "thematically **analysed**… **amongst** respondents" | "thematically **analyzed**… **among** respondents" |
+| abstract, Background | "over the **last** decade… in **favour** of" | "over the **past** decade… in **favor** of" |
+| abstract, Conclusion | "but **to** better bridge the gap" | "but **also** better bridge the gap" |
+| the somatic finding, p. 325 | "was **somatised**" | "was **somatized**" |
+
+**The Conclusion row is the one that matters**, because it is not a spelling convention — it is a different sentence. Anybody who assumed the two states differed only in `-ise`/`-ize` would have quoted it wrong while feeling careful.
+
+**A correction to this entry's own first draft, which had a row wrong.** The headline figure was written up as AM "Seventy eight" against VoR "Seventy-eight". **The version of record is inconsistent with itself**, and that is the real finding: hyphenated in the Results at p. 325, unhyphenated in the Discussion at p. 326, where the same figure is restated as "In total, seventy eight percent of participants indicated having experienced hyper-empathy". The copy-editor hyphenated one occurrence and missed the other. **A sheet quoting both sentences must reproduce both forms and not tidy either**, which is this house's ordinary rule arriving somewhere it looks like a typo.
+
+**The participant quotations carry no identifiers, and the sheet has to say so.** They are set bare in parenthetical lists — "I feel physical pain in my body"; "I feel a horrible sensation in my body like my innards are being twisted" — with no pseudonym, number or demographic tag. The ledger elsewhere credits study participants by the names their paper gives them; here there are none to give, and **silently anonymising people and being handed nothing to attribute look identical on the page.** Say which it is.
+
+**No open-access or Creative Commons statement appears on the article**, so the held PDF is a copy of a subscription article and belongs in SKS `raw/` rather than anywhere this site serves.
+
+### A Readwise export runs on into an appended preview, and a quotation came out under the wrong Butler novel (2026-09-10)
+
+Found while researching a proposed Sheet No. 10 on hyperempathy, reading Octavia E. Butler through Sami Schalk's [Bodyminds Reimagined](https://www.dukeupress.edu/bodyminds-reimagined). **A tooling fault rather than anybody's transcription** — Readwise syncs highlights off the device and nothing in this repo's brief was typed by hand.
+
+Ryan's Kindle file for Parable of the Sower, ASIN `B008HALO4Q`, **carries a publisher's preview of Parable of the Talents after the novel ends**, and the export does not mark the join. Highlights run to location 5541. Location 4758 is "Then we buried our dead and we planted oak trees… decided to call this place Acorn," **the last line of Sower.** Everything after it is the preview: Jarret and Christian America, Asha Vere on her mother's god, Acorn's tool-making, the funeral verses. Readwise files a whole export under the title of the file, so highlights from two books arrive under one heading.
+
+**The visible symptom is a page number that stops counting.** The reader shows "Page 330 of 330" at 85% of the file, because the print-page map covers Sower only and then runs out. A citation taken off that screen reads `Parable of the Sower (p. 330)` for a passage that is not in Parable of the Sower.
+
+**The quotation, re-titled:**
+
+> Hyperempathy syndrome is a delusional disorder, after all. There's no telepathy, no magic, no deep spiritual awareness. There's just the neurochemically-induced delusion that I feel the pain and pleasure that I see others experiencing. Pleasure is rare, pain is plentiful, and, delusional or not, it hurts like hell.
+
+**Octavia E. Butler, Parable of the Talents** — not Sower. Location 4839 of the Sower file, in the passage where Lauren is 23 and dreaming of a family whose pain no longer reaches her, on the same page as "They refused to let me be handicapped" and "So why do I miss it now?" The chronology settles it independently of the location: Sower ends in 2027 with Lauren at 18, and she is 23 here.
+
+**`p. 330` WAS NOT A PAGE NUMBER, AND IT DID NOT TRAVEL WITH THE NEW TITLE.** It was the exhausted Sower page map reporting its own last page, so it named a page of the wrong book. Re-titling alone would have left a citation wrong in a harder way to catch than the one it replaced — right book, plausible number, no relation to the text. A preview has no pagination of its own, so the page had to come from elsewhere.
+
+**Settled: the passage is at Parable of the Talents p. 9**, confirmed off the standalone edition, ASIN `B008HALPHC` — page 9 of 394, at 1% of the file, under a running header that says PARABLE OF THE TALENTS. It is the second page of the novel, in Lauren's opening dream. **The full citation is `Parable of the Talents` (p. 9), and the quotation runs longer than the brief had it:**
+
+> Nevertheless I used to feel every damned bruise, cut, and burn that my brothers managed to collect. Each time I saw them hurt, I shared their pain as though I had been injured myself. Even pains they pretended to feel, I did feel. Hyperempathy syndrome is a delusional disorder, after all. There's no telepathy, no magic, no deep spiritual awareness. There's just the neurochemically-induced delusion that I feel the pain and pleasure that I see others experiencing. Pleasure is rare, pain is plentiful, and, delusional or not, it hurts like hell.
+
+**So the sheet reads both Parable novels, as Schalk's chapter does**, and every quotation taken from the Sower file past location 4758 needs its title and its page checked before it is mounted. The other five quotations in the brief are Sower's and are unaffected.
+
+**An open item for a session in the SKS repo.** Not to be fixed from here. `highlights/Books/Parable of the Sower.md` holds preview highlights from location 4839 to 5541 under a Sower heading. `highlights/Books/Parable of the Talents.md` is a separate export from a separate file, so the two are **not** duplicates and the misfiled block cannot be recovered by merging them — the overlap is partial and the location scales differ. Anything on stimpunks.org or in Helen's sites that cites this file past that boundary wants the same check.
+
+**The general shape, which is the part worth keeping.** An appended preview is a second work inside one file, and every tool in the chain treats the file as the unit: the reader's page map, the export's title, the highlight's location. **A citation is only as good as the assumption that one file is one book**, and that assumption is silently false at the end of most ebooks sold today.
+
+### Which text of the biological-conscience passage, and it is an edition question rather than a verification one (2026-09-10)
+
+**Correcting a wrong framing this session shipped first.** The brief's six Butler quotations were checked against `inbox/Butler, Octavia - Parable of the Sower.pdf` and three of them could not be found, which was written up as the quotations being unverifiable. **The fault was in the copy on disk.** That PDF is missing chapters 9 and 21 of 25, at 85,034 words, and is OCR-damaged besides: em-dashes arrive as `Ñ` and as `--`. Chapters 9 and 21 are where the three missing passages live. **It is not a usable verification copy and should not be reached for again.**
+
+All six quotations are verified against the Kindle edition Ryan reads, from the pages themselves. And the transcription route matters here: **Readwise highlights are synced from Kindle, not retyped**, so a divergence between one of them and a scholar's rendering is not a question about our copy.
+
+**The divergence that remains is between Butler's text and Schalk's quotation of it.**
+
+| clause | Butler, Kindle edition, p. 115 | Schalk, quoting Sower 115 |
+| --- | --- | --- |
+| the first | "They **could** kill if they had to" | "They **would** kill if they had to" |
+| the second | "But if **everyone** could feel everyone else's pain" | "But if **everyone else** could feel everyone else's pain" |
+
+And a third, at Sower 12: the doctors call it an "organic **delusional** syndrome" in the text and an "organic **delusion** syndrome" at Schalk p. 88.
+
+**Ryan's reading is that these are edition differences**, and it is the right default: the novel has been set by Four Walls Eight Windows in 1993, by Warner, and by Seven Stories since, and this house has now twice found a real textual difference between printings where it expected a transcription slip — Woolf's 1926 against her 1930, and Rossetti's colon.
+
+**One piece of evidence cuts the other way and is worth writing down rather than rediscovering: the pagination agrees.** Both land the passage on page 115, and a Kindle page map is keyed to a specific print setting. Two printings that agree on where page 115 falls are more likely to be the same setting than to differ in three words of it. That is suggestive and not conclusive — a page map can be built against a printing nobody in this conversation is holding.
+
+**Either way the practical answer is the one this repo has already reached twice**, under *Which edition a sheet reads, when the work was revised*: **name the printing on the label, quote only from it, and make the difference a section of the sheet where it is interesting.** Here it is interesting. A quotation that drifted by two words inside an otherwise scrupulous reading of a novel about feeling other people's pain accurately is the site's own subject arriving in the apparatus.
+
+**What is not settled, and what it changes.** Nothing in the sheet's argument. The clauses in dispute are not the ones the sheet turns on, and "A biological conscience is better than no conscience at all" is identical in both. **It is a label question and a possible third instance of the edition pattern**, which would make that pattern a rule. Settling it needs one look at a 1993 or Seven Stories printing, which nobody here has.
+
+### An open item for a session in the SKS repo: two glossary pages splice two Butler passages into one quotation (2026-09-10)
+
+Not to be fixed from here. [stimpunks.org/glossary/canary](https://stimpunks.org/glossary/canary/) and [stimpunks.org/glossary/very-grand-emotions](https://stimpunks.org/glossary/very-grand-emotions/) each present this as a single blockquote under a single citation to Parable of the Sower:
+
+> I wish I could find other people who have it, and live among them. A biological conscience is better than no conscience at all.
+
+> Maybe it's like my sharing: One more weirdness; one more crazy, deep-rooted delusion that I'm stuck with. I am stuck with it. And in time, I'll have to do something about it.
+
+The two are not contiguous and they are in the wrong order. "A biological conscience" is Kindle loc. 1565, about p. 115; "Maybe it's like my sharing" is loc. 350, about p. 26 — roughly ninety pages earlier.
+
+**The splice changes the meaning.** In context, Lauren is comparing her emerging Earthseed conviction to her hyperempathy: the "one more weirdness that I'm stuck with" is **the religion**, and hyperempathy is the thing she measures it against. Spliced onto the biological-conscience line, it reads as though the weirdness she is stuck with is the conscience itself. Verified against the inbox PDF, chapter 4, which does hold this passage.
+
+Every word is Butler's, every sentence is exact, and the quotation says something Butler did not. That is the tightened-source failure this repo is organised against, living on our own site.
+
+Paths, for a session in that repo: `site/stimpunks.org/glossary/canary.md` lines 312 to 318, `site/stimpunks.org/glossary/very-grand-emotions.md` lines 76 to 82, and the live pages behind them. **Queering Earth must not inherit the splice** — a sheet that wants either passage quotes them separately, each with its own location.
+
 ### One source on Sheet No. 9 is still at one remove (2026-09-10)
 
 **Claude Lévi-Strauss on the floating signifier.** Quoted inside Deleuze (pp. 64–65), so the words are credited to Lévi-Strauss on Deleuze's authority and not on ours. The primary is his 1950 introduction to the work of Marcel Mauss, **not read here**. It weakens no credit; it would strengthen the evidence, and the sheet says so in its own untidy block rather than leaving it here.
@@ -161,6 +271,30 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### Two gates were reporting and not gating, and one guard covered only one of its two ends (2026-09-10)
+
+Both found while mounting Sheet No.&nbsp;10, and both had been true for as long as the things they guard have existed.
+
+**`check-markup.mjs` and `check-sitemap.mjs` need `--check` to exit non-zero, and this file's own checklist ran them without it.** So every problem either has ever reported has shipped as advice. **This is the third time the same trap has been paid for**, and the previous fix is why it is worth an entry: the note added on 2026-09-09 about the contrast gate says outright that without the flag the tool is a report that exits 0 — and then fixed that one line and did not look at its neighbours. **A fix applied to one instance of a class is how the class survives.**
+
+The repo has two opposite conventions and both are defensible on their own:
+
+| gating is | gates | run in the checklist |
+| --- | --- | --- |
+| opt-in, `--check` | markup, sitemap, contrast, overlap, card-order | contrast, overlap and card-order had it; markup and sitemap did not |
+| opt-out, `--no-gate` | addresses, metadata, cache | correct by default |
+
+Mixing them is the actual fault. A reader of either tool's `--help` would be told the truth; a reader of the checklist would run five gates and be protected by three. **The checklist now carries the flag on all five opt-in gates.** Reconciling the two conventions is a separate question and is not urgent, because the checklist is now right either way.
+
+**And `check-markup.mjs`'s `data-sheet` guard covered one direction of two.** Its own comment claimed the typo was "caught from both ends." It was not:
+
+- a `.qe-index-group` whose token no entry declares &mdash; **reported**
+- an entry whose token has no group &mdash; **not reported**, and it is the direction that loses information. The entry files into nothing, drops out of the by-sheet index, and the register above it reads perfectly.
+
+**Two real faults were sitting in that blind spot with all eight gates green.** Sheet No.&nbsp;9 had never been given a group, so its nine entries were unreachable from the index, and `manifesto` had none either. **Neither is a typo**, which is exactly why the existing existence check could not see them &mdash; both slugs are real pages, so the check that asks "does `<token>.html` exist" answered yes and stopped.
+
+**Proved by making it fail before believing it**, per this repo's rule for a new gate: the missing direction was added first, reported both faults by name, and `changelog.html` went `FAIL` with `--check` exiting 1. Then the three groups were authored &mdash; No.&nbsp;9, No.&nbsp;10 and `manifesto` &mdash; and the same run went green. The check was never watched passing on a tree it had not first failed on.
 
 ### A wide plate is 448px on screen, not 544, and the ladder is why it matters (2026-09-10)
 

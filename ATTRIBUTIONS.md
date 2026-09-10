@@ -31,6 +31,225 @@ has to be right.
 
 ## Verified
 
+### Octavia E. Butler — the *Parable* novels, and a preview that crossed a book boundary
+
+**Quoted on:** [Other People Who Have It](https://queering.earth/other-people-who-have-it),
+Sheet No.&nbsp;10.
+
+**There are two Butlers on this site and they are not related.** Judith Butler is credited
+below for *a stylized repetition of acts*. This entry is **Octavia E. Butler**, and every new
+entry for either has to carry the given name.
+
+Eight quotations, from two novels. All eight read from the Kindle editions Ryan holds, off the
+pages themselves — Readwise syncs highlights from the device rather than transcribing them, so
+the wording is the edition's wording and not a typist's.
+
+**From *Parable of the Sower*:**
+
+> He has always pretended, or perhaps believed, that my hyperempathy syndrome was something I
+> could shake off and forget about.
+
+> I feel what I see others feeling or what I believe they feel.
+
+> I get a lot of grief that doesn't belong to me, and that isn't real. But it hurts.
+
+Those three and the "family business" paragraph are p.&nbsp;11 and p.&nbsp;12. The
+biological-conscience passage is p.&nbsp;115, and the shared-pleasure passage runs
+pp.&nbsp;265–266.
+
+**From *Parable of the Talents*, all on p.&nbsp;9:** the "every damned bruise" paragraph,
+"They refused to let me be handicapped," and "So why do I miss it now?"
+
+**THE *TALENTS* QUOTATIONS ARRIVED FILED AS *SOWER*, AT A PAGE NUMBER THAT WAS NOT A PAGE
+NUMBER, AND THAT IS THE ENTRY TO READ BEFORE CITING ANY EBOOK HERE.** The Kindle file for
+*Sower* carries a publisher's preview of *Talents* after the novel ends and marks the join
+nowhere. Location 4758 is "decided to call this place Acorn," the last line of *Sower*;
+highlights run on to 5541. A Readwise export takes its title from the file, so highlights from
+two books arrive under one heading.
+
+The tell is a page counter that stops. The reader shows **"Page 330 of 330" at 85% of the
+file**, because the print-page map covers *Sower* only and then repeats its own last page. So
+the brief's `Parable of the Sower (p. 330)` was wrong twice: wrong book, and a number that was
+never a page. **Re-titling alone would have been worse than leaving it** — right book,
+plausible number, no relation to the text. The real page came off the standalone *Talents*,
+which reads 9 of 394 under its own running head.
+
+**An appended preview is a second work inside one file**, and every tool in the chain takes
+the file as the unit: page map, export title, highlight location. A citation is only as good
+as the assumption that one file is one book, and that assumption is quietly false at the end
+of most ebooks sold today.
+
+**Sources:** Octavia E. Butler, *Parable of the Sower*, Kindle edition, ASIN `B008HALO4Q`; and
+*Parable of the Talents*, Kindle edition, ASIN `B008HALPHC`. The PDF held in the Stimpunks
+Knowledge System at `inbox/Butler, Octavia - Parable of the Sower.pdf` is **not** a usable
+verification copy: it is missing chapters 9 and 21 of 25, and its em-dashes are OCR-damaged.
+
+**Verified:** 2026-09-10, from the reader's own pages.
+
+### Sami Schalk — *Bodyminds Reimagined*, and two clauses that differ from the novel
+
+**Quoted on:** [Other People Who Have It](https://queering.earth/other-people-who-have-it),
+Sheet No.&nbsp;10.
+
+Seven quotations, read from the chapter PDFs held in SKS. Page numbers are the printed folios,
+each confirmed against the running head at the foot of its own page: the Introduction at
+p.&nbsp;5; chapter 3 at pp.&nbsp;89, 92, 95, 96, 100 and 111.
+
+The sheet leans hardest on this one, and quotes it whole because trimming it would make it a
+stronger claim than she made:
+
+> The nonrealist nature of hyperempathy, that is, the fact that it is not a disability we
+> recognize in our current reality, disallows readers the ability to overlay preconceived
+> notions about disabilities we recognize from our own world.
+
+**Two clauses of the biological-conscience passage read differently where Schalk quotes it than
+in the edition read here**, and both cite *Sower* 115:
+
+| | Butler, Kindle edition, p. 115 | Schalk, *Bodyminds Reimagined*, p. 99 |
+|---|---|---|
+| | "They **could** kill if they had to" | "They **would** kill if they had to" |
+| | "But if **everyone** could feel everyone else's pain" | "But if **everyone else** could feel everyone else's pain" |
+
+A third, at *Sower* 12: the doctors call it an "organic **delusional** syndrome" in the novel
+and an "organic **delusion** syndrome" at Schalk p.&nbsp;88.
+
+**Unresolved, and it is an edition question rather than a doubt about either party.** This site
+has twice found a real difference between printings where it expected a slip — Woolf's 1926
+against her 1930, above, and Rossetti's colon. One piece of evidence cuts the other way and is
+recorded so nobody re-derives it: **the pagination agrees.** Both land the passage on
+p.&nbsp;115, and a Kindle page map is keyed to a specific print setting, so two printings that
+agree on where p.&nbsp;115 falls are likelier to be one setting than to differ in three words
+of it. Suggestive, not conclusive.
+
+**The sheet quotes the novel, names its edition, and says on the page that Schalk's rendering
+differs.** Neither disputed clause is one the argument rests on, and the sentence everything
+turns on — *A biological conscience is better than no conscience at all* — is identical in
+both. Settling it needs a 1993 or Seven Stories printing, which nobody here holds.
+
+**Sources:** Sami Schalk, *Bodyminds Reimagined: (Dis)ability, Race, and Gender in Black
+Women's Speculative Fiction*, Duke University Press, 2018. Chapter PDFs held in SKS at
+`inbox/9780822371830-001.pdf` (Introduction) and `inbox/9780822371830-004.pdf` (chapter 3).
+
+**Verified:** 2026-09-10. Stuart Murray and Susan Wendell are named on the sheet **as Schalk
+cites them** and are not quoted; Alison Kafer is her chapter epigraph and is not quoted here at
+all, because we have not read *Feminist, Queer, Crip*.
+
+### Kimber, Verrier and Connolly — the empathy study, and the year everything convenient got wrong
+
+**Quoted on:** [Other People Who Have It](https://queering.earth/other-people-who-have-it),
+Sheet No.&nbsp;10.
+
+> However, a majority of participants reported experiencing hyper-empathy and extreme empathic
+> responses. Seventy-eight percent of participants responded yes to the yes/no question about
+> whether they had ever experienced hyper-empathy or extreme levels of empathy.
+
+> Often, this sense of distress was somatized as participants described it in terms of pain or
+> other physical manifestation ("I feel nauseous"; "I feel empathy so much that it's painful";
+> "I feel physical pain in my body"; "I feel a horrible sensation in my body like my innards
+> are being twisted").
+
+> As yet, however, there has been limited theoretical and empirical work looking at this as a
+> specific phenomenon worthy of study in its own right.
+
+pp.&nbsp;325, 325 and 326. Seventy-six Autistic participants.
+
+**THE ISSUE YEAR IS 2024 AND EVERYTHING CONVENIENT SAYS 2023** — the DOI slug
+`aut.2023.0001`, and the repository deposit record for the accepted manuscript. **Second
+instance of a pattern**, after *Experiences of autistic joy*, where 2025 was the online-first
+date and the issue was 2026. **Online-first year is not issue year, and a DOI slug is not a
+date.** A paper newly cited on this site takes its volume, issue, pages and year from a
+bibliographic database, never from the PDF, the DOI, or a deposit record.
+
+**Cite Mary Ann Liebert, not SAGE.** Crossref returns SAGE because SAGE acquired the journal
+after publication; the article's own first page says Liebert. Name the imprint on the artefact,
+which is the reasoning that already makes a sheet name the printing it read.
+
+**The accepted manuscript may not supply a word of the wording.** Both states are held, and the
+accepted text is the authors' British-spelled pre-copy-edit copy. The differences are not all
+orthographic: the abstract's Conclusion is a different sentence, "but **to** better bridge the
+gap" against "but **also** better bridge the gap." Anybody assuming the two differed only in
+`-ise` and `-ize` would have quoted it wrong while feeling careful.
+
+**And the version of record disagrees with itself on the headline figure**, which is the detail
+a later hand is most likely to tidy: "Seventy-eight percent" in the Results at p.&nbsp;325,
+"seventy eight percent" where the Discussion restates it at p.&nbsp;326. The sheet quotes the
+Results occurrence. **A sheet quoting both must reproduce both forms.**
+
+**The participants are quoted with no identifiers at all** — no pseudonym, number or
+demographic tag. This ledger credits study participants by the names their paper gives them
+where there are any; here there are none, so the sheet's caption says the anonymity is the
+paper's and not our omission. Those two look identical on the page.
+
+**Sources:** Lesley Kimber, Diarmuid Verrier and Stephen Connolly, "Autistic People's
+Experience of Empathy and the Autistic Empathy Deficit Narrative," *Autism in Adulthood* 6,
+no.&nbsp;3 (2024): 321–330, Mary Ann Liebert, Inc., doi:10.1089/aut.2023.0001. Version of
+record held in SKS at `inbox/aut.2023.0001.pdf`; accepted manuscript at
+`inbox/Verrier-AutisticPeoplesExperience(AM).pdf`.
+
+**Verified:** 2026-09-10, from the version of record, with the citation corroborated in
+Crossref and in the NLM's PubMed record, `PMID 39371354` — two libraries that index
+independently of each other.
+
+### David Gray-Hammond and Karla McLaren — Autistic hyper-empathy in the first person
+
+**Quoted on:** [Other People Who Have It](https://queering.earth/other-people-who-have-it),
+Sheet No.&nbsp;10.
+
+> As you might imagine, the intersection between the experiences of hyper-empathy and
+> mirror-touch synesthesia can be quite intense. Seeing someone injured themselves can trigger
+> anything from a nervous jolt at the site of the person's injury, through feelings of every
+> nerve in your body firing or literally feeling their pain.
+
+David Gray-Hammond, *Hyper-empathy, mirror-touch synesthesia, and the Autistic experience of
+pain*, 24 July 2023. **Cited at `neurohubcommunity.org`**, which is where he publishes now; the
+`emergentdivergence.com` address the SKS bookmark carries is his old domain, and Ryan confirmed
+the move.
+
+> Their social issues arose not from a *lack* of empathy, but from an overpowering *surplus* of
+> it. I knew what that was like. I had not landed in a world of aliens; I had dropped right
+> into a community of fellow hyper-empaths who became my friends.
+
+Karla McLaren, *Autism, empathy, and the mind-blindness of everyday people*. The emphasis on
+*lack* and *surplus* is hers. **This is the quotation the sheet is named for**: Lauren Olamina
+writes "I wish I could find other people who have it, and live among them," and McLaren
+describes having found them.
+
+**Sources and verification:** 2026-09-10, from the fetched page text held in SKS. **Both are at
+one remove and the sheet does not hide it** — the Gray-Hammond copy is a bookmark capture
+rather than the live page, and the McLaren passage reaches us through the Stimpunks *Empathy*
+glossary, which is our own compilation. Each is a first-hand account by its author, quoted with
+the author named and linked, and neither is load-bearing for a fact — they are testimony that
+the experience is reported, which is what the sheet claims of them.
+
+### Our own prior art on hyperempathy, and a splice not to inherit
+
+**Quoted on:** [Other People Who Have It](https://queering.earth/other-people-who-have-it),
+Sheet No.&nbsp;10, which cites the Stimpunks Foundation's *Justice Sensitivity*, *Autistic
+Joy*, *Glimmers* and *Empathy* glossary pages as ours.
+
+**This sheet continues an argument Stimpunks has already made, and says so.** The *Canary* and
+*Very Grand Emotions* glossary pages have paired Butler's biological conscience with Autistic
+"cultural immune system" claims for years. Presenting the pairing as new would have been the
+site's own failure mode aimed at itself.
+
+**AND THOSE TWO PAGES CARRY A SPLICE THIS SHEET MUST NOT INHERIT.** Both present
+"I wish I could find other people who have it, and live among them. A biological conscience is
+better than no conscience at all" and "Maybe it's like my sharing: One more weirdness…" as a
+single blockquote under a single citation. The two are about ninety pages apart and in the
+wrong order — Kindle locations 1565 and 350.
+
+**The splice changes the meaning.** In context Lauren is comparing her emerging Earthseed
+conviction to her hyperempathy: the "one more weirdness… that I'm stuck with" is **the
+religion**, and hyperempathy is what she measures it against. Joined to the biological-conscience
+line it reads as though the weirdness she is stuck with is the conscience itself. Every word is
+Butler's, every sentence is exact, and the quotation says something Butler did not.
+
+Not fixable from this repository. Recorded in `DECISIONS.md` for a session in the SKS
+repository, with the paths. **This sheet quotes the two passages separately or not at all.**
+
+**Verified:** 2026-09-10, against the *Sower* PDF's chapter 4, which does hold the second
+passage.
+
 ### The nine typefaces in the Reading panel
 
 **Used on:** every page, when a reader picks one. Self-hosted in `fonts/`.

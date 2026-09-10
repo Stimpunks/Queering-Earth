@@ -158,6 +158,21 @@ Lewis Carroll, The Hunting of the Snark, 1876
   - [This site is holding a borrowed coinage](https://queering.earth/five-unmistakable-marks#our-own-masthead)
   - [In the midst of the word](https://queering.earth/five-unmistakable-marks#the-vanishing)
 
+-
+
+No. 10 [Other People Who Have It](https://queering.earth/other-people-who-have-it) Reading
+
+Octavia E. Butler and Sami Schalk, on hyperempathy
+
+  - [What Butler built](https://queering.earth/other-people-who-have-it#the-syndrome)
+  - [The protection unfamiliarity buys](https://queering.earth/other-people-who-have-it#nonrealist)
+  - [Quite real for many](https://queering.earth/other-people-who-have-it#quite-real)
+  - [Whose overlay](https://queering.earth/other-people-who-have-it#who-is-holding-it)
+  - [Chronic pain, and the nearer one](https://queering.earth/other-people-who-have-it#the-nearest-parallel)
+  - [A biological conscience](https://queering.earth/other-people-who-have-it#a-biological-conscience)
+  - [The rarer register](https://queering.earth/other-people-who-have-it#the-pleasure-side)
+  - [What this sheet will not tidy](https://queering.earth/other-people-who-have-it#what-this-sheet-will-not-tidy)
+
 ### The founding papers
 
 -
@@ -225,7 +240,7 @@ Lewis Carroll, The Hunting of the Snark, 1876
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-170 entries across 43 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+176 entries across 44 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

@@ -734,12 +734,39 @@ for (const file of targets) {
       }
     }
   }
+  const groupTokens = new Set();
   for (const m of src.matchAll(/<div class="qe-index-group"\s+data-sheet="([^"]*)"/g)) {
     const t = decode(m[1]).trim();
+    if (t) groupTokens.add(t);
     if (t && !sheetTokens.has(t)) {
       problems.push(
         `index group at line ${lineOfIndex(m.index)} is for data-sheet="${t}", which no entry on this page declares — either the slug is wrong or the group is stale`
       );
+    }
+  }
+  /* AND THE OTHER DIRECTION, WHICH WAS THE UNGUARDED ONE.
+   *
+   * The comment above this block claimed the typo was "caught from both ends" and
+   * it was not: a group nothing files into was reported, an entry that files into
+   * no group was not. Only the second direction actually loses information — the
+   * entry vanishes out of the index while the register above it reads perfectly,
+   * which is the exact silent failure the whole check exists to prevent.
+   *
+   * Found by adding Sheet No. 10 and noticing that Sheet No. 9 had never been
+   * given a group: nine entries, none of them reachable from the index, with all
+   * eight gates passing. `manifesto` was missing one too. Neither is a typo, which
+   * is why the existence check above could not see them — both slugs are real pages.
+   *
+   * `the-site` is exempt in the other direction and not in this one: it has an
+   * authored group like any other, because a correction to the site itself is
+   * something a reader may want to find. */
+  if (groupTokens.size) {
+    for (const t of [...sheetTokens].sort()) {
+      if (!groupTokens.has(t)) {
+        problems.push(
+          `entries declare data-sheet="${t}" but the by-sheet index has no group for it — those entries file into nothing and drop out of the index silently`
+        );
+      }
     }
   }
 
