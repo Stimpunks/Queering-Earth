@@ -847,6 +847,32 @@ inline link inside a sentence, so WCAG 2.5.8's inline exception does not cover i
 takes each to 45px and it is netted out of the spacing scale — see the hit-area rule above,
 and **measure a new entry**, because no gate here does.
 
+### A record page indexes its own entries, and the index is derived at runtime
+
+`/ledger` and `/what-is-settled` each carry a `.qe-entry-index` at the **foot**, filled
+by `queering.js` from that page's own `<h2>`s and `<h3>`s, with a one-line pointer up in
+the front matter. Three things about it are load-bearing:
+
+- **A contents list is the wrong component and both pages prove it.** `.qe-contents`
+  derives from `<h2>`s, and a record page has two. Back matter, for the reason the
+  register's index is back matter: front matter delays every reader.
+- **THE SERVED CONTAINER IS EMPTY.** Generated into the HTML, an index of 121 headings
+  would hand the SKS mirror and `search-index.json` a second copy of every one — the
+  exact double-indexing the contents list is built at runtime to avoid. Both generators
+  skip `nav.qe-entry-index` so the `.md` does not announce a list it has no room for.
+- **The group headings are derived, unlike the register's.** That is not a relaxation of
+  *`queering.js` may never create words*: these labels are clones of `<h2>`s already on
+  the page, the same standing the contents list has. The register's groups are authored
+  because a sheet's name appears nowhere else. **A group heading here is a `<p>`, not a
+  heading** — re-entering the outline would give the page a shadow contents of
+  duplicates, which is worse for a rotor than no index at all.
+
+**It needs no `REVEAL` line, and that was checked by counting.** `reveal.mjs` is for a
+fetch or a hidden state, and this ships hidden — but the drift rail's `if (r.hidden)
+continue` only makes sense if `queering.js` has already run under the gate, so a
+component that unhides itself is measured without help. `/ledger` went 1,782 → 1,845
+measured elements with the index in, and its print count did not move.
+
 ### The finding aid searches in the reader's browser, and refuses to crop a quotation
 
 `/search` is the site's one client-rendered page, and three decisions keep it honest.

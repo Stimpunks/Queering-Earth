@@ -71,7 +71,7 @@ const NOT_CONTENT = new Set(['404.html', 'search.html']);
 
 /* Subtrees that never reach the index. `del` is the editorial one — see the head note. */
 const SKIP_TAGS = new Set(['svg', 'script', 'style', 'button', 'del']);
-const SKIP_CLASS = new Set(['qe-anchor', 'qe-sr', 'qe-contents', 'qe-sheet-index', 'qe-plate-grid',
+const SKIP_CLASS = new Set(['qe-anchor', 'qe-sr', 'qe-contents', 'qe-sheet-index', 'qe-entry-index', 'qe-plate-grid',
   /* Controls, not sentences. Inert without their script and empty in the served HTML. */
   'qe-find', 'qe-found',
   /* THE MASTHEAD IS THE SHEET'S OWN NAMEPLATE, and indexing it made every opener's

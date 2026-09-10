@@ -3834,6 +3834,79 @@ html.plain .qe-index-sheet { font-variation-settings: normal; font-weight: 700; 
   .qe-index-link { display: none; }
 }
 
+/* ─── the record pages' index of their own entries ─────────────────────────────
+ *
+ * /ledger and /what-is-settled are the two longest pages on the site, and neither
+ * could be surveyed without scrolling all of it. This is the register's
+ * `.qe-sheet-index` idea a second time: BACK MATTER, ruled off, at the foot, with a
+ * one-line pointer up in the front matter. A contents list would have been the
+ * wrong reach — it derives from <h2>s, and both pages have two.
+ *
+ * It reuses .qe-index-group, .qe-index-sheet and .qe-index-note rather than
+ * restating them: it is the same object doing the same job on another page, and a
+ * second set of near-identical rules is a second place for the next change to be
+ * got right. Only what genuinely differs is below.
+ */
+/* The pointer up in the front matter. `.qe-index-link` is shaped for the register,
+   where it is the last thing before the entries begin and needs no bottom margin.
+   Here the record body follows it immediately, so it needs one — otherwise the line
+   reads as the opening of the paragraph beneath rather than as a note about the
+   foot of the page. */
+.qe-record-page .qe-index-link { margin-bottom: var(--qe-space-4); }
+
+.qe-entry-index {
+  margin: var(--qe-space-8) 0 0;
+  padding: var(--qe-space-3) 0 0;
+  border-top: 1px solid var(--qe-rule);
+}
+
+.qe-entry-index h2 {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: var(--qe-body);
+  font-variation-settings: normal;
+  color: var(--qe-moss);
+  margin: 0 0 var(--qe-space-2);
+}
+
+/* A GROUP HEADING HERE IS A PARAGRAPH, NOT A HEADING, and that is deliberate. The
+   register's index groups are authored, so their <h3>s are the only place those
+   words appear. These are clones of <h2>s the reader has already passed, and
+   putting them back into the heading outline would give the page a second, shadow
+   contents made of duplicates — bad for a screen reader's rotor and worse for
+   anyone navigating by heading. It carries .qe-index-sheet so it still looks like
+   what it is. */
+.qe-entry-index .qe-index-sheet { font-size: 1rem; }
+
+/* Two or three columns where there is room. Fifty-five entries in one column is a
+   screen and a half of nothing but links; the entries are short names and the
+   measure is wasted on them. Column rules rather than gaps, because a bare gap
+   between two lists of links reads as one ragged list. */
+.qe-entry-index .qe-index-group ul {
+  columns: 2;
+  column-gap: var(--qe-space-4);
+  column-rule: 1px solid var(--qe-rule);
+}
+.qe-entry-index .qe-index-group li {
+  break-inside: avoid;
+  margin-bottom: var(--qe-space-1);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+@media (max-width: 34rem) {
+  /* One column on a phone: two columns of wrapped link text at this measure puts
+     three words on a line and reads as a column of fragments. */
+  .qe-entry-index .qe-index-group ul { columns: 1; column-rule: none; }
+}
+
+@media print {
+  /* Same reason the contents list and the register's index go: on paper there is
+     nowhere to navigate to, and every entry it lists is already in the reader's
+     hand. */
+  .qe-entry-index { display: none; }
+}
+
 /* ─────────────────────────────────────────────── the finding aid
  *
  * /search only, and everything here is scoped so it costs a sheet nothing.

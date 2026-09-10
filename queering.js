@@ -337,4 +337,87 @@
 
     if (filled) index.hidden = false;
   }
+
+  /* ─── the record pages' index of their own entries ─────────────────────────────
+   *
+   * /ledger runs to 55 entries and /what-is-settled to 66, under two headings each.
+   * A `.qe-contents` on either would derive from the <h2>s and show two useless
+   * lines; what a reader wants is the entries, and there is no other way to see
+   * what the ledger holds without scrolling 130KB of it.
+   *
+   * BACK MATTER, like the register's index and for the register's reason: front
+   * matter delays every reader to reach what they came for, and these are the two
+   * longest pages on the site. A one-line pointer near the top is how a book does it.
+   *
+   * THE GROUPS ARE THE PAGE'S OWN <h2>s, WHICH IS THE DIFFERENCE FROM THE INDEX
+   * ABOVE. The register's groups are authored, because a sheet's name is an
+   * editorial word this file may not write. Here both the group headings and the
+   * entry names are already on the page — they are its headings — so every label is
+   * a clone of text the reader can see above it, and nothing is composed. Same
+   * standing as the contents list: derived navigation, never new words.
+   *
+   * IT IS EMPTY IN THE SERVED MARKUP, and that is load-bearing rather than tidy. A
+   * generated index sitting in the HTML would give the SKS mirror and
+   * search-index.json a second copy of all 121 headings — the exact double-indexing
+   * the contents list is built at runtime to avoid. Both generators skip the
+   * container so its authored heading does not announce a list the .md has no room
+   * for either.
+   */
+  var entryIndex = document.querySelector('.qe-entry-index');
+  if (entryIndex) {
+    var into = entryIndex.querySelector('.qe-index-groups');
+    var record = document.querySelector('.qe-record');
+    if (into && record) {
+      /* Walk the record's children in order, so an entry files under the heading it
+         actually sits beneath. Collecting the h3s per h2 with a selector would need
+         the two to be nested, and a generated document is flat. */
+      var kids = record.children;
+      var currentList = null;
+      var groupsMade = 0;
+
+      for (var k = 0; k < kids.length; k++) {
+        var el = kids[k];
+
+        if (el.tagName === 'H2' && el.id) {
+          var gh = document.createElement('p');
+          gh.className = 'qe-index-sheet';
+          var ga = document.createElement('a');
+          ga.setAttribute('href', '#' + el.id);
+          ga.textContent = labelOf(el);
+          gh.appendChild(ga);
+
+          var wrap = document.createElement('div');
+          wrap.className = 'qe-index-group';
+          wrap.appendChild(gh);
+          currentList = document.createElement('ul');
+          wrap.appendChild(currentList);
+          into.appendChild(wrap);
+          groupsMade++;
+          continue;
+        }
+
+        if (el.tagName === 'H3' && el.id && currentList) {
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          a.setAttribute('href', '#' + el.id);
+          a.textContent = labelOf(el);
+          li.appendChild(a);
+          currentList.appendChild(li);
+        }
+      }
+
+      if (groupsMade) entryIndex.hidden = false;
+    }
+  }
+
+  /* A heading's own words, with its section mark taken off first — the mark is a
+     child of the heading and its accessible name would otherwise arrive in the
+     label. Shared by the builder above and written once for the reason everything
+     else in this file is. */
+  function labelOf(h) {
+    var copy = h.cloneNode(true);
+    var mark = copy.querySelector('.qe-anchor');
+    if (mark) mark.remove();
+    return copy.textContent.replace(/\s+/g, ' ').trim();
+  }
 })();

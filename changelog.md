@@ -34,7 +34,7 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Label corrected
 - Cabinet
 
-2026 · 9 September · latest
+2026 · 9 September
 
 ## Two pages of this cabinet had addresses, were listed on the home page, and were reachable from the foot of nothing
 
@@ -163,6 +163,30 @@ CabinetThree sheets had no contents list and no reason for not having one
 **“After the lede” turned out not to mean “before the first heading”**, which was checked before anything was placed. Five of the existing lists carry opening prose after them — [the Dickinson sheet](https://queering.earth/wild-nights) nineteen blocks, [the Quetelet sheet](https://queering.earth/invention-of-normal) thirteen. A contents list is front matter for the sections, and the lede is not a section.
 
 **No. 2 puts its list somewhere no other sheet does, and that is authored.** It has no lede, and all six of its headings are in the 2026 commentary — the 2022 essay above them is unheaded and stays that way, because the note directly above it says Ryan’s words are unchanged and a heading dropped into them would not be. A list at the top would name six sections that begin a fifth of the way down and say nothing at all about the essay, which is the reason the sheet exists. It sits immediately after that note instead, where the sheet says out loud that it is changing hands, and maps exactly what follows it.
+
+2026 · 9 September · latest
+
+## The two longest pages on the site could not be surveyed without reading all of them
+
+A reader wanting to know whether the ledger holds an entry on Rossetti had one option: scroll 130KB of it. Both record pages now carry **an index of their own entries** at the foot — 55 on [the ledger](https://queering.earth/ledger), 71 on [the decision log](https://queering.earth/what-is-settled) — with a one-line pointer up in the front matter, the way a bound volume does it.
+
+MountedBack matter again, and built at runtime for the reason the contents list is
+
+**A contents list was the wrong reach and this page already knows why.** `.qe-contents` derives from a page’s `h2`s, and both records have two — it would have shown *Verified* and *Open* and delayed every reader to say nothing. What a reader wants is the entries. So it is the register’s `.qe-sheet-index` shape a second time: **back matter, ruled off, at the foot**, because front matter costs every reader and back matter costs none.
+
+**Generated into the HTML it would have double-indexed all 121 headings.** The SKS mirror and `search-index.json` both read the landmark, and a list of every heading sitting beside those headings is a second copy of each — the exact reason the contents list is built at runtime rather than written down. So the served container is empty, `queering.js` fills it, and both generators skip it so the `.md` does not announce a list it has no room for.
+
+**The group headings are derived here, where the register’s are authored.** That is the one real difference between the two indexes and it is not a relaxation: the register’s groups are sheet names, which are editorial words `queering.js` may not write, whereas these groups are the page’s own `h2`s and every label is a clone of text the reader can see above it. Nothing is composed, summarised or truncated — the same standing the contents list has.
+
+**A group heading is a paragraph and not a heading**, which looks like a downgrade and is the opposite. These are clones of headings the reader has already passed; putting them back into the outline would give the page a shadow contents made of duplicates, which is worse for a screen reader’s rotor than having none. It wears `.qe-index-sheet`, so it still looks like what it is.
+
+CabinetNo line in REVEAL, and that was checked rather than assumed
+
+`reveal.mjs` says in its own comment that it is “for a fetch or a hidden state, not for anything merely built at runtime”, and this component ships hidden — which reads like a case for it. It is not: the drift rail’s `if (r.hidden) continue` is only sensible if `queering.js` has already run under the gate, so anything that unhides *itself* is measured without help. **Confirmed by counting rather than by reading the source:** `/ledger` went from 1,782 measured elements to 1,845 with the index in, and its print count did not move, because the index is `display: none` on paper.
+
+**Two columns above 34rem, one below.** Fifty-five short names in a single column is a screen and a half of nothing but links with the measure wasted on them; two columns of wrapped link text on a phone is a column of three-word fragments. The divider is a `column-rule` rather than a gap, because a bare gap between two lists of links reads as one ragged list. `check-overlap.mjs` was the thing to watch here and reports zero collisions across all three passes.
+
+One spacing fault came out of looking: `.qe-index-link` is shaped for the register, where the pointer is the last thing before the entries and needs no bottom margin. Here the body follows it immediately, so the line read as the opening of the paragraph beneath it.
 
 2026 · 9 September
 

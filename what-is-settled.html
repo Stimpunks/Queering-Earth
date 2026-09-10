@@ -91,7 +91,7 @@
 }
 </script>
 </head>
-<body>
+<body class="qe-record-page">
 
 <a class="qe-skip" href="#main">Skip to the page</a>
 
@@ -130,6 +130,8 @@
   </header>
 
   <p class="qe-lede">This page is the decision log, generated from <code>DECISIONS.md</code> in the repository rather than retyped from it. It exists so the same question is not re-litigated in three weeks, and it is public for the reason the register is: <strong>a decision whose reasoning nobody can read is a decision that will be made again badly.</strong></p>
+
+  <p class="qe-index-link">Every decision is listed by name in <a href="#qe-entry-index-h">the index at the foot of this page</a>.</p>
 
   <div class="qe-record">
 <!-- generated:record:start -->
@@ -257,7 +259,7 @@
 <p><strong>Heading ids are slugged, against the house rule, with an escape hatch.</strong> The rule is that an id is authored because a slug dies when the heading is reworded. It cannot be met by a generator over ~120 entry headings with nowhere in Markdown to author one. So <code>### Title {#anchor}</code> is honoured where written and a slug is used where it is not — one line to pin an address somebody has actually shared, no schema. Two headings that slug alike stop the run naming both, because <code>check-markup.mjs</code> would report the duplicate id as a symptom on a generated file while only this tool knows the two titles.</p>
 <p><strong>Both walkers learned <code>pre</code> the same afternoon</strong>, and the Markdown one needed more than the tag: its text handler collapses whitespace and escapes punctuation, which is right everywhere except inside a fence — the first output put a shell command and its continuation on one line with backslashes through the quoting. The search walker indexes the block rather than skipping it; a command in the decision log is content.</p>
 <p><strong>The search index roughly doubled and that is stated rather than hidden</strong>, in the register and here: 154 KB gzipped to 249 KB. It is fetched after render with <code>max-age=0</code>, so an unchanged index is a 304 and no bytes move — the cost is paid when it changes, not per visit. Both records were indexed rather than only the ledger, because a decision nobody can search is close to a decision nobody published. <strong><code>/search</code>'s lede moved in the same commit</strong>, for the third time a page that binds us has had to.</p>
-<p><strong>Still open:</strong> neither page has an index of its own entries. <code>/ledger</code> runs to 55 of them under two headings, so <code>.qe-contents</code> — which derives from <code>h2</code>s — would show two useless lines. The register solved the same problem with <code>.qe-sheet-index</code> as back matter, and that is the shape to copy when somebody wants it. Not built rather than half-built.</p>
+<p><strong>Resolved the same day: both pages now index their own entries.</strong> <code>.qe-entry-index</code>, back matter, filled by <code>queering.js</code> from each page's own headings — 55 on the ledger, 71 on the decision log. The served container is empty because a generated index of 121 headings would give the mirror and the search index a second copy of every one, which is the reason <code>.qe-contents</code> is built at runtime and not written down. Group headings are derived here where the register's are authored, because these are clones of <code>h2</code>s already on the page rather than editorial words; they are marked up as paragraphs so the outline does not gain a shadow contents of duplicates. Two columns above 34rem, one below. No <code>REVEAL</code> line, confirmed by counting measured elements rather than by reading <code>reveal.mjs</code>.</p>
 <h3 id="the-cabinet-s-own-pages-came-out-of-the-footer-2026-09-09">The cabinet's own pages came out of the footer (2026-09-09) <a class="qe-anchor" href="#the-cabinet-s-own-pages-came-out-of-the-footer-2026-09-09"><span class="qe-sr">Link to this section</span></a></h3>
 <p><code>/design</code>, <code>/changelog</code>, <code>/search</code> and <code>/privacy</code> were reachable only from the footer of every page, which is where a site puts what it hopes nobody needs. <strong>A site that publishes an attribution ledger and a privacy policy should not file both under fine print.</strong> They now have a section at the foot of the home page, inside <code>main</code>.</p>
 <p><strong>The name was not invented.</strong> <code>tools/pages.mjs</code> has called this group <em>The cabinet itself</em> since the finding aid shipped, and <code>/search</code>'s manifest and <code>/llms.txt</code> already show that heading to readers and to agents. Picking anything else — <em>Off the plate</em>, <em>The workroom</em> — would have been a second name for a set that had one, which is the drift this repo keeps paying to avoid. Ryan chose it from three.</p>
@@ -619,6 +621,12 @@ netlify api getSite --data '{"site_id":"4115815c-5811-4df6-8f6f-9598e85d2d72"}' 
 <p><strong>One thing this does not fix.</strong> A pass here is still not evidence about texture. The tool composites computed colour pairs, so grain under body text passes every number in it. That is a rule in <code>CLAUDE.md</code>, enforced by nothing, and it is the next thing on this list to become possible the day somebody reaches for a background image.</p>
 <!-- generated:record:end -->
   </div>
+
+  <nav class="qe-entry-index" aria-labelledby="qe-entry-index-h" hidden>
+    <h2 id="qe-entry-index-h">Every decision on this page</h2>
+    <p class="qe-index-note">The same entries, listed by name so you can find one without reading past it. Built from this page&rsquo;s own headings.</p>
+    <div class="qe-index-groups"></div>
+  </nav>
 
 </main>
 

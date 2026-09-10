@@ -41,6 +41,9 @@
  *     on the page, not a fact about the reading.
  *   - `.qe-anchor` and `.qe-sr` — the section mark and its screen-reader name are
  *     navigation furniture, and `§ Link to this section` in prose is noise.
+ *   - `nav.qe-entry-index` — the same, on the two record pages: an index of their own
+ *     entries, built from their own headings, so the served container is empty and its
+ *     authored heading would otherwise announce a list this file does not carry.
  *   - `nav.qe-contents` — derived at runtime from the page's own headings, so it is
  *     empty in the served HTML and would be a second copy of the headings if it were not.
  */
@@ -138,7 +141,7 @@ function toMarkdown(html, file) {
      * the thing it actually searches is listed in full further down the same page. */
     if (!t.close && (SKIP_TAGS.has(t.tag) || cls.includes('qe-anchor') || cls.includes('qe-sr') ||
         cls.includes('qe-find') || cls.includes('qe-found') ||
-        (t.tag === 'nav' && cls.includes('qe-contents')))) {
+        (t.tag === 'nav' && (cls.includes('qe-contents') || cls.includes('qe-entry-index'))))) {
       if (!t.self) { skipDepth = 1; skipTag = t.tag; }
       continue;
     }

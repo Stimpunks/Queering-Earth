@@ -46,6 +46,14 @@ Label corrected: This register said a rule did nothing, having measured it on sc
 Cabinet: Three sheets had no contents list and no reason for not having one</description>
     </item>
     <item>
+      <title>The two longest pages on the site could not be surveyed without reading all of them</title>
+      <link>https://queering.earth/changelog#a-2026-09-09-entryindex</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-entryindex</guid>
+      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: Back matter again, and built at runtime for the reason the contents list is
+Cabinet: No line in REVEAL, and that was checked rather than assumed</description>
+    </item>
+    <item>
       <title>The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page</title>
       <link>https://queering.earth/changelog#a-2026-09-09-records</link>
       <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-records</guid>

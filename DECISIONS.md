@@ -668,11 +668,16 @@ changes, not per visit. Both records were indexed rather than only the ledger, b
 decision nobody can search is close to a decision nobody published. **`/search`'s lede
 moved in the same commit**, for the third time a page that binds us has had to.
 
-**Still open:** neither page has an index of its own entries. `/ledger` runs to 55 of
-them under two headings, so `.qe-contents` — which derives from `h2`s — would show two
-useless lines. The register solved the same problem with `.qe-sheet-index` as back
-matter, and that is the shape to copy when somebody wants it. Not built rather than
-half-built.
+**Resolved the same day: both pages now index their own entries.** `.qe-entry-index`,
+back matter, filled by `queering.js` from each page's own headings — 55 on the ledger,
+71 on the decision log. The served container is empty because a generated index of 121
+headings would give the mirror and the search index a second copy of every one, which is
+the reason `.qe-contents` is built at runtime and not written down. Group headings are
+derived here where the register's are authored, because these are clones of `h2`s
+already on the page rather than editorial words; they are marked up as paragraphs so the
+outline does not gain a shadow contents of duplicates. Two columns above 34rem, one
+below. No `REVEAL` line, confirmed by counting measured elements rather than by reading
+`reveal.mjs`.
 
 ### The cabinet's own pages came out of the footer (2026-09-09)
 
