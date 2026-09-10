@@ -222,6 +222,16 @@
           <p><strong>The labels are left in flow at zero opacity rather than floated in pills, and that is what makes the reveal safe for the other gate.</strong> Pills would let the ticks sit at an even pitch, as they do on the page this was modelled on &mdash; and the moment the reveal turned them on for measurement they would lie over one another, so <code>check-overlap.mjs</code> would report every label sitting on the next. In flow, what the gates measure is the expanded rail that was already clean at 1280px. The pitch is uneven instead, because a row is as tall as its own label: one row on the home page, three on <a href="/flower-codes">the waste garden</a>.</p>
         </div>
       </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">The rail would not appear for the person who asked for it, and the number keeping it away had been reserving room for a block that is not there</span></div>
+        <div class="qe-entry-body">
+          <p>It shipped appearing above 1232px. Ryan uses a browser whose tab sidebar takes its width out of the viewport, so a laptop was arriving under that and <strong>the rail he had just asked for never appeared at all.</strong> Lowering the number turned into finding out it had never been derived correctly.</p>
+          <p><strong>The breakpoint was never measuring clearance.</strong> The rail and the page are both derived from the same centre line, so the gap between them is constant at every width &mdash; widening the window moves both outwards together and buys the prose nothing. The only thing that fails as the window narrows is the rail sliding off the left edge, so the left is now pinned rather than computed from the centre, which turns that failure into &ldquo;stops moving&rdquo;.</p>
+          <p><strong>And the sum was holding back 288px for <code>.qe-wide</code>, which does nothing.</strong> This site&rsquo;s own notes say two blocks break the measure &mdash; the masthead and the provocation. Neither can: <code>.qe-wide</code> asks for 46rem inside a <code>main</code> capped at 34rem, and a max-width larger than its parent constrains nothing. Both render at 448px, like every other block, and have presumably done so since the rule was written. <strong>Nobody can miss a block that was never wider</strong>, which is why an inert rule survived this long on a site with eight gates. It is left alone rather than fixed, because widening the masthead is a decision about how this looks and <a href="/what-is-settled">the decision log</a> is where that belongs.</p>
+          <p>Measured rather than calculated, which is what should have happened first: at 1024px the leftmost thing inside the landmark across the art-heavy sheets is 277&ndash;288px against a rail ending at 172px, so the real clearance is about 108px where the old sum was defending 24. <strong>The rail now appears above 1024px, 208px better than it shipped</strong>, checked on both sides of the boundary.</p>
+        </div>
+      </div>
     </section>
 
     <section class="qe-accession" aria-labelledby="a-2026-09-09-records">

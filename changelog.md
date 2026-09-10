@@ -64,6 +64,16 @@ The rail shipped showing every label all the time, and **needed nothing from `to
 
 **The labels are left in flow at zero opacity rather than floated in pills, and that is what makes the reveal safe for the other gate.** Pills would let the ticks sit at an even pitch, as they do on the page this was modelled on — and the moment the reveal turned them on for measurement they would lie over one another, so `check-overlap.mjs` would report every label sitting on the next. In flow, what the gates measure is the expanded rail that was already clean at 1280px. The pitch is uneven instead, because a row is as tall as its own label: one row on the home page, three on [the waste garden](https://queering.earth/flower-codes).
 
+Label correctedThe rail would not appear for the person who asked for it, and the number keeping it away had been reserving room for a block that is not there
+
+It shipped appearing above 1232px. Ryan uses a browser whose tab sidebar takes its width out of the viewport, so a laptop was arriving under that and **the rail he had just asked for never appeared at all.** Lowering the number turned into finding out it had never been derived correctly.
+
+**The breakpoint was never measuring clearance.** The rail and the page are both derived from the same centre line, so the gap between them is constant at every width — widening the window moves both outwards together and buys the prose nothing. The only thing that fails as the window narrows is the rail sliding off the left edge, so the left is now pinned rather than computed from the centre, which turns that failure into “stops moving”.
+
+**And the sum was holding back 288px for `.qe-wide`, which does nothing.** This site’s own notes say two blocks break the measure — the masthead and the provocation. Neither can: `.qe-wide` asks for 46rem inside a `main` capped at 34rem, and a max-width larger than its parent constrains nothing. Both render at 448px, like every other block, and have presumably done so since the rule was written. **Nobody can miss a block that was never wider**, which is why an inert rule survived this long on a site with eight gates. It is left alone rather than fixed, because widening the masthead is a decision about how this looks and [the decision log](https://queering.earth/what-is-settled) is where that belongs.
+
+Measured rather than calculated, which is what should have happened first: at 1024px the leftmost thing inside the landmark across the art-heavy sheets is 277–288px against a rail ending at 172px, so the real clearance is about 108px where the old sum was defending 24. **The rail now appears above 1024px, 208px better than it shipped**, checked on both sides of the boundary.
+
 2026 · 9 September
 
 ## The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page

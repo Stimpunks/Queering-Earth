@@ -99,7 +99,7 @@
   /* ── on this sheet, and in the margin
    *
    * Two views of one derivation: the contents list inside the measure, and the
-   * drift rail out in the left margin above 77rem. Both are built from the page's
+   * drift rail out in the left margin above 64rem. Both are built from the page's
    * own <h2>s, never typed. See the long note in
    * queering.css for why a hand-kept contents list is the one thing this site's
    * oldest rule forbids.

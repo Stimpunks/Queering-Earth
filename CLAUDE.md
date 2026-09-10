@@ -601,7 +601,7 @@ by including the empty `<nav>`; `queering.js` fills it from that page's own `<h2
 
 ### The rail is the same headings as an instrument, not as front matter
 
-`.qe-rail` is fixed in the left margin above **77rem** and absent below it, on every page
+`.qe-rail` is fixed in the left margin above **64rem** and absent below it, on every page
 but `/changelog`. Same derivation as `.qe-contents` through one builder in `queering.js`,
 so **a new page needs the empty `nav` and its `aria-label`** and nothing else — mount it,
 list it, log it, file it, route it, group it, **rail it**.
@@ -633,11 +633,25 @@ the DOM at all times so a screen reader always has the link name; `:focus-within
 it for a keyboard; `@media (hover: none)` never collapses it where hover does not exist;
 and `html.plain` never collapses it either.
 
-**77rem is arithmetic.** `.qe-wide` is 46rem centred, the column is 12rem, the air is
-2.5rem — 37.5rem out from the centre line. Below the breakpoint it is gone rather than
-squeezed, which is also what keeps WCAG 1.4.10 satisfied at 400% zoom. `check-overlap.mjs`
-measures screen at 1280px, so **the rail is live in that pass** and a collision is
-reportable.
+**64rem IS MEASURED, AND THE 77rem IT SHIPPED AT WAS A SUM AGAINST A BLOCK THAT IS NOT
+THERE.** Two corrections, and the second is the one to remember. First: the rail and the
+page are both derived from the centre line, so the gap between them is **constant at every
+width** — the breakpoint was only ever measuring the rail sliding off the left edge, which
+is why the left is now pinned with `max()`. Second: the old sum reserved room for
+`.qe-wide` at 46rem, and **`.qe-wide` does not do anything** — see below. Measured instead
+of calculated, the leftmost thing inside `main` on the art-heavy sheets is 277–288px at
+1024px against a rail ending at 172px, so the real clearance is ~108px and not the 24px
+being protected. Below the breakpoint the rail is gone rather than squeezed, which is what
+keeps WCAG 1.4.10 satisfied at 400% zoom. `check-overlap.mjs` measures screen at 1280px,
+so **the rail is live in that pass** and a collision is reportable.
+
+**`.qe-wide` IS DEAD, AND THIS FILE SAYS OTHERWISE TWO SECTIONS UP.** The layout note
+claims two blocks break the measure — the masthead and the provocation. They cannot:
+`.qe-wide` is a child of `main`, `main` is `max-width: 34rem`, and `max-width: 46rem`
+inside a 34rem parent constrains nothing. Both render at 448px like every other block.
+**Left in place deliberately**: making the masthead genuinely wider is a design decision
+about how this site looks, not a bug fix, and nothing should quietly widen it on the way
+past. See `DECISIONS.md`, where it is open.
 
 **It sits outside the landmark, so no generator sees it** — re-running all three changed
 no byte.

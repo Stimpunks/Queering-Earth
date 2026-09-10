@@ -3242,28 +3242,61 @@ html.plain .qe-stamp-date {
  * free. Measured on the widest case, /design at fifteen entries: 660px of rail
  * in a 900px viewport, which is why the height is clamped and scrolls.
  *
- * WHY 77rem. The widest block on any page is `.qe-wide` at 46rem, centred, so
- * the rail needs 12rem of column plus 2.5rem of air — 37.5rem out from the
- * centre line — before it can exist without touching the words. 77rem leaves it
- * 1rem off the window edge at the breakpoint and more thereafter. Below that it
- * is gone rather than squeezed, which is also what satisfies WCAG 1.4.10: at
- * 400% zoom the viewport is 320px wide and the rail has already vanished, so it
- * cannot eat the height a reflowed page needs. check-overlap.mjs measures screen
- * at 1280px = 80rem, so the rail is LIVE in that pass and gets measured.
+ * WHY 64rem, AND WHY IT SHIPPED AT 77. See the note on the positioning block
+ * below: the gap between the rail and the words is constant at every width, so
+ * the breakpoint only ever measured the rail running off the left edge of the
+ * window — and the sum that set it reserved space for a block that `main` had
+ * already capped. Pinning the left with `max()` and measuring the real clearance
+ * moves the figure from 1232px to 1024px. Below the breakpoint the rail is gone rather than
+ * squeezed, which is also what satisfies WCAG 1.4.10: at 400% zoom the viewport is
+ * 320px wide and the rail has already vanished, so it cannot eat the height a
+ * reflowed page needs. check-overlap.mjs measures screen at 1280px, so the rail is
+ * LIVE in that pass and gets measured.
  */
 
 .qe-rail { display: none; }
 
-@media screen and (min-width: 77rem) {
+/* ─── where it sits, and why the number moved twice
+ *
+ * IT SHIPPED AT 77rem AND THAT NUMBER CAME OUT OF A FALSE PREMISE. Ryan reported
+ * that Zen's tab sidebar takes its width out of the viewport, so the rail never
+ * appeared at all. Two things were wrong, and only the second one was interesting.
+ *
+ * THE BREAKPOINT WAS NEVER ABOUT CLEARING THE WORDS. The rail and the page are
+ * derived from the same centre line, so the gap between them is CONSTANT at every
+ * width — widening the window moves both outwards together and buys the prose
+ * nothing at all. The only thing that fails as the window narrows is the rail
+ * sliding off the LEFT EDGE of it. So the left is PINNED with `max()` rather than
+ * computed from the centre, which converts the failure from "slides off the edge"
+ * into "stops moving".
+ *
+ * THEN THE CLEARANCE WAS MEASURED RATHER THAN CALCULATED, AND THE ARITHMETIC HAD
+ * BEEN WRONG FROM THE START. The old sum reserved room for `.qe-wide` at 46rem,
+ * because this file says two blocks break the measure. THEY DO NOT. `.qe-wide` is
+ * a child of `main`, `main` is `max-width: 34rem`, and a max-width of 46rem inside
+ * a 34rem parent constrains nothing — it renders at 448px like every other block.
+ * The rail had been holding back 288px for a block that was never there. Measured
+ * across the art-heavy sheets at 1024px, the leftmost thing inside `main` is 277px
+ * to 288px, against a rail ending at 172px: 105px of clearance, not the 24px the
+ * sum was protecting. See DECISIONS.md — the dead rule is left alone here on
+ * purpose, because widening the masthead is a design decision and not a bug fix.
+ *
+ * 64rem is the honest figure with slack, and it is 208px better than shipped. A
+ * narrower column was computed and refused: at 144px a heading wraps to five and
+ * six lines, which makes the collapsed pitch wilder than the labels are worth.
+ */
+@media screen and (min-width: 64rem) {
   .qe-rail {
     display: block;
     position: fixed;
     z-index: 5;              /* under the skip link, which is 20 and must win */
     top: 50%;
     transform: translateY(-50%);
-    /* 23rem is half of .qe-wide, 2.5rem is the air, 12rem is the column. */
-    left: calc(50% - 23rem - 2.5rem - 12rem);
-    width: 12rem;
+    --qe-rail-w: 10rem;
+    width: var(--qe-rail-w);
+    /* Centre-derived while there is room, pinned 0.75rem off the window edge once
+       there is not. 23rem is half of .qe-wide and 2.5rem is the air. */
+    left: max(0.75rem, calc(50% - 23rem - 2.5rem - var(--qe-rail-w)));
     max-height: calc(100vh - var(--qe-space-8) * 2);
     overflow-y: auto;
     /* A rail that has reached its end must not then scroll the page under it. */
@@ -3271,6 +3304,11 @@ html.plain .qe-stamp-date {
     padding-left: var(--qe-space-2);
     border-left: 1px solid var(--qe-rule);
   }
+}
+
+/* Room for the wider column, which wraps the long headings one line less. */
+@media screen and (min-width: 80rem) {
+  .qe-rail { --qe-rail-w: 12rem; }
 }
 
 /* Higher specificity than the rule above, so a page whose rail was never filled
