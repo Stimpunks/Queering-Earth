@@ -181,6 +181,10 @@ Considering how common illness is, how tremendous the spiritual change that it b
 
 **[Newsreader](https://github.com/productiontype/Newsreader)**, by **Production Type**, sets everything you actually read: body text at about 19px, line spacing 1.65, and a measure of roughly 66 characters. Body text on this site never goes below 18px and must survive 200% zoom.
 
+**Nine more sit under *Reading*, and a reader may set the sheet in any of them.** **Adelphe**, **Atkinson Hyperlegible**, **BBB Baskervvol**, **Coxinelle** carry a real italic, so they set the reading face as well as the display one. **Insolente**, **Redaction Inclusive**, **Sporting Grotesque**, **Trickster**, **Victorianna** set the headings and leave Newsreader to read — not a preference but a constraint: Victorianna ships Thin alone and is unreadable at reading size, and the other four have no italic at all, which would put a faux slant on every `<cite>` on a site built out of citations.
+
+**Six are from [Bye Bye Binary](https://gitlab.com/bye-bye-binary)**, a collective drawing glyphs for inclusive and non-binary French — letterforms that exist because the grammar refused the person. They are under CUTE rather than the OFL, which forbids subsetting them, so those six ship whole while the two house faces are cut to the latin subset. **None of the nine is loaded until it is picked:** an `@font-face` is a declaration, and the file is fetched only when a rule using it first meets rendered text. Thirty-two faces are declared and a reader who picks none downloads three.
+
 Both are served from this domain rather than from a font CDN, and **both are under the SIL Open Font Licence**, whose text sits beside them in `fonts/` because the licence has to travel with the files wherever they are redistributed — and a public repository serving them over HTTP is redistribution. They went a day without it. The designers above are read out of upstream metadata by `tools/make-fonts.mjs` rather than from anybody’s memory, which is the same rule every other name on this site is held to.
 
 ## Plain view

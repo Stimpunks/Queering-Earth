@@ -42,7 +42,7 @@
 <!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
      either one would flash the wrong page. The two keys this reads are the two
      this page discloses; there is nothing else to restore. -->
-<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
 <!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
      rel=alternate points an agent at this page's Markdown source, derived from this
      page's own main landmark by tools/make-markdown.mjs.
@@ -127,6 +127,24 @@
           </div>
           <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
         </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-font">Typeface</label>
+            <select class="qe-reading-select qe-reading-select-wide" id="qe-set-font">
+              <option value="">Fraunces &amp; Newsreader</option>
+              <option value="adelphe">Adelphe</option>
+              <option value="atkinson">Atkinson Hyperlegible</option>
+              <option value="baskervvol">BBB Baskervvol</option>
+              <option value="coxinelle">Coxinelle</option>
+              <option value="insolente">Insolente</option>
+              <option value="redaction">Redaction Inclusive</option>
+              <option value="sporting">Sporting Grotesque</option>
+              <option value="trickster">Trickster</option>
+              <option value="victorianna">Victorianna</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">The first four also set the reading face, because they have a real italic. The rest change the headings and leave Newsreader to read.</span>
+        </li>
       </ul>
       <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
     </div>
@@ -179,8 +197,8 @@
     <dd>Which ground you asked for &mdash; the daylight sheet or the cabinet. Holds the word <code>daylight</code> or <code>cabinet</code>, and nothing else.</dd>
     <dt><code>qe-plain</code></dt>
     <dd>Whether you asked for plain view, which switches off the display faces, the wonk, the rotation and the motion. Holds <code>1</code>, or is absent.</dd>
-    <dt><code>qe-motion</code>, <code>qe-contrast</code>, <code>qe-spacing</code>, <code>qe-textsize</code></dt>
-    <dd>The four <strong>reading settings</strong>, under <em>Reading</em> at the top of every page. The first three hold <code>on</code> or <code>off</code>; <code>qe-textsize</code> holds <code>larger</code> or <code>largest</code>. Any of them may also be absent &mdash; and <strong>absent is the state that matters</strong>: it means we follow whatever your own device asks for, which for text size is the default size your browser is already set to. Only a choice made here overrides that. <em>Follow my device again</em> removes all four and hands you back to your device.</dd>
+    <dt><code>qe-motion</code>, <code>qe-contrast</code>, <code>qe-spacing</code>, <code>qe-textsize</code>, <code>qe-font</code></dt>
+    <dd>The five <strong>reading settings</strong>, under <em>Reading</em> at the top of every page. The first three hold <code>on</code> or <code>off</code>; <code>qe-textsize</code> holds <code>larger</code> or <code>largest</code>; <code>qe-font</code> holds the name of one of nine typefaces. Any of them may also be absent &mdash; and <strong>absent is the state that matters</strong>: it means we follow whatever your own device asks for, which for text size is the default size your browser is already set to. Only a choice made here overrides that. <em>Follow my device again</em> removes all five and hands you back to your device.</dd>
   </dl>
 
   <p><strong>Neither is a cookie and neither is ever sent anywhere.</strong> Local storage is not attached to requests the way a cookie is; these two values stay in the browser that wrote them, on the device that wrote them. We cannot read them, and nothing on this site tries to. Clearing your site data removes them and the page goes back to following your system&rsquo;s own light or dark preference.</p>

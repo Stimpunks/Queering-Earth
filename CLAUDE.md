@@ -265,8 +265,37 @@ the argument, and it lives **entirely in CSS**, layered over ordinary semantic H
 ### Default to the device; let the reader say otherwise in the moment
 
 `/the reading settings` — the **Reading** disclosure beside the two view controls —
-carries **Reduce motion**, **More contrast**, **Looser lines** and **Text size**.
-Added 2026-09-10.
+carries **Reduce motion**, **More contrast**, **Looser lines**, **Text size** and
+**Typeface**. Added 2026-09-10.
+
+**The typeface picker offers nine faces, and none of them is loaded until it is picked.**
+An `@font-face` is a declaration; the file is fetched when a rule using that family first
+meets rendered text. Thirty-two faces are declared and a reader who picks none downloads
+three, so the picker needed no lazy-loading machinery — the mechanism is the cascade.
+
+**Four set both faces; five set only the display, and that split is a constraint.**
+Victorianna ships Thin alone and is unreadable at reading size. Redaction Inclusive,
+Insolente, Trickster and Sporting Grotesque have **no italic at all**, and this site is
+built out of citations — setting one as the reading face would put a faux slant on every
+`<cite>`. `sets_body` in the manifest is that fact, not a preference.
+
+**`tools/make-fonts.mjs` owns all of it** — the faces, the `@font-face` blocks, the
+`html.qe-font-*` class rules, the licence files, the designer credits and the manifest,
+generated from one table so the stylesheet cannot declare a family the picker does not
+offer. **The option list lives in the markup on eighteen pages**, so
+`check-metadata.mjs` compares the two: an option with no face behind it offers a
+typeface that will not load, a face with no option is weight nobody can reach, and both
+are silent. **Narrowing the nine is exactly when that happens** — re-run the tool, edit
+the options, and let the gate tell you if they disagree.
+
+**CUTE is not the OFL and six of the nine are under it.** It permits use, modification
+and commercial use, and says outright it is "not technically compatible with any FLOSS
+license to date". It governs **fonts, not the documents they set**, so nothing here is
+relicensed. Three conditions bind: credit the designers **and link the source**; ship
+complete files, not lone extracted faces; and **never subset a CUTE face** — deleting
+the post-binary characters or the OpenType features that activate them is forbidden, so
+those six ship whole while the two house faces are cut to latin. Its donation is a
+condition, met at the "for an association" tier on 2026-09-10.
 
 **Not every setting is a yes or a no.** Text size has two steps, so its row is a native
 `<select>` whose stored values are `larger` and `largest`. The class is `qe-<key>-<state>`

@@ -182,6 +182,215 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* ── The picker families, offered under Reading ───────────────────────────────
+   Declared, not loaded: an @font-face costs its own bytes of CSS and the file is
+   fetched only when a rule using the family first matches rendered text. A reader
+   who picks none downloads none of them. The class rules below are what the picker
+   switches, and both halves are generated from one table so they cannot disagree
+   about which families exist or which of them may set the reading face. */
+
+/* BBB Baskervvol · regular */
+@font-face {
+  font-family: 'BBB Baskervvol';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/baskervvol-regular.otf) format('opentype');
+}
+/* BBB Baskervvol · italic */
+@font-face {
+  font-family: 'BBB Baskervvol';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/baskervvol-italic.otf) format('opentype');
+}
+/* BBB Baskervvol · bold */
+@font-face {
+  font-family: 'BBB Baskervvol';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/baskervvol-bold.otf) format('opentype');
+}
+/* Adelphe · regular */
+@font-face {
+  font-family: 'Adelphe';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/adelphe-regular.otf) format('opentype');
+}
+/* Adelphe · italic */
+@font-face {
+  font-family: 'Adelphe';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/adelphe-italic.otf) format('opentype');
+}
+/* Adelphe · bold */
+@font-face {
+  font-family: 'Adelphe';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/adelphe-bold.otf) format('opentype');
+}
+/* Coxinelle · regular */
+@font-face {
+  font-family: 'Coxinelle';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/coxinelle-regular.otf) format('opentype');
+}
+/* Coxinelle · italic */
+@font-face {
+  font-family: 'Coxinelle';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/coxinelle-italic.otf) format('opentype');
+}
+/* Coxinelle · bold */
+@font-face {
+  font-family: 'Coxinelle';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/coxinelle-bold.otf) format('opentype');
+}
+/* Atkinson Hyperlegible · italic-400 */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/atkinson-italic-400.woff2) format('woff2');
+}
+/* Atkinson Hyperlegible · italic-700 */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/atkinson-italic-700.woff2) format('woff2');
+}
+/* Atkinson Hyperlegible · roman-400 */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/atkinson-roman-400.woff2) format('woff2');
+}
+/* Atkinson Hyperlegible · roman-700 */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/atkinson-roman-700.woff2) format('woff2');
+}
+/* Redaction Inclusive · regular */
+@font-face {
+  font-family: 'Redaction Inclusive';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/redaction-regular.woff2) format('woff2');
+}
+/* Insolente · regular */
+@font-face {
+  font-family: 'Insolente';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/insolente-regular.otf) format('opentype');
+}
+/* Trickster · regular */
+@font-face {
+  font-family: 'Trickster';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/trickster-regular.woff2) format('woff2');
+}
+/* Victorianna · regular */
+@font-face {
+  font-family: 'Victorianna';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/victorianna-regular.otf) format('opentype');
+}
+/* Victorianna · italic */
+@font-face {
+  font-family: 'Victorianna';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/victorianna-italic.otf) format('opentype');
+}
+/* Sporting Grotesque · regular */
+@font-face {
+  font-family: 'Sporting Grotesque';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/sporting-regular.woff2) format('woff2');
+}
+/* Sporting Grotesque · bold */
+@font-face {
+  font-family: 'Sporting Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/sporting-bold.woff2) format('woff2');
+}
+
+/* BBB Baskervvol — Bye Bye Binary. Sets both faces: it has a real italic. */
+html.qe-font-baskervvol {
+  --qe-display: 'BBB Baskervvol', "Iowan Old Style", Georgia, serif;
+  --qe-body: 'BBB Baskervvol', "Iowan Old Style", Georgia, serif;
+}
+/* Adelphe — Bye Bye Binary. Sets both faces: it has a real italic. */
+html.qe-font-adelphe {
+  --qe-display: 'Adelphe', "Iowan Old Style", Georgia, serif;
+  --qe-body: 'Adelphe', "Iowan Old Style", Georgia, serif;
+}
+/* Coxinelle — Bye Bye Binary. Sets both faces: it has a real italic. */
+html.qe-font-coxinelle {
+  --qe-display: 'Coxinelle', "Iowan Old Style", Georgia, serif;
+  --qe-body: 'Coxinelle', "Iowan Old Style", Georgia, serif;
+}
+/* Atkinson Hyperlegible — Braille Institute of America. Sets both faces: it has a real italic. */
+html.qe-font-atkinson {
+  --qe-display: 'Atkinson Hyperlegible', "Iowan Old Style", Georgia, serif;
+  --qe-body: 'Atkinson Hyperlegible', "Iowan Old Style", Georgia, serif;
+}
+/* Redaction Inclusive — Bye Bye Binary, after Redaction by Jeremy Mickel / MCKL. Display only: no italic upstream, so Newsreader keeps the reading. */
+html.qe-font-redaction {
+  --qe-display: 'Redaction Inclusive', "Iowan Old Style", Georgia, serif;
+}
+/* Insolente — Bye Bye Binary. Display only: no italic upstream, so Newsreader keeps the reading. */
+html.qe-font-insolente {
+  --qe-display: 'Insolente', "Iowan Old Style", Georgia, serif;
+}
+/* Trickster — Jean-Baptiste Morizot, Velvetyne. Display only: no italic upstream, so Newsreader keeps the reading. */
+html.qe-font-trickster {
+  --qe-display: 'Trickster', "Iowan Old Style", Georgia, serif;
+}
+/* Victorianna — Velvetyne. Display only: no italic upstream, so Newsreader keeps the reading. */
+html.qe-font-victorianna {
+  --qe-display: 'Victorianna', "Iowan Old Style", Georgia, serif;
+}
+/* Sporting Grotesque — Lucas Le Bihan, Velvetyne. Display only: no italic upstream, so Newsreader keeps the reading. */
+html.qe-font-sporting {
+  --qe-display: 'Sporting Grotesque', "Iowan Old Style", Georgia, serif;
+}
+
 /* ── END generated by tools/make-fonts.mjs ───────────────────────────────── */
 
 :root {
@@ -922,6 +1131,9 @@ html.qe-spacing-on p + p { margin-top: var(--qe-para-gap, 1.47rem); }
   min-height: 1.6rem;
   cursor: pointer;
 }
+/* The typeface names are long enough that the shared select would clip them, and the
+   row is a flex row, so it gets its own max rather than a fixed width. */
+.qe-reading-select-wide { max-width: 10.5rem; }
 .qe-reading-select:hover { border-color: var(--qe-moss); }
 .qe-reading-select:focus-visible { outline: 3px solid var(--qe-rust); outline-offset: 2px; }
 

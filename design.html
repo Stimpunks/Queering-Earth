@@ -43,7 +43,7 @@
      either one would flash the wrong page: the decorated page at someone who
      turned it off, or the daylight sheet at someone who asked for the cabinet.
      With no stored ground, neither class is set and the media query decides. -->
-<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
 <!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
      rel=alternate points an agent at this page's Markdown source, derived from this
      page's own main landmark by tools/make-markdown.mjs.
@@ -130,6 +130,24 @@
             </select>
           </div>
           <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-font">Typeface</label>
+            <select class="qe-reading-select qe-reading-select-wide" id="qe-set-font">
+              <option value="">Fraunces &amp; Newsreader</option>
+              <option value="adelphe">Adelphe</option>
+              <option value="atkinson">Atkinson Hyperlegible</option>
+              <option value="baskervvol">BBB Baskervvol</option>
+              <option value="coxinelle">Coxinelle</option>
+              <option value="insolente">Insolente</option>
+              <option value="redaction">Redaction Inclusive</option>
+              <option value="sporting">Sporting Grotesque</option>
+              <option value="trickster">Trickster</option>
+              <option value="victorianna">Victorianna</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">The first four also set the reading face, because they have a real italic. The rest change the headings and leave Newsreader to read.</span>
         </li>
       </ul>
       <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
@@ -362,6 +380,10 @@
   </div>
 
   <p><strong><a href="https://github.com/productiontype/Newsreader">Newsreader</a></strong>, by <strong>Production Type</strong>, sets everything you actually read: body text at about 19px, line spacing 1.65, and a measure of roughly 66 characters. Body text on this site never goes below 18px and must survive 200% zoom.</p>
+
+  <p><strong>Nine more sit under <em>Reading</em>, and a reader may set the sheet in any of them.</strong> <strong>Adelphe</strong>, <strong>Atkinson Hyperlegible</strong>, <strong>BBB Baskervvol</strong>, <strong>Coxinelle</strong> carry a real italic, so they set the reading face as well as the display one. <strong>Insolente</strong>, <strong>Redaction Inclusive</strong>, <strong>Sporting Grotesque</strong>, <strong>Trickster</strong>, <strong>Victorianna</strong> set the headings and leave Newsreader to read &mdash; not a preference but a constraint: Victorianna ships Thin alone and is unreadable at reading size, and the other four have no italic at all, which would put a faux slant on every <code>&lt;cite&gt;</code> on a site built out of citations.</p>
+
+  <p><strong>Six are from <a href="https://gitlab.com/bye-bye-binary">Bye Bye Binary</a></strong>, a collective drawing glyphs for inclusive and non-binary French &mdash; letterforms that exist because the grammar refused the person. They are under CUTE rather than the OFL, which forbids subsetting them, so those six ship whole while the two house faces are cut to the latin subset. <strong>None of the nine is loaded until it is picked:</strong> an <code>@font-face</code> is a declaration, and the file is fetched only when a rule using it first meets rendered text. Thirty-two faces are declared and a reader who picks none downloads three.</p>
 
   <p>Both are served from this domain rather than from a font CDN, and <strong>both are under the SIL Open Font Licence</strong>, whose text sits beside them in <code>fonts/</code> because the licence has to travel with the files wherever they are redistributed &mdash; and a public repository serving them over HTTP is redistribution. They went a day without it. The designers above are read out of upstream metadata by <code>tools/make-fonts.mjs</code> rather than from anybody&rsquo;s memory, which is the same rule every other name on this site is held to.</p>
 

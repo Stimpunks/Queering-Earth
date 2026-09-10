@@ -131,6 +131,14 @@
     { key: 'spacing',  box: 'qe-set-spacing',  kind: 'checkbox', states: ['on', 'off'],
       query: null,                              whenChecked: 'on',  whenClear: 'off' },
     { key: 'textsize', box: 'qe-set-textsize', kind: 'select',   states: ['larger', 'largest'],
+      query: null },
+    /* The typeface picker. Nine faces chosen from two specimen sheets; the states are
+       their ids and the classes they add are declared in queering.css beside the
+       @font-face rules, both generated from one table by tools/make-fonts.mjs so the
+       list here cannot claim a face the stylesheet does not have. Nothing is fetched
+       until one is picked: an @font-face is a declaration, not a download. */
+    { key: 'font', box: 'qe-set-font', kind: 'select',
+      states: ['adelphe', 'atkinson', 'baskervvol', 'coxinelle', 'insolente', 'redaction', 'sporting', 'trickster', 'victorianna'],
       query: null }
   ];
 

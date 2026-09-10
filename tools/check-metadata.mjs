@@ -318,6 +318,28 @@ try {
     if (!meta.designer)
       fail('fonts', `${family} has no designer recorded — run: node tools/make-fonts.mjs`);
   }
+  /* THE PICKER'S OPTIONS ARE IN THE MARKUP ON EVERY PAGE AND THE FACES ARE IN ONE
+   * TABLE, so the two can disagree. An option naming a family that was dropped offers
+   * a reader a typeface that will not load; a family with no option is weight in the
+   * repo nobody can reach. Both are silent. Narrowing the nine is exactly when this
+   * happens, and narrowing is the stated plan. */
+  const pickerIds = Object.values(fonts.families ?? {})
+    .filter((m) => m.picker_id).map((m) => m.picker_id).sort();
+  for (const f of files) {
+    const html = await readFile(join(ROOT, f), 'utf8');
+    const sel = /<select[^>]*id="qe-set-font"[\s\S]*?<\/select>/.exec(html);
+    if (!sel) { fail('fonts', `${f} has no typeface picker`); continue; }
+    const offered = [...sel[0].matchAll(/<option value="([^"]*)"/g)]
+      .map((m) => m[1]).filter(Boolean).sort();
+    if (offered.join(',') !== pickerIds.join(',')) {
+      const extra = offered.filter((o) => !pickerIds.includes(o));
+      const missing = pickerIds.filter((i) => !offered.includes(i));
+      fail('fonts', `${f} typeface options disagree with the font table` +
+        (extra.length ? ` — offers ${extra.join(', ')} with no face behind it` : '') +
+        (missing.length ? ` — no option for ${missing.join(', ')}` : ''));
+    }
+  }
+
   if (!Object.keys(fonts.families ?? {}).length)
     fail('fonts', 'tools/font-files.json records no families — run: node tools/make-fonts.mjs');
 

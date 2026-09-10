@@ -36,6 +36,30 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 10 September · latest
 
+## Nine typefaces a reader can set the sheet in, six of them drawing letters that exist because the grammar refused the person
+
+Ryan asked what fonts *queer design* — after Robin Mientjes by way of Paul Soulellis: “an attitude in the face of conformity, an attitude in the sea of passivity, an attitude to say yes when others say no.” Twenty candidates went onto two specimen sheets; nine were kept. **Six are from [Bye Bye Binary](https://gitlab.com/bye-bye-binary)**, a collective drawing glyphs for inclusive and non-binary French. The rest are from Velvetyne and the Braille Institute.
+
+MountedA typeface picker where four options set the reading face and five only set the headings, and that split is a constraint rather than a taste
+
+**Thirty-two faces are declared and a reader who picks none downloads three.** That is the whole reason nine options cost nothing: an `@font-face` is a declaration, and the file behind it is fetched only when a rule using that family first meets rendered text. So the picker needed no lazy-loading machinery — the mechanism was already in the cascade. Pick BBB Baskervvol and exactly its three cuts arrive; pick nothing and the sheet is what it always was.
+
+**Four of the nine set both faces and five set only the display, and it is not a preference.** Victorianna ships a Thin cut alone and is unreadable at reading size — that was visible on the specimen before anybody chose it. Redaction Inclusive, Insolente, Trickster and Sporting Grotesque have *no italic at all*, and this site is built out of citations: setting one of them as the reading face would put a faux slant on every `<cite>` on every sheet. So those five change the headings and leave Newsreader to read, and the four with a real italic — BBB Baskervvol, Adelphe, Coxinelle, Atkinson Hyperlegible — do both.
+
+**Three of them had been shown in the wrong weight.** The first specimen set Adelphe in Floréal Bold, Coxinel·le in Black and Sporting Grotesque in Bold, because those filenames sorted first in their repositories. Two full text families were presented as heavy display faces. Regular, Italic and Bold here, which is the difference between offering a typeface and offering whatever came out of a directory listing first.
+
+The faces, the class rules and the manifest are generated from one table by `tools/make-fonts.mjs`, so the stylesheet cannot declare a family the picker does not offer or the reverse. And because the option list lives in the markup on eighteen pages while the faces live in one table, **`check-metadata.mjs` now compares the two** — an option with no face behind it offers a reader a typeface that will not load, and a face with no option is weight nobody can reach. Both are silent, and narrowing the nine is exactly when they would happen. Proved by offering a face that does not exist and watching it be named.
+
+CabinetCUTE is not the OFL, and reading it is what turned up two faults in our own house
+
+Six of the nine are under **CUTE — Conditions d’Utilisation Typographiques Engageantes**. It permits use, copying, redistribution, modification and commercial use, and states outright that it is “not technically compatible with any FLOSS license to date”, taking a position “radically and deliberately inconsistent” with them. **It is explicit that it governs fonts and not the documents they set** — its own example is that a book typeset in a CUTE font is not governed by CUTE — so nothing on this site is relicensed by using them.
+
+Three of its conditions bind us. **Credit the designers and link the original publication source** — the first specimen named the collective in plain text with no link, which is half of it. **Share complete files** rather than lone extracted faces. And **do not delete the post-binary characters or the OpenType features that activate them**, which forbids subsetting: the six CUTE faces ship whole while the two house faces are cut to the latin subset. Its donation is a *condition* and not a suggestion; Stimpunks met it at the “for an association” tier.
+
+**Reading a licence properly is what found the faults at home.** Sourcing these candidates meant reading nine licences, and that turned up two of our own: the house faces had been redistributed for a day with no licence file beside them, and the colophon credited both of them to a search engine rather than to **Undercase Type, Phaedra Charles and Flavia Zimbardi**, and **Production Type**. Every credit on this site is now fetched from upstream metadata rather than typed, which is the same standard the quotations are held to — and the reason it was worth reading the licence rather than assuming a font is a font.
+
+2026 · 10 September
+
 ## The device decides, and the reader may say otherwise: three reading settings, and a motion rule that had to be turned inside out to allow the second answer
 
 Prompted by Ryan asking whether the site supported forced colours and whether the accessibility settings buried in system menus could be surfaced on the page. **The answer to the first was no** — not one `@media (forced-colors: active)` anywhere — and it was outside the audit’s stated scope rather than missed by it, which is the one time a scope caveat has actually earned its keep here. The answer to the second was an argument, and the argument was lost: “respect the system setting” only reaches the readers who know the system setting exists. **Default to the device; allow configuration in the moment.**

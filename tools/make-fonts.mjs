@@ -95,6 +95,91 @@ for (const part of css.split(/(\/\*[^*]*\*\/)/)) {
 }
 if (!faces.length) throw new Error('parsed no @font-face blocks');
 
+/* ── The picker families ───────────────────────────────────────────────────────
+ * The nine faces offered under Reading. Chosen by Ryan from two specimen sheets on
+ * 2026-09-10; the reasoning is in the register and the specimen is scratch.
+ *
+ * `body: true` means the family has a REAL italic and can set the reading face as well
+ * as the display one. That distinction is not taste — it is forced. Victorianna ships
+ * Thin alone and is unreadable at 19px; Redaction Inclusive, Insolente, Trickster and
+ * Sporting Grotesque have no italic at all, so setting them as the body face would put
+ * a faux slant on every `<cite>` on a site built out of citations. Those five set the
+ * display face and leave Newsreader to read.
+ *
+ * THE CUTS ARE THE TEXT CUTS. The first specimen showed Adelphe as Floréal Bold,
+ * Coxinel·le as Black and Sporting Grotesque as Bold, because those sorted first in
+ * their repositories — three families misrepresented as display faces when they are
+ * full text families. Regular, Italic and Bold here.
+ *
+ * NO SUBSETTING FOR THE CUTE FAMILIES. Its conditions forbid deleting the post-binary
+ * characters or the OpenType features that activate them, so the Bye Bye Binary faces
+ * ship whole. Atkinson is OFL and takes Google's latin subset.
+ *
+ * NOTHING HERE IS LOADED UNTIL IT IS PICKED. An @font-face declaration costs only its
+ * own bytes of CSS; the file is fetched when a rule using the family first matches
+ * rendered text. So all nine are declared and a reader who picks none downloads none.
+ */
+const BBB = 'https://gitlab.com/bye-bye-binary';
+const VLV = 'https://raw.githubusercontent.com/velvetyne';
+
+const PICKER = [
+  { id: 'baskervvol', family: 'BBB Baskervvol', body: true,
+    by: 'Bye Bye Binary', licence: 'CUTE', source: `${BBB}/baskervvol`,
+    licenceUrl: `${BBB}/baskervvol/-/raw/HEAD/2024_BBB_CUTE-EN.pdf`, licenceExt: 'pdf',
+    cuts: [['regular', 'normal', '400', `${BBB}/baskervvol/-/raw/HEAD/otf/BBBBaskervvol-Regular.otf`],
+           ['italic',  'italic', '400', `${BBB}/baskervvol/-/raw/HEAD/otf/BBBBaskervvol-Italic.otf`],
+           ['bold',    'normal', '700', `${BBB}/baskervvol/-/raw/HEAD/otf/BBBBaskervvol-Bold.otf`]] },
+
+  { id: 'adelphe', family: 'Adelphe', body: true,
+    by: 'Bye Bye Binary', licence: 'CUTE, stated in the README upstream', source: `${BBB}/adelphe`,
+    licenceUrl: `${BBB}/adelphe/-/raw/HEAD/README.md`,
+    cuts: [['regular', 'normal', '400', `${BBB}/adelphe/-/raw/HEAD/otf/Adelphe-FlorealRegular.otf`],
+           ['italic',  'italic', '400', `${BBB}/adelphe/-/raw/HEAD/otf/Adelphe-FlorealItalic.otf`],
+           ['bold',    'normal', '700', `${BBB}/adelphe/-/raw/HEAD/otf/Adelphe-FlorealBold.otf`]] },
+
+  { id: 'coxinelle', family: 'Coxinelle', body: true,
+    by: 'Bye Bye Binary', licence: 'CUTE', source: `${BBB}/coxinel-le`,
+    licenceUrl: `${BBB}/coxinel-le/-/raw/HEAD/Licence.pdf`, licenceExt: 'pdf',
+    cuts: [['regular', 'normal', '400', `${BBB}/coxinel-le/-/raw/HEAD/otf/Coxinelle-Regular.otf`],
+           ['italic',  'italic', '400', `${BBB}/coxinel-le/-/raw/HEAD/otf/Coxinelle-Italic.otf`],
+           ['bold',    'normal', '700', `${BBB}/coxinel-le/-/raw/HEAD/otf/Coxinelle-Bold.otf`]] },
+
+  { id: 'atkinson', family: 'Atkinson Hyperlegible', body: true, google: 'Atkinson+Hyperlegible',
+    by: 'Braille Institute of America', licence: 'OFL-1.1',
+    source: 'https://github.com/googlefonts/atkinson-hyperlegible',
+    licenceUrl: 'https://raw.githubusercontent.com/google/fonts/main/ofl/atkinsonhyperlegible/OFL.txt' },
+
+  { id: 'redaction', family: 'Redaction Inclusive', body: false,
+    by: 'Bye Bye Binary, after Redaction by Jeremy Mickel / MCKL', licence: 'OFL-1.1',
+    source: `${BBB}/redaction-inclusive`,
+    licenceUrl: `${BBB}/redaction-inclusive/-/raw/HEAD/OFL.txt`,
+    cuts: [['regular', 'normal', '400', `${BBB}/redaction-inclusive/-/raw/HEAD/fonts/webfonts/Redaction-Inclusive-Regular.woff2`]] },
+
+  { id: 'insolente', family: 'Insolente', body: false,
+    by: 'Bye Bye Binary', licence: 'CUTE, stated in the README upstream', source: `${BBB}/insolente`,
+    licenceUrl: `${BBB}/insolente/-/raw/HEAD/README.md`,
+    cuts: [['regular', 'normal', '400', `${BBB}/insolente/-/raw/HEAD/otf/Insolente-Regular.otf`]] },
+
+  { id: 'trickster', family: 'Trickster', body: false,
+    by: 'Jean-Baptiste Morizot, Velvetyne', licence: 'OFL-1.1',
+    source: 'https://github.com/velvetyne/Trickster',
+    licenceUrl: `${VLV}/Trickster/HEAD/LICENSE.txt`,
+    cuts: [['regular', 'normal', '400', `${VLV}/Trickster/HEAD/webfonts/Trickster-Regular.woff2`]] },
+
+  { id: 'victorianna', family: 'Victorianna', body: false,
+    by: 'Velvetyne', licence: 'OFL-1.1', source: 'https://github.com/velvetyne/Victorianna',
+    licenceUrl: `${VLV}/Victorianna/HEAD/LICENSE.txt`,
+    cuts: [['regular', 'normal', '400', `${VLV}/Victorianna/HEAD/fonts/VictoriannaThin_Desktop_OTF/VTF%20victorianna%20thin.otf`],
+           ['italic',  'italic', '400', `${VLV}/Victorianna/HEAD/fonts/VictoriannaThin_Desktop_OTF/VTF%20victorianna%20thin%20talic.otf`]] },
+
+  { id: 'sporting', family: 'Sporting Grotesque', body: false,
+    by: 'Lucas Le Bihan, Velvetyne', licence: 'OFL-1.1',
+    source: 'https://github.com/velvetyne/Sporting-Grotesque',
+    licenceUrl: `${VLV}/Sporting-Grotesque/HEAD/LICENSE.txt`,
+    cuts: [['regular', 'normal', '400', `${VLV}/Sporting-Grotesque/HEAD/webfonts/Regular/Sporting_Grotesque-Regular_web.woff2`],
+           ['bold',    'normal', '700', `${VLV}/Sporting-Grotesque/HEAD/webfonts/Bold/Sporting_Grotesque-Bold_web.woff2`]] },
+];
+
 await mkdir(join(ROOT, 'fonts'), { recursive: true });
 
 const manifest = { files: {}, families: {} };
@@ -124,6 +209,70 @@ for (const f of faces) {
   );
 }
 
+/* ── download the picker families and emit their faces and their class rules ──── */
+const pickerFaces = [];
+const pickerRules = [];
+for (const f of PICKER) {
+  let cuts = [];
+
+  if (f.google) {
+    /* OFL, so Google's latin subset is fine here — the no-subsetting condition is
+       CUTE's and applies to the Bye Bye Binary faces only. */
+    const css = await (await fetch(
+      `https://fonts.googleapis.com/css2?family=${f.google}:ital,wght@0,400;0,700;1,400;1,700&display=swap`,
+      { headers: { 'User-Agent': UA } })).text();
+    let subset = null;
+    for (const part of css.split(/(\/\*[^*]*\*\/)/)) {
+      const c = /^\/\*\s*(.+?)\s*\*\/$/.exec(part.trim());
+      if (c) { subset = c[1]; continue; }
+      for (const m of part.matchAll(/@font-face\s*{([^}]*)}/g)) {
+        if (subset !== 'latin') continue;
+        const b = m[1];
+        const style = (/font-style:\s*(\w+)/.exec(b) || [])[1] ?? 'normal';
+        const weight = (/font-weight:\s*([^;]+);/.exec(b) || [])[1]?.trim() ?? '400';
+        const url = (/url\(([^)]+)\)/.exec(b) || [])[1];
+        cuts.push([`${style === 'italic' ? 'italic' : 'roman'}-${weight}`, style, weight, url]);
+      }
+    }
+    if (!cuts.length) throw new Error(`${f.family}: no latin faces in the Google CSS`);
+  } else {
+    cuts = f.cuts;
+  }
+
+  const files = [];
+  for (const [cut, style, weight, url] of cuts) {
+    const ext = /\.woff2($|\?)/.test(url) || url.includes('gstatic') ? 'woff2' : 'otf';
+    const file = `${f.id}-${cut}.${ext}`;
+    const buf = Buffer.from(await (await fetch(url, { headers: { 'User-Agent': UA } })).arrayBuffer());
+    if (buf.length < 2000) throw new Error(`${file} came back ${buf.length} bytes — refusing a stub`);
+    await writeFile(join(ROOT, 'fonts', file), buf);
+    manifest.files[file] = { sha256: createHash('sha256').update(buf).digest('hex'), bytes: buf.length,
+                             family: f.family, style, subset: f.google ? 'latin' : 'full' };
+    files.push({ file, style, weight, bytes: buf.length, format: ext === 'woff2' ? 'woff2' : 'opentype' });
+    pickerFaces.push(
+      `/* ${f.family} · ${cut} */\n@font-face {\n  font-family: '${f.family}';\n` +
+      `  font-style: ${style};\n  font-weight: ${weight};\n  font-display: swap;\n` +
+      `  src: url(fonts/${file}) format('${ext === 'woff2' ? 'woff2' : 'opentype'}');\n}`);
+  }
+
+  const stack = `'${f.family}', "Iowan Old Style", Georgia, serif`;
+  pickerRules.push(
+    `/* ${f.family} — ${f.by}. ${f.body ? 'Sets both faces: it has a real italic.'
+      : 'Display only: no italic upstream, so Newsreader keeps the reading.'} */\n` +
+    `html.qe-font-${f.id} {\n  --qe-display: ${stack};\n` +
+    (f.body ? `  --qe-body: ${stack};\n` : '') + `}`);
+
+  const ofl = await (await fetch(f.licenceUrl, { headers: { 'User-Agent': UA } })).arrayBuffer();
+  const licFile = `${f.family.replace(/ /g, '')}-LICENCE.${f.licenceExt ?? 'txt'}`;
+  await writeFile(join(ROOT, 'fonts', licFile), Buffer.from(ofl));
+  manifest.families[f.family] = { designer: f.by, licence: f.licence, licence_file: licFile,
+                                  upstream: f.source, picker_id: f.id, sets_body: !!f.body,
+                                  cuts: files.map((x) => x.file) };
+  const kb = files.reduce((n, x) => n + x.bytes, 0) / 1024;
+  console.log(`  ${f.family.padEnd(24)} ${String(Math.round(kb)).padStart(4)} KB  ` +
+              `${files.length} cut(s)  ${f.body ? 'display+body' : 'display only'}`);
+}
+
 const generated = [
   BEGIN,
   '/* Self-hosted so the site makes no third-party request. Google served exactly these',
@@ -135,6 +284,17 @@ const generated = [
   '   check-metadata.mjs enforces that claim. */',
   '',
   ...blocks,
+  '',
+  '/* ── The picker families, offered under Reading ───────────────────────────────',
+  '   Declared, not loaded: an @font-face costs its own bytes of CSS and the file is',
+  '   fetched only when a rule using the family first matches rendered text. A reader',
+  '   who picks none downloads none of them. The class rules below are what the picker',
+  '   switches, and both halves are generated from one table so they cannot disagree',
+  '   about which families exist or which of them may set the reading face. */',
+  '',
+  ...pickerFaces,
+  '',
+  ...pickerRules,
   '',
   END,
 ].join('\n');

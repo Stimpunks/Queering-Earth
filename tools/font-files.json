@@ -83,9 +83,259 @@
       "family": "Newsreader",
       "style": "normal",
       "subset": "latin"
+    },
+    "baskervvol-regular.otf": {
+      "sha256": "a22a98dad64817750064cdef59870aea9431f97a3ad6fb663ebb2856677facd6",
+      "bytes": 126820,
+      "family": "BBB Baskervvol",
+      "style": "normal",
+      "subset": "full"
+    },
+    "baskervvol-italic.otf": {
+      "sha256": "654dba307cbd534ecdf4338c223b7160eae257f3fd77e9028d7c0962bcebd60c",
+      "bytes": 109764,
+      "family": "BBB Baskervvol",
+      "style": "italic",
+      "subset": "full"
+    },
+    "baskervvol-bold.otf": {
+      "sha256": "579ef9edef3ae0b1907b20299337ebef772ada7e2f57883e213d906de0d56056",
+      "bytes": 132852,
+      "family": "BBB Baskervvol",
+      "style": "normal",
+      "subset": "full"
+    },
+    "adelphe-regular.otf": {
+      "sha256": "23a148f7f1bed8d167db51d990d7ee9b7885b42c84055a971318c0ea845813c3",
+      "bytes": 61052,
+      "family": "Adelphe",
+      "style": "normal",
+      "subset": "full"
+    },
+    "adelphe-italic.otf": {
+      "sha256": "d23a7f873c884671174481dbc17ebb593517c0fb2256cc19fd9d9364db59fdf5",
+      "bytes": 58184,
+      "family": "Adelphe",
+      "style": "italic",
+      "subset": "full"
+    },
+    "adelphe-bold.otf": {
+      "sha256": "2b2f03518b33c0902270149b22b24422c9f1e12461b4400b2a3cd06c90932c9d",
+      "bytes": 62072,
+      "family": "Adelphe",
+      "style": "normal",
+      "subset": "full"
+    },
+    "coxinelle-regular.otf": {
+      "sha256": "eb48dd0d00a2173a79e677fb08ad124399157464c5a18cb5cb7aa244797bb24d",
+      "bytes": 45032,
+      "family": "Coxinelle",
+      "style": "normal",
+      "subset": "full"
+    },
+    "coxinelle-italic.otf": {
+      "sha256": "8f7fd6a59901b004307e837da0c3ee2e7f9504afb562ecaf15b766fb81060250",
+      "bytes": 47484,
+      "family": "Coxinelle",
+      "style": "italic",
+      "subset": "full"
+    },
+    "coxinelle-bold.otf": {
+      "sha256": "5ce9df9bf51e22031044d91aeadd0dc81afac24fb1473a9b0d9b5ef2f0d76a1b",
+      "bytes": 46748,
+      "family": "Coxinelle",
+      "style": "normal",
+      "subset": "full"
+    },
+    "atkinson-italic-400.woff2": {
+      "sha256": "5ee711c886e479406e0ef239f5cc6db7cae99906af00e774950d96189113ed9d",
+      "bytes": 12068,
+      "family": "Atkinson Hyperlegible",
+      "style": "italic",
+      "subset": "latin"
+    },
+    "atkinson-italic-700.woff2": {
+      "sha256": "3987a9380206f1fe82996907601efa98b5cda98dd8cd37b94e2688677ecdc28d",
+      "bytes": 12284,
+      "family": "Atkinson Hyperlegible",
+      "style": "italic",
+      "subset": "latin"
+    },
+    "atkinson-roman-400.woff2": {
+      "sha256": "a60206dd4793eb886952e48dc3e1c1d59942c004b2ab1e0086e7ccd156a7852d",
+      "bytes": 11208,
+      "family": "Atkinson Hyperlegible",
+      "style": "normal",
+      "subset": "latin"
+    },
+    "atkinson-roman-700.woff2": {
+      "sha256": "1cc7c0c5fbf16d1be3cb6d95c89fc0afd0e11f264e239ac97c64a326c5d88fe4",
+      "bytes": 11364,
+      "family": "Atkinson Hyperlegible",
+      "style": "normal",
+      "subset": "latin"
+    },
+    "redaction-regular.woff2": {
+      "sha256": "423720f48adc29da75c02991d06a92718bd7ef8ff9bd916c300e5c31c6e2a24a",
+      "bytes": 32448,
+      "family": "Redaction Inclusive",
+      "style": "normal",
+      "subset": "full"
+    },
+    "insolente-regular.otf": {
+      "sha256": "e06e8235b0f26e6679a7f4db975f63d8d1ea42da48cc04506b5e7da0059d48c6",
+      "bytes": 62644,
+      "family": "Insolente",
+      "style": "normal",
+      "subset": "full"
+    },
+    "trickster-regular.woff2": {
+      "sha256": "087fbfdcd213db0b21797e87c7b0c0cf4bebde36fc7d832bbaef2694f71a7753",
+      "bytes": 31680,
+      "family": "Trickster",
+      "style": "normal",
+      "subset": "full"
+    },
+    "victorianna-regular.otf": {
+      "sha256": "99cab7834b99d8ab438cd37f0130da67f946260fb4c93eec2237eb2f9e30bfb7",
+      "bytes": 68092,
+      "family": "Victorianna",
+      "style": "normal",
+      "subset": "full"
+    },
+    "victorianna-italic.otf": {
+      "sha256": "33eb31d67939dc5fb27acb4e826942b3d5bd6e38470ca779cb4eca28d310b4d4",
+      "bytes": 23588,
+      "family": "Victorianna",
+      "style": "italic",
+      "subset": "full"
+    },
+    "sporting-regular.woff2": {
+      "sha256": "4125307cbd26f4cd00c436f7664dba0e6b710643b4892a5bef5121cf2c8a1581",
+      "bytes": 23120,
+      "family": "Sporting Grotesque",
+      "style": "normal",
+      "subset": "full"
+    },
+    "sporting-bold.woff2": {
+      "sha256": "4dd157fa9e8f30a81beeb5db5dceb0574118dbd30c585448dc978c84cc2cc708",
+      "bytes": 25224,
+      "family": "Sporting Grotesque",
+      "style": "normal",
+      "subset": "full"
     }
   },
   "families": {
+    "BBB Baskervvol": {
+      "designer": "Bye Bye Binary",
+      "licence": "CUTE",
+      "licence_file": "BBBBaskervvol-LICENCE.pdf",
+      "upstream": "https://gitlab.com/bye-bye-binary/baskervvol",
+      "picker_id": "baskervvol",
+      "sets_body": true,
+      "cuts": [
+        "baskervvol-regular.otf",
+        "baskervvol-italic.otf",
+        "baskervvol-bold.otf"
+      ]
+    },
+    "Adelphe": {
+      "designer": "Bye Bye Binary",
+      "licence": "CUTE, stated in the README upstream",
+      "licence_file": "Adelphe-LICENCE.txt",
+      "upstream": "https://gitlab.com/bye-bye-binary/adelphe",
+      "picker_id": "adelphe",
+      "sets_body": true,
+      "cuts": [
+        "adelphe-regular.otf",
+        "adelphe-italic.otf",
+        "adelphe-bold.otf"
+      ]
+    },
+    "Coxinelle": {
+      "designer": "Bye Bye Binary",
+      "licence": "CUTE",
+      "licence_file": "Coxinelle-LICENCE.pdf",
+      "upstream": "https://gitlab.com/bye-bye-binary/coxinel-le",
+      "picker_id": "coxinelle",
+      "sets_body": true,
+      "cuts": [
+        "coxinelle-regular.otf",
+        "coxinelle-italic.otf",
+        "coxinelle-bold.otf"
+      ]
+    },
+    "Atkinson Hyperlegible": {
+      "designer": "Braille Institute of America",
+      "licence": "OFL-1.1",
+      "licence_file": "AtkinsonHyperlegible-LICENCE.txt",
+      "upstream": "https://github.com/googlefonts/atkinson-hyperlegible",
+      "picker_id": "atkinson",
+      "sets_body": true,
+      "cuts": [
+        "atkinson-italic-400.woff2",
+        "atkinson-italic-700.woff2",
+        "atkinson-roman-400.woff2",
+        "atkinson-roman-700.woff2"
+      ]
+    },
+    "Redaction Inclusive": {
+      "designer": "Bye Bye Binary, after Redaction by Jeremy Mickel / MCKL",
+      "licence": "OFL-1.1",
+      "licence_file": "RedactionInclusive-LICENCE.txt",
+      "upstream": "https://gitlab.com/bye-bye-binary/redaction-inclusive",
+      "picker_id": "redaction",
+      "sets_body": false,
+      "cuts": [
+        "redaction-regular.woff2"
+      ]
+    },
+    "Insolente": {
+      "designer": "Bye Bye Binary",
+      "licence": "CUTE, stated in the README upstream",
+      "licence_file": "Insolente-LICENCE.txt",
+      "upstream": "https://gitlab.com/bye-bye-binary/insolente",
+      "picker_id": "insolente",
+      "sets_body": false,
+      "cuts": [
+        "insolente-regular.otf"
+      ]
+    },
+    "Trickster": {
+      "designer": "Jean-Baptiste Morizot, Velvetyne",
+      "licence": "OFL-1.1",
+      "licence_file": "Trickster-LICENCE.txt",
+      "upstream": "https://github.com/velvetyne/Trickster",
+      "picker_id": "trickster",
+      "sets_body": false,
+      "cuts": [
+        "trickster-regular.woff2"
+      ]
+    },
+    "Victorianna": {
+      "designer": "Velvetyne",
+      "licence": "OFL-1.1",
+      "licence_file": "Victorianna-LICENCE.txt",
+      "upstream": "https://github.com/velvetyne/Victorianna",
+      "picker_id": "victorianna",
+      "sets_body": false,
+      "cuts": [
+        "victorianna-regular.otf",
+        "victorianna-italic.otf"
+      ]
+    },
+    "Sporting Grotesque": {
+      "designer": "Lucas Le Bihan, Velvetyne",
+      "licence": "OFL-1.1",
+      "licence_file": "SportingGrotesque-LICENCE.txt",
+      "upstream": "https://github.com/velvetyne/Sporting-Grotesque",
+      "picker_id": "sporting",
+      "sets_body": false,
+      "cuts": [
+        "sporting-regular.woff2",
+        "sporting-bold.woff2"
+      ]
+    },
     "Fraunces": {
       "designer": "Undercase Type, Phaedra Charles, Flavia Zimbardi",
       "copyright": "Copyright 2018 The Fraunces Project Authors (https://github.com/undercasetype/Fraunces)",

@@ -42,7 +42,7 @@
 <!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
      either one would flash the wrong page. The two keys this reads are the two
      this page discloses; there is nothing else to restore. -->
-<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
 <!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
      rel=alternate points an agent at this page's Markdown source, derived from this
      page's own main landmark by tools/make-markdown.mjs.
@@ -127,6 +127,24 @@
           </div>
           <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
         </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-font">Typeface</label>
+            <select class="qe-reading-select qe-reading-select-wide" id="qe-set-font">
+              <option value="">Fraunces &amp; Newsreader</option>
+              <option value="adelphe">Adelphe</option>
+              <option value="atkinson">Atkinson Hyperlegible</option>
+              <option value="baskervvol">BBB Baskervvol</option>
+              <option value="coxinelle">Coxinelle</option>
+              <option value="insolente">Insolente</option>
+              <option value="redaction">Redaction Inclusive</option>
+              <option value="sporting">Sporting Grotesque</option>
+              <option value="trickster">Trickster</option>
+              <option value="victorianna">Victorianna</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">The first four also set the reading face, because they have a real italic. The rest change the headings and leave Newsreader to read.</span>
+        </li>
       </ul>
       <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
     </div>
@@ -178,6 +196,11 @@
 <p><strong>So: re-reading is an upgrade, not a precondition.</strong> Where the primary is reachable, read it and say which copy — that is how the Jack edition difference below was found. Where it is not, quote it with the citation attached and name whose transcription it is. The citation is the thing that has to be right.</p>
 <hr>
 <h2 id="verified">Verified <a class="qe-anchor" href="#verified"><span class="qe-sr">Link to this section</span></a></h2>
+<h3 id="the-nine-typefaces-in-the-reading-panel">The nine typefaces in the Reading panel <a class="qe-anchor" href="#the-nine-typefaces-in-the-reading-panel"><span class="qe-sr">Link to this section</span></a></h3>
+<p><strong>Used on:</strong> every page, when a reader picks one. Self-hosted in <code>fonts/</code>.</p>
+<ul><li><strong>Adelphe</strong> — Bye Bye Binary. CUTE, stated in the README upstream. Licence in <code>fonts/Adelphe-LICENCE.txt</code>. <a href="https://gitlab.com/bye-bye-binary/adelphe">Source</a>. Sets both faces, 3 cut(s).</li><li><strong>Atkinson Hyperlegible</strong> — Braille Institute of America. OFL-1.1. Licence in <code>fonts/AtkinsonHyperlegible-LICENCE.txt</code>. <a href="https://github.com/googlefonts/atkinson-hyperlegible">Source</a>. Sets both faces, 4 cut(s).</li><li><strong>BBB Baskervvol</strong> — Bye Bye Binary. CUTE. Licence in <code>fonts/BBBBaskervvol-LICENCE.pdf</code>. <a href="https://gitlab.com/bye-bye-binary/baskervvol">Source</a>. Sets both faces, 3 cut(s).</li><li><strong>Coxinelle</strong> — Bye Bye Binary. CUTE. Licence in <code>fonts/Coxinelle-LICENCE.pdf</code>. <a href="https://gitlab.com/bye-bye-binary/coxinel-le">Source</a>. Sets both faces, 3 cut(s).</li><li><strong>Insolente</strong> — Bye Bye Binary. CUTE, stated in the README upstream. Licence in <code>fonts/Insolente-LICENCE.txt</code>. <a href="https://gitlab.com/bye-bye-binary/insolente">Source</a>. Display only, 1 cut(s).</li><li><strong>Redaction Inclusive</strong> — Bye Bye Binary, after Redaction by Jeremy Mickel / MCKL. OFL-1.1. Licence in <code>fonts/RedactionInclusive-LICENCE.txt</code>. <a href="https://gitlab.com/bye-bye-binary/redaction-inclusive">Source</a>. Display only, 1 cut(s).</li><li><strong>Sporting Grotesque</strong> — Lucas Le Bihan, Velvetyne. OFL-1.1. Licence in <code>fonts/SportingGrotesque-LICENCE.txt</code>. <a href="https://github.com/velvetyne/Sporting-Grotesque">Source</a>. Display only, 2 cut(s).</li><li><strong>Trickster</strong> — Jean-Baptiste Morizot, Velvetyne. OFL-1.1. Licence in <code>fonts/Trickster-LICENCE.txt</code>. <a href="https://github.com/velvetyne/Trickster">Source</a>. Display only, 1 cut(s).</li><li><strong>Victorianna</strong> — Velvetyne. OFL-1.1. Licence in <code>fonts/Victorianna-LICENCE.txt</code>. <a href="https://github.com/velvetyne/Victorianna">Source</a>. Display only, 2 cut(s).</li></ul>
+<p><strong>How this was checked:</strong> every designer credit, licence file and source link is fetched from upstream by <code>tools/make-fonts.mjs</code> and recorded in <code>tools/font-files.json</code>; none is typed. <code>check-metadata.mjs</code> fails if a licence file goes missing, if a designer is unrecorded, or if the picker offers a face the font table does not have. Read 10 September 2026.</p>
+<p><strong>CUTE is not the OFL.</strong> Six of these are under <em>Conditions d'Utilisation Typographiques Engageantes</em>, which permits use, modification and commercial use, and states outright that it is "not technically compatible with any FLOSS license to date". It is explicit that it governs fonts and <strong>not the documents they set</strong>, so nothing on this site is relicensed by using them. Three of its conditions bind us and are met: the designers are credited with a link to the original publication source; the fonts ship whole rather than as lone extracted files; and <strong>no CUTE face is subsetted</strong>, because deleting the post-binary characters or the OpenType features that activate them is forbidden. Its donation condition was met by Stimpunks at the "for an association" tier on 10 September 2026.</p>
 <h3 id="the-two-typefaces-designers-and-the-licence-that-has-to-travel-with-them">The two typefaces — designers, and the licence that has to travel with them <a class="qe-anchor" href="#the-two-typefaces-designers-and-the-licence-that-has-to-travel-with-them"><span class="qe-sr">Link to this section</span></a></h3>
 <p><strong>Used on:</strong> every page, self-hosted in <code>fonts/</code></p>
 <ul><li><strong>Fraunces</strong> — designed by <strong>Undercase Type, Phaedra Charles and Flavia Zimbardi</strong>. <em>Copyright 2018 The Fraunces Project Authors</em>, <a href="https://github.com/undercasetype/Fraunces">github.com/undercasetype/Fraunces</a>.</li><li><strong>Newsreader</strong> — designed by <strong>Production Type</strong>. <em>Copyright 2020 The Newsreader Project Authors</em>, <a href="https://github.com/productiontype/Newsreader">github.com/productiontype/Newsreader</a>.</li></ul>

@@ -29,8 +29,8 @@ Two values, in your browser’s local storage, put there only if you press one o
 **`qe-plain`**
 : Whether you asked for plain view, which switches off the display faces, the wonk, the rotation and the motion. Holds `1`, or is absent.
 
-**`qe-motion`, `qe-contrast`, `qe-spacing`, `qe-textsize`**
-: The four **reading settings**, under *Reading* at the top of every page. The first three hold `on` or `off`; `qe-textsize` holds `larger` or `largest`. Any of them may also be absent — and **absent is the state that matters**: it means we follow whatever your own device asks for, which for text size is the default size your browser is already set to. Only a choice made here overrides that. *Follow my device again* removes all four and hands you back to your device.
+**`qe-motion`, `qe-contrast`, `qe-spacing`, `qe-textsize`, `qe-font`**
+: The five **reading settings**, under *Reading* at the top of every page. The first three hold `on` or `off`; `qe-textsize` holds `larger` or `largest`; `qe-font` holds the name of one of nine typefaces. Any of them may also be absent — and **absent is the state that matters**: it means we follow whatever your own device asks for, which for text size is the default size your browser is already set to. Only a choice made here overrides that. *Follow my device again* removes all five and hands you back to your device.
 
 **Neither is a cookie and neither is ever sent anywhere.** Local storage is not attached to requests the way a cookie is; these two values stay in the browser that wrote them, on the device that wrote them. We cannot read them, and nothing on this site tries to. Clearing your site data removes them and the page goes back to following your system’s own light or dark preference.
 

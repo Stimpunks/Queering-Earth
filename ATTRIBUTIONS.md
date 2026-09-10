@@ -31,6 +31,35 @@ has to be right.
 
 ## Verified
 
+### The nine typefaces in the Reading panel
+
+**Used on:** every page, when a reader picks one. Self-hosted in `fonts/`.
+
+- **Adelphe** — Bye Bye Binary. CUTE, stated in the README upstream. Licence in `fonts/Adelphe-LICENCE.txt`. [Source](https://gitlab.com/bye-bye-binary/adelphe). Sets both faces, 3 cut(s).
+- **Atkinson Hyperlegible** — Braille Institute of America. OFL-1.1. Licence in `fonts/AtkinsonHyperlegible-LICENCE.txt`. [Source](https://github.com/googlefonts/atkinson-hyperlegible). Sets both faces, 4 cut(s).
+- **BBB Baskervvol** — Bye Bye Binary. CUTE. Licence in `fonts/BBBBaskervvol-LICENCE.pdf`. [Source](https://gitlab.com/bye-bye-binary/baskervvol). Sets both faces, 3 cut(s).
+- **Coxinelle** — Bye Bye Binary. CUTE. Licence in `fonts/Coxinelle-LICENCE.pdf`. [Source](https://gitlab.com/bye-bye-binary/coxinel-le). Sets both faces, 3 cut(s).
+- **Insolente** — Bye Bye Binary. CUTE, stated in the README upstream. Licence in `fonts/Insolente-LICENCE.txt`. [Source](https://gitlab.com/bye-bye-binary/insolente). Display only, 1 cut(s).
+- **Redaction Inclusive** — Bye Bye Binary, after Redaction by Jeremy Mickel / MCKL. OFL-1.1. Licence in `fonts/RedactionInclusive-LICENCE.txt`. [Source](https://gitlab.com/bye-bye-binary/redaction-inclusive). Display only, 1 cut(s).
+- **Sporting Grotesque** — Lucas Le Bihan, Velvetyne. OFL-1.1. Licence in `fonts/SportingGrotesque-LICENCE.txt`. [Source](https://github.com/velvetyne/Sporting-Grotesque). Display only, 2 cut(s).
+- **Trickster** — Jean-Baptiste Morizot, Velvetyne. OFL-1.1. Licence in `fonts/Trickster-LICENCE.txt`. [Source](https://github.com/velvetyne/Trickster). Display only, 1 cut(s).
+- **Victorianna** — Velvetyne. OFL-1.1. Licence in `fonts/Victorianna-LICENCE.txt`. [Source](https://github.com/velvetyne/Victorianna). Display only, 2 cut(s).
+
+**How this was checked:** every designer credit, licence file and source link is fetched
+from upstream by `tools/make-fonts.mjs` and recorded in `tools/font-files.json`; none is
+typed. `check-metadata.mjs` fails if a licence file goes missing, if a designer is
+unrecorded, or if the picker offers a face the font table does not have. Read 10 September 2026.
+
+**CUTE is not the OFL.** Six of these are under *Conditions d'Utilisation Typographiques
+Engageantes*, which permits use, modification and commercial use, and states outright that
+it is "not technically compatible with any FLOSS license to date". It is explicit that it
+governs fonts and **not the documents they set**, so nothing on this site is relicensed by
+using them. Three of its conditions bind us and are met: the designers are credited with a
+link to the original publication source; the fonts ship whole rather than as lone extracted
+files; and **no CUTE face is subsetted**, because deleting the post-binary characters or the
+OpenType features that activate them is forbidden. Its donation condition was met by
+Stimpunks at the "for an association" tier on 10 September 2026.
+
 ### The two typefaces — designers, and the licence that has to travel with them
 
 **Used on:** every page, self-hosted in `fonts/`

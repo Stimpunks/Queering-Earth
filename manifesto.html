@@ -42,7 +42,7 @@
 <!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
      either one would flash the wrong page: the decorated sheet at a reader who
      turned it off, or the daylight sheet at one who asked for the drawer. -->
-<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
 <!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
      rel=alternate points an agent at this page's Markdown source, derived from this
      page's own main landmark by tools/make-markdown.mjs.
@@ -126,6 +126,24 @@
             </select>
           </div>
           <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-font">Typeface</label>
+            <select class="qe-reading-select qe-reading-select-wide" id="qe-set-font">
+              <option value="">Fraunces &amp; Newsreader</option>
+              <option value="adelphe">Adelphe</option>
+              <option value="atkinson">Atkinson Hyperlegible</option>
+              <option value="baskervvol">BBB Baskervvol</option>
+              <option value="coxinelle">Coxinelle</option>
+              <option value="insolente">Insolente</option>
+              <option value="redaction">Redaction Inclusive</option>
+              <option value="sporting">Sporting Grotesque</option>
+              <option value="trickster">Trickster</option>
+              <option value="victorianna">Victorianna</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">The first four also set the reading face, because they have a real italic. The rest change the headings and leave Newsreader to read.</span>
         </li>
       </ul>
       <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
