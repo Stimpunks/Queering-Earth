@@ -598,26 +598,40 @@ delays none. A one-line pointer up by the legend is how a book does it.
 - **A new entry needs its `data-sheet`** in the same pass that writes it. Mount it, card it,
   log it, **file it**.
 
-### A cabinet page is listed on the home page, not carded
+### A page that is not a reading is listed on the home page, not carded
 
-The plate names readings. The pages that are not readings — `/design`, `/changelog`,
-`/search`, `/privacy` — are listed at the **foot of the home page** under
-**The cabinet itself**, in `.qe-furniture`: a `<dl>`, a name and one sentence of gloss,
-**no card**. A card would file them with the eight readings, and none of them is a
-reading of anything. It is the **bare** tier from the three-surface rule above, and
-**back matter** for the reason the register's index is — furniture at the top of the
-home page delays every reader to reach what they came for.
+The plate names readings. Everything else is listed at the **foot of the home page** in
+`.qe-furniture`: a `<dl>`, a name and one sentence of gloss, **no card**. A card would
+file it with the eight readings, and none of these is a reading of anything. It is the
+**bare** tier from the three-surface rule above, and **back matter** for the reason the
+register's index is — furniture at the top of the home page delays every reader to reach
+what they came for.
 
-**The heading is the name `tools/pages.mjs` already uses.** That group has been called
-*The cabinet itself* since the finding aid shipped, and `/search`'s manifest and
-`/llms.txt` show it to readers and to agents. A second name for a set that has one is
+**THERE ARE TWO LISTS, AND WHICH ONE A PAGE GOES IN IS THE FIRST QUESTION TO ASK.**
+
+| list | holds | today |
+|---|---|---|
+| **The founding papers** | why this cabinet exists and what it is for — stance | *not built; nothing in it yet* |
+| **The cabinet itself** | how it is made, recorded, searched, and what it knows about you | `/design`, `/changelog`, `/search`, `/privacy` |
+
+Purpose above plumbing. **The split is precedented, not invented** — Star Stuff already
+divides *What this project is* from *How it is made, and how it is checked*, and our
+existing list maps onto that second group one for one, **privacy included**. Four other
+names were considered for the first list and all four refused with reasons; `DECISIONS.md`
+keeps them so the question is not reopened from scratch. **`/mission` is the first page in
+it, and it is an index of aims rather than an argument** — see `DECISIONS.md` for why the
+genre is load-bearing and not a stylistic preference.
+
+**The cabinet list's heading is the name `tools/pages.mjs` already uses.** That group has
+been called *The cabinet itself* since the finding aid shipped, and `/search`'s manifest
+and `/llms.txt` show it to readers and to agents. A second name for a set that has one is
 drift, and this is the file that keeps warning about it.
 
-**A NEW CABINET PAGE NEEDS A LINE IN THE LIST**, and nothing derives it: those sentences
-are authored, and `queering.js` may not write words. So a cabinet page is mount it, **list
-it**, log it, file it, route it, group it, card it for social, and give it a JSON-LD block
-— no plate number, no accession stamp, no `.qe-provenance`, because a stamp is for a
-specimen. A Mission page is the next one; see `DECISIONS.md`.
+**A NEW PAGE HERE NEEDS A LINE IN ONE OF THE TWO LISTS**, and nothing derives it: those
+sentences are authored, and `queering.js` may not write words. So such a page is mount it,
+**list it**, log it, file it, route it, group it, card it for social, and give it a
+JSON-LD block — no plate number, no accession stamp, no `.qe-provenance`, because a stamp
+is for a specimen.
 
 **The four links left the home page's footer and no other page's.** On the home page they
 are two paragraphs above it; everywhere else the footer is still the way there.

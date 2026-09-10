@@ -126,24 +126,71 @@ drift, on the same writer, in a friendly source, in 2026.
 citation also appears in `neuroqueering-time-bergson-deleuze-and-monotropism-an-exploration.md`
 on both her domains. **Never edited from this repo.**
 
-### What else goes in "The cabinet itself"
+### Two lists at the foot of the home page, not one
 
-The home page now ends with a list of the pages that are not specimens — `/design`,
-`/changelog`, `/search`, `/privacy` — under the name that group already had in
-`tools/pages.mjs`. **Ryan's stated reason for building it now is that more pages are
-coming**, starting with a **Mission page**. That is the destination for them: a page that
-is not a reading of anything goes in this list and not on the plate.
+The home page ends with the pages that are not specimens. **They divide in two**, and the
+first version of this note got it wrong by putting everything in one list.
 
-**What a new entry costs:** a `<dt>`/`<dd>` pair in `index.html`, a slug in the
-`The cabinet itself` group in `tools/pages.mjs`, and everything else the ordinary
-new-page checklist already asks for — a register entry with its `data-sheet`, a social
-card, a JSON-LD block, a redirect rule, a sitemap line, and a regenerated Markdown
-sibling. The list itself derives nothing, on purpose: these are four sentences somebody
-wrote about four pages, and `queering.js` may not write words.
+- **The founding papers** — why this cabinet exists and what it is for. `/mission`,
+  a manifesto, and whatever else states the project's stance rather than describing it.
+  **Nothing is in it yet**, which is why the section is not built: an empty heading is
+  worse than no heading.
+- **The cabinet itself** — how it is made, what it has recorded, how to search it, and
+  what it knows about you. `/design`, `/changelog`, `/search`, `/privacy`. Built and live.
 
-**Still open:** whether the section keeps its four-line intro once it holds seven or eight
-entries, and whether a Mission page displaces `/design` from the top of the list. Both are
-editorial and neither needs deciding before the page exists.
+**Purpose above plumbing**, both at the foot of the page, both bare-tier `dl`s.
+
+**THE SPLIT IS PRECEDENTED, NOT INVENTED.** Star Stuff already made it: *What this project
+is* holds `mission`, `manifesto`, `six-principles-and-a-room` and `inclusion-safety-creed`;
+*How it is made, and how it is checked* holds `privacy`, `design`, `changelog` and
+`print-design`. Our existing list maps onto that second group one for one, **privacy
+included**. Ryan raised the question, the shelf had already answered it.
+
+**Four names were considered and all four refused, for reasons worth keeping** so the
+question is not reopened from scratch:
+
+- *The Workroom* — the room where mounting, labelling and filing happen. That is **more**
+  mechanical, not less; it describes `/design` and `/changelog` better than a mission.
+- *The Field* — where specimens are collected. Points at gathering rather than purpose,
+  and *field guide* is a Star Stuff form with a dozen instances, so it collides across
+  the shelf.
+- *The Ground* — **collides locally and badly.** "The ground" is this site's own name for
+  the light/dark state; the control on every page says **Cabinet**, and CLAUDE.md heads a
+  section *"The ground is paper, and its other state is the cabinet."*
+- *Outreach* — NGO register. The house voice has no word like it anywhere.
+
+*The founding papers* is archive vocabulary for an institution's charter documents, which
+is what a mission and a manifesto are, and it is parallel in shape to *The cabinet itself*
+so the two read as a pair.
+
+### The mission page is an index of aims, not an argument (open until it is written)
+
+**The home page already carries 611 words of manifesto** — `#queering-is-a-verb` (215),
+`#to-queer-is-to-adapt` (278), `#the-type-plays` (110) — plus 118 in `#what-this-is`. A
+mission and a manifesto written from scratch would restate most of it, and **two copies of
+the same words drift** is the rule this site repeats more than any other.
+
+**The genre is the fix, and Star Stuff found it:** its mission page is *eleven aims, each
+one linked to the page where that aim is already being kept*. An index of commitments with
+receipts cannot duplicate an argument, because it is not one. Ryan chose this over moving
+the manifesto sections off the home page, so **the home page keeps its argument unchanged**.
+
+Much of the material already exists and is already checkable — cite to the primary
+(`ATTRIBUTIONS.md`, every provenance line), publish the corrections (`/changelog`), never
+an image of text (`/design`, enforced by `check-contrast`), make no third-party request
+(`/privacy`, enforced by `check-metadata`). **An aim with no page keeping it is the
+interesting case**, and the ones that turn up when the list is drafted are worth arguing
+about rather than quietly dropping.
+
+**What a new entry in either list costs:** a `<dt>`/`<dd>` pair in `index.html`, a slug in
+the right group in `tools/pages.mjs`, and the ordinary new-page checklist — a register
+entry with its `data-sheet`, a social card, a JSON-LD block, a redirect rule, a sitemap
+line, a regenerated Markdown sibling. No plate number, no accession stamp, no provenance
+line: those are for specimens. The lists derive nothing, on purpose — those sentences are
+authored, and `queering.js` may not write words.
+
+**Still open:** whether either section keeps a prose intro once it holds more than four
+entries.
 
 ----
 
