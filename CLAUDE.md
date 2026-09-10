@@ -514,8 +514,10 @@ ledger, and a correction nobody can read is a correction that only exists for us
 
 A sheet also needs its **`.qe-provenance` line**, and a correction logged here needs that line
 updated — the count on the sheet and the entries on this page are two views of one fact, and
-the sheet is the copy that will drift. All seven sheets carry `--mended` today, because all
-seven have been corrected; the unmended state is real and is waiting for Sheet No. 8.
+the sheet is the copy that will drift. All eight sheets carry `--mended` today, because all
+eight have been corrected — Sheet No. 8 was predicted to arrive clean and did not. **The
+unmended state has still never shipped**, so it is the state to check by hand when a sheet
+is mounted, not one you can copy off a neighbour.
 
 Four kinds of entry, each with one accent token spent on a rule and **never on the letters** —
 `Mounted`, `Re-determined`, `Label corrected`, `Cabinet`. Group by accession, not by commit: a

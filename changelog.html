@@ -190,8 +190,31 @@
 
   <div class="qe-register">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-09-cabinet">
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-plate">
       <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <h2 id="a-2026-09-09-plate">The plate said seven and carried eight, and two of them were in the wrong order &mdash; on the one page whose job is to say what is here <a class="qe-anchor" href="#a-2026-09-09-plate"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Sheet No.&nbsp;8 was mounted, carded and logged, and the sentence above the plate was left saying <q>Seven sheets, so far.</q> The card went in at the end of the list rather than in its place, so the plate ran 1&ndash;6, 8, 7. <strong>Neither is a hard fact getting away from us; both are the register&rsquo;s own bookkeeping getting away from us</strong>, which on a site that publishes an accession register is the more embarrassing of the two.</p>
+
+      <div class="qe-entry qe-entry--label" data-sheet="index">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">Eight, and in order &mdash; the count above the plate and the sequence on it</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The count is a hand-written number beside a list that grows.</strong> Every other statement of the same fact was already right: <code>/search</code> says <q>the eight sheets</q>, <code>/404</code> says <q>the eight sheets</q>, and <code>tools/pages.mjs</code> has held all eight in order since the sheet was mounted. One sentence in <code>index.html</code> disagreed with all three, and it is the sentence a first-time reader meets first.</p>
+          <p><strong>The order was an append.</strong> A new card belongs where its number belongs, and this one was added after the last <code>li</code> instead. It is invisible in a review of the diff &mdash; the markup is valid, the card is correct, and the number is right on the card itself &mdash; and obvious the moment anybody reads the plate downward.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="the-tempest">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">The same fault, found by looking for it: one sibling nav ran 4, 1, 2, 3</span></div>
+        <div class="qe-entry-body">
+          <p>Having found the plate out of sequence, the obvious question was whether anything else was, so all fourteen pages were counted rather than the one that had been reported. <strong><a href="/the-tempest">Sheet No.&nbsp;5</a> listed its siblings 4, 1, 2, 3, 6, 7, 8.</strong> Every other page was already ascending. The card is now in its place.</p>
+          <p><strong>This is the failure <code>check-card-order</code> exists to catch on Star Stuff, and this repo has not ported it.</strong> The rule here is to port a gate when the failure it catches becomes possible; it has now happened twice in one afternoon, in two files, and neither instance broke a single one of the seven gates. The ordering truth is already written down and machine-readable &mdash; <code>tools/pages.mjs</code> &mdash; so the check has something to compare against. <strong>Recorded here rather than quietly fixed</strong>, because a correction that leaves the gate unbuilt is a correction waiting to be made again.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-cabinet">
+      <p class="qe-accession-date">2026 &middot; 9 September</p>
       <h2 id="a-2026-09-09-cabinet">The four pages that are not specimens were only ever in the footer, which is where a site puts what it hopes nobody needs <a class="qe-anchor" href="#a-2026-09-09-cabinet"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">The plate names eight readings and nothing else, so <a href="/design">how the site is made</a>, <a href="/changelog">this register</a>, <a href="/search">the finding aid</a> and <a href="/privacy">the privacy page</a> lived in the footer of every page and in no page&rsquo;s content. <strong>A site that publishes an attribution ledger and a privacy policy should not file both under fine print.</strong> They now have a section of their own at the foot of the home page, under the name <a href="/#the-cabinet-itself">the group already had</a> in <code>tools/pages.mjs</code> &mdash; so the plate, the finding aid&rsquo;s manifest and <code>/llms.txt</code> call this set the same thing rather than three things.</p>

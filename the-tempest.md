@@ -213,4 +213,4 @@ Wikipedia contributors. (n.d.). *Miranda (given name)*. Wikipedia. [https://en.w
 
 Queering Earth Sheet No. 5 Accessioned 8 Sep 2026
 
-Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-miranda). [Label corrected once](https://queering.earth/changelog#a-2026-09-08-miranda), for two citations that were wrong before the sheet was ever built.
+Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09-08-miranda). [Label corrected once](https://queering.earth/changelog#a-2026-09-08-miranda), for two citations that were wrong before the sheet was ever built, and [once again](https://queering.earth/changelog#a-2026-09-09-plate) for a sibling card that had been sitting out of sequence.

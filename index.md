@@ -79,7 +79,7 @@ It also is not a trade. Every page here has a **plain view** — the control at 
 
 ## What grows here
 
-Seven sheets, so far, mounted and numbered on the plate below.
+Eight sheets, so far, mounted and numbered on the plate below.
 
 -
 
@@ -107,11 +107,11 @@ Seven sheets, so far, mounted and numbered on the plate below.
 
 -
 
-[  Wall No. 8  The Preferred Flower of Life Monotropa uniflora, Dickinson, and monotropism A plant that will not photosynthesise, the flower Dickinson kept in her herbarium, and one Greek root shared by a 1753 binomial and a theory of Autistic attention. ](https://queering.earth/monotropa-uniflora)
+[  Reading No. 7  A Waste Garden, Flowering at Its Will Violet, pansy, green carnation, and lavender Four flowers worn where they could be seen, each read in the end by the people it was meant to slip past. ](https://queering.earth/flower-codes)
 
 -
 
-[  Reading No. 7  A Waste Garden, Flowering at Its Will Violet, pansy, green carnation, and lavender Four flowers worn where they could be seen, each read in the end by the people it was meant to slip past. ](https://queering.earth/flower-codes)
+[  Wall No. 8  The Preferred Flower of Life Monotropa uniflora, Dickinson, and monotropism A plant that will not photosynthesise, the flower Dickinson kept in her herbarium, and one Greek root shared by a 1753 binomial and a theory of Autistic attention. ](https://queering.earth/monotropa-uniflora)
 
 The border is four flowers that were once a way of saying it without saying it: *violet*, *pansy*, *green carnation*, *lavender*. Gathered as a set by Sarah Prager in [*Four Flowering Plants That Have Been Decidedly Queered*](https://daily.jstor.org/four-flowering-plants-decidedly-queered/), JSTOR Daily, 29 January 2020.
 

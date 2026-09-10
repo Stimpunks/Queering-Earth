@@ -36,6 +36,24 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## The plate said seven and carried eight, and two of them were in the wrong order — on the one page whose job is to say what is here
+
+Sheet No. 8 was mounted, carded and logged, and the sentence above the plate was left saying “Seven sheets, so far.” The card went in at the end of the list rather than in its place, so the plate ran 1–6, 8, 7. **Neither is a hard fact getting away from us; both are the register’s own bookkeeping getting away from us**, which on a site that publishes an accession register is the more embarrassing of the two.
+
+Label correctedEight, and in order — the count above the plate and the sequence on it
+
+**The count is a hand-written number beside a list that grows.** Every other statement of the same fact was already right: `/search` says “the eight sheets”, `/404` says “the eight sheets”, and `tools/pages.mjs` has held all eight in order since the sheet was mounted. One sentence in `index.html` disagreed with all three, and it is the sentence a first-time reader meets first.
+
+**The order was an append.** A new card belongs where its number belongs, and this one was added after the last `li` instead. It is invisible in a review of the diff — the markup is valid, the card is correct, and the number is right on the card itself — and obvious the moment anybody reads the plate downward.
+
+Label correctedThe same fault, found by looking for it: one sibling nav ran 4, 1, 2, 3
+
+Having found the plate out of sequence, the obvious question was whether anything else was, so all fourteen pages were counted rather than the one that had been reported. **[Sheet No. 5](https://queering.earth/the-tempest) listed its siblings 4, 1, 2, 3, 6, 7, 8.** Every other page was already ascending. The card is now in its place.
+
+**This is the failure `check-card-order` exists to catch on Star Stuff, and this repo has not ported it.** The rule here is to port a gate when the failure it catches becomes possible; it has now happened twice in one afternoon, in two files, and neither instance broke a single one of the seven gates. The ordering truth is already written down and machine-readable — `tools/pages.mjs` — so the check has something to compare against. **Recorded here rather than quietly fixed**, because a correction that leaves the gate unbuilt is a correction waiting to be made again.
+
+2026 · 9 September
+
 ## The four pages that are not specimens were only ever in the footer, which is where a site puts what it hopes nobody needs
 
 The plate names eight readings and nothing else, so [how the site is made](https://queering.earth/design), [this register](https://queering.earth/changelog), [the finding aid](https://queering.earth/search) and [the privacy page](https://queering.earth/privacy) lived in the footer of every page and in no page’s content. **A site that publishes an attribution ledger and a privacy policy should not file both under fine print.** They now have a section of their own at the foot of the home page, under the name [the group already had](https://queering.earth/#the-cabinet-itself) in `tools/pages.mjs` — so the plate, the finding aid’s manifest and `/llms.txt` call this set the same thing rather than three things.
