@@ -2461,6 +2461,20 @@ CabinetThree sheets had no contents list and no reason for not having one
 
 2026 · 9 September · latest
 
+## The entry index announced itself in the drift rail, because the exclusion was a list of class names
+
+The rail on [the ledger](https://queering.earth/ledger) read “Verified · Open · Every attribution on this page” — the third of those being the index’s own heading, listing itself inside the navigation beside it. **Two components built in parallel, each correct on its own.** The rail excludes `.qe-contents` by name; the entry index arrived as a second navigation block inside the landmark and nothing knew to skip it.
+
+Label correctedThe test is the element now, not the class, so the next navigation block needs no line
+
+**A heading that labels a navigation block is not a section of the page.** That was always the rule; it was written down as `.qe-contents` because that was the only case when it was written. **A list of class names is a rule that gets quietly broken by the next component** — the same shape as “the two view controls, and nothing else” and “the one Python tool here”, both of which this file has already had to correct into boundaries. Every navigational block on this site is a `nav`, including the rail and the index themselves, so the element is the test.
+
+**Proved in both directions rather than one.** The ledger’s rail is “Verified · Open” and its entry index still fills 53 and 2; [Sheet No. 1](https://queering.earth/on-being-ill)’s contents list and rail are unchanged at seven each. A fix to a shared derivation that is only checked on the page that was broken is a fix that breaks fourteen others quietly.
+
+**Worth recording as a hazard rather than only as a bug.** Both components were built the same afternoon in two sessions against one working tree, and neither was wrong about its own page. The failure lives in the seam, which is the one place a gate here does not look: `check-markup.mjs` validates the served markup, and this list does not exist until a script runs.
+
+2026 · 9 September
+
 ## The two longest pages on the site could not be surveyed without reading all of them
 
 A reader wanting to know whether the ledger holds an entry on Rossetti had one option: scroll 130KB of it. Both record pages now carry **an index of their own entries** at the foot — 55 on [the ledger](https://queering.earth/ledger), 71 on [the decision log](https://queering.earth/what-is-settled) — with a one-line pointer up in the front matter, the way a bound volume does it.
@@ -3874,7 +3888,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-137 entries across 33 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+138 entries across 34 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

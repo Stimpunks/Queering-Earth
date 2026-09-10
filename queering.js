@@ -112,8 +112,10 @@
    * guard:
    *   · `.qe-elsewhere h2` — the sibling nav's own heading, which lives OUTSIDE
    *     <main>. Scoping the query to main is what excludes it.
-   *   · `.qe-contents h2` — this component's own heading, which is inside main
-   *     and would otherwise list itself.
+   *   · any `h2` inside a `nav` — this component's own heading, and the entry
+   *     index's on the two record pages. Both are inside main and would otherwise
+   *     list themselves. Tested by element rather than by class name, because the
+   *     class-name version silently missed the second one.
    *   · any <h2> without an id, because there would be nothing to link to.
    *
    * THE LABEL IS THE HEADING, VERBATIM. The <h2> is cloned and its section mark
@@ -143,7 +145,14 @@
 
     for (var i = 0; i < heads.length; i++) {
       var h = heads[i];
-      if (h.closest('.qe-contents')) continue;
+      /* A HEADING THAT LABELS A NAVIGATION BLOCK IS NOT A SECTION OF THE PAGE.
+         This was `.qe-contents` by name until a second in-main nav arrived and the
+         rail on /ledger listed "Every attribution on this page" — the entry index
+         announcing itself inside the navigation it sits beside. A list of class
+         names is a rule that gets quietly broken by the next component; every
+         navigational block on this site is a `nav`, including this one, so the
+         element is the test and the next one needs no line here. */
+      if (h.closest('nav')) continue;
 
       /* Clone rather than read textContent off the live heading: the section mark
          is a child of it, and its accessible name would arrive in the label. */

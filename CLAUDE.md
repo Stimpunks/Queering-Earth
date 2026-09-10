@@ -605,9 +605,13 @@ by including the empty `<nav>`; `queering.js` fills it from that page's own `<h2
   real space before the `<a>` in the markup is load-bearing**: without it the heading's
   accessible name computes as "…the windsLink to this section", because CSS margin is not
   whitespace.
-- **Three headings must not land in the list and no guard catches any of them:**
+- **Three kinds of heading must not land in the list and no guard catches any of them:**
   `.qe-elsewhere h2` (outside `<main>` — scoping the query to main is what excludes it),
-  `.qe-contents`' own heading, and any `<h2>` with no id.
+  **any `<h2>` inside a `nav`**, and any `<h2>` with no id. The middle one was written as
+  `.qe-contents` by name until a second in-main nav arrived and the rail on `/ledger`
+  listed *"Every attribution on this page"* — the entry index announcing itself inside
+  the navigation beside it. **A list of class names is a rule the next component breaks**,
+  the same correction `queering.js`'s own boundary and the Python rule already took.
 - **Not on `/changelog`**, which looks like the strongest case and is not. A register's
   accession headline is a sentence by design, so its labels average 148 characters against
   22–34 on a sheet: the block measured 1,293px against 319–510px elsewhere and delayed the
