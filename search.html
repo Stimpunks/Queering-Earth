@@ -138,6 +138,17 @@
     <div id="qe-found-results"></div>
   </div>
 
+  <!-- BELOW THE FORM, not straight after the lede as everywhere else. The house puts a
+       contents list directly under the lede; on the finding aid that pushed the search
+       input to 970px on an 866px viewport — below the fold, on the one page whose whole
+       purpose is that input. It sits after the interactive region instead and
+       immediately before the sections it lists. A reader with results in front of them
+       is not looking for a contents list; a reader scrolling past them is. -->
+  <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
+    <h2 id="qe-contents-h">On this sheet</h2>
+    <ol></ol>
+  </nav>
+
   <h2 id="the-whole-cabinet">The whole cabinet <a class="qe-anchor" href="#the-whole-cabinet"><span class="qe-sr">Link to this section</span></a></h2>
 
   <p>Every page on the site and every section of it, in the order a reader might meet them. This list is <strong>generated from the pages themselves</strong> by <code>tools/make-search-index.mjs</code> and written into this sheet between two markers &mdash; the same way the typefaces are declared in the stylesheet. Nobody types it, so no heading here can drift from the heading it names.</p>
@@ -312,7 +323,7 @@
     </li>
     <li>
       <p class="qe-manifest-head"><a href="/changelog">The accession register</a> <span class="qe-manifest-kind">Register · the changelog</span></p>
-      <p class="qe-manifest-sub">143 entries across 35 accessions, each one dated on <a href="/changelog">the register itself</a> and filed by sheet in <a href="/changelog#qe-index-h">its index</a>. They are searchable above.</p>
+      <p class="qe-manifest-sub">145 entries across 36 accessions, each one dated on <a href="/changelog">the register itself</a> and filed by sheet in <a href="/changelog#qe-index-h">its index</a>. They are searchable above.</p>
     </li>
     <li>
       <p class="qe-manifest-head"><a href="/ledger">The attribution ledger</a></p>

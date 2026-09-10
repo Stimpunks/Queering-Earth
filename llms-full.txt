@@ -2459,6 +2459,24 @@ CabinetThree sheets had no contents list and no reason for not having one
 
 2026 · 9 September · latest
 
+## The finding aid gets one too, and three thresholds in a row turn out to have been the same mistake
+
+Every page on this site now carries a contents list except two, and neither of those declines on a threshold. **The pattern is worth more than any of the three rules it replaced.**
+
+CabinetThree thresholds tried, three retired, each measuring the list instead of the reader
+
+**They went in this order, over about two hours.** *More than two headings* — retired, because two entries that save twenty screens beat seven that save two. *The block must not be too tall* — retired, because 2,322px against a 120-screen page is a bargain and the comparison that decides it is the block against its own page. *The page must be long enough* — retired now, with [the finding aid](https://queering.earth/search) at 1,307 words.
+
+**Each of the three measured the list. None of them measured the reader.** What is left is structural and has one instance: *does this page already have a better index of itself?* The home page answers yes — its plate of eight numbered cards is a contents list, and a second one above it would put two competing lists on one page. The error page is an error page. **Everything else has one.**
+
+Label correctedStraight after the lede put the search box below the fold, on the page that is a search box
+
+The house puts a contents list directly under the lede, and following that here pushed the input to **970px on an 866px viewport** — out of sight on load, on the one page whose entire purpose is that field. **Caught by measuring rather than by looking**, which matters: the screenshot looked perfectly reasonable, because a screenshot of the top of a page always does.
+
+It sits below the form and the results now, immediately before the sections it lists, and the input is back at **804px**. A reader with results in front of them is not looking for a contents list; a reader scrolling past them is. **The exception is recorded rather than left as a quirk of one file**, because the next person to tidy this page will otherwise move it back.
+
+2026 · 9 September
+
 ## This register now has the contents list an earlier entry measured, refused, and wrote a rule against
 
 Ryan asked for it. The old refusal was **right about its number and wrong about what the number meant** — which is a more interesting way to be wrong than simply not having measured.
@@ -3934,7 +3952,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-143 entries across 35 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+145 entries across 36 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

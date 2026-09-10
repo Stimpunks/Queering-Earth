@@ -567,11 +567,17 @@ it is a register rather than a list of releases.
   The question is only ever *is this page long enough to want one*.
 - **Retiring it found a real omission.** `/privacy` is 2,058 words with eight headings and had
   no list — longer than `/on-being-ill` at 2,045, which has one. It has one now.
-- **Four pages decline, each with a reason that is not about heading count.** `/404` (an error
-  page), the home page (its plate is already a contents list), `/changelog` (148-character
-  headings, measured at 1,293px and three and a half screens — it gets `.qe-sheet-index` as
-  back matter instead), and `/search` at 1,307 words, the shortest page on the site that is
-  not the error page and well under the 2,045 of the shortest page that has one.
+- **EVERY PAGE HAS ONE EXCEPT TWO, and both exceptions are structural rather than a
+  threshold.** `/404` is an error page with two headings and 329 words, and the home page's
+  own content *is* a contents list — the plate of eight numbered cards — so a second one
+  above it would put two competing navigational lists on one page and the one a reader wants
+  is the plate. **Length is no longer a reason to decline either**, as of 2026-09-09:
+  `/search` has one at 1,307 words, the shortest page here that is not the error page.
+- **Three thresholds were tried and all three are retired**, which is the pattern worth
+  remembering rather than any one of them: *more than two headings*, *the block must not be
+  too tall*, and *the page must be long enough*. Each measured the list instead of the reader.
+  What is left is the structural question — **does this page already have a better index of
+  itself?** — and only the home page answers yes.
 
 **The home page is the case that separates them.** Its own content *is* a contents list — the
 plate of eight numbered cards — so a `.qe-contents` above the prose would put two competing
@@ -597,8 +603,15 @@ by including the empty `<nav>`; `queering.js` fills it from that page's own `<h2
   are different places and five of the ten lists prove it: `/wild-nights` carries nineteen
   blocks of opening prose between its list and its first `<h2>`, `/invention-of-normal`
   thirteen. The list is front matter for the sections; the lede is not a section.
-  **There is no longer an exception, and how `/coming-to-terms` stopped being one is the
-  useful part.** It had no lede and all six headings in its 2026 commentary, so its list sat
+  **THERE IS EXACTLY ONE EXCEPTION AND IT IS `/search`.** Straight after the lede there put
+  the search input at 970px on an 866px viewport — **below the fold, on the one page whose
+  whole purpose is that input.** Its list sits below the form and the results instead,
+  immediately before the sections it names, and the input is back at 804px. Measured, moved,
+  re-measured; the screenshot of the broken version looked entirely reasonable, because a
+  screenshot of the top of a page always does. A reader with results in front of them is not
+  looking for a contents list.
+  **How `/coming-to-terms` stopped being the other exception is the useful part.** It had no
+  lede and all six headings in its 2026 commentary, so its list sat
   after the register note — the only place it could sit without misrepresenting the page.
   The fix was not to move the list but to give the sheet what it was missing: a lede, and a
   heading for the essay. **The heading is Ryan's own phrase**, taken from the anecdote inside
