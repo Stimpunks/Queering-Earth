@@ -22,32 +22,54 @@ credits Nick Walker, see below. The *wording* of both wordmark and tagline is st
 Changing either is one line in `index.html`. Whatever replaces them, the paraphrase problem
 does not come back: quote him exactly, or write our own line.
 
-### `.qe-wide` does nothing, and whether the masthead should actually break the measure
+### `.qe-wide` narrows on paper and widens nothing on screen, and whether the provocation should break the measure
 
 **Found 2026-09-09, while deriving the drift rail's breakpoint. Not fixed, on purpose.**
 
-`queering.css` carries `.qe-wide { max-width: 46rem }` and `CLAUDE.md` says two blocks are
-allowed to break the measure — the masthead and the provocation. **Neither does.**
-`.qe-wide` is a child of `main`, `main` is `max-width: 34rem`, and a max-width of 46rem
-inside a 34rem parent constrains nothing at all. Measured: `main` is 544px, `.qe-wide` is
-448px, exactly the content box every other block gets.
+`queering.css` carried a note saying two blocks break the measure — the masthead and the
+provocation. **It was wrong twice over.** The masthead has never carried the class at all,
+and `.qe-wide` is a child of `main`, `main` is `max-width: 34rem`, and a max-width of 46rem
+inside a 34rem parent constrains nothing. Measured on screen: `main` is 544px, `.qe-wide`
+is 448px, exactly the content box every other block gets.
 
-It has presumably been inert since it was written, and nothing looks broken, which is the
-point — **nobody can miss a block that was never wider.** It surfaced only because the
-rail's breakpoint arithmetic reserved 288px of margin for it.
+**"It does nothing" was then the overcorrection, and it went out in three commits before
+anybody checked paper.** `@media print` sets `main { max-width: none }`, so on a printed
+sheet this rule is the only thing holding the provocation in — it **caps** a block that
+would otherwise run the full width, and centres it. The class does not widen; on the one
+medium where it is live, it narrows. Measured by reproducing the print condition:
+
+| printable width | `.qe-wide` | a sibling block | effect |
+|---|---|---|---|
+| 717px — A4 at Chrome's default margins | 717px | 717px | none |
+| 739px — Letter, same | 736px | 739px | 3px |
+| 816px — Letter at zero margins | 736px | 816px | 80px |
+
+So its effect scales with the printer's margins and is invisible at the defaults, which is
+why nothing looked broken and why **nobody can miss a block that was never wider.** It
+surfaced only because the rail's breakpoint arithmetic reserved 288px of margin for it.
+
+**The lesson is the one this repo keeps relearning, arriving from a third direction:** the
+first claim was reasoned from a rule, the second was measured on screen and generalised to
+every medium. `check-contrast.mjs` and `check-overlap.mjs` both measure paper separately
+precisely because paper is not a wider screen.
 
 **Three ways out, and this is a design question rather than a defect to sweep up:**
 
-1. **Make it real** — `width: min(46rem, calc(100vw - 2 * var(--qe-gutter)))` with negative
-   margins, or move the constraint off `main`. The masthead and the provocation would then
-   genuinely break the measure, which is what the house note has claimed all along. **This
-   changes how every page looks**, and the rail's clearance would have to be re-measured.
-2. **Delete it** and correct the note, on the grounds that the site has looked right
-   without it for its whole life and the measure is the design.
-3. **Leave it** and correct only the note.
+1. **Make it real on screen** — `width: min(46rem, calc(100vw - 2 * var(--qe-gutter)))` with
+   negative margins, or move the constraint off `main`. The provocation would then
+   genuinely break the measure, which is what the note claimed all along. **This changes
+   how every page looks**, and the rail's clearance would have to be re-measured against a
+   block that finally is 736px wide.
+2. **Delete it**, on the grounds that the site has looked right without it for its whole
+   life and the measure is the design — accepting that the provocation then runs the full
+   width on paper like everything else.
+3. **Keep it and describe it honestly** as the paper-only narrowing rule it actually is.
 
-Ryan's call. Until then the rail's breakpoint is measured against what actually renders,
-not against the rule, which is the right way round regardless of which way this goes.
+**Ryan took 3 on 2026-09-09**: the note now matches the code, and the code is unchanged.
+Option 1 stays available and is a separate, deliberate design change.
+
+The rail's breakpoint is measured against what actually renders rather than against the
+rule, which is the right way round regardless of which way this ever goes.
 
 ### Whether Helen gets a static CMS
 
@@ -373,10 +395,11 @@ turned into finding out it had never been derived correctly.
   The only thing that fails as the window narrows is the rail sliding off the left edge.
   The left is now pinned with `max(0.75rem, …)`, which converts that failure from
   "slides off the edge" into "stops moving".
-- **The sum reserved room for a block that does not exist.** It held back space for
-  `.qe-wide` at 46rem, on the strength of this repo's own note that the masthead and the
-  provocation break the measure. **They do not** — see the open item below. The rail was
-  protecting 288px of nothing.
+- **The sum reserved room for a width that never happens on screen.** It held back space
+  for `.qe-wide` at 46rem, on the strength of this repo's own note that the masthead and
+  the provocation break the measure. **On screen they do not** — see the item above, where
+  the class turns out to narrow on paper rather than widen anywhere. The rail was
+  protecting 288px of nothing, and the rail is never printed.
 
 **Measured rather than calculated**, which is what should have happened first: at 1024px
 the leftmost thing inside `main` across the art-heavy sheets is 277–288px, against a rail

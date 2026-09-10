@@ -649,8 +649,23 @@ main {
   padding: 0 var(--qe-gutter) var(--qe-space-8);
 }
 
-/* Two blocks are allowed to break the measure: the masthead and the provocation.
-   Everything that is read line by line stays inside it. */
+/* THIS NARROWS ON PAPER; IT HAS NEVER WIDENED ANYTHING ON SCREEN. The note here
+   used to say two blocks break the measure, the masthead and the provocation, and
+   it was wrong twice: the masthead has never carried this class, and a max-width of
+   46rem inside a `main` capped at 34rem constrains nothing. Measured on screen: the
+   provocation is 448px, exactly the content box every other block gets.
+
+   IT IS NOT DEAD, THOUGH, AND "it does nothing" WAS THE OVERCORRECTION. `@media print`
+   sets `main { max-width: none }`, so on paper this is the only thing holding the
+   provocation in — it CAPS a block that would otherwise run the full sheet, and
+   centres it. Measured in that condition: at 717px of printable width (A4 at
+   Chrome's default margins) it constrains by 0; at 739px (Letter) by 3px; at 816px
+   by 80px. So its real effect scales with the printer's margins and is invisible at
+   the defaults.
+
+   Whether the provocation SHOULD break the measure on screen is a live design
+   question and is open in DECISIONS.md. Nothing here should quietly answer it by
+   widening the masthead on the way past. */
 .qe-wide {
   max-width: 46rem;
   margin-left: auto;
@@ -3272,9 +3287,11 @@ html.plain .qe-stamp-date {
  *
  * THEN THE CLEARANCE WAS MEASURED RATHER THAN CALCULATED, AND THE ARITHMETIC HAD
  * BEEN WRONG FROM THE START. The old sum reserved room for `.qe-wide` at 46rem,
- * because this file says two blocks break the measure. THEY DO NOT. `.qe-wide` is
- * a child of `main`, `main` is `max-width: 34rem`, and a max-width of 46rem inside
- * a 34rem parent constrains nothing — it renders at 448px like every other block.
+ * because this file said two blocks break the measure. ON SCREEN THEY DO NOT.
+ * `.qe-wide` is a child of `main`, `main` is `max-width: 34rem`, and a max-width of
+ * 46rem inside a 34rem parent constrains nothing — it renders at 448px like every
+ * other block. (On PAPER it is live, and narrows rather than widens; see its own
+ * note. Paper is irrelevant here, because the rail is not printed.)
  * The rail had been holding back 288px for a block that was never there. Measured
  * across the art-heavy sheets at 1024px, the leftmost thing inside `main` is 277px
  * to 288px, against a rail ending at 172px: 105px of clearance, not the 24px the

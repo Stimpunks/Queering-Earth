@@ -676,20 +676,29 @@ THERE.** Two corrections, and the second is the one to remember. First: the rail
 page are both derived from the centre line, so the gap between them is **constant at every
 width** — the breakpoint was only ever measuring the rail sliding off the left edge, which
 is why the left is now pinned with `max()`. Second: the old sum reserved room for
-`.qe-wide` at 46rem, and **`.qe-wide` does not do anything** — see below. Measured instead
+`.qe-wide` at 46rem, and **`.qe-wide` widens nothing on screen** — see below. Measured instead
 of calculated, the leftmost thing inside `main` on the art-heavy sheets is 277–288px at
 1024px against a rail ending at 172px, so the real clearance is ~108px and not the 24px
 being protected. Below the breakpoint the rail is gone rather than squeezed, which is what
 keeps WCAG 1.4.10 satisfied at 400% zoom. `check-overlap.mjs` measures screen at 1280px,
 so **the rail is live in that pass** and a collision is reportable.
 
-**`.qe-wide` IS DEAD, AND THIS FILE SAYS OTHERWISE TWO SECTIONS UP.** The layout note
-claims two blocks break the measure — the masthead and the provocation. They cannot:
-`.qe-wide` is a child of `main`, `main` is `max-width: 34rem`, and `max-width: 46rem`
-inside a 34rem parent constrains nothing. Both render at 448px like every other block.
-**Left in place deliberately**: making the masthead genuinely wider is a design decision
-about how this site looks, not a bug fix, and nothing should quietly widen it on the way
-past. See `DECISIONS.md`, where it is open.
+**`.qe-wide` NARROWS ON PAPER AND WIDENS NOTHING ON SCREEN.** The old layout note claimed
+two blocks break the measure, the masthead and the provocation, and it was wrong twice
+over: **the masthead has never carried the class**, and a `max-width: 46rem` child of a
+`main` capped at 34rem constrains nothing. Measured on screen, the provocation is 448px —
+the content box every other block gets.
+
+**"It does nothing" was the overcorrection, and it shipped before being checked.**
+`@media print` sets `main { max-width: none }`, so on paper this rule is the only thing
+holding the provocation in: it **caps** a block that would otherwise run the full sheet,
+and centres it. Measured in that condition — 0px of effect at 717px of printable width
+(A4 at Chrome's default margins), 3px at 739px (Letter), 80px at 816px. Its real effect
+scales with the printer's margins and is invisible at the defaults.
+
+**Left in place deliberately.** Whether the provocation should break the measure on screen
+is a design decision about how this site looks, not a bug to sweep up, and nothing should
+quietly answer it by widening the masthead on the way past. Open in `DECISIONS.md`.
 
 **It sits outside the landmark, so no generator sees it** — re-running all three changed
 no byte.
