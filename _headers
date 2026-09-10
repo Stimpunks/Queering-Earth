@@ -179,8 +179,13 @@
 # release, so a year is a claim we can keep; but the name carries no content hash, so
 # the promise that the body can NEVER change is one we would only be hoping to keep.
 # Same reasoning as the plates.
+# NO Content-Type HERE. It said `font/woff2` for everything under /fonts/, which was
+# true when only woff2 lived here and became a lie the moment the picker's OTFs
+# arrived — and production sends nosniff, so a wrong font type is one the page cannot
+# recover from. Netlify types both correctly on its own: font/otf and font/woff2,
+# verified against files that carry no override. The third time this trap has been
+# hit here, and the first time by asserting a type rather than by omitting one.
 /fonts/*
-  Content-Type: font/woff2
   Cache-Control: public, max-age=31536000, stale-if-error=2592000
   Access-Control-Allow-Origin: *
 
