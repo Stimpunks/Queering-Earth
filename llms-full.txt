@@ -2331,6 +2331,20 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 9 September · latest
 
+## A new accession goes at the top, anchored on the register, and this one proves it
+
+The entry below records four accessions ending up in the wrong order and the two assertions added to catch it. **Neither assertion can see the case that caused it** — within a single day the order is editorial and nothing mechanical can verify it. This is the part that closes: a written rule about *where the insert goes*.
+
+CabinetThe fixed anchor cannot go wrong whoever else is editing; the relative one is correct only while nobody is
+
+**Anchor on `<div class="qe-register" id="latest">`, never on the last accession you wrote.** The register runs newest first, so the top is a fixed address and the previous entry is not. Inserting above your own last entry is right for exactly as long as nobody else adds one — which was true every day this register has existed until this evening, when two sessions appended to it for three hours. Ryan asked for the rule; it is in `CLAUDE.md` beside the checklist a session reads before writing an entry, rather than only here where it would be read afterwards.
+
+**The marker moves in the same edit.** `· latest` comes off whatever holds it and goes on the new entry, and `check-markup.mjs` refuses a page where it is not on the first accession. That gate plus this rule cover the two halves: the gate catches a marker in the wrong place, the anchor stops an entry landing in one.
+
+**This entry was inserted by the rule it describes**, anchored on the register div with the marker moved off the section below. Which is the smallest possible test, and better than none.
+
+2026 · 9 September
+
 ## A way straight to the newest accession, and the discovery that it was not where the page said it was
 
 The contents list added an hour ago put the newest accession 4.8 screens down, so [a jump](#latest) was wanted. Building it exposed something worse: **the register was out of chronological order and had been for the whole evening.**
@@ -3978,7 +3992,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-148 entries across 37 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+149 entries across 38 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

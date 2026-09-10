@@ -198,7 +198,7 @@ Monotropa uniflora, Dickinson, and monotropism
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-148 entries across 37 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+149 entries across 38 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

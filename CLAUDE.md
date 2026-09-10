@@ -546,6 +546,21 @@ eight have been corrected — Sheet No. 8 was predicted to arrive clean and did 
 unmended state has still never shipped**, so it is the state to check by hand when a sheet
 is mounted, not one you can copy off a neighbour.
 
+**A NEW ACCESSION GOES AT THE TOP OF THE REGISTER, ANCHORED ON `<div class="qe-register"
+id="latest">` — NEVER RELATIVE TO THE LAST ENTRY YOU WROTE.** The register runs newest
+first, so the top is a fixed address and the previous accession is not. Anchoring on your
+own last entry is correct for exactly as long as nobody else adds one, and it produced a
+wrong page on 2026-09-09: two sessions appended to this file all evening, each inserting
+above the last accession *it* had written, and four accessions ended up below four older
+ones. **Both sessions were locally correct and the page was globally wrong.** The fixed
+anchor cannot do that, whoever else is editing.
+
+**Move `· latest` in the same edit**, off the accession that had it and onto the new one.
+`check-markup.mjs` fails if the marker is not on the first accession, or if two carry it,
+or if a date increases down the page — but **within one day the order is editorial and
+nothing can verify it**, so the anchor is the only thing keeping it right. `/changelog#latest`
+is a published address that depends on this.
+
 Four kinds of entry, each with one accent token spent on a rule and **never on the letters** —
 `Mounted`, `Re-determined`, `Label corrected`, `Cabinet`. Group by accession, not by commit: a
 sheet, its corrections, and the CSS it needed are one dated entry. See `DECISIONS.md` for why

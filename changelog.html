@@ -202,9 +202,25 @@
        stale because nothing about it is a copy of anything. It needs no script either,
        which a derived href would have. -->
   <div class="qe-register" id="latest">
+    <section class="qe-accession" aria-labelledby="a-2026-09-09-anchor">
+      <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <h2 id="a-2026-09-09-anchor">A new accession goes at the top, anchored on the register, and this one proves it <a class="qe-anchor" href="#a-2026-09-09-anchor"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">The entry below records four accessions ending up in the wrong order and the two assertions added to catch it. <strong>Neither assertion can see the case that caused it</strong> &mdash; within a single day the order is editorial and nothing mechanical can verify it. This is the part that closes: a written rule about <em>where the insert goes</em>.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The fixed anchor cannot go wrong whoever else is editing; the relative one is correct only while nobody is</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Anchor on <code>&lt;div class="qe-register" id="latest"&gt;</code>, never on the last accession you wrote.</strong> The register runs newest first, so the top is a fixed address and the previous entry is not. Inserting above your own last entry is right for exactly as long as nobody else adds one &mdash; which was true every day this register has existed until this evening, when two sessions appended to it for three hours. Ryan asked for the rule; it is in <code>CLAUDE.md</code> beside the checklist a session reads before writing an entry, rather than only here where it would be read afterwards.</p>
+          <p><strong>The marker moves in the same edit.</strong> <code>&middot; latest</code> comes off whatever holds it and goes on the new entry, and <code>check-markup.mjs</code> refuses a page where it is not on the first accession. That gate plus this rule cover the two halves: the gate catches a marker in the wrong place, the anchor stops an entry landing in one.</p>
+          <p><strong>This entry was inserted by the rule it describes</strong>, anchored on the register div with the marker moved off the section below. Which is the smallest possible test, and better than none.</p>
+        </div>
+      </div>
+    </section>
+
 
     <section class="qe-accession" aria-labelledby="a-2026-09-09-latest">
-      <p class="qe-accession-date">2026 &middot; 9 September &middot; latest</p>
+      <p class="qe-accession-date">2026 &middot; 9 September</p>
       <h2 id="a-2026-09-09-latest">A way straight to the newest accession, and the discovery that it was not where the page said it was <a class="qe-anchor" href="#a-2026-09-09-latest"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">The contents list added an hour ago put the newest accession 4.8 screens down, so <a href="#latest">a jump</a> was wanted. Building it exposed something worse: <strong>the register was out of chronological order and had been for the whole evening.</strong></p>
