@@ -7463,9 +7463,11 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
-### Six counting idioms answered a different question than the one asked, and none of them errored (2026-09-10)
+### Counting idioms that answered a different question than the one asked, and none of them errored (2026-09-10)
 
-Measuring one number &mdash; how much verse the Markdown flattening fault had flattened &mdash; took **three sessions and six wrong answers**, and the wrong answers are the entry. Not one of them was a bug in anything in this repo, and **not one of them failed.** Every single one returned a plausible figure.
+Measuring one number &mdash; how much verse the Markdown flattening fault had flattened &mdash; took **three sessions and eight wrong answers**, and the wrong answers are the entry. Not one of them was a bug in anything in this repo, and **not one of them failed.** Every single one returned a plausible figure.
+
+**The title carried the number "six" for one commit and no longer does.** Two more arrived after it was written, which is precisely the fault this file records against the home page's <q>Four pages that are not specimens</q> sitting above a list of six: **a count in prose beside a list is a second copy, and it is the copy that rots.** Nothing can derive this one, so it was removed rather than incremented.
 
 The settled number, in the end: **219 verse lines, 48 verse blocks, 171 hard breaks, across 10 pages.** It reconciles exactly, because `219 - 48 = 171` &mdash; a block's last line takes no trailing break.
 
@@ -7484,6 +7486,14 @@ The settled number, in the end: **219 verse lines, 48 verse blocks, 171 hard bre
 - **A flat count of "elements that look like a verse block" counts a wrapper and its children both.** On `/wild-nights` a `div.qe-verse` wraps two `p.qe-stanza` children &mdash; Ryan's reply verse in two parts &mdash; and the wrapper is not a break boundary of its own. That is the whole of the residual that three sessions could not reconcile, and **it is invisible unless you happen to open that one page.**
 
 **WHAT FINALLY SETTLED IT HAD NO REGEX IN THE COUNTING.** Walk the `p` and `div` open and close tags keeping a depth stack, attribute each verse-line span to the innermost element still open, and count distinct holders. The nesting stops being a special case by construction, because a wrapper that directly holds no line is never counted. That produced 48 first time, per page: two-cohabitating-modes 13, wild-nights 11, the-tempest 7, invention-of-normal 6, promises-like-pie-crust 3, five-unmistakable-marks 3, monotropa-uniflora 2, flower-codes 1, index 1, manifesto 1.
+
+**AND TWO MORE, AFTER THE ENTRY WAS WRITTEN. The first is the only one where the wrong answer was right about the bytes and wrong about what they mean**, which is a harder class than the six above:
+
+- **A trailing backslash is a hard break only OUTSIDE a code fence.** Counting breaks per file to confirm the figures independently gave 173 across 12 files against the settled 171 across
+
+10. Not noise, and fully explained: `DECISIONS.md` line 2516 is `netlify api getSite --data '…' \\` &mdash; a shell line continuation inside a fenced block &mdash; and it reaches `what-is-settled.md` through the generator, so the same one backslash was counted in two files. It genuinely *is* a line ending in a backslash. **Every other idiom here returns a number that is wrong; this one returns a number that is right about the characters and wrong about the markup they sit in.** Two sessions saw those two files in a `grep -c '\\\\$' \*.md` listing; one set them aside as pre-existing and did not ask why.
+
+- **`git log -S` tells you which commit introduced a string, not who wrote it — and in a working tree three sessions are writing into, those are different facts.** This entry was authored by the session that did the depth-stack walk, left uncommitted in the shared checkout, and swept into the repo by another session's `git add -A`. `git log -S` therefore names that second session, correctly and misleadingly. **Two sessions then reached opposite wrong conclusions about who wrote it from the two obvious kinds of evidence** &mdash; one from the commit that carries the text, one from having read the text in the file before editing it &mdash; and the only correct answer was held by neither. In the repository whose stated risk is a wrong attribution, this is the one on the list to remember: **`git log` answers a question about commits, and authorship in a shared tree is not a question about commits.**
 
 **The rule.** A count is a claim, and this file already holds several entries where a measured number was right about its own arithmetic and wrong about what it measured &mdash; the register's block height, the contents-list heading threshold. This is the same failure one level down, in the instrument. **Before reporting a count off markup, check it against a second method that does not share the first one's idiom**, and if the two disagree, the disagreement is the finding rather than a rounding error. Three sessions agreeing is worth nothing if all three ran the same kind of pattern.
 
