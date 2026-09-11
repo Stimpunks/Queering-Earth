@@ -37,6 +37,24 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 11 September · latest
 
+## The masthead read *Queering.Ear / th*, and the measurement that certified it was of the wrong thing
+
+Ryan, with a screenshot, on the fix mounted directly below: “The title now wraps.” It did. The rule that stopped three pages scrolling sideways had been put on `body`, it cleared every page, it passed all nine gates — and it broke the wordmark in half on the front of the cabinet.
+
+Label correctedThe rule was right and the scope was wrong
+
+`overflow-wrap: anywhere` does two things: it permits a break inside a word, and it shrinks the element’s intrinsic min-content. **The second is what recovers the sha256 column on paper** — and it is also what lets a display word break where it had been sitting wider than its own box without anybody minding. **Sitting wider than your own box is not the same fault as scrolling the document**, and the masthead does the first on purpose: `main` is capped at 34rem, the wordmark is bigger than that, and it overflows symmetrically into gutters that exist to receive it.
+
+**Every measurement taken was of the wrong quantity.** A twenty-five page sweep of `scrollWidth` at four widths and both papers, before and after, reported no change anywhere but the three faulting pages — because **none of the damage moved a document width.** The wordmark broke inside the measure. The reading panel’s *Typeface* label broke mid-word inside a fixed-width row, on all twenty-five pages. Every table on the site re-laid out its columns. All of it invisible to the one number being watched, and the new gate said `PASS` to every bit of it.
+
+**The check that finds it is a line-box diff**: for every text node on every page, count `Range.getClientRects().length` with the rule and without, and report every element whose count moved. Four lines different from the sweep that saw nothing, and it found 324 changed elements on the first run. **It is not a gate and should not be** — a changed line count is usually the *point* of a typographic edit, so it cannot be pass or fail. It is a diff to read by hand whenever a rule touches wrapping, and that is written beside the rule now.
+
+**Narrowing it took three attempts, and the two rejected ones are the useful record.** `code, a` clears this register and the decision log but leaves [the ledger](https://queering.earth/ledger) at 402px, because that page carries a bare `<https://doi.org/…>` in running prose as a plain text node with no element around it — which is the entire reason `.qe-record p` and `li` are named. Then `a` turned out to reach `a.card`, and the Register card’s kind chip split across two lines at 1280px. **A structural selector was tried and does not help**: a card lives inside an `li`, so `:is(p, li, …) a` catches it too. **A selector list that looks careful while catching the same element is worse than an exception that says what it is protecting**, so the card is excluded by name. `.qe-editions td` was tried and is *not* in the rule at all — a `code` element’s own `anywhere` already shrinks what the column sizing reads, so the paper fix needs nothing else.
+
+**And the technique was already in this stylesheet.** `.qe-references p a` has carried `overflow-wrap: anywhere` since the references block shipped: this house had reached for exactly this the first time a bare URL would not fit, and scoped it to the one component somebody was looking at. **That is the precedent rather than a casualty** — the general rule is that rule generalised, and the scoped copy has been folded into it.
+
+2026 · 11 September
+
 ## Three pages had been scrolling sideways since the day each was mounted, and a ninth gate to say so
 
 Found by hand on this page, at a 375px viewport: a 414px document, pushed out by one `code` span holding `performance.getEntriesByType('resource')`. **Eight gates passed the page.** Looking for the rest of it found two more.

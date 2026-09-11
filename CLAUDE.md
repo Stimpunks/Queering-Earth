@@ -1363,10 +1363,26 @@ margin. **A new block with a negative inline margin needs its print margin reset
 
 **The cure is a break opportunity, not a scroll box, whenever the string is inline.** The
 scroll-container pattern is for BLOCKS and is already spent on `.qe-record pre` and
-`.qe-editions-scroll`; an inline element has no scroll box. `body` carries
-`overflow-wrap: anywhere`, and **`break-word` is not a substitute** — only `anywhere` shrinks
-intrinsic min-content, which is the whole difference inside a table and therefore the whole
-difference on paper. See `DECISIONS.md`.
+`.qe-editions-scroll`; an inline element has no scroll box. **`break-word` is not a
+substitute** — only `anywhere` shrinks intrinsic min-content, which is the whole difference
+inside a table and therefore the whole difference on paper.
+
+**IT IS SCOPED TO THREE CARRIERS AND `body` IS THE REFUSED VERSION, WHICH SHIPPED AND WAS
+REVERTED THE SAME DAY.** `code`, `a`, and `.qe-record p`/`li` — the last because the record
+pages carry bare `<https://doi.org/…>` in prose as a plain text node with nothing to hang a
+rule on. `a.card` is excluded by name: a card is a link that is a BLOCK, and its kind chip
+broke across two lines. A structural `:is(p, li, …) a` was tried and catches the card anyway,
+because a card lives inside an `li`.
+
+**A WRAPPING RULE IS CHECKED BY COUNTING LINE BOXES, NOT BY MEASURING THE DOCUMENT.**
+Inherited from `body` the rule cleared every page, passed all nine gates, and broke the
+masthead into *Queering.Ear / th*, split the reading panel's `Typeface` label on
+twenty-five pages, and reflowed every table — **none of which moved a document width**, so a
+25-page sweep of `scrollWidth` before and after reported nothing. Sitting wider than your own
+box is not the same fault as scrolling the page, and the masthead does the first on purpose.
+The check is a line-box diff — `Range.getClientRects().length` per text node, with the rule
+and without — read by hand. **Nothing in `tools/` gates it and nothing should**: a changed
+line count is usually the point of a typographic edit. See `DECISIONS.md`.
 
 Star Stuff has three more (`check-classes`, `check-sheets`, `check-embeds`).
 **Port one when the failure it catches becomes possible here** — not before. A check that

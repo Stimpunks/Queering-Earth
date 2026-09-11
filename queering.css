@@ -648,41 +648,6 @@ body {
   line-height: 1.65;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
-  /* A STRING WITH NO BREAK OPPORTUNITY BREAKS THE PAGE INSTEAD, AND THE ONLY CURE
-     THAT REACHES PAPER IS `anywhere`.
-     This ledger cites its sources the way a ledger has to: DOIs, archive.org
-     identifiers, sha256 masters, file paths into the knowledge system, a Netlify
-     hook URL. None of those has a space or a hyphen in it, so a line box cannot
-     end anywhere inside one, and the widest of them simply pushes the document
-     out. `/changelog` measured 414px at a 375px viewport on one `code` span;
-     `/ledger` 812px at 320 and 943 at 768; `/what-is-settled` 425. That is the
-     horizontal body scroll the layout rule forbids outright, and it had been live
-     on all three since each was mounted.
-     The house pattern for wide content — scroll it inside its own `overflow-x`
-     box — is for BLOCKS, and it is already spent where it belongs: `.qe-record pre`
-     scrolls because a wrapped command line is one somebody pastes wrong, and
-     `.qe-editions-scroll` scrolls because a comparison table is an object with
-     columns. Neither answers an identifier set inside a sentence: an inline
-     element has no scroll box, and giving one to a `code` span would put a
-     scrollbar in the middle of a line and split the ruled tier this site uses to
-     say what a panel is. So the inline form wraps and the block form scrolls,
-     which is the same decision both times — show the whole string, by whatever
-     means that medium has.
-     `break-word` LOOKS EQUIVALENT AND IS NOT, which is why this says `anywhere`.
-     Measured, not read: in flowing prose the two are indistinguishable and both
-     clear all three pages on screen. Inside `.qe-editions` they part company,
-     because only `anywhere` shrinks intrinsic min-content — so under `break-word`
-     the sha256 column stays as wide as the hash. On screen that is hidden by the
-     table's own scroller. ON PAPER IT IS NOT: `@media print` sets
-     `.qe-editions-scroll { overflow-x: visible }` on purpose, and `/ledger`
-     printed 802px of content onto a 717px A4 sheet with the two master hashes
-     running off the edge, in the file whose entire job is recording provenance.
-     Nothing here measures that either — `check-overlap.mjs` sweeps paper for text
-     on text, not for text past the margin.
-     It fires only when a word would otherwise overflow its line, so ordinary
-     prose is untouched: every other page measured the same document width before
-     and after, at 320, 375, 768 and 1280 and on both papers. */
-  overflow-wrap: anywhere;
 }
 
 /* The foxed-paper wash: four soft, off-centre stains, no image and no noise.
@@ -2021,6 +1986,57 @@ code {
 @media print {
   code { background: none; border: 0.5pt solid #999; color: #000; }
 }
+
+/* A STRING WITH NO BREAK OPPORTUNITY BREAKS THE PAGE INSTEAD.
+   This site cites its sources the way a ledger has to: DOIs, archive.org
+   identifiers, sha256 masters, file paths into the knowledge system, a Netlify
+   hook URL. None of those has a space or a hyphen in it, so a line box cannot end
+   anywhere inside one, and the widest of them simply pushes the document out.
+   `/changelog` measured 414px at a 375px viewport on one `code` span; `/ledger`
+   812px at 320 and 943 at 768; `/what-is-settled` 439. That is the horizontal body
+   scroll the layout rule forbids outright, and it had been live on all three since
+   each was mounted.
+
+   THE THREE SELECTORS ARE THE THREE CARRIERS, AND THE LIST IS EXHAUSTIVE BY
+   MEASUREMENT RATHER THAN BY GUESS. A token set in a sentence is `code`. A bare URL
+   used as its own link text is `a` — which is where this technique entered the
+   stylesheet, on `.qe-references p a`, long before it was general. And the record
+   pages carry bare `<https://doi.org/…>` in running prose as a plain text node with
+   no element around it at all, which is why `.qe-record p` and `li` are named: there
+   is nothing else to hang it on. Each was added because a page still overflowed
+   without it, and `.qe-editions td`/`th` was tried and is NOT here because it turned
+   out to be unnecessary — a `code` element's own `anywhere` already shrinks what the
+   column sizing reads.
+
+   `break-word` LOOKS EQUIVALENT AND IS NOT. Measured, not read: in flowing prose the
+   two are indistinguishable and both clear all three pages on screen. They part
+   company inside `.qe-editions`, because only `anywhere` shrinks intrinsic
+   min-content — so under `break-word` the sha256 column stays as wide as the hash.
+   On screen the table's own scroller hides that. ON PAPER IT DOES NOT: `@media print`
+   sets `.qe-editions-scroll { overflow-x: visible }` on purpose, and `/ledger`
+   printed 802px of content onto a 717px A4 sheet with the two master hashes running
+   off the edge, in the file whose entire job is recording provenance.
+
+   IT IS SCOPED BECAUSE `body` WAS TRIED, SHIPPED AND REVERTED THE SAME DAY, AND THE
+   MEASUREMENT THAT MISSED IT IS THE LESSON. Inherited from `body` this clears every
+   page too — and it also breaks `Earth` across two lines in the masthead, splits the
+   reading panel's `Typeface` label mid-word on all twenty-five pages, and reflows
+   every table on the site, because `anywhere` changes min-content for every box it
+   reaches and a table's columns are sized from exactly that. NONE OF IT MOVED A
+   DOCUMENT WIDTH, so the width gate said PASS and the sweep that only asked about
+   document width saw nothing. Ryan saw the wordmark. **A wrapping rule is checked by
+   counting line boxes before and after, not by measuring the document** — `tools/`
+   has no gate for that and the check is by hand. */
+code, a { overflow-wrap: anywhere; }
+.qe-record p, .qe-record li { overflow-wrap: anywhere; }
+/* EXCEPT THE ONE LINK ON THIS SITE THAT IS A BLOCK RATHER THAN AN INLINE. `a.card`
+   wraps a whole plate card — a kind chip, a number and a title — so `a` reaches text
+   that is display type sitting in a fixed-width box, and the Register card's own chip
+   broke across two lines at 1280px. A structural selector was tried first and does
+   not help: a card lives inside an `li`, so `:is(p, li, …) a` catches it too, and a
+   list that LOOKS careful while catching the same element is worse than an exception
+   that says what it is protecting. */
+a.card, a.card * { overflow-wrap: normal; }
 
 /* A first line that opens the page like a plate caption. */
 .qe-lede {
@@ -4156,7 +4172,11 @@ html.plain .qe-correction blockquote { font-variation-settings: normal; }
   text-indent: -1.4em;
   color: var(--qe-moss);
 }
-.qe-references p a { overflow-wrap: anywhere; }
+/* `.qe-references p a` carried `overflow-wrap: anywhere` on its own until 2026-09-11.
+   It is covered by the general rule near the `code` block now — and it was the
+   PRECEDENT for that rule rather than a casualty of it: this house had already
+   reached for `anywhere` the first time a bare URL would not fit, and scoped it to
+   the one component somebody was looking at. */
 
 @media print {
   h1 .qe-lean, h2 .qe-wobble { transform: none; }

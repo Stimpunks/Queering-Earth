@@ -550,6 +550,20 @@ Ryan found it by hand on `/changelog`: a 414px document at a 375px viewport, pus
 
 **Made to fail before being believed, per the house rule, and both halves separately.** Withdrawing the wrap rule reports nine failing passes across the three pages; withdrawing the print margin reports two on the home page; the restored stylesheet reports `PASS` across 25 pages, four screen widths and two papers. **Its first draft named the wrong words** — it reported the overflowing run ending furthest right, which for an unbreakable string is the innocent tail *after* it, so on `/changelog` it pointed at ", not out of a reading of the source." rather than at the `code` span before it. It reports the widest overflowing run now. A gate that names the wrong words is a gate somebody edits the wrong words to satisfy.
 
+### A wrapping rule is checked by counting line boxes, not by measuring the document (2026-09-11)
+
+**Written because the first version of the fix below shipped, deployed, and broke the masthead.** `body { overflow-wrap: anywhere }` cleared all three overflowing pages, passed all nine gates including the new one, and Ryan opened the home page to find the wordmark reading *Queering.Ear / th*.
+
+**The rule was right and the scope was wrong**, and the reason the check missed it is the part worth keeping. `anywhere` does two things: it permits a break inside a word, and it shrinks the element's intrinsic **min-content**. The second is what recovers the sha256 column on paper — and it is also what lets a display word break where it previously sat wider than its box without anybody minding. **Sitting wider than its own box is not the same fault as scrolling the document**, and the masthead had been doing the first quite deliberately: `main` is capped at 34rem and the wordmark is bigger than that, overflowing symmetrically into gutters that are there to receive it.
+
+**So every measurement I took was of the wrong quantity.** A 25-page sweep of `document.scrollWidth` at four widths and two papers, before and after, reported no change anywhere but the three faulting pages — because **none of the damage moved a document width.** The wordmark broke inside the measure. The reading panel's `Typeface` label broke inside a fixed-width row, on all twenty-five pages. Every table on the site re-laid out its columns. All of it invisible to the only number being watched.
+
+**The check that finds it is a line-box diff**: for every text node on every page, count `Range.getClientRects().length` with the rule and without it, and report every element whose count moved. It is four lines of difference from the sweep that missed everything, and it found 324 changed elements in one run. **`tools/` has no gate for this and probably should not** — a line count changing is usually *the point* of a typographic edit, so it cannot be a pass/fail. It is a diff to read, by hand, whenever a rule touches wrapping, and that is now written beside the rule.
+
+**Narrowing it took three attempts, and the two rejected ones are the useful record.** `code, a` fixes `/changelog` and `/what-is-settled` but leaves `/ledger` at 402px, because that page carries bare `<https://doi.org/…>` in running prose as a plain text node with no element around it — hence `.qe-record p, li`, which exist only because there is nothing else to hang it on. Then `a` turned out to reach `a.card`, and the Register card's kind chip broke across two lines at 1280px. **A structural selector was tried and does not help**: a card lives inside an `li`, so `:is(p, li, …) a` catches it too. **A selector list that looks careful while catching the same element is worse than an exception that says what it is protecting**, so `a.card` is excluded by name. `.qe-editions td`/`th` was tried and is *not* in the rule — a `code` element's own `anywhere` already shrinks what the column sizing reads, so the paper fix needs nothing else.
+
+**And the technique was already here.** `.qe-references p a { overflow-wrap: anywhere }` had been in the stylesheet since the references block shipped — this house had reached for `anywhere` the first time a bare URL would not fit and scoped it to the one component somebody was looking at. **That is the precedent, not a casualty**; the general rule is that rule generalised, and the scoped copy has been folded into it.
+
 ### `overflow-wrap: anywhere`, not `break-word`, and the difference is only visible on paper (2026-09-11)
 
 The fix for the above, and the choice between the two is a measurement rather than a reading of the specification.
@@ -560,7 +574,7 @@ The fix for the above, and the choice between the two is a measurement rather th
 
 **`break-word` and `anywhere` are indistinguishable in flowing prose and both clear all three pages on screen.** They part company inside `.qe-editions`, because only `anywhere` shrinks intrinsic min-content: under `break-word` the sha256 column stays as wide as the hash, since the table's track sizing never learns the string can break. On screen the table's own scroller hides that completely. **On paper it does not**, for the reason above — and paper is where the hashes were being lost. Measured both ways before choosing; the specification says this and the measurement is what made it matter here.
 
-**It fires only when a word would otherwise overflow its line**, so ordinary prose is untouched. Every other page measured identically before and after, at 320, 375, 768 and 1280 and on both papers.
+**It fires only when a word would otherwise overflow its line** — but *which* words those are depends entirely on where the rule is allowed to reach, and inherited from `body` it reached the masthead, a form label and every table on the site. See the entry above: the scope was corrected the same day, and the measurement that certified the wrong version is the thing to remember.
 
 ### The readings drawer had three names and now has one: The plate (2026-09-11)
 
