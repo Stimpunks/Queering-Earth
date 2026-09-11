@@ -3241,7 +3241,7 @@ Why this cabinet exists, and what it is for. [About this drawer](https://queerin
 
 ## The cabinet itself
 
-Six pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything. [About this drawer](https://queering.earth/the-cabinet-itself) — what each page is for, and what the build checks about it.
+Seven pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything. [About this drawer](https://queering.earth/the-cabinet-itself) — what each page is for, and what the build checks about it.
 
 **[How this site is made](https://queering.earth/design)**
 : The herbarium sheet, the palette, the type that leans, and the borrowed plates — each rule written down with the reason it exists, so it can be argued with.
@@ -3254,6 +3254,9 @@ Six pages that are not specimens. They are the cabinet — how it is made, what 
 
 **[The attribution ledger](https://queering.earth/ledger)**
 : Every quotation on the site, whose it is, where it came from, and the day somebody read the primary and confirmed the wording — including the ones we got wrong. Generated from the file a session edits, so it cannot drift from it.
+
+**[What we quote, and why we may](https://queering.earth/how-we-quote)**
+: The fair-use position, written down: what we take from work still in copyright, how much, why we think we may, and what to do if you hold the rights and disagree.
 
 **[What is settled, and what is open](https://queering.earth/what-is-settled)**
 : The reasoning behind the decisions, kept so the same question is not re-litigated in three weeks — including the designs that were refused and why.
@@ -3275,9 +3278,9 @@ Drawer
 
 # The cabinet itself
 
-Six pages that are not specimens. How the cabinet is made, what it has recorded, how to look through it, and what it knows about you — which is very nearly nothing.
+Seven pages that are not specimens. How the cabinet is made, what it has recorded, how to look through it, and what it knows about you — which is very nearly nothing.
 
-## The six pages
+## The seven pages
 
 Each line says what the page is *for*, in the order the work actually happens: the rules, then the record, then the ways back in, then what it costs you. What each page contains is glossed once, on the [front of the cabinet](https://queering.earth/#the-cabinet-itself), and is not restated here.
 
@@ -3290,6 +3293,9 @@ Each line says what the page is *for*, in the order the work actually happens: t
 **[The attribution ledger](https://queering.earth/ledger)**
 : Where every quotation is traced back to the work somebody actually held, with the day they held it. The debts, kept in public.
 
+**[What we quote, and why we may](https://queering.earth/how-we-quote)**
+: Where the standard for quoting work still in copyright is set, so a reader can see the judgement being made rather than take it on trust.
+
 **[What is settled, and what is open](https://queering.earth/what-is-settled)**
 : Where the reasoning is kept, including the designs that were refused, so the same question is not re-argued from scratch in three weeks.
 
@@ -3299,9 +3305,9 @@ Each line says what the page is *for*, in the order the work actually happens: t
 **[What this site knows about you](https://queering.earth/privacy)**
 : What all of the above costs you, which is very nearly nothing — stated in enough detail to be checkable, and checked by the build.
 
-## Why these six are one drawer
+## Why these seven are one drawer
 
-Because they are all answers to the same question: **how do you know any of this is true?** The rules are published so you can see what we hold ourselves to. The register is published so you can see where we failed it. The ledger is published so you can go and check a quotation against the thing it came from. The decisions are published so you can see what was refused and why. The finding aid is how you reach any of it, and the privacy page is the accounting for what that reaching costs.
+Because they are all answers to the same question: **how do you know any of this is true?** The rules are published so you can see what we hold ourselves to. The register is published so you can see where we failed it. The ledger is published so you can go and check a quotation against the thing it came from, and the quoting policy so you can see on what basis we took it. The decisions are published so you can see what was refused and why. The finding aid is how you reach any of it, and the privacy page is the accounting for what that reaching costs.
 
 None of them is a reading of anything, which is why none of them is carded or numbered. [The founding papers](https://queering.earth/the-founding-papers) are the other half of the same distinction, from the other side: purpose above plumbing, and this drawer is the plumbing.
 
@@ -3584,6 +3590,28 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Cabinet
 
 2026 · 11 September · latest
+
+## A fair-use position, written down before the sheet that needs it
+
+Ryan, on being told a proposed sheet could not quote two of its four subjects: “This is a copyright maximalist approach that absolutely destroys fair use. My open source, copyleft soul weeps. It’s also a huge accessibility problem.” He was right on both counts, and the rule he was objecting to was never this house’s rule — it was asserted in a research note by a drafting assistant and reported as ours.
+
+MountedWhat we quote, and why we may
+
+[The quoting policy](https://queering.earth/how-we-quote), in [the cabinet](https://queering.earth/the-cabinet-itself) beside [the ledger](https://queering.earth/ledger): what this site takes from work still in copyright, how much, on what reasoning, and what to do if you hold the rights and disagree. It is a binding statement like [the privacy page](https://queering.earth/privacy), so a change to it gets an entry here — including a change that narrows what we claim.
+
+**The first ten sheets never raised the question.** Dickinson, Rossetti, Woolf, Shakespeare, Sappho: all public domain, so the house has had a quoting *practice* since the first sheet and never needed a quoting *position*. The next sheet is four artists who are all in copyright, and a policy written while building the page that tests it is worth more than one written in the abstract.
+
+**Two arguments carry it, and neither is legal.** The first is that a refusal to quote does not produce silence, it produces paraphrase — and a paraphrase with the attribution still attached is the tightened source [the ledger](https://queering.earth/ledger) exists to prevent. [The finding aid](https://queering.earth/search) already refuses to crop a quotation for that reason; declining to quote at all is the same defect with the volume turned up. The second is access: “go and listen to the recording” is an audio-only requirement, and it excludes Deaf and hard-of-hearing readers from the argument entirely. **The quoted line is the accessible version.**
+
+What the page does *not* do is repeat the folklore. There is no permitted number of words or lines or bars anywhere in the statute or the case law, and saying so is half the point of publishing it.
+
+CabinetA seventh page in the drawer, and a fourteenth link in the row
+
+The cabinet drawer said *six pages* in three places and now says seven. **The heading’s id did not move**: `#the-six` is an authored topical anchor and not a slug of its own wording, and outliving a reworded heading is the entire reason ids here are authored. Renaming it to match the new count would break exactly what the rule protects.
+
+The footer row gains *Quoting*, which is a nav label and not the page’s name — allowed for a link, refused for a group heading, and the distinction is already in `CLAUDE.md`. **The row now wraps to fourteen targets and was re-measured after**, because nothing in the build measures a hit area.
+
+2026 · 11 September
 
 ## Three drawers, a breadcrumb on every sheet, and a panel that moved when a control was added
 
@@ -5573,6 +5601,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 
 ### [The attribution ledger](https://queering.earth/ledger) every quotation traced
 
+### [What we quote, and why we may](https://queering.earth/how-we-quote) the quoting policy
+
 ### [What is settled, and what is open](https://queering.earth/what-is-settled) the decision log
 
 ### [How this site is made](https://queering.earth/design) the colophon
@@ -5835,8 +5865,8 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The cabinet itself](https://queering.earth/the-cabinet-itself) Drawer
 
-  - [The six pages](https://queering.earth/the-cabinet-itself#the-six)
-  - [Why these six are one drawer](https://queering.earth/the-cabinet-itself#why-these-are-together)
+  - [The seven pages](https://queering.earth/the-cabinet-itself#the-six)
+  - [Why these seven are one drawer](https://queering.earth/the-cabinet-itself#why-these-are-together)
   - [What the build checks about this drawer](https://queering.earth/the-cabinet-itself#what-is-checked)
 
 -
@@ -5862,7 +5892,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-199 entries across 50 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+201 entries across 51 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -5870,6 +5900,20 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
   - [Verified](https://queering.earth/ledger#verified)
   - [Open](https://queering.earth/ledger#open)
+
+-
+
+[What we quote, and why we may](https://queering.earth/how-we-quote)
+
+  - [Why there is a policy and not a habit](https://queering.earth/how-we-quote#why-a-policy)
+  - [The rule](https://queering.earth/how-we-quote#the-rule)
+  - [There is no number](https://queering.earth/how-we-quote#no-number)
+  - [How the four factors actually fall here](https://queering.earth/how-we-quote#the-factors)
+  - [Songs are the hard case](https://queering.earth/how-we-quote#songs)
+  - [Refusing to quote is an access failure](https://queering.earth/how-we-quote#access)
+  - [What we can license, and what we cannot](https://queering.earth/how-we-quote#the-licence)
+  - [Outside the United States](https://queering.earth/how-we-quote#elsewhere)
+  - [If you hold the rights](https://queering.earth/how-we-quote#if-it-is-yours)
 
 -
 
@@ -7525,6 +7569,112 @@ The gerundive derivation is **correct Latin** — *mirandus, -a, -um* is the ger
 The violet the sheet is about is the Mediterranean sweet violet, *Viola odorata*. The plate mounted is *Viola pedata*, the American birdfoot violet, photographed for a New York state museum survey in 1918. It was the public-domain violet plate to hand.
 
 **The caption carries the correction** — "This is not Sappho's violet… The plant is the genus, not the poem" — so nothing on the page claims otherwise, and a note at the foot of the sheet asks readers for a better plate. **The fix is one line of markup and a new caption** the day a public-domain *Viola odorata* plate turns up. Until then this is the only object on the site standing in for a different object, and it is doing so out loud.
+
+
+---
+
+# What we quote, and why we may
+
+https://queering.earth/how-we-quote
+The cabinet itself · updated 2026-09-11
+
+1. [Queering Earth](https://queering.earth/)
+2. [The cabinet itself](https://queering.earth/the-cabinet-itself)
+
+# What we quote, and why we may
+
+Quote what you analyse. Analyse what you quote.
+
+This site is made out of other people’s words. Nearly every sheet is a reading of something somebody else wrote, and for the first ten sheets everything being read was in the public domain — Dickinson, Rossetti, Woolf, Shakespeare, Sappho — so the question of whether we were *allowed* never once came up. It comes up now. **This page is the position we take when the work is still in copyright**: what we quote, how much of it, why we think we may, and what to do if you hold the rights and disagree.
+
+Last updated 11 September 2026. Like [the privacy page](https://queering.earth/privacy), this one binds us, so any change to it gets an entry in [the accession register](https://queering.earth/changelog) — including a change that narrows what we claim.
+
+## Why there is a policy and not a habit
+
+There are two ways to get this wrong. The first is obvious: quote carelessly, take more than the argument needs, and treat somebody’s work as raw material. **The second is to refuse to quote at all**, and that is the one that nearly happened here, so it is the one worth writing down.
+
+**A blanket rule against quoting work still in copyright does not produce silence. It produces paraphrase.** And a paraphrase with the attribution still attached is the exact failure this site is organised against. [The ledger](https://queering.earth/ledger) says so in its opening lines: the risk here is not an invented source, it is a *tightened* one — a definition trimmed to fit, an object quietly generalised, the name left on. If we changed the words, they are ours. Declining to quote and describing instead is that same failure wearing a cautious hat.
+
+[The finding aid](https://queering.earth/search) already refuses to crop a quotation for this reason: a snippet machine pointed at eighty-two mounted quotations manufactures eighty-two tightened sources, one per result. Refusing to quote at all is the same defect with the volume turned up.
+
+**Fair use is also a right, and a right nobody exercises gets narrower.** The communities that had this argument first — documentary filmmakers, librarians, archivists — answered it by writing down what they actually do and why, rather than clearing everything on reflex. That is the *code of best practices* model set out by Patricia Aufderheide and Peter Jaszi at the Center for Media & Social Impact, and courts have cited such codes. This page is one, for a very small house.
+
+## The rule
+
+**Quote what you analyse, and analyse what you quote.**
+
+Every quotation from work still in copyright has to be the thing under discussion on the page it appears on. No decorative epigraphs, no pull quote chosen because it is beautiful, nothing that could be deleted without changing the argument. If a sheet is not saying something *about* those particular words, they do not go on it.
+
+That is an editorial rule before it is a legal one — it is most of what makes a reading a reading — and it happens to be the strongest posture available under the first fair-use factor, which asks what the new use is actually *for*. Three things follow from it:
+
+- **Never the whole of a short work.** A poem, a song, an aphorism: the whole thing is quotable when the whole thing is what we are reading and the work is out of copyright. When it is not, we take the part we are arguing with.
+- **Mark every cut.** Ellipses, always, so a reader can see exactly where the scissors went. An unmarked cut is a tightened source, which is the failure above under another name.
+- **Name the maker, not the carrier.** The writer of the song, not only whoever you heard sing it. The translator as well as the author. The editor who chose the order, where the order is the point.
+
+## There is no number
+
+The most repeated claim about quotation is that there is a safe amount. Two lines. Four lines. Eight bars. Ten per cent. Two hundred and fifty words. **None of it is in the law.** Section 107 of the United States copyright statute sets out four factors to be weighed together and names no threshold at all, and no case has supplied one.
+
+The numbers come from publishers’ permissions departments and from author contracts that push clearance downstream. They are a way of allocating risk between a publisher and a writer, and they are useful to the publisher. They are not a statement of what anybody is permitted to do, and repeating them as though they were has quietly persuaded a great many writers that they need permission they do not need.
+
+We say this out loud because the folklore does real damage, and because a reader is entitled to know that when this site takes four lines of something it is not because four is the allowance. There is no allowance. There is a judgement, and it is made below.
+
+## How the four factors actually fall here
+
+Weighed honestly, which means naming the one that runs against us.
+
+**Purpose and character of the use.** The statute’s opening words name criticism, comment, teaching, scholarship and research, and that is the entirety of what this site does. Nothing here is sold, nothing carries advertising, and there is no commercial arrangement of any kind. *Warhol v. Goldsmith* (2023) sharpened the question usefully: does the new use share the original’s purpose and stand in for it? A reading of a poem does not do the job the poem does. Nobody has ever come away from a sheet here with their need for the poem met.
+
+**Nature of the copied work.** *This is the factor that runs against us, and we are not going to pretend otherwise.* Poems, songs and letters are creative rather than factual, and creative work sits at the centre of what copyright protects. The one thing in our favour is that everything we quote has been published; quoting unpublished work is a harder question, and *Harper & Row* (1985) is the reason.
+
+**Amount and substantiality.** Proportional and qualitative at once, and the two can disagree. Four lines out of a long poem is small. The same four lines out of a two-hundred-word song is not. And *Harper & Row* turned on three hundred words out of two hundred thousand, because those three hundred were the heart of the book — so the test is not only how much but which part. A chorus is a heart by construction.
+
+**Effect on the market.** A reading is not a substitute for the thing read, and every sheet here links out to where the work can be bought, borrowed, or heard. If this site has any market effect at all it is the one the sheets are trying for: somebody goes and gets the book.
+
+## Songs are the hard case
+
+**Not because lyrics are a special category in law — they are not — but because songs are short.** Everything in the amount factor above bites harder when the whole work is two hundred words, and the part everybody remembers is the part it would be most tempting to take.
+
+So, for a song:
+
+- A line or two, and a whole verse only when the verse is the thing being read.
+- **Never the chorus on its own.** A hook lifted out and admired is the heart of the work taken for the reason it is the heart.
+- **The songwriter named, always**, and the performer named separately when they are not the same person. On this site that is not a technicality: which of them a listener credits is frequently the thing a sheet is about.
+- A link to a copy the rightsholder is paid for, and the recording we actually listened to named with its release and year — lyric aggregators are unreliable about wording and often unlicensed, and a wrong lyric is a wrong quotation.
+
+## Refusing to quote is an access failure
+
+This is the argument that settles it, and it is the one a copyright discussion usually never reaches.
+
+**“Go and listen to the recording” is an audio-only requirement.** A page whose argument can only be followed by hearing something excludes Deaf and hard-of-hearing readers outright, and it excludes anybody without the subscription, the bandwidth, the quiet, or the ability to parse sung words reliably. WCAG asks for a text alternative to prerecorded audio-only content for exactly this reason.
+
+And describing the song in our own words is not the alternative. That is us replacing the evidence with our summary of it — the paraphrase failure again, arriving from a third direction.
+
+**The quoted line is the accessible version.** On a site published by a Disability foundation, that is not a trade we are willing to make in order to look careful.
+
+## What we can license, and what we cannot
+
+Our words and our drawings are licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). **Quoted material is not ours to license, and is excluded** — which is what the footer on every sheet is saying when it says that everyone else’s belongs to them, or to nobody.
+
+That matters more here than it would on a site under a more restrictive licence, because share-alike invites reuse, commercial reuse included. Somebody adapting a sheet receives our commentary under CC BY-SA. They do not receive a licence to the poem inside it, and their reuse of that poem is their own question to answer, in their own jurisdiction, for their own purpose. We would rather say so plainly than leave a reuser to discover it.
+
+## Outside the United States
+
+Fair use is United States law, this site is published by a United States foundation, and half of the collaboration is not in the United States. The relevant exceptions elsewhere are differently built but point the same way, and the useful thing about them is what they ask for in return.
+
+In the United Kingdom, fair dealing for the purpose of criticism or review requires *sufficient acknowledgement* and that the work has already been made available to the public. In the European Union, the quotation exception requires the source and the author’s name wherever that is practicable.
+
+**Every one of those conditions is something [the attribution ledger](https://queering.earth/ledger) already does, for reasons that had nothing to do with copyright.** The strictest regime’s requirement and this house’s own editorial rule turn out to be the same requirement, which is worth noticing: we did not adopt a practice to satisfy a statute, and the statute is satisfied anyway.
+
+## If you hold the rights
+
+Then we would rather hear from you than not. [The repository’s issues](https://github.com/Stimpunks/Queering-Earth/issues) are the fastest route and are answered in public, which is where corrections to the sheets are raised too; either [foundation](https://stimpunks.org/) [site](https://morerealms.com/) will also reach us.
+
+If you think we have taken too much, or taken the wrong part, or got the wording or the credit wrong, say so and it will be looked at properly. **Whichever way it goes, it gets an entry in [the register](https://queering.earth/changelog)** — including if the answer is that we removed something we believed we were entitled to keep. A correction made quietly is a correction that only exists for us.
+
+What we are not going to do is treat a letter and a judgement as the same thing, or take something down merely because taking things down is the easier of two defensible options. **Fair use exists in order to be used**, and a house that quotes as much as this one does owes it more than lip service.
+
+**Not legal advice, and not written by a lawyer.** This page describes the judgement this site makes and the reasoning behind it. It is not a statement about what anybody else may do, and it is not a substitute for advice about your own use. If it is wrong about a fact — a case, a statute, a condition — that is a correction and it belongs in [the register](https://queering.earth/changelog); [say so](https://github.com/Stimpunks/Queering-Earth/issues) and it will be.
 
 
 ---

@@ -255,8 +255,8 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The cabinet itself](https://queering.earth/the-cabinet-itself) Drawer
 
-  - [The six pages](https://queering.earth/the-cabinet-itself#the-six)
-  - [Why these six are one drawer](https://queering.earth/the-cabinet-itself#why-these-are-together)
+  - [The seven pages](https://queering.earth/the-cabinet-itself#the-six)
+  - [Why these seven are one drawer](https://queering.earth/the-cabinet-itself#why-these-are-together)
   - [What the build checks about this drawer](https://queering.earth/the-cabinet-itself#what-is-checked)
 
 -
@@ -282,7 +282,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-199 entries across 50 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+201 entries across 51 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -290,6 +290,20 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
   - [Verified](https://queering.earth/ledger#verified)
   - [Open](https://queering.earth/ledger#open)
+
+-
+
+[What we quote, and why we may](https://queering.earth/how-we-quote)
+
+  - [Why there is a policy and not a habit](https://queering.earth/how-we-quote#why-a-policy)
+  - [The rule](https://queering.earth/how-we-quote#the-rule)
+  - [There is no number](https://queering.earth/how-we-quote#no-number)
+  - [How the four factors actually fall here](https://queering.earth/how-we-quote#the-factors)
+  - [Songs are the hard case](https://queering.earth/how-we-quote#songs)
+  - [Refusing to quote is an access failure](https://queering.earth/how-we-quote#access)
+  - [What we can license, and what we cannot](https://queering.earth/how-we-quote#the-licence)
+  - [Outside the United States](https://queering.earth/how-we-quote#elsewhere)
+  - [If you hold the rights](https://queering.earth/how-we-quote#if-it-is-yours)
 
 -
 

@@ -331,6 +331,8 @@ og_card(REPO/"images"/"og-ledger.png", "The attribution ledger", "The cabinet it
         "What we quoted, whose it is, and the day somebody read the primary.", RUST)
 og_card(REPO/"images"/"og-settled.png", "What is settled, and what is open", "The cabinet itself",
         "The reasoning, kept so the same question is not re-litigated in three weeks.", MOSS)
+og_card(REPO/"images"/"og-how-we-quote.png", "What we quote, and why we may", "The cabinet itself",
+        "Quote what you analyse. Analyse what you quote.", CORAL)
 og_card(REPO/"images"/"og-privacy.png", "What this site knows about you", "Privacy",
         "Almost nothing, and the whole of it: two view preferences and a hosting log.", VERDIGRIS)
 og_card(REPO/"images"/"og-search.png", "Find a word in the cabinet", "Finding aid",

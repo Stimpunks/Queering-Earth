@@ -37,6 +37,28 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 11 September · latest
 
+## A fair-use position, written down before the sheet that needs it
+
+Ryan, on being told a proposed sheet could not quote two of its four subjects: “This is a copyright maximalist approach that absolutely destroys fair use. My open source, copyleft soul weeps. It’s also a huge accessibility problem.” He was right on both counts, and the rule he was objecting to was never this house’s rule — it was asserted in a research note by a drafting assistant and reported as ours.
+
+MountedWhat we quote, and why we may
+
+[The quoting policy](https://queering.earth/how-we-quote), in [the cabinet](https://queering.earth/the-cabinet-itself) beside [the ledger](https://queering.earth/ledger): what this site takes from work still in copyright, how much, on what reasoning, and what to do if you hold the rights and disagree. It is a binding statement like [the privacy page](https://queering.earth/privacy), so a change to it gets an entry here — including a change that narrows what we claim.
+
+**The first ten sheets never raised the question.** Dickinson, Rossetti, Woolf, Shakespeare, Sappho: all public domain, so the house has had a quoting *practice* since the first sheet and never needed a quoting *position*. The next sheet is four artists who are all in copyright, and a policy written while building the page that tests it is worth more than one written in the abstract.
+
+**Two arguments carry it, and neither is legal.** The first is that a refusal to quote does not produce silence, it produces paraphrase — and a paraphrase with the attribution still attached is the tightened source [the ledger](https://queering.earth/ledger) exists to prevent. [The finding aid](https://queering.earth/search) already refuses to crop a quotation for that reason; declining to quote at all is the same defect with the volume turned up. The second is access: “go and listen to the recording” is an audio-only requirement, and it excludes Deaf and hard-of-hearing readers from the argument entirely. **The quoted line is the accessible version.**
+
+What the page does *not* do is repeat the folklore. There is no permitted number of words or lines or bars anywhere in the statute or the case law, and saying so is half the point of publishing it.
+
+CabinetA seventh page in the drawer, and a fourteenth link in the row
+
+The cabinet drawer said *six pages* in three places and now says seven. **The heading’s id did not move**: `#the-six` is an authored topical anchor and not a slug of its own wording, and outliving a reworded heading is the entire reason ids here are authored. Renaming it to match the new count would break exactly what the rule protects.
+
+The footer row gains *Quoting*, which is a nav label and not the page’s name — allowed for a link, refused for a group heading, and the distinction is already in `CLAUDE.md`. **The row now wraps to fourteen targets and was re-measured after**, because nothing in the build measures a hit area.
+
+2026 · 11 September
+
 ## Three drawers, a breadcrumb on every sheet, and a panel that moved when a control was added
 
 Ryan’s: “I like breadcrumbs and collection pages.” The two lists at the foot of the home page were already collections in everything but address, and the plate was a third. He named the menu, and chose *Drawers* over *Collections* and *Cases* with the collision against the *Cabinet* control stated in advance.
@@ -2024,6 +2046,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes) the founding papers
 
 ### [The attribution ledger](https://queering.earth/ledger) every quotation traced
+
+### [What we quote, and why we may](https://queering.earth/how-we-quote) the quoting policy
 
 ### [What is settled, and what is open](https://queering.earth/what-is-settled) the decision log
 

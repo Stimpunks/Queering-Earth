@@ -171,7 +171,7 @@ Why this cabinet exists, and what it is for. [About this drawer](https://queerin
 
 ## The cabinet itself
 
-Six pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything. [About this drawer](https://queering.earth/the-cabinet-itself) — what each page is for, and what the build checks about it.
+Seven pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything. [About this drawer](https://queering.earth/the-cabinet-itself) — what each page is for, and what the build checks about it.
 
 **[How this site is made](https://queering.earth/design)**
 : The herbarium sheet, the palette, the type that leans, and the borrowed plates — each rule written down with the reason it exists, so it can be argued with.
@@ -184,6 +184,9 @@ Six pages that are not specimens. They are the cabinet — how it is made, what 
 
 **[The attribution ledger](https://queering.earth/ledger)**
 : Every quotation on the site, whose it is, where it came from, and the day somebody read the primary and confirmed the wording — including the ones we got wrong. Generated from the file a session edits, so it cannot drift from it.
+
+**[What we quote, and why we may](https://queering.earth/how-we-quote)**
+: The fair-use position, written down: what we take from work still in copyright, how much, why we think we may, and what to do if you hold the rights and disagree.
 
 **[What is settled, and what is open](https://queering.earth/what-is-settled)**
 : The reasoning behind the decisions, kept so the same question is not re-litigated in three weeks — including the designs that were refused and why.
