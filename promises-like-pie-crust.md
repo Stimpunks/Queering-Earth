@@ -46,11 +46,32 @@ In 1861 Christina Rossetti wrote twenty-four lines refusing to promise anybody a
 
 Specimen — the poem, entire
 
-> Promise me no promises, So will I not promise you: Keep we both our liberties, Never false and never true: Let us hold the die uncast, Free to come as free to go: For I cannot know your past, And of mine what can you know?
+> Promise me no promises,\
+>   So will I not promise you:\
+> Keep we both our liberties,\
+>   Never false and never true:\
+> Let us hold the die uncast,\
+>   Free to come as free to go:\
+> For I cannot know your past,\
+>   And of mine what can you know?
 
-> You, so warm, may once have been Warmer towards another one: I, so cold, may once have seen Sunlight, once have felt the sun: Who shall show us if it was Thus indeed in time of old? Fades the image from the glass, And the fortune is not told.
+> You, so warm, may once have been\
+>   Warmer towards another one:\
+> I, so cold, may once have seen\
+>   Sunlight, once have felt the sun:\
+> Who shall show us if it was\
+>   Thus indeed in time of old?\
+> Fades the image from the glass,\
+>   And the fortune is not told.
 
-> If you promised, you might grieve For lost liberty again: If I promised, I believe I should fret to break the chain: Let us be the friends we were, Nothing more but nothing less: Many thrive on frugal fare Who would perish of excess.
+> If you promised, you might grieve\
+>   For lost liberty again:\
+> If I promised, I believe\
+>   I should fret to break the chain:\
+> Let us be the friends we were,\
+>   Nothing more but nothing less:\
+> Many thrive on frugal fare\
+>   Who would perish of excess.
 
 Christina Rossetti, *Promises like Pie-crust*, written 20 April 1861. Text from the first printing in [*New Poems by Christina Rossetti, Hitherto Unpublished or Uncollected*](https://archive.org/details/newpoemshitherto00rossuoft), edited by William Michael Rossetti (New York and London: Macmillan, 1896), pages 130–131, read in two separate scanned copies of that edition. Public domain. The alternating indent is hers as printed; the spaces the compositor set before every colon are not, and are closed up here — see below.
 

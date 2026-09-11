@@ -9,6 +9,14 @@
     <copyright>CC BY-SA 4.0</copyright>
     <lastBuildDate>Thu, 10 Sep 2026 12:00:00 GMT</lastBuildDate>
     <item>
+      <title>Every poem on the site was arriving in the Markdown mirror as prose</title>
+      <link>https://queering.earth/changelog#a-2026-09-10-verse-markdown</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-10-verse-markdown</guid>
+      <pubDate>Thu, 10 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Label corrected: A verse line is the one span on this site that is not a bare wrapper
+Mounted: The hard break is a backslash, because two trailing spaces would have been erased after they were written</description>
+    </item>
+    <item>
       <title>One sentence of Max Alexander pasted up as a broadside, and the rule that a component mixes type roles and never families</title>
       <link>https://queering.earth/changelog#a-2026-09-10-broadside</link>
       <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-10-broadside</guid>

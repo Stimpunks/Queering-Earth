@@ -272,6 +272,24 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
+### The Markdown mirror flattened every poem on the site into prose, and the fix is keyed on the line and not on its container (2026-09-10)
+
+`tools/make-markdown.mjs` listed `span` in its INLINE table as a bare wrapper, which is right for nearly every span on this site and wrong for the one that is not. `<span class="l">` does not wrap words inside a sentence — **it is a line**, and `queering.css` has said since the Rossetti sheet that *a poem's line breaks are the object being mounted; reflowed into prose it is a different poem.* Ten pages were shipping stanzas as single reflowed paragraphs in the `.md` an agent fetches, and in `llms-full.txt`: Rossetti, Dickinson twice, Eliot, Douglas, Carroll, Shakespeare, Völuspá, Tam Lin, Yeats, the *Stimpunks Manifesto*, and Ryan's own reply verse on `/wild-nights`.
+
+**The pages with no whitespace between their spans were worse than reflowed.** Where the markup sets all the lines on one source line — `.qe-lines` does, on five sheets — there was no inter-line whitespace for the converter to turn into a space, so it produced `againThe five unmistakable marks`. Not a different poem: not words.
+
+**KEYED ON `.l`, NOT ON A LIST OF CONTAINERS, AND THE STYLESHEET HAD ALREADY PAID FOR THAT LESSON.** The obvious fix is a hard break for `.l` inside `.qe-poem` or `.qe-verse`. That is the shape `queering.css` tried and abandoned: the display rule started as `.qe-specimen .qe-lines .l`, was copied to `.qe-correction .qe-lines .l` for the Miranda sheet, and then Sheet No. 8 put verse in a `.qe-slip`, where it inherited neither and printed four lines of Dickinson as one jammed run. The rule is unscoped now, and the comment beside it says a fourth component would have hit the same wall. A container list in the converter would have rebuilt that wall in the Markdown — **and `/flower-codes`, named in the brief as affected, is `.qe-lines` inside a plain `.qe-specimen` and would have been missed by it on the first pass.** A `.l` is a line of verse wherever it appears, in both files, for one reason.
+
+**This is not a break after every span**, which would put line breaks through the middle of ordinary prose — the same error facing the other way. It is a break for the one class whose whole job is to be a line, and the ten files that changed are exactly the ten with a `.l` in them.
+
+**The marker is a trailing backslash, and two trailing spaces would have been erased after they were written.** Markdown has both spellings of a hard break. The tidier at the foot of `toMarkdown()` strips trailing whitespace from every line, so the two-space spelling would have been emitted and then silently removed — a fix that reports success and changes nothing, which is worse than no fix. A backslash also survives the `> ` prefixes that `.qe-poem` needs and `.qe-verse` does not.
+
+**It is emitted on the OPEN of the next line rather than the close of this one**, so a stanza never ends on a dangling backslash. CommonMark renders a backslash at the end of a paragraph as a literal backslash, so the close-tag spelling would have put a stray `\\` under every stanza on the site.
+
+**`.l-in` re-indents in the source.** Two leading spaces reproduce the 1896 compositor's alternating indent on Rossetti and on Tam Lin. A strict renderer may collapse them; the text an agent reads carries them, and that is the copy this file exists to protect.
+
+**`search-index.json` was already correct and did not change.** `make-search-index.mjs` keeps a `blockquote` and a `div.qe-verse` as whole records, so the finding aid had never flattened a poem. Only the Markdown had — which is the drift the generator exists to prevent, arriving through the one door nobody had checked.
+
 ### A component may mix the two type ROLES; it may never name a family (2026-09-10)
 
 Asked while setting one sentence of Max Alexander's *Playful Manifesto* as a broadside on the home page: should a playful block mix typefaces?

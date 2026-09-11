@@ -49,11 +49,20 @@ Emily Dickinson wrote twelve lines asking for one night in harbour, and there is
 
 Specimen — the poem, entire
 
-> Wild nights – Wild nights! Were I with thee Wild nights should be Our luxury!
+> Wild nights – Wild nights!\
+> Were I with thee\
+> Wild nights should be\
+> Our luxury!
 
-> Futile – the winds – To a Heart in port – Done with the Compass – Done with the Chart!
+> Futile – the winds –\
+> To a Heart in port –\
+> Done with the Compass –\
+> Done with the Chart!
 
-> Rowing in Eden – Ah – the Sea! Might I but moor – tonight – In thee!
+> Rowing in Eden –\
+> Ah – the Sea!\
+> Might I but moor – tonight –\
+> In thee!
 
 Emily Dickinson, *Wild nights – Wild nights!*, written about late 1861 in Fascicle 11. Text as R. W. Franklin reads the manuscript, published in the [Emily Dickinson Archive](https://www.edickinson.org/) and printed identically by the [Poetry Foundation](https://www.poetryfoundation.org/poems/44087/wild-nights-wild-nights-269) from Franklin’s Reading Edition (Belknap Press, 1999). Her dashes are set here as spaced en dashes; in her hand they vary in length and angle, and telling one from a flourish is the standing problem of editing her. Line 11 runs on to line 12 on the leaf itself, and the 1891 editors made that break a line break — see below.
 
@@ -63,9 +72,15 @@ Emily Dickinson, *Wild nights – Wild nights!*, written about late 1861 in Fasc
 
 In reply — Ryan Boren
 
-Erotic and cozy. Turbulent and safe. We share space that we co-make.
+Erotic and cozy.\
+Turbulent and safe.\
+We share space\
+that we co-make.
 
-Passionate gratification segued to the calm [co-regulation](https://stimpunks.org/glossary/co-regulation/) that is our shared balm.
+Passionate gratification\
+segued to the calm\
+[co-regulation](https://stimpunks.org/glossary/co-regulation/)\
+that is our shared balm.
 
 To be in [safe space](https://stimpunks.org/glossary/safe-space/) with one you adore, basking in reciprocation and mutual understanding, that is a great feeling. That is THE feeling — craved by our kind.
 
@@ -73,17 +88,35 @@ Dickinson captures well [the swell and the dwell of relational tides](https://st
 
 In reply, continued
 
-Oh to be human, in a deep easy rhythm, of reciprocal need, held not in tension.
+Oh to be human,\
+in a deep easy rhythm,\
+of reciprocal need,\
+held not in tension.
 
-[Stimmy](https://stimpunks.org/glossary/stimming/) [glimmers](https://stimpunks.org/glossary/glimmers/) [Somatic](https://stimpunks.org/glossary/somatic/) release Sensory ease Regulated peace.
+[Stimmy](https://stimpunks.org/glossary/stimming/) [glimmers](https://stimpunks.org/glossary/glimmers/)\
+[Somatic](https://stimpunks.org/glossary/somatic/) release\
+Sensory ease\
+Regulated peace.
 
-Calm quiescence, Denouement after arrival, Preceded by A love-tangled spiral.
+Calm quiescence,\
+Denouement after arrival,\
+Preceded by\
+A love-tangled spiral.
 
-Might I but moor In your heart and your body, In your mind and your soul, Woven delightfully.
+Might I but moor\
+In your heart and your body,\
+In your mind and your soul,\
+Woven delightfully.
 
-We need not our masks Nor our constructs of gender. Let’s rest the guise And be our realest [assemblage](https://morerealms.com/expanding-the-mycelial-network-of-care-autistic-community-safety-and-rhizomatic-futures/).
+We need not our masks\
+Nor our constructs of gender.\
+Let’s rest the guise\
+And be our realest [assemblage](https://morerealms.com/expanding-the-mycelial-network-of-care-autistic-community-safety-and-rhizomatic-futures/).
 
-With the strength of [limerence](https://stimpunks.org/glossary/limerence/) that has been requited and matched, Let’s be together And let the world pass.
+With the strength of [limerence](https://stimpunks.org/glossary/limerence/)\
+that has been requited and matched,\
+Let’s be together\
+And let the world pass.
 
 ## Futile – the winds
 

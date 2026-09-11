@@ -146,6 +146,44 @@ function toMarkdown(html, file) {
       continue;
     }
 
+    /* A VERSE LINE IS THE ONE SPAN ON THIS SITE THAT IS NOT A BARE WRAPPER.
+     * `span` sits in the INLINE table below because nearly every span here wraps
+     * words inside a sentence. `<span class="l">` does the opposite: it IS a line,
+     * and `queering.css` says so — "a poem is a specimen whose LINE BREAKS ARE THE
+     * OBJECT. Reflowed into prose it is a different poem." Without this branch every
+     * stanza on the site arrived as one reflowed paragraph, which is the generator's
+     * own founding failure — the Markdown an agent fetches disagreeing with the page.
+     *
+     * KEYED ON `.l`, NOT ON ITS CONTAINER, AND THE STYLESHEET ALREADY PAID FOR THAT.
+     * `.qe-lines .l` was scoped to `.qe-specimen`, then copied to `.qe-correction`,
+     * and then Sheet No. 8 put verse in a `.qe-slip` where it inherited neither and
+     * printed four lines of Dickinson as one jammed run. The display rule is unscoped
+     * for that reason and the comment beside it says a fourth component would have hit
+     * the same wall. A container list here — `.qe-poem`, `.qe-verse`, `.qe-lines` —
+     * would rebuild exactly that wall in the Markdown, silently. This is NOT a break
+     * after every span: it is a break for the one class whose whole job is to be a line.
+     *
+     * THE MARKER IS A TRAILING BACKSLASH AND IT HAD TO BE. Markdown's other hard break
+     * is two trailing spaces, and the tidier at the foot of this function strips
+     * trailing whitespace from every line — so that spelling would have been erased
+     * after it was written, which is the worst of the two failures. A backslash also
+     * survives the `> ` prefixes, which `.qe-poem` needs and `.qe-verse` does not.
+     *
+     * It is emitted on the OPEN of the next line rather than the close of this one,
+     * so a stanza never ends on a dangling backslash — which CommonMark renders as a
+     * literal backslash, not a break. `.l-in` re-indents in the source the way the
+     * 1896 compositor indented alternate lines; a renderer may collapse it, the text
+     * an agent reads does not. */
+    if (!t.close && t.tag === 'span' && cls.includes('l')) {
+      // As with <br>: a newline inside a table cell ends the row.
+      if (cells !== null) out += '<br>';
+      else {
+        if (!atLineStart()) { out = out.replace(/[ \t]+$/, '') + '\\'; nl(1); }
+        if (cls.includes('l-in')) out += prefix() + '  ';
+      }
+      continue;
+    }
+
     if (INLINE[t.tag]) {
       if (inPre && t.tag === 'code') continue;   // the fence is already the marker
       const spec = INLINE[t.tag];

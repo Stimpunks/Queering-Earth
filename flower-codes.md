@@ -75,7 +75,14 @@ Lord Alfred Douglas published *Two Loves* in *The Chameleon* in December 1894. I
 
 Specimen — the garden
 
-> I dreamed I stood upon a little hill,And at my feet there lay a ground, that seemedLike a waste garden, flowering at its willWith buds and blossoms. There were pools that dreamedBlack and unruffled; there were white liliesA few, and crocuses, and violetsPurple or pale, snake-like fritillariesScarce seen for the rank grass…
+> I dreamed I stood upon a little hill,\
+> And at my feet there lay a ground, that seemed\
+> Like a waste garden, flowering at its will\
+> With buds and blossoms. There were pools that dreamed\
+> Black and unruffled; there were white lilies\
+> A few, and crocuses, and violets\
+> Purple or pale, snake-like fritillaries\
+> Scarce seen for the rank grass…
 
 Lord Alfred Douglas, *Two Loves*, first published in *The Chameleon*, December 1894. The poem ends: “I am the Love that dare not speak its name.”
 

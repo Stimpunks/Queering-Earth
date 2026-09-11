@@ -240,7 +240,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-179 entries across 45 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+181 entries across 46 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

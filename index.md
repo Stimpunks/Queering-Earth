@@ -139,7 +139,10 @@ Say *lilac* and something answers. For Helen it is always Eliot, instantly — t
 
 Specimen — the lilacs
 
-> April is the cruellest month, breeding Lilacs out of the dead land, mixing Memory and desire, stirring Dull roots with spring rain.
+> April is the cruellest month, breeding\
+> Lilacs out of the dead land, mixing\
+> Memory and desire, stirring\
+> Dull roots with spring rain.
 
 T. S. Eliot, [*The Waste Land*](https://www.poetryfoundation.org/poems/47311/the-waste-land), lines 1–4 (1922). Public domain in the United States; wording checked against [Project Gutenberg’s transcription](https://www.gutenberg.org/ebooks/1321) of the 1922 text.
 

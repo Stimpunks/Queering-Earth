@@ -253,8 +253,36 @@
        which a derived href would have. -->
   <div class="qe-register" id="latest">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-10-broadside">
+    <section class="qe-accession" aria-labelledby="a-2026-09-10-verse-markdown">
       <p class="qe-accession-date">2026 &middot; 10 September &middot; latest</p>
+      <h2 id="a-2026-09-10-verse-markdown">Every poem on the site was arriving in the Markdown mirror as prose <a class="qe-anchor" href="#a-2026-09-10-verse-markdown"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Reported against <a href="/promises-like-pie-crust">Sheet No.&nbsp;3</a>, where Rossetti&rsquo;s first stanza had been reading <q>Promise me no promises, So will I not promise you: Keep we both our liberties,</q> in <code>promises-like-pie-crust.md</code> since the Markdown mirror shipped. Ten pages were affected, and <code>llms-full.txt</code> carried all of them.</p>
+
+      <div class="qe-entry qe-entry--label" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">A verse line is the one span on this site that is not a bare wrapper</span></div>
+        <div class="qe-entry-body">
+          <p><code>tools/make-markdown.mjs</code> listed <code>span</code> in its inline table as a wrapper, which is right for nearly every span here and wrong for the one that is not. <code>&lt;span class="l"&gt;</code> does not wrap words inside a sentence &mdash; <strong>it is a line</strong>, and <code>queering.css</code> has said since the Rossetti sheet that a poem&rsquo;s line breaks are the object being mounted and that reflowed into prose it is a different poem. Rossetti, Dickinson twice, Eliot, Douglas, Carroll, Shakespeare, V&ouml;lusp&aacute;, Tam Lin, Yeats, the <cite>Stimpunks Manifesto</cite> and <a href="/wild-nights">Ryan&rsquo;s own reply verse</a> were all being handed to an agent as paragraphs.</p>
+          <p><strong>The sheets that set their lines on one source line were worse than reflowed.</strong> <code>.qe-lines</code> puts every span on a single line of markup, so there was no inter-line whitespace to become a space and the converter emitted <q>againThe five unmistakable marks</q>. Not a different poem: not words.</p>
+          <p><strong>The fix is keyed on <code>.l</code> and not on a list of containers, and the stylesheet had already paid for that lesson.</strong> The obvious shape is a break for <code>.l</code> inside <code>.qe-poem</code> or <code>.qe-verse</code> &mdash; which is exactly what <code>queering.css</code> tried and abandoned, scoping the display rule first to <code>.qe-specimen</code>, then copying it to <code>.qe-correction</code>, and then watching Sheet No.&nbsp;8 put verse in a <code>.qe-slip</code> that inherited neither. A container list here would have rebuilt that wall in the Markdown, and would have missed <a href="/flower-codes">Sheet No.&nbsp;7</a> on the first pass, whose Douglas sits in a plain <code>.qe-specimen</code>. A <code>.l</code> is a line of verse wherever it appears, in both files, for one reason.</p>
+          <p><strong>It is not a break after every span</strong>, which would put line breaks through the middle of ordinary prose &mdash; the same error facing the other way. The ten files that changed are exactly the ten with a <code>.l</code> in them.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">The hard break is a backslash, because two trailing spaces would have been erased after they were written</span></div>
+        <div class="qe-entry-body">
+          <p>Markdown spells a hard break two ways. <strong>The tidier at the foot of the converter strips trailing whitespace from every line</strong>, so the two-space spelling would have been emitted and then silently removed &mdash; a fix that reports success and changes nothing, which is worse than no fix at all. A backslash also survives the <code>&gt;&nbsp;</code> prefixes that <code>.qe-poem</code> needs and <code>.qe-verse</code> does not.</p>
+          <p><strong>It is written on the open of the next line rather than the close of this one</strong>, so a stanza never ends on a dangling backslash. CommonMark reads a backslash at the end of a paragraph as a literal backslash, so the close-tag spelling would have hung a stray mark under every stanza on the site.</p>
+          <p><strong><code>.l-in</code> re-indents in the source</strong>, two spaces, reproducing the 1896 compositor&rsquo;s alternating indent on Rossetti and on Tam Lin. A strict renderer may collapse it; the text an agent reads carries it.</p>
+          <p><strong><code>search-index.json</code> was already right and did not change.</strong> <code>make-search-index.mjs</code> keeps a <code>blockquote</code> and a <code>div.qe-verse</code> as whole records, so the finding aid had never flattened a poem. Only the Markdown had &mdash; which is the drift the generator exists to prevent, arriving through the one door nobody had checked.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-10-broadside">
+      <p class="qe-accession-date">2026 &middot; 10 September</p>
       <h2 id="a-2026-09-10-broadside">One sentence of Max Alexander pasted up as a broadside, and the rule that a component mixes type roles and never families <a class="qe-anchor" href="#a-2026-09-10-broadside"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Ryan asked for bold, playful typography under <a href="/#the-type-plays"><em>The type plays, and the words do not move</em></a>, and asked the two questions that turned out to be the accession: should it mix typefaces, and what would that do to the typeface picker and to plain view.</p>

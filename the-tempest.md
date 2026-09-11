@@ -73,7 +73,12 @@ The very first thing Miranda does on stage, before Prospero has told her anythin
 
 Specimen — Act 1, Scene 2
 
-> If by your art, my dearest father, you havePut the wild waters in this roar, allay them.… O, I have sufferedWith those that I saw suffer: a brave vessel,Who had, no doubt, some noble creature in her,Dash’d all to pieces.
+> If by your art, my dearest father, you have\
+> Put the wild waters in this roar, allay them.\
+> … O, I have suffered\
+> With those that I saw suffer: a brave vessel,\
+> Who had, no doubt, some noble creature in her,\
+> Dash’d all to pieces.
 
 *The Tempest*, Act 1, Scene 2 (Shakespeare, 1611/2004)
 
@@ -85,7 +90,9 @@ And then, within a dozen lines, her father tells her to stop.
 
 Specimen — Act 1, Scene 2
 
-> Be collected.No more amazement. Tell your piteous heartThere’s no harm done.
+> Be collected.\
+> No more amazement. Tell your piteous heart\
+> There’s no harm done.
 
 *The Tempest*, Act 1, Scene 2 (Shakespeare, 1611/2004)
 
@@ -97,7 +104,11 @@ A few dozen lines later Miranda is given, in the First Folio of 1623, the hardes
 
 <del>PROSPERO</del><ins>Miranda, First Folio, 1623</ins>
 
-> Abhorred slave,Which any print of goodness wilt not take,Being capable of all ill! I pitied thee,Took pains to make thee speak, taught thee each hourOne thing or other…
+> Abhorred slave,\
+> Which any print of goodness wilt not take,\
+> Being capable of all ill! I pitied thee,\
+> Took pains to make thee speak, taught thee each hour\
+> One thing or other…
 
 Reassigned to Prospero by editor Lewis Theobald, 1733, restored to Miranda in the Folger edition and others since (Folger Shakespeare Library, n.d.; Shakespeare Navigators, n.d.).
 
@@ -113,7 +124,9 @@ Miranda’s courtship is not something that happens to her so much as something 
 
 Specimen — Act 4, Scene 1
 
-> If thou dost break her virgin-knot beforeAll sanctimonious ceremonies mayWith full and holy rite be minister’d…
+> If thou dost break her virgin-knot before\
+> All sanctimonious ceremonies may\
+> With full and holy rite be minister’d…
 
 *The Tempest*, Act 4, Scene 1 (Shakespeare, 1611/2004)
 
@@ -121,7 +134,9 @@ This is heteronormativity staged as literal stagecraft: a father choreographing,
 
 Specimen — Act 1, Scene 2
 
-> O ho, O ho! would’t had been done!Thou didst prevent me; I had peopled elseThis isle with Calibans.
+> O ho, O ho! would’t had been done!\
+> Thou didst prevent me; I had peopled else\
+> This isle with Calibans.
 
 *The Tempest*, Act 1, Scene 2 (Shakespeare, 1611/2004)
 
@@ -133,7 +148,10 @@ And yet inside all that staging, Miranda does something the plot did not strictl
 
 Specimen — Act 3, Scene 1
 
-> I am your wife, if you will marry me;If not, I’ll die your maid: to be your fellowYou may deny me; but I’ll be your servant,Whether you will or no.
+> I am your wife, if you will marry me;\
+> If not, I’ll die your maid: to be your fellow\
+> You may deny me; but I’ll be your servant,\
+> Whether you will or no.
 
 *The Tempest*, Act 3, Scene 1 (Shakespeare, 1611/2004)
 
@@ -145,7 +163,10 @@ By Act 5, Miranda has spent twelve years in a household of three. Then Prospero�
 
 Specimen — Act 5, Scene 1
 
-> O, wonder!How many goodly creatures are there here!How beauteous mankind is! O brave new world,That has such people in’t!
+> O, wonder!\
+> How many goodly creatures are there here!\
+> How beauteous mankind is! O brave new world,\
+> That has such people in’t!
 
 *The Tempest*, Act 5, Scene 1 (Shakespeare, 1611/2004)
 
