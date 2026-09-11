@@ -211,6 +211,59 @@ conscience at all" is identical in both. **It is a label question and a possible
 instance of the edition pattern**, which would make that pattern a rule. Settling it needs
 one look at a 1993 or Seven Stories printing, which nobody here has.
 
+### An open item for a session in the SKS repo: the library's index holds a third of a book, silently (2026-09-11)
+
+Not to be fixed from here. `pdftotext` extracts **299,336 words** from
+`raw/The Unabridged Journals of Sylvia Plath - PDF Room.pdf`. The qmd extraction at
+`.qmd/library/The Unabridged Journals of Sylvia Plath - PDF Room.pdf.md` holds **109,718** —
+about 37% — and ends mid-word, part-way through the 1956 material.
+
+**The consequence is a false negative that reads exactly like a real absence.** Searching the
+library for the "two electric currents" passage returns nothing. The passage is in the book, on
+p. 404. Nothing in the result distinguishes *we do not hold this* from *we hold it and cannot
+see it*.
+
+That is the failure `tools/sks-search.sh` already has a long header about — a silent empty
+result being worse than a crash — arriving one layer below the wrapper, in the index the wrapper
+protects. The wrapper checks that an index exists. It cannot check that the index is complete.
+
+**For a session in that repo:** find out whether the truncation is a page cap, a timeout, or a
+size limit in the extractor; check the other large PDFs in `raw/` for the same shape (a file
+ending mid-sentence is the tell); and consider whether `qmd` can report extracted-versus-expected
+length so a short extraction is visible rather than silent.
+
+### An open item for a session in the SKS repo: two attributions on stimpunks.org (2026-09-11)
+
+Not to be fixed from here. Both found while researching a proposed sheet on Van Zandt, Van Gogh,
+Plath and Cobain.
+
+**One: a Disabled writer's byline absorbed into an anthology title.**
+[stimpunks.org/philosophy/do-you-know-why-we-have-the-sunflowers](https://stimpunks.org/philosophy/do-you-know-why-we-have-the-sunflowers/)
+quotes the "word mines" / "tornado in my head" / "artists don't have to suffer for their art"
+passage and credits *Disability Visibility: First-Person Stories from the 21st Century*, linking
+the Disability Visibility Project.
+
+The passage is **Shoshana Kessock's**, from "Falling/Burning: Hannah Gadsby, Nanette, and Being a
+Bipolar Creator" in Alice Wong's anthology (Vintage, 2020). Kessock published it first on her own
+site on 12 July 2018, at a URL whose slug is
+`falling-burning-hannah-gadsby-nanette-and-the-myth-of-the-mad-artist`; all three passages were
+confirmed there on 11 September 2026. Crediting the book rather than the writer is the mildest
+form of the failure this repo is organised against, and it lands on an essay *about* being a
+bipolar creator.
+
+**Two: a journal entry cited to a biography page.**
+[stimpunks.org/glossary/bipolar](https://stimpunks.org/glossary/bipolar/) gives the "two electric
+currents" passage and credits the Poetry Foundation's Sylvia Plath page. It is a journal entry
+with a date: *The Unabridged Journals of Sylvia Plath*, **Friday, 20 June 1958**, read on the page
+on 11 September 2026.
+
+**And the wording is open.** Our copy has "despairing negative—whichever"; the copy in the SKS has
+a hyphen and **"which ever" as two words**. That edition normalises every dash in the book to a
+hyphen, so it cannot settle the dash — but "which ever" is a word split, not a dash artefact, and
+Kukil's edition exists to preserve Plath's own spelling and spacing. If she wrote it as two words,
+our "whichever" is a copy-editor's reflex applied to a woman's journal, which is a tightened
+quotation. **Settle it against a print copy before either site quotes it again.**
+
 ### An open item for a session in the SKS repo: two glossary pages splice two Butler passages into one quotation (2026-09-10)
 
 Not to be fixed from here. [stimpunks.org/glossary/canary](https://stimpunks.org/glossary/canary/)
