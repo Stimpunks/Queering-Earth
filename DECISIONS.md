@@ -527,6 +527,50 @@ sentences. Neither changes the manifesto's argument, which is why it survived th
 
 ## Settled
 
+### A component may mix the two type ROLES; it may never name a family (2026-09-10)
+
+Asked while setting one sentence of Max Alexander's *Playful Manifesto* as a broadside on the
+home page: should a playful block mix typefaces?
+
+**Yes, and the mix is between `--qe-display` and `--qe-body`, never between family names.**
+The typeface picker works by reassigning those two custom properties on `html`. A
+`font-family: 'Victorianna'` written into a component is a face that none of the nine options
+can reach — nine controls, and one block on the page ignoring every one of them. Worse for the
+five display-only faces, where the reader has been handed Newsreader as the reading face
+deliberately: a named third family would put a fourth face on the sheet.
+
+The two roles are a real mix and they cost nothing:
+
+| the reader's pick | what the broadside shows |
+|---|---|
+| the default | Fraunces shouting, Newsreader carrying — two faces |
+| one of the five display-only | their pick shouting, Newsreader carrying — two faces |
+| one of the four that set both | one face, at six sizes |
+
+**The last row is the point, not a shortfall.** A reader who asked for one typeface gets one
+typeface; the setting degrades into their choice instead of overriding it. The play that
+survives in every row is the part that was never a family — size, weight, colour, indent,
+rotation, and Fraunces' SOFT and WONK where the picked face has them.
+
+**One word is exempt, and the licence is the drift rail's, not a new one.** `.w-form` sets
+*correct* in the reader's own system face, for the reason `.qe-drift-word--flat` does on Sheet
+No.&nbsp;4: the notion being protested is an institutional one, and the institution's typeface
+is whatever the form was printed in. **Semantic, not decorative** — "it would look fun" is not
+this licence, and a second decorative hardcoded family would retire the first one's reasoning.
+Like the drift rail's, the joke disappears in plain view, where every face is that face, and
+that is correct.
+
+**Plain view keeps the composition and drops the ornament**, which is the split `.qe-cutup`
+already draws and the answer to the second half of the question. Gone: the tilt, the tape, the
+shadow, the per-line rotations, the variation axes, and — by itself — the system-face joke.
+Kept: the line breaks, the six sizes, the indents and the three colours. Those are the setting
+rather than the decoration, and plain view has never removed information.
+
+**No motion, and the heading is the reason.** *The type plays, and the words do not move*
+cannot introduce a specimen whose words move.
+
+----
+
 ### Two gates were reporting and not gating, and one guard covered only one of its two ends (2026-09-10)
 
 Both found while mounting Sheet No.&nbsp;10, and both had been true for as long as the things

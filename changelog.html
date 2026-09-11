@@ -253,8 +253,45 @@
        which a derived href would have. -->
   <div class="qe-register" id="latest">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-10-hyperempathy">
+    <section class="qe-accession" aria-labelledby="a-2026-09-10-broadside">
       <p class="qe-accession-date">2026 &middot; 10 September &middot; latest</p>
+      <h2 id="a-2026-09-10-broadside">One sentence of Max Alexander pasted up as a broadside, and the rule that a component mixes type roles and never families <a class="qe-anchor" href="#a-2026-09-10-broadside"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Ryan asked for bold, playful typography under <a href="/#the-type-plays"><em>The type plays, and the words do not move</em></a>, and asked the two questions that turned out to be the accession: should it mix typefaces, and what would that do to the typeface picker and to plain view.</p>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="index design">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">A broadside: one sentence, six lines, six sizes, and not a word of it altered</span></div>
+        <div class="qe-entry-body">
+          <p><code>.qe-broadside</code> sets <q>This is a protest of the notion that there is any correct way to live</q> &mdash; Max Alexander, <a href="https://playradical.com/a-playful-manifesto/"><cite>A Playful Manifesto</cite></a> &mdash; broken across six lines, each with its own size, weight, indent, lean and colour. A broadside is a single sheet carrying one statement in whatever type was in the case, which is a zine wall three centuries early, so it is <strong>the furniture the paste-up already has</strong>: the card, the rule, two tape strips at the top corners. No new visual language, one new component.</p>
+          <p><strong>The setting is ours and the words are Alexander&rsquo;s, and one sentence lifted out of seven is exactly where a tightening happens unnoticed.</strong> So it is a <code>blockquote</code> with its <code>cite</code>, captioned to the source and to <a href="/manifesto">the sheet that quotes the opening whole</a>, and every fragment sits on <strong>one source line with real spaces between the spans</strong>. The spaces do no visual work &mdash; the fragments are blocks &mdash; and they are the only reason the sentence copies out, indexes and reaches <code>index.md</code> as a sentence. A newline between two of them would be kept by <code>make-search-index.mjs</code> and file a prose sentence as verse.</p>
+          <p><strong>It does not animate, and the heading above it is the reason.</strong> A section called <em>the words do not move</em> cannot introduce a specimen whose words move.</p>
+          <p><strong>Colour is ink, moss and rust and nothing else</strong>, those being the three text tokens that clear 7:1 in both grounds. The decorative pair is on the tape, which sits above the card&rsquo;s top edge with nothing composited against it &mdash; the slip&rsquo;s own rule. Corners take <code>--qe-corner-b</code>, because the specimen above takes <code>-a</code> and the plate cards below take <code>-c</code>.</p>
+          <p><strong>The box hugs the text, and that is a gate decision rather than a cosmetic one.</strong> A full-width block rotated two degrees swings its far end seventeen pixels at this measure while the words sit still at the left: the ink leans by nothing and the rectangle leans by everything, and the rectangle is what <code>check-overlap.mjs</code> measures. Fitted with <code>width: fit-content</code>, the box and the ink are the same object and a collision is reportable.</p>
+          <p><strong>And the tilt is <code>--tilt</code>, not <code>--rot</code>.</strong> A custom property inherits, so a <code>--rot</code> on the figure would have landed on every fragment that did not set its own and leaned the whole sentence by the card&rsquo;s angle, silently. Two rotations are two facts and they get two names.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="design index">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">A component may mix the two type roles; it may never name a family</span></div>
+        <div class="qe-entry-body">
+          <p>The answer to <em>should we mix the fonts</em> is yes, and the mix is between <code>--qe-display</code> and <code>--qe-body</code>. <strong>The typeface picker works by reassigning those two properties on <code>html</code>, so a <code>font-family: 'Victorianna'</code> written into a component is a face none of the nine options can reach</strong> &mdash; nine controls, and one block on the home page ignoring every one of them. Worse under the five display-only faces, where the reader has been handed Newsreader as the reading face deliberately and a named third family would put a fourth face on the sheet.</p>
+          <p>What the reader actually sees, in all three cases: the default gives Fraunces shouting against Newsreader carrying; one of the five display-only faces gives their pick against Newsreader; one of the four that set both gives <strong>one face at six sizes</strong>. <strong>The last of those is the point rather than a shortfall</strong> &mdash; a reader who asked for one typeface gets one typeface, and the setting degrades into their choice instead of overriding it. What survives in every case is the play that was never a family: size, weight, colour, indent, lean, and the SOFT and WONK axes where the picked face has them.</p>
+          <p><strong>One word is exempt, and the licence is the drift rail&rsquo;s rather than a new one.</strong> <code>.w-form</code> sets <em>correct</em> in the reader&rsquo;s own system face for the reason <code>.qe-drift-word--flat</code> does on <a href="/invention-of-normal">Sheet No.&nbsp;4</a>: the notion being protested is an institutional one, and the institution&rsquo;s typeface is whatever the form was printed in. <strong>Semantic, not decorative</strong> &mdash; <em>it would look fun</em> is not this licence, and a second decorative hardcoded family would retire the first one&rsquo;s reasoning.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="design">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">Plain view keeps the composition and drops the ornament, which is a split the cut-out line already drew</span></div>
+        <div class="qe-entry-body">
+          <p>The second half of the question. <strong>Gone in plain view:</strong> the tilt, the tape, the shadow, the six per-line leans, the variation axes &mdash; and, by itself, the system-face joke, because in plain view every face is that face. The drift rail already records that as the correct outcome rather than a loss.</p>
+          <p><strong>Kept:</strong> the line breaks, the six sizes, the indents and the three colours. Those are the setting rather than the decoration, and <strong>plain view removes decoration and has never removed information.</strong> <code>.qe-cutup</code> drew the same line when it kept its <code>--sz</code> sizes and its boxes and dropped only the rotations and the wonk.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-10-hyperempathy">
+      <p class="qe-accession-date">2026 &middot; 10 September</p>
       <h2 id="a-2026-09-10-hyperempathy">Sheet No.&nbsp;10, on a disability invented because nobody had it, and the readers who do <a class="qe-anchor" href="#a-2026-09-10-hyperempathy"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Ryan&rsquo;s, from his own reading of Sami Schalk on Octavia E. Butler. Schalk calls hyperempathy <q>a nonrealist disability that is both mental and physical in origin and manifestation</q>; Ryan&rsquo;s note said only <q>Except, it&rsquo;s quite real for many Autistic people, including myself,</q> and asked for a sheet. Four faults surfaced in the sourcing before a word of it was written, and three of them were ours.</p>

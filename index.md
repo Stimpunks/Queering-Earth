@@ -77,6 +77,14 @@ An author may do that to her own line. The reason it reads as adaptation and not
 
 Letters on this site lean, deviate, and refuse to sit on the line. That is not decoration. A page about normativity that sets itself in a tidy grid is arguing against itself.
 
+Specimen — one sentence, pasted up
+
+> This is a protest of the notion that there is any correct way to live.
+
+Max Alexander, [*A Playful Manifesto*](https://playradical.com/a-playful-manifesto/), Play Radical. Read at source 9 September 2026; the opening is [quoted whole on the manifesto sheet](https://queering.earth/manifesto).
+
+**One sentence, six sizes, and not a word of it altered.** The setting is ours and the words are Alexander’s, and the join between those two things is the only thing on this page that is not allowed to play. The faces are the sheet’s own two — the display face shouts, the reading face carries — so the setting follows whatever typeface you choose under **Reading** rather than overriding it. *Correct* is the exception, set in whatever face your device prints its forms in, and it is the one thing here that plain view takes away: in plain view every word is in that face.
+
 It also is not a trade. Every page here has a **plain view** — the control at the top of this one. It turns off the play, the motion, and the display faces, and leaves the words exactly as they are. One page, two ways to read it, and no second-class copy. Nothing on this site will ever be readable only in the decorated version.
 
 ## What grows here

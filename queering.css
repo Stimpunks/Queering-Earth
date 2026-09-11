@@ -3136,6 +3136,165 @@ html.plain .qe-cutup .w {
   font-weight: 600;
 }
 
+/* ── the broadside: one sentence, set as a wall
+ *
+ * A broadside is a single sheet carrying one statement, set in whatever type was
+ * in the case — sizes, weights and faces mixed because a jobbing printer mixed
+ * them, not because anybody drew a hierarchy first. That is a zine wall three
+ * centuries early, and it is the right object for a sentence that refuses the
+ * idea of a correct way to do anything. Same furniture as the rest of the
+ * paste-up: the card, the rule, the tape.
+ *
+ * IT MIXES ROLES, NEVER FAMILIES, AND THAT IS THE WHOLE CONSTRAINT. The typeface
+ * picker works by reassigning `--qe-display` and `--qe-body` on `html`, so a
+ * `font-family: 'Victorianna'` written here would be a face none of the nine
+ * options can reach — nine controls, and one block on the home page ignoring all
+ * of them. So the mix is between the two ROLES the sheet already carries: the
+ * shouting lines take `--qe-display`, the connective lines take `--qe-body`.
+ * Under the default that is Fraunces against Newsreader; under the five
+ * display-only faces it is the reader's pick against Newsreader; under the four
+ * that set both it collapses to one face, which is correct — a reader who asked
+ * for one typeface gets one typeface, and the broadside degrades into their
+ * choice rather than overriding it.
+ *
+ * ONE WORD IS EXEMPT, AND THE LICENCE IS THE DRIFT RAIL'S. `.w-form` sets
+ * `correct` in the reader's own system face, for the reason `.qe-drift-word--flat`
+ * does: the notion being protested is an institutional one, and the institution's
+ * typeface is whatever the form was printed in. Semantic, not decorative — "it
+ * would look fun" is not this licence. Like the drift rail's, the joke disappears
+ * in plain view, where every face is that face, and that is correct.
+ *
+ * COLOUR IS INK, MOSS AND RUST AND NOTHING ELSE. Those are the three text tokens
+ * that clear 7:1 in both grounds. The decorative seven are on the tape, which sits
+ * above the card's top edge with nothing composited against it — the slip's rule.
+ *
+ * IT DOES NOT ANIMATE, AND THE HEADING ABOVE IT IS THE REASON. `The type plays,
+ * and the words do not move` cannot introduce a specimen whose words move.
+ */
+
+.qe-broadside {
+  margin: var(--qe-space-6) 0;
+  padding: 1.9rem 1.5rem 1.3rem;
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  /* -b, because the specimen above takes -a and the plate cards below take -c:
+     no two panels a reader sees together share a corner profile. */
+  border-radius: var(--qe-corner-b);
+  box-shadow: 0 1px 0 var(--qe-paper-deep), 0 10px 20px -14px var(--qe-shade);
+  /* --tilt, NOT --rot. A custom property inherits, so a `--rot` on this figure
+     would land on every fragment inside it that did not set its own — the whole
+     sentence leaning by the card's angle, silently. The two rotations are two
+     different facts and they get two different names. */
+  transform: rotate(var(--tilt, -1.1deg));
+  position: relative;
+}
+
+/* Two strips, at the top corners rather than one in the middle, which is the
+   difference between a slip pinned to a sheet and a bill pasted to a wall. Both
+   clear the first line: the card's top padding is 1.9rem and a strip reaches
+   0.55rem into it. */
+.qe-broadside::before,
+.qe-broadside::after {
+  content: "";
+  position: absolute;
+  top: -0.52rem;
+  width: 3.6rem;
+  height: 1.3rem;
+  opacity: 0.5;
+}
+.qe-broadside::before {
+  left: 1.1rem;
+  background: var(--qe-coral);
+  transform: rotate(-3.5deg);
+}
+.qe-broadside::after {
+  right: 1.1rem;
+  background: var(--qe-lichen);
+  transform: rotate(2.5deg);
+}
+
+.qe-broadside blockquote {
+  margin: 0;
+  font-family: var(--qe-display);
+  /* The base every `--sz` below is a multiple of. Held under 1.25rem so the
+     2.6em line still fits the 448px measure at the top of the clamp. */
+  font-size: clamp(1.02rem, 3.2vw, 1.22rem);
+  color: var(--qe-ink);
+}
+.qe-broadside blockquote p { margin: 0; }
+
+/* WHITESPACE BETWEEN THE FRAGMENTS IS LOAD-BEARING, the same way it is in
+   .qe-cutup. These are blocks, so the spaces do no visual work at all — but they
+   are real text nodes, and they are the only reason the sentence copies out, is
+   indexed, and reaches the Markdown sibling as a sentence rather than as
+   Thisisaprotest. Every fragment stays on one source line for the same reason:
+   make-search-index keeps newlines inside a blockquote, and a newline there would
+   index a prose sentence as verse. */
+.qe-broadside .w {
+  display: block;
+  /* THE BOX HUGS THE TEXT, and that is not a cosmetic choice. A full-width block
+     rotated two degrees swings its far end seventeen pixels at this measure while
+     the words sit still at the left — so the ink leans by nothing and the RECTANGLE
+     leans by everything, which is what check-overlap.mjs measures. Fitted, the box
+     and the ink are the same object and a collision is reportable. */
+  width: fit-content;
+  font-size: var(--sz, 1em);
+  font-weight: var(--wt, 400);
+  line-height: 1.12;
+  margin: 0.18em 0 0.18em var(--in, 0rem);
+  transform: rotate(var(--rot, 0deg));
+  transform-origin: left center;
+  /* Newsreader carries neither axis, so the `.w-read` lines take this and are
+     unmoved by it. That is the right way round: the deviation axis is on the
+     display face, and the lines that lean are the lines that shout. */
+  font-variation-settings: "SOFT" var(--soft, 40), "WONK" var(--wonk, 1);
+}
+/* The reading face, for the lines that carry the sentence between the shouts. */
+.qe-broadside .w-read { font-family: var(--qe-body); }
+.qe-broadside .w-loud { color: var(--qe-rust); }
+.qe-broadside .w-quiet { color: var(--qe-moss); }
+
+/* The form-printer's face, boxed like a field on a form. */
+.qe-broadside .w-form {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-variation-settings: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.1em 0.42em;
+  border: 1px solid var(--qe-rule);
+  border-radius: var(--qe-corner-chip);
+}
+
+.qe-broadside figcaption {
+  margin-top: 1.25rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--qe-rule);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--qe-moss);
+}
+
+/* Under about 30rem a rotated line laps the one above it rather than leaning off
+   it, and the deep indents push the long fragments out of the measure. Same
+   breakpoint and same reason as h2.qe-play. */
+@media (max-width: 30rem) {
+  .qe-broadside { transform: none; }
+  .qe-broadside .w { transform: none; margin-left: calc(var(--in, 0rem) * 0.45); }
+}
+
+/* Plain view drops the decoration and keeps the composition, which is the split
+   .qe-cutup already draws: the rotations, the wonk axis, the tape and the shadow
+   go; the line breaks, the sizes, the indents and the colours stay, because those
+   are the setting rather than the ornament. The system-face joke goes too, by
+   itself — in plain view every face is that face. */
+html.plain .qe-broadside { transform: none; box-shadow: none; }
+html.plain .qe-broadside::before,
+html.plain .qe-broadside::after { display: none; }
+html.plain .qe-broadside .w {
+  transform: none;
+  font-variation-settings: normal;
+}
+
 /* ── a line in the language it was written in
  *
  * Sits above its translation inside a .qe-specimen. It carries a `lang` in the
@@ -3200,6 +3359,21 @@ html.plain .qe-orig { font-variation-settings: normal; }
     padding: 0;
   }
   .qe-cutup .w-loud, .qe-cutup .w-quiet { color: #000; font-weight: 700; }
+
+  /* The broadside prints as the setting without the wall: the tape, the tilt and
+     the shadow are the paste-up, and paper is not a wall. The sizes and the line
+     breaks stay, because they are the sentence. */
+  .qe-broadside {
+    transform: none;
+    background: none;
+    box-shadow: none;
+    border: 0.5pt solid #999;
+    break-inside: avoid;
+  }
+  .qe-broadside::before, .qe-broadside::after { display: none; }
+  .qe-broadside .w { transform: none; color: #000; }
+  .qe-broadside .w-form { border: 0.5pt solid #999; }
+  .qe-broadside figcaption { color: #222; border-top: 0.5pt solid #999; }
 }
 
 /* ─────────────────────────────────────────────── the accession register

@@ -2443,7 +2443,7 @@ her rather than restating it, which would have made our sentence look like the o
 
 ### Max Alexander — *A Playful Manifesto*, and one preposition
 
-**Quoted on:** `manifesto.html`
+**Quoted on:** `manifesto.html`, `index.html`
 
 > This is a manifesto that begins but will never end. This is a translation of my world to
 > yours. This is a celebration of existence; mine, yours and theirs. This is a public display
@@ -2483,6 +2483,16 @@ only catches other people's tightening is not a ledger, it is a defence.** Nothi
 criticism of the NQLS manifesto, which is a community document doing a different job; but
 stimpunks.org is editable by the people who run this site, and this entry is the record that
 it wants fixing there too. `DECISIONS.md` carries that as an open item.
+
+**ONE SENTENCE OF IT IS ALSO SET AS A BROADSIDE ON THE HOME PAGE**, under
+[*The type plays, and the words do not move*](https://queering.earth/#the-type-plays) —
+*This is a protest of the notion that there is any correct way to live*, broken across six
+lines at six sizes in three faces. **The setting is ours; not one word of it is.** A sentence
+lifted out of the seven and given a display treatment is exactly where a tightening would
+happen unnoticed, so it is quoted whole, inside a `blockquote` with its `cite`, and the
+caption points at the sheet that carries the whole opening. The line breaks are `display:
+block` on spans with real spaces between them, so the sentence copies out, indexes, and
+reaches `index.md` as one sentence rather than as six.
 
 ----
 

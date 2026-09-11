@@ -279,6 +279,24 @@ Insolente, Trickster and Sporting Grotesque have **no italic at all**, and this 
 built out of citations — setting one as the reading face would put a faux slant on every
 `<cite>`. `sets_body` in the manifest is that fact, not a preference.
 
+**A COMPONENT MAY MIX THE TWO TYPE ROLES; IT MAY NEVER NAME A FAMILY.** The picker works
+by reassigning `--qe-display` and `--qe-body` on `html`, so a `font-family: 'Victorianna'`
+written into a component is a face **none of the nine options can reach** — nine controls,
+and one block ignoring every one of them. The legitimate mix is between the two roles: the
+default gives Fraunces against Newsreader, the five display-only faces give the reader's
+pick against Newsreader, and the four that set both collapse to one face at several sizes.
+**That last row is the point rather than a shortfall** — a reader who asked for one typeface
+gets one, and the setting degrades into their choice instead of overriding it. What survives
+in every row is the play that was never a family: size, weight, colour, indent, lean, and
+SOFT and WONK where the picked face has them.
+
+**Exactly two things hardcode a family, and both are the same licence.**
+`.qe-drift-word--flat` and `.qe-broadside .w-form` set the reader's own **system face**
+because the system face *means* something — an institution's typeface is whatever the form
+was printed in. **Semantic, not decorative:** "it would look fun" is not this licence, and a
+third hardcoded family added for looks retires the reasoning behind the first two. Both
+jokes disappear in plain view, where every face is that face, and that is correct.
+
 **`tools/make-fonts.mjs` owns all of it** — the faces, the `@font-face` blocks, the
 `html.qe-font-*` class rules, the licence files, the designer credits and the manifest,
 generated from one table so the stylesheet cannot declare a family the picker does not

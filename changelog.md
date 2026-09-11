@@ -36,6 +36,40 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 10 September · latest
 
+## One sentence of Max Alexander pasted up as a broadside, and the rule that a component mixes type roles and never families
+
+Ryan asked for bold, playful typography under [*The type plays, and the words do not move*](https://queering.earth/#the-type-plays), and asked the two questions that turned out to be the accession: should it mix typefaces, and what would that do to the typeface picker and to plain view.
+
+MountedA broadside: one sentence, six lines, six sizes, and not a word of it altered
+
+`.qe-broadside` sets “This is a protest of the notion that there is any correct way to live” — Max Alexander, [*A Playful Manifesto*](https://playradical.com/a-playful-manifesto/) — broken across six lines, each with its own size, weight, indent, lean and colour. A broadside is a single sheet carrying one statement in whatever type was in the case, which is a zine wall three centuries early, so it is **the furniture the paste-up already has**: the card, the rule, two tape strips at the top corners. No new visual language, one new component.
+
+**The setting is ours and the words are Alexander’s, and one sentence lifted out of seven is exactly where a tightening happens unnoticed.** So it is a `blockquote` with its `cite`, captioned to the source and to [the sheet that quotes the opening whole](https://queering.earth/manifesto), and every fragment sits on **one source line with real spaces between the spans**. The spaces do no visual work — the fragments are blocks — and they are the only reason the sentence copies out, indexes and reaches `index.md` as a sentence. A newline between two of them would be kept by `make-search-index.mjs` and file a prose sentence as verse.
+
+**It does not animate, and the heading above it is the reason.** A section called *the words do not move* cannot introduce a specimen whose words move.
+
+**Colour is ink, moss and rust and nothing else**, those being the three text tokens that clear 7:1 in both grounds. The decorative pair is on the tape, which sits above the card’s top edge with nothing composited against it — the slip’s own rule. Corners take `--qe-corner-b`, because the specimen above takes `-a` and the plate cards below take `-c`.
+
+**The box hugs the text, and that is a gate decision rather than a cosmetic one.** A full-width block rotated two degrees swings its far end seventeen pixels at this measure while the words sit still at the left: the ink leans by nothing and the rectangle leans by everything, and the rectangle is what `check-overlap.mjs` measures. Fitted with `width: fit-content`, the box and the ink are the same object and a collision is reportable.
+
+**And the tilt is `--tilt`, not `--rot`.** A custom property inherits, so a `--rot` on the figure would have landed on every fragment that did not set its own and leaned the whole sentence by the card’s angle, silently. Two rotations are two facts and they get two names.
+
+MountedA component may mix the two type roles; it may never name a family
+
+The answer to *should we mix the fonts* is yes, and the mix is between `--qe-display` and `--qe-body`. **The typeface picker works by reassigning those two properties on `html`, so a `font-family: 'Victorianna'` written into a component is a face none of the nine options can reach** — nine controls, and one block on the home page ignoring every one of them. Worse under the five display-only faces, where the reader has been handed Newsreader as the reading face deliberately and a named third family would put a fourth face on the sheet.
+
+What the reader actually sees, in all three cases: the default gives Fraunces shouting against Newsreader carrying; one of the five display-only faces gives their pick against Newsreader; one of the four that set both gives **one face at six sizes**. **The last of those is the point rather than a shortfall** — a reader who asked for one typeface gets one typeface, and the setting degrades into their choice instead of overriding it. What survives in every case is the play that was never a family: size, weight, colour, indent, lean, and the SOFT and WONK axes where the picked face has them.
+
+**One word is exempt, and the licence is the drift rail’s rather than a new one.** `.w-form` sets *correct* in the reader’s own system face for the reason `.qe-drift-word--flat` does on [Sheet No. 4](https://queering.earth/invention-of-normal): the notion being protested is an institutional one, and the institution’s typeface is whatever the form was printed in. **Semantic, not decorative** — *it would look fun* is not this licence, and a second decorative hardcoded family would retire the first one’s reasoning.
+
+MountedPlain view keeps the composition and drops the ornament, which is a split the cut-out line already drew
+
+The second half of the question. **Gone in plain view:** the tilt, the tape, the shadow, the six per-line leans, the variation axes — and, by itself, the system-face joke, because in plain view every face is that face. The drift rail already records that as the correct outcome rather than a loss.
+
+**Kept:** the line breaks, the six sizes, the indents and the three colours. Those are the setting rather than the decoration, and **plain view removes decoration and has never removed information.** `.qe-cutup` drew the same line when it kept its `--sz` sizes and its boxes and dropped only the rotations and the wonk.
+
+2026 · 10 September
+
 ## Sheet No. 10, on a disability invented because nobody had it, and the readers who do
 
 Ryan’s, from his own reading of Sami Schalk on Octavia E. Butler. Schalk calls hyperempathy “a nonrealist disability that is both mental and physical in origin and manifestation”; Ryan’s note said only “Except, it’s quite real for many Autistic people, including myself,” and asked for a sheet. Four faults surfaced in the sourcing before a word of it was written, and three of them were ours.

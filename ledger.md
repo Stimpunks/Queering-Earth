@@ -1310,7 +1310,7 @@ A dash where there was a full stop, a capital lowercased, and a word inserted. *
 
 ### Max Alexander — *A Playful Manifesto*, and one preposition
 
-**Quoted on:** `manifesto.html`
+**Quoted on:** `manifesto.html`, `index.html`
 
 > This is a manifesto that begins but will never end. This is a translation of my world to yours. This is a celebration of existence; mine, yours and theirs. This is a public display of affection for each and every creature. This is a protest of the notion that there is any correct way to live. This is a public display of rejection of the idea that one's usefulness is a measure of their humanity. This is a love letter to joy to sadness to fear and discovery.
 
@@ -1330,6 +1330,8 @@ which is what the [Neuroqueer Learning Spaces Manifesto](https://stimpunks.org/p
 2. **An ellipsis swallowing three sentences.** Between "yours" and "This is a protest" stand the celebration of existence, the public display of affection, and nothing else worth losing. Compressing them is defensible; doing it with `….` and no note is how a reader comes to think the two sentences are adjacent.
 
 **So this page quotes the opening whole** and says on the face of it that the circulating version is tightened, naming our own foundation's page as where we found it. **A ledger that only catches other people's tightening is not a ledger, it is a defence.** Nothing here is a criticism of the NQLS manifesto, which is a community document doing a different job; but stimpunks.org is editable by the people who run this site, and this entry is the record that it wants fixing there too. `DECISIONS.md` carries that as an open item.
+
+**ONE SENTENCE OF IT IS ALSO SET AS A BROADSIDE ON THE HOME PAGE**, under [*The type plays, and the words do not move*](https://queering.earth/#the-type-plays) — *This is a protest of the notion that there is any correct way to live*, broken across six lines at six sizes in three faces. **The setting is ours; not one word of it is.** A sentence lifted out of the seven and given a display treatment is exactly where a tightening would happen unnoticed, so it is quoted whole, inside a `blockquote` with its `cite`, and the caption points at the sheet that carries the whole opening. The line breaks are `display: block` on spans with real spaces between them, so the sentence copies out, indexes, and reaches `index.md` as one sentence rather than as six.
 
 ---
 
