@@ -551,8 +551,35 @@ trailing break.
 |---|---|---|
 | `grep` here is **ugrep** | is this markup `No.&nbsp;1` or `No.` plus a literal space | printed the entity **decoded**, so both forms looked identical and a phantom difference got chased across nine sibling navs |
 | `grep -c` | how many occurrences | how many **lines containing** one, so a page with eight verse lines on one physical line reported `1` |
-| **zsh**, unquoted expansion | `node tools/check-markup.mjs --check` | did not word-split, so `--check` became part of the filename and node reported module-not-found &mdash; which reads as a gate failure |
+| **zsh**, unquoted expansion | `node tools/check-markup.mjs --check` | did not word-split, so `--check` became part of the filename and node reported module-not-found &mdash; which reads as a gate failure. **See the shell note below: this row is four instances, not one.** |
 | **perl** `scalar(()=/.../g)` | how many matches | with capture groups in the pattern, returns the **captures**, so every block counted twice |
+
+**AND THE FACT UNDERNEATH THE ZSH ROW, WHICH IS THE ONLY PART OF THIS ENTRY THAT PREDICTS
+RATHER THAN RECORDS: the tool is called Bash and it runs zsh.** One command settles it, which
+is what keeps this a fact and not folklore &mdash; `echo $SHELL; echo ${ZSH_VERSION:-none}; echo ${BASH_VERSION:-none}`
+returns `/bin/zsh`, `5.9`, `none`.
+
+So these were never three sessions happening to write zsh-flavoured mistakes. **Every habit
+carried over from bash is a latent wrong answer here**, and the ones that have already fired
+are the differences most likely to appear in a throwaway one-liner:
+
+- **Unquoted expansions do not word-split.** `for t in "a.mjs --check"; node tools/$t` and
+  `set -- $g` both hand the whole string to `$1`, so node is asked for a file named
+  `check-markup.mjs --check` and reports module-not-found. **Fired twice, on two sessions, in
+  two syntactic forms** &mdash; the second minutes after that session finished writing this row.
+- **An unmatched glob is refused rather than passed through.** `grep --include=*.nosuchext`
+  gives `no matches found` from zsh's `nomatch`, where bash would hand grep the literal string.
+  `nonomatch` is not set here.
+- **A parameter expansion followed by `[` is an array subscript.** `grep -c "\.$c[ ,:{>]"`
+  produces `bad math expression: operand expected` &mdash; zsh is subscripting `$c`, where bash
+  sees `$c` and then a literal bracket.
+
+**Two of those four were misfiled at the time, which is the entry's own thesis operating on the
+entry's own contents.** The glob refusal was recorded as a grep quirk; the array subscript was
+read as a quoting problem and silently worked around in Python without being diagnosed. Neither
+idiom errored in a way that named its cause: **one returned a plausible wrong explanation and
+the other returned a plausible wrong culprit**, and both stood until somebody asked what the
+shell actually was.
 
 **Two were regexes against our own markup, and they are the ones to actually worry about**,
 because the first four are general knowledge and these two are specific to this house:
@@ -586,18 +613,45 @@ six above:
   &mdash; and it reaches `what-is-settled.md` through the generator, so the same one backslash
   was counted in two files. It genuinely *is* a line ending in a backslash. **Every other idiom
   here returns a number that is wrong; this one returns a number that is right about the
-  characters and wrong about the markup they sit in.** Two sessions saw those two files in a
-  `grep -c '\\$' *.md` listing; one set them aside as pre-existing and did not ask why.
-- **`git log -S` tells you which commit introduced a string, not who wrote it — and in a
-  working tree three sessions are writing into, those are different facts.** This entry was
-  authored by the session that did the depth-stack walk, left uncommitted in the shared
-  checkout, and swept into the repo by another session's `git add -A`. `git log -S` therefore
-  names that second session, correctly and misleadingly. **Two sessions then reached opposite
-  wrong conclusions about who wrote it from the two obvious kinds of evidence** &mdash; one from
-  the commit that carries the text, one from having read the text in the file before editing it
-  &mdash; and the only correct answer was held by neither. In the repository whose stated risk
-  is a wrong attribution, this is the one on the list to remember: **`git log` answers a
-  question about commits, and authorship in a shared tree is not a question about commits.**
+  characters and wrong about the markup they sit in.** **Three sessions met it and got three
+  outcomes.** One saw those two files in a `grep -c '\\$' *.md` listing and set them aside
+  as pre-existing without asking why. One asked why, and traced it. And one checked whether
+  its *own* entry had introduced a false hard break, found the backslash-terminated line,
+  followed it into the fenced block and stopped &mdash; **catching at the last step a defect
+  it had been about to report, and which it had invented.** Same trap, three distances from
+  publishing it.
+- **`git log -S` tells you which commit introduced a string, not who wrote it &mdash; and in a
+  working tree three sessions are writing into, those are different facts.** The authorship of
+  *this entry* is the case in point, and it is set out below rather than here, because it took
+  three messages and a direct question to establish and the short version was wrong twice.
+
+**THE AUTHORSHIP OF THIS ENTRY, WHICH TWO SESSIONS GOT WRONG IN OPPOSITE DIRECTIONS.** One
+session read `git log -S`, found the commit that introduced the text, and concluded the session
+owning that commit had written it. That session had concluded the reverse, from having printed
+the entry in order to read it before editing a line of it. **Neither held the right answer, and
+both had reasoned correctly from the evidence in front of them.**
+
+**What settled it was asking.** The session that wrote it confirmed authorship from its own
+record, with the detail that clinches it: its `git add` and `git commit` returned *nothing to
+commit, working tree clean*, with `HEAD` already at the other session's commit. Its draft title
+was <q>Six counting idioms&hellip;</q>, which is where the number in that title came from and
+why removing it was somebody else's call to make.
+
+**Two things the first account got unfair, corrected here because they change the risk and not
+just the tone.** It said the text was <q>left uncommitted</q>, which is true and reads as
+careless: **all three derived layers had been regenerated and all eight gates were passing
+before that session reached for the commit.** What got swept in was vetted, gate-green text
+that lost a race by seconds, so **the near-miss was on credit and never on correctness.** And
+it did not write on a peer's say-so: told the file was clear, it fetched first, confirmed
+`MERGE_HEAD` gone, zero unmerged paths, a clean tree in sync, and confirmed the findings were
+genuinely absent *after* fetching. **That is the stale-snapshot rule being applied rather than
+repeated**, which is the opposite of what the first framing implied.
+
+**The finding never needed the name, and no session is named in it.** `git log` answers a
+question about commits; authorship in a shared tree is not a question about commits. The fault
+generalises and the identity does not &mdash; **but a reconstruction must say it is one**, and
+the version of this paragraph that stated the account flatly stood for exactly one commit
+before the party who knew was asked.
 
 **The rule.** A count is a claim, and this file already holds several entries where a measured
 number was right about its own arithmetic and wrong about what it measured &mdash; the
