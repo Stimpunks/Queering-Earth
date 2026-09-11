@@ -284,12 +284,27 @@ currents" passage and credits the Poetry Foundation's Sylvia Plath page. It is a
 with a date: *The Unabridged Journals of Sylvia Plath*, **Friday, 20 June 1958**, read on the page
 on 11 September 2026.
 
-**And the wording is open.** Our copy has "despairing negative—whichever"; the copy in the SKS has
-a hyphen and **"which ever" as two words**. That edition normalises every dash in the book to a
-hyphen, so it cannot settle the dash — but "which ever" is a word split, not a dash artefact, and
-Kukil's edition exists to preserve Plath's own spelling and spacing. If she wrote it as two words,
-our "whichever" is a copy-editor's reflex applied to a woman's journal, which is a tightened
-quotation. **Settle it against a print copy before either site quotes it again.**
+**And the wording was open for about an hour, then settled — against us, twice.** Our page has
+"despairing negative—whichever". Checked the same day across three copies: the SKS PDF on the page,
+the **Kindle edition of Kukil**, and **archive.org's search-inside of the print edition**, which
+returns exactly one result for the phrase `"which ever"` — the June 20 entry, at **p. 395**.
+
+- **"which ever" is two words, and it is Plath's.** Two independent editions preserve the space.
+  Closing it to "whichever" is a copy-editor's reflex applied to a woman's journal, in an edition
+  whose whole reason for existing is that it does not do that. **That is a tightened quotation of
+  the exact kind this ledger was built to catch**, on our own page.
+- **The dash is a spaced en dash, not a closed em dash.** Kukil sets `negative – which ever`, and
+  the same spaced en dash runs through the neighbouring sentences. Ours closes it up. Smaller than
+  the first, still a silent alteration of somebody else's punctuation.
+
+**The correct citation is** *The Unabridged Journals of Sylvia Plath*, ed. Karen V. Kukil, entry of
+Friday, 20 June 1958, p. 395 — not a Poetry Foundation biography page.
+
+**One methodological note worth keeping.** This was catchable only because the first copy consulted
+rendered every dash in the book as a hyphen, which made its punctuation obviously untrustworthy and
+forced a second and third look. **An edition that quietly normalises is more dangerous than one
+that obviously mangles**: the mangled copy announced itself, while a tidy one would have agreed
+with our page and closed the question.
 
 ### An open item for a session in the SKS repo: two glossary pages splice two Butler passages into one quotation (2026-09-10)
 
