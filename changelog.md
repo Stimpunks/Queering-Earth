@@ -36,6 +36,70 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 10 September · latest
 
+## A third founding paper, on the fox and the hedgehog, and an unlabelled door in the top bar
+
+Ryan’s, and he supplied most of the sourcing: Edith King’s hedgehog poem, Liv’s *Life as a hedgehog*, the Vanhuysse review, the two Sagans, and the Stimpunks research page. He asked for a complement to [Star Stuff’s *Who Is Holding the Candle*](https://starstuff.earth/who-is-holding-the-candle), for the hedgehog poem in full, for a suitable fox poem to be found, and for a fox-and-hedgehog mark in the top bar as whimsy and as an easter egg. Four things surfaced in the sourcing before a word of the sheet was written, and none of them were ours.
+
+MountedTwo children’s poems that end in the same place, which is the argument
+
+[The sheet](https://queering.earth/two-cohabitating-modes) is filed under [*The founding papers*](https://queering.earth/#the-founding-papers) with [the mission](https://queering.earth/mission) and [the manifesto](https://queering.earth/manifesto), because it is about why this cabinet exists alongside a sibling rather than about how either is made. It runs the descent of the proverb — Archilochus to Erasmus to Berlin to Gould — and then puts two poems under it.
+
+**The find is that the two poems end identically, and neither of them was chosen for that.** King’s hedgehog likes a quiet wood “Where he can feed his family / On proper hedgehog food”. The anonymous fox comes home to “young ones both nine and ten”, who tell him he may go again if he brings such nice meat. **One goes nowhere and eats the right thing; one goes everywhere and takes what there is; both are somebody’s father coming back with dinner.** Read from there, Berlin’s typology is a ranking of twelve great men with Tolstoy above them for managing both modes — and the poems rank nobody, because each animal is described in the terms of its own life instead of measured against the other.
+
+**The neurodivergent reading is the reason the sheet is ours and not a book review.** Hedgehogs already carry punk, Disabled and [spiky-profile](https://stimpunks.org/glossary/spiky-profile/) associations in our own house, down to a mascot; the curl is [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/), masking and [minority stress](https://stimpunks.org/glossary/minority-stress/) drawn from outside. And King’s “His coat does all the work for him” turns out to be the whole problem stated in one line: the defence that costs nothing to deploy is also the reason nobody believes you need anything, which is exactly what [Liv describes](https://web.archive.org/web/20220508100306/https://traumatism-fieldnotes.com/life-as-a-hedgehog/) at the support counter.
+
+**It is signed and the others are not.** `/mission` and `/manifesto` carry no `author` in their JSON-LD because they are the collaboration speaking; this one carries Ryan, because the claim about what hedgehogs mean is his and the sheet says so. `about.author` stays absent, so the gate’s conflation check has nothing to catch.
+
+MountedThe anthology has no fox, so the fox came from the oldest nursery collection in English
+
+The brief asked for “a suitable Fox poem”, and the obvious move was a companion piece from King’s own anthology. **There is none.** *Fifty New Poems for Children* (Oxford: Basil Blackwell, 1922) was read end to end — its contents list and its author index — and the word *fox* does not occur in it. King has eleven poems in that book and they are a rabbit, a bat, a mole, a duck, a swallow, a beetle and the rest; no fox.
+
+**What was chosen instead is better than a companion piece would have been.** Rhyme CXXXIII in James Orchard Halliwell’s *The Nursery Rhymes of England* is anonymous, traditional, sung as *The Fox* or *Daddy Fox*, and it is nine stanzas of a fox going through a town and coming back with the goose. **Its refrain is *the town* and its last stanza is the den**, which is what made the pairing with King work at all: the fox’s whole poem is method — he listens at the stile, estimates the mile, flatters the drake while pricing it, is “too cunning” for the trap — and it all resolves into feeding the young ones.
+
+Cited to the fifth edition (London and New York: Frederick Warne and Co., 1886), pages 84–86, from the Project Gutenberg transcription of that edition, **checked line by line against two independent scans of it**. The refrain indent is the 1886 compositor’s and is reproduced with `.l-in`; the spaces he set before every exclamation mark are closed up, which is the decision [Sheet No. 3](https://queering.earth/promises-like-pie-crust) already took for Rossetti’s colons. The rhyme is also in Halliwell’s 1843 edition, so it was in the collection forty years before this printing.
+
+**Thirteen of its thirty-seven lines wrap at the measure, and that is left alone on the source’s authority.** The `.l` content box is 406px and the longest line wants 498; fitting it would mean setting the stanza at 17.7px, under the house floor and visibly smaller than King’s poem on the same page — a hierarchy claim nothing supports. **Halliwell’s own 1886 measure broke six of these lines**, including “She opened the casement, and popped out / her head;”, which is our worst case as well. Read off the scan rather than inferred. The wrapping reproduces the source’s condition, and `.qe-poem .l`’s hanging indent is the device that keeps a wrap from reading as a line the poet wrote. The figcaption says so, and the numbers are in [the decision log](https://queering.earth/what-is-settled).
+
+MountedThe 1922 edition prints “runts and digs”, and we went to the letterforms to be sure
+
+King’s second stanza has a snout that smells “But also runts and digs”. ***Runts* is not a verb**; rooting is what a pig’s snout does, and *roots* is the word the stanza is plainly built on. Every web transcription of the poem carries “runts” too — which is exactly the condition under which a whole tradition of copies can be a single witness, so the transcriptions prove nothing.
+
+**So the page scan was magnified rather than the scan’s text layer trusted**, an OCR text layer being the one witness guaranteed to make this particular error. At 300 dpi the “u” is open-topped and unmistakable against the closed “o” of “also” two words earlier. **The 1922 first edition prints *runts*, so the sheet prints *runts***, with the argument for *roots* made outside the quotation marks where a reader can weigh it. Correcting it silently would leave King saying a word she did not print, and correcting it loudly inside the quotation would be worse.
+
+The same pass found that the circulating transcriptions additionally put full stops at four line-ends where the 1922 setting has commas. **The commas are hers**, and the sheet has them.
+
+Label correctedA journal credits a review to the author of the book it reviews, and dates a poet two centuries wrong
+
+The descent of the proverb is quoted from Pieter Vanhuysse’s essay review in *Education Review*. **The journal’s own record credits that review to Stephen Jay Gould** — the author of one of the two books it reviews, and four years dead when it ran. Its `citation\_author` meta tag says “Gould Stephen Jay”, so **every citation manager pointed at that page produces a citation crediting a review to its subject.** The PDF names Pieter Vanhuysse of the University of Haifa on its first page, in its running head and at his university address on its last; its abstract says “I argue that Barzun and Gould contribute valuable insights”. The record also files it as volume 13 where the PDF’s running head says volume 9, number 1. **We cite the PDF.** Nothing of ours was wrong, which is the only reason this is a note rather than a correction — but it is the same collapse `check-metadata.mjs` refuses in our own JSON-LD, arriving from a peer-reviewed journal.
+
+Second, inside the quotation: **Vanhuysse calls Archilochus “fifth-century” and he is seventh.** His own fragments date him — the solar eclipse of 6 April 648 BC, and the wealth of Gyges. **The quotation keeps “fifth-century”**, because the words inside the marks are not ours to tidy and a silently corrected source is one a reader believes we found that way. The correction sits outside them. It is also a useful demonstration of the sheet’s own subject: *which century* is checkable and *which thinkers are hedgehogs* is not.
+
+MountedThe fox-and-hedgehog mark, and why the two of them do not face each other
+
+`.qe-modes-mark` is two filled silhouettes in the controls tray, 2.6rem wide and 20.1px tall, which puts it within a pixel and a half of the loupe beside it. **The first draft had them nose to nose, and that draft was wrong for a reason that has nothing to do with drawing: a fox facing a hedgehog is a predator facing prey**, which is the one thing a mark for a page about two modes *cohabiting* must not say. Both face the same way now, which makes them a plate of two specimens — this site’s own idiom, and no narrative at all.
+
+Three further findings, each from rendering it at 16 to 180px and looking, which is what `favicon.svg` paid for twice already. **Eight long spines are a stegosaurus**, and on a head instead of a body they are a rising sun; a coat is a mass of short spines, so there are sixteen, each placed on the dome’s own normal and raked back — computed rather than hand-placed, the correction the lilac panicle on [the plate](https://queering.earth/) already took. **A tail with a concave underside is a scythe**, and two drafts got that identically wrong; the brush is a band of near-constant width, nearly as thick as the body, drawn before the body so the body overlaps its root. **And it is filled, not stroked** — the loupe is stroked because an instrument is thin parts, and two stroked animals went muddy below about 24px exactly as the loupe’s own note predicts.
+
+**It does not animate, and the loupe is the reason.** The rail sprig and the moth draw themselves on because they are botanical art; this is in the instrument tray, where nothing moves, and a mark that grew beside a still loupe would read as a fault.
+
+**What is hidden is the door and never the room.** The mark is the only unlabelled control in the tray, which is the whimsy Ryan asked for — but the page behind it is in the footer row of all twenty pages, in `.qe-furniture` on the home page with a gloss, in `sitemap.xml`, in `tools/pages.mjs`, in `/llms.txt` and in the finding aid; and the link’s accessible name is real text in the DOM at all times, so a screen reader announces “Two cohabitating modes” exactly as it announces “Search”. That is what separates this from the hover-gated section mark `CLAUDE.md` refuses: nothing is withheld from anybody.
+
+CabinetFound and deliberately not fixed: the Markdown mirror flattens every poem on the site into prose
+
+Checking `two-cohabitating-modes.md` turned up a fault older than this sheet. `make-markdown.mjs` treats `span` as an inline wrapper — correct nearly everywhere, and wrong for `.qe-poem .l` and `.qe-verse .l`, the one element here whose whole job is to be a line. **So every stanza on the site arrives in its `.md` as one reflowed paragraph**: “Promise me no promises, So will I not promise you: Keep we both our liberties…”
+
+**It contradicts the rule the component was built on** — *a poem is a specimen whose line breaks are the object; reflowed into prose it is a different poem* — and the reason the generator exists, which is that the Markdown an agent fetches must not disagree with the page. Affected: Rossetti on [Sheet No. 3](https://queering.earth/promises-like-pie-crust), Dickinson and Ryan’s reply verse on [Sheet No. 6](https://queering.earth/wild-nights), Sappho on [Sheet No. 7](https://queering.earth/flower-codes), and now 53 lines here, which is what made it visible. **`search-index.json` is already right**, because `make-search-index.mjs` keeps a `blockquote` and a `div.qe-verse` as whole records — only the Markdown is wrong.
+
+**Not fixed here, on purpose.** The fix is two trailing spaces after each `.l` inside a verse container, and it edits a shared generator and rewrites eight `.md` files plus `llms-full.txt`. That is its own accession with its own diff to read, not a rider on a new sheet. Recorded as open in [the decision log](https://queering.earth/what-is-settled), with the trap noted: the break belongs to `.l` inside a verse container and never to `span` generally, or every span on the site puts a line break through the middle of prose.
+
+CabinetThe controls tray wraps, because a fifth control would have scrolled the body sideways
+
+Measured before the mark was added rather than after: at 375px the four existing controls filled the tray **exactly** — search link at x 20, the Reading disclosure ending at x 355, inside a 20px gutter, with nothing to spare. The row is `justify-content: flex-end`, so **a fifth item overflows off the LEFT edge** and takes the document’s `scrollWidth` with it — the horizontal body scroll the layout rule forbids outright.
+
+`flex-wrap: wrap` is the whole fix. On a narrow screen the tray becomes two right-aligned rows; at any width that fits, it is a no-op. **The alternative was to drop the mark below some breakpoint, which would have withheld a feature from phones** — and the mark is the only route to the page that a reader discovers by looking, so hiding it on the devices most people read on is where it would matter most.
+
+2026 · 10 September
+
 ## One sentence of Max Alexander pasted up as a broadside, and the rule that a component mixes type roles and never families
 
 Ryan asked for bold, playful typography under [*The type plays, and the words do not move*](https://queering.earth/#the-type-plays), and asked the two questions that turned out to be the accession: should it mix typefaces, and what would that do to the typeface picker and to plain view.
@@ -1815,6 +1879,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [What this cabinet is for](https://queering.earth/mission) the founding papers
 
 ### [Nothing here was inevitable](https://queering.earth/manifesto) the founding papers
+
+### [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes) the founding papers
 
 ### [The attribution ledger](https://queering.earth/ledger) every quotation traced
 

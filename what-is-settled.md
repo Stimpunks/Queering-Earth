@@ -270,7 +270,86 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ---
 
+### The Markdown mirror flattens every poem on the site into prose (2026-09-10)
+
+**Found while checking `two-cohabitating-modes.md`, and it is not that page's fault.** `make-markdown.mjs` treats `span` as an inline wrapper, which is right nearly everywhere and wrong for `.qe-poem .l` and `.qe-verse .l` — the one element on this site whose whole job is to be a line. So every stanza arrives in the `.md` as a single reflowed paragraph:
+
+> Promise me no promises, So will I not promise you: Keep we both our liberties, Never false and never true: …
+
+**This contradicts the rule the component was built on**, verbatim from `CLAUDE.md`: *a poem is a specimen whose line breaks are the object. Reflowed into prose it is a different poem.* And it contradicts the reason the generator exists at all, which is that the Markdown an agent fetches must not disagree with the page.
+
+**Everything affected**, all of it pre-existing: Rossetti on `/promises-like-pie-crust`, Dickinson and Ryan's own reply verse on `/wild-nights`, Sappho on `/flower-codes`, and now both poems on `/two-cohabitating-modes` — 53 lines, which is what made it visible. `llms-full.txt` carries the same flattening, and `search-index.json` does **not**: `make-search-index.mjs` keeps a `blockquote` and a `div.qe-verse` as whole records, so the finding aid is already right and only the Markdown is wrong.
+
+**Open, and deliberately not fixed in the accession that found it.** The fix is small — emit a Markdown hard break after each `.l` inside a verse container, which is two trailing spaces or a backslash — but it edits a shared generator and rewrites eight `.md` files plus `llms-full.txt`, and `CLAUDE.md` is emphatic that the converter's vocabulary is narrow on purpose. That is its own accession with its own diff to read, not a rider on a new sheet.
+
+**One thing to get right when it is done:** the break belongs to `.l` *inside* `.qe-poem` or `.qe-verse`, not to `span` generally. A hard break after every span on the site would put line breaks through the middle of ordinary prose, which is the same class of error in the other direction.
+
+---
+
 ## Settled
+
+### An easter egg may hide the door and may never hide the room (2026-09-10)
+
+Ryan asked for a fox-and-hedgehog mark in the top bar, "as a bit of visual whimsy and as an easter egg linking to the *Two Cohabitating Modes* page". `CLAUDE.md` forbids a hover-gated section mark on the grounds that hover hands a feature to mice and to nobody else, so an unlabelled control needed a reason it is not the same fault.
+
+**The reason is that nothing is withheld.** `.qe-modes-link` is the only control in the tray with no visible word, and what that hides is the *route*, not the destination:
+
+- the page is in the footer row of all twenty pages, under the label **Modes**;
+- it is in `.qe-furniture` on the home page under *The founding papers*, with a gloss;
+- it is in `sitemap.xml`, `tools/pages.mjs`, `/llms.txt` and the finding aid;
+- and the link's accessible name is **real text in the DOM at all times**, so a screen reader announces "Two cohabitating modes" exactly as it announces "Search".
+
+**A sighted mouse user is the only reader who has to wonder what the drawing is for, and they lose nothing by wondering** — the same route is in the footer of the page they are on. That is the difference from the hover-gated `§`, where the feature existed *only* under a pointer.
+
+**The rule to keep is the general one:** an easter egg here may make a route discoverable rather than announced. It may never be the only route, and it may never be the only name.
+
+---
+
+### The controls tray wraps, and it was measured before the fifth control went in (2026-09-10)
+
+At 375px the four existing controls filled the tray **exactly** — search link at x 20, the Reading disclosure ending at x 355, inside a 20px gutter. Zero headroom. The row is `justify-content: flex-end`, so a fifth item **overflows off the left edge** and takes the document's `scrollWidth` with it, which is the horizontal body scroll the layout rule forbids outright.
+
+**Settled: `flex-wrap: wrap` on `.qe-controls`.** Two right-aligned rows on a narrow screen, a no-op at any width that fits.
+
+**Rejected: hiding the mark below a breakpoint.** It would have withheld the feature from phones — and since the mark is the one route a reader *discovers*, removing it on the devices most people read on is where the loss would land hardest. **Rejected: shrinking the mark on narrow screens.** It is 41.6 × 20.1px already, and the mark was rendered at 16px during review: below about 24px wide the two animals stop being two animals.
+
+**The general lesson is the one this file keeps re-learning from the other direction.** The tray had been full since the Reading disclosure shipped and nothing said so, because nothing measures it — `check-overlap.mjs` catches text on text, not a flex row running out of room. **Adding an item to a fixed-width row is a measurement, not a markup edit.**
+
+---
+
+### Two specimens facing the same way, because nose to nose is a predation scene (2026-09-10)
+
+The first draft of the mark had the fox and the hedgehog facing each other, which composes well and says **predator and prey** — a fox nose to nose with a hedgehog is the fable, and the page it links to is about the two modes *cohabiting*. The drawing would have argued against its own page, in the corner of every sheet on the site.
+
+**Settled: both face the same way, which makes them a plate of two specimens** — the site's own idiom, and no narrative at all. The fox is on the left with its brush sweeping into clear space; the hedgehog is on the right and smaller, because it is.
+
+Three alternatives were drawn and refused, all judged by rendering at 16 to 180px rather than by reasoning:
+
+- **Heads only.** The fox head is excellent and the hedgehog head is a **rising sun** — spines radiating from a dome at head scale read as rays, unmistakably.
+- **The fox curled around the hedgehog.** Illegible at any size under 90px; the fox reads as a hook.
+- **The fox sitting, tail curled.** The seated body reads as a bird.
+
+**And the near-miss worth recording: eight long spines are a stegosaurus.** A coat is a *mass* of short spines, so there are sixteen, each placed on the dome's own normal and raked back — computed rather than hand-placed, which is the correction the lilac panicle already took. **Do not reach for a handful of big marks when you mean a texture.**
+
+---
+
+### The "Four pages" sentence on the home page had been wrong for six pages (2026-09-10)
+
+Fixed in passing while adding the founding-papers entry. The home page's cabinet list said "Four pages that are not specimens" above a `<dl>` of **six** — `/design`, `/changelog`, `/search`, `/ledger`, `/what-is-settled`, `/privacy`. It now says "Six".
+
+**Worth a line here because of the shape of it, not the size.** A hand-written count beside a hand-written list is a second copy, and it is the copy that rots — the same failure as a hand-kept contents list, which this site derives at runtime for exactly this reason. Nothing derives that sentence and nothing can, since it is prose. **A count in prose beside a list is a thing to check whenever the list changes**, and there are two of them on that page now.
+
+---
+
+### The sheet is signed and the other two founding papers are not (2026-09-10)
+
+`/mission` and `/manifesto` carry no `author` in their JSON-LD: they are the collaboration speaking, and the manifesto is explicit that nine people wrote what it adapts. `/two-cohabitating-modes` carries `"author": {"name": "Ryan Boren"}`.
+
+**The asymmetry is honesty rather than an oversight.** The claim that hedgehogs mean spiky profiles, punk and Disabled solidarity is Ryan's; the reading of the two poems was made in his session, from his sources. `about.author` stays absent, so `check-metadata.mjs`'s conflation check has nothing to catch — the gate refuses a page naming the same person as its own author and as the author of the work it is about, which is a different thing.
+
+**The rule this settles for the group:** a founding paper is signed when it carries a first-person claim somebody made, and unsigned when it is the house position. Signing is not a property of the group.
+
+---
 
 ### A component may mix the two type ROLES; it may never name a family (2026-09-10)
 
@@ -1263,3 +1342,17 @@ Each of the three worries turned out to be answerable:
 **Verified by making it fail before believing it**, which is this repo's rule for a new gate: the recessed panel was put back and reported 6.90:1 and 6.21:1 as `UNDER` with exit 1; a 2.15:1 colour was injected and reported as `FAIL` on the other tier with exit 1; `--aa` passed the same tree with exit 0 and said why. Then reverted, and the clean tree re-run.
 
 **One thing this does not fix.** A pass here is still not evidence about texture. The tool composites computed colour pairs, so grain under body text passes every number in it. That is a rule in `CLAUDE.md`, enforced by nothing, and it is the next thing on this list to become possible the day somebody reaches for a background image.
+
+---
+
+### The fox rhyme wraps 13 of 37 lines and that is left alone, because the 1886 printing wrapped six of them too (2026-09-10)
+
+Measured on `/two-cohabitating-modes`: at the full 34rem measure the `.l` content box is 406px, twelve lines exceed it, and thirteen render on two lines. The worst is "She opened the casement, and popped out her head;" at 498px natural width — it would need the stanza set at **17.7px (0.93em)** to fit, against the component's 1.14em. King's hedgehog poem on the same page wraps **nothing**, 16 lines of 16.
+
+**Thirteen of thirty-seven is worse than the case that earned the narrow-screen step-down** — seven of Rossetti's twenty-four, at 375px. And it is worse in kind, because the measure is capped at 34rem, so this wraps at *every* width and no breakpoint can reach it.
+
+**Settled: leave it, and say so in the figcaption.** The evidence is the source. Halliwell's own 1886 measure broke six of these lines — "and all things / bright;", "hopped out of / bed,", "the gray goose / is dead,", "and gave him / the slip,", "you may go / again," and **"She opened the casement, and popped out / her head;", which is our own worst case.** Read from the scan of that edition, not inferred. The rhyme has tumbling internal-rhyme lines of forty-plus characters; it did not fit a Victorian nursery-book page either. **Our wrapping reproduces the source's condition rather than departing from it**, and `.qe-poem .l`'s hanging indent is precisely the device that keeps a wrap from being mistaken for a line the poet wrote.
+
+**Rejected: a `.qe-poem--long` modifier stepping this poem down to 0.93em.** It would set one poem smaller than the other on the same page, which is a visual-hierarchy claim — *this poem matters less* — that nothing supports; and 17.7px is under the house 18–20px floor. **Rejected: letting it break the measure.** `main` is capped at 34rem by design and `.qe-wide` widens nothing on screen.
+
+**What would reopen it:** a reader saying the wrapped stanzas read as prose. The numbers are here so that conversation starts from them.

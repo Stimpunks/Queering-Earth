@@ -202,6 +202,20 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
   - [What we refuse](https://queering.earth/manifesto#refusals)
   - [Where this comes from](https://queering.earth/manifesto#where-this-comes-from)
 
+-
+
+[Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes)
+
+  - [Two shelves, and neither is the annexe](https://queering.earth/two-cohabitating-modes#two-shelves)
+  - [The fox knows many things](https://queering.earth/two-cohabitating-modes#the-proverb)
+  - [The hedgehog, entire](https://queering.earth/two-cohabitating-modes#the-hedgehog)
+  - [The fox, entire](https://queering.earth/two-cohabitating-modes#the-fox)
+  - [Both of them are feeding a family](https://queering.earth/two-cohabitating-modes#the-family)
+  - [The coat, and the curl](https://queering.earth/two-cohabitating-modes#the-coat)
+  - [Monotropy is not a personality, and the pairing is newer than it looks](https://queering.earth/two-cohabitating-modes#monotropy)
+  - [A ranking of six against six](https://queering.earth/two-cohabitating-modes#the-network)
+  - [Why uneasily is the word to keep](https://queering.earth/two-cohabitating-modes#uneasily)
+
 ### The cabinet itself
 
 -
@@ -240,7 +254,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-179 entries across 45 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+186 entries across 46 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
