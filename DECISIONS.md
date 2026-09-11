@@ -565,6 +565,22 @@ been rewriting it. The same goes for a source edited and reverted, and for two s
 one output where only one moved. **`CLAUDE.md`'s <q>exact rather than an mtime guess</q> is
 right, and this accident is not the evidence for it.**
 
+**SO THE EVIDENCE WAS MADE, RATHER THAN LEFT AS A DEDUCTION.** Edit `DECISIONS.md` and do not
+regenerate; then let `git` rewrite `what-is-settled.md`, as a checkout or a merge does. The two
+verdicts then disagree on the same pair of files:
+
+| | |
+|---|---|
+| `mtime` | derived is newer than or equal to its source &mdash; **fresh** |
+| content, via `check-metadata.mjs` | **stale**, and it fails |
+
+**The two timestamps came out identical to the second**, which is also what a session reported
+from a worktree the harness had recycled underneath it: `DECISIONS.md`, `what-is-settled.md`,
+`changelog.html` and `changelog.md` all written at once, source and derived indistinguishable by
+time. A tree in that state reads entirely fresh to `mtime` **whether or not the generators have
+ever been run against it** &mdash; and a merge, a conflict resolution or a recycled worktree puts
+it in that state routinely, which is the condition this repo has been in for most of two days.
+
 **THE INTERLOCK EXISTS, IT FIRED, AND IT WAS IGNORED &mdash; which is the actual fault and is
 worth stating precisely, because the tempting conclusion is that a guard is missing.** The
 documented command is `make-records && make-search-index && make-markdown`, and `&&` is the
