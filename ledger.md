@@ -34,6 +34,38 @@ It is **not** a rule that Ryan's quote collection is unusable. A direct quotatio
 
 ## Verified
 
+### Sheet No. 11 — four artists, five primaries, read 11 September 2026
+
+**Quoted on:** [My Gloomy Sunflowers](https://queering.earth/gloomy-sunflowers), Sheet No. 11.
+
+Every quotation below was read in the work it comes from, on 11 September 2026, by a session working from copies Ryan holds. Where a copy is imperfect that is said, because it changed the answer twice.
+
+**Hannah Gadsby, *Nanette* (2018)** — the sunflowers passage. Ours is the wording that has stood on stimpunks.org since 2022, and it is the special's own. Credited to Gadsby by name and to the special, never to the platform.
+
+**Shoshana Kessock, "Falling/Burning"** — *"Hannah Gadsby told people artists don't have to suffer for their art, and I'll forever thank her for having the guts to stand up and say that to the world. Because I used to believe it was true."* In Alice Wong, ed., *Disability Visibility* (Vintage, 2020); first published on Kessock's own site, 12 July 2018, under the title *Falling/Burning: Hannah Gadsby, Nanette, and the Myth of the Mad Artist*, where all three passages were confirmed at source.
+
+**This is a correction as well as a citation.** stimpunks.org credits this passage to the anthology and links the Disability Visibility Project — absorbing a Disabled writer's byline into a book title, on an essay about being a bipolar creator. An open item for a session in that repo is recorded in `DECISIONS.md`.
+
+**Robert Earl Hardy, *A Deeper Blue: The Life and Music of Townes Van Zandt*** (University of North Texas Press, 2008), read from the PDF in the SKS. Four quotations: the psychological report's *"feminine elements"* passage and the official diagnosis, both quoted by Hardy from the 1964 Titus Harris Clinic file; Fran Petters on the young doctor who left psychiatry; and Fran Petters on the rote memory.
+
+**The Army letter is deliberately given in both of its wordings**, because Hardy gives both — the main text's *"an acute schizophrenic and was only marginally adapting to life"* and endnote 17's record of a March 1998 *Texas Monthly* piece in which the same witness recalls *"an acute manic-depressive who has made minimal adjustments to life."* Quoting either alone would be picking a witness's better take and calling it the record.
+
+**Vincent van Gogh, letters 855 and 857**, read at [vangoghletters.org](https://vangoghletters.org/vg/), the Van Gogh Museum and Huygens Institute edition — the primary, free and complete. Letter 855 to his mother, Saint-Rémy, 19 February 1890; letter 857 to Theo, Saint-Rémy, on or about 17 March 1890, from which three passages are mounted **in the order the letter has them**, because the order is the argument.
+
+**Neither Van Gogh PDF in the SKS was used, and neither could have been.** One is Volume II of the old three-volume English edition and stops in 1885; the other is a 19-page publisher's brochure for the 2009 six-volume edition. Recorded in `DECISIONS.md`.
+
+**Sylvia Plath, *The Unabridged Journals of Sylvia Plath*, ed. Karen V. Kukil** (Anchor, 2000), entry of Friday, 20 June 1958, **p. 395**.
+
+**Quoted with "which ever" as two words and a spaced en dash**, which is how Kukil sets it. Settled across three copies on 11 September 2026: the PDF in the SKS read on the page, the Kindle edition, and archive.org's search-inside of the print edition, which returns exactly one result for the phrase. The date carries no year in the journal and is derived: she records finishing at Smith *"about 10 days ago, on Sunday June ist"*, and 1 June fell on a Sunday in 1958.
+
+**stimpunks.org closes the two words into one and the spaced en dash into an em dash**, and cites the passage to a Poetry Foundation biography page rather than to the journal. A tightened quotation of the exact kind this file exists to catch, on our own site. Open item in `DECISIONS.md`.
+
+**Michael Azerrad, *Come As You Are: The Story of Nirvana*** (Doubleday, 1993), read from the EPUB in the SKS. Three quotations: the hyperactivity and Ritalin passage; the scoliosis and the guitar; and the stomach specialists, ending on Azerrad's own *"Ironically, Kurt's condition may have something to do with his agonized wail. Or vice versa."* Kurt's *"this manic depressive at nine years old"* is his own words as Azerrad quotes them, and the sheet says so — **a self-description, not a diagnosis.** The words *bipolar* and *attention deficit* do not occur in the book, and the sheet says that too.
+
+**Kurt Cobain, liner notes to *Incesticide*** (DGC, December 1992). Four passages: the Raincoats encounter, the list including the *Saturday Night Live* line, and — **mounted together, as one quotation, because they are one sentence's worth of thought** — the account of the rape and the request that follows from it. Splitting the request from its reason turns it into a slogan, which is what usually happens to it.
+
+**Read from a scan supplied by Ryan, which carries a fan-site watermark.** The wording should be checked against a physical sleeve before this entry is called closed. Flagged on the sheet's own label rather than only here.
+
 ### Octavia E. Butler — the *Parable* novels, and a preview that crossed a book boundary
 
 **Quoted on:** [Other People Who Have It](https://queering.earth/other-people-who-have-it), Sheet No.&nbsp;10.

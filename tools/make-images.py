@@ -316,6 +316,8 @@ og_card(REPO/"images"/"og-other-people-who-have-it.png", "Other People Who Have 
         "Sheet · a reading",
         "A disability invented because nobody had it.",
         VERDIGRIS)
+og_card(REPO/"images"/"og-gloomy-sunflowers.png", "My Gloomy Sunflowers", "Sheet \u00b7 an essay",
+        "Four artists filed under tortured, read for the people who kept them here.", MARIGOLD)
 og_card(REPO/"images"/"og-mission.png", "What this cabinet is for", "The founding papers",
         "Thirteen aims, each with the page where it is already being kept.", VIOLET)
 og_card(REPO/"images"/"og-manifesto.png", "Nothing here was inevitable", "The founding papers",

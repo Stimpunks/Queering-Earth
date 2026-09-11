@@ -29,6 +29,7 @@ tools/make-markdown.mjs; nothing here is hand-kept.
 - [The Preferred Flower of Life](https://queering.earth/monotropa-uniflora): Monotropa uniflora, the ghost pipe: a plant with no chlorophyll that feeds off fungi, the flower Emily Dickinson called the preferred flower of life, and the Greek root it shares with monotropism. [Markdown](https://queering.earth/monotropa-uniflora.md)
 - [The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks): Lewis Carroll's Snark, a creature named before anybody saw it; Deleuze's empty square; and Kassiane Asasumasu, who coined neurodivergent and had to say so out loud. [Markdown](https://queering.earth/five-unmistakable-marks.md)
 - [Other People Who Have It](https://queering.earth/other-people-who-have-it): Octavia Butler's hyperempathy, which Sami Schalk reads as a disability with no real-world equivalent, and the Autistic people who have been describing it under the same name for years. [Markdown](https://queering.earth/other-people-who-have-it.md)
+- [My Gloomy Sunflowers](https://queering.earth/gloomy-sunflowers): Townes Van Zandt, Vincent van Gogh, Sylvia Plath and Kurt Cobain, read against the myth that made them: four records in which the work was not the symptom but the thing that was going well. [Markdown](https://queering.earth/gloomy-sunflowers.md)
 
 ## The founding papers
 

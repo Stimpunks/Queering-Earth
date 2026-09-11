@@ -37,6 +37,36 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 11 September · latest
 
+## Sheet No. 11, and four biographies that would not say what they were supposed to
+
+Ryan’s, opening the research: “They help me process the immense ache of this world. They are my gloomy sunflowers.” The sheet was proposed, researched over one day against five primary sources, and mounted the same day — and the research overturned most of what the proposal had asserted on the strength of secondary sources.
+
+MountedMy Gloomy Sunflowers
+
+[Sheet No. 11](https://queering.earth/gloomy-sunflowers), an essay, signed — the second on the plate after [No. 2](https://queering.earth/coming-to-terms). Townes Van Zandt, Vincent van Gogh, Sylvia Plath and Kurt Cobain, read against the myth that made them.
+
+**The argument is Hannah Gadsby’s and Shoshana Kessock’s before it is ours**, and both are credited on the sheet by name. What this sheet adds is the evidence: five primaries read at source in one day, and in three separate archives the same shape turned up — **the work read as a symptom, and the record saying it was the thing that was going well.**
+
+**It does not claim the four share a diagnosis, because they do not.** A contemporaneous clinical file for one, a hedged retrospective paper for another, a psychiatrist arguing the opposite in print for the third, and a passing self-description for the fourth. What they share is having been treated as a diagnosis and read afterwards as one.
+
+It carries a content note and crisis resources, and follows safe-messaging practice: no methods, no locations, and the deaths are not presented as the end of the argument.
+
+Re-determinedGalveston was 1964, the diagnosis was not manic depression, and it was the Army
+
+The proposal for this sheet repeated the account every tertiary source carries: 1962 or 1963, three months of insulin shock, a diagnosis of manic depression, an Air Force rejection. **Hardy’s documented biography disagrees on every count.** Admitted to the Titus Harris Clinic at UTMB Galveston on 14 March 1964, one week after his twentieth birthday. Official diagnosis: “Schizophrenic reaction, Schizo-affective type (Depression).” Insulin coma therapy *and* electroshock, nearly forty treatments between early April and early June. And it was the Army, not the Air Force.
+
+**The famous sentence is a recollection of a recollection.** Hardy’s main text has Fran Petters recalling a letter calling Townes “an acute schizophrenic”; his endnote records the same woman, in a 1998 magazine piece, recalling “an acute manic-depressive who has made minimal adjustments to life.” One witness, two wordings, two illnesses, thirty years apart. Hardy printed both and footnoted the discrepancy. The internet took the more quotable one.
+
+Nothing on this site had published the wrong version — the correction was made before the sheet was written rather than after. It is logged here because the near miss is the point: **five tertiary sources agreeing with each other were one source.**
+
+Label correctedWhich ever, two words
+
+Plath’s “two electric currents” passage is quoted on this sheet from *The Unabridged Journals*, ed. Kukil, 20 June 1958, p. 395 — with **which ever** as two words, and a spaced en dash, because that is how Kukil sets it and Kukil’s edition exists to preserve Plath’s own spelling and spacing.
+
+**Our sister site has been closing it up for years**, and citing it to a biography page rather than to the journal and its date. Settled across three copies the same day, including archive.org’s search-inside of the print edition, which returns exactly one result for the phrase. [The reasoning is in the decision log](https://queering.earth/what-is-settled), along with the methodological half: **an edition that quietly normalises is more dangerous than one that obviously mangles**, because the mangled copy announces itself.
+
+2026 · 11 September
+
 ## One typeface was too wide for the masthead, and the gate had been rendering one of ten states
 
 Ryan, on the two options put to him after the centring fix: “option 1, and teach the gate the nine faces.” The first is four lines of CSS. **The second is the one that mattered** — the gate had been reporting `PASS` on twenty-five pages while rendering the default typeface and nothing else.
@@ -2148,6 +2178,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks) Sheet No. 9
 
 ### [Other People Who Have It](https://queering.earth/other-people-who-have-it) Sheet No. 10
+
+### [My Gloomy Sunflowers](https://queering.earth/gloomy-sunflowers) Sheet No. 11
 
 ### [Find a word in the cabinet](https://queering.earth/search) the finding aid
 

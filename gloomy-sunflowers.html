@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Gloomy Sunflowers &mdash; Queering Earth</title>
+<meta name="description" content="Townes Van Zandt, Vincent van Gogh, Sylvia Plath and Kurt Cobain, read against the myth that made them: four records in which the work was not the symptom but the thing that was going well.">
+<link rel="canonical" href="https://queering.earth/gloomy-sunflowers">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Queering Earth">
+<meta property="og:title" content="My Gloomy Sunflowers">
+<meta property="og:description" content="Four artists filed under tortured, read for the people who kept them here &mdash; and for the records that say the work was the thing going well.">
+<meta property="og:url" content="https://queering.earth/gloomy-sunflowers">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://queering.earth/images/og-gloomy-sunflowers.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="My Gloomy Sunflowers. Sheet No. 11, an essay.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My Gloomy Sunflowers">
+<meta name="twitter:description" content="Four artists filed under tortured, read for the people who kept them here.">
+<meta name="twitter:image" content="https://queering.earth/images/og-gloomy-sunflowers.png">
+<meta name="twitter:image:alt" content="My Gloomy Sunflowers. Sheet No. 11, an essay.">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- The faces are self-hosted and declared in queering.css. Preloading the body
+     roman is the one that pays: it is the first thing every page needs, and there
+     is no cross-origin handshake to wait on any more. crossorigin is required
+     even same-origin — a font is always fetched in CORS mode. -->
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
+     either one would flash the wrong page: the decorated page at someone who
+     turned it off, or the daylight sheet at someone who asked for the cabinet.
+     With no stored ground, neither class is set and the media query decides. -->
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
+<!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
+     rel=alternate points an agent at this page's Markdown source, derived from this
+     page's own main landmark by tools/make-markdown.mjs.
+
+     NO ANGLE-BRACKET TAG NAMES IN A COMMENT NEAR THE HEAD. Writing the landmark's name
+     with brackets here made a /<main[^>]*>/ extractor match inside this very comment
+     and take the head as the page body. The SKS mirror reads that landmark too. -->
+<link rel="describedby" href="/llms.txt" type="text/markdown" title="Site index for agents">
+<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Queering Earth — the accession register">
+<link rel="alternate" href="https://queering.earth/gloomy-sunflowers.md" type="text/markdown" title="My Gloomy Sunflowers — Markdown source">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://queering.earth/gloomy-sunflowers#page",
+  "description": "Townes Van Zandt, Vincent van Gogh, Sylvia Plath and Kurt Cobain, read against the myth that made them: four records in which the work was not the symptom but the thing that was going well.",
+  "url": "https://queering.earth/gloomy-sunflowers",
+  "inLanguage": "en",
+  "isFamilyFriendly": true,
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "publisher": [
+    { "@type": "Organization", "name": "Stimpunks Foundation", "url": "https://stimpunks.org/" },
+    { "@type": "Organization", "name": "More Realms", "url": "https://morerealms.com/" }
+  ],
+  "headline": "My Gloomy Sunflowers",
+  "dateModified": "2026-09-11",
+  "author": [
+    { "@type": "Person", "name": "Ryan Boren" }
+  ],
+  "about": [
+    { "@type": "CreativeWork", "name": "A Deeper Blue: The Life and Music of Townes Van Zandt",
+      "author": { "@type": "Person", "name": "Robert Earl Hardy" } },
+    { "@type": "CreativeWork", "name": "The Letters of Vincent van Gogh",
+      "author": { "@type": "Person", "name": "Vincent van Gogh" } },
+    { "@type": "CreativeWork", "name": "The Unabridged Journals of Sylvia Plath",
+      "author": { "@type": "Person", "name": "Sylvia Plath" } },
+    { "@type": "CreativeWork", "name": "Come As You Are: The Story of Nirvana",
+      "author": { "@type": "Person", "name": "Michael Azerrad" } },
+    { "@type": "CreativeWork", "name": "Incesticide (liner notes)",
+      "author": { "@type": "Person", "name": "Kurt Cobain" } }
+  ],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Queering Earth", "item": "https://queering.earth/" },
+      { "@type": "ListItem", "position": 2, "name": "The plate", "item": "https://queering.earth/the-plate" },
+      { "@type": "ListItem", "position": 3, "name": "My Gloomy Sunflowers", "item": "https://queering.earth/gloomy-sunflowers" }
+    ]
+  },
+  "isPartOf": { "@type": "WebSite", "name": "Queering Earth", "url": "https://queering.earth/" },
+  "encoding": {
+    "@type": "MediaObject",
+    "encodingFormat": "text/markdown",
+    "contentUrl": "https://queering.earth/gloomy-sunflowers.md"
+  }
+}
+</script>
+</head>
+<!-- Where this sheet is foxed. Four stains, stated here because a stain is a
+     fact about one piece of paper and not about the site — the same idiom as --rot
+     on a slip. Defaults for anything that states none are in queering.css. -->
+<body style="--qe-fox-a: 6% 14%; --qe-fox-b: 88% 9%; --qe-fox-c: 64% 88%; --qe-fox-d: 16% 72%">
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+  <details class="qe-reading" name="qe-tray">
+    <summary class="qe-reading-summary">Reading</summary>
+    <div class="qe-reading-panel">
+      <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
+      <ul class="qe-reading-list">
+        <li>
+          <label><input type="checkbox" id="qe-set-motion"> <span>Reduce motion</span></label>
+          <span class="qe-reading-hint">The drawings appear finished instead of drawing themselves on.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-contrast"> <span>More contrast</span></label>
+          <span class="qe-reading-hint">Darker ink, firmer rules, and the foxing lifted off the paper.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
+          <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-textsize">Text size</label>
+            <select class="qe-reading-select" id="qe-set-textsize">
+              <option value="">Your device&rsquo;s size</option>
+              <option value="larger">Larger</option>
+              <option value="largest">Largest</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-font">Typeface</label>
+            <select class="qe-reading-select qe-reading-select-wide" id="qe-set-font">
+              <option value="">Fraunces &amp; Newsreader</option>
+              <option value="adelphe">Adelphe</option>
+              <option value="atkinson">Atkinson Hyperlegible</option>
+              <option value="baskervvol">BBB Baskervvol</option>
+              <option value="coxinelle">Coxinelle</option>
+              <option value="insolente">Insolente</option>
+              <option value="redaction">Redaction Inclusive</option>
+              <option value="sporting">Sporting Grotesque</option>
+              <option value="trickster">Trickster</option>
+              <option value="victorianna">Victorianna</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">The first four also set the reading face, because they have a real italic. The rest change the headings and leave Newsreader to read.</span>
+        </li>
+      </ul>
+      <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
+  <!-- The drawers. Three collections, and everything on the site is in one of
+       them. A native details element, like the reading settings beside it and for
+       the same reason: a hand-built menu would need focus trapping, a roving
+       tabindex and an Escape handler, and getting any of that wrong makes the
+       navigation the least navigable thing on the sheet. -->
+  <details class="qe-drawers" name="qe-tray">
+    <summary class="qe-drawers-summary">Drawers</summary>
+    <div class="qe-drawers-panel">
+      <ul class="qe-drawers-list">
+        <li>
+          <a class="qe-drawers-link" href="/the-plate" aria-current="true">The plate</a>
+          <span class="qe-drawers-hint">The sheets themselves, mounted and numbered on one plate.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-founding-papers">The founding papers</a>
+          <span class="qe-drawers-hint">Why this cabinet exists, and what it is for.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-cabinet-itself">The cabinet itself</a>
+          <span class="qe-drawers-hint">How it is made, what it has recorded, and what it knows about you.</span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <!-- The easter egg. An ornament that is a door: unlabelled to the eye,
+       named in the DOM, and pointing at a page that is listed in the
+       footer row, on the home page and in the sitemap like any other. -->
+  <a class="qe-modes-link" href="/two-cohabitating-modes">
+  <svg class="qe-modes-mark" viewBox="1 2.2 41.3 20" aria-hidden="true" focusable="false">
+    <!-- the fox: brush, body, neck, skull, muzzle, nose, two ears, four legs -->
+    <path d="M7.4,15.6 C4.2,16.2 1.4,14.2 1.5,10.4 C1.6,8.5 2.6,7.2 4.0,6.9 C4.5,9.1 5.7,10.8 7.9,12.0 L7.4,15.6 Z"/>
+    <path d="M6.6,16.2 C5.8,12.9 8.0,10.7 11.8,10.7 C15.2,10.7 17.2,12.1 17.2,14.6 C17.2,16.6 15.6,17.5 12.2,17.5 C9.0,17.5 7.0,17.0 6.6,16.2 Z"/>
+    <path d="M14.2,12 L15.8,9.2 L18.8,11 L17,13.8 Z"/>
+    <path d="M15.1,8.4 C15.1,6.8 16.4,5.7 18.0,5.7 C19.7,5.7 20.9,6.9 20.9,8.5 C20.9,10.2 19.6,11.3 17.9,11.3 C16.3,11.3 15.1,10.1 15.1,8.4 Z"/>
+    <path d="M19.3,7 L22.3,8.6 L19.5,10.2 Z"/>
+    <path d="M21.9,8.6 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M15.2,6.5 L14.6,2.9 L17.5,5.6 Z"/>
+    <path d="M17.7,5.4 L19.1,2.7 L20.3,6.1 Z"/>
+    <path d="M7,16.6 L6.6,21.7 L8.25,21.7 L8.65,16.6 Z"/>
+    <path d="M8.7,17.1 L8.7,21.7 L10.35,21.7 L10.35,17.1 Z"/>
+    <path d="M13,17.2 L13,21.7 L14.65,21.7 L14.65,17.2 Z"/>
+    <path d="M14.7,16.8 L15.15,21.7 L16.8,21.7 L16.35,16.8 Z"/>
+    <!-- the hedgehog: the dome, sixteen spines on its own normal, snout, nose, two feet -->
+    <path d="M25.92,20 L25.92,19.63 L26.01,18.85 L26.19,17.98 L26.45,17.08 L26.8,16.19 L27.21,15.32 L27.7,14.51 L28.25,13.76 L28.85,13.1 L29.5,12.54 L30.19,12.09 L30.91,11.77 L31.65,11.57 L32.4,11.5 L33.15,11.57 L33.89,11.77 L34.61,12.09 L35.3,12.54 L35.95,13.1 L36.55,13.76 L37.1,14.51 L37.59,15.32 L38,16.19 L38.35,17.08 L38.61,17.98 L38.79,18.85 L38.88,19.63 L38.88,20 Z"/>
+    <path d="M25.62,18.2 L23.5,20.11 L26.34,19.89 Z"/>
+    <path d="M26.04,16.77 L23.67,18.35 L26.51,18.55 Z"/>
+    <path d="M26.69,15.31 L24.1,16.5 L26.88,17.14 Z"/>
+    <path d="M27.53,13.94 L24.78,14.69 L27.42,15.77 Z"/>
+    <path d="M28.56,12.75 L25.72,13 L28.13,14.54 Z"/>
+    <path d="M29.74,11.83 L26.91,11.51 L28.96,13.49 Z"/>
+    <path d="M31.02,11.23 L28.32,10.31 L29.89,12.68 Z"/>
+    <path d="M32.35,10.99 L29.94,9.47 L30.91,12.15 Z"/>
+    <path d="M33.66,11.13 L31.69,9.08 L32,11.91 Z"/>
+    <path d="M34.92,11.63 L33.48,9.17 L33.11,12 Z"/>
+    <path d="M36.07,12.45 L35.21,9.73 L34.23,12.41 Z"/>
+    <path d="M37.08,13.55 L36.8,10.71 L35.29,13.13 Z"/>
+    <path d="M37.93,14.86 L38.18,12.02 L36.25,14.12 Z"/>
+    <path d="M38.61,16.33 L39.33,13.57 L37.07,15.32 Z"/>
+    <path d="M39.08,17.87 L40.22,15.25 L37.72,16.63 Z"/>
+    <path d="M39.34,19.38 L40.85,16.96 L38.18,17.96 Z"/>
+    <path d="M38.01,17.91 L41.81,21.11 L37.21,21.01 Z"/>
+    <path d="M41.11,20.61 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M27.8,19.7 L27.8,21.7 L29.35,21.7 L29.35,19.7 Z"/>
+    <path d="M35.2,19.7 L35.2,21.7 L36.75,21.7 L36.75,19.7 Z"/>
+  </svg>
+    <span class="qe-sr">Two cohabitating modes</span>
+  </a>
+</div>
+
+<!-- The drift rail: this page's own h2s, in the left margin, above 77rem and
+     nowhere below it. Empty here and filled by queering.js — one derivation, two
+     views, the other being the contents list inside the measure. OUTSIDE the
+     landmark, like every other nav here, so the mirror never reads it. -->
+<nav class="qe-rail" aria-label="On this page" hidden>
+  <ol></ol>
+  <svg class="qe-botanical qe-rail-sprig" viewBox="0 0 28 27" aria-hidden="true" focusable="false">
+    <path class="stem" style="--len:34" d="M0.6,0 C0.7,7.2 1.9,13.4 4.6,18.4 C6.1,21.2 7.8,23.2 9.6,24.6"/>
+    <g class="sprout sprout-leaf" style="--i:0">
+      <path d="M1.7,7.9 C5.1,5.5 8.9,6.6 10.8,10.2 C7.3,11.3 3.6,10.4 1.7,7.9 Z"/>
+    </g>
+    <g class="sprout sprout-leaf" style="--i:1">
+      <path d="M3.5,14.6 C7.2,12.8 11.2,14.1 13.2,17.9 C9.5,18.8 5.6,17.4 3.5,14.6 Z"/>
+    </g>
+    <g class="sprout" style="--i:2">
+      <circle cx="10.4" cy="25.4" r="1.5"/>
+    </g>
+  </svg>
+</nav>
+
+<main id="main" tabindex="-1">
+
+  <header class="qe-masthead qe-masthead-sheet">
+    <nav class="qe-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Queering Earth</a></li>
+        <li><a href="/the-plate">The plate</a></li>
+      </ol>
+    </nav>
+    <p class="qe-kicker">Sheet &middot; an essay</p>
+    <h1>My Gloomy Sunflowers</h1>
+
+    <svg class="qe-botanical" viewBox="86 24 400 164" role="img" aria-label="Four sunflowers on one stem, heads bowed at different angles, each a different colour." focusable="false">
+      <path class="stem" style="--len:392" stroke-width="2.4" d="M112 180 C 158 156, 206 138, 262 120 C 330 98, 400 84, 466 78"/>
+      <path class="stem" style="--len:40" stroke-width="1.8" d="M176 152 C 172 138, 170 128, 168 116"/>
+      <path class="stem" style="--len:40" stroke-width="1.8" d="M248 124 C 248 110, 248 100, 248 88"/>
+      <path class="stem" style="--len:40" stroke-width="1.8" d="M344 96 C 347 82, 349 72, 351 60"/>
+      <path class="stem" style="--len:40" stroke-width="1.8" d="M434 80 C 438 66, 440 56, 442 44"/>
+
+      <g transform="translate(200 140) rotate(152)"><g class="sprout sprout-leaf" style="--i:1"><path class="leaf" d="M0 0 C 6.6 -8.6, 20 -9.1, 26 0 C 20 9.1, 6.6 8.6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 25 0"/></g></g>
+      <g transform="translate(292 113) rotate(26)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" d="M0 0 C 5.4 -7, 16.5 -7.4, 21.4 0 C 16.5 7.4, 5.4 7, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 20.5 0"/></g></g>
+      <g transform="translate(396 88) rotate(158)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" d="M0 0 C 6.6 -8.6, 20 -9.1, 26 0 C 20 9.1, 6.6 8.6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 25 0"/></g></g>
+
+      <!-- Four heads on one stem, no two the same colour. The first draft's comment
+           claimed they were bowed, which a six-petal rosette at 14 degrees does not
+           read as at any size — a caption asserting something the marks do not carry,
+           which is the gold-join-on-an-unmended-sheet fault in miniature. The marks
+           say four and one. That is all they are claimed to say. -->
+      <g transform="translate(168 116) rotate(14) scale(1.45)"><g class="sprout" style="--i:7"><ellipse class="bloom" cx="5.2" cy="0" rx="4" ry="2.4" transform="rotate(0 5.2 0)"/><ellipse class="bloom" cx="2.6" cy="4.5" rx="4" ry="2.4" transform="rotate(60 2.6 4.5)"/><ellipse class="bloom" cx="-2.6" cy="4.5" rx="4" ry="2.4" transform="rotate(120 -2.6 4.5)"/><ellipse class="bloom" cx="-5.2" cy="0" rx="4" ry="2.4" transform="rotate(180 -5.2 0)"/><ellipse class="bloom" cx="-2.6" cy="-4.5" rx="4" ry="2.4" transform="rotate(240 -2.6 -4.5)"/><ellipse class="bloom" cx="2.6" cy="-4.5" rx="4" ry="2.4" transform="rotate(300 2.6 -4.5)"/><circle class="body" cx="0" cy="0" r="2.4"/></g></g>
+      <g transform="translate(248 88) rotate(-9) scale(1.45)"><g class="sprout" style="--i:8"><ellipse class="bloom-alt" cx="5.2" cy="0" rx="4" ry="2.4" transform="rotate(0 5.2 0)"/><ellipse class="bloom-alt" cx="2.6" cy="4.5" rx="4" ry="2.4" transform="rotate(60 2.6 4.5)"/><ellipse class="bloom-alt" cx="-2.6" cy="4.5" rx="4" ry="2.4" transform="rotate(120 -2.6 4.5)"/><ellipse class="bloom-alt" cx="-5.2" cy="0" rx="4" ry="2.4" transform="rotate(180 -5.2 0)"/><ellipse class="bloom-alt" cx="-2.6" cy="-4.5" rx="4" ry="2.4" transform="rotate(240 -2.6 -4.5)"/><ellipse class="bloom-alt" cx="2.6" cy="-4.5" rx="4" ry="2.4" transform="rotate(300 2.6 -4.5)"/><circle class="body" cx="0" cy="0" r="2.4"/></g></g>
+      <g transform="translate(351 60) rotate(19) scale(1.45)"><g class="sprout" style="--i:9"><ellipse class="bloom-violet" cx="5.2" cy="0" rx="4" ry="2.4" transform="rotate(0 5.2 0)"/><ellipse class="bloom-violet" cx="2.6" cy="4.5" rx="4" ry="2.4" transform="rotate(60 2.6 4.5)"/><ellipse class="bloom-violet" cx="-2.6" cy="4.5" rx="4" ry="2.4" transform="rotate(120 -2.6 4.5)"/><ellipse class="bloom-violet" cx="-5.2" cy="0" rx="4" ry="2.4" transform="rotate(180 -5.2 0)"/><ellipse class="bloom-violet" cx="-2.6" cy="-4.5" rx="4" ry="2.4" transform="rotate(240 -2.6 -4.5)"/><ellipse class="bloom-violet" cx="2.6" cy="-4.5" rx="4" ry="2.4" transform="rotate(300 2.6 -4.5)"/><circle class="body" cx="0" cy="0" r="2.4"/></g></g>
+      <g transform="translate(442 44) rotate(-16) scale(1.45)"><g class="sprout" style="--i:10"><ellipse class="bloom-lichen" cx="5.2" cy="0" rx="4" ry="2.4" transform="rotate(0 5.2 0)"/><ellipse class="bloom-lichen" cx="2.6" cy="4.5" rx="4" ry="2.4" transform="rotate(60 2.6 4.5)"/><ellipse class="bloom-lichen" cx="-2.6" cy="4.5" rx="4" ry="2.4" transform="rotate(120 -2.6 4.5)"/><ellipse class="bloom-lichen" cx="-5.2" cy="0" rx="4" ry="2.4" transform="rotate(180 -5.2 0)"/><ellipse class="bloom-lichen" cx="-2.6" cy="-4.5" rx="4" ry="2.4" transform="rotate(240 -2.6 -4.5)"/><ellipse class="bloom-lichen" cx="2.6" cy="-4.5" rx="4" ry="2.4" transform="rotate(300 2.6 -4.5)"/><circle class="body" cx="0" cy="0" r="2.4"/></g></g>
+    </svg>
+  </header>
+
+  <div class="qe-label">
+    <dl>
+      <dt>Written by</dt>
+      <dd>Ryan Boren</dd>
+      <dt>Read</dt>
+      <dd>Townes Van Zandt, Vincent van Gogh, Sylvia Plath, Kurt Cobain</dd>
+      <dt>Copies read</dt>
+      <dd>Robert Earl Hardy, <cite>A Deeper Blue</cite> (University of North Texas Press, 2008) &middot; <cite>The Letters of Vincent van Gogh</cite>, the Van Gogh Museum and Huygens Institute edition at <a href="https://vangoghletters.org/vg/">vangoghletters.org</a> &middot; <cite>The Unabridged Journals of Sylvia Plath</cite>, ed. Karen V. Kukil (Anchor, 2000) &middot; Michael Azerrad, <cite>Come As You Are</cite> (Doubleday, 1993) &middot; the <cite>Incesticide</cite> sleeve</dd>
+      <dt>Also read</dt>
+      <dd>Hannah Gadsby, <cite>Nanette</cite> (2018) &middot; Shoshana Kessock, <a href="https://shoshanakessock.wordpress.com/2018/07/12/falling-burning-hannah-gadsby-nanette-and-the-myth-of-the-mad-artist/"><cite>Falling/Burning</cite></a> (2018)</dd>
+      <dt>Content</dt>
+      <dd>Psychiatric treatment, suicide, and one account of a rape. No methods are described. Help, at the foot.</dd>
+    </dl>
+  </div>
+
+  <p class="qe-lede">I have spent years with four artists, usually together: a van Gogh open on the screen, Plath in my hands, Townes Van Zandt and Kurt Cobain in my ears. They help me process what a writer about Townes once called <q>the immense ache of this world.</q> <strong>They are my gloomy sunflowers.</strong> All four are sold to me, and have been my whole life, as proof of one idea &mdash; that the pain is where the work came from. I do not believe it any more. This sheet is the reading that stopped me, and the four records that would not support it.</p>
+
+  <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
+    <h2 id="qe-contents-h">On this sheet</h2>
+    <ol></ol>
+  </nav>
+
+  <h2 id="the-tether">The tether <a class="qe-anchor" href="#the-tether"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Hannah Gadsby, at the end of <cite>Nanette</cite>, on the painter everybody reaches for first:</p>
+
+  <blockquote cite="https://www.netflix.com/title/80233611">
+    <p>Do you know why we have the sunflowers? It&rsquo;s not because Vincent van Gogh suffered. It&rsquo;s because Vincent van Gogh had a brother who loved him. Through all the pain, he had a tether, a connection to the world. And that is the focus of the story we need. Connection.</p>
+    <footer>Hannah Gadsby, <cite>Nanette</cite>, 2018</footer>
+  </blockquote>
+
+  <p>Shoshana Kessock, a writer and game designer with bipolar II, watched the same special and wrote the essay this sheet leans on hardest. She published it on her own site in July 2018, under a title that names the thing exactly &mdash; <a href="https://shoshanakessock.wordpress.com/2018/07/12/falling-burning-hannah-gadsby-nanette-and-the-myth-of-the-mad-artist/"><cite>Falling/Burning: Hannah Gadsby, Nanette, and the Myth of the Mad Artist</cite></a> &mdash; and it was collected in Alice Wong&rsquo;s <cite>Disability Visibility</cite> two years later. She describes her own working days, the good ones and the ones where the words would not come, and then this:</p>
+
+  <blockquote>
+    <p>Hannah Gadsby told people artists don&rsquo;t have to suffer for their art, and I&rsquo;ll forever thank her for having the guts to stand up and say that to the world. Because I used to believe it was true.</p>
+    <footer>Shoshana Kessock, <cite>Falling/Burning: Hannah Gadsby, Nanette, and Being a Bipolar Creator</cite>, in <cite>Disability Visibility</cite>, ed. Alice Wong, 2020</footer>
+  </blockquote>
+
+  <p><em>Because I used to believe it was true.</em> So did I. That is the sentence this sheet is written out of, and it is worth saying plainly that it is hers and not ours &mdash; she is a Disabled writer whose byline has more than once been absorbed into the anthology&rsquo;s title, including, until recently, on our own sister site.</p>
+
+  <h3>What the four do not share</h3>
+
+  <p>The tidy version of this sheet says: four artists, one diagnosis, one lesson. That version does not survive the sources, and the mess is more interesting than the tidiness.</p>
+
+  <ul>
+    <li><strong>Townes Van Zandt</strong> has a contemporaneous clinical record, and it does not say manic depression. The Galveston file of 1964 reads <q>Schizophrenic reaction, Schizo-affective type (Depression)</q>.</li>
+    <li><strong>Vincent van Gogh</strong> has the most careful retrospective diagnosis anybody has managed &mdash; and its own authors hedge it: a <q>(probably bipolar) mood disorder</q> with borderline traits, alcohol use disorder and malnutrition. It was reached by administering a structured psychiatric interview to three art historians.</li>
+    <li><strong>Sylvia Plath</strong> has a psychiatrist arguing the opposite in print: recurrent depressive disorder, in the context of borderline personality disorder, and explicitly <em>not</em> manic-depressive illness.</li>
+    <li><strong>Kurt Cobain</strong> has a childhood diagnosis of hyperactivity, and, for anything else, his own passing self-description. The word <q>bipolar</q> does not appear in the biography he cooperated with.</li>
+  </ul>
+
+  <p>Four artists the internet files under one label, and the evidence runs from a signed clinical note to a recollection to a peer-reviewed paper flatly refusing the label. <strong>What they actually share is not a diagnosis. It is having been treated as one, and read afterwards as one.</strong></p>
+
+  <p>And that is the part this cabinet exists for. <strong>Retrospective diagnosis is a genre, and it has a politics.</strong> Four dead people, none of whom consented, their inner lives argued over in journals by people who never met them, and the conclusions used to explain the work. I am going to use that literature, because it is careful and because ignoring it would be its own kind of dishonesty. I am also going to say what it is.</p>
+
+  <h2 id="the-insulin">Two rooms, nine years apart <a class="qe-anchor" href="#the-insulin"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Sylvia Plath was born on 27 October 1932. In September 1953, after a suicide attempt in August and a course of unmodified electroconvulsive therapy &mdash; no anaesthetic, no muscle relaxant &mdash; she was admitted to McLean Hospital, where her treatment included insulin. She was twenty.</p>
+
+  <p>John Townes Van Zandt was born on 7 March 1944. On 14 March 1964 his parents drove him from Houston to Galveston and admitted him to the Titus Harris Clinic at the University of Texas Medical Branch, where he was given insulin coma therapy and electroshock, about forty treatments between early April and early June. <strong>He had turned twenty seven days earlier.</strong></p>
+
+  <p>They never met. They shared a decade, a continent, a treatment, and an age. Both afterwards wrote about being emptied out, and one of them could not afterwards remember his own childhood.</p>
+
+  <p>I want to be careful here, because the neat version is available and it is not quite true. Insulin coma therapy was not a punishment and the people administering it were not villains; it was the best thing the profession thought it had, and Hardy is scrupulous about that. <strong>But it was done to two twenty-year-olds who were, between them, going to write <cite>Ariel</cite> and <cite>Waitin&rsquo; Around to Die</cite></strong>, and the profession has never quite reckoned with how confidently it was wrong.</p>
+
+  <h2 id="galveston">Galveston, 1964 <a class="qe-anchor" href="#galveston"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Almost everything on the internet about this is wrong, and I was repeating most of it a week ago. The usual version: 1962 or 1963, three months of insulin shock, a diagnosis of manic depression, and a treatment that erased his childhood. Hardy&rsquo;s biography &mdash; the documented one &mdash; has a different file.</p>
+
+  <p>The psychological report found an <q>obsessive-compulsive schizoid character with strong paranoid trends.</q> The official diagnosis was <q>Schizophrenic reaction, Schizo-affective type (Depression).</q> And the report explains its reasoning. He felt inadequate beside a successful father, and:</p>
+
+  <blockquote>
+    <p>there are indications of some feminine elements in his character structure and these feminine elements threaten his whole value system, sense of self, and adequacy as a male.</p>
+    <footer>The psychological report, Titus Harris Clinic, 1964, quoted in Robert Earl Hardy, <cite>A Deeper Blue</cite></footer>
+  </blockquote>
+
+  <p><strong>Read that again, because it is the reason this sheet exists on this site and not another one.</strong> A Texas clinic in 1964 looked at a gentle, sensitive, artistic teenager, found femininity in him, classed it as a threat to his adequacy as a male, filed it under a schizophrenic potential, and then treated it about forty times with insulin and electricity.</p>
+
+  <p>Nobody has to queer this document. It queers itself. It is an institution writing down, in clinical register and without embarrassment, that the problem with this young man is that he is not manly enough &mdash; and then doing something about it.</p>
+
+  <p>Not everybody in the building agreed. His first wife, Fran Petters, met one of his young doctors months later:</p>
+
+  <blockquote>
+    <p>he actually quit psychiatry because of Townes&rsquo; case. He said, &lsquo;I didn&rsquo;t think there was anything really wrong with him. I did not agree with the treatment.&rsquo;</p>
+    <footer>Fran Petters, quoted in Hardy, <cite>A Deeper Blue</cite></footer>
+  </blockquote>
+
+  <h3>The sentence that got quoted, and the one that got written down</h3>
+
+  <p>Two years later, with Vietnam escalating, Townes went to a recruiter to join the Army and needed a psychiatric clearance he did not get. The letter they wrote instead is the most quoted thing about his illness, and it exists in two versions from one witness.</p>
+
+  <p>In Hardy&rsquo;s main text, Fran Petters recalls a letter saying he was <q>an acute schizophrenic and was only marginally adapting to life.</q> In Hardy&rsquo;s endnote, recording a <cite>Texas Monthly</cite> piece of March 1998, the same woman recalls the doctors calling him <q>an acute manic-depressive who has made minimal adjustments to life.</q></p>
+
+  <p><strong>One witness, three decades apart, two wordings, two different illnesses.</strong> Hardy printed both and footnoted the discrepancy instead of choosing the better line. The internet chose. It took the 1998 version, because it scans better, and that is now the sentence everybody knows &mdash; including, until this week, me.</p>
+
+  <p>There is a whole argument about attribution sitting in that, and this cabinet keeps <a href="/ledger">a ledger</a> because of it. But the thing I keep returning to is smaller. <strong>A man was told, on paper, by a doctor, what he was. He read it and said, <q>I&rsquo;m crazy.</q></strong> Fran told him no, it was just making him 4-F. And the same doctor, in the same letter, wrote that Townes should be allowed to wander and find himself &mdash; which is the one piece of advice in this entire file that sounds like it was addressed to a person.</p>
+
+  <h3>The childhood he could not get back</h3>
+
+  <p>Fran again: <q>He virtually had no memory of his childhood.</q> His mother went through the family photograph albums with him, over and over, telling him the stories, trying to rebuild it &mdash; and what came back was not quite memory:</p>
+
+  <blockquote>
+    <p>It was like rote memory, not a picture memory. I think it started coming back over time, but he never trusted that it was a real memory.</p>
+    <footer>Fran Petters, quoted in Hardy, <cite>A Deeper Blue</cite></footer>
+  </blockquote>
+
+  <p><strong>Hardy will not close the loop, and I am not going to close it for him.</strong> A doctor at the same hospital told him that electroshock causes short-term loss but that wiping out blocks of childhood <q>is not the result of such treatment</q>, and offered alcoholism as an alternative explanation; other people close to Townes thought he was exaggerating it to work on his parents. <strong>The clean story &mdash; the treatment took his childhood &mdash; is the one thing the careful biography declines to assert.</strong> I want it to be true because it is a better sentence. That is exactly why I should not have it.</p>
+
+  <h2 id="almond-blossom">The almond tree <a class="qe-anchor" href="#almond-blossom"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>On 31 January 1890 Theo wrote to his brother in the asylum at Saint-R&eacute;my to say that his son had been born, and that they had named him Vincent Willem. Vincent started a painting for the child: branches in flower, seen from below, against a blue sky. To his mother, on 19 February, he described it as <q>large branches of white almond blossom against a blue sky.</q></p>
+
+  <p>Then, in a letter to Theo of about 17 March 1890, three passages. They are in this order:</p>
+
+  <blockquote cite="https://vangoghletters.org/vg/letters/let857/letter.html">
+    <p>Work was going well, the last canvas of the branches in blossom, you&rsquo;ll see that it was perhaps the most patiently worked, best thing I had done, painted with calm and a greater sureness of touch.</p>
+    <p>I&rsquo;m picking up this letter again to try and write, it will come little by little, it&rsquo;s just that my mind has been so affected &ndash; without pain, it&rsquo;s true &ndash; but totally stupefied.</p>
+    <p>And so I almost or entirely despair of myself.</p>
+    <footer>Vincent van Gogh to Theo van Gogh, Saint-R&eacute;my-de-Provence, on or about Monday 17 March 1890, <a href="https://vangoghletters.org/vg/letters/let857/letter.html">letter 857</a></footer>
+  </blockquote>
+
+  <p><strong>The myth has the arrow pointing one way. This letter points it the other.</strong> The calmest, most patiently worked thing he ever made was made for a baby, in an asylum, during a stretch when work was going well &mdash; and then the illness arrived and stopped him, and he picked the same letter back up days later to finish it as a man despairing of himself.</p>
+
+  <p><em>Painted with calm.</em> That is his phrase, about the picture everybody treats as the exception to his agony, written in the same letter where he says his mind has been totally stupefied. He is not describing a symptom. He is describing a good run, and grieving its end.</p>
+
+  <p>Gadsby is right that the sunflowers are about Theo. I would add one thing to it. <strong>The almond blossom is about Theo&rsquo;s son</strong>, and Vincent did not paint it because he was suffering. He painted it because a baby had been born and named after him, and for a few weeks he was well enough to work.</p>
+
+  <h2 id="the-yew-tree">Two electric currents <a class="qe-anchor" href="#the-yew-tree"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Sylvia Plath, in her journal, on Friday, 20 June 1958. She had finished her teaching year at Smith three weeks before and had moved to Boston to write full time:</p>
+
+  <blockquote>
+    <p>My motto here might well be &ldquo;My spirits, as in a dream, are all bound up.&rdquo; I have been, and am, battling depression. It is as if my life were magically run by two electric currents: joyous positive and despairing negative &ndash; which ever is running at the moment dominates my life, floods it. I am now flooded with despair, almost hysteria, as if I were smothering. As if a great muscular owl were sitting on my chest, its talons clenching &amp; constricting my heart. I knew this fresh life would be harder, much harder, than teaching &ndash; but I have weapons, &amp; self-knowledge is the best of them.</p>
+    <footer>Sylvia Plath, <cite>The Unabridged Journals of Sylvia Plath</cite>, ed. Karen V. Kukil, 20 June 1958, p.&nbsp;395</footer>
+  </blockquote>
+
+  <p><strong>&ldquo;Which ever&rdquo; is two words, and that is not a typing error.</strong> Kukil&rsquo;s edition exists to give Plath&rsquo;s journals as she wrote them, spelling and spacing included, and we have quoted this passage for years with the two words closed up into one. It is the smallest possible correction and it is the whole discipline of this cabinet: somebody, somewhere along the line, tidied a woman&rsquo;s journal on her behalf. <a href="/how-we-quote">We do not do that here</a>, and we did it anyway, and now we have stopped.</p>
+
+  <p>Read what the passage actually says. It is not a cry. It is a weather report, written by somebody who has been through this before and expects to again, and it ends on <em>weapons</em> &mdash; on self-knowledge as a tool. She is describing an illness while working, which is what almost every day of a working artist&rsquo;s illness looks like and almost nothing in the myth allows for.</p>
+
+  <p>Five years earlier she had been twenty, in the room described above. She would write <cite>Ariel</cite>. And the poems of hers I return to most are not the ones the myth wants: <q>Morning Song</q> and <q>Nick and the Candlestick</q>, both written for her children, both tender, neither ever quoted at me as evidence of anything.</p>
+
+  <h3>An editor, and a sheet still to come</h3>
+
+  <p>One more thing belongs here as a marker rather than an argument. Plath left <cite>Ariel</cite> in an order she had chosen, and it was published in an order Ted Hughes chose instead. Her manuscript ends on the bee sequence and, in <cite>Wintering</cite>, on survival. His does not.</p>
+
+  <p>That is an editor moving a woman&rsquo;s hardest material after her death, which is the subject of <a href="/the-tempest">Sheet No.&nbsp;5</a> in a different century, and it deserves its own number rather than a paragraph borrowed from this one. It is coming. I am flagging it here so that nobody reads this sheet&rsquo;s silence as agreement with the 1965 running order.</p>
+
+  <h2 id="hi-how-are-you">Hi, how are you <a class="qe-anchor" href="#hi-how-are-you"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Kurt Cobain is the one I had least evidence for and the most opinions about. Michael Azerrad&rsquo;s <cite>Come As You Are</cite> is the only biography Cobain cooperated with, and reading it properly took most of my assumptions apart.</p>
+
+  <p>The word <q>bipolar</q> does not occur in it. Neither does <q>attention deficit</q>. What is there is a childhood diagnosis of hyperactivity, and this:</p>
+
+  <blockquote>
+    <p>He had been diagnosed as hyperactive. Like many kids of his generation, Kurt had been given the drug Ritalin, a form of speed, which counteracts hyperactivity. It kept him up until four in the morning. Sedatives made him fall asleep in school.</p>
+    <footer>Michael Azerrad, <cite>Come As You Are: The Story of Nirvana</cite>, 1993</footer>
+  </blockquote>
+
+  <p>What eventually worked was taking sugar and Red Dye #2 out of his diet. And he was not the only one in the band: Azerrad notes that the drummer Chad Channing had also been hyperactive and given Ritalin, and quotes Dave Grohl saying <q>I was super-hyperactive</q> &mdash; adding, in brackets, <q>although not hyper enough to get put on Ritalin.</q> <strong>Three of them, in one book, described as hyperactive children.</strong> A generation handed speed for the crime of being eight, and the one who got the most of it is the one we call tortured.</p>
+
+  <h3>The body, which nobody quotes</h3>
+
+  <p>In eighth grade Kurt was diagnosed with a minor scoliosis. He played guitar left-handed, and Azerrad records that <q>the weight of his guitar actually made the curvature worse. If he had been right-handed, he says, it would have corrected the problem.</q></p>
+
+  <p>Then the stomach &mdash; the pain that organised his adult life, and the reason he gave for a great deal of what he did:</p>
+
+  <blockquote>
+    <p>&hellip;nine in the first part of 1993 alone&mdash;who remain baffled as to what his problem might be. Ulcers have been ruled out. The latest theory is that a kink in Kurt&rsquo;s spine due to his scoliosis is pinching a nerve which leads to his stomach. Besides opiate-derived analgesics, the only effective cure Kurt has found is performing on stage, when a massive endorphin rush kills the pain. Ironically, Kurt&rsquo;s condition may have something to do with his agonized wail. Or vice versa.</p>
+    <footer>Azerrad, <cite>Come As You Are</cite>, on the specialists Cobain saw for his stomach</footer>
+  </blockquote>
+
+  <p><strong>Follow that chain.</strong> A left-handed boy plays a right-handed body&rsquo;s instrument. The instrument deepens a curve in his spine. The curve pinches a nerve. The nerve produces a pain nine specialists cannot name. The pain is met with opiates, and with the stage, which is the only other thing that touches it. <strong>And the authorised biography raises the possibility that the most mythologised voice in rock &mdash; the sound everybody hears as anguish &mdash; is partly a pain response.</strong></p>
+
+  <p>Thirty years of people calling that voice the sound of a tortured soul. It may have been the sound of a man whose back hurt.</p>
+
+  <h3>What he did with it</h3>
+
+  <p>Which brings me to the document I would put on the wall. The liner notes Cobain wrote for <cite>Incesticide</cite> in late 1992 open with him hunting a record: the out-of-print first Raincoats LP, a trip to Rough Trade, a hand-drawn map, and Ana da Silva found working in an antique shop, who offers to send him her own copy. He writes:</p>
+
+  <blockquote>
+    <p>I left feeling like a dork, like I had violated her space, like she probably thought my band was tacky.</p>
+    <footer>Kurt Cobain, liner notes to <cite>Incesticide</cite>, 1992</footer>
+  </blockquote>
+
+  <p>Then two columns of other people&rsquo;s records and other people&rsquo;s causes &mdash; Shonen Knife, the Vaselines reformed in Edinburgh, the Melvins, the Wipers, Mudhoney, Calamity Jane, the Breeders, the Jesus Lizard, benefits for abortion access in Los Angeles &mdash; and, dropped into the middle of the list, <q>kissing Chris and Dave on Saturday Night Live just to spite homophobes.</q></p>
+
+  <p>And then the passage everybody knows, which is almost never printed with the sentence that produces it:</p>
+
+  <blockquote>
+    <p>Last year, a girl was raped by two wastes of sperm and eggs while they sang the lyrics to our song &ldquo;Polly.&rdquo; I have a hard time carrying on knowing there are plankton like that in our audience.</p>
+    <p>At this point I have a request for our fans. If any of you in any way hate homosexuals, people of different color, or woman, please do this one favor for us &mdash; leave us the fuck alone! Don&rsquo;t come to our shows and don&rsquo;t buy our records.</p>
+    <footer>Kurt Cobain, liner notes to <cite>Incesticide</cite>, 1992</footer>
+  </blockquote>
+
+  <p><strong>Mounted alone, the request is a slogan. It is not a slogan.</strong> It is the second half of a man working out, in public, on the sleeve of a record, what he owes the people his work reaches &mdash; after learning what two of them did to a woman while singing something he wrote. Cutting it loose from its reason is the kind of tidying this cabinet keeps a ledger to prevent, and it happens to this passage constantly.</p>
+
+  <p>He signs the notes <q>Kurdt (the blond one)</q>.</p>
+
+  <p><strong>This is the tether, and it runs outward.</strong> The Daniel Johnston T-shirt he wore &mdash; another Disabled artist&rsquo;s drawing, worn on television by the most photographed man in music &mdash; is the same gesture in one object. The liner notes are that gesture at full length, in his own prose: a famous man spending his platform on other people&rsquo;s records and closing the door on the part of his audience that hates queers, women and people of colour. <strong>Connection was not something that happened to Kurt Cobain. It was something he did, repeatedly, in writing.</strong></p>
+
+  <h2 id="what-else-it-could-have-been">What else it could have been <a class="qe-anchor" href="#what-else-it-could-have-been"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>I went looking for four biographies and found the same sentence three times, in three archives that have nothing to do with each other.</p>
+
+  <ul>
+    <li>A 1964 clinic reads a young man&rsquo;s gentleness as a symptom, and treats it forty times.</li>
+    <li>A painter describes his best canvas as <q>painted with calm</q>, in the letter where he says his mind is stupefied &mdash; and we file the painting under the illness anyway.</li>
+    <li>A biographer suggests that the most famous anguished voice of a generation may be a man&rsquo;s spine.</li>
+  </ul>
+
+  <p><strong>In every one of them the work is read as a symptom, and in every one of them the record says the work was the thing that was going well.</strong> That is not a coincidence and it is not subtle. It is what happens when a culture decides in advance that art comes out of suffering: the evidence gets sorted to fit, and the good days &mdash; which is when the work actually got made &mdash; disappear from the story.</p>
+
+  <p>Plath, twenty, in an insulin ward. Townes, twenty, in another one, seven days after his birthday. Vincent in Saint-R&eacute;my painting a tree for a baby. Kurt writing a fan letter to the Raincoats on the sleeve of his own record. <strong>None of those four things is suffering producing art. All four are somebody reaching for the world, and the world occasionally reaching back.</strong></p>
+
+  <p>Three of these four died by suicide. The fourth drank himself to death at fifty-two. I am not going to pretend the connections were enough, because they were not, and a sheet that ended on <em>love saves</em> would be lying to you in the other direction. Theo could not keep Vincent alive. Fran could not keep Townes sober. What the tether did was buy time, and in that time the work got made.</p>
+
+  <p>So: what else could any of it have been? A clinic that read a sensitive boy as a sensitive boy. A profession that asked Sylvia Plath what she needed instead of what was wrong with her. Nine specialists who found the nerve. An audience that heard Kurt Cobain ask, and listened. <strong>None of those is a fantasy. Every one of them was available at the time, to somebody paying attention, and in at least one case somebody was</strong> &mdash; a young doctor in Galveston who quit his profession over what was being done to a twenty-year-old, and told his wife he did not think there was anything really wrong with him.</p>
+
+  <p>They are still my gloomy sunflowers. I still put the painting up and the records on. What has changed is what I think I am looking at. Not four people destroyed into greatness. <strong>Four people who kept working, in the gaps, for as long as somebody held the line for them.</strong></p>
+
+  <h2 id="help">If this is your weather too <a class="qe-anchor" href="#help"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>In the United States, call or text <strong>988</strong> for the Suicide &amp; Crisis Lifeline. In the UK and Ireland, Samaritans are on <strong>116 123</strong>. Elsewhere, the <a href="https://findahelpline.com/">International Association for Suicide Prevention keeps a directory</a>.</p>
+
+  <p>If you are a person who makes things and somebody has told you the pain is the point: it is not, and you are allowed to want to be well and to still be an artist afterwards. That is Gadsby&rsquo;s argument and Kessock&rsquo;s, and I am only the fourth or fifth person to pass it along.</p>
+
+  <div class="qe-accession-block">
+    <p class="qe-stamp" style="--qe-stamp-rot: 1.8deg">
+      <span class="qe-stamp-org">Queering Earth</span>
+      <span class="qe-stamp-no">Sheet No.&nbsp;11</span>
+      <span class="qe-stamp-date">Accessioned <time datetime="2026-09-11">11 Sep 2026</time></span>
+    </p>
+    <p class="qe-provenance">
+      <span class="qe-provenance-label">Provenance</span>
+      Mounted <a href="/changelog#a-2026-09-11-sunflowers"><time datetime="2026-09-11">11 September 2026</time></a>. Not yet corrected.
+    </p>
+  </div>
+
+</main>
+
+<!-- Elsewhere on the plate. OUTSIDE <main> on purpose: the SKS mirror takes page
+     content from the <main> landmark and nowhere else, so navigation placed inside
+     it would be indexed as this sheet's own content. See CLAUDE.md. -->
+<nav class="qe-elsewhere" aria-labelledby="qe-elsewhere-h">
+  <h2 id="qe-elsewhere-h">Elsewhere on the plate</h2>
+  <ul class="qe-elsewhere-grid">
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/on-being-ill">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;1</span>
+          </span>
+          <span class="qe-card-title">The Army of the Upright</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-coral)">
+        <a class="card" href="/coming-to-terms">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Essay</span>
+            <span class="qe-card-no">No.&nbsp;2</span>
+          </span>
+          <span class="qe-card-title">Coming to Terms</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-violet)">
+        <a class="card" href="/wild-nights">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;6</span>
+          </span>
+          <span class="qe-card-title">The Swell and the Dwell</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-lichen)">
+        <a class="card" href="/monotropa-uniflora">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Wall</span>
+            <span class="qe-card-no">No.&nbsp;8</span>
+          </span>
+          <span class="qe-card-title">The Preferred Flower of Life</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-marigold)">
+        <a class="card" href="/other-people-who-have-it">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;10</span>
+          </span>
+          <span class="qe-card-title">Other People Who Have It</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<footer class="qe-footer">
+  <p class="qe-footer-nav">
+    <a href="/">Queering Earth</a>
+    <a href="/the-plate">The plate</a>
+    <a href="/the-founding-papers">The founding papers</a>
+    <a href="/the-cabinet-itself">The cabinet itself</a>
+    <a href="/mission">Mission</a>
+    <a href="/manifesto">Manifesto</a>
+    <a href="/two-cohabitating-modes">Modes</a>
+    <a href="/design">Colophon</a>
+    <a href="/changelog">Register</a>
+    <a href="/ledger">Ledger</a>
+    <a href="/what-is-settled">Decisions</a>
+    <a href="/search">Search</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/how-we-quote">Quoting</a>
+  </p>
+
+  <p>A collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+
+  <p>Our words licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Take them and make something.</p>
+
+  <p>Every quotation here was read in the work it comes from, and is logged in the site&rsquo;s <a href="/ledger">attribution ledger</a>.</p>
+
+  <a class="qe-totop" href="#main">
+    <span class="qe-totop-label">Scroll to top</span>
+    <svg class="qe-botanical qe-totop-mark" viewBox="0 0 160 66" aria-hidden="true" focusable="false">
+      <path class="stem" style="--len:21" d="M22,64 C24,56 25,51 24,45"/>
+      <path class="stem" style="--len:24" d="M33,64 C32,55 30,49 28,43"/>
+      <path class="stem" style="--len:25" d="M44,64 C46,54 48,48 50,42"/>
+      <path class="stem" style="--len:52" d="M58,64 C60,46 67,32 77,21"/>
+      <path class="stem" style="--len:32" d="M68,64 C69,50 70,42 71,34"/>
+      <path class="stem" style="--len:44" d="M80,64 C79.4,48 80.6,34 80,22"/>
+      <path class="stem" style="--len:32" d="M92,64 C91,50 90,42 89,34"/>
+      <path class="stem" style="--len:52" d="M102,64 C100,46 93,32 83,21"/>
+      <path class="stem" style="--len:25" d="M116,64 C114,54 112,48 110,42"/>
+      <path class="stem" style="--len:24" d="M127,64 C128,55 130,49 132,43"/>
+      <path class="stem" style="--len:21" d="M138,64 C136,56 135,51 136,45"/>
+      <g class="sprout" style="--i:3">
+        <path class="head" d="M80,5 C77.4,11 77.4,18 80,25 C82.6,18 82.6,11 80,5 Z"/>
+      </g>
+    </svg>
+  </a>
+</footer>
+
+<script src="queering.js"></script>
+</body>
+</html>

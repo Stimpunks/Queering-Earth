@@ -131,6 +131,10 @@ Every sheet mounted so far, numbered below in the order it was accessioned. [Abo
 
 [  Reading No. 10  Other People Who Have It Octavia E. Butler and Sami Schalk, on hyperempathy A disability invented for a novel because nobody had it, and the Autistic readers who do — and what that does to the argument built on its being unreal. ](https://queering.earth/other-people-who-have-it)
 
+-
+
+[  Essay No. 11  My Gloomy Sunflowers Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth Four artists filed under *tortured*, and three archives that each say the work was the thing going well. ](https://queering.earth/gloomy-sunflowers)
+
 The border is four flowers that were once a way of saying it without saying it: *violet*, *pansy*, *green carnation*, *lavender*. Gathered as a set by Sarah Prager in [*Four Flowering Plants That Have Been Decidedly Queered*](https://daily.jstor.org/four-flowering-plants-decidedly-queered/), JSTOR Daily, 29 January 2020.
 
 What follows will be made the way [Star Stuff](https://starstuff.earth/) is made — a piece at a time, in public, with the working-out left in, by [Helen Edgar](https://morerealms.com/) and the [Stimpunks Foundation](https://stimpunks.org/). Come back and watch it fill in.

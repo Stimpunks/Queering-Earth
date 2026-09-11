@@ -184,6 +184,21 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
   - [The rarer register](https://queering.earth/other-people-who-have-it#the-pleasure-side)
   - [What this sheet will not tidy](https://queering.earth/other-people-who-have-it#what-this-sheet-will-not-tidy)
 
+-
+
+No. 11 [My Gloomy Sunflowers](https://queering.earth/gloomy-sunflowers) Essay
+
+Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth
+
+  - [The tether](https://queering.earth/gloomy-sunflowers#the-tether)
+  - [Two rooms, nine years apart](https://queering.earth/gloomy-sunflowers#the-insulin)
+  - [Galveston, 1964](https://queering.earth/gloomy-sunflowers#galveston)
+  - [The almond tree](https://queering.earth/gloomy-sunflowers#almond-blossom)
+  - [Two electric currents](https://queering.earth/gloomy-sunflowers#the-yew-tree)
+  - [Hi, how are you](https://queering.earth/gloomy-sunflowers#hi-how-are-you)
+  - [What else it could have been](https://queering.earth/gloomy-sunflowers#what-else-it-could-have-been)
+  - [If this is your weather too](https://queering.earth/gloomy-sunflowers#help)
+
 ### The founding papers
 
 -
@@ -282,7 +297,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-209 entries across 56 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+212 entries across 57 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
