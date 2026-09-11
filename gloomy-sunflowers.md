@@ -37,15 +37,19 @@ I have spent years with four artists, usually together: a van Gogh open on the s
 
 Hannah Gadsby, at the end of *Nanette*, on the painter everybody reaches for first:
 
+Specimen — the brother
+
 > Do you know why we have the sunflowers? It’s not because Vincent van Gogh suffered. It’s because Vincent van Gogh had a brother who loved him. Through all the pain, he had a tether, a connection to the world. And that is the focus of the story we need. Connection.
 
-> Hannah Gadsby, *Nanette*, 2018
+Hannah Gadsby, *Nanette*, 2018.
 
 Shoshana Kessock, a writer and game designer with bipolar II, watched the same special and wrote the essay this sheet leans on hardest. She published it on her own site in July 2018, under a title that names the thing exactly — [*Falling/Burning: Hannah Gadsby, Nanette, and the Myth of the Mad Artist*](https://shoshanakessock.wordpress.com/2018/07/12/falling-burning-hannah-gadsby-nanette-and-the-myth-of-the-mad-artist/) — and it was collected in Alice Wong’s *Disability Visibility* two years later. She describes her own working days, the good ones and the ones where the words would not come, and then this:
 
+Specimen — what she used to believe
+
 > Hannah Gadsby told people artists don’t have to suffer for their art, and I’ll forever thank her for having the guts to stand up and say that to the world. Because I used to believe it was true.
 
-> Shoshana Kessock, *Falling/Burning: Hannah Gadsby, Nanette, and Being a Bipolar Creator*, in *Disability Visibility*, ed. Alice Wong, 2020
+Shoshana Kessock, *Falling/Burning: Hannah Gadsby, Nanette, and Being a Bipolar Creator*, in *Disability Visibility*, ed. Alice Wong, 2020.
 
 *Because I used to believe it was true.* So did I. That is the sentence this sheet is written out of, and it is worth saying plainly that it is hers and not ours — she is a Disabled writer whose byline has more than once been absorbed into the anthology’s title, including, until recently, on our own sister site.
 
@@ -78,9 +82,11 @@ Almost everything on the internet about this is wrong, and I was repeating most 
 
 The psychological report found an “obsessive-compulsive schizoid character with strong paranoid trends.” The official diagnosis was “Schizophrenic reaction, Schizo-affective type (Depression).” And the report explains its reasoning. He felt inadequate beside a successful father, and:
 
+Specimen — the feminine elements
+
 > there are indications of some feminine elements in his character structure and these feminine elements threaten his whole value system, sense of self, and adequacy as a male.
 
-> The psychological report, Titus Harris Clinic, 1964, quoted in Robert Earl Hardy, *A Deeper Blue*
+The psychological report, Titus Harris Clinic, 1964, quoted in Robert Earl Hardy, *A Deeper Blue*.
 
 **Read that again, because it is the reason this sheet exists on this site and not another one.** A Texas clinic in 1964 looked at a gentle, sensitive, artistic teenager, found femininity in him, classed it as a threat to his adequacy as a male, filed it under a schizophrenic potential, and then treated it about forty times with insulin and electricity.
 
@@ -88,9 +94,11 @@ Nobody has to queer this document. It queers itself. It is an institution writin
 
 Not everybody in the building agreed. His first wife, Fran Petters, met one of his young doctors months later:
 
+Specimen — the dissent, from inside
+
 > he actually quit psychiatry because of Townes’ case. He said, ‘I didn’t think there was anything really wrong with him. I did not agree with the treatment.’
 
-> Fran Petters, quoted in Hardy, *A Deeper Blue*
+Fran Petters, quoted in Hardy, *A Deeper Blue*.
 
 ### The sentence that got quoted, and the one that got written down
 
@@ -106,9 +114,11 @@ There is a whole argument about attribution sitting in that, and this cabinet ke
 
 Fran again: “He virtually had no memory of his childhood.” His mother went through the family photograph albums with him, over and over, telling him the stories, trying to rebuild it — and what came back was not quite memory:
 
+Specimen — rote memory, not a picture
+
 > It was like rote memory, not a picture memory. I think it started coming back over time, but he never trusted that it was a real memory.
 
-> Fran Petters, quoted in Hardy, *A Deeper Blue*
+Fran Petters, quoted in Hardy, *A Deeper Blue*.
 
 **Hardy will not close the loop, and I am not going to close it for him.** A doctor at the same hospital told him that electroshock causes short-term loss but that wiping out blocks of childhood “is not the result of such treatment”, and offered alcoholism as an alternative explanation; other people close to Townes thought he was exaggerating it to work on his parents. **The clean story — the treatment took his childhood — is the one thing the careful biography declines to assert.** I want it to be true because it is a better sentence. That is exactly why I should not have it.
 
@@ -118,13 +128,15 @@ On 31 January 1890 Theo wrote to his brother in the asylum at Saint-Rémy to say
 
 Then, in a letter to Theo of about 17 March 1890, three passages. They are in this order:
 
+Specimen — painted with calm, and then stupefied
+
 > Work was going well, the last canvas of the branches in blossom, you’ll see that it was perhaps the most patiently worked, best thing I had done, painted with calm and a greater sureness of touch.
 
 > I’m picking up this letter again to try and write, it will come little by little, it’s just that my mind has been so affected – without pain, it’s true – but totally stupefied.
 
 > And so I almost or entirely despair of myself.
 
-> Vincent van Gogh to Theo van Gogh, Saint-Rémy-de-Provence, on or about Monday 17 March 1890, [letter 857](https://vangoghletters.org/vg/letters/let857/letter.html)
+Vincent van Gogh to Theo van Gogh, Saint-Rémy-de-Provence, on or about Monday 17 March 1890, [letter 857](https://vangoghletters.org/vg/letters/let857/letter.html).
 
 **The myth has the arrow pointing one way. This letter points it the other.** The calmest, most patiently worked thing he ever made was made for a baby, in an asylum, during a stretch when work was going well — and then the illness arrived and stopped him, and he picked the same letter back up days later to finish it as a man despairing of himself.
 
@@ -136,9 +148,11 @@ Gadsby is right that the sunflowers are about Theo. I would add one thing to it.
 
 Sylvia Plath, in her journal, on Friday, 20 June 1958. She had finished her teaching year at Smith three weeks before and had moved to Boston to write full time:
 
+Specimen — two electric currents
+
 > My motto here might well be “My spirits, as in a dream, are all bound up.” I have been, and am, battling depression. It is as if my life were magically run by two electric currents: joyous positive and despairing negative – which ever is running at the moment dominates my life, floods it. I am now flooded with despair, almost hysteria, as if I were smothering. As if a great muscular owl were sitting on my chest, its talons clenching & constricting my heart. I knew this fresh life would be harder, much harder, than teaching – but I have weapons, & self-knowledge is the best of them.
 
-> Sylvia Plath, *The Unabridged Journals of Sylvia Plath*, ed. Karen V. Kukil, 20 June 1958, p. 395
+Sylvia Plath, *The Unabridged Journals of Sylvia Plath*, ed. Karen V. Kukil, 20 June 1958, p. 395.
 
 **“Which ever” is two words, and that is not a typing error.** Kukil’s edition exists to give Plath’s journals as she wrote them, spelling and spacing included, and we have quoted this passage for years with the two words closed up into one. It is the smallest possible correction and it is the whole discipline of this cabinet: somebody, somewhere along the line, tidied a woman’s journal on her behalf. [We do not do that here](https://queering.earth/how-we-quote), and we did it anyway, and now we have stopped.
 
@@ -158,9 +172,11 @@ Kurt Cobain is the one I had least evidence for and the most opinions about. Mic
 
 The word “bipolar” does not occur in it. Neither does “attention deficit”. What is there is a childhood diagnosis of hyperactivity, and this:
 
+Specimen — a form of speed
+
 > He had been diagnosed as hyperactive. Like many kids of his generation, Kurt had been given the drug Ritalin, a form of speed, which counteracts hyperactivity. It kept him up until four in the morning. Sedatives made him fall asleep in school.
 
-> Michael Azerrad, *Come As You Are: The Story of Nirvana*, 1993
+Michael Azerrad, *Come As You Are: The Story of Nirvana*, 1993.
 
 What eventually worked was taking sugar and Red Dye #2 out of his diet. And he was not the only one in the band: Azerrad notes that the drummer Chad Channing had also been hyperactive and given Ritalin, and quotes Dave Grohl saying “I was super-hyperactive” — adding, in brackets, “although not hyper enough to get put on Ritalin.” **Three of them, in one book, described as hyperactive children.** A generation handed speed for the crime of being eight, and the one who got the most of it is the one we call tortured.
 
@@ -170,9 +186,11 @@ In eighth grade Kurt was diagnosed with a minor scoliosis. He played guitar left
 
 Then the stomach — the pain that organised his adult life, and the reason he gave for a great deal of what he did:
 
+Specimen — the wail, or the spine
+
 > …nine in the first part of 1993 alone—who remain baffled as to what his problem might be. Ulcers have been ruled out. The latest theory is that a kink in Kurt’s spine due to his scoliosis is pinching a nerve which leads to his stomach. Besides opiate-derived analgesics, the only effective cure Kurt has found is performing on stage, when a massive endorphin rush kills the pain. Ironically, Kurt’s condition may have something to do with his agonized wail. Or vice versa.
 
-> Azerrad, *Come As You Are*, on the specialists Cobain saw for his stomach
+Azerrad, *Come As You Are*, on the specialists Cobain saw for his stomach.
 
 **Follow that chain.** A left-handed boy plays a right-handed body’s instrument. The instrument deepens a curve in his spine. The curve pinches a nerve. The nerve produces a pain nine specialists cannot name. The pain is met with opiates, and with the stage, which is the only other thing that touches it. **And the authorised biography raises the possibility that the most mythologised voice in rock — the sound everybody hears as anguish — is partly a pain response.**
 
@@ -182,19 +200,23 @@ Thirty years of people calling that voice the sound of a tortured soul. It may h
 
 Which brings me to the document I would put on the wall. The liner notes Cobain wrote for *Incesticide* in late 1992 open with him hunting a record: the out-of-print first Raincoats LP, a trip to Rough Trade, a hand-drawn map, and Ana da Silva found working in an antique shop, who offers to send him her own copy. He writes:
 
+Specimen — the record he went looking for
+
 > I left feeling like a dork, like I had violated her space, like she probably thought my band was tacky.
 
-> Kurt Cobain, liner notes to *Incesticide*, 1992
+Kurt Cobain, liner notes to *Incesticide*, 1992.
 
 Then two columns of other people’s records and other people’s causes — Shonen Knife, the Vaselines reformed in Edinburgh, the Melvins, the Wipers, Mudhoney, Calamity Jane, the Breeders, the Jesus Lizard, benefits for abortion access in Los Angeles — and, dropped into the middle of the list, “kissing Chris and Dave on Saturday Night Live just to spite homophobes.”
 
 And then the passage everybody knows, which is almost never printed with the sentence that produces it:
 
+Specimen — the request, and the reason for it
+
 > Last year, a girl was raped by two wastes of sperm and eggs while they sang the lyrics to our song “Polly.” I have a hard time carrying on knowing there are plankton like that in our audience.
 
 > At this point I have a request for our fans. If any of you in any way hate homosexuals, people of different color, or woman, please do this one favor for us — leave us the fuck alone! Don’t come to our shows and don’t buy our records.
 
-> Kurt Cobain, liner notes to *Incesticide*, 1992
+Kurt Cobain, liner notes to *Incesticide*, 1992.
 
 **Mounted alone, the request is a slogan. It is not a slogan.** It is the second half of a man working out, in public, on the sleeve of a record, what he owes the people his work reaches — after learning what two of them did to a woman while singing something he wrote. Cutting it loose from its reason is the kind of tidying this cabinet keeps a ledger to prevent, and it happens to this passage constantly.
 
