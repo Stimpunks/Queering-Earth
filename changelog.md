@@ -34,7 +34,33 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Label corrected
 - Cabinet
 
-2026 · 10 September · latest
+2026 · 11 September · latest
+
+## A masthead for the two modes, and the width a masthead is actually reviewed at
+
+Ryan’s, after the blown-up tray mark was [refused twice](https://queering.earth/what-is-settled): “Instead of a blown-up icon, let’s do something else for the header illustration.” Four options were put up and he took the one that draws the argument instead of the animals.
+
+MountedOne flower against many, with the two flower areas equal by computation
+
+`.qe-tropisms` is two plants on one ground line: a single unbranched stem carrying one five-petalled flower, and a low stem branching three times into a broad flat head of twenty-nine florets. **Monotropy against polytropy** — and *Monotropa uniflora* means *one turn, one flower*, which is [Sheet No. 8](https://queering.earth/monotropa-uniflora)’s whole subject, so this site already reads monotropy through a plant. **It also cannot restage the predation problem the tray mark had**, because plants do not eat each other.
+
+**The invariant is equal flower area and it is computed, not eyeballed.** The drawing’s claim is *different distribution, equal mass*; two areas that were merely near would rank the two modes by accident, which is a gold join on an uncorrected sheet in the most prominent place on the sheet. The rosette is a five-lobed polar rose whose area is exact — `πR²(a² + b²/2)` = 826.24 — and the floret radius is solved back out of it: 29 × π × 3.011² = 826.24, residual 1.1e−13.
+
+**Only one CSS rule is new**, and that is deliberate: every flower and leaf class already exists under `.qe-botanical`, so nothing here can render unstyled. The exception is `.ground-line`, which is scoped per drawing — the lilac bush and the crooked tree each own one — so this drawing owns a third. `.floret` was left alone: it belongs to the lilac bush outright.
+
+Label correctedA masthead is reviewed at 448px, not at the 34rem measure — a number this register already held
+
+Four passes were judged against a 544px review sheet, on the reasoning that 34rem is the measure and 34rem is 544px. **A block inside `main` does not get 544px. It gets 448.** The drawing was therefore tuned 21% larger than it renders, and on the real page **the rosette came out 26px and read as an asterisk** while the head read as a cup. Rescaled for 448 it is 41px and reads as a flower.
+
+**The number was already written down.** [The decision log](https://queering.earth/what-is-settled) records it against `.qe-wide`: “measured on screen, the provocation is 448px — the content box every other block gets”. It was measured once, for a different question, and not applied here. **A measurement in the log is only worth what the next session remembers to reach for**, which is the same shape as the afternoon’s other findings and arrived one day later.
+
+CabinetThree more refused drawings, one of them this file’s own recorded mistake repeated
+
+**A hanging bell** reads as a *bud* at the 21px it shipped at, and lobing its rim to say *mouth* is invisible at that size; the flower turned to face the reader instead, because what reads at sixty pixels a plant is silhouette and count. **Florets on an arc** are a ring, and a ring reads as a wreath — *this repository’s own words about the lilac panicle, reproduced exactly.* They sit on a golden-angle spiral over the head’s area now, the same walk the drift rail’s lean uses. And **thirteen florets in a head this broad** filled a tenth of it and read as beads on a wire: with the area fixed, a wider head needs more and smaller florets rather than the same ones spread further.
+
+**Three dead classes, caught by hand because the gate for them is not ported.** The stems carried `.stem-main`, `.stem-branch` and `.stem-twig` beside `.stem`, with no rule anywhere — the stroke hierarchy was inline all along, as [Sheet No. 1](https://queering.earth/on-being-ill) does it. They did not render black only because every one of those elements also carried `.stem`. **`check-classes` is still the next port from Star Stuff and this is the second drawing to want it;** until it lands the check is a dozen lines, and it is worth running on any new drawing.
+
+2026 · 10 September
 
 ## Two Bewick cuts from 1792, and a masthead refused twice
 

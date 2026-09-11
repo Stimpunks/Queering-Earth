@@ -7,7 +7,16 @@
     <description>Every sheet as it was mounted, every plate that came off again, and every label we corrected. Generated from the register itself by tools/make-markdown.mjs.</description>
     <language>en</language>
     <copyright>CC BY-SA 4.0</copyright>
-    <lastBuildDate>Thu, 10 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>A masthead for the two modes, and the width a masthead is actually reviewed at</title>
+      <link>https://queering.earth/changelog#a-2026-09-11-tropisms</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-tropisms</guid>
+      <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Mounted: One flower against many, with the two flower areas equal by computation
+Label corrected: A masthead is reviewed at 448px, not at the 34rem measure — a number this register already held
+Cabinet: Three more refused drawings, one of them this file’s own recorded mistake repeated</description>
+    </item>
     <item>
       <title>Two Bewick cuts from 1792, and a masthead refused twice</title>
       <link>https://queering.earth/changelog#a-2026-09-10-bewick</link>

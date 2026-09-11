@@ -1721,6 +1721,60 @@ html.plain .qe-botanical { opacity: 0.85; }
   .qe-crooked-tree-figure figcaption { color: #222; }
 }
 
+/* ─────────────────────────────────────────────── the two attention shapes
+ *
+ * The masthead on /two-cohabitating-modes. NOT THE ANIMALS: the sheet already
+ * carries a fox and a hedgehog twice over, in Bewick's 1792 wood engravings, and
+ * a drawn pair above them would be the third and fourth — losing to the hatching
+ * and repeating the subject. So the masthead carries the ARGUMENT instead, in the
+ * register this site does not get wrong: one flower against many.
+ *
+ * Left, one unbranched stem and one five-petalled flower — monotropy, and
+ * `Monotropa uniflora` means one turn, one flower, which is Sheet No. 8's whole
+ * subject. Right, a low stem branching three times into a flat head of thirteen
+ * florets — polytropy. Twenty-nine of them, because with the area fixed a WIDE
+ * head needs MORE and smaller florets or it goes sparse: thirteen in a head this
+ * broad filled a tenth of it and read as beads on a wire.
+ *
+ * THE INVARIANT IS EQUAL FLOWER AREA AND IT IS COMPUTED, NOT EYEBALLED. The
+ * drawing's claim is *different distribution, equal mass*; if the two areas were
+ * merely near, it would be ranking the two modes by accident — a gold join on a
+ * sheet nobody corrected, in the masthead. The rosette is a five-lobed polar rose
+ * whose area is exact, πR²(a² + b²/2) with R=24 = 826.24, and the floret radius
+ * is solved back out of it: 29 × π × 3.011² = 826.24, residual 1.1e-13.
+ *
+ * Four things were drawn and refused first, each by looking rather than reasoning:
+ *
+ *   · A BLOWN-UP TRAY MARK. Twice — see DECISIONS.md. A mark drawn to survive
+ *     20px carries 20px tolerances, and enlarging it enlarges them.
+ *   · A HANGING BELL, which at the 21px it ships at reads as a BUD. Lobes on its
+ *     rim to say "mouth" are invisible at that size. What reads at 60px per plant
+ *     is silhouette and count, so the left flower faces the reader.
+ *   · THIRTEEN FLORETS ON AN ARC, which is a RING, which reads as a wreath —
+ *     this file's own words about the lilac panicle, reproduced exactly. They sit
+ *     on a golden-angle spiral over the head's area now, the same walk the drift
+ *     rail's lean uses.
+ *   · A HEAD NARROWER THAN THE BRANCHES CARRYING IT, which read as two arms round
+ *     a floating cluster. The primaries are inside the head's span.
+ *   · AND THE WHOLE THING TUNED AT 544px, WHICH IS NOT THE WIDTH IT SHIPS AT. The
+ *     content box every block in `main` gets is 448px — the number this file
+ *     already records against `.qe-wide` — so the first version was drawn 21%
+ *     larger than it renders and the rosette landed at 26px, reading as an
+ *     asterisk. REVIEW A MASTHEAD AT 448, NOT AT THE 34rem MEASURE.
+ *
+ * Only `.ground-line` is new, and it is scoped: the bare class belongs to the
+ * lilac bush and the crooked tree, and `.floret` is the lilac bush's outright. */
+.qe-tropisms .ground-line {
+  fill: none;
+  stroke: var(--qe-lichen);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+@media print {
+  .qe-tropisms .ground-line { stroke: #777; }
+}
+
 /* ─────────────────────────────────────────────── the provocation */
 
 .qe-provocation {

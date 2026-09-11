@@ -45,6 +45,13 @@ export const ENTITIES = {
   ucirc: 'û', Ucirc: 'Û', ugrave: 'ù', Ugrave: 'Ù',
   euml: 'ë', Euml: 'Ë', iuml: 'ï', Iuml: 'Ï', yuml: 'ÿ',
   szlig: 'ß', thinsp: ' ', ensp: ' ', emsp: ' ', shy: '­',
+  // Maths, for the register: the masthead on /two-cohabitating-modes states the area
+  // its two flower masses share, and an accession that says how a drawing was computed
+  // has to be able to write the formula. Taught here rather than avoided in the prose,
+  // which is this file's own rule — a tool that cannot read an entity is a reason to
+  // teach the table, not a reason to reword the page.
+  pi: 'π', sup2: '²', sup3: '³', minus: '−', plusmn: '±',
+  radic: '√', asymp: '≈', ne: '≠', le: '≤', ge: '≥',
 };
 
 export function decode(s) {

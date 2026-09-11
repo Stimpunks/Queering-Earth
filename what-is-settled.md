@@ -272,6 +272,24 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
+### Two attention shapes, and the width a masthead is actually reviewed at (2026-09-11)
+
+Ryan's call after the blown-up tray mark was refused twice: something else for the header. The page already carries a fox and a hedgehog twice over in Bewick's 1792 engravings, so **the masthead carries the argument rather than the animals** — one unbranched stem with a single five-petalled flower against a low stem branching into a broad head of many small florets. Monotropy against polytropy, and *Monotropa uniflora* means one turn, one flower, which is Sheet No. 8's whole subject. It sits in the register this site does not get wrong, and it cannot restage the predation problem, because plants do not eat each other.
+
+**THE INVARIANT IS EQUAL FLOWER AREA AND IT IS COMPUTED.** The claim the drawing makes is *different distribution, equal mass*; two areas that were merely near would rank the two modes by accident, which is a gold join on an uncorrected sheet in the most prominent place on the sheet. The rosette is a five-lobed polar rose whose area is exact — πR²(a² + b²/2) = 826.24 — and the floret radius is solved back out of it: 29 × π × 3.011² = 826.24, residual 1.1e-13.
+
+**THE FINDING WORTH KEEPING IS THE REVIEW WIDTH, NOT THE DRAWING.** Four passes were judged against a 544px review sheet, because 34rem is the measure and 34rem is 544px. **A block inside `main` does not get 544px. It gets 448.** That number is already in this file, recorded against `.qe-wide` — *measured on screen, the provocation is 448px, the content box every other block gets* — and it was not applied. So the drawing was tuned 21% larger than it renders: on the real page the rosette came out **26px and read as an asterisk**, and the head read as a cup. Rescaled for 448 it is 41px and reads as a flower. **Review a masthead at 448px. The measure is not the content box.**
+
+**Three more were drawn and refused on the way, each by looking:**
+
+- **A hanging bell**, which at the 21px it shipped at reads as a *bud*. Lobing its rim to say "mouth" is invisible at that size. What reads at ~60px per plant is silhouette and count, so the flower turned to face the reader.
+- **Florets on an arc**, which is a ring, which reads as a wreath — **this file's own words about the lilac panicle, reproduced exactly.** They sit on a golden-angle spiral over the head's area now, the same walk the drift rail's lean uses.
+- **Thirteen florets in a head this broad**, which filled a tenth of it and read as beads on a wire. With the area fixed, a wider head needs *more and smaller* florets, not the same ones spread further: twenty-nine.
+
+**And three dead classes, caught by hand because the gate for them is not ported.** The stems carried `.stem-main`, `.stem-branch` and `.stem-twig` alongside `.stem`, with no rules anywhere — the stroke hierarchy was inline all along, as `/on-being-ill` does it. They did not render black only because each element also had `.stem`. **`check-classes` is still the next port from Star Stuff, and this is the second drawing to want it.** Until it lands, the check is a dozen lines: collect every class in the drawing, and grep the stylesheet for each.
+
+---
+
 ### Seven of the eight gates cannot tell a fresh build from the last successful one (2026-09-11)
 
 **Measured by deliberately breaking a source file, not recalled from the accident that prompted it** &mdash; the house rule being to make a gate fail before believing it. An entry with a paragraph indented outside any list was inserted into `DECISIONS.md`, which `make-records.mjs` correctly refuses, and the eight gates were then run against output that had not been rebuilt:
@@ -398,9 +416,7 @@ Ryan asked for "a large version of the fox and hedgehog icon as the header art".
 
 **And the house masthead register is delicate, which two solid animals cannot be.** Every other masthead here is thin moss stems, small lichen leaves, a small moth — sparse line. Two filled quadrupeds are the wrong *weight* for that page position regardless of how well they are drawn, which is why this is not a matter of another iteration on the same approach.
 
-**Settled for now: the page carries no drawn masthead, and the two Bewick plates carry the animals instead** — which is what a mounted specimen is for, and they are better at it than anything drawn here would be. **Open:** whether a masthead in outline — single closed contours, thin ink stroke, no fills, animals drawn as line rather than as mass — would sit in the house register. That is a real drawing job and worth doing deliberately, not in the tail of an accession. The tray mark stays exactly as it is; nothing above changes it.
-
----
+**Settled: the animals are not the masthead, and the two Bewick plates carry them instead** — which is what a mounted specimen is for, and they are better at it than anything drawn here would be. **Closed on 2026-09-11 by drawing something else** — see *Two attention shapes, and the width a masthead is actually reviewed at*. The page has a masthead now and it is not a fox and a hedgehog. The tray mark stays exactly as it is; nothing above changed it.
 
 ---
 
