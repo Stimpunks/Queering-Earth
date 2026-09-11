@@ -132,6 +132,10 @@ That is the failure `tools/sks-search.sh` already has a long header about — a 
 
 **So the two cases want the same thing and it is not a better extractor.** A file whose extracted length is implausible against its page count or byte size should be **visibly flagged as unsearchable**, so that an empty result can be distinguished from an absence at the point of searching. A facsimile in the library is a book we own and cannot grep, and that is a fine thing to hold — as long as nobody concludes from silence that we do not hold it.
 
+**And the library can be wrong in the other direction too, which is worse.** `raw/118363243-Vincent-van-Gogh-The-Letters.pdf` is not the letters. It is a **19-page publisher's brochure** for the 2009 six-volume Van Gogh Museum edition — slipcase, 2,180 pages, €395, launch price €325 until 3 January 2010. It indexes, it searches, and it answers to the name of the book. Beside it, `raw/lettersofvincent0000jvan.pdf` is **Volume II only** of the old three-volume English edition: letters ~100 to 695, the Hague and Nuenen years, nothing after 1885. Neither can reach Saint-Rémy or Auvers, and the filenames say otherwise.
+
+**A truncated extraction hides something we hold. A brochure filed under a book's name offers something we do not.** The first makes a researcher give up; the second makes them cite air. Both argue for the same small discipline at ingest: **record what a file actually is — edition, volume, coverage — rather than what its filename claims**, and make an implausible extraction visible. The sheet that prompted this read its Van Gogh primary at vangoghletters.org in the end, which is free, complete and authoritative, and which neither of these files is.
+
 ### An open item for a session in the SKS repo: two attributions on stimpunks.org (2026-09-11)
 
 Not to be fixed from here. Both found while researching a proposed sheet on Van Zandt, Van Gogh, Plath and Cobain.
