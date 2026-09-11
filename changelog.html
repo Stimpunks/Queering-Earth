@@ -103,7 +103,7 @@
   <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
   <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
   <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
-  <details class="qe-reading">
+  <details class="qe-reading" name="qe-tray">
     <summary class="qe-reading-summary">Reading</summary>
     <div class="qe-reading-panel">
       <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
@@ -151,6 +151,30 @@
         </li>
       </ul>
       <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
+  <!-- The drawers. Three collections, and everything on the site is in one of
+       them. A native details element, like the reading settings beside it and for
+       the same reason: a hand-built menu would need focus trapping, a roving
+       tabindex and an Escape handler, and getting any of that wrong makes the
+       navigation the least navigable thing on the sheet. -->
+  <details class="qe-drawers" name="qe-tray">
+    <summary class="qe-drawers-summary">Drawers</summary>
+    <div class="qe-drawers-panel">
+      <ul class="qe-drawers-list">
+        <li>
+          <a class="qe-drawers-link" href="/the-plate">The plate</a>
+          <span class="qe-drawers-hint">The sheets themselves, mounted and numbered on one plate.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-founding-papers">The founding papers</a>
+          <span class="qe-drawers-hint">Why this cabinet exists, and what it is for.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-cabinet-itself" aria-current="true">The cabinet itself</a>
+          <span class="qe-drawers-hint">How it is made, what it has recorded, and what it knows about you.</span>
+        </li>
+      </ul>
     </div>
   </details>
   <!-- The easter egg. An ornament that is a door: unlabelled to the eye,
@@ -201,7 +225,12 @@
 <main id="main" tabindex="-1">
 
   <header class="qe-masthead qe-masthead-sheet">
-    <p class="qe-home"><a href="/">Queering Earth</a></p>
+    <nav class="qe-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Queering Earth</a></li>
+        <li><a href="/the-cabinet-itself">The cabinet itself</a></li>
+      </ol>
+    </nav>
     <p class="qe-kicker">Register &middot; the changelog</p>
     <h1>The accession register</h1>
 
@@ -296,8 +325,53 @@
        which a derived href would have. -->
   <div class="qe-register" id="latest">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-11-tropisms">
+    <section class="qe-accession" aria-labelledby="a-2026-09-11-drawers">
       <p class="qe-accession-date">2026 &middot; 11 September &middot; latest</p>
+      <h2 id="a-2026-09-11-drawers">Three drawers, a breadcrumb on every sheet, and a panel that moved when a control was added <a class="qe-anchor" href="#a-2026-09-11-drawers"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Ryan&rsquo;s: <q>I like breadcrumbs and collection pages.</q> The two lists at the foot of the home page were already collections in everything but address, and the plate was a third. He named the menu, and chose <em>Drawers</em> over <em>Collections</em> and <em>Cases</em> with the collision against the <em>Cabinet</em> control stated in advance.</p>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="the-plate the-founding-papers the-cabinet-itself">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">Three collection pages, and not one of them repeats a sentence the home page already carries</span></div>
+        <div class="qe-entry-body">
+          <p><a href="/the-plate">The plate</a>, <a href="/the-founding-papers">the founding papers</a> and <a href="/the-cabinet-itself">the cabinet itself</a> are the three groups <code>tools/pages.mjs</code> has always held, given addresses. Each group&rsquo;s collection page is now the first entry in its own group, so <code>/llms.txt</code>, the finding aid&rsquo;s manifest and the reader&rsquo;s index stay one list.</p>
+          <p><strong>The glosses were the whole design problem.</strong> Nine pages are described in one sentence each in <code>.qe-furniture</code> on the home page, and this file&rsquo;s loudest rule is that two copies of the same words drift. So a collection page carries a <em>different</em> sentence with a different job &mdash; what the page is <em>for</em> and where it sits against its neighbours, not what is in it &mdash; and says on its own face that the gloss lives on the front of the cabinet. <a href="/the-plate">The plate</a> takes the same treatment from the other side: it shows the ten cards in their reduced form, the one the sibling navs already use, and carries no card notes at all.</p>
+          <p><strong>What earns each page its place is the part that exists nowhere else.</strong> The plate defines what a sheet is, what a reading, an essay and a wall each mean &mdash; settled in <a href="/what-is-settled">the decision log</a> in September and never stated anywhere a reader meets them &mdash; and what the accession number does not say. The founding papers carry the signed-and-unsigned rule. The cabinet page says what the build actually checks about its own six pages.</p>
+          <p><strong>None of them is a specimen</strong>, so none carries a plate number, an accession stamp or a provenance line, and none is carded. <strong>And none carries a sibling nav</strong>: the drawers menu lists the other two drawers at the top of every page on the site with the current one marked, so a second list of the same three on the page itself is the two-competing-lists fault this file already refuses on the home page.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">The breadcrumb was already here, one crumb long, on twelve pages</span></div>
+        <div class="qe-entry-body">
+          <p><code>.qe-home</code> was a lone link home on twelve pages, and seven more carried the group name beside it as <em>plain text</em> &mdash; <q>Queering Earth &middot; The founding papers</q>, with the second half leading nowhere. The collection pages turned that dead text into an address, so the two shapes became one <code>.qe-crumbs</code> nav on nineteen pages.</p>
+          <p><strong>It stops at the drawer and never names the page it is on</strong>, because the <code>h1</code> is the next thing in the masthead and a third crumb would be the title printed twice, a line apart. The JSON-LD block carries all three items, since a machine&rsquo;s copy has no heading under it. <strong>The separator is drawn in CSS</strong> and is not a character in the markup: it must not join the accessible name, reach the Markdown, or be something a reader can select into a quotation.</p>
+          <p><strong>It sits inside the landmark, which the nav rule otherwise forbids</strong>, for the reason the contents list does: that rule stops one sheet&rsquo;s navigation being indexed as another sheet&rsquo;s content, and a trail naming this page&rsquo;s own position cannot do that. It lives in <code>.qe-masthead</code>, which the search index already skips, so it reaches the <code>.md</code> &mdash; where an agent wants to know where a page sits &mdash; and not the finding aid, where it would be nineteen identical results. <strong>Targets measured after:</strong> 45px tall, 107px and 67px wide, 18px apart, at 375px and at 1280px.</p>
+          <p><strong>The menu is a native disclosure and writes no words</strong>, like the reading settings beside it. Three links and three lines of hint, all authored in the markup; <code>queering.js</code> gained nothing but a loop, and lost a copy &mdash; the Escape and click-away handlers the reading panel had to itself now run over both, which is also what makes opening one close the other.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="index">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">The home page said eight sheets, and the plate has held ten since 10 September</span></div>
+        <div class="qe-entry-body">
+          <p><q>Eight sheets, so far, mounted and numbered on the plate below</q> was true when it was written and stopped being true on <a href="/five-unmistakable-marks">No.&nbsp;9</a>, directly above a plate showing ten cards numbered 1 to 10. <strong>Replaced rather than corrected</strong>, because a count kept by hand is a count that goes stale, and this register already holds two other findings of exactly that shape on Star Stuff&rsquo;s own pages. The sentence now says the sheets are numbered in the order they were accessioned and leaves the counting to the plate.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">A panel hung off its own control moves when a control is added, and the one that moved was the old one</span></div>
+        <div class="qe-entry-body">
+          <p>The reading panel had been <code>right: 0</code> on its own summary since it shipped, which quietly made its position <strong>a function of how many controls sit to its right</strong>. Measured at 1280px it cleared the measure by 31px. Adding one control moved the control 81px left, took the panel with it, and landed <strong>50px of it on the lede on eight pages</strong>. <code>check-overlap.mjs</code> reported it; nothing else would have, and no amount of care about the new control would have predicted it. Both panels now hang off the tray, whose right edge is the gutter at every width, and a seventh control cannot move either.</p>
+          <p><strong>The tray&rsquo;s own note said a new control is a measurement</strong>, and it was right about the row and silent about the overlay. Measured at 320, 375, 768 and 1280px after: every hit area 44&times;44 or better, no two overlapping, <code>scrollWidth</code> equal to the viewport at all four, and both panels inside the gutters at 320. <strong>The cost is paid explicitly</strong> &mdash; the 44px box <code>.qe-controls&nbsp;&gt;&nbsp;*::after</code> grows only works because each child is positioned, so for these two it moves onto the summary and the tray&rsquo;s rule is switched off for them rather than left to misfire against the tray.</p>
+          <p><strong>Two overlay panels in one tray can both be open with JavaScript off</strong>, because a disclosure toggles natively and the close-the-other convenience was script. They now share a <code>name</code>, which is HTML&rsquo;s exclusive accordion: opening one closes the other with no script at all. Verified by setting <code>open</code> directly, with no click and therefore no listener involved.</p>
+          <p><strong>That fix made the two rendering gates disagree, and both were taught.</strong> <code>reveal.mjs</code> dissolves the group before opening, or one panel would be measured shut &mdash; the eight-percent-of-itself failure its own header is about, arriving through a fix for something else &mdash; and puts it back afterwards. <code>check-overlap.mjs</code> then knows that two members of one exclusive accordion can never be on screen together and refuses to call them a collision; the exemption is <strong>declared by the markup</strong> rather than listed in the tool, which is the bar the invisible-text list already set. Proved both ways: the drawers panel&rsquo;s hints in a 2.15:1 colour report three failures under the contrast gate and none once restored, so the panel is genuinely being measured.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-11-tropisms">
+      <p class="qe-accession-date">2026 &middot; 11 September</p>
       <h2 id="a-2026-09-11-tropisms">A masthead for the two modes, and the width a masthead is actually reviewed at <a class="qe-anchor" href="#a-2026-09-11-tropisms"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Ryan&rsquo;s, after the blown-up tray mark was <a href="/what-is-settled">refused twice</a>: <q>Instead of a blown-up icon, let&rsquo;s do something else for the header illustration.</q> Four options were put up and he took the one that draws the argument instead of the animals.</p>
@@ -2483,6 +2557,18 @@
       </div>
       <div class="qe-index-group" data-sheet="index" hidden>
         <h3 class="qe-index-sheet"><a href="/">Queering.Earth</a> <span class="qe-index-kicker">the plate</span></h3>
+        <ul></ul>
+      </div>
+      <div class="qe-index-group" data-sheet="the-plate" hidden>
+        <h3 class="qe-index-sheet"><a href="/the-plate">The plate</a> <span class="qe-index-kicker">the readings, collected</span></h3>
+        <ul></ul>
+      </div>
+      <div class="qe-index-group" data-sheet="the-founding-papers" hidden>
+        <h3 class="qe-index-sheet"><a href="/the-founding-papers">The founding papers</a> <span class="qe-index-kicker">the drawer</span></h3>
+        <ul></ul>
+      </div>
+      <div class="qe-index-group" data-sheet="the-cabinet-itself" hidden>
+        <h3 class="qe-index-sheet"><a href="/the-cabinet-itself">The cabinet itself</a> <span class="qe-index-kicker">the drawer</span></h3>
         <ul></ul>
       </div>
       <div class="qe-index-group" data-sheet="mission" hidden>

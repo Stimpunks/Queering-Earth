@@ -3,27 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>No such sheet &mdash; Queering Earth</title>
-<meta name="description" content="That address does not name anything in this cabinet. Here is the plate, the register, and the eight sheets.">
-
-<!-- NO rel=canonical, on purpose. This page is served at EVERY unmatched address,
-     so a canonical would tell a crawler that every wrong URL on the site is one
-     real page. An error page has no canonical address because it has no address. -->
-<!-- noindex because the page is thin by design. The spec's meta-robots item asks
-     for an explicit policy on thin content rather than leaving it implicit. -->
-<meta name="robots" content="noindex, follow">
+<title>The plate &mdash; Queering Earth</title>
+<meta name="description" content="Every sheet on queering.earth in accession order, with what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say.">
+<link rel="canonical" href="https://queering.earth/the-plate">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
 
-<!-- No og:image and no social card, and that is a decision rather than an omission.
-     A new SHEET needs a card; this is furniture, and it should never be shared on
-     purpose. A broken link that unfurls as a bare link is telling the truth. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Queering Earth">
-<meta property="og:title" content="No such sheet">
-<meta property="og:description" content="That address does not name anything in this cabinet.">
+<meta property="og:title" content="The plate">
+<meta property="og:description" content="Every sheet mounted so far, in accession order — and what a sheet is, what the three kinds mean, and what the numbers do not say.">
+<meta property="og:url" content="https://queering.earth/the-plate">
 <meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://queering.earth/images/og-the-plate.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The plate. Every sheet mounted so far, in accession order.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The plate">
+<meta name="twitter:description" content="Every sheet mounted so far, in accession order — and what a sheet is, what the three kinds mean, and what the numbers do not say.">
+<meta name="twitter:image" content="https://queering.earth/images/og-the-plate.png">
+<meta name="twitter:image:alt" content="The plate. Every sheet mounted so far, in accession order.">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
@@ -36,10 +39,74 @@
 <link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="queering.css">
 
-<!-- Restore the reader's choices BEFORE first paint. A reader who asked for the
-     cabinet asked for it here too — an error page is the worst place to flash the
-     wrong ground, because it is the page they did not choose to be on. -->
+<!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
+     either one would flash the wrong page: the decorated sheet at a reader who
+     turned it off, or the daylight sheet at one who asked for the drawer. -->
 <script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
+<!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
+     rel=alternate points an agent at this page's Markdown source, derived from this
+     page's own main landmark by tools/make-markdown.mjs.
+
+     NO ANGLE-BRACKET TAG NAMES IN A COMMENT NEAR THE HEAD. Writing the landmark's name
+     with brackets here made a /<main[^>]*>/ extractor match inside this very comment
+     and take the head as the page body. The SKS mirror reads that landmark too. -->
+<link rel="describedby" href="/llms.txt" type="text/markdown" title="Site index for agents">
+<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Queering Earth — the accession register">
+<link rel="alternate" href="https://queering.earth/the-plate.md" type="text/markdown" title="The plate — Markdown source">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://queering.earth/the-plate#page",
+  "name": "The plate",
+  "description": "Every sheet on queering.earth in accession order, with what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say.",
+  "url": "https://queering.earth/the-plate",
+  "inLanguage": "en",
+  "isFamilyFriendly": true,
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "publisher": [
+    {
+      "@type": "Organization",
+      "name": "Stimpunks Foundation",
+      "url": "https://stimpunks.org/"
+    },
+    {
+      "@type": "Organization",
+      "name": "More Realms",
+      "url": "https://morerealms.com/"
+    }
+  ],
+  "dateModified": "2026-09-11",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Queering Earth",
+    "url": "https://queering.earth/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Queering Earth",
+        "item": "https://queering.earth/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "The plate",
+        "item": "https://queering.earth/the-plate"
+      }
+    ]
+  },
+  "encoding": {
+    "@type": "MediaObject",
+    "encodingFormat": "text/markdown",
+    "contentUrl": "https://queering.earth/the-plate.md"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -109,7 +176,7 @@
     <div class="qe-drawers-panel">
       <ul class="qe-drawers-list">
         <li>
-          <a class="qe-drawers-link" href="/the-plate">The plate</a>
+          <a class="qe-drawers-link" href="/the-plate" aria-current="page">The plate</a>
           <span class="qe-drawers-hint">The sheets themselves, mounted and numbered on one plate.</span>
         </li>
         <li>
@@ -168,54 +235,46 @@
   </a>
 </div>
 
+<nav class="qe-rail" aria-label="On this page" hidden>
+  <ol></ol>
+  <svg class="qe-botanical qe-rail-sprig" viewBox="0 0 28 27" aria-hidden="true" focusable="false">
+    <path class="stem" style="--len:34" d="M0.6,0 C0.7,7.2 1.9,13.4 4.6,18.4 C6.1,21.2 7.8,23.2 9.6,24.6"/>
+    <g class="sprout sprout-leaf" style="--i:0">
+      <path d="M1.7,7.9 C5.1,5.5 8.9,6.6 10.8,10.2 C7.3,11.3 3.6,10.4 1.7,7.9 Z"/>
+    </g>
+    <g class="sprout sprout-leaf" style="--i:1">
+      <path d="M3.5,14.6 C7.2,12.8 11.2,14.1 13.2,17.9 C9.5,18.8 5.6,17.4 3.5,14.6 Z"/>
+    </g>
+    <g class="sprout" style="--i:2">
+      <circle cx="10.4" cy="25.4" r="1.5"/>
+    </g>
+  </svg>
+</nav>
+
 <main id="main" tabindex="-1">
 
-  <header class="qe-masthead">
-    <p class="qe-kicker"><a href="/">Queering Earth</a></p>
-    <h1>No such sheet</h1>
-
-    <!-- An empty mount: the stem and its leaves, and nothing at the tip. The
-         herbarium version of a 404 is a sheet whose specimen is not there.
-         Positioning on the outer <g>, animation on the inner .sprout — a CSS
-         transform animation overrides an SVG transform attribute on the same
-         element, and getting that wrong collapses every sprout onto the origin. -->
-    <svg class="qe-botanical" viewBox="0 0 560 200" role="img" aria-label="A leafy stem mounted diagonally across the sheet, rising from the lower left, with nothing at its upper tip where the flower would be." focusable="false">
-      <path class="stem" style="--len:496" stroke-width="2.4" d="M40 170 C 160 150, 300 120, 520 48"/>
-      <g transform="translate(115 157) rotate(-68)"><g class="sprout sprout-leaf" style="--i:1"><path class="leaf" stroke-width="1.1" d="M0 0 C 7.2 -9.4, 22 -9.9, 28.6 0 C 22 9.9, 7.2 9.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 27.5 0"/></g></g>
-      <g transform="translate(176 144) rotate(112)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" stroke-width="1.1" d="M0 0 C 7.2 -9.4, 22 -9.9, 28.6 0 C 22 9.9, 7.2 9.4, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 27.5 0"/></g></g>
-      <g transform="translate(243 129) rotate(-63)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" stroke-width="1.1" d="M0 0 C 5.9 -7.6, 18 -8.1, 23.4 0 C 18 8.1, 5.9 7.6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 22.5 0"/></g></g>
-      <g transform="translate(316 110) rotate(117)"><g class="sprout sprout-leaf" style="--i:4"><path class="leaf" stroke-width="1.1" d="M0 0 C 5.9 -7.6, 18 -8.1, 23.4 0 C 18 8.1, 5.9 7.6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 22.5 0"/></g></g>
-      <g transform="translate(397 86) rotate(-58)"><g class="sprout sprout-leaf" style="--i:5"><path class="leaf" stroke-width="1.1" d="M0 0 C 4.6 -5.9, 14 -6.3, 18.2 0 C 14 6.3, 4.6 5.9, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 17.5 0"/></g></g>
-      <g transform="translate(469 65) rotate(122)"><g class="sprout sprout-leaf" style="--i:6"><path class="leaf" stroke-width="1.1" d="M0 0 C 3.9 -5.1, 12 -5.4, 15.6 0 C 12 5.4, 3.9 5.1, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 15.0 0"/></g></g>
-    </svg>
+  <header class="qe-masthead qe-masthead-sheet">
+    <nav class="qe-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Queering Earth</a></li>
+      </ol>
+    </nav>
+    <p class="qe-kicker">Drawer &middot; the readings</p>
+    <h1>The plate</h1>
   </header>
 
-  <p class="qe-lede">That address does not name anything in this cabinet. Nothing is broken on your end, and nothing here is lost &mdash; the address simply does not correspond to a sheet.</p>
+  <p class="qe-lede">Every sheet mounted so far, in the order it was accessioned &mdash; and, below the plate, what a sheet is, what the three kinds mean, and what the numbers do and do not say.</p>
 
-  <h2 id="why">Three ways this happens <a class="qe-anchor" href="#why"><span class="qe-sr">Link to this section</span></a></h2>
+  <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
+    <h2 id="qe-contents-h">On this sheet</h2>
+    <ol></ol>
+  </nav>
 
-  <p>An address was typed with a character out of place, and the sheet it nearly names is a click away below. Or a link somewhere else on the web points at something we moved or never had &mdash; if you followed one, the fault is ours and we would like to know. Or you reached for a sheet that has not been mounted yet, which is the most likely case on a site of eleven pages that is two days old.</p>
+  <h2 id="mounted-so-far">Mounted so far <a class="qe-anchor" href="#mounted-so-far"><span class="qe-sr">Link to this section</span></a></h2>
 
-  <p>Every address here is permanent once published. <a href="/changelog">The accession register</a> records every sheet as it was mounted and every label we corrected, so if something used to be at this address, that is the book it is written in. Nothing has been withdrawn.</p>
+  <p>In accession order, which is the order they were mounted and not an order to read them in. Every card carries the sheet&rsquo;s kind and its number; what each of those means is below.</p>
 
-  <h2 id="where">Where to look instead <a class="qe-anchor" href="#where"><span class="qe-sr">Link to this section</span></a></h2>
-
-  <p><strong>There is a search now</strong>, which there was not when this page was written: <a href="/search">the finding aid</a>. It runs entirely in your own browser &mdash; the sheet you are looking for is probably one query away. The plate is still the other way in: <a href="/">the front page</a> lays every sheet out as a numbered card.</p>
-
-  <p>Otherwise: <a href="/design">the colophon</a> explains how this site is made &mdash; the herbarium sheet, the palette, the type, and the borrowed plates. <a href="/changelog">The register</a> is the ledger. Every sheet is carded below.</p>
-
-  <p class="qe-untidy">If a link sent you here, <a href="https://github.com/Stimpunks/Queering-Earth/issues">say so in the repository</a> and it becomes a register entry. A broken inbound link is a fact about this site, not about the reader who followed it.</p>
-
-</main>
-
-<!-- Elsewhere on the plate. OUTSIDE <main> on purpose: the SKS mirror takes page
-     content from the <main> landmark and nowhere else, so navigation placed inside
-     it is indexed as this page's content. On an error page the cards ARE the way
-     forward the spec asks for, which is exactly why they are navigation and not
-     the message. -->
-<nav class="qe-elsewhere" aria-labelledby="qe-elsewhere-h">
-  <h2 id="qe-elsewhere-h">Every sheet in the cabinet</h2>
-  <ul class="qe-elsewhere-grid">
+  <ul class="qe-plate-grid">
     <li>
       <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
         <a class="card" href="/on-being-ill">
@@ -228,7 +287,7 @@
       </div>
     </li>
     <li>
-      <div class="card-wrap" style="--card-color: var(--qe-lichen)">
+      <div class="card-wrap" style="--card-color: var(--qe-violet)">
         <a class="card" href="/coming-to-terms">
           <span class="qe-card-head">
             <span class="qe-card-kind">Essay</span>
@@ -261,7 +320,7 @@
       </div>
     </li>
     <li>
-      <div class="card-wrap" style="--card-color: var(--qe-violet)">
+      <div class="card-wrap" style="--card-color: var(--qe-lichen)">
         <a class="card" href="/the-tempest">
           <span class="qe-card-head">
             <span class="qe-card-kind">Reading</span>
@@ -283,7 +342,7 @@
       </div>
     </li>
     <li>
-      <div class="card-wrap" style="--card-color: var(--qe-coral)">
+      <div class="card-wrap" style="--card-color: var(--qe-violet)">
         <a class="card" href="/flower-codes">
           <span class="qe-card-head">
             <span class="qe-card-kind">Reading</span>
@@ -315,9 +374,64 @@
         </a>
       </div>
     </li>
-    <li><div class="card-wrap" style="--card-color: var(--qe-verdigris)"><a class="card" href="/other-people-who-have-it"><span class="qe-card-head"><span class="qe-card-kind">Reading</span><span class="qe-card-no">No.&nbsp;10</span></span><span class="qe-card-title">Other People Who Have It</span></a></div></li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/other-people-who-have-it">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;10</span>
+          </span>
+          <span class="qe-card-title">Other People Who Have It</span>
+        </a>
+      </div>
+    </li>
   </ul>
-</nav>
+
+  <p>The same run sits on the <a href="/#what-grows-here">front of the cabinet</a> with a sentence of gloss under each card. <strong>Those sentences live in one place and this is not it.</strong> Ten descriptions copied onto a second page are ten descriptions free to drift from the first, and the copy that drifts is never the one anybody is looking at. What this page has that the front does not is everything below.</p>
+
+  <h2 id="what-a-sheet-is">What a sheet is <a class="qe-anchor" href="#what-a-sheet-is"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>One thing, read closely, mounted with the reading signed. The object being read sits in the <strong>specimen</strong> &mdash; quoted exactly, in the edition we actually held, with the date somebody read it. Our reading sits on the <strong>label</strong> beside it. The line between those two is drawn in the layout rather than left to a reader&rsquo;s good faith, because the characteristic failure on a site like this is not an invented source but a <em>tightened</em> one &mdash; a sentence trimmed to fit, with the attribution left attached. If we changed the words, they are ours.</p>
+
+  <p>So a sheet is not a summary, and it is not a review. It is one object and one reading of it, kept apart on the same page so you can disagree with the second without doubting the first.</p>
+
+  <h2 id="three-kinds">A reading, an essay, a wall <a class="qe-anchor" href="#three-kinds"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Three kinds so far, and the distinction is not decoration &mdash; it tells you what shape the argument on the sheet has.</p>
+
+  <dl class="qe-furniture">
+    <dt><a href="/on-being-ill">A reading</a></dt>
+    <dd>Somebody else&rsquo;s work, read in order and arriving somewhere. Eight of the ten. The specimen is theirs, the argument is ours, and the sheet ends somewhere it could not have started.</dd>
+
+    <dt><a href="/coming-to-terms">An essay</a></dt>
+    <dd>Ours, written here, signed. There is no specimen to hold apart from the label because the whole sheet is the label. One so far.</dd>
+
+    <dt><a href="/monotropa-uniflora">A wall</a></dt>
+    <dd>A chorus rather than a sequence: labelled slips in many hands, each signed, arguing by accumulation instead of by order. The form is borrowed from a herbarium sheet that has been in a drawer long enough to collect a stack of determination slips. The subject has to deserve it. One so far.</dd>
+  </dl>
+
+  <p>A Stimpunks zine wall works by unattributed declaration, and that is the one move this cabinet cannot make, because here the citation <em>is</em> the product. So a wall here is a chorus of <em>labelled</em> slips, and mixing the two would be the failure.</p>
+
+  <h2 id="the-numbers">What the number says, and what it does not <a class="qe-anchor" href="#the-numbers"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The number says when a sheet was accessioned. That is all it says. It is not a ranking, not a difficulty, not a reading order, and not a series &mdash; there is one accession run here and the kind is a label on it rather than a second sequence. No.&nbsp;1 is not the place to start unless you want to start there.</p>
+
+  <p>The plate on the front of the cabinet is the authority for a sheet&rsquo;s number and its kind, and every other list of them on this site &mdash; this one, and the sibling cards at the foot of each sheet &mdash; is checked against it before anything ships. A card here that disagreed with the plate would fail the build rather than quietly misfile a sheet.</p>
+
+  <h2 id="how-a-sheet-is-checked">How a sheet is checked <a class="qe-anchor" href="#how-a-sheet-is-checked"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Four things, each of which you can go and read.</p>
+
+  <ul>
+    <li><strong>The specimen block</strong> at the head of the sheet names the edition we read and the day we read it.</li>
+    <li><strong>The accession stamp and the provenance line</strong> at the foot say when the sheet was mounted and how many times its label has been corrected since, each correction linked to the entry that made it.</li>
+    <li><strong>The <a href="/changelog">register</a></strong> logs every mounting and every correction, newest first, and files them by which sheet they happened to.</li>
+    <li><strong>The <a href="/ledger">ledger</a></strong> traces every quotation on the site to the work it was read in, including the attributions we got wrong and later restored.</li>
+  </ul>
+
+  <p>There are no hard facts here for everything, and that is the brief rather than a lowered bar. It does not extend one inch to the quotations.</p>
+
+</main>
 
 <footer class="qe-footer">
   <p class="qe-footer-nav">
@@ -335,7 +449,7 @@
 
   <p>A collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
 
-  <p>Words and art licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Take them and make something.</p>
+  <p>Our words licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. The works read on these sheets belong to the people who made them, and every quotation is traced in the site&rsquo;s <a href="/ledger">attribution ledger</a>.</p>
 
   <a class="qe-totop" href="#main">
     <span class="qe-totop-label">Scroll to top</span>
@@ -357,6 +471,7 @@
     </svg>
   </a>
 </footer>
+
 <script src="queering.js"></script>
 </body>
 </html>

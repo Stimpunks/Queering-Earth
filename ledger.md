@@ -9,7 +9,8 @@ attribution_ledger: "https://github.com/Stimpunks/Queering-Earth/blob/main/ATTRI
 generated_by: "tools/make-markdown.mjs from the page's own <main> landmark"
 ---
 
-[Queering Earth](https://queering.earth/) · The cabinet itself
+1. [Queering Earth](https://queering.earth/)
+2. [The cabinet itself](https://queering.earth/the-cabinet-itself)
 
 # The attribution ledger
 

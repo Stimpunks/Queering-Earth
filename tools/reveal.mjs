@@ -55,6 +55,23 @@ export const REVEAL = String.raw`(() => {
      class, ADD IT HERE — a page that checks the 8% of itself that happens to be
      visible reports zero failures and looks exactly like a clean one. */
   let spreads = 0, entries = 0, results = 0;
+  /* THE NAME COMES OFF FIRST, AND WITHOUT THAT LINE ONE PANEL GOES DARK. The two
+     tray disclosures — the reading settings and the drawers menu — share a name attribute,
+     which is HTML's exclusive accordion: opening one closes the other, natively and
+     with no script, which is what stops two overlay panels landing on each other for
+     a reader with JavaScript off. That is correct for a reader and wrong for a sweep.
+     Opening them in document order would close the first as the second opened, and
+     the first would be measured shut — the 8%-of-itself failure this file's own
+     header is about, arriving through a fix for something else.
+
+     So the group is dissolved for the measurement and put back by UNREVEAL. The two
+     states this invents — both panels open at once — is a state no reader sees, and
+     that matters to exactly one gate: check-overlap.mjs knows the two can never be on
+     screen together and refuses to call them a collision. Colour does not care. */
+  for (const d of document.querySelectorAll('details[name]')) {
+    d.setAttribute('data-ss-name', d.getAttribute('name'));
+    d.removeAttribute('name');
+  }
   for (const d of document.querySelectorAll('details:not([open])')) {
     d.open = true; d.setAttribute('data-ss-revealed', 'details'); entries++;
   }
@@ -172,6 +189,11 @@ export const UNREVEAL = String.raw`(() => {
   let n = 0;
   /* Injected nodes go first: they are inside the containers the next loop re-hides. */
   for (const el of document.querySelectorAll('[data-ss-injected]')) { el.remove(); n++; }
+  for (const el of document.querySelectorAll('[data-ss-name]')) {
+    el.setAttribute('name', el.getAttribute('data-ss-name'));
+    el.removeAttribute('data-ss-name');
+    n++;
+  }
   for (const el of document.querySelectorAll('[data-ss-revealed]')) {
     const what = el.getAttribute('data-ss-revealed');
     if (what === 'details') el.open = false;

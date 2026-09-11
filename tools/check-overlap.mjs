@@ -194,9 +194,16 @@ const MEASURE = String.raw`((cfg) => {
     boxes.push({
       l: rect.left, r: rect.right, t: cy - h / 2, b: cy + h / 2,
       em, el, kind,
+      /* Which exclusive-accordion panel this box is inside, if any. data-ss-name
+         is what reveal.mjs leaves behind when it dissolves an HTML exclusive
+         accordion so both members can be measured; the live attribute is name.
+         Read both, so this is right whether or not the page was revealed. */
+      excl: el.closest ? el.closest('details[data-ss-name], details[name]') : null,
       text: clean(text).slice(0, 46),
     });
   };
+
+  const exclName = (d) => d.getAttribute('data-ss-name') || d.getAttribute('name');
 
   const hidden = (el) => {
     /* INVISIBLE first, and it has to be a selector test rather than a style test.
@@ -284,6 +291,21 @@ const MEASURE = String.raw`((cfg) => {
          next to its own inline sibling on the same line is normal flow. Only
          genuinely separate boxes count. */
       if (a.el === b.el) continue;
+
+      /* TWO MEMBERS OF ONE EXCLUSIVE ACCORDION CANNOT BOTH BE ON SCREEN, so text
+         in one landing on text in the other is a state no reader reaches. HTML's
+         name on a details element is that guarantee — opening one closes the
+         rest, natively and without script — and it is what the controls tray uses
+         to keep the reading settings and the drawers menu off each other when
+         JavaScript is off. reveal.mjs has to dissolve the group to measure both
+         panels at all, which is exactly what invents the pair this skips.
+
+         DECLARED BY THE MARKUP RATHER THAN LISTED HERE, which is the bar the
+         INVISIBLE list sets: this is not "ignore overlapping panels", it is "these
+         two elements are spec-guaranteed never to be open together". A panel that
+         stops being exclusive stops being exempt, in the same edit. */
+      if (a.excl && b.excl && a.excl !== b.excl &&
+          exclName(a.excl) === exclName(b.excl)) continue;
 
       hits.push({
         kind: a.kind === b.kind ? a.kind + '-vs-' + b.kind : 'svg-vs-html',

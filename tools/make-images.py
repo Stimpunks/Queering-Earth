@@ -336,6 +336,17 @@ og_card(REPO/"images"/"og-privacy.png", "What this site knows about you", "Priva
 og_card(REPO/"images"/"og-search.png", "Find a word in the cabinet", "Finding aid",
         "Every sheet, every quotation, and every correction.", LICHEN)
 
+# The three drawers. Their kicker is the word the tray menu uses, so a card shared
+# out of context says which of the three it came from before it says anything else.
+og_card(REPO/"images"/"og-the-plate.png", "The plate", "Drawer · the readings",
+        "Every sheet mounted so far, in the order it was accessioned.", VERDIGRIS)
+og_card(REPO/"images"/"og-the-founding-papers.png", "The founding papers",
+        "Drawer · the founding papers",
+        "Why this cabinet exists, and what it is for.", VIOLET)
+og_card(REPO/"images"/"og-the-cabinet-itself.png", "The cabinet itself",
+        "Drawer · the cabinet itself",
+        "How it is made, what it has recorded, and what it knows about you.", MOSS)
+
 # The report enumerates WHAT WAS ACTUALLY WRITTEN, not a hand-kept list of what
 # ought to have been. It was a hand-kept list until 2026-09-09, and the ghost pipe
 # card generated correctly and went unreported because nobody added a line to it —

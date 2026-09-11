@@ -22,12 +22,47 @@
  * agents under a heading that disagrees with the one a reader sees.
  */
 export const GROUPS = [
-  ['The readings', ['on-being-ill', 'coming-to-terms', 'promises-like-pie-crust', 'invention-of-normal',
+  ['The readings', ['the-plate',
+                    'on-being-ill', 'coming-to-terms', 'promises-like-pie-crust', 'invention-of-normal',
                     'the-tempest', 'wild-nights', 'flower-codes', 'monotropa-uniflora',
                     'five-unmistakable-marks', 'other-people-who-have-it']],
-  ['The founding papers', ['mission', 'manifesto', 'two-cohabitating-modes']],
-  ['The cabinet itself', ['index', 'design', 'changelog', 'search', 'ledger', 'what-is-settled', 'privacy']],
+  ['The founding papers', ['the-founding-papers', 'mission', 'manifesto', 'two-cohabitating-modes']],
+  ['The cabinet itself', ['index', 'the-cabinet-itself',
+                          'design', 'changelog', 'search', 'ledger', 'what-is-settled', 'privacy']],
 ];
+
+/**
+ * The collection page at the head of each group, keyed by the group's heading.
+ *
+ * EACH GROUP'S FIRST ENTRY IS ITS OWN INDEX, and that is the whole of the mapping —
+ * `the-plate` leads the readings, `the-founding-papers` leads the founding papers,
+ * and `the-cabinet-itself` sits under `index` in the cabinet because the home page
+ * is the front of the cabinet and the collection page is the drawer inside it.
+ *
+ * DERIVED FROM GROUPS RATHER THAN LISTED AGAIN, because a second list is a second
+ * answer to one question. What is authored here is the address; the membership is
+ * whatever GROUPS says, which is the same list the breadcrumbs, the drawers menu,
+ * /llms.txt and the finding aid's manifest all read.
+ */
+export const COLLECTIONS = new Map([
+  ['The readings', 'the-plate'],
+  ['The founding papers', 'the-founding-papers'],
+  ['The cabinet itself', 'the-cabinet-itself'],
+]);
+
+/** Which collection a page belongs to: slug -> { group, collection }. A collection
+ *  page maps to itself, which is what lets a breadcrumb stop at the collection and
+ *  the drawers menu mark the current drawer. `index` is in no collection — the home
+ *  page is above the scheme, not inside it. */
+export const COLLECTION_OF = new Map();
+for (const [heading, slugs] of GROUPS) {
+  const collection = COLLECTIONS.get(heading);
+  if (!collection) continue;
+  for (const slug of slugs) {
+    if (slug === 'index') continue;
+    COLLECTION_OF.set(slug, { group: heading, collection });
+  }
+}
 
 /** The register keeps its own back matter, and the finding aid defers to it. */
 export const REGISTER = 'changelog';

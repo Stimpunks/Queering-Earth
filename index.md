@@ -89,7 +89,7 @@ It also is not a trade. Every page here has a **plain view** — the control at 
 
 ## What grows here
 
-Eight sheets, so far, mounted and numbered on the plate below.
+Every sheet mounted so far, numbered on the plate below in the order it was accessioned. [About this drawer](https://queering.earth/the-plate) — what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say.
 
 -
 
@@ -158,7 +158,7 @@ Uploaded by [tim24frames](https://www.youtube.com/@tim24frames). Eliot recorded 
 
 ## The founding papers
 
-Why this cabinet exists, and what it is for.
+Why this cabinet exists, and what it is for. [About this drawer](https://queering.earth/the-founding-papers) — what each paper is for, why none of them is a sheet, and which one is signed.
 
 **[What this cabinet is for](https://queering.earth/mission)**
 : Thirteen aims, each one naming the page where it is already being kept — and, for each, the observation that would show we had quietly stopped. An aim you cannot fail is not an aim.
@@ -171,7 +171,7 @@ Why this cabinet exists, and what it is for.
 
 ## The cabinet itself
 
-Six pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything.
+Six pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything. [About this drawer](https://queering.earth/the-cabinet-itself) — what each page is for, and what the build checks about it.
 
 **[How this site is made](https://queering.earth/design)**
 : The herbarium sheet, the palette, the type that leans, and the borrowed plates — each rule written down with the reason it exists, so it can be argued with.

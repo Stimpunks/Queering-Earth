@@ -232,20 +232,38 @@
 
     paintReset();
 
-    /* <details> gives keyboard and screen-reader behaviour for free, which is the
-       whole reason this is not a hand-built menu. Escape and click-away are the two
-       things it does not do, and they are conveniences on top of something that
-       already works without them. */
+  }
+
+  /* ── the two tray disclosures close the same way
+   *
+   * <details> gives keyboard and screen-reader behaviour for free, which is the whole
+   * reason neither of these is a hand-built menu. Escape and click-away are the two
+   * things it does not do, and they are conveniences on top of something that already
+   * works without them.
+   *
+   * ONE LOOP OVER BOTH, rather than a copy inside each. The reading panel had these
+   * two listeners to itself until the drawers menu arrived wanting exactly them, and
+   * a second copy is a behaviour one disclosure learns and the other does not — the
+   * same reason the stylesheet shares their summary rules instead of restating them.
+   * It also fixes something the single-panel version could not express: opening one
+   * closes the other, because a click inside the drawers menu is a click outside the
+   * reading panel. */
+  var trays = document.querySelectorAll('.qe-reading, .qe-drawers');
+  if (trays.length) {
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && panel.open) {
-        panel.open = false;
-        var summary = panel.querySelector('summary');
+      if (e.key !== 'Escape') return;
+      for (var i = 0; i < trays.length; i++) {
+        if (!trays[i].open) continue;
+        trays[i].open = false;
+        var summary = trays[i].querySelector('summary');
         if (summary) summary.focus();
       }
     });
 
     document.addEventListener('click', function (e) {
-      if (panel.open && !panel.contains(e.target)) panel.open = false;
+      for (var i = 0; i < trays.length; i++) {
+        if (trays[i].open && !trays[i].contains(e.target)) trays[i].open = false;
+      }
     });
   }
 

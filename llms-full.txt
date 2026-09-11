@@ -6,12 +6,113 @@
 
 ---
 
+# The plate
+
+https://queering.earth/the-plate
+The readings · updated 2026-09-11
+
+1. [Queering Earth](https://queering.earth/)
+
+Drawer · the readings
+
+# The plate
+
+Every sheet mounted so far, in the order it was accessioned — and, below the plate, what a sheet is, what the three kinds mean, and what the numbers do and do not say.
+
+## Mounted so far
+
+In accession order, which is the order they were mounted and not an order to read them in. Every card carries the sheet’s kind and its number; what each of those means is below.
+
+-
+
+[  Reading No. 1  The Army of the Upright ](https://queering.earth/on-being-ill)
+
+-
+
+[  Essay No. 2  Coming to Terms ](https://queering.earth/coming-to-terms)
+
+-
+
+[  Reading No. 3  The Die Uncast ](https://queering.earth/promises-like-pie-crust)
+
+-
+
+[  Reading No. 4  Wyrd, Weird, and the Invention of Normal ](https://queering.earth/invention-of-normal)
+
+-
+
+[  Reading No. 5  Miranda: To Be Wondered With ](https://queering.earth/the-tempest)
+
+-
+
+[  Reading No. 6  The Swell and the Dwell ](https://queering.earth/wild-nights)
+
+-
+
+[  Reading No. 7  A Waste Garden, Flowering at Its Will ](https://queering.earth/flower-codes)
+
+-
+
+[  Wall No. 8  The Preferred Flower of Life ](https://queering.earth/monotropa-uniflora)
+
+-
+
+[  Reading No. 9  The Five Unmistakable Marks ](https://queering.earth/five-unmistakable-marks)
+
+-
+
+[  Reading No. 10  Other People Who Have It ](https://queering.earth/other-people-who-have-it)
+
+The same run sits on the [front of the cabinet](https://queering.earth/#what-grows-here) with a sentence of gloss under each card. **Those sentences live in one place and this is not it.** Ten descriptions copied onto a second page are ten descriptions free to drift from the first, and the copy that drifts is never the one anybody is looking at. What this page has that the front does not is everything below.
+
+## What a sheet is
+
+One thing, read closely, mounted with the reading signed. The object being read sits in the **specimen** — quoted exactly, in the edition we actually held, with the date somebody read it. Our reading sits on the **label** beside it. The line between those two is drawn in the layout rather than left to a reader’s good faith, because the characteristic failure on a site like this is not an invented source but a *tightened* one — a sentence trimmed to fit, with the attribution left attached. If we changed the words, they are ours.
+
+So a sheet is not a summary, and it is not a review. It is one object and one reading of it, kept apart on the same page so you can disagree with the second without doubting the first.
+
+## A reading, an essay, a wall
+
+Three kinds so far, and the distinction is not decoration — it tells you what shape the argument on the sheet has.
+
+**[A reading](https://queering.earth/on-being-ill)**
+: Somebody else’s work, read in order and arriving somewhere. Eight of the ten. The specimen is theirs, the argument is ours, and the sheet ends somewhere it could not have started.
+
+**[An essay](https://queering.earth/coming-to-terms)**
+: Ours, written here, signed. There is no specimen to hold apart from the label because the whole sheet is the label. One so far.
+
+**[A wall](https://queering.earth/monotropa-uniflora)**
+: A chorus rather than a sequence: labelled slips in many hands, each signed, arguing by accumulation instead of by order. The form is borrowed from a herbarium sheet that has been in a drawer long enough to collect a stack of determination slips. The subject has to deserve it. One so far.
+
+A Stimpunks zine wall works by unattributed declaration, and that is the one move this cabinet cannot make, because here the citation *is* the product. So a wall here is a chorus of *labelled* slips, and mixing the two would be the failure.
+
+## What the number says, and what it does not
+
+The number says when a sheet was accessioned. That is all it says. It is not a ranking, not a difficulty, not a reading order, and not a series — there is one accession run here and the kind is a label on it rather than a second sequence. No. 1 is not the place to start unless you want to start there.
+
+The plate on the front of the cabinet is the authority for a sheet’s number and its kind, and every other list of them on this site — this one, and the sibling cards at the foot of each sheet — is checked against it before anything ships. A card here that disagreed with the plate would fail the build rather than quietly misfile a sheet.
+
+## How a sheet is checked
+
+Four things, each of which you can go and read.
+
+- **The specimen block** at the head of the sheet names the edition we read and the day we read it.
+- **The accession stamp and the provenance line** at the foot say when the sheet was mounted and how many times its label has been corrected since, each correction linked to the entry that made it.
+- **The [register](https://queering.earth/changelog)** logs every mounting and every correction, newest first, and files them by which sheet they happened to.
+- **The [ledger](https://queering.earth/ledger)** traces every quotation on the site to the work it was read in, including the attributions we got wrong and later restored.
+
+There are no hard facts here for everything, and that is the brief rather than a lowered bar. It does not extend one inch to the quotations.
+
+
+---
+
 # The Army of the Upright
 
 https://queering.earth/on-being-ill
 The readings · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
 
 Sheet · a reading
 
@@ -151,7 +252,8 @@ Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09
 https://queering.earth/coming-to-terms
 The readings · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
 
 Sheet · an essay
 
@@ -353,7 +455,8 @@ Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09
 https://queering.earth/promises-like-pie-crust
 The readings · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
 
 Sheet · a reading
 
@@ -640,7 +743,8 @@ Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09
 https://queering.earth/invention-of-normal
 The readings · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
 
 Sheet · a reading
 
@@ -990,7 +1094,8 @@ Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09
 https://queering.earth/the-tempest
 The readings · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
 
 Sheet · a reading
 
@@ -1225,7 +1330,8 @@ Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09
 https://queering.earth/wild-nights
 The readings · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
 
 Sheet · a reading
 
@@ -1548,7 +1654,8 @@ Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09
 https://queering.earth/flower-codes
 The readings · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
 
 Sheet · a reading
 
@@ -1725,7 +1832,8 @@ Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09
 https://queering.earth/monotropa-uniflora
 The readings · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
 
 Sheet · a wall
 
@@ -1909,7 +2017,8 @@ Provenance Mounted [9 September 2026](https://queering.earth/changelog#a-2026-09
 https://queering.earth/five-unmistakable-marks
 The readings · updated 2026-09-10
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
 
 Sheet · a reading
 
@@ -2195,7 +2304,8 @@ Provenance Mounted [10 September 2026](https://queering.earth/changelog#a-2026-0
 https://queering.earth/other-people-who-have-it
 The readings · updated 2026-09-10
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
 
 Sheet · a reading
 
@@ -2460,12 +2570,58 @@ Provenance Mounted [10 September 2026](https://queering.earth/changelog#a-2026-0
 
 ---
 
+# The founding papers
+
+https://queering.earth/the-founding-papers
+The founding papers · updated 2026-09-11
+
+1. [Queering Earth](https://queering.earth/)
+
+Drawer · the founding papers
+
+# The founding papers
+
+The charter documents: why this cabinet exists and what it is for. Three papers, one of them signed, none of them a reading of anything.
+
+## The three papers
+
+Each line below says what the paper is *for* and where it sits against the other two. What each one actually contains is glossed once, on the [front of the cabinet](https://queering.earth/#the-founding-papers), and is not restated here: one sentence written twice is one sentence free to drift, and this cabinet keeps a register of exactly that kind of failure.
+
+**[What this cabinet is for](https://queering.earth/mission)**
+: Read it to find out what this site has promised. It is an index of aims rather than an argument, and each aim names both the page already keeping it and the observation that would show we had quietly stopped. An aim you cannot fail is not an aim.
+
+**[Nothing here was inevitable](https://queering.earth/manifesto)**
+: Read it to find out why any of that is worth promising. It is the argument the aims rest on: normal is an arrangement, arrangements have authors, and a reading is where an arrangement gets contested.
+
+**[Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes)**
+: Read it to find out why there are two of these sites and what each is for. It is the only one of the three about the shelf rather than about this cabinet, and the only one signed — see below.
+
+## Why these are papers and not sheets
+
+A [sheet](https://queering.earth/the-plate) is a reading of something: a specimen, quoted exactly, with our reading beside it and both signed. A founding paper reads nothing. It states a position, which is why it carries no plate number, no accession stamp and no provenance line — a stamp is for an accessioned specimen, and none of these is one.
+
+That is also why they are listed rather than carded. A card would file them with the readings, and the plate is a claim about what the cabinet *holds*. These are a claim about why it exists.
+
+## Signed and unsigned
+
+Two of the three carry no author, and that asymmetry is deliberate. [The aims](https://queering.earth/mission) and [the manifesto](https://queering.earth/manifesto) are the collaboration speaking — the manifesto is explicit that what it adapts was written by nine people. [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes) carries Ryan Boren’s name, because the claim it makes about hedgehogs, spiky profiles and Disabled solidarity is his, made from his sources.
+
+**A founding paper is signed when it carries a first-person claim somebody made, and unsigned when it is the house position.** Signing is a property of the paper and never of the group.
+
+## What would join them
+
+Anything that states this project’s stance rather than describing its workings. The test is the one the drawer is named for: charter documents, the things the rest of the cabinet presupposes. A page about how the site is built, what it has recorded, or what it knows about you belongs in [the other drawer](https://queering.earth/the-cabinet-itself), however well written it is. Purpose above plumbing, and the line between them is the whole reason there are two drawers and not one.
+
+
+---
+
 # What this cabinet is for
 
 https://queering.earth/mission
 The founding papers · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/) · The founding papers
+1. [Queering Earth](https://queering.earth/)
+2. [The founding papers](https://queering.earth/the-founding-papers)
 
 # What this cabinet is for
 
@@ -2589,7 +2745,8 @@ The full statement, including what is never allowed to stand as a citation, is o
 https://queering.earth/manifesto
 The founding papers · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/) · The founding papers
+1. [Queering Earth](https://queering.earth/)
+2. [The founding papers](https://queering.earth/the-founding-papers)
 
 # Nothing here was inevitable
 
@@ -2679,7 +2836,8 @@ The original is about classrooms, bodyminds and who holds a space. This is about
 https://queering.earth/two-cohabitating-modes
 The founding papers · updated 2026-09-10
 
-[Queering Earth](https://queering.earth/) · The founding papers
+1. [Queering Earth](https://queering.earth/)
+2. [The founding papers](https://queering.earth/the-founding-papers)
 
 # Two Cohabitating Modes
 
@@ -3001,7 +3159,7 @@ It also is not a trade. Every page here has a **plain view** — the control at 
 
 ## What grows here
 
-Eight sheets, so far, mounted and numbered on the plate below.
+Every sheet mounted so far, numbered on the plate below in the order it was accessioned. [About this drawer](https://queering.earth/the-plate) — what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say.
 
 -
 
@@ -3070,7 +3228,7 @@ Uploaded by [tim24frames](https://www.youtube.com/@tim24frames). Eliot recorded 
 
 ## The founding papers
 
-Why this cabinet exists, and what it is for.
+Why this cabinet exists, and what it is for. [About this drawer](https://queering.earth/the-founding-papers) — what each paper is for, why none of them is a sheet, and which one is signed.
 
 **[What this cabinet is for](https://queering.earth/mission)**
 : Thirteen aims, each one naming the page where it is already being kept — and, for each, the observation that would show we had quietly stopped. An aim you cannot fail is not an aim.
@@ -3083,7 +3241,7 @@ Why this cabinet exists, and what it is for.
 
 ## The cabinet itself
 
-Six pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything.
+Six pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything. [About this drawer](https://queering.earth/the-cabinet-itself) — what each page is for, and what the build checks about it.
 
 **[How this site is made](https://queering.earth/design)**
 : The herbarium sheet, the palette, the type that leans, and the borrowed plates — each rule written down with the reason it exists, so it can be argued with.
@@ -3106,12 +3264,68 @@ Six pages that are not specimens. They are the cabinet — how it is made, what 
 
 ---
 
+# The cabinet itself
+
+https://queering.earth/the-cabinet-itself
+The cabinet itself · updated 2026-09-11
+
+1. [Queering Earth](https://queering.earth/)
+
+Drawer · the cabinet itself
+
+# The cabinet itself
+
+Six pages that are not specimens. How the cabinet is made, what it has recorded, how to look through it, and what it knows about you — which is very nearly nothing.
+
+## The six pages
+
+Each line says what the page is *for*, in the order the work actually happens: the rules, then the record, then the ways back in, then what it costs you. What each page contains is glossed once, on the [front of the cabinet](https://queering.earth/#the-cabinet-itself), and is not restated here.
+
+**[How this site is made](https://queering.earth/design)**
+: Where the rules are written down, each with the reason it exists, so it can be argued with rather than merely obeyed.
+
+**[The accession register](https://queering.earth/changelog)**
+: Where every change to the cabinet is recorded as it happens — including, especially, the labels we got wrong.
+
+**[The attribution ledger](https://queering.earth/ledger)**
+: Where every quotation is traced back to the work somebody actually held, with the day they held it. The debts, kept in public.
+
+**[What is settled, and what is open](https://queering.earth/what-is-settled)**
+: Where the reasoning is kept, including the designs that were refused, so the same question is not re-argued from scratch in three weeks.
+
+**[Find a word in the cabinet](https://queering.earth/search)**
+: The way back in when you remember a phrase and not a page. It runs in your own browser and tells us nothing.
+
+**[What this site knows about you](https://queering.earth/privacy)**
+: What all of the above costs you, which is very nearly nothing — stated in enough detail to be checkable, and checked by the build.
+
+## Why these six are one drawer
+
+Because they are all answers to the same question: **how do you know any of this is true?** The rules are published so you can see what we hold ourselves to. The register is published so you can see where we failed it. The ledger is published so you can go and check a quotation against the thing it came from. The decisions are published so you can see what was refused and why. The finding aid is how you reach any of it, and the privacy page is the accounting for what that reaching costs.
+
+None of them is a reading of anything, which is why none of them is carded or numbered. [The founding papers](https://queering.earth/the-founding-papers) are the other half of the same distinction, from the other side: purpose above plumbing, and this drawer is the plumbing.
+
+## What the build checks about this drawer
+
+More of it than you would expect, and on purpose — a claim that only a person remembers is a claim that will eventually be false.
+
+- [The privacy page](https://queering.earth/privacy) is a binding statement about what this site can reach, so the build reads every attribute that makes a browser fetch something and fails if the page and the code disagree. It also fails if a browser-storage key exists that the policy does not name.
+- [The ledger](https://queering.earth/ledger) and [the decisions](https://queering.earth/what-is-settled) are generated from the working files a session actually edits, and the build fails when either page has fallen behind its source. Two hand-kept copies is the one arrangement ruled out.
+- [The register](https://queering.earth/changelog) runs newest first, and the build fails if a date increases down the page, if the latest marker is not on the top entry, or if an entry files itself to a sheet that does not exist.
+- [The finding aid](https://queering.earth/search) is built from the same landmark the pages publish, and it refuses to crop a quotation: a mounted quotation comes back whole with its source, or it does not come back.
+
+The rest of it — the contrast in both grounds and on paper, the addresses, the cache rules, the card order, whether any text sits on any other text — is in [the colophon](https://queering.earth/design), which is the page that explains the machinery it is itself checked by.
+
+
+---
+
 # How this site is made
 
 https://queering.earth/design
 The cabinet itself · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The cabinet itself](https://queering.earth/the-cabinet-itself)
 
 Colophon
 
@@ -3343,7 +3557,8 @@ Static HTML files with no build step, one shared stylesheet, and a few small scr
 https://queering.earth/changelog
 The cabinet itself · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The cabinet itself](https://queering.earth/the-cabinet-itself)
 
 Register · the changelog
 
@@ -3369,6 +3584,46 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Cabinet
 
 2026 · 11 September · latest
+
+## Three drawers, a breadcrumb on every sheet, and a panel that moved when a control was added
+
+Ryan’s: “I like breadcrumbs and collection pages.” The two lists at the foot of the home page were already collections in everything but address, and the plate was a third. He named the menu, and chose *Drawers* over *Collections* and *Cases* with the collision against the *Cabinet* control stated in advance.
+
+MountedThree collection pages, and not one of them repeats a sentence the home page already carries
+
+[The plate](https://queering.earth/the-plate), [the founding papers](https://queering.earth/the-founding-papers) and [the cabinet itself](https://queering.earth/the-cabinet-itself) are the three groups `tools/pages.mjs` has always held, given addresses. Each group’s collection page is now the first entry in its own group, so `/llms.txt`, the finding aid’s manifest and the reader’s index stay one list.
+
+**The glosses were the whole design problem.** Nine pages are described in one sentence each in `.qe-furniture` on the home page, and this file’s loudest rule is that two copies of the same words drift. So a collection page carries a *different* sentence with a different job — what the page is *for* and where it sits against its neighbours, not what is in it — and says on its own face that the gloss lives on the front of the cabinet. [The plate](https://queering.earth/the-plate) takes the same treatment from the other side: it shows the ten cards in their reduced form, the one the sibling navs already use, and carries no card notes at all.
+
+**What earns each page its place is the part that exists nowhere else.** The plate defines what a sheet is, what a reading, an essay and a wall each mean — settled in [the decision log](https://queering.earth/what-is-settled) in September and never stated anywhere a reader meets them — and what the accession number does not say. The founding papers carry the signed-and-unsigned rule. The cabinet page says what the build actually checks about its own six pages.
+
+**None of them is a specimen**, so none carries a plate number, an accession stamp or a provenance line, and none is carded. **And none carries a sibling nav**: the drawers menu lists the other two drawers at the top of every page on the site with the current one marked, so a second list of the same three on the page itself is the two-competing-lists fault this file already refuses on the home page.
+
+MountedThe breadcrumb was already here, one crumb long, on twelve pages
+
+`.qe-home` was a lone link home on twelve pages, and seven more carried the group name beside it as *plain text* — “Queering Earth · The founding papers”, with the second half leading nowhere. The collection pages turned that dead text into an address, so the two shapes became one `.qe-crumbs` nav on nineteen pages.
+
+**It stops at the drawer and never names the page it is on**, because the `h1` is the next thing in the masthead and a third crumb would be the title printed twice, a line apart. The JSON-LD block carries all three items, since a machine’s copy has no heading under it. **The separator is drawn in CSS** and is not a character in the markup: it must not join the accessible name, reach the Markdown, or be something a reader can select into a quotation.
+
+**It sits inside the landmark, which the nav rule otherwise forbids**, for the reason the contents list does: that rule stops one sheet’s navigation being indexed as another sheet’s content, and a trail naming this page’s own position cannot do that. It lives in `.qe-masthead`, which the search index already skips, so it reaches the `.md` — where an agent wants to know where a page sits — and not the finding aid, where it would be nineteen identical results. **Targets measured after:** 45px tall, 107px and 67px wide, 18px apart, at 375px and at 1280px.
+
+**The menu is a native disclosure and writes no words**, like the reading settings beside it. Three links and three lines of hint, all authored in the markup; `queering.js` gained nothing but a loop, and lost a copy — the Escape and click-away handlers the reading panel had to itself now run over both, which is also what makes opening one close the other.
+
+Label correctedThe home page said eight sheets, and the plate has held ten since 10 September
+
+“Eight sheets, so far, mounted and numbered on the plate below” was true when it was written and stopped being true on [No. 9](https://queering.earth/five-unmistakable-marks), directly above a plate showing ten cards numbered 1 to 10. **Replaced rather than corrected**, because a count kept by hand is a count that goes stale, and this register already holds two other findings of exactly that shape on Star Stuff’s own pages. The sentence now says the sheets are numbered in the order they were accessioned and leaves the counting to the plate.
+
+CabinetA panel hung off its own control moves when a control is added, and the one that moved was the old one
+
+The reading panel had been `right: 0` on its own summary since it shipped, which quietly made its position **a function of how many controls sit to its right**. Measured at 1280px it cleared the measure by 31px. Adding one control moved the control 81px left, took the panel with it, and landed **50px of it on the lede on eight pages**. `check-overlap.mjs` reported it; nothing else would have, and no amount of care about the new control would have predicted it. Both panels now hang off the tray, whose right edge is the gutter at every width, and a seventh control cannot move either.
+
+**The tray’s own note said a new control is a measurement**, and it was right about the row and silent about the overlay. Measured at 320, 375, 768 and 1280px after: every hit area 44×44 or better, no two overlapping, `scrollWidth` equal to the viewport at all four, and both panels inside the gutters at 320. **The cost is paid explicitly** — the 44px box `.qe-controls > \*::after` grows only works because each child is positioned, so for these two it moves onto the summary and the tray’s rule is switched off for them rather than left to misfire against the tray.
+
+**Two overlay panels in one tray can both be open with JavaScript off**, because a disclosure toggles natively and the close-the-other convenience was script. They now share a `name`, which is HTML’s exclusive accordion: opening one closes the other with no script at all. Verified by setting `open` directly, with no click and therefore no listener involved.
+
+**That fix made the two rendering gates disagree, and both were taught.** `reveal.mjs` dissolves the group before opening, or one panel would be measured shut — the eight-percent-of-itself failure its own header is about, arriving through a fix for something else — and puts it back afterwards. `check-overlap.mjs` then knows that two members of one exclusive accordion can never be on screen together and refuses to call them a collision; the exemption is **declared by the markup** rather than listed in the tool, which is the bar the invisible-text list already set. Proved both ways: the drawers panel’s hints in a 2.15:1 colour report three failures under the contrast gate and none once restored, so the panel is genuinely being measured.
+
+2026 · 11 September
 
 ## A masthead for the two modes, and the width a masthead is actually reviewed at
 
@@ -5286,6 +5541,12 @@ The register is kept by accession, which is by date. This is the same entries fi
 
 ### [Queering.Earth](https://queering.earth/) the plate
 
+### [The plate](https://queering.earth/the-plate) the readings, collected
+
+### [The founding papers](https://queering.earth/the-founding-papers) the drawer
+
+### [The cabinet itself](https://queering.earth/the-cabinet-itself) the drawer
+
 ### [What this cabinet is for](https://queering.earth/mission) the founding papers
 
 ### [Nothing here was inevitable](https://queering.earth/manifesto) the founding papers
@@ -5310,7 +5571,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 https://queering.earth/search
 The cabinet itself · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The cabinet itself](https://queering.earth/the-cabinet-itself)
 
 # Find a word in the cabinet
 
@@ -5323,6 +5585,16 @@ This is the finding aid. It searches the whole cabinet — the eight sheets, [th
 Every page on the site and every section of it, in the order a reader might meet them. This list is **generated from the pages themselves** by `tools/make-search-index.mjs` and written into this sheet between two markers — the same way the typefaces are declared in the stylesheet. Nobody types it, so no heading here can drift from the heading it names.
 
 ### The readings
+
+-
+
+[The plate](https://queering.earth/the-plate) Drawer · the readings
+
+  - [Mounted so far](https://queering.earth/the-plate#mounted-so-far)
+  - [What a sheet is](https://queering.earth/the-plate#what-a-sheet-is)
+  - [A reading, an essay, a wall](https://queering.earth/the-plate#three-kinds)
+  - [What the number says, and what it does not](https://queering.earth/the-plate#the-numbers)
+  - [How a sheet is checked](https://queering.earth/the-plate#how-a-sheet-is-checked)
 
 -
 
@@ -5478,6 +5750,15 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 -
 
+[The founding papers](https://queering.earth/the-founding-papers) Drawer · the founding papers
+
+  - [The three papers](https://queering.earth/the-founding-papers#the-papers)
+  - [Why these are papers and not sheets](https://queering.earth/the-founding-papers#not-a-sheet)
+  - [Signed and unsigned](https://queering.earth/the-founding-papers#signed-and-unsigned)
+  - [What would join them](https://queering.earth/the-founding-papers#what-would-join-them)
+
+-
+
 [What this cabinet is for](https://queering.earth/mission)
 
   - [The whole of it, in one sentence](https://queering.earth/mission#in-one-sentence)
@@ -5534,6 +5815,14 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 -
 
+[The cabinet itself](https://queering.earth/the-cabinet-itself) Drawer · the cabinet itself
+
+  - [The six pages](https://queering.earth/the-cabinet-itself#the-six)
+  - [Why these six are one drawer](https://queering.earth/the-cabinet-itself#why-these-are-together)
+  - [What the build checks about this drawer](https://queering.earth/the-cabinet-itself#what-is-checked)
+
+-
+
 [How this site is made](https://queering.earth/design) Colophon
 
   - [The model: a Victorian specimen sheet](https://queering.earth/design#model)
@@ -5555,7 +5844,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-193 entries across 49 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+197 entries across 50 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -5606,7 +5895,8 @@ Provenance Mounted [9 September 2026](https://queering.earth/changelog#a-2026-09
 https://queering.earth/ledger
 The cabinet itself · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/) · The cabinet itself
+1. [Queering Earth](https://queering.earth/)
+2. [The cabinet itself](https://queering.earth/the-cabinet-itself)
 
 # The attribution ledger
 
@@ -7226,7 +7516,8 @@ The violet the sheet is about is the Mediterranean sweet violet, *Viola odorata*
 https://queering.earth/what-is-settled
 The cabinet itself · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/) · The cabinet itself
+1. [Queering Earth](https://queering.earth/)
+2. [The cabinet itself](https://queering.earth/the-cabinet-itself)
 
 # What is settled, and what is open
 
@@ -7488,6 +7779,64 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### Three drawers, and "Drawers" is a word this file already refused once (2026-09-11)
+
+Ryan: *"I like breadcrumbs and collection pages."* The two lists at the foot of the home page — **The founding papers** and **The cabinet itself** — were already collections in everything but address, and the plate was a third. Each now has a page: `/the-plate`, `/the-founding-papers`, `/the-cabinet-itself`.
+
+**THIS IS NOT THE COLLECTION DECISION THIS FILE DEFERRED, AND THE DISTINCTION IS THE POINT.** The entry above — *no collections yet, and the trigger is named* — defers **runs**: three sheets sharing a lens, named retroactively the way Helen names hers, because a run declared at n=1 is a promise with nothing written to keep it. That trigger is untouched and the `collection-\*.html` namespace is deliberately left empty for it, which is also why `check-markup.mjs`'s ported badge check stays stood down and armed. **What shipped today is structural, not thematic**: three drawers that already existed, one of which is the whole plate, and nothing is sorted into anything.
+
+**"SIX DRAWERS" WAS REFUSED AND THESE THREE ARE NOT IT.** The rejected proposal was *art · literature · poetry · politics · people · history* as a browsable taxonomy, refused twice over — five visible promises we were not keeping, and a forced single filing on a piece like *On Being Ill*, which wants Literature and People and Politics at once. **No sheet is sorted here.** Two drawers hold the pages that are not readings; the third holds every reading there is. Nothing is filed anywhere it is not already filed.
+
+**Ryan named the menu**, choosing *Drawers* over *Collections* and *Cases* with the collision stated in advance: the tray's ground control says **Cabinet**, and a *Drawers* menu beside it could read as a second view control. Accepted because the home page's own prose already says *how to look through the drawers*, and because a disclosure with a triangle and a list of links is not a pressed-state button.
+
+**The plate got a page, on Ryan's call, and it earns it by not repeating the front.** The alternative was pointing the breadcrumb and the menu at `/#what-grows-here`, which is a real address for a real index. What decided it: **the three sheet kinds are settled in this file and stated nowhere a reader meets them.** *A reading* has an order and arrives somewhere, *an essay* is ours, *a wall* has a chorus — that is real content with no home, and it is now on `/the-plate` along with what the accession number does not say.
+
+**THE GLOSSES LIVE ONCE AND THE COLLECTION PAGES DO NOT REPEAT THEM.** Nine pages are described in one sentence each in `.qe-furniture` on the home page. Copying those onto a collection page is nine sentences free to drift, in a cabinet whose loudest rule is that two copies of the same words drift and the copy nobody is looking at is the one that rots. So:
+
+- a collection page's line says what the page is **for** and where it sits against its neighbours — a different sentence with a different job, and each page says on its own face that the gloss is on the front of the cabinet;
+- `/the-plate` shows the **reduced** card — kind, number, title — which is the form the ten sibling navs already use and which `check-card-order.mjs` already guards. No card notes.
+
+**A collection page's line in one of the two home-page lists is the pointer at the head of the section it collects**, not a `<dt>` inside it. Otherwise *The cabinet itself* would appear in its own list and the recursion would have to be explained to a reader. Each of the three sections now ends its intro with **About this drawer**.
+
+**No sibling nav on a collection page.** The drawers menu lists the other two drawers at the top of every page with the current one marked, so a `.qe-elsewhere` carding the same three is the two-competing-navigational-lists fault this repo already refuses on the home page. For `/the-plate` it would be worse: the page already cards every sheet there is.
+
+**Each group's collection page is the first entry in its own group in `tools/pages.mjs`**, so `/llms.txt`, the finding aid's manifest and the reader's index stay one derivation. `index` is in no collection: the home page is above the scheme rather than inside it.
+
+### The breadcrumb stops at the drawer, and it was already here one crumb long (2026-09-11)
+
+`.qe-home` was a lone link home on twelve pages; seven more carried the group name beside it inside `.qe-kicker` as **plain text** — *Queering Earth · The founding papers*, with the second half leading nowhere. The collection pages made that text an address, and the two shapes became one `.qe-crumbs` nav on nineteen pages.
+
+**It never names the page it is on.** The `h1` is the next thing in the masthead, so a third crumb is the title printed twice a line apart. The JSON-LD `breadcrumb` carries all three items, because a machine's copy has no heading under it — and it goes **inside** the page's one existing block as a `breadcrumb` property, because `check-metadata.mjs` requires exactly one JSON-LD block per page and is right to.
+
+**The separator is drawn in CSS.** It must not join the accessible name, must not reach the Markdown, and must not be something a reader can select into a quotation. It takes `--qe-moss` rather than a decorative token, because it is a glyph and **nothing here measures a `::before`**.
+
+**It sits inside `<main>`, which the nav rule otherwise forbids**, for the reason `.qe-contents` does: that rule stops one sheet's navigation being indexed as another sheet's content, and a trail naming this page's own position cannot do that. It lives in `.qe-masthead`, which `make-search-index.mjs` already skips — so it reaches the `.md`, where an agent wants to know where a page sits, and not the finding aid, where it would be nineteen identical results.
+
+**Targets measured after, because nothing here measures a hit area:** 45px tall, 107px and 67px wide, 18px apart, at 375px and at 1280px. A third crumb would need measuring again.
+
+**`/404` keeps the old shape and gets no breadcrumb**, for the reason Star Stuff gives its error page no collection badge: a trail would claim the address the reader asked for belongs to a drawer, when the whole message is that it does not exist. `index` gets none either.
+
+### A panel hung off its own control moves when a control is added (2026-09-11)
+
+The reading panel had been `right: 0` on its own summary since it shipped, which made its position **a function of how many controls sit to its right**. At 1280px it cleared the measure by 31px. Adding the drawers control moved the control 81px left, took the panel with it, and landed 50px of it on the lede on eight pages.
+
+**`check-overlap.mjs` reported it and nothing else would have.** No amount of care about the *new* control would have predicted it, because **the thing that moved was the old one**. The tray's own note already said a new control is a measurement rather than a markup edit; it was right about the row and silent about the overlay.
+
+**Both panels now hang off `.qe-controls`**, whose right edge is the gutter at every width, so a seventh control cannot move either. The cost is paid explicitly: `.qe-controls > \*::after` grows a 44px hit box that only works because each child is positioned, so for these two the box moves onto the summary and the tray's rule is switched off for them rather than left to misfire against the tray. Measured at 320, 375, 768 and 1280px: every hit area 44×44 or better, none overlapping, `scrollWidth` equal to the viewport at all four, both panels inside the gutters at 320.
+
+**The refused alternative was hanging the drawers panel off its own control.** Measured at 375px the tray wraps; a 19rem panel on a control whose right edge is at x=98 spans to x=−142, off the **left** edge, taking the document's `scrollWidth` with it — the horizontal body scroll the layout rule forbids outright.
+
+### Two tray disclosures share a `name`, and both gates had to be taught (2026-09-11)
+
+Two overlay panels in one tray **can both be open with JavaScript off**: a `details` toggles natively and the close-the-other convenience was script. They share `name="qe-tray"` now, which is HTML's exclusive accordion — opening one closes the other with no script at all. Verified by setting `open` directly, with no click and therefore no listener involved. The script's Escape and click-away handlers moved from the reading panel alone to a loop over both, which lost a copy rather than adding one.
+
+**That fix made the two rendering gates disagree, and the disagreement is real rather than an artefact.**
+
+- **`reveal.mjs` dissolves the group before opening**, and without that line one panel is measured shut — opening them in document order closes the first as the second opens. That is the eight-percent-of-itself failure its own header is about, arriving through a fix for something else. `UNREVEAL` puts the `name` back.
+- **`check-overlap.mjs` refuses to call them a collision**, because two members of one exclusive accordion can never be on screen together, and the pair only exists because `reveal.mjs` invented it. **The exemption is declared by the markup, not listed in the tool** — that is the bar the `INVISIBLE` list sets. A panel that stops being exclusive stops being exempt, in the same edit.
+
+**Proved rather than assumed**, per the rule about watching a new gate fail: the drawers panel's hints in a 2.15:1 colour report three failures under `check-contrast.mjs` and none once restored, so the panel is genuinely being measured. And a pristine `<details>` injected into a live page does not open under the browser-automation keyboard either, so **keyboard activation of a summary is not verifiable through that tool** — the trusted *pointer* click is, and it was.
 
 ### Two attention shapes, and the width a masthead is actually reviewed at (2026-09-11)
 
@@ -8734,7 +9083,8 @@ Measured on `/two-cohabitating-modes`: at the full 34rem measure the `.l` conten
 https://queering.earth/privacy
 The cabinet itself · updated 2026-09-09
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The cabinet itself](https://queering.earth/the-cabinet-itself)
 
 # What this site knows about you
 

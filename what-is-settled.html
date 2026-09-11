@@ -99,7 +99,7 @@
   <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
   <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
   <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
-  <details class="qe-reading">
+  <details class="qe-reading" name="qe-tray">
     <summary class="qe-reading-summary">Reading</summary>
     <div class="qe-reading-panel">
       <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
@@ -147,6 +147,30 @@
         </li>
       </ul>
       <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
+  <!-- The drawers. Three collections, and everything on the site is in one of
+       them. A native details element, like the reading settings beside it and for
+       the same reason: a hand-built menu would need focus trapping, a roving
+       tabindex and an Escape handler, and getting any of that wrong makes the
+       navigation the least navigable thing on the sheet. -->
+  <details class="qe-drawers" name="qe-tray">
+    <summary class="qe-drawers-summary">Drawers</summary>
+    <div class="qe-drawers-panel">
+      <ul class="qe-drawers-list">
+        <li>
+          <a class="qe-drawers-link" href="/the-plate">The plate</a>
+          <span class="qe-drawers-hint">The sheets themselves, mounted and numbered on one plate.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-founding-papers">The founding papers</a>
+          <span class="qe-drawers-hint">Why this cabinet exists, and what it is for.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-cabinet-itself" aria-current="true">The cabinet itself</a>
+          <span class="qe-drawers-hint">How it is made, what it has recorded, and what it knows about you.</span>
+        </li>
+      </ul>
     </div>
   </details>
   <!-- The easter egg. An ornament that is a door: unlabelled to the eye,
@@ -217,7 +241,12 @@
 <main id="main" tabindex="-1">
 
   <header class="qe-masthead">
-    <p class="qe-kicker"><a href="/">Queering Earth</a> &middot; The cabinet itself</p>
+    <nav class="qe-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Queering Earth</a></li>
+        <li><a href="/the-cabinet-itself">The cabinet itself</a></li>
+      </ol>
+    </nav>
     <h1>What is settled, and what is open</h1>
     <p class="qe-tagline">The reasoning, kept so the same question is not re-litigated in three weeks.</p>
   </header>
@@ -342,6 +371,34 @@
 <p><strong>The fix is one word and a fuller quotation</strong>, or the ellipsis marked as eliding three sentences. Neither changes the manifesto's argument, which is why it survived this long.</p>
 <hr>
 <h2 id="settled">Settled <a class="qe-anchor" href="#settled"><span class="qe-sr">Link to this section</span></a></h2>
+<h3 id="three-drawers-and-drawers-is-a-word-this-file-already-refused-once-2026">Three drawers, and "Drawers" is a word this file already refused once (2026-09-11) <a class="qe-anchor" href="#three-drawers-and-drawers-is-a-word-this-file-already-refused-once-2026"><span class="qe-sr">Link to this section</span></a></h3>
+<p>Ryan: <em>"I like breadcrumbs and collection pages."</em> The two lists at the foot of the home page — <strong>The founding papers</strong> and <strong>The cabinet itself</strong> — were already collections in everything but address, and the plate was a third. Each now has a page: <code>/the-plate</code>, <code>/the-founding-papers</code>, <code>/the-cabinet-itself</code>.</p>
+<p><strong>THIS IS NOT THE COLLECTION DECISION THIS FILE DEFERRED, AND THE DISTINCTION IS THE POINT.</strong> The entry above — <em>no collections yet, and the trigger is named</em> — defers <strong>runs</strong>: three sheets sharing a lens, named retroactively the way Helen names hers, because a run declared at n=1 is a promise with nothing written to keep it. That trigger is untouched and the <code>collection-*.html</code> namespace is deliberately left empty for it, which is also why <code>check-markup.mjs</code>'s ported badge check stays stood down and armed. <strong>What shipped today is structural, not thematic</strong>: three drawers that already existed, one of which is the whole plate, and nothing is sorted into anything.</p>
+<p><strong>"SIX DRAWERS" WAS REFUSED AND THESE THREE ARE NOT IT.</strong> The rejected proposal was <em>art · literature · poetry · politics · people · history</em> as a browsable taxonomy, refused twice over — five visible promises we were not keeping, and a forced single filing on a piece like <em>On Being Ill</em>, which wants Literature and People and Politics at once. <strong>No sheet is sorted here.</strong> Two drawers hold the pages that are not readings; the third holds every reading there is. Nothing is filed anywhere it is not already filed.</p>
+<p><strong>Ryan named the menu</strong>, choosing <em>Drawers</em> over <em>Collections</em> and <em>Cases</em> with the collision stated in advance: the tray's ground control says <strong>Cabinet</strong>, and a <em>Drawers</em> menu beside it could read as a second view control. Accepted because the home page's own prose already says <em>how to look through the drawers</em>, and because a disclosure with a triangle and a list of links is not a pressed-state button.</p>
+<p><strong>The plate got a page, on Ryan's call, and it earns it by not repeating the front.</strong> The alternative was pointing the breadcrumb and the menu at <code>/#what-grows-here</code>, which is a real address for a real index. What decided it: <strong>the three sheet kinds are settled in this file and stated nowhere a reader meets them.</strong> <em>A reading</em> has an order and arrives somewhere, <em>an essay</em> is ours, <em>a wall</em> has a chorus — that is real content with no home, and it is now on <code>/the-plate</code> along with what the accession number does not say.</p>
+<p><strong>THE GLOSSES LIVE ONCE AND THE COLLECTION PAGES DO NOT REPEAT THEM.</strong> Nine pages are described in one sentence each in <code>.qe-furniture</code> on the home page. Copying those onto a collection page is nine sentences free to drift, in a cabinet whose loudest rule is that two copies of the same words drift and the copy nobody is looking at is the one that rots. So:</p>
+<ul><li>a collection page's line says what the page is <strong>for</strong> and where it sits against its neighbours — a different sentence with a different job, and each page says on its own face that the gloss is on the front of the cabinet;</li><li><code>/the-plate</code> shows the <strong>reduced</strong> card — kind, number, title — which is the form the ten sibling navs already use and which <code>check-card-order.mjs</code> already guards. No card notes.</li></ul>
+<p><strong>A collection page's line in one of the two home-page lists is the pointer at the head of the section it collects</strong>, not a <code>&lt;dt&gt;</code> inside it. Otherwise <em>The cabinet itself</em> would appear in its own list and the recursion would have to be explained to a reader. Each of the three sections now ends its intro with <strong>About this drawer</strong>.</p>
+<p><strong>No sibling nav on a collection page.</strong> The drawers menu lists the other two drawers at the top of every page with the current one marked, so a <code>.qe-elsewhere</code> carding the same three is the two-competing-navigational-lists fault this repo already refuses on the home page. For <code>/the-plate</code> it would be worse: the page already cards every sheet there is.</p>
+<p><strong>Each group's collection page is the first entry in its own group in <code>tools/pages.mjs</code></strong>, so <code>/llms.txt</code>, the finding aid's manifest and the reader's index stay one derivation. <code>index</code> is in no collection: the home page is above the scheme rather than inside it.</p>
+<h3 id="the-breadcrumb-stops-at-the-drawer-and-it-was-already-here-one-crumb-lon">The breadcrumb stops at the drawer, and it was already here one crumb long (2026-09-11) <a class="qe-anchor" href="#the-breadcrumb-stops-at-the-drawer-and-it-was-already-here-one-crumb-lon"><span class="qe-sr">Link to this section</span></a></h3>
+<p><code>.qe-home</code> was a lone link home on twelve pages; seven more carried the group name beside it inside <code>.qe-kicker</code> as <strong>plain text</strong> — <em>Queering Earth · The founding papers</em>, with the second half leading nowhere. The collection pages made that text an address, and the two shapes became one <code>.qe-crumbs</code> nav on nineteen pages.</p>
+<p><strong>It never names the page it is on.</strong> The <code>h1</code> is the next thing in the masthead, so a third crumb is the title printed twice a line apart. The JSON-LD <code>breadcrumb</code> carries all three items, because a machine's copy has no heading under it — and it goes <strong>inside</strong> the page's one existing block as a <code>breadcrumb</code> property, because <code>check-metadata.mjs</code> requires exactly one JSON-LD block per page and is right to.</p>
+<p><strong>The separator is drawn in CSS.</strong> It must not join the accessible name, must not reach the Markdown, and must not be something a reader can select into a quotation. It takes <code>--qe-moss</code> rather than a decorative token, because it is a glyph and <strong>nothing here measures a <code>::before</code></strong>.</p>
+<p><strong>It sits inside <code>&lt;main&gt;</code>, which the nav rule otherwise forbids</strong>, for the reason <code>.qe-contents</code> does: that rule stops one sheet's navigation being indexed as another sheet's content, and a trail naming this page's own position cannot do that. It lives in <code>.qe-masthead</code>, which <code>make-search-index.mjs</code> already skips — so it reaches the <code>.md</code>, where an agent wants to know where a page sits, and not the finding aid, where it would be nineteen identical results.</p>
+<p><strong>Targets measured after, because nothing here measures a hit area:</strong> 45px tall, 107px and 67px wide, 18px apart, at 375px and at 1280px. A third crumb would need measuring again.</p>
+<p><strong><code>/404</code> keeps the old shape and gets no breadcrumb</strong>, for the reason Star Stuff gives its error page no collection badge: a trail would claim the address the reader asked for belongs to a drawer, when the whole message is that it does not exist. <code>index</code> gets none either.</p>
+<h3 id="a-panel-hung-off-its-own-control-moves-when-a-control-is-added-2026-09-1">A panel hung off its own control moves when a control is added (2026-09-11) <a class="qe-anchor" href="#a-panel-hung-off-its-own-control-moves-when-a-control-is-added-2026-09-1"><span class="qe-sr">Link to this section</span></a></h3>
+<p>The reading panel had been <code>right: 0</code> on its own summary since it shipped, which made its position <strong>a function of how many controls sit to its right</strong>. At 1280px it cleared the measure by 31px. Adding the drawers control moved the control 81px left, took the panel with it, and landed 50px of it on the lede on eight pages.</p>
+<p><strong><code>check-overlap.mjs</code> reported it and nothing else would have.</strong> No amount of care about the <em>new</em> control would have predicted it, because <strong>the thing that moved was the old one</strong>. The tray's own note already said a new control is a measurement rather than a markup edit; it was right about the row and silent about the overlay.</p>
+<p><strong>Both panels now hang off <code>.qe-controls</code></strong>, whose right edge is the gutter at every width, so a seventh control cannot move either. The cost is paid explicitly: <code>.qe-controls &gt; *::after</code> grows a 44px hit box that only works because each child is positioned, so for these two the box moves onto the summary and the tray's rule is switched off for them rather than left to misfire against the tray. Measured at 320, 375, 768 and 1280px: every hit area 44×44 or better, none overlapping, <code>scrollWidth</code> equal to the viewport at all four, both panels inside the gutters at 320.</p>
+<p><strong>The refused alternative was hanging the drawers panel off its own control.</strong> Measured at 375px the tray wraps; a 19rem panel on a control whose right edge is at x=98 spans to x=−142, off the <strong>left</strong> edge, taking the document's <code>scrollWidth</code> with it — the horizontal body scroll the layout rule forbids outright.</p>
+<h3 id="two-tray-disclosures-share-a-name-and-both-gates-had-to-be-taught-2026-0">Two tray disclosures share a <code>name</code>, and both gates had to be taught (2026-09-11) <a class="qe-anchor" href="#two-tray-disclosures-share-a-name-and-both-gates-had-to-be-taught-2026-0"><span class="qe-sr">Link to this section</span></a></h3>
+<p>Two overlay panels in one tray <strong>can both be open with JavaScript off</strong>: a <code>details</code> toggles natively and the close-the-other convenience was script. They share <code>name="qe-tray"</code> now, which is HTML's exclusive accordion — opening one closes the other with no script at all. Verified by setting <code>open</code> directly, with no click and therefore no listener involved. The script's Escape and click-away handlers moved from the reading panel alone to a loop over both, which lost a copy rather than adding one.</p>
+<p><strong>That fix made the two rendering gates disagree, and the disagreement is real rather than an artefact.</strong></p>
+<ul><li><strong><code>reveal.mjs</code> dissolves the group before opening</strong>, and without that line one panel is measured shut — opening them in document order closes the first as the second opens. That is the eight-percent-of-itself failure its own header is about, arriving through a fix for something else. <code>UNREVEAL</code> puts the <code>name</code> back.</li><li><strong><code>check-overlap.mjs</code> refuses to call them a collision</strong>, because two members of one exclusive accordion can never be on screen together, and the pair only exists because <code>reveal.mjs</code> invented it. <strong>The exemption is declared by the markup, not listed in the tool</strong> — that is the bar the <code>INVISIBLE</code> list sets. A panel that stops being exclusive stops being exempt, in the same edit.</li></ul>
+<p><strong>Proved rather than assumed</strong>, per the rule about watching a new gate fail: the drawers panel's hints in a 2.15:1 colour report three failures under <code>check-contrast.mjs</code> and none once restored, so the panel is genuinely being measured. And a pristine <code>&lt;details&gt;</code> injected into a live page does not open under the browser-automation keyboard either, so <strong>keyboard activation of a summary is not verifiable through that tool</strong> — the trusted <em>pointer</em> click is, and it was.</p>
 <h3 id="two-attention-shapes-and-the-width-a-masthead-is-actually-reviewed-at-20">Two attention shapes, and the width a masthead is actually reviewed at (2026-09-11) <a class="qe-anchor" href="#two-attention-shapes-and-the-width-a-masthead-is-actually-reviewed-at-20"><span class="qe-sr">Link to this section</span></a></h3>
 <p>Ryan's call after the blown-up tray mark was refused twice: something else for the header. The page already carries a fox and a hedgehog twice over in Bewick's 1792 engravings, so <strong>the masthead carries the argument rather than the animals</strong> — one unbranched stem with a single five-petalled flower against a low stem branching into a broad head of many small florets. Monotropy against polytropy, and <em>Monotropa uniflora</em> means one turn, one flower, which is Sheet No. 8's whole subject. It sits in the register this site does not get wrong, and it cannot restage the predation problem, because plants do not eat each other.</p>
 <p><strong>THE INVARIANT IS EQUAL FLOWER AREA AND IT IS COMPUTED.</strong> The claim the drawing makes is <em>different distribution, equal mass</em>; two areas that were merely near would rank the two modes by accident, which is a gold join on an uncorrected sheet in the most prominent place on the sheet. The rosette is a five-lobed polar rose whose area is exact — πR²(a² + b²/2) = 826.24 — and the floret radius is solved back out of it: 29 × π × 3.011² = 826.24, residual 1.1e-13.</p>

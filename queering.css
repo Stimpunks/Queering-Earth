@@ -1084,9 +1084,23 @@ html.qe-spacing-on p + p { margin-top: var(--qe-para-gap, 1.47rem); }
 
    Every word in it is authored in the markup. The script sets checked states and
    classes; it does not write labels. */
-.qe-reading { position: relative; }
+/* NEITHER DISCLOSURE IS ITS OWN PANEL'S POSITIONING CONTEXT, AND THE TRAY IS.
+   The reading panel hung off `right: 0` on this element from the day it shipped,
+   which quietly made its position a function of HOW MANY CONTROLS SIT TO ITS
+   RIGHT. Measured at 1280px it cleared the measure by 31px — and adding one
+   control to the tray moved the control 81px left, took the panel with it, and
+   landed 50px of it on the lede on eight pages. check-overlap.mjs reported it;
+   nothing else would have, and no amount of care about the new control would
+   have predicted it, because the thing that moved was the OLD one.
 
-.qe-reading-summary {
+   Anchored to the tray both panels are fixed to the right gutter at every width,
+   and a seventh control cannot move either of them. See the drawers panel's own
+   note below for what this costs in hit area, and the tray's wrap note for the
+   arithmetic that makes a right-edge anchor the only safe one. */
+.qe-reading, .qe-drawers { position: static; }
+
+.qe-reading-summary,
+.qe-drawers-summary {
   /* THIS SUMMARY MUST BE POSITIONED OR IT NEVER RECEIVES A CLICK, and the bug it fixes
      shipped once. Inside `.qe-controls` — a flex row — a trusted click over the summary
      arrives with `event.target` set to the DETAILS, not the SUMMARY, so the disclosure
@@ -1123,8 +1137,10 @@ html.qe-spacing-on p + p { margin-top: var(--qe-para-gap, 1.47rem); }
   list-style: none;
   user-select: none;
 }
-.qe-reading-summary::-webkit-details-marker { display: none; }
-.qe-reading-summary::after {
+.qe-reading-summary::-webkit-details-marker,
+.qe-drawers-summary::-webkit-details-marker { display: none; }
+.qe-reading-summary::after,
+.qe-drawers-summary::after {
   content: "";
   display: inline-block;
   width: 0.42em; height: 0.42em;
@@ -1133,17 +1149,21 @@ html.qe-spacing-on p + p { margin-top: var(--qe-para-gap, 1.47rem); }
   border-bottom: 1px solid currentColor;
   transform: translateY(-0.15em) rotate(45deg);
 }
-.qe-reading[open] > .qe-reading-summary::after { transform: translateY(0.1em) rotate(-135deg); }
-.qe-reading-summary:hover { border-bottom-color: var(--qe-moss); }
-.qe-reading-summary:focus-visible { outline: 3px solid var(--qe-rust); outline-offset: 2px; }
+.qe-reading[open] > .qe-reading-summary::after,
+.qe-drawers[open] > .qe-drawers-summary::after { transform: translateY(0.1em) rotate(-135deg); }
+.qe-reading-summary:hover,
+.qe-drawers-summary:hover { border-bottom-color: var(--qe-moss); }
+.qe-reading-summary:focus-visible,
+.qe-drawers-summary:focus-visible { outline: 3px solid var(--qe-rust); outline-offset: 2px; }
 
-.qe-reading-panel {
+.qe-reading-panel,
+.qe-drawers-panel {
   position: absolute;
-  right: 0;
-  top: calc(100% + 0.5rem);
+  right: var(--qe-gutter);
+  top: calc(100% + 0.4rem);
   z-index: 20;
   width: 17rem;
-  max-width: calc(100vw - 2rem);
+  max-width: calc(100vw - 2 * var(--qe-gutter));
   text-align: left;
   background: var(--qe-card);
   border: 1px solid var(--qe-rule);
@@ -1246,6 +1266,93 @@ html.qe-spacing-on p + p { margin-top: var(--qe-para-gap, 1.47rem); }
 /* Plain view keeps the panel; it is not decoration. It only loses the chevron's
    rotation, which is motion, and that is handled by the motion variables. */
 @media print { .qe-reading { display: none; } }
+
+/* ── The drawers menu ─────────────────────────────────────────────────────────
+   THE SAME NATIVE <details> AS THE READING PANEL, AND THE RULES ABOVE ARE SHARED
+   RATHER THAN COPIED. A second summary would be a second copy of the one trap that
+   block records — a summary inside this flex row never receives a trusted click
+   unless it is positioned — and a copy is a thing one component learns and the other
+   does not. The two disclosures differ in what is inside them and in nothing else.
+
+   IT NAMES THREE COLLECTIONS AND WRITES NONE OF THEM. Every word in the panel is
+   authored in the markup, like the reading settings and for the same reason:
+   queering.js may derive navigation and may never create words.
+
+   THE NAME PICKS UP A WORD THIS SITE ALREADY REFUSED ONCE, AND ON PURPOSE. Six
+   drawers — art, literature, poetry, politics, people, history — was rejected in
+   DECISIONS.md as a browsable taxonomy that would force single filing on a sheet
+   like On Being Ill, which is Literature and People and Politics at once. These
+   three drawers file nothing: two hold the pages that are not readings, and the
+   third is the plate entire. No sheet is sorted, so the objection does not reach. */
+/* THE TRAY IS THIS PANEL'S POSITIONING CONTEXT, NOT THE CONTROL, AND THAT IS THE
+   WHOLE OF WHY IT IS SAFE. The reading panel anchors `right: 0` to its own
+   summary, which works because it is the last worded control in the row and so
+   sits near the right margin at every width. A menu earlier in the row does not
+   get that for free: measured at 375px the tray wraps, and a 19rem panel hung off
+   a control whose right edge is at x=98 spans to x=-142 — off the LEFT edge, which
+   takes the document's scrollWidth with it. That is the same horizontal body
+   scroll the tray's own wrap note was written about, arriving through the panel
+   instead of through the row.
+
+   Hung off `.qe-controls` the arithmetic cannot go wrong: the tray's right edge is
+   the gutter at every width, and `max-width` fills back to the other gutter. It
+   also opens below BOTH wrapped rows rather than through the one beneath it.
+
+   THE COST IS THE HIT AREA, PAID FOR EXPLICITLY. `.qe-controls > *::after` grows a
+   44px box inside each child, and it only works because each child is positioned;
+   a static `.qe-drawers` would have thrown that box against the tray and put a
+   44px target in the middle of the row. So the box moves onto the summary, which
+   is positioned already for the trusted-click reason recorded above, and the
+   tray's own rule is switched off for this one child rather than left to misfire. */
+.qe-controls { position: relative; }
+.qe-controls > .qe-reading::after,
+.qe-controls > .qe-drawers::after { content: none; }
+.qe-reading-summary::before,
+.qe-drawers-summary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  min-width: 44px;
+  min-height: 44px;
+}
+.qe-drawers-panel { width: 19rem; }
+
+.qe-drawers-list { margin: 0; padding: 0; list-style: none; }
+.qe-drawers-list li + li { margin-top: 0.95rem; }
+/* A block link, so the whole row is the target rather than the words — the same
+   reasoning as the furniture list's dt, and measured the same way. 0.85rem at 1.3
+   is 17.7px, so 0.7rem of padding either side clears 44px with room. */
+.qe-drawers-link {
+  display: block;
+  font-family: var(--qe-display);
+  font-size: 1.02rem;
+  line-height: 1.3;
+  color: var(--qe-rust);
+  text-decoration: none;
+  border-bottom: 1px solid var(--qe-rule);
+  padding: 0.2rem 0 0.3rem;
+}
+.qe-drawers-link:hover { border-bottom-color: var(--qe-rust); }
+.qe-drawers-link:focus-visible { outline: 3px solid var(--qe-rust); outline-offset: 2px; }
+/* You are here, in two strengths that mean two different things. `page` is only
+   ever written on the collection page itself; a member page writes `true`, which
+   ARIA defines as the current item in a set and which is the honest claim — /mission
+   is IN the founding papers, it is not the founding papers' page. They are marked
+   alike because to a reader both answer the same question, and they are spelled
+   apart because one of the two spellings would otherwise be a lie in the DOM. */
+.qe-drawers-link[aria-current] { color: var(--qe-ink); border-bottom-color: var(--qe-moss); }
+.qe-drawers-hint {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--qe-moss);
+}
+@media print { .qe-drawers { display: none; } }
 
 /* ─────────────────────────────────────────────── layout */
 
@@ -2184,8 +2291,54 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
 .qe-editions th { color: var(--qe-moss); font-weight: 600; }
 .qe-editions td em { font-style: italic; color: var(--qe-rust); }
 
-/* Back to the plate. */
-.qe-home { font-size: 0.95rem; margin: 0 0 0.4rem; }
+/* ── The breadcrumb ───────────────────────────────────────────────────────────
+   IT REPLACED `.qe-home`, WHICH WAS ALREADY A BREADCRUMB ONE CRUMB LONG. Twelve
+   pages carried a lone link home and seven carried the group name beside it as
+   plain text; the collection pages turned that dead text into an address, so the
+   two shapes became one component.
+
+   IT STOPS AT THE COLLECTION AND NEVER NAMES THIS PAGE. The <h1> is the next
+   thing in the masthead, so a third crumb would be the title printed twice, a
+   line apart. The JSON-LD carries all three items because a BreadcrumbList is a
+   machine's copy and has no <h1> under it.
+
+   IT IS INSIDE THE LANDMARK, WHICH THE NAV RULE OTHERWISE FORBIDS, for the reason
+   `.qe-contents` is: that rule stops ONE sheet's navigation being indexed as
+   ANOTHER sheet's content, and a trail naming this page's own position cannot do
+   that. It sits in `.qe-masthead`, which make-search-index.mjs already skips, so
+   it reaches the .md — where an agent wants to know where a page sits — and not
+   the finding aid, where it would be nineteen identical results.
+
+   THE SEPARATOR IS DRAWN IN CSS AND IS NOT A CHARACTER IN THE MARKUP. It must not
+   join the accessible name, must not reach the Markdown, and must not be something
+   a reader can select and paste into a quotation. Moss rather than a decorative
+   token, because it is a glyph and the decorative seven are not for letters —
+   see the contrast gate's blind spots: nothing here measures a ::before. */
+.qe-crumbs { font-size: 0.95rem; margin: -0.5rem 0 -0.15rem; }
+.qe-crumbs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.qe-crumbs li { display: flex; align-items: baseline; }
+.qe-crumbs li + li::before {
+  content: "\203A";
+  color: var(--qe-moss);
+  padding: 0 0.4rem;
+}
+/* THE TARGET IS THE ROW AND NOT THE WORD. A crumb is a link that is the whole of
+   its own line item, so WCAG 2.5.8's inline-in-a-sentence exception does not cover
+   it — the same finding as the furniture list's dt. 0.95rem at 1.4 is 20.7px, so
+   0.62rem either side brings it to 44.5px, and the block's own margins are pulled
+   in by the same amount so the masthead does not grow. MEASURE A THIRD CRUMB IF
+   ONE EVER ARRIVES: nothing here checks that two hit areas stay apart. */
+.qe-crumbs a {
+  display: inline-block;
+  padding: 0.62rem 0.15rem;
+}
 
 @media print {
   h1 { color: #000; }
@@ -2200,7 +2353,7 @@ html.plain h1 { font-variation-settings: normal; font-weight: 700; }
   .qe-editions td em { color: #000; font-weight: 700; }
   .qe-editions th, .qe-editions td { border-bottom: 0.5pt solid #999; }
   .qe-editions-scroll { overflow-x: visible; }
-  .qe-home { display: none; }
+  .qe-crumbs { display: none; }
 }
 
 /* A sheet's masthead is left-ranged: the plate is the centred thing, a reading is

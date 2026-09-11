@@ -9,7 +9,8 @@ attribution_ledger: "https://github.com/Stimpunks/Queering-Earth/blob/main/ATTRI
 generated_by: "tools/make-markdown.mjs from the page's own <main> landmark"
 ---
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The cabinet itself](https://queering.earth/the-cabinet-itself)
 
 Register · the changelog
 
@@ -35,6 +36,46 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Cabinet
 
 2026 · 11 September · latest
+
+## Three drawers, a breadcrumb on every sheet, and a panel that moved when a control was added
+
+Ryan’s: “I like breadcrumbs and collection pages.” The two lists at the foot of the home page were already collections in everything but address, and the plate was a third. He named the menu, and chose *Drawers* over *Collections* and *Cases* with the collision against the *Cabinet* control stated in advance.
+
+MountedThree collection pages, and not one of them repeats a sentence the home page already carries
+
+[The plate](https://queering.earth/the-plate), [the founding papers](https://queering.earth/the-founding-papers) and [the cabinet itself](https://queering.earth/the-cabinet-itself) are the three groups `tools/pages.mjs` has always held, given addresses. Each group’s collection page is now the first entry in its own group, so `/llms.txt`, the finding aid’s manifest and the reader’s index stay one list.
+
+**The glosses were the whole design problem.** Nine pages are described in one sentence each in `.qe-furniture` on the home page, and this file’s loudest rule is that two copies of the same words drift. So a collection page carries a *different* sentence with a different job — what the page is *for* and where it sits against its neighbours, not what is in it — and says on its own face that the gloss lives on the front of the cabinet. [The plate](https://queering.earth/the-plate) takes the same treatment from the other side: it shows the ten cards in their reduced form, the one the sibling navs already use, and carries no card notes at all.
+
+**What earns each page its place is the part that exists nowhere else.** The plate defines what a sheet is, what a reading, an essay and a wall each mean — settled in [the decision log](https://queering.earth/what-is-settled) in September and never stated anywhere a reader meets them — and what the accession number does not say. The founding papers carry the signed-and-unsigned rule. The cabinet page says what the build actually checks about its own six pages.
+
+**None of them is a specimen**, so none carries a plate number, an accession stamp or a provenance line, and none is carded. **And none carries a sibling nav**: the drawers menu lists the other two drawers at the top of every page on the site with the current one marked, so a second list of the same three on the page itself is the two-competing-lists fault this file already refuses on the home page.
+
+MountedThe breadcrumb was already here, one crumb long, on twelve pages
+
+`.qe-home` was a lone link home on twelve pages, and seven more carried the group name beside it as *plain text* — “Queering Earth · The founding papers”, with the second half leading nowhere. The collection pages turned that dead text into an address, so the two shapes became one `.qe-crumbs` nav on nineteen pages.
+
+**It stops at the drawer and never names the page it is on**, because the `h1` is the next thing in the masthead and a third crumb would be the title printed twice, a line apart. The JSON-LD block carries all three items, since a machine’s copy has no heading under it. **The separator is drawn in CSS** and is not a character in the markup: it must not join the accessible name, reach the Markdown, or be something a reader can select into a quotation.
+
+**It sits inside the landmark, which the nav rule otherwise forbids**, for the reason the contents list does: that rule stops one sheet’s navigation being indexed as another sheet’s content, and a trail naming this page’s own position cannot do that. It lives in `.qe-masthead`, which the search index already skips, so it reaches the `.md` — where an agent wants to know where a page sits — and not the finding aid, where it would be nineteen identical results. **Targets measured after:** 45px tall, 107px and 67px wide, 18px apart, at 375px and at 1280px.
+
+**The menu is a native disclosure and writes no words**, like the reading settings beside it. Three links and three lines of hint, all authored in the markup; `queering.js` gained nothing but a loop, and lost a copy — the Escape and click-away handlers the reading panel had to itself now run over both, which is also what makes opening one close the other.
+
+Label correctedThe home page said eight sheets, and the plate has held ten since 10 September
+
+“Eight sheets, so far, mounted and numbered on the plate below” was true when it was written and stopped being true on [No. 9](https://queering.earth/five-unmistakable-marks), directly above a plate showing ten cards numbered 1 to 10. **Replaced rather than corrected**, because a count kept by hand is a count that goes stale, and this register already holds two other findings of exactly that shape on Star Stuff’s own pages. The sentence now says the sheets are numbered in the order they were accessioned and leaves the counting to the plate.
+
+CabinetA panel hung off its own control moves when a control is added, and the one that moved was the old one
+
+The reading panel had been `right: 0` on its own summary since it shipped, which quietly made its position **a function of how many controls sit to its right**. Measured at 1280px it cleared the measure by 31px. Adding one control moved the control 81px left, took the panel with it, and landed **50px of it on the lede on eight pages**. `check-overlap.mjs` reported it; nothing else would have, and no amount of care about the new control would have predicted it. Both panels now hang off the tray, whose right edge is the gutter at every width, and a seventh control cannot move either.
+
+**The tray’s own note said a new control is a measurement**, and it was right about the row and silent about the overlay. Measured at 320, 375, 768 and 1280px after: every hit area 44×44 or better, no two overlapping, `scrollWidth` equal to the viewport at all four, and both panels inside the gutters at 320. **The cost is paid explicitly** — the 44px box `.qe-controls > \*::after` grows only works because each child is positioned, so for these two it moves onto the summary and the tray’s rule is switched off for them rather than left to misfire against the tray.
+
+**Two overlay panels in one tray can both be open with JavaScript off**, because a disclosure toggles natively and the close-the-other convenience was script. They now share a `name`, which is HTML’s exclusive accordion: opening one closes the other with no script at all. Verified by setting `open` directly, with no click and therefore no listener involved.
+
+**That fix made the two rendering gates disagree, and both were taught.** `reveal.mjs` dissolves the group before opening, or one panel would be measured shut — the eight-percent-of-itself failure its own header is about, arriving through a fix for something else — and puts it back afterwards. `check-overlap.mjs` then knows that two members of one exclusive accordion can never be on screen together and refuses to call them a collision; the exemption is **declared by the markup** rather than listed in the tool, which is the bar the invisible-text list already set. Proved both ways: the drawers panel’s hints in a 2.15:1 colour report three failures under the contrast gate and none once restored, so the panel is genuinely being measured.
+
+2026 · 11 September
 
 ## A masthead for the two modes, and the width a masthead is actually reviewed at
 
@@ -1951,6 +1992,12 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [Find a word in the cabinet](https://queering.earth/search) the finding aid
 
 ### [Queering.Earth](https://queering.earth/) the plate
+
+### [The plate](https://queering.earth/the-plate) the readings, collected
+
+### [The founding papers](https://queering.earth/the-founding-papers) the drawer
+
+### [The cabinet itself](https://queering.earth/the-cabinet-itself) the drawer
 
 ### [What this cabinet is for](https://queering.earth/mission) the founding papers
 

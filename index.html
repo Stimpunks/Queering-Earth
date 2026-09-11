@@ -101,7 +101,7 @@
   <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
   <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
   <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
-  <details class="qe-reading">
+  <details class="qe-reading" name="qe-tray">
     <summary class="qe-reading-summary">Reading</summary>
     <div class="qe-reading-panel">
       <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
@@ -149,6 +149,30 @@
         </li>
       </ul>
       <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
+  <!-- The drawers. Three collections, and everything on the site is in one of
+       them. A native details element, like the reading settings beside it and for
+       the same reason: a hand-built menu would need focus trapping, a roving
+       tabindex and an Escape handler, and getting any of that wrong makes the
+       navigation the least navigable thing on the sheet. -->
+  <details class="qe-drawers" name="qe-tray">
+    <summary class="qe-drawers-summary">Drawers</summary>
+    <div class="qe-drawers-panel">
+      <ul class="qe-drawers-list">
+        <li>
+          <a class="qe-drawers-link" href="/the-plate">The plate</a>
+          <span class="qe-drawers-hint">The sheets themselves, mounted and numbered on one plate.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-founding-papers">The founding papers</a>
+          <span class="qe-drawers-hint">Why this cabinet exists, and what it is for.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-cabinet-itself">The cabinet itself</a>
+          <span class="qe-drawers-hint">How it is made, what it has recorded, and what it knows about you.</span>
+        </li>
+      </ul>
     </div>
   </details>
   <!-- The easter egg. An ornament that is a door: unlabelled to the eye,
@@ -585,7 +609,7 @@
 
   <h2 id="what-grows-here">What grows here <a class="qe-anchor" href="#what-grows-here"><span class="qe-sr">Link to this section</span></a></h2>
 
-  <p>Eight sheets, so far, mounted and numbered on the plate below.</p>
+  <p>Every sheet mounted so far, numbered on the plate below in the order it was accessioned. <a href="/the-plate">About this drawer</a> &mdash; what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say.</p>
 
   <div class="qe-vined">
     <svg class="qe-botanical qe-corner qe-corner--tl" viewBox="0 0 130 130" aria-hidden="true" focusable="false">
@@ -981,7 +1005,7 @@
 
   <h2 id="the-founding-papers">The founding papers <a class="qe-anchor" href="#the-founding-papers"><span class="qe-sr">Link to this section</span></a></h2>
 
-  <p>Why this cabinet exists, and what it is for.</p>
+  <p>Why this cabinet exists, and what it is for. <a href="/the-founding-papers">About this drawer</a> &mdash; what each paper is for, why none of them is a sheet, and which one is signed.</p>
 
   <dl class="qe-furniture">
     <dt><a href="/mission">What this cabinet is for</a></dt>
@@ -996,7 +1020,7 @@
 
   <h2 id="the-cabinet-itself">The cabinet itself <a class="qe-anchor" href="#the-cabinet-itself"><span class="qe-sr">Link to this section</span></a></h2>
 
-  <p>Six pages that are not specimens. They are the cabinet &mdash; how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything.</p>
+  <p>Six pages that are not specimens. They are the cabinet &mdash; how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything. <a href="/the-cabinet-itself">About this drawer</a> &mdash; what each page is for, and what the build checks about it.</p>
 
   <dl class="qe-furniture">
     <dt><a href="/design">How this site is made</a></dt>

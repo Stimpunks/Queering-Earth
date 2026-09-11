@@ -528,6 +528,150 @@ sentences. Neither changes the manifesto's argument, which is why it survived th
 
 ## Settled
 
+### Three drawers, and "Drawers" is a word this file already refused once (2026-09-11)
+
+Ryan: *"I like breadcrumbs and collection pages."* The two lists at the foot of the home page
+— **The founding papers** and **The cabinet itself** — were already collections in everything
+but address, and the plate was a third. Each now has a page: `/the-plate`,
+`/the-founding-papers`, `/the-cabinet-itself`.
+
+**THIS IS NOT THE COLLECTION DECISION THIS FILE DEFERRED, AND THE DISTINCTION IS THE POINT.**
+The entry above — *no collections yet, and the trigger is named* — defers **runs**: three
+sheets sharing a lens, named retroactively the way Helen names hers, because a run declared at
+n=1 is a promise with nothing written to keep it. That trigger is untouched and the
+`collection-*.html` namespace is deliberately left empty for it, which is also why
+`check-markup.mjs`'s ported badge check stays stood down and armed. **What shipped today is
+structural, not thematic**: three drawers that already existed, one of which is the whole
+plate, and nothing is sorted into anything.
+
+**"SIX DRAWERS" WAS REFUSED AND THESE THREE ARE NOT IT.** The rejected proposal was
+*art · literature · poetry · politics · people · history* as a browsable taxonomy, refused
+twice over — five visible promises we were not keeping, and a forced single filing on a piece
+like *On Being Ill*, which wants Literature and People and Politics at once. **No sheet is
+sorted here.** Two drawers hold the pages that are not readings; the third holds every reading
+there is. Nothing is filed anywhere it is not already filed.
+
+**Ryan named the menu**, choosing *Drawers* over *Collections* and *Cases* with the collision
+stated in advance: the tray's ground control says **Cabinet**, and a *Drawers* menu beside it
+could read as a second view control. Accepted because the home page's own prose already says
+*how to look through the drawers*, and because a disclosure with a triangle and a list of
+links is not a pressed-state button.
+
+**The plate got a page, on Ryan's call, and it earns it by not repeating the front.** The
+alternative was pointing the breadcrumb and the menu at `/#what-grows-here`, which is a real
+address for a real index. What decided it: **the three sheet kinds are settled in this file and
+stated nowhere a reader meets them.** *A reading* has an order and arrives somewhere, *an
+essay* is ours, *a wall* has a chorus — that is real content with no home, and it is now on
+`/the-plate` along with what the accession number does not say.
+
+**THE GLOSSES LIVE ONCE AND THE COLLECTION PAGES DO NOT REPEAT THEM.** Nine pages are
+described in one sentence each in `.qe-furniture` on the home page. Copying those onto a
+collection page is nine sentences free to drift, in a cabinet whose loudest rule is that two
+copies of the same words drift and the copy nobody is looking at is the one that rots. So:
+
+- a collection page's line says what the page is **for** and where it sits against its
+  neighbours — a different sentence with a different job, and each page says on its own face
+  that the gloss is on the front of the cabinet;
+- `/the-plate` shows the **reduced** card — kind, number, title — which is the form the ten
+  sibling navs already use and which `check-card-order.mjs` already guards. No card notes.
+
+**A collection page's line in one of the two home-page lists is the pointer at the head of the
+section it collects**, not a `<dt>` inside it. Otherwise *The cabinet itself* would appear in
+its own list and the recursion would have to be explained to a reader. Each of the three
+sections now ends its intro with **About this drawer**.
+
+**No sibling nav on a collection page.** The drawers menu lists the other two drawers at the
+top of every page with the current one marked, so a `.qe-elsewhere` carding the same three is
+the two-competing-navigational-lists fault this repo already refuses on the home page. For
+`/the-plate` it would be worse: the page already cards every sheet there is.
+
+**Each group's collection page is the first entry in its own group in `tools/pages.mjs`**, so
+`/llms.txt`, the finding aid's manifest and the reader's index stay one derivation. `index` is
+in no collection: the home page is above the scheme rather than inside it.
+
+### The breadcrumb stops at the drawer, and it was already here one crumb long (2026-09-11)
+
+`.qe-home` was a lone link home on twelve pages; seven more carried the group name beside it
+inside `.qe-kicker` as **plain text** — *Queering Earth · The founding papers*, with the second
+half leading nowhere. The collection pages made that text an address, and the two shapes became
+one `.qe-crumbs` nav on nineteen pages.
+
+**It never names the page it is on.** The `h1` is the next thing in the masthead, so a third
+crumb is the title printed twice a line apart. The JSON-LD `breadcrumb` carries all three
+items, because a machine's copy has no heading under it — and it goes **inside** the page's one
+existing block as a `breadcrumb` property, because `check-metadata.mjs` requires exactly one
+JSON-LD block per page and is right to.
+
+**The separator is drawn in CSS.** It must not join the accessible name, must not reach the
+Markdown, and must not be something a reader can select into a quotation. It takes `--qe-moss`
+rather than a decorative token, because it is a glyph and **nothing here measures a `::before`**.
+
+**It sits inside `<main>`, which the nav rule otherwise forbids**, for the reason `.qe-contents`
+does: that rule stops one sheet's navigation being indexed as another sheet's content, and a
+trail naming this page's own position cannot do that. It lives in `.qe-masthead`, which
+`make-search-index.mjs` already skips — so it reaches the `.md`, where an agent wants to know
+where a page sits, and not the finding aid, where it would be nineteen identical results.
+
+**Targets measured after, because nothing here measures a hit area:** 45px tall, 107px and 67px
+wide, 18px apart, at 375px and at 1280px. A third crumb would need measuring again.
+
+**`/404` keeps the old shape and gets no breadcrumb**, for the reason Star Stuff gives its error
+page no collection badge: a trail would claim the address the reader asked for belongs to a
+drawer, when the whole message is that it does not exist. `index` gets none either.
+
+### A panel hung off its own control moves when a control is added (2026-09-11)
+
+The reading panel had been `right: 0` on its own summary since it shipped, which made its
+position **a function of how many controls sit to its right**. At 1280px it cleared the measure
+by 31px. Adding the drawers control moved the control 81px left, took the panel with it, and
+landed 50px of it on the lede on eight pages.
+
+**`check-overlap.mjs` reported it and nothing else would have.** No amount of care about the
+*new* control would have predicted it, because **the thing that moved was the old one**. The
+tray's own note already said a new control is a measurement rather than a markup edit; it was
+right about the row and silent about the overlay.
+
+**Both panels now hang off `.qe-controls`**, whose right edge is the gutter at every width, so
+a seventh control cannot move either. The cost is paid explicitly: `.qe-controls > *::after`
+grows a 44px hit box that only works because each child is positioned, so for these two the box
+moves onto the summary and the tray's rule is switched off for them rather than left to misfire
+against the tray. Measured at 320, 375, 768 and 1280px: every hit area 44×44 or better, none
+overlapping, `scrollWidth` equal to the viewport at all four, both panels inside the gutters at
+320.
+
+**The refused alternative was hanging the drawers panel off its own control.** Measured at
+375px the tray wraps; a 19rem panel on a control whose right edge is at x=98 spans to x=−142,
+off the **left** edge, taking the document's `scrollWidth` with it — the horizontal body scroll
+the layout rule forbids outright.
+
+### Two tray disclosures share a `name`, and both gates had to be taught (2026-09-11)
+
+Two overlay panels in one tray **can both be open with JavaScript off**: a `details` toggles
+natively and the close-the-other convenience was script. They share `name="qe-tray"` now, which
+is HTML's exclusive accordion — opening one closes the other with no script at all. Verified by
+setting `open` directly, with no click and therefore no listener involved. The script's Escape
+and click-away handlers moved from the reading panel alone to a loop over both, which lost a
+copy rather than adding one.
+
+**That fix made the two rendering gates disagree, and the disagreement is real rather than an
+artefact.**
+
+- **`reveal.mjs` dissolves the group before opening**, and without that line one panel is
+  measured shut — opening them in document order closes the first as the second opens. That is
+  the eight-percent-of-itself failure its own header is about, arriving through a fix for
+  something else. `UNREVEAL` puts the `name` back.
+- **`check-overlap.mjs` refuses to call them a collision**, because two members of one
+  exclusive accordion can never be on screen together, and the pair only exists because
+  `reveal.mjs` invented it. **The exemption is declared by the markup, not listed in the
+  tool** — that is the bar the `INVISIBLE` list sets. A panel that stops being exclusive stops
+  being exempt, in the same edit.
+
+**Proved rather than assumed**, per the rule about watching a new gate fail: the drawers panel's
+hints in a 2.15:1 colour report three failures under `check-contrast.mjs` and none once
+restored, so the panel is genuinely being measured. And a pristine `<details>` injected into a
+live page does not open under the browser-automation keyboard either, so **keyboard activation
+of a summary is not verifiable through that tool** — the trusted *pointer* click is, and it was.
+
 ### Two attention shapes, and the width a masthead is actually reviewed at (2026-09-11)
 
 Ryan's call after the blown-up tray mark was refused twice: something else for the header. The

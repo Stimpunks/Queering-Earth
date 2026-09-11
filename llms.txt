@@ -18,6 +18,7 @@ tools/make-markdown.mjs; nothing here is hand-kept.
 
 ## The readings
 
+- [The plate](https://queering.earth/the-plate): Every sheet on queering.earth in accession order, with what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say. [Markdown](https://queering.earth/the-plate.md)
 - [The Army of the Upright](https://queering.earth/on-being-ill): Virginia Woolf's On Being Ill, mounted as she left it in 1930. Illness missing from literature, a language that runs dry, and the sentence she revised into something stranger. [Markdown](https://queering.earth/on-being-ill.md)
 - [Coming to Terms](https://queering.earth/coming-to-terms): Ryan Boren on a lifetime of not fitting gender norms, a pair of pink-tinted glasses, and the two words — autigender and neuroqueer — that finally fit. [Markdown](https://queering.earth/coming-to-terms.md)
 - [The Die Uncast](https://queering.earth/promises-like-pie-crust): Christina Rossetti's Promises like Pie-crust, read as a charter for solo polyamory — the relationship escalator refused in 1861, and the colon her first printing keeps where everyone else prints a full stop. [Markdown](https://queering.earth/promises-like-pie-crust.md)
@@ -31,6 +32,7 @@ tools/make-markdown.mjs; nothing here is hand-kept.
 
 ## The founding papers
 
+- [The founding papers](https://queering.earth/the-founding-papers): The founding papers of queering.earth: the aims, the manifesto, and the paper about the shelf — what each is for, why none of them is a sheet, and which one is signed. [Markdown](https://queering.earth/the-founding-papers.md)
 - [What this cabinet is for](https://queering.earth/mission): The mission of queering.earth, in thirteen aims — each with the page where it is already being kept, and the failure that would show we had stopped. Then what a cabinet of readings has to do with a foundation whose first business is paying people's rent, including the half of that a reading cannot do. [Markdown](https://queering.earth/mission.md)
 - [Nothing here was inevitable](https://queering.earth/manifesto): The manifesto of queering.earth: normal is an arrangement and arrangements have authors, weird is a verb, and a reading is where an arrangement gets contested. Adapted from the Neuroqueer Learning Spaces Manifesto under its own licence. [Markdown](https://queering.earth/manifesto.md)
 - [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes): Why this cabinet has a sibling built on science: the fox and the hedgehog from Archilochus to Berlin to Gould, two public-domain animal poems that end in the same place, and the spiky profile the typology was never written about. [Markdown](https://queering.earth/two-cohabitating-modes.md)
@@ -38,6 +40,7 @@ tools/make-markdown.mjs; nothing here is hand-kept.
 ## The cabinet itself
 
 - [Queering Earth](https://queering.earth/): Reading the world through a queering lens — art, literature, poetry, politics, people, history — and asking what else any of it could have been. A Stimpunks Foundation and More Realms collaboration. [Markdown](https://queering.earth/index.md)
+- [The cabinet itself](https://queering.earth/the-cabinet-itself): The working pages of queering.earth: the colophon, the register, the ledger, the decisions, the finding aid and the privacy page — what each is for, and what the build checks about them. [Markdown](https://queering.earth/the-cabinet-itself.md)
 - [How this site is made](https://queering.earth/design): The design of Queering Earth: a Victorian herbarium sheet as the model, biophilic ground rules, the palette, the type, the drawings, and what we mean by specimen, sheet, plate, and label. [Markdown](https://queering.earth/design.md)
 - [The accession register](https://queering.earth/changelog): The changelog for Queering Earth: every sheet as it was mounted, every plate that came off again, and every label we corrected — including the attributions we got wrong and exactly how they were fixed. [Markdown](https://queering.earth/changelog.md)
 - [Find a word in the cabinet](https://queering.earth/search): Search every sheet, every quotation and every correction on this site. The searching happens in your browser; nothing you type is sent anywhere, including to us. [Markdown](https://queering.earth/search.md)

@@ -9,7 +9,8 @@ attribution_ledger: "https://github.com/Stimpunks/Queering-Earth/blob/main/ATTRI
 generated_by: "tools/make-markdown.mjs from the page's own <main> landmark"
 ---
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The cabinet itself](https://queering.earth/the-cabinet-itself)
 
 # Find a word in the cabinet
 
@@ -22,6 +23,16 @@ This is the finding aid. It searches the whole cabinet — the eight sheets, [th
 Every page on the site and every section of it, in the order a reader might meet them. This list is **generated from the pages themselves** by `tools/make-search-index.mjs` and written into this sheet between two markers — the same way the typefaces are declared in the stylesheet. Nobody types it, so no heading here can drift from the heading it names.
 
 ### The readings
+
+-
+
+[The plate](https://queering.earth/the-plate) Drawer · the readings
+
+  - [Mounted so far](https://queering.earth/the-plate#mounted-so-far)
+  - [What a sheet is](https://queering.earth/the-plate#what-a-sheet-is)
+  - [A reading, an essay, a wall](https://queering.earth/the-plate#three-kinds)
+  - [What the number says, and what it does not](https://queering.earth/the-plate#the-numbers)
+  - [How a sheet is checked](https://queering.earth/the-plate#how-a-sheet-is-checked)
 
 -
 
@@ -177,6 +188,15 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 -
 
+[The founding papers](https://queering.earth/the-founding-papers) Drawer · the founding papers
+
+  - [The three papers](https://queering.earth/the-founding-papers#the-papers)
+  - [Why these are papers and not sheets](https://queering.earth/the-founding-papers#not-a-sheet)
+  - [Signed and unsigned](https://queering.earth/the-founding-papers#signed-and-unsigned)
+  - [What would join them](https://queering.earth/the-founding-papers#what-would-join-them)
+
+-
+
 [What this cabinet is for](https://queering.earth/mission)
 
   - [The whole of it, in one sentence](https://queering.earth/mission#in-one-sentence)
@@ -233,6 +253,14 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 -
 
+[The cabinet itself](https://queering.earth/the-cabinet-itself) Drawer · the cabinet itself
+
+  - [The six pages](https://queering.earth/the-cabinet-itself#the-six)
+  - [Why these six are one drawer](https://queering.earth/the-cabinet-itself#why-these-are-together)
+  - [What the build checks about this drawer](https://queering.earth/the-cabinet-itself#what-is-checked)
+
+-
+
 [How this site is made](https://queering.earth/design) Colophon
 
   - [The model: a Victorian specimen sheet](https://queering.earth/design#model)
@@ -254,7 +282,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-193 entries across 49 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+197 entries across 50 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

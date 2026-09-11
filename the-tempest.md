@@ -9,7 +9,8 @@ attribution_ledger: "https://github.com/Stimpunks/Queering-Earth/blob/main/ATTRI
 generated_by: "tools/make-markdown.mjs from the page's own <main> landmark"
 ---
 
-[Queering Earth](https://queering.earth/)
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
 
 Sheet · a reading
 
