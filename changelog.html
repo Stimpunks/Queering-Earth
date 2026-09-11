@@ -325,8 +325,27 @@
        which a derived href would have. -->
   <div class="qe-register" id="latest">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-11-monotropism">
+    <section class="qe-accession" aria-labelledby="a-2026-09-11-centre">
       <p class="qe-accession-date">2026 &middot; 11 September &middot; latest</p>
+      <h2 id="a-2026-09-11-centre">The masthead had been 34px right of centre since the day it was drawn <a class="qe-anchor" href="#a-2026-09-11-centre"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Ryan, with a screenshot: <q>The wider fonts available in the font selector don&rsquo;t center the title.</q> They do not &mdash; and neither does the default one. <strong>Nine typefaces made visible a fault that had been shipping with one.</strong></p>
+
+      <div class="qe-entry qe-entry--label" data-sheet="index the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">A centring rule that stops working when the sign changes</span></div>
+        <div class="qe-entry-body">
+          <p><code>text-align: center</code> distributes <strong>leftover</strong> space along a line. When the line is wider than its box the leftover is negative, there is nothing to distribute, and the line is laid from the start edge with the whole overflow running off the end. <strong>Measured at 1280:</strong> <code>main</code> is honestly centred at 368&hellip;912, the masthead&rsquo;s content box is 416&hellip;864 &mdash; 448px &mdash; and the wordmark&rsquo;s ink is 515.9px. It began at 416, ended at 931.9, and sat 34px right of the page&rsquo;s centre line.</p>
+          <p><strong>The typeface is how it was seen, not what caused it.</strong> The offset is 34px with the default face, 28.4 with Victorianna, 68.8 with Coxinelle and 162.4 with Sporting Grotesque: the wider the face a reader picks, the further right the wordmark leans. <strong>Below about 1024px it looks right</strong>, because there the wordmark fits its box and the leftover is positive &mdash; and every width this house routinely measures at is in that range.</p>
+          <p><code>width: max-content</code> with <code>left: 50%</code> and a negative <code>translate</code>: the box becomes as wide as the letters, and is centred on the container&rsquo;s centre line whether it fits or not. <strong>The one centring idiom whose arithmetic does not change sign.</strong> Verified at 0.0px offset for all nine faces at 375, 768, 1280 and 1920, in plain view, in the cabinet, and on both papers.</p>
+          <p><strong><code>translate</code> rather than <code>transform</code>, deliberately.</strong> Plain view switches <code>transform</code> off component by component &mdash; the lean, the wobble, the drift &mdash; because each of those is a decoration. A centring correction is not one, and the independent property means a future <code>transform: none</code> written for the wonk cannot silently push the masthead back off centre.</p>
+          <p><strong>A break at the dot was tried and refused.</strong> Letting <em>Queering. / Earth</em> wrap sounds like the natural answer; measured, it wraps the <em>default</em> face onto two lines at 1280 as well as at 320, because the wordmark exceeds its box at every desktop width. The cure for one face would have restyled the masthead for all nine. The <code>max-content</code> box forecloses wrapping altogether, which is also a guard: after a stylesheet rule broke <em>Queering.Ear / th</em> earlier the same day, a wordmark that cannot wrap by construction is worth having.</p>
+          <p><strong>Centring cured two more faults on its own</strong>, because a symmetric overflow is half as deep each side: Coxinelle and Insolente were both scrolling the page at 320px and now fit. <strong>Sporting Grotesque still is not</strong>, at 320, 375 and 768 &mdash; recorded as open in <a href="/what-is-settled">the decision log</a>, with three measured ways out and the note that <code>check-width.mjs</code> sweeps one typeface and cannot see any of them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-11-monotropism">
+      <p class="qe-accession-date">2026 &middot; 11 September</p>
       <h2 id="a-2026-09-11-monotropism">A word one syllable from the right one, and it belonged to Bowlby <a class="qe-anchor" href="#a-2026-09-11-monotropism"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Ryan, reading the sheet mounted the day before: <q>The word &lsquo;Monotropy&rsquo; on <cite>Two Cohabitating Modes</cite> is associated with Bowlby&rsquo;s attachment theory, which we do not endorse. Let&rsquo;s avoid using monotropy.</q></p>

@@ -37,6 +37,26 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 11 September · latest
 
+## The masthead had been 34px right of centre since the day it was drawn
+
+Ryan, with a screenshot: “The wider fonts available in the font selector don’t center the title.” They do not — and neither does the default one. **Nine typefaces made visible a fault that had been shipping with one.**
+
+Label correctedA centring rule that stops working when the sign changes
+
+`text-align: center` distributes **leftover** space along a line. When the line is wider than its box the leftover is negative, there is nothing to distribute, and the line is laid from the start edge with the whole overflow running off the end. **Measured at 1280:** `main` is honestly centred at 368…912, the masthead’s content box is 416…864 — 448px — and the wordmark’s ink is 515.9px. It began at 416, ended at 931.9, and sat 34px right of the page’s centre line.
+
+**The typeface is how it was seen, not what caused it.** The offset is 34px with the default face, 28.4 with Victorianna, 68.8 with Coxinelle and 162.4 with Sporting Grotesque: the wider the face a reader picks, the further right the wordmark leans. **Below about 1024px it looks right**, because there the wordmark fits its box and the leftover is positive — and every width this house routinely measures at is in that range.
+
+`width: max-content` with `left: 50%` and a negative `translate`: the box becomes as wide as the letters, and is centred on the container’s centre line whether it fits or not. **The one centring idiom whose arithmetic does not change sign.** Verified at 0.0px offset for all nine faces at 375, 768, 1280 and 1920, in plain view, in the cabinet, and on both papers.
+
+**`translate` rather than `transform`, deliberately.** Plain view switches `transform` off component by component — the lean, the wobble, the drift — because each of those is a decoration. A centring correction is not one, and the independent property means a future `transform: none` written for the wonk cannot silently push the masthead back off centre.
+
+**A break at the dot was tried and refused.** Letting *Queering. / Earth* wrap sounds like the natural answer; measured, it wraps the *default* face onto two lines at 1280 as well as at 320, because the wordmark exceeds its box at every desktop width. The cure for one face would have restyled the masthead for all nine. The `max-content` box forecloses wrapping altogether, which is also a guard: after a stylesheet rule broke *Queering.Ear / th* earlier the same day, a wordmark that cannot wrap by construction is worth having.
+
+**Centring cured two more faults on its own**, because a symmetric overflow is half as deep each side: Coxinelle and Insolente were both scrolling the page at 320px and now fit. **Sporting Grotesque still is not**, at 320, 375 and 768 — recorded as open in [the decision log](https://queering.earth/what-is-settled), with three measured ways out and the note that `check-width.mjs` sweeps one typeface and cannot see any of them.
+
+2026 · 11 September
+
 ## A word one syllable from the right one, and it belonged to Bowlby
 
 Ryan, reading the sheet mounted the day before: “The word ‘Monotropy’ on *Two Cohabitating Modes* is associated with Bowlby’s attachment theory, which we do not endorse. Let’s avoid using monotropy.”

@@ -1404,6 +1404,34 @@ main {
   /* The wonk axis, on the wordmark, at its full extent. The typeface's own
      deviation-from-the-norm setting is doing the site's argument. */
   font-variation-settings: "SOFT" 60, "WONK" 1;
+
+  /* `text-align: center` DOES NOT CENTRE A LINE THAT IS WIDER THAN ITS BOX, and this
+     wordmark is wider than its box at every desktop width. It distributes LEFTOVER
+     space; when the leftover is negative there is none to distribute, so the line is
+     laid from the start edge and the whole overflow goes right. Measured at 1280:
+     `main` is honestly centred at 368…912 and the masthead's content box is 416…864,
+     448px wide — and the wordmark's ink is 515.9px. It began at 416, ended at 931.9,
+     and sat 34px right of the page's centre line.
+     THIS IS OLD AND IT IS NOT A TYPEFACE BUG, though a typeface is how it was seen.
+     It is 34px off with the default face, 28.4 with Victorianna, 68.8 with Coxinelle
+     and 162.4 with Sporting Grotesque — the wider the face a reader picks, the more
+     the wordmark leans right, which is why nine faces made visible a fault that had
+     been shipping with one. Below about 1024px the wordmark fits its box, the
+     leftover is positive, and `text-align` centres it correctly; that is why the
+     phone widths this site measures at looked right.
+     `width: max-content` lets the box be as wide as the letters, and `left: 50%` with
+     a negative `translate` centres that box on the container's centre line whether it
+     fits or not — the one centring idiom whose arithmetic does not change sign.
+     `translate` RATHER THAN `transform`, deliberately: plain view switches `transform`
+     off component by component — the lean, the wobble, the drift — because those are
+     decorations, and a centring correction is not one. Using the independent property
+     means a future `transform: none` written for the wonk cannot silently push the
+     masthead back off centre. */
+  width: max-content;
+  max-width: none;
+  position: relative;
+  left: 50%;
+  translate: -50%;
 }
 html.plain .qe-wordmark { font-variation-settings: normal; font-weight: 700; }
 

@@ -24,6 +24,20 @@ What is settled, what is open, and the reasoning for each — so the same questi
 
 ## Open
 
+### Sporting Grotesque overflows the viewport on a phone, and the width gate measures one typeface (2026-09-11)
+
+**Found while fixing the masthead centring, not reported.** With Sporting Grotesque picked in the reading settings, the home page's document is 361px wide at a 320px viewport, 388 at 375, and 770 at 768. It fits from about 1024 up. That is horizontal body scroll — the thing `CLAUDE.md` forbids outright — reached through a setting the site offers, and it fails WCAG 1.4.10 reflow at the 320px width that criterion names. **Pre-existing and confirmed at `d3ce2c7`**; centring the wordmark improved it (422 → 361 at 320) without curing it. It is the only one of the nine faces that does not fit; Sporting's display cut is simply much wider than the other eight at the same size.
+
+**The reading-settings rule that this offends is already written down**: every setting must be additive. A typeface that introduces horizontal scroll is not.
+
+**Three ways out, and the choice is Ryan's because all three change something he chose.**
+
+1. **A smaller floor for that face alone** — `html.qe-font-sporting .qe-wordmark { font-size: clamp(1.75rem, 7.4vw, 5rem) }`. Measured: the wordmark goes 42px → 28px at 320 and 375, 80px → 57px at 768, and is untouched at 1280 and for the other eight faces. Nothing else on the page moves. The cost is that one face's masthead is visibly smaller on a phone. There is precedent for recording a per-face fact rather than a preference: `sets\_body` in the font manifest.
+2. **Narrow the nine to eight.** `CLAUDE.md` already describes this as an anticipated operation with a procedure — re-run `make-fonts.mjs`, edit the options on twenty pages, let `check-metadata.mjs` catch any disagreement. The cost is a face Ryan picked, and Sporting is one of the six under CUTE.
+3. **Leave it and say so on the page.** Refused as written here unless Ryan wants it: an accessibility panel that offers a setting which breaks reflow is worse than one that offers eight.
+
+**And the gate hole is the other half of this.** `check-width.mjs` sweeps four widths and two papers with the **default typeface**, so it cannot see any of the above — the same "8% of itself" blindness the contrast gate's `REVEAL` exists for. Teaching it the nine `html.qe-font-\*` classes is nine times the passes and finds exactly this class of fault. **It cannot ship until Sporting is resolved**, because a gate that is allowed to fail is the advice-not-a-gate trap this repo has already paid for twice.
+
 ### The empathy study is a 2024 article with a 2023 DOI, and the accepted manuscript is not quotable (2026-09-10)
 
 The paper the proposed Sheet No. 10 rests its fairest reading of Schalk on. Ryan put the accepted manuscript in the SKS inbox and then the version of record beside it, which is what made the comparison below possible. **Settled; nothing here blocks the sheet.**
@@ -272,6 +286,26 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### `text-align: center` does not centre a line wider than its box, and the masthead had been 34px off for its whole life (2026-09-11)
+
+Ryan, with a screenshot of the home page under a wide typeface: *the wider fonts available in the font selector don't center the title.* They do not, and neither does the default one.
+
+**The mechanism is a sign change.** `text-align` distributes **leftover** space along the line. When the line is wider than its box the leftover is negative, there is nothing to distribute, and the line is laid from the start edge with the whole overflow running off the end. Measured at 1280: `main` is honestly centred at 368…912, the masthead's content box is 416…864 — 448px — and the wordmark's ink is 515.9px. It began exactly at 416, ended at 931.9, and sat **34px right of the page's centre line**.
+
+**It is not a typeface bug, though a typeface is how it was seen.** The offset is 34px with the default face, 28.4 with Victorianna, 68.8 with Coxinelle and 162.4 with Sporting Grotesque — the wider the face a reader picks, the further right the wordmark leans. Nine faces made visible a fault that had been shipping with one. **Confirmed pre-existing at `d3ce2c7`**, before anything in this session, with identical numbers.
+
+**Below about 1024px it looks right, which is why it survived.** There the wordmark fits its box, the leftover is positive, and `text-align` centres correctly. Every width this house routinely measures at — 320, 375, the control-tray checks — is in that range.
+
+**`width: max-content` plus `left: 50%` and a negative `translate`.** The box becomes as wide as the letters and is centred on the container's centre line whether it fits or not: the one centring idiom whose arithmetic does not change sign. Verified at 0.0px offset for all nine faces at 375, 768, 1280 and 1920, and in plain view, the cabinet, and on both papers.
+
+**`translate` rather than `transform`, deliberately.** Plain view switches `transform` off component by component — the lean, the wobble, the drift — because each of those is a decoration. A centring correction is not one, and using the independent property means a future `transform: none` written for the wonk cannot silently push the masthead back off centre.
+
+**Flex centring on the masthead measures identically** — same geometry to the tenth of a pixel, no margin-collapse difference — and was passed over only because it restyles every masthead child to fix one of them.
+
+**A break opportunity at the dot was tried and is refused.** `content: "\\200B"` on `.qe-dot::after` would let *Queering. / Earth* wrap instead of overflow, which sounds like the typographically natural answer. Measured, it wraps the **default** face onto two lines at 1280 as well as at 320, because the wordmark exceeds the 448px box at every desktop width — so the cure for one face's overflow would restyle the masthead for all nine. The `max-content` box forecloses wrapping entirely, which is also a guard: after `overflow-wrap` broke *Queering.Ear / th* earlier the same day, a wordmark that cannot wrap by construction is worth having.
+
+**Centring fixed three of five overflow conditions on its own**, because a symmetric overflow is half as deep on each side: Coxinelle at 320 (325px document) and Insolente at 320 (322px) now fit. **Sporting Grotesque still does not**, and that is open — see below.
 
 ### Monotropism, never monotropy — they are different people's words (2026-09-11)
 
