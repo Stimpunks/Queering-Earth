@@ -1146,6 +1146,21 @@ for the group headings above — a second name for a *set* that has one is drift
 for a *link* is not. *Decisions* points at `/what-is-settled`, and the address stays that way
 for the filesystem reason recorded in this file.
 
+**THE THREE DRAWERS ARE IN THE ROW AND THEIR LABELS ARE NOT SHORTENED**, as of 2026-09-11, and
+that is the licence above running out. *The founding papers* and *The cabinet itself* are the
+names of **sets** — the same words in `tools/pages.mjs`, on the home page, in `/llms.txt`, in
+the drawers menu and on the collection page's own `h1`. A short label for one of those is the
+second name for a set that this file refuses everywhere else. They sit directly after
+*Queering Earth*, which is the level they are: the home page, then the drawers, then the pages
+they collect.
+
+**THE ROW WRAPS NOW, AND A SINGLE LINE WAS NEVER THE INVARIANT.** Thirteen links give two lines
+at 1280 and 768, four at 375, six at 320. What has to hold is that no two padded targets on
+adjacent wrapped lines can touch, which is what `line-height: 2.9` is for. **Measured after,
+because nothing here measures a hit area**: no overlaps at any of the four widths, every target
+past 44px in both directions, `scrollWidth` equal to the viewport. **Remeasure when a link is
+added** — this is the only place on the site where a dozen targets sit side by side.
+
 **The glosses live once, in `.qe-furniture`.** They used to be restated on fifteen footers:
 five authored sentences across sixteen pages is eighty copies free to drift, and they had.
 **Two pages were missing from every footer on the site** — `/ledger` and `/what-is-settled`

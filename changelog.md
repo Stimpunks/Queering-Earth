@@ -61,6 +61,14 @@ MountedThe breadcrumb was already here, one crumb long, on twelve pages
 
 **The menu is a native disclosure and writes no words**, like the reading settings beside it. Three links and three lines of hint, all authored in the markup; `queering.js` gained nothing but a loop, and lost a copy — the Escape and click-away handlers the reading panel had to itself now run over both, which is also what makes opening one close the other.
 
+CabinetThe three drawers joined the footer row, and their labels are the one place a short label is not allowed
+
+Ryan’s, after the drawers shipped. They sit directly after *Queering Earth* on all twenty-three rows, which is the level they are: the home page, then the drawers, then the pages they collect.
+
+**The labels are not shortened, and that is this file’s own licence running out.** A row of links is allowed a short label — *Colophon*, *Register*, *Decisions* — because those name *pages*. *The founding papers* and *The cabinet itself* name **sets**, in the same words in `tools/pages.mjs`, on the home page, in `/llms.txt`, in the drawers menu and on each collection page’s own heading. A short label for one of those is the second name for a set this register keeps recording as drift.
+
+**The row wraps now, and a single line was never the invariant.** The stylesheet’s note recorded eight links at 575px on one line and had gone stale twice over — the row has been ten links and two lines since the founding papers shipped. What actually has to hold is that no two padded targets on adjacent wrapped lines can touch, which is what `line-height: 2.9` is for. **Measured at thirteen:** two lines at 1280 and 768, four at 375, six at 320; no overlaps at any of them, every target past 44px in both directions, and `scrollWidth` equal to the viewport at all four. The note says so now, and says to remeasure when a link is added.
+
 Label correctedThe home page said eight sheets, and the plate has held ten since 10 September
 
 “Eight sheets, so far, mounted and numbered on the plate below” was true when it was written and stopped being true on [No. 9](https://queering.earth/five-unmistakable-marks), directly above a plate showing ten cards numbered 1 to 10. **Replaced rather than corrected**, because a count kept by hand is a count that goes stale, and this register already holds two other findings of exactly that shape on Star Stuff’s own pages. The sentence now says the sheets are numbered in the order they were accessioned and leaves the counting to the plate.
