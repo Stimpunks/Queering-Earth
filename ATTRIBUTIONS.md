@@ -2703,6 +2703,245 @@ needs Anne Clark's biography, which Wikipedia cites for it and which remains unr
 
 ----
 
+### Two children's poems, both public domain, and one word the compositor got wrong
+
+**Quoted on:** [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes), both
+in full.
+
+**Edith King, *The Hedgehog*** — in *Fifty New Poems for Children: An Anthology* (Oxford:
+Basil Blackwell, 1922), page 49. Public domain. **Verified 2026-09-10, off the page scan of
+that edition** — the Internet Archive copy mirrored at Wikimedia Commons as
+`Fifty_new_poems_for_children;an_anthology_..._(IA_fiftynewpoemsfor00unse).pdf`, rendered at
+300 dpi and read from the letterforms.
+
+**THE 1922 EDITION PRINTS "runts and digs", AND THE READING THAT WOULD HAVE BEEN WRONG IS THE
+SENSIBLE ONE.** The stanza is a snout that smells "like us, of course, / But also runts and
+digs". *Runts* is not a verb; *roots* is what a pig's snout does and is the sense the stanza
+is built on. **Every transcription we found also reads "runts"** — which is the condition
+under which a whole tradition of copies is a single witness, so none of them is evidence.
+
+So the scan's own OCR text layer was not trusted either, OCR being the one witness guaranteed
+to make exactly this error. Magnified, the **"u" is open-topped and unmistakable against the
+closed "o" of "also" two words earlier**. The sheet prints *runts*, and makes the argument for
+*roots* outside the quotation marks. A silent correction would leave King saying a word she did
+not print.
+
+The same pass found the circulating transcriptions putting **full stops at four line-ends
+where the 1922 setting has commas** — "quiet wood," "a pig's," "of course," "hair or fur," and
+"from foes,". The commas are hers and the sheet has them.
+
+**Open:** whether a later impression of the anthology corrected *runts* to *roots*. Only the
+1922 first edition has been read, and a later correction would not change what this page
+quotes.
+
+**Anonymous, rhyme CXXXIII** ("The fox and his wife they had a great strife") — collected in
+James Orchard Halliwell, *The Nursery Rhymes of England*, fifth edition (London and New York:
+Frederick Warne and Co., 1886), pages 84–86. Public domain. Also in Halliwell's 1843 edition,
+so it was in the collection forty years earlier. Sung as *The Fox* or *Daddy Fox*, in variants
+older than either printing.
+
+**Verified 2026-09-10 in three witnesses.** Text taken from the [Project Gutenberg
+transcription](https://www.gutenberg.org/files/32415/32415-h/32415-h.htm) of the 1886 edition
+(ebook 32415, proofread from Internet Archive images), then checked line by line against the
+text layers of **two independent scans of that same edition** — `nurseryrhymesofe00hall` and
+the Google-digitised `nurseryrhymesen00hallgoog`. The three agree on every word. The two
+line-end marks where raw OCR differed from the proofread text — a comma after "great strife"
+and a semicolon after "whole life" — are settled by the Google scan agreeing with Gutenberg.
+
+**The refrain indent is the 1886 setting's**, reproduced with `.l-in`; the spaces the
+compositor set before every exclamation mark are closed up, which is the decision Sheet No. 3
+already took for Rossetti's colons.
+
+**THERE IS NO FOX IN KING'S ANTHOLOGY, and that was checked rather than assumed.** The obvious
+companion piece would have been a fox poem from the same 1922 book. Its contents list and its
+author index were both read: the word *fox* does not occur in it. King's eleven poems there are
+a rabbit, a bat, a mole, a duck, a swallow, a beetle and the rest.
+
+----
+
+### *Education Review* credits a review to the author of the book it reviews
+
+**Quoted on:** [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes), one
+paragraph, whole.
+
+**The correct citation:** Pieter Vanhuysse, University of Haifa, *Bees and Foxes, Spiders and
+Hedgehogs*, an essay review of Michael Murray (ed.), *A Jacques Barzun Reader* and Stephen Jay
+Gould, *The Hedgehog, The Fox, and the Magister's Pox*. *Education Review* vol. 9 no. 1,
+1 January 2006, <https://doi.org/10.14507/er.v0.1360>. **Verified 2026-09-10 in the article
+PDF.**
+
+**THE JOURNAL'S OWN RECORD CREDITS IT TO STEPHEN JAY GOULD.** The landing page at
+`edrev.asu.edu/index.php/ER/article/view/1360` carries `<meta name="citation_author"
+content="Gould Stephen Jay">`, so **every citation manager pointed at that page produces a
+citation crediting a review to its subject** — a man who had been dead for four years when it
+ran, and whose book is one of the two being reviewed.
+
+Four things in the PDF settle it: the first page names Pieter Vanhuysse of the University of
+Haifa under the title; the running head on every page reads "Vanhuysse: Bees and Foxes,
+Spiders and Hedgehogs"; the abstract is first person about Gould in the third — "I argue that
+Barzun and Gould contribute valuable insights"; and the last page carries an *About The
+Author* paragraph and his university address. The same record also files the article as
+volume 13 where the PDF's running head says volume 9, number 1.
+
+**Nothing of ours was wrong, which is the only reason this is not a correction.** But it is
+precisely the collapse `check-metadata.mjs` refuses in our own JSON-LD — *author* is who wrote
+our reading, *about.author* is who made the thing read — arriving from a peer-reviewed journal
+and propagating into every bibliography built from it.
+
+**Licence.** *Education Review* content of that period is under [CC BY-NC-SA
+3.0](http://creativecommons.org/licenses/by-nc-sa/3.0), and the PDF states copyright is
+retained by the author. The paragraph on the sheet is **quoted, not adapted**, so nothing on
+this site takes that licence — which matters, because BY-NC-SA is not compatible with the
+CC BY-SA 4.0 our own words carry.
+
+**One error inside the quotation is kept, because it is his.** Vanhuysse calls Archilochus
+"fifth-century"; he is seventh — dated by his own fragments, which mention the solar eclipse of
+6 April 648 BC and the wealth of Gyges of Lydia. **The words inside quotation marks are not
+ours to tidy**, so the correction sits outside them, on the sheet, where a reader can weigh it.
+
+----
+
+### Liv, on life as a hedgehog — and a site that is gone
+
+**Quoted on:** [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes), one
+paragraph, whole.
+
+Liv, *Life as a hedgehog*, *Traumatism* — "field notes from living with Complex PTSD, DID and
+Autism" — 7 September 2021. **Verified 2026-09-10** against the [Internet Archive capture of
+8 May 2022](https://web.archive.org/web/20220508100306/https://traumatism-fieldnotes.com/life-as-a-hedgehog/),
+which is the only copy there is: **`traumatism-fieldnotes.com` no longer resolves.** The post
+and its seven comments are in that capture; Liv replies in four of them.
+
+Ryan's brief carried the paragraph already, and it matches the capture **word for word**,
+including two things that would be easy to smooth and are not ours to smooth: the single
+quotation marks around 'prove' and 'enough', and **"loosing the plot"**, which is Liv's
+spelling.
+
+**LIV WRITES AS "WE" AND THE PLURAL IS THEIRS.** The post is about living with DID and says
+so — "Having different parts means we have, what could appear as, a similarly spiky profile."
+The plural is not an editorial we and it is not a slip. It is kept everywhere the sheet refers
+to them, and they/them is used where a pronoun is needed, because the capture states no
+pronouns.
+
+**Why this quotation is load-bearing rather than illustrative.** It is the one source on the
+sheet that is neither a poem nor a scholar, and it is the only one describing what the
+metaphor costs. The sheet's hinge — that an armour which costs nothing to deploy is also the
+reason nobody believes you need support — is Liv's observation and not King's, and King's
+poem only turns out to contain it once you have read Liv.
+
+----
+
+### The fox-and-hedgehog pairing with monotropism has no first use we can find
+
+**Relied on, and flagged as unattributed, on:**
+[Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes).
+
+The sheet reports that the hedgehog's one big thing and the fox's many things have been mapped
+onto **monotropism** and polytropism in neurodivergent writing and talking. **We have not
+found who did that first, and the sheet says so in those words.**
+
+Two things are established and the join between them is not. **Berlin does not mention
+attention, autism, or anything of the kind** — he is sorting novelists and philosophers.
+**Murray, Lesser and Lawson (2005) does not mention foxes or hedgehogs.** The pairing is a
+later, informal synthesis circulating in community spaces, podcasts and conversation.
+
+**Monotropism** was coined by **Dinah Murray** with her neighbour **Jeanette Buirski**, and
+set out in Murray, Lesser and Lawson (2005), *Attention, monotropism and the diagnostic
+criteria for autism*, *Autism* 9(2), 139–156,
+<https://doi.org/10.1177/1362361305051398>. **The paper has not been read here and nothing is
+quoted from it** — the citation is pinned from Crossref, as it is for the entry on
+`monotropa-uniflora.html`. **The third author is Wenn Lawson** and the journal's byline reads
+"Wendy Lawson"; see that entry for why we cite him as Wenn and state what the byline says.
+
+**The one instance the sheet cites is cited as an instance.** *The Fox and the Hedgehog: On
+Neurodiversity*, episode *Rethinking Scientific Minds*, 2 June 2025, as listed by podcast.app
+and credited there to Linda MacDonald Glenn. **The episode has not been listened to, the
+description reads as promotional copy, and the caption on the sheet says outright that it is
+evidence the pairing circulates and not a source for the claim.** Nothing on the page rests on
+it.
+
+**Open:** a first use in print or in a talk. If one exists, the sheet should credit it.
+
+----
+
+### Archilochus, at two removes, and no Greek edition opened
+
+**Referred to on:** [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes).
+
+The sheet gives the proverb as **"the fox knows many things, but the hedgehog knows one big
+thing"** and credits Archilochus, a seventh-century poet and soldier from Paros.
+
+**NO GREEK EDITION HAS BEEN OPENED HERE, AND THE SHEET SAYS SO.** The English above is a
+rendering in circulation, reaching the page through Isaiah Berlin's essay on Tolstoy by way of
+the Vanhuysse review above — which we did read. It is therefore **at two removes**, and it is
+presented as a rendering rather than as a translation this site can vouch for. The Greek is
+deliberately not set: it would be an unverified transcription, and the two house faces have no
+greek subset, so it would render in a system fallback like the Sappho on `/flower-codes`.
+
+**What would upgrade it:** a Greek text of the fragment with an editor and a numbering, and a
+named translator for whichever English is used.
+
+**Open, at one remove and carried inside somebody else's quotation:** Vanhuysse says the
+distinction "was further elaborated during the Renaissance by Erasmus of Rotterdam". The
+*Adagia* have not been consulted. The claim is on his authority, inside his quotation, and the
+sheet flags it as unresolved.
+
+----
+
+### Two lines quoted from living authors, and one word of Sagan's changed in our own masthead
+
+**Quoted on:** [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes), one
+sentence each, in copyright, quoted with attribution.
+
+**Carl Sagan**, *The Demon-Haunted World: Science as a Candle in the Dark* (1995), of his
+parents: "But in introducing me simultaneously to skepticism and to wonder, they taught me the
+two uneasily cohabiting modes of thought that are central to the scientific method." **Dorion
+Sagan**, *Cosmic Apprentice: Dispatches from the Edges of Science* (University of Minnesota
+Press, 2013): "Science's eye for detail, buttressed by philosophy's broad view, makes for a
+kind of alembic, an antidote to both."
+
+Both are quoted from Ryan's own reading and both are also on [Star Stuff's *Who Is Holding the
+Candle*](https://starstuff.earth/who-is-holding-the-candle). **Neither page has been re-opened
+for this sheet and both captions say so.**
+
+**THE PAGE'S TITLE IS OURS AND NOT SAGAN'S, BY ONE SYLLABLE.** Sagan wrote **cohabiting**. The
+sheet is called **Two Cohabitating Modes** — Ryan's title, and the word is a real one. The
+difference does not change the meaning, and **it is still a difference**, so by this site's own
+rule the title is an adaptation and not a quotation: *if we changed the words, they are ours.*
+
+The sheet states this in a note beside the specimen, and the specimen itself carries Sagan's
+sentence unaltered. **Logged here because the rule has to survive contact with our own
+masthead**, which is the one place nobody thinks to check — the same failure found in our own
+foundation's rendering of the Playful Manifesto, one preposition wide.
+
+----
+
+### Stimpunks' own page on scientism, and a stacked list that is a summary of it
+
+**Quoted on:** [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes), one
+paragraph, whole.
+
+Stimpunks Foundation, [*Facts, Fire, and Feels: Research-Storytelling from the
+Edges*](https://stimpunks.org/research/). **Read at source 2026-09-10.** Ours, and still
+cited, because a house source quoted without a citation is the pattern that produced the
+Playful Manifesto drift.
+
+> But we're also not anti-science. **We're anti-scientism — the belief that science alone
+> produces valid knowledge, that lived experience is noise to be filtered out, that the
+> measurer doesn't belong in the measurement. Science and philosophy. Empiricism and voice.
+> Skepticism and wonder. These aren't opposites. They're the whole point.**
+
+The bold is the page's own and is reproduced.
+
+**Ryan's brief carried the same idea as a stacked list** — "Science + Philosophy / Skepticism
++ Wonder / Empiricism + Voice / Bio + Psycho + Social / Body + Mind / Bodyminds" — which also
+appears on that page. **The prose is what the sheet quotes**, because the stacked form is a
+summary device and the sentences are the claim. Quoting the list instead would have been a
+tightening in the other direction: the same words, with the argument taken out from between
+them.
+
+----
+
 ## Open
 
 ### Who wrote the crooked tree — Waits, the screenplay, or Keret

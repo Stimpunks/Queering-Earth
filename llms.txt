@@ -33,6 +33,7 @@ tools/make-markdown.mjs; nothing here is hand-kept.
 
 - [What this cabinet is for](https://queering.earth/mission): The mission of queering.earth, in thirteen aims — each with the page where it is already being kept, and the failure that would show we had stopped. Then what a cabinet of readings has to do with a foundation whose first business is paying people's rent, including the half of that a reading cannot do. [Markdown](https://queering.earth/mission.md)
 - [Nothing here was inevitable](https://queering.earth/manifesto): The manifesto of queering.earth: normal is an arrangement and arrangements have authors, weird is a verb, and a reading is where an arrangement gets contested. Adapted from the Neuroqueer Learning Spaces Manifesto under its own licence. [Markdown](https://queering.earth/manifesto.md)
+- [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes): Why this cabinet has a sibling built on science: the fox and the hedgehog from Archilochus to Berlin to Gould, two public-domain animal poems that end in the same place, and the spiky profile the typology was never written about. [Markdown](https://queering.earth/two-cohabitating-modes.md)
 
 ## The cabinet itself
 

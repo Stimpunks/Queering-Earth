@@ -849,6 +849,16 @@ html.qe-spacing-on p + p { margin-top: var(--qe-para-gap, 1.47rem); }
   align-items: center;
   gap: 0.85rem;
   padding: 0.9rem var(--qe-gutter) 0;
+  /* IT WRAPS BECAUSE IT RAN OUT, AND THAT WAS MEASURED RATHER THAN GUESSED.
+     With four controls the tray filled a 375px phone EXACTLY — first item at
+     x=20, last ending at x=355 inside a 20px gutter, nothing to spare. Adding
+     the fox-and-hedgehog mark as a fifth would have pushed the search link to a
+     negative x, and since this row is `flex-end` the overflow goes off the LEFT
+     edge and takes the document's scrollWidth with it — the horizontal body
+     scroll this site's layout rule forbids outright. Wrapping is the cheap fix
+     and the honest one: on a narrow screen the tray becomes two right-aligned
+     rows, and on any width that fits it is a no-op. */
+  flex-wrap: wrap;
 }
 
 /* ─── the finding aid, reachable from the top of every page
@@ -921,6 +931,83 @@ html.qe-spacing-on p + p { margin-top: var(--qe-para-gap, 1.47rem); }
    fill of its own, so it follows the ground without needing a second value. */
 .qe-loupe .shell { fill: var(--qe-paper); }
 .qe-loupe .rivet { fill: currentColor; stroke: none; }
+
+/* ─── the easter egg: two specimens, and a door
+ *
+ * THE ONLY UNLABELLED CONTROL IN THE TRAY, and that is the whole device. Ryan
+ * asked for a bit of whimsy and for a way into /two-cohabitating-modes that a
+ * reader finds rather than is told about.
+ *
+ * WHAT IS HIDDEN IS THE DOOR AND NEVER THE ROOM, which is what keeps this from
+ * being the hover-gated section mark this file refuses. The page is listed on
+ * the home page with the other founding papers, carried in every footer row,
+ * in the sitemap, in /llms.txt and in the finding aid; and the link's
+ * accessible name is real text in the DOM at all times, so a screen reader
+ * announces "Two cohabitating modes" exactly as it announces "Search". Nothing
+ * is withheld from anybody. The only thing a sighted mouse user has to do is
+ * wonder what the drawing is for.
+ *
+ * IT DOES NOT ANIMATE, and its neighbour is the reason. The rail sprig and the
+ * moth draw themselves on because they are botanical art; this sits in the
+ * instrument tray beside the loupe, which does not, and a mark that grew while
+ * the loupe next to it sat still would read as a fault rather than a flourish.
+ *
+ * Drawn at 16 to 180px and compared before it was kept, which is the lesson
+ * favicon.svg paid for twice. Four findings, each from looking:
+ *
+ *   · NOSE TO NOSE IS A PREDATION SCENE. A fox facing a hedgehog is a predator
+ *     facing prey — the one thing a mark for a page about two modes COHABITING
+ *     must not say. Both face the same way now: two profiles in one orientation
+ *     are a plate of two specimens, which is this site's own idiom and carries
+ *     no narrative at all.
+ *   · EIGHT LONG SPINES ARE A STEGOSAURUS, and drawn on a head instead of a
+ *     body they are a rising sun. A coat is a MASS of short spines, so there are
+ *     sixteen, each sitting on the dome's own normal and raked back — computed
+ *     rather than hand-placed, the same correction the lilac panicle took.
+ *   · A TAIL WITH A CONCAVE UNDERSIDE IS A SCYTHE, and two drafts got that
+ *     wrong the same way. The brush is a band of near-constant width with a
+ *     rounded cap, nearly as thick as the body, as it is on the animal. It is
+ *     drawn before the body so the body overlaps its root: a tail meeting the
+ *     rump in a visible seam reads as a separate object lying behind the fox.
+ *   · FILLED, NOT STROKED. The loupe is stroked because an instrument is made
+ *     of thin parts. An animal at 20px is a silhouette, and two stroked
+ *     outlines went muddy below about 24px — exactly what the loupe's own note
+ *     above predicts.
+ *
+ * The hedgehog is smaller than the fox because it is. Nothing here encodes a
+ * quantity, so the sizes claim nothing the way the rail's tick lengths do — but
+ * a hedgehog drawn the size of a dog is a wrong fact in a drawing, and no gate
+ * here measures a drawing, which is a reason for care rather than licence. */
+.qe-modes-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--qe-moss);
+  padding: 0.2rem 0.3rem;
+}
+.qe-modes-link:hover { color: var(--qe-rust); }
+.qe-modes-link:focus-visible {
+  outline: 3px solid var(--qe-rust);
+  outline-offset: 2px;
+}
+/* On its own page. The footer self-links there as it does on every other
+   furniture page, so the control stays rather than vanishing on one page out of
+   twenty — and, having no word whose colour could change, it says so by going
+   to ink, which is what the search link's own rule does. */
+.qe-modes-link[aria-current="page"] { color: var(--qe-ink); }
+
+/* 2.6rem is 41.6px, and the intrinsic ratio makes that 20.1px tall — within a
+   pixel and a half of the loupe, so the two marks in the tray are the same
+   weight. The viewBox is the asserted ink box (x 1.5–41.81, y 2.7–21.7) plus
+   half a unit of air, not a round number with slack in it: slack on one side
+   only would push the whole tray off its right margin. */
+.qe-modes-mark {
+  display: block;
+  flex: none;
+  width: 2.6rem;
+  height: auto;
+  fill: currentColor;
+  stroke: none;
+}
 
 /* ─── the target, which is not the ink
  *

@@ -166,9 +166,12 @@ Why this cabinet exists, and what it is for.
 **[Nothing here was inevitable](https://queering.earth/manifesto)**
 : The manifesto, and the argument the aims rest on: normal is an arrangement and arrangements have authors, weird is a verb, and a reading is where an arrangement gets contested.
 
+**[Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes)**
+: Why this cabinet has a sibling built on science, by way of the fox and the hedgehog — two children’s poems, both public domain, that end in exactly the same place, and the spiky profile the typology was never written about.
+
 ## The cabinet itself
 
-Four pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything.
+Six pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything.
 
 **[How this site is made](https://queering.earth/design)**
 : The herbarium sheet, the palette, the type that leans, and the borrowed plates — each rule written down with the reason it exists, so it can be argued with.

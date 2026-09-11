@@ -320,6 +320,9 @@ og_card(REPO/"images"/"og-mission.png", "What this cabinet is for", "The foundin
         "Thirteen aims, each with the page where it is already being kept.", VIOLET)
 og_card(REPO/"images"/"og-manifesto.png", "Nothing here was inevitable", "The founding papers",
         "Normal is an arrangement, weird is a verb, and a reading is where it is contested.", CORAL)
+og_card(REPO/"images"/"og-two-cohabitating-modes.png", "Two Cohabitating Modes", "The founding papers",
+        "The fox knows many things and the hedgehog knows one big thing. Both are feeding a family.",
+        LICHEN)
 og_card(REPO/"images"/"og-design.png", "How this site is made", "Colophon",
         "A Victorian herbarium sheet as the model: the palette, the type, the drawings.", MARIGOLD)
 og_card(REPO/"images"/"og-changelog.png", "The accession register", "Register · the changelog",
