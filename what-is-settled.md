@@ -272,18 +272,47 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
-### A worktree cut before a commit reads a stale file, and absence is not evidence (2026-09-10)
+### Six counting idioms answered a different question than the one asked, and none of them errored (2026-09-10)
 
-Recorded because two sessions worked this repo on one afternoon and the near-miss is reproducible, not because anything is broken now.
+Measuring one number &mdash; how much verse the Markdown flattening fault had flattened &mdash; took **three sessions and six wrong answers**, and the wrong answers are the entry. Not one of them was a bug in anything in this repo, and **not one of them failed.** Every single one returned a plausible figure.
+
+The settled number, in the end: **219 verse lines, 48 verse blocks, 171 hard breaks, across 10 pages.** It reconciles exactly, because `219 - 48 = 171` &mdash; a block's last line takes no trailing break.
+
+**Four were tool defaults.**
+
+| tool | what was asked | what it answered |
+| --- | --- | --- |
+| `grep` here is **ugrep** | is this markup `No.&nbsp;1` or `No.` plus a literal space | printed the entity **decoded**, so both forms looked identical and a phantom difference got chased across nine sibling navs |
+| `grep -c` | how many occurrences | how many **lines containing** one, so a page with eight verse lines on one physical line reported `1` |
+| **zsh**, unquoted expansion | `node tools/check-markup.mjs --check` | did not word-split, so `--check` became part of the filename and node reported module-not-found &mdash; which reads as a gate failure |
+| **perl** `scalar(()=/.../g)` | how many matches | with capture groups in the pattern, returns the **captures**, so every block counted twice |
+
+**Two were regexes against our own markup, and they are the ones to actually worry about**, because the first four are general knowledge and these two are specific to this house:
+
+- **`<span class="l"` is a literal-string test where a class-token test was meant.** It misses every `class="l l-in"`, which is how this site marks an indented verse line. Half of Rossetti vanished from the count: 12 against 24 actual. **A class attribute is a token list and must be matched as one.**
+- **A flat count of "elements that look like a verse block" counts a wrapper and its children both.** On `/wild-nights` a `div.qe-verse` wraps two `p.qe-stanza` children &mdash; Ryan's reply verse in two parts &mdash; and the wrapper is not a break boundary of its own. That is the whole of the residual that three sessions could not reconcile, and **it is invisible unless you happen to open that one page.**
+
+**WHAT FINALLY SETTLED IT HAD NO REGEX IN THE COUNTING.** Walk the `p` and `div` open and close tags keeping a depth stack, attribute each verse-line span to the innermost element still open, and count distinct holders. The nesting stops being a special case by construction, because a wrapper that directly holds no line is never counted. That produced 48 first time, per page: two-cohabitating-modes 13, wild-nights 11, the-tempest 7, invention-of-normal 6, promises-like-pie-crust 3, five-unmistakable-marks 3, monotropa-uniflora 2, flower-codes 1, index 1, manifesto 1.
+
+**The rule.** A count is a claim, and this file already holds several entries where a measured number was right about its own arithmetic and wrong about what it measured &mdash; the register's block height, the contents-list heading threshold. This is the same failure one level down, in the instrument. **Before reporting a count off markup, check it against a second method that does not share the first one's idiom**, and if the two disagree, the disagreement is the finding rather than a rounding error. Three sessions agreeing is worth nothing if all three ran the same kind of pattern.
+
+**And it pairs with *A stale snapshot is not evidence about the repo, in either direction*.** That one says a snapshot is not the repo, and that absence in a `grep` is not absence. This one says the `grep` may also be lying about what it *found*. Both faults were reported confidently, by sessions that were locally correct. **Named rather than placed** — this file reorders every time somebody inserts at the head of a section, and `CLAUDE.md` already records what a note binding itself to a position costs.
+
+### A stale snapshot is not evidence about the repo, in either direction (2026-09-10)
+
+Recorded because three sessions worked this repo on one afternoon, two of them hit this from opposite sides, and the near-miss is reproducible — not because anything is broken now.
 
 **What happened.** The session fixing the Markdown verse flattening was told, in its brief, to move the entry `The Markdown mirror flattens every poem on the site into prose` from Open to Settled. It searched `DECISIONS.md`, found nothing, and reported that no such entry existed. **It was right about its own tree and wrong about the repository:** the entry had entered in `be83959`, which landed on `main` after that worktree was cut. It then merged `be83959` — which brought the entry in — resolved `DECISIONS.md` by taking main's copy and inserting its own Settled entry above it, and did not re-check, because it had already concluded the thing did not exist. **The log then asserted both that the bug was deliberately unfixed and that it was fixed, five hundred lines apart.**
 
-**Two rules, and the second is the one that generalises.**
+**AND THE MIRROR CASE, an hour later, which is why this entry is not titled "absence".** A third session described this working tree as mid-merge with eight unmerged paths and `DECISIONS.md` waiting to be staged, and **declined to write an entry** in case an append cost somebody their conflict resolution. Careful reasoning, and the merge had been committed and pushed two commits earlier. **It was right about its snapshot and wrong about the repo, exactly as the first session was — and it was believing a state that was gone rather than doubting one that was there.** Caution does not protect you from a stale premise; it just changes which way you are wrong.
 
-- **A worktree is a snapshot, so `grep` finding nothing means "not in my snapshot", never "not in the repo".** Before reporting a file, a rule or an entry absent, fetch. This is the register's `id="latest"` fault in a different file: *both sessions were locally correct and the page was globally wrong.*
+**Three rules, and the third is the one that cost the most to learn.**
+
+- **A worktree is a snapshot. `grep` finding nothing means "not in my snapshot", never "not in the repo" — and `git status` showing a conflict means "my snapshot is mid-merge", never "the repo is".** Before reporting any state, fetch. This is the register's `id="latest"` fault in a different file: *both sessions were locally correct and the artefact was globally wrong.*
 - **A merge that brings in the thing you concluded was missing is a second chance to notice, and a conclusion already drawn is what stops you taking it.** The moment a conflict resolves in a file you searched earlier, re-run the search. The cost is one command; the cost of not doing it was a contradiction that shipped.
+- **A CROSS-CHECK IS NOT INDEPENDENT UNTIL IT HAS BEEN CHECKED ITSELF.** Counting the verse three ways to confirm a peer's figures, **two of the three methods were silently wrong in one pass**: a regex that did not survive shell quoting returned `0` for every file, and a hand-written counter blind to fenced code blocks over-counted by two, reading a shell line continuation in this very file — `netlify api getSite … \\` — as a line of poetry. The peer's figures were right: **219 verse lines, 48 verse blocks, 171 hard breaks, 10 pages.** A third method that agrees is worth something; a third method you have not interrogated is worth nothing, and reads exactly the same.
 
-**Nothing here changes a gate**, and nothing can: no check reads the decision log or the register's prose for coherence, and one that tried would be a grader of English rather than a guard. The protection is the two rules above and a reader.
+**Nothing here changes a gate**, and nothing can: no check reads the decision log or the register's prose for coherence, and one that tried would be a grader of English rather than a guard. The protection is the three rules above and a reader.
 
 ---
 
