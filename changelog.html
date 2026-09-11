@@ -325,8 +325,36 @@
        which a derived href would have. -->
   <div class="qe-register" id="latest">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-11-centre">
+    <section class="qe-accession" aria-labelledby="a-2026-09-11-faces">
       <p class="qe-accession-date">2026 &middot; 11 September &middot; latest</p>
+      <h2 id="a-2026-09-11-faces">One typeface was too wide for the masthead, and the gate had been rendering one of ten states <a class="qe-anchor" href="#a-2026-09-11-faces"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Ryan, on the two options put to him after the centring fix: <q>option 1, and teach the gate the nine faces.</q> The first is four lines of CSS. <strong>The second is the one that mattered</strong> &mdash; the gate had been reporting <code>PASS</code> on twenty-five pages while rendering the default typeface and nothing else.</p>
+
+      <div class="qe-entry qe-entry--label" data-sheet="index the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">Sporting Grotesque is set smaller, and the number is a measurement whose expected answer was wrong</span></div>
+        <div class="qe-entry-body">
+          <p>With Sporting picked in the reading settings the home page measured 361px of document at a 320px viewport, 388 at 375, 427 at 414 and 770 at 768 &mdash; and, found only by the new sweep, <strong>756px on a Letter sheet and 739 on A4.</strong> Horizontal body scroll reached through a setting this site offers, failing the 320px reflow WCAG&nbsp;1.4.10 names and the panel&rsquo;s own rule that <strong>every setting must be additive</strong>. It is the only one of nine that does not fit: Sporting&rsquo;s display cut is far wider than the others at the same size.</p>
+          <p><strong>The obvious target was <q>clear the 20px gutter</q>, and it is not the bar &mdash; because the default face does not clear it either.</strong> At 320px Fraunces leaves 12.1px, since the masthead has always been allowed to encroach there. So the real bar is <em>no tighter than the house&rsquo;s own tightest</em>. Measured at 320: <code>8.4vw</code> leaves 5.4px, tighter than the default; <code>8vw</code> leaves 13.2px, which is not; <code>7.6vw</code> leaves 20.9px and clears the whole gutter at the cost of a visibly smaller title. <strong>Checked from above too</strong> &mdash; <code>8.8vw</code> still scrolls by 2px and <code>8.6vw</code> fits by 2px, a margin too thin to survive another browser&rsquo;s rounding.</p>
+          <p><code>clamp(1.9rem, 8vw, 5rem)</code>, for that face alone. <strong>A metric fact about the typeface, not a preference</strong>, with the same standing as <code>sets_body</code> in the font manifest &mdash; which exists for exactly this kind of thing: Victorianna ships Thin alone, four faces have no italic, and now one is too wide for the masthead at phone sizes. Nothing changes at 1280 and the other eight are untouched.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The width gate renders ten states now, and reads the face list from the table that owns it</span></div>
+        <div class="qe-entry-body">
+          <p>The gate shipped this morning and was already blind in the way this house had written down three days earlier: <strong>a page that checks the fraction of itself that happens to be visible reports zero failures and looks exactly like a clean one.</strong> It rendered the default typeface on every page while nine others sat unmeasured.</p>
+          <p><strong>The face list is read from <code>tools/font-files.json</code> and never typed into the tool.</strong> That table is where <code>make-fonts.mjs</code> writes the faces and where <code>check-metadata.mjs</code> already reads <code>picker_id</code> to prove the markup&rsquo;s options match it. A hand-kept copy would be a third list &mdash; and <strong>narrowing the nine is an anticipated operation</strong>, which would leave the gate sweeping a face nobody can pick while missing one they can.</p>
+          <p><strong>The extra passes are cheap because they ask a cheaper question.</strong> The default face gets the full walk &mdash; every text node, every client rect &mdash; which is what names a culprit and what proves the page was measured at all. The other nine ask only whether the document is wider than its box, and escalate to the full walk only when it is. <strong>A gate ten times slower is a gate people stop running</strong>, which is its own failure mode. 1,500 measurements in 4m11s.</p>
+          <p><strong><code>document.fonts.ready</code> after every switch</strong>, because a face is fetched when a rule using it first meets rendered text &mdash; measure before that and you have measured the fallback. <strong>And the faces go to paper</strong>, which earned its keep on the first run by finding the two printed conditions the by-hand check had missed: a reader&rsquo;s typeface is an <code>html</code> class and the print sheet does not reset it, so what they picked is what they print.</p>
+          <p><strong>The failure advice branches, because two faults wear the same number and take opposite cures.</strong> An unbreakable string wants a break opportunity and must <em>not</em> be fixed by shrinking the type; a display line too wide in one face has no string to break, and there the size <em>is</em> the fix. Printing the first advice under a typeface finding is how somebody ends up putting <code>overflow-wrap</code> on a masthead &mdash; which happened here, earlier the same day.</p>
+          <p><strong>Made to fail before being believed:</strong> withdrawing the Sporting size reports five failing passes on the home page, names the typeface in each, points at <code>&lt;h1.qe-wordmark&gt;</code> and the word <em>Earth</em>, and exits 1.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-11-centre">
+      <p class="qe-accession-date">2026 &middot; 11 September</p>
       <h2 id="a-2026-09-11-centre">The masthead had been 34px right of centre since the day it was drawn <a class="qe-anchor" href="#a-2026-09-11-centre"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Ryan, with a screenshot: <q>The wider fonts available in the font selector don&rsquo;t center the title.</q> They do not &mdash; and neither does the default one. <strong>Nine typefaces made visible a fault that had been shipping with one.</strong></p>

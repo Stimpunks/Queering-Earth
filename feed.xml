@@ -9,6 +9,14 @@
     <copyright>CC BY-SA 4.0</copyright>
     <lastBuildDate>Fri, 11 Sep 2026 12:00:00 GMT</lastBuildDate>
     <item>
+      <title>One typeface was too wide for the masthead, and the gate had been rendering one of ten states</title>
+      <link>https://queering.earth/changelog#a-2026-09-11-faces</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-faces</guid>
+      <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Label corrected: Sporting Grotesque is set smaller, and the number is a measurement whose expected answer was wrong
+Cabinet: The width gate renders ten states now, and reads the face list from the table that owns it</description>
+    </item>
+    <item>
       <title>The masthead had been 34px right of centre since the day it was drawn</title>
       <link>https://queering.earth/changelog#a-2026-09-11-centre</link>
       <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-centre</guid>

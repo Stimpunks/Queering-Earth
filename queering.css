@@ -1435,6 +1435,26 @@ main {
 }
 html.plain .qe-wordmark { font-variation-settings: normal; font-weight: 700; }
 
+/* SPORTING GROTESQUE IS SET SMALLER, AND THAT IS A METRIC FACT ABOUT THE FACE RATHER
+   THAN A PREFERENCE — the same standing as `sets_body` in the font manifest.
+   Its display cut is far wider than the other eight at the same size, and it was the
+   one typeface in the picker that scrolled the page sideways: the home page measured
+   361px of document at a 320px viewport, 388 at 375, 427 at 414 and 770 at 768, and
+   fitted only from about 1024 up. A reading setting that introduces horizontal scroll
+   is not additive, which is the rule the panel is built on, and 320px reflow is the
+   width WCAG 1.4.10 names.
+   THE SIZE IS THE LARGEST THAT IS NO TIGHTER THAN THE DEFAULT FACE AT THE TIGHTEST
+   WIDTH, which is a measurement and not a taste. The expected answer was "clear the
+   20px gutter" — but the default wordmark does not clear it either: at 320px Fraunces
+   leaves 12.1px, because the masthead is allowed to encroach there and always has. So
+   the bar is that bar. Measured at 320: 8.4vw leaves 5.4px, tighter than the house's
+   own worst case; 8vw leaves 13.2px, which is not; 7.6vw leaves 20.9px and clears the
+   full gutter at the cost of a noticeably smaller title. The middle one is this.
+   Ceiling checked from above as well: 8.8vw still scrolls at 320 by 2px, and 8.6vw
+   fits by 2px — a margin too thin to survive a different browser's rounding.
+   The other eight faces and the default are untouched, and nothing changes at 1280. */
+html.qe-font-sporting .qe-wordmark { font-size: clamp(1.9rem, 8vw, 5rem); }
+
 .qe-wordmark .qe-dot { color: var(--qe-rust); }
 
 .qe-tagline {

@@ -33,6 +33,26 @@
  * site whose predecessor shipped 44 of 46 pages printing blank is the house fault,
  * and this is the first gate here that can say so.
  *
+ * ── IT SWEEPS EVERY TYPEFACE THE PICKER OFFERS, AND THE FIRST VERSION DID NOT ───
+ * That version measured the default face on twenty-five pages and reported PASS while
+ * Sporting Grotesque scrolled the home page at 320, 375, 414 and 768 — a fault reached
+ * through a setting the site offers, invisible because the gate only ever rendered one
+ * of ten states. It is the contrast gate's "8% of itself" blindness in a second gate,
+ * and it was found by Ryan opening the page under a different face, not by any tool.
+ *
+ * THE FACE LIST IS READ FROM `tools/font-files.json`, never typed here. That table is
+ * where `make-fonts.mjs` writes the faces and `check-metadata.mjs` already reads
+ * `picker_id` to prove the markup's options match it. A hand-kept copy in this file
+ * would be a third list, and narrowing the nine — which this house has written down as
+ * an anticipated operation — would leave the gate sweeping a face nobody can pick while
+ * missing one they can.
+ *
+ * THE EXTRA PASSES ARE CHEAP BECAUSE THEY ASK A CHEAPER QUESTION. The default face gets
+ * the full walk: every text node, every client rect, which is what names a culprit and
+ * what proves the page was measured at all. The other nine ask only whether the document
+ * is wider than its box — one number — and escalate to the full walk only when it is. A
+ * gate ten times slower is a gate people stop running, and that is its own failure mode.
+ *
  * ── WHAT IT DOES NOT DO ─────────────────────────────────────────────────────────
  * It does not report every box past the edge, only the widest text run and its
  * element, because the document width is ONE number and a list of forty boxes that
@@ -51,6 +71,12 @@ import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { REVEAL, UNREVEAL } from './reveal.mjs';
 import { CHROME, withPage as withPageOnPort, evaluated, sleep, settle, resolveTargets } from './cdp.mjs';
+
+/* The picker's faces, from the one table that owns them. `null` is the reader who has
+   chosen nothing, which is the state every other gate here measures. */
+const FACES = [null, ...Object.values(
+  JSON.parse(fs.readFileSync(path.join(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..'), 'tools', 'font-files.json'), 'utf8')).families ?? {}
+).map((m) => m.picker_id).filter(Boolean)];
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PORT = 9414; // 9411 search index, 9412 contrast, 9413 overlap — one each, so they run together
@@ -122,6 +148,21 @@ const MEASURE = (cfg) => {
 
 const CFG = { TOL, INVISIBLE: ['.qe-sr'] };
 
+/* One number, for the nine faces that are not the default. Escalates on a finding. */
+const WIDTH_ONLY = () => {
+  const de = document.documentElement;
+  return JSON.stringify({ scrollWidth: de.scrollWidth, clientWidth: de.clientWidth });
+};
+
+/* Setting the class is not enough: a face is fetched when a rule using it first meets
+   rendered text, so a measurement taken before `document.fonts.ready` is a measurement
+   of the fallback — which is the wrong typeface and, for this gate, the wrong width. */
+const SET_FACE = (id) => '(() => {'
+  + ' const c = document.documentElement.classList;'
+  + " [...c].filter((x) => x.startsWith('qe-font-')).forEach((x) => c.remove(x));"
+  + (id ? ' c.add(' + JSON.stringify('qe-font-' + id) + ');' : '')
+  + ' return 1; })()';
+
 async function main() {
   const files = resolveTargets(ROOT);
 
@@ -143,10 +184,29 @@ async function main() {
         const out = await withPage(`file://${path.join(ROOT, f)}`, async (send) => {
           const viewport = (w) => send('Emulation.setDeviceMetricsOverride',
             { width: w, height: 900, deviceScaleFactor: 1, mobile: false });
-          const measure = async (what) => {
-            await sleep(200);
-            return evaluated(await send('Runtime.evaluate',
-              { expression: `(${MEASURE})(${JSON.stringify(CFG)})`, returnByValue: true }), what);
+          const measure = async (what) => evaluated(await send('Runtime.evaluate',
+            { expression: `(${MEASURE})(${JSON.stringify(CFG)})`, returnByValue: true }), what);
+          const widthOnly = async (what) => evaluated(await send('Runtime.evaluate',
+            { expression: `(${WIDTH_ONLY})()`, returnByValue: true }), what);
+          const face = async (id) => {
+            await send('Runtime.evaluate', { expression: SET_FACE(id), returnByValue: true });
+            /* A face is fetched when a rule using it first meets rendered text, so this
+               wait is the difference between measuring the typeface and measuring the
+               fallback it was standing in for. */
+            await send('Runtime.evaluate',
+              { expression: 'document.fonts.ready.then(() => 1)', awaitPromise: true, returnByValue: true });
+          };
+          /* The default face gets the full walk — it is what names a culprit and what
+             proves the page was measured at all. The other nine ask one number, and
+             only escalate when that number is wrong. */
+          const pass = async (label, id, w) => {
+            await viewport(w);
+            await face(id);
+            await sleep(id === null ? 200 : 120);
+            if (id === null) return [label, w, id, await measure(label)];
+            const n = await widthOnly(label);
+            if (n.scrollWidth <= n.clientWidth + TOL) return null;
+            return [label, w, id, await measure(label)];
           };
 
           await viewport(SCREENS[SCREENS.length - 1]);
@@ -158,15 +218,26 @@ async function main() {
              it. `/search` builds its whole result UI at runtime too. */
           evaluated(await send('Runtime.evaluate', { expression: REVEAL, returnByValue: true }), 'reveal');
           const passes = [];
-          for (const w of SCREENS) { await viewport(w); passes.push([`screen ${w}`, w, await measure(`screen ${w}`)]); }
+          for (const id of FACES)
+            for (const w of SCREENS) {
+              const r = await pass(`screen ${w}`, id, w);
+              if (r) passes.push(r);
+            }
 
           /* UNREVEAL BEFORE PAPER, per reveal.mjs's own header: the print stylesheet
              reveals a DIFFERENT state, and measuring a screen-only class left on is
-             how 257 print failures were invented upstream. */
+             how 257 print failures were invented upstream.
+             THE FACES GO TO PAPER TOO: a reader's typeface is an `html` class and the
+             print sheet does not reset it, so what they picked is what they print. */
           evaluated(await send('Runtime.evaluate', { expression: UNREVEAL, returnByValue: true }), 'unreveal');
           await send('Emulation.setEmulatedMedia', { media: 'print' });
-          for (const [name, w] of PAPERS) { await viewport(w); passes.push([`paper ${name}`, w, await measure(`paper ${name}`)]); }
+          for (const id of FACES)
+            for (const [name, w] of PAPERS) {
+              const r = await pass(`paper ${name}`, id, w);
+              if (r) passes.push(r);
+            }
           await send('Emulation.setEmulatedMedia', { media: '', features: [] });
+          await face(null);
           return passes;
         });
         if (out === null) { unread.push([f, 'never settled']); continue; }
@@ -174,10 +245,10 @@ async function main() {
            per pass, because a print pass measuring zero while the screen pass
            measured thousands is exactly the silent success this house has paid for
            before. 44 of 46 pages printing blank would be reported here, not passed. */
-        const empty = out.filter(([, , m]) => !m || !m.boxes).map(([k]) => k);
+        const empty = out.filter(([, , id, m]) => id === null && (!m || !m.boxes)).map(([k]) => k);
         if (empty.length) { unread.push([f, `measured 0 text boxes in: ${empty.join(', ')}`]); continue; }
-        for (const [name, w, m] of out) {
-          if (m.scrollWidth > m.clientWidth + TOL || m.runs) findings.push([f, name, w, m]);
+        for (const [name, w, id, m] of out) {
+          if (m.scrollWidth > m.clientWidth + TOL || m.runs) findings.push([f, name, w, id, m]);
         }
       } catch (e) {
         unread.push([f, String(e.message || e).slice(0, 90)]);
@@ -188,9 +259,9 @@ async function main() {
   }
 
   console.log();
-  for (const [f, name, w, m] of findings) {
+  for (const [f, name, w, id, m] of findings) {
     const over = Math.max(0, m.scrollWidth - m.clientWidth);
-    console.log(`${f}  ${name}`);
+    console.log(`${f}  ${name}  typeface: ${id ?? 'the default'}`);
     console.log(`  document is ${m.scrollWidth}px in a ${m.clientWidth}px box — ${over}px of sideways scroll, ${m.runs} text run(s) past the edge`);
     if (m.culprit) console.log(`  widest run: <${m.culprit.el}> ${m.culprit.width}px wide, ending at ${m.culprit.right} past an edge of ${w} — ${JSON.stringify(m.culprit.text)}`);
   }
@@ -209,14 +280,32 @@ async function main() {
     process.exit(1);
   }
   if (findings.length) {
-    console.error(
-      `\nFAIL — ${findings.length} pass(es) scroll sideways. Give the long string a place to break\n` +
-      '(`overflow-wrap: anywhere` reaches paper; `break-word` does not shrink a table column),\n' +
-      'or put a genuine BLOCK inside its own `overflow-x: auto` box. Do not shrink the type.'
-    );
+    /* TWO FAULTS WEAR THE SAME NUMBER AND TAKE OPPOSITE CURES, so the remedy is chosen
+       by whether a typeface is implicated. An unbreakable string wants a break
+       opportunity and MUST NOT be fixed by shrinking the type. A display line that is
+       simply too wide in one of the picker's faces has no string to break — and there
+       the size IS the fix, per face, as a metric fact about that face. Printing the
+       first advice under a typeface finding is how somebody ends up adding
+       `overflow-wrap` to a masthead, which this house has already done once. */
+    const faceHits = findings.filter(([, , , id]) => id !== null);
+    console.error(`\nFAIL — ${findings.length} pass(es) scroll sideways.`);
+    if (findings.length > faceHits.length)
+      console.error(
+        '  With the default typeface: give the long string a place to break\n' +
+        '  (`overflow-wrap: anywhere` reaches paper; `break-word` does not shrink a table\n' +
+        '  column), or put a genuine BLOCK inside its own `overflow-x: auto` box.\n' +
+        '  Do not shrink the type.'
+      );
+    if (faceHits.length)
+      console.error(
+        `  Under a picked typeface (${[...new Set(faceHits.map(([, , , id]) => id))].join(', ')}):\n` +
+        '  a display line too wide in one face has no string to break, and there the size\n' +
+        '  IS the cure — an `html.qe-font-<id>` font-size, recorded as a metric fact about\n' +
+        '  that face. A reading setting that scrolls the page sideways is not additive.'
+      );
     process.exit(1);
   }
-  console.log(`PASS — ${files.length} page(s), ${SCREENS.length} screen width(s) and ${PAPERS.length} paper(s): nothing scrolls sideways, nothing runs past the sheet.`);
+  console.log(`PASS — ${files.length} page(s) \u00d7 ${FACES.length} typeface(s), ${SCREENS.length} screen width(s) and ${PAPERS.length} paper(s): nothing scrolls sideways, nothing runs past the sheet.`);
   process.exit(0);
 }
 

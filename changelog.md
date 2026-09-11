@@ -37,6 +37,34 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 11 September · latest
 
+## One typeface was too wide for the masthead, and the gate had been rendering one of ten states
+
+Ryan, on the two options put to him after the centring fix: “option 1, and teach the gate the nine faces.” The first is four lines of CSS. **The second is the one that mattered** — the gate had been reporting `PASS` on twenty-five pages while rendering the default typeface and nothing else.
+
+Label correctedSporting Grotesque is set smaller, and the number is a measurement whose expected answer was wrong
+
+With Sporting picked in the reading settings the home page measured 361px of document at a 320px viewport, 388 at 375, 427 at 414 and 770 at 768 — and, found only by the new sweep, **756px on a Letter sheet and 739 on A4.** Horizontal body scroll reached through a setting this site offers, failing the 320px reflow WCAG 1.4.10 names and the panel’s own rule that **every setting must be additive**. It is the only one of nine that does not fit: Sporting’s display cut is far wider than the others at the same size.
+
+**The obvious target was “clear the 20px gutter”, and it is not the bar — because the default face does not clear it either.** At 320px Fraunces leaves 12.1px, since the masthead has always been allowed to encroach there. So the real bar is *no tighter than the house’s own tightest*. Measured at 320: `8.4vw` leaves 5.4px, tighter than the default; `8vw` leaves 13.2px, which is not; `7.6vw` leaves 20.9px and clears the whole gutter at the cost of a visibly smaller title. **Checked from above too** — `8.8vw` still scrolls by 2px and `8.6vw` fits by 2px, a margin too thin to survive another browser’s rounding.
+
+`clamp(1.9rem, 8vw, 5rem)`, for that face alone. **A metric fact about the typeface, not a preference**, with the same standing as `sets\_body` in the font manifest — which exists for exactly this kind of thing: Victorianna ships Thin alone, four faces have no italic, and now one is too wide for the masthead at phone sizes. Nothing changes at 1280 and the other eight are untouched.
+
+CabinetThe width gate renders ten states now, and reads the face list from the table that owns it
+
+The gate shipped this morning and was already blind in the way this house had written down three days earlier: **a page that checks the fraction of itself that happens to be visible reports zero failures and looks exactly like a clean one.** It rendered the default typeface on every page while nine others sat unmeasured.
+
+**The face list is read from `tools/font-files.json` and never typed into the tool.** That table is where `make-fonts.mjs` writes the faces and where `check-metadata.mjs` already reads `picker\_id` to prove the markup’s options match it. A hand-kept copy would be a third list — and **narrowing the nine is an anticipated operation**, which would leave the gate sweeping a face nobody can pick while missing one they can.
+
+**The extra passes are cheap because they ask a cheaper question.** The default face gets the full walk — every text node, every client rect — which is what names a culprit and what proves the page was measured at all. The other nine ask only whether the document is wider than its box, and escalate to the full walk only when it is. **A gate ten times slower is a gate people stop running**, which is its own failure mode. 1,500 measurements in 4m11s.
+
+**`document.fonts.ready` after every switch**, because a face is fetched when a rule using it first meets rendered text — measure before that and you have measured the fallback. **And the faces go to paper**, which earned its keep on the first run by finding the two printed conditions the by-hand check had missed: a reader’s typeface is an `html` class and the print sheet does not reset it, so what they picked is what they print.
+
+**The failure advice branches, because two faults wear the same number and take opposite cures.** An unbreakable string wants a break opportunity and must *not* be fixed by shrinking the type; a display line too wide in one face has no string to break, and there the size *is* the fix. Printing the first advice under a typeface finding is how somebody ends up putting `overflow-wrap` on a masthead — which happened here, earlier the same day.
+
+**Made to fail before being believed:** withdrawing the Sporting size reports five failing passes on the home page, names the typeface in each, points at `<h1.qe-wordmark>` and the word *Earth*, and exits 1.
+
+2026 · 11 September
+
 ## The masthead had been 34px right of centre since the day it was drawn
 
 Ryan, with a screenshot: “The wider fonts available in the font selector don’t center the title.” They do not — and neither does the default one. **Nine typefaces made visible a fault that had been shipping with one.**

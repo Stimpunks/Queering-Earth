@@ -7,20 +7,6 @@ re-litigated in three weeks.
 
 ## Open
 
-### Sporting Grotesque overflows the viewport on a phone, and the width gate measures one typeface (2026-09-11)
-
-**Found while fixing the masthead centring, not reported.** With Sporting Grotesque picked in the reading settings, the home page's document is 361px wide at a 320px viewport, 388 at 375, and 770 at 768. It fits from about 1024 up. That is horizontal body scroll — the thing `CLAUDE.md` forbids outright — reached through a setting the site offers, and it fails WCAG 1.4.10 reflow at the 320px width that criterion names. **Pre-existing and confirmed at `d3ce2c7`**; centring the wordmark improved it (422 → 361 at 320) without curing it. It is the only one of the nine faces that does not fit; Sporting's display cut is simply much wider than the other eight at the same size.
-
-**The reading-settings rule that this offends is already written down**: every setting must be additive. A typeface that introduces horizontal scroll is not.
-
-**Three ways out, and the choice is Ryan's because all three change something he chose.**
-
-1. **A smaller floor for that face alone** — `html.qe-font-sporting .qe-wordmark { font-size: clamp(1.75rem, 7.4vw, 5rem) }`. Measured: the wordmark goes 42px → 28px at 320 and 375, 80px → 57px at 768, and is untouched at 1280 and for the other eight faces. Nothing else on the page moves. The cost is that one face's masthead is visibly smaller on a phone. There is precedent for recording a per-face fact rather than a preference: `sets_body` in the font manifest.
-2. **Narrow the nine to eight.** `CLAUDE.md` already describes this as an anticipated operation with a procedure — re-run `make-fonts.mjs`, edit the options on twenty pages, let `check-metadata.mjs` catch any disagreement. The cost is a face Ryan picked, and Sporting is one of the six under CUTE.
-3. **Leave it and say so on the page.** Refused as written here unless Ryan wants it: an accessibility panel that offers a setting which breaks reflow is worse than one that offers eight.
-
-**And the gate hole is the other half of this.** `check-width.mjs` sweeps four widths and two papers with the **default typeface**, so it cannot see any of the above — the same "8% of itself" blindness the contrast gate's `REVEAL` exists for. Teaching it the nine `html.qe-font-*` classes is nine times the passes and finds exactly this class of fault. **It cannot ship until Sporting is resolved**, because a gate that is allowed to fail is the advice-not-a-gate trap this repo has already paid for twice.
-
 ### The empathy study is a 2024 article with a 2023 DOI, and the accepted manuscript is not quotable (2026-09-10)
 
 The paper the proposed Sheet No. 10 rests its fairest reading of Schalk on. Ryan put the
@@ -541,6 +527,26 @@ sentences. Neither changes the manifesto's argument, which is why it survived th
 
 
 ## Settled
+
+### Sporting Grotesque is set smaller, and the width gate now sweeps all nine faces (2026-09-11)
+
+Raised as open the same afternoon and settled by Ryan within the hour: *option 1, and teach the gate the nine faces.*
+
+**The fault.** With Sporting Grotesque picked in the reading settings, the home page's document measured 361px at a 320px viewport, 388 at 375, 427 at 414 and 770 at 768, fitting only from about 1024 up. Horizontal body scroll, reached through a setting the site offers, failing the 320px reflow WCAG 1.4.10 names and the panel's own rule that every setting must be additive. Pre-existing at `d3ce2c7`. It is the only one of the nine that does not fit: Sporting's display cut is far wider than the other eight at the same size.
+
+**The size is a measurement, and the expected answer was wrong.** The obvious target was *clear the 20px gutter*, and it is not the bar, because **the default face does not clear it either** — at 320px Fraunces leaves 12.1px, since the masthead has always been allowed to encroach there. So the real bar is *no tighter than the house's own tightest*. Measured at 320: `8.4vw` leaves 5.4px, tighter than the default; `8vw` leaves 13.2px, which is not; `7.6vw` leaves 20.9px and clears the full gutter at the cost of a visibly smaller title. **`clamp(1.9rem, 8vw, 5rem)`** is the middle one. Checked from above as well — `8.8vw` still scrolls at 320 by 2px and `8.6vw` fits by 2px, a margin too thin to survive another browser's rounding. Nothing changes at 1280, and the other eight faces and the default are untouched.
+
+**It is a metric fact about the face, not a preference**, and it has the same standing as `sets_body` in the font manifest — which exists for exactly this reason: Victorianna ships Thin alone, four faces have no italic, and now one is too wide for the masthead at phone sizes.
+
+**The gate hole was the more important half.** `check-width.mjs` had rendered one of ten states on twenty-five pages and reported `PASS` throughout — the contrast gate's "8% of itself" blindness, in a second gate, three days after that lesson was written down. It sweeps every face now.
+
+- **The face list is read from `tools/font-files.json`, never typed into the gate.** That table is where `make-fonts.mjs` writes the faces and where `check-metadata.mjs` already reads `picker_id` to prove the markup's options match it. A hand-kept copy would be a third list, and **narrowing the nine is a written-down, anticipated operation** — it would leave the gate sweeping a face nobody can pick while missing one they can.
+- **The extra passes are cheap because they ask a cheaper question.** The default face gets the full walk — every text node, every client rect — which is what names a culprit and what proves the page was measured at all. The other nine ask only whether the document is wider than its box, one number, and escalate to the full walk only when it is. **A gate ten times slower is a gate people stop running**, which is its own failure mode. 1,500 measurements in 4m11s.
+- **`document.fonts.ready` after every face switch**, because a face is fetched when a rule using it first meets rendered text — a measurement taken before that is a measurement of the fallback, which is the wrong typeface and, for this gate, the wrong width.
+- **The faces go to paper too**, and that earned its keep immediately: Sporting also overflowed both sheets — 756px on Letter, 739 on A4 — which the by-hand screen check had missed entirely. A reader's typeface is an `html` class and the print sheet does not reset it, so what they picked is what they print.
+- **The failure advice branches on whether a typeface is implicated**, because two faults wear the same number and take opposite cures. An unbreakable string wants a break opportunity and must *not* be fixed by shrinking the type; a display line simply too wide in one face has no string to break, and there the size **is** the fix. Printing the first advice under a typeface finding is how somebody ends up putting `overflow-wrap` on a masthead — which this house did once, earlier the same day.
+
+**Proved by making it fail**, per the house rule: withdrawing the Sporting size reports five failing passes on `index.html`, names the typeface in each, points at `<h1.qe-wordmark>` and the word *Earth*, and exits 1; restored, it passes 25 pages × 10 faces × 6 passes.
 
 ### `text-align: center` does not centre a line wider than its box, and the masthead had been 34px off for its whole life (2026-09-11)
 

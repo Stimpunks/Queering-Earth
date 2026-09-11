@@ -1321,7 +1321,7 @@ node tools/check-metadata.mjs           # derived files current, JSON-LD agreein
 node tools/check-cache.mjs              # no markup-coupled asset outliving the markup
 node tools/check-overlap.mjs --check    # no text on text, on screen and on paper, nothing clipped
 node tools/check-card-order.mjs --check # every grid ascends, every card agrees with the plate
-node tools/check-width.mjs             # nothing scrolls sideways, on screen or on paper
+node tools/check-width.mjs             # nothing scrolls sideways, in any typeface, screen or paper
 ```
 
 **`--check` is load-bearing on the contrast gate and this file left it off until
@@ -1383,6 +1383,28 @@ box is not the same fault as scrolling the page, and the masthead does the first
 The check is a line-box diff — `Range.getClientRects().length` per text node, with the rule
 and without — read by hand. **Nothing in `tools/` gates it and nothing should**: a changed
 line count is usually the point of a typographic edit. See `DECISIONS.md`.
+
+**IT SWEEPS EVERY TYPEFACE THE PICKER OFFERS, AND THE FIRST VERSION DID NOT.** It measured
+the default face on 25 pages and reported `PASS` while Sporting Grotesque scrolled the home
+page at 320, 375, 414, 768 **and on both papers** — a fault reached through a setting the site
+offers, invisible because the gate rendered one of ten states. Same blindness as the contrast
+gate's, in a second gate. **The face list is read from `tools/font-files.json`**, never typed
+into the tool: that is where `make-fonts.mjs` writes the faces and where `check-metadata.mjs`
+already reads `picker_id`, and narrowing the nine is a written-down operation that would
+otherwise leave the gate sweeping a face nobody can pick. **The default face gets the full
+walk and the other nine ask one number**, escalating only on a finding — a gate ten times
+slower is a gate people stop running. **`document.fonts.ready` after every switch**, or you
+measure the fallback. **A reader's typeface reaches paper**, because it is an `html` class and
+the print sheet does not reset it.
+
+**TWO FAULTS WEAR THE SAME NUMBER AND TAKE OPPOSITE CURES**, which is why the gate's advice
+branches. An unbreakable string wants a break opportunity and **must not** be fixed by
+shrinking the type. A display line simply too wide in one of the picker's faces has no string
+to break, and there **the size is the cure** — an `html.qe-font-<id>` font-size, recorded as a
+metric fact about that face the way `sets_body` is. Sporting is `clamp(1.9rem, 8vw, 5rem)`,
+and **the number came from a measurement whose expected answer was wrong**: the target was not
+"clear the 20px gutter", because the default face does not clear it either — at 320px Fraunces
+leaves 12.1px. The bar is *no tighter than the house's own tightest*.
 
 Star Stuff has three more (`check-classes`, `check-sheets`, `check-embeds`).
 **Port one when the failure it catches becomes possible here** — not before. A check that
