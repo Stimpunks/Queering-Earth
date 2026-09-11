@@ -67,7 +67,15 @@ WIDE = {"waterhouse-1916-miranda-the-tempest",
         # A normal plate is exactly 368 and 736, which is why that ladder is right
         # for a 368px box and short for this one.
         "holiday-1876-snark-ocean-chart-macmillan-1931",
-        "holiday-1876-snark-barristers-dream-macmillan-1931"}
+        "holiday-1876-snark-barristers-dream-macmillan-1931",
+        # Both Bewick cuts are wide, for the Barrister's-Dream reason exactly: a wood
+        # engraving IS its hatching, and hatching is the first thing a short ladder
+        # loses. The hedgehog is nothing but fine parallel strokes — 1650px of them
+        # reduced to a 368px box turns the spines into grey. Landscape, too: at 368
+        # the fox in his undergrowth is 232px tall and the animal stops being findable
+        # inside his own thicket.
+        "hedgehog-bewick-general-history-of-quadrupeds-1792",
+        "cur-fox-bewick-general-history-of-quadrupeds-1792"}
 LADDER_NORMAL = (368, 736)
 LADDER_WIDE = (544, 1088)
 

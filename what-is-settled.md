@@ -288,6 +288,22 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
+### A blown-up tray mark is not a masthead, and two passes proved it (2026-09-10)
+
+Ryan asked for "a large version of the fox and hedgehog icon as the header art". Drawn twice, rendered at 368, 544 and 900px in both grounds, and **refused both times.**
+
+**Pass one: the mark drawn up with colour fills and features** — rust pelt, marigold dome, ink stroke, plus an eye, an inner ear, a white throat bib and blocked feet. It reads as children's-book clip-art. Two reasons, and the second is the one that generalises: the flat colour masses fight the house register, which `CLAUDE.md` states as *dark ink line art* on vellum; and it would sit four inches above two Bewick wood engravings, whose fine black hatching makes a flat rust blob look like a sticker.
+
+**Pass two: the mark at scale, one ink colour, no features.** Better, and the cabinet inversion is correct — but at 900px the construction shows. The mark is built from overlapping filled shapes with 20px tolerances: enlarged, the neck reads as a facet, the two ears as horns with a notch between them, the nose as a ball stuck on the muzzle, and the legs and feet as six rectangles. The hedgehog's thirty spines, right at 40px, become a cog.
+
+**The general lesson is `favicon.svg`'s, running the other way.** That rule says a favicon is judged at 16px because two earlier marks looked good large and died small. **The converse holds and is less obvious: a mark drawn to survive 20px carries 20px tolerances, and enlarging it enlarges them.** A masthead is a different drawing, not the same drawing bigger.
+
+**And the house masthead register is delicate, which two solid animals cannot be.** Every other masthead here is thin moss stems, small lichen leaves, a small moth — sparse line. Two filled quadrupeds are the wrong *weight* for that page position regardless of how well they are drawn, which is why this is not a matter of another iteration on the same approach.
+
+**Settled for now: the page carries no drawn masthead, and the two Bewick plates carry the animals instead** — which is what a mounted specimen is for, and they are better at it than anything drawn here would be. **Open:** whether a masthead in outline — single closed contours, thin ink stroke, no fills, animals drawn as line rather than as mass — would sit in the house register. That is a real drawing job and worth doing deliberately, not in the tail of an accession. The tray mark stays exactly as it is; nothing above changes it.
+
+---
+
 ### An easter egg may hide the door and may never hide the room (2026-09-10)
 
 Ryan asked for a fox-and-hedgehog mark in the top bar, "as a bit of visual whimsy and as an easter egg linking to the *Two Cohabitating Modes* page". `CLAUDE.md` forbids a hover-gated section mark on the grounds that hover hands a feature to mice and to nobody else, so an unlabelled control needed a reason it is not the same fault.

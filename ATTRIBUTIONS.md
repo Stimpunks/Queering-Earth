@@ -2942,6 +2942,57 @@ them.
 
 ----
 
+### Thomas Bewick, two wood engravings and two sentences, 1792
+
+**Mounted on:** [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes) —
+`.qe-plate-wide` in the hedgehog section and in the fox section, each with a `.qe-specimen`
+quoting the article it heads.
+
+Thomas Bewick (1753–1828), wood engravings, in *A General History of Quadrupeds* (Newcastle
+upon Tyne: printed by and for S. Hodgson, R. Beilby & T. Bewick, 1792) — **the hedgehog on
+page 448** and **the Cur Fox on page 280**. Public domain: the work is 1792, and a faithful
+photographic reproduction of a two-dimensional public-domain work attracts no new copyright.
+
+**Scanned by Smithsonian Libraries for the Biodiversity Heritage Library**, Internet Archive
+item [`generalhistory00bewi`](https://archive.org/details/generalhistory00bewi), 504 images.
+The Archive record carries no rights statement and no licence URL; the age of the work is what
+settles it. **Read, cropped and re-encoded here on 2026-09-10** — `tools/make-plates.py`, the
+wide ladder, the filename carrying the provenance.
+
+**The quotations, verified off the page images rather than the scan's text layer:**
+
+> DESTITUTE of every other means of defence, is provided by Nature with a spinous armour, which
+> secures it from the attacks of all the smaller beasts of prey; such as Weasels, Martins,
+> Polecats, &c.—When alarmed, it immediately collects itself into the form of a ball, and
+> presents on all sides a surface covered with sharp points, which few animals are hardy enough
+> to engage. The more it is harrassed, the closer it rolls itself;
+
+> is the least, but the most common; and approaches nearest to the habitations of mankind. It
+> lurks about the out-houses of the farmer, and carries off all the poultry within its reach.
+
+**Two transcription decisions, both stated in the captions.** The **long s** of the 1792 setting
+is transcribed as `s` — the page reads "fpinous", "fecures", "beafts", "leaft", "moft" — which is
+a letterform and not a different letter. And **"harrassed" is the printing's own spelling** and is
+kept, on the same footing as King's "runts".
+
+**THE HEADING IS THE SUBJECT OF THE SENTENCE, AND THAT IS WHY BOTH QUOTATIONS BEGIN
+MID-GRAMMAR.** Bewick sets the engraving, then the article's name, then a drop capital running
+straight on: *The Hedge-hog, or Urchin,* / "is provided by Nature with a spinous armour". Quoting
+from the drop capital gives a sentence with no subject, so the captions say where the subject is
+rather than silently supplying one in brackets.
+
+**The Greyhound Fox cut on page 279 was looked at and passed over**, because it shows a fox with
+a kill — and a predation scene is the one thing the drawings on this page must not say, for the
+reason the tray mark's two animals face the same way.
+
+**One thing the caption has to say because the book is wrong about it.** Bewick gives "three
+varieties of Foxes in this island" — Greyhound, Mastiff and Cur — and they are not three
+species. All are *Vulpes vulpes*; the division is an eighteenth-century sorting by size and
+build. Mounting "The Cur Fox" without saying so would let a reader take a retired taxonomy for
+a live one, on the authority of our page rather than his.
+
+----
+
 ## Open
 
 ### Who wrote the crooked tree — Waits, the screenplay, or Keret

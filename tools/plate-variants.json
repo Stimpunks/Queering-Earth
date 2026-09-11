@@ -84,6 +84,23 @@
       736
     ]
   },
+  "cur-fox-bewick-general-history-of-quadrupeds-1792.jpg": {
+    "native": [
+      1740,
+      1100
+    ],
+    "sha256": "b2a1c52130922a1b9fcd21812cb637b7462081c56881161d9f2e48550ed9e687",
+    "variants": [
+      "cur-fox-bewick-general-history-of-quadrupeds-1792-544.avif",
+      "cur-fox-bewick-general-history-of-quadrupeds-1792-544.webp",
+      "cur-fox-bewick-general-history-of-quadrupeds-1792-1088.avif",
+      "cur-fox-bewick-general-history-of-quadrupeds-1792-1088.webp"
+    ],
+    "widths": [
+      544,
+      1088
+    ]
+  },
   "dickinson-1861-wild-nights-houghton-ms-am-1118-3-38b.jpg": {
     "native": [
       1400,
@@ -133,6 +150,23 @@
     "widths": [
       368,
       678
+    ]
+  },
+  "hedgehog-bewick-general-history-of-quadrupeds-1792.jpg": {
+    "native": [
+      1650,
+      800
+    ],
+    "sha256": "cdffe381912a2cccdd45655aea80193ef6d8a065ebfc70e1b2151d35f79c3813",
+    "variants": [
+      "hedgehog-bewick-general-history-of-quadrupeds-1792-544.avif",
+      "hedgehog-bewick-general-history-of-quadrupeds-1792-544.webp",
+      "hedgehog-bewick-general-history-of-quadrupeds-1792-1088.avif",
+      "hedgehog-bewick-general-history-of-quadrupeds-1792-1088.webp"
+    ],
+    "widths": [
+      544,
+      1088
     ]
   },
   "holiday-1876-snark-barristers-dream-macmillan-1931.jpg": {

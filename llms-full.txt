@@ -2615,6 +2615,18 @@ Edith King, *The Hedgehog*, in [*Fifty New Poems for Children: An Anthology*](ht
 
 The poem says “runts”, and we went to the plate to be sure A snout that “smells, like us, of course, **But also runts and digs**” is nearly certainly a compositor’s slip for *roots* — rooting is what a pig’s snout does, it is the rhyme the stanza is built on, and *runts* is not a verb. **The 1922 edition prints “runts” all the same**, which we established by magnifying the letterforms rather than trusting the scan’s own text layer: the “u” is open-topped and unmistakable against the closed “o” of “also” two words earlier. So it stands. **The obvious correction is somebody else’s decision to make, and making it quietly would leave King saying a word she did not print.** Every web transcription we found also carries “runts”, and all of them additionally put full stops where the 1922 setting has commas — four line-ends in the first three stanzas. The commas are hers.
 
+![A wood engraving of a hedgehog in profile facing right, standing on a low hummock of ground. Its whole back and flanks are a dense mass of fine engraved spines; the snout, the small ear and the clawed feet are clear of them. Tufts of leaves rise at either end of the hummock, and the ground beneath is cut in close parallel lines.](images/hedgehog-bewick-general-history-of-quadrupeds-1792.jpg)
+
+Thomas Bewick, wood engraving, in [*A General History of Quadrupeds*](https://archive.org/details/generalhistory00bewi) (Newcastle upon Tyne: printed by and for S. Hodgson, R. Beilby & T. Bewick, 1792), page 448. Public domain. **The engraving sits directly above the article, and the article’s heading is the subject of its first sentence** — the page reads *The Hedge-hog, or Urchin,* and then “is provided by Nature with a spinous armour”. Read off the Smithsonian Libraries scan 10 September 2026.
+
+Specimen — a naturalist, 1792, on the same animal
+
+> DESTITUTE of every other means of defence, is provided by Nature with a spinous armour, which secures it from the attacks of all the smaller beasts of prey; such as Weasels, Martins, Polecats, &c.—When alarmed, it immediately collects itself into the form of a ball, and presents on all sides a surface covered with sharp points, which few animals are hardy enough to engage. The more it is harrassed, the closer it rolls itself;
+
+Bewick, *A General History of Quadrupeds*, page 448, the opening of the article. Public domain. **The long *s* of the 1792 setting is transcribed as *s*** — “fpinous”, “fecures”, “beafts” on the page — and “harrassed” is the printing’s own spelling. Nothing is elided: the passage runs from the drop capital to that semicolon.
+
+**Destitute of every other means of defence.** A naturalist with no interest in metaphor wrote down the same thing King’s poem does and Liv’s post does: the coat is not one option among several. It is the only one, and it is not chosen. *The more it is harrassed, the closer it rolls itself* — which is [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) and [masking](https://stimpunks.org/burnout/) observed from the outside, in 1792, by somebody watching an animal in a hedge.
+
 Take the poem at its word and it is a description of a bodymind, not a temperament. **The hedgehog does not choose to be armoured and does not deploy the armour tactically.** He *only has to curl himself*; the coat *does all the work for him*. He does not battle and he does not flee, which are the two things a threatened animal is supposed to pick between — he has a third option that costs him nothing to use and everything to be. And the wood is quiet because that is the wood in which the food is proper.
 
 ## The fox, entire
@@ -2644,6 +2656,18 @@ Specimen — the rhyme, entire
 Anonymous, rhyme CXXXIII, collected in James Orchard Halliwell, *The Nursery Rhymes of England*, fifth edition (London and New York: Frederick Warne and Co., 1886), pages 84–86. Public domain. The same rhyme is in Halliwell’s 1843 edition, so it was already in the collection forty years earlier. **Text from the [Project Gutenberg transcription](https://www.gutenberg.org/files/32415/32415-h/32415-h.htm) of that fifth edition, checked line by line against the text layers of two separate scanned copies of it** — 10 September 2026. The indent on each refrain is the 1886 setting’s; the spaces the compositor set before every exclamation mark are not, and are closed up here. **Thirteen of these thirty-seven lines are too long for the measure here and wrap, which the hanging indent is there to make unmistakable — and six of them were too long for Halliwell’s measure too.** His compositor broke “and all things / bright;”, “hopped out of / bed,”, “the gray goose / is dead,”, “and gave him / the slip,”, “you may go / again,” — and “She opened the casement, and popped out / her head;”, which is the longest line in the poem and the one that overruns furthest here. It is also sung, as *The Fox* or *Daddy Fox*, in variants that reach much further back than this printing.
 
 **Everything the fox has is a method.** He listens at the stile before committing; he estimates the distance; he flatters the drake and then the goose, in the same breath as pricing them; he is *too cunning* for the trap. He crosses a stile, a farmyard, a hay-stack, a bedroom window and a hill in nine stanzas, and the refrain that ends each of them is *the town* — the place that is not his, gone through and got out of. Nothing about him *does all the work for him*. He has to go every time.
+
+![A wood engraving of a fox in profile facing left, creeping low through rough undergrowth with its brush held out straight behind it. A dense canopy of engraved foliage fills the upper half; a fallen log lies at the left, and beyond the fox on the right the ground opens into a distant landscape of hedges and a single tree. The engraver’s initial is cut into the dark foliage above the fox’s back.](images/cur-fox-bewick-general-history-of-quadrupeds-1792.jpg)
+
+Thomas Bewick, wood engraving, in [*A General History of Quadrupeds*](https://archive.org/details/generalhistory00bewi) (Newcastle upon Tyne: printed by and for S. Hodgson, R. Beilby & T. Bewick, 1792), page 280. Public domain. **Bewick gives three varieties of British fox — the Greyhound, the Mastiff and the Cur — and this is the Cur Fox.** They are not three species: all of them are *Vulpes vulpes*, and the division is an eighteenth-century sorting by size and build that no one keeps. **The Greyhound Fox cut on page 279 was passed over on purpose**, because it shows a fox with a kill, and a predation scene is the one thing the drawings on this page must not say. Read off the Smithsonian Libraries scan 10 September 2026.
+
+Specimen — the same naturalist, on the fox above
+
+> is the least, but the most common; and approaches nearest to the habitations of mankind. It lurks about the out-houses of the farmer, and carries off all the poultry within its reach.
+
+Bewick, *A General History of Quadrupeds*, page 280, the opening of *The Cur Fox* — whose heading, again, is the subject of the sentence. Public domain. Long *s* transcribed as *s*.
+
+**That is the rhyme, in prose, ninety-four years before Halliwell printed it.** The out-houses of the farmer are the farmer’s gate; all the poultry within its reach is the drake and the gray goose. Neither text is quoting the other — a naturalist in Newcastle and an anonymous nursery rhyme arrive at the same fox because it is the fox that was there, going through the town.
 
 ## Both of them are feeding a family
 
@@ -3174,6 +3198,30 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Cabinet
 
 2026 · 10 September · latest
+
+## Two Bewick cuts from 1792, and a masthead refused twice
+
+Ryan asked for two things: the fox-and-hedgehog mark blown up as header art for [the new sheet](https://queering.earth/two-cohabitating-modes), and whether there is public-domain art suitable to it. The answer to the second turned out to be much better than the first, and the first was drawn twice and refused.
+
+MountedThomas Bewick engraved both animals for one 1792 volume, and his prose is as good as his cuts
+
+*A General History of Quadrupeds* (Newcastle upon Tyne, 1792) has **the hedgehog on page 448 and the Cur Fox on page 280** — two wood engravings, one book, which is the same shape as the sheet’s two poems from two books. Mounted as `.qe-plate-wide` figures from the Smithsonian Libraries scan, re-encoded by `tools/make-plates.py`. **Bewick’s 1792 paper is within a few values of `--qe-paper`**, so the plates read as though they were always on this sheet.
+
+**The text was the find.** Bewick’s hedgehog article opens “DESTITUTE of every other means of defence, is provided by Nature with a spinous armour”, and four sentences later: “The more it is harrassed, the closer it rolls itself.” That is [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) and masking, written down in 1792 by somebody watching an animal in a hedge, and it is the sheet’s own argument about King’s “His coat does all the work for him” arriving from a third direction. **And the Cur Fox article is the Halliwell rhyme in prose** — “It lurks about the out-houses of the farmer, and carries off all the poultry within its reach” — ninety-four years before that printing, with neither text quoting the other.
+
+Three things the captions have to say. **The article’s heading is the subject of its first sentence**, so both quotations begin mid-grammar and the captions say where the subject is rather than supplying one in brackets. **The long *s* is transcribed as *s*** — a letterform, not a letter — while “harrassed” is the printing’s spelling and stays, on the same footing as King’s “runts”. And **Bewick’s three “varieties of Foxes in this island” are not three species**: all are *Vulpes vulpes*, and mounting *The Cur Fox* without saying so would lend a retired taxonomy our authority rather than his.
+
+**The Greyhound Fox cut on page 279 was looked at and passed over**, because it shows a fox with a kill. A predation scene is the one thing the drawings on this page must not say — the same reason the tray mark’s two animals face the same way.
+
+CabinetA blown-up tray mark is not a masthead, and that is `favicon.svg`’s rule running the other way
+
+Drawn twice, rendered at 368, 544 and 900px in both grounds, refused twice. **Pass one** gave the mark colour fills and features — rust pelt, marigold dome, an eye, an inner ear, a white bib, blocked feet — and read as children’s-book clip-art, fighting the house register of ink line on vellum and sitting four inches above two wood engravings whose hatching makes a flat rust mass look like a sticker. **Pass two** stripped it to one ink colour and no features; the cabinet inversion came out right, and at 900px the construction showed: the neck a facet, the two ears horns with a notch, the nose a ball, the legs and feet six rectangles, and thirty spines that are a coat at 40px turning into a cog.
+
+**The rule is the favicon rule inverted.** That one says a mark is judged at 16px because two earlier marks looked good large and died small. The converse is less obvious and cost two passes here: **a mark drawn to survive 20px carries 20px tolerances, and enlarging it enlarges them.** A masthead is a different drawing, not the same drawing bigger.
+
+**And the position has a weight.** Every other masthead here is thin moss stems, small lichen leaves, a small moth — sparse line. Two filled quadrupeds are the wrong weight for that slot however well drawn, which is why another iteration on the same approach was not the answer. The sheet carries no drawn masthead; the Bewick plates carry the animals, which is what a mounted specimen is for. Whether an outline masthead — single closed contours, thin ink stroke, animals as line rather than as mass — would sit in the register is left open in [the decision log](https://queering.earth/what-is-settled). **The tray mark is unchanged.**
+
+2026 · 10 September
 
 ## A third founding paper, on the fox and the hedgehog, and an unlabelled door in the top bar
 
@@ -5284,7 +5332,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-186 entries across 46 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+188 entries across 47 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -6881,6 +6929,30 @@ The bold is the page's own and is reproduced.
 
 ---
 
+### Thomas Bewick, two wood engravings and two sentences, 1792
+
+**Mounted on:** [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes) — `.qe-plate-wide` in the hedgehog section and in the fox section, each with a `.qe-specimen` quoting the article it heads.
+
+Thomas Bewick (1753–1828), wood engravings, in *A General History of Quadrupeds* (Newcastle upon Tyne: printed by and for S. Hodgson, R. Beilby & T. Bewick, 1792) — **the hedgehog on page 448** and **the Cur Fox on page 280**. Public domain: the work is 1792, and a faithful photographic reproduction of a two-dimensional public-domain work attracts no new copyright.
+
+**Scanned by Smithsonian Libraries for the Biodiversity Heritage Library**, Internet Archive item [`generalhistory00bewi`](https://archive.org/details/generalhistory00bewi), 504 images. The Archive record carries no rights statement and no licence URL; the age of the work is what settles it. **Read, cropped and re-encoded here on 2026-09-10** — `tools/make-plates.py`, the wide ladder, the filename carrying the provenance.
+
+**The quotations, verified off the page images rather than the scan's text layer:**
+
+> DESTITUTE of every other means of defence, is provided by Nature with a spinous armour, which secures it from the attacks of all the smaller beasts of prey; such as Weasels, Martins, Polecats, &c.—When alarmed, it immediately collects itself into the form of a ball, and presents on all sides a surface covered with sharp points, which few animals are hardy enough to engage. The more it is harrassed, the closer it rolls itself;
+
+> is the least, but the most common; and approaches nearest to the habitations of mankind. It lurks about the out-houses of the farmer, and carries off all the poultry within its reach.
+
+**Two transcription decisions, both stated in the captions.** The **long s** of the 1792 setting is transcribed as `s` — the page reads "fpinous", "fecures", "beafts", "leaft", "moft" — which is a letterform and not a different letter. And **"harrassed" is the printing's own spelling** and is kept, on the same footing as King's "runts".
+
+**THE HEADING IS THE SUBJECT OF THE SENTENCE, AND THAT IS WHY BOTH QUOTATIONS BEGIN MID-GRAMMAR.** Bewick sets the engraving, then the article's name, then a drop capital running straight on: *The Hedge-hog, or Urchin,* / "is provided by Nature with a spinous armour". Quoting from the drop capital gives a sentence with no subject, so the captions say where the subject is rather than silently supplying one in brackets.
+
+**The Greyhound Fox cut on page 279 was looked at and passed over**, because it shows a fox with a kill — and a predation scene is the one thing the drawings on this page must not say, for the reason the tray mark's two animals face the same way.
+
+**One thing the caption has to say because the book is wrong about it.** Bewick gives "three varieties of Foxes in this island" — Greyhound, Mastiff and Cur — and they are not three species. All are *Vulpes vulpes*; the division is an eighteenth-century sorting by size and build. Mounting "The Cur Fox" without saying so would let a reader take a retired taxonomy for a live one, on the authority of our page rather than his.
+
+---
+
 ## Open
 
 ### Who wrote the crooked tree — Waits, the screenplay, or Keret
@@ -7209,6 +7281,22 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### A blown-up tray mark is not a masthead, and two passes proved it (2026-09-10)
+
+Ryan asked for "a large version of the fox and hedgehog icon as the header art". Drawn twice, rendered at 368, 544 and 900px in both grounds, and **refused both times.**
+
+**Pass one: the mark drawn up with colour fills and features** — rust pelt, marigold dome, ink stroke, plus an eye, an inner ear, a white throat bib and blocked feet. It reads as children's-book clip-art. Two reasons, and the second is the one that generalises: the flat colour masses fight the house register, which `CLAUDE.md` states as *dark ink line art* on vellum; and it would sit four inches above two Bewick wood engravings, whose fine black hatching makes a flat rust blob look like a sticker.
+
+**Pass two: the mark at scale, one ink colour, no features.** Better, and the cabinet inversion is correct — but at 900px the construction shows. The mark is built from overlapping filled shapes with 20px tolerances: enlarged, the neck reads as a facet, the two ears as horns with a notch between them, the nose as a ball stuck on the muzzle, and the legs and feet as six rectangles. The hedgehog's thirty spines, right at 40px, become a cog.
+
+**The general lesson is `favicon.svg`'s, running the other way.** That rule says a favicon is judged at 16px because two earlier marks looked good large and died small. **The converse holds and is less obvious: a mark drawn to survive 20px carries 20px tolerances, and enlarging it enlarges them.** A masthead is a different drawing, not the same drawing bigger.
+
+**And the house masthead register is delicate, which two solid animals cannot be.** Every other masthead here is thin moss stems, small lichen leaves, a small moth — sparse line. Two filled quadrupeds are the wrong *weight* for that page position regardless of how well they are drawn, which is why this is not a matter of another iteration on the same approach.
+
+**Settled for now: the page carries no drawn masthead, and the two Bewick plates carry the animals instead** — which is what a mounted specimen is for, and they are better at it than anything drawn here would be. **Open:** whether a masthead in outline — single closed contours, thin ink stroke, no fills, animals drawn as line rather than as mass — would sit in the house register. That is a real drawing job and worth doing deliberately, not in the tail of an accession. The tray mark stays exactly as it is; nothing above changes it.
+
+---
 
 ### An easter egg may hide the door and may never hide the room (2026-09-10)
 

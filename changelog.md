@@ -36,6 +36,30 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 10 September · latest
 
+## Two Bewick cuts from 1792, and a masthead refused twice
+
+Ryan asked for two things: the fox-and-hedgehog mark blown up as header art for [the new sheet](https://queering.earth/two-cohabitating-modes), and whether there is public-domain art suitable to it. The answer to the second turned out to be much better than the first, and the first was drawn twice and refused.
+
+MountedThomas Bewick engraved both animals for one 1792 volume, and his prose is as good as his cuts
+
+*A General History of Quadrupeds* (Newcastle upon Tyne, 1792) has **the hedgehog on page 448 and the Cur Fox on page 280** — two wood engravings, one book, which is the same shape as the sheet’s two poems from two books. Mounted as `.qe-plate-wide` figures from the Smithsonian Libraries scan, re-encoded by `tools/make-plates.py`. **Bewick’s 1792 paper is within a few values of `--qe-paper`**, so the plates read as though they were always on this sheet.
+
+**The text was the find.** Bewick’s hedgehog article opens “DESTITUTE of every other means of defence, is provided by Nature with a spinous armour”, and four sentences later: “The more it is harrassed, the closer it rolls itself.” That is [exposure anxiety](https://stimpunks.org/glossary/exposure-anxiety/) and masking, written down in 1792 by somebody watching an animal in a hedge, and it is the sheet’s own argument about King’s “His coat does all the work for him” arriving from a third direction. **And the Cur Fox article is the Halliwell rhyme in prose** — “It lurks about the out-houses of the farmer, and carries off all the poultry within its reach” — ninety-four years before that printing, with neither text quoting the other.
+
+Three things the captions have to say. **The article’s heading is the subject of its first sentence**, so both quotations begin mid-grammar and the captions say where the subject is rather than supplying one in brackets. **The long *s* is transcribed as *s*** — a letterform, not a letter — while “harrassed” is the printing’s spelling and stays, on the same footing as King’s “runts”. And **Bewick’s three “varieties of Foxes in this island” are not three species**: all are *Vulpes vulpes*, and mounting *The Cur Fox* without saying so would lend a retired taxonomy our authority rather than his.
+
+**The Greyhound Fox cut on page 279 was looked at and passed over**, because it shows a fox with a kill. A predation scene is the one thing the drawings on this page must not say — the same reason the tray mark’s two animals face the same way.
+
+CabinetA blown-up tray mark is not a masthead, and that is `favicon.svg`’s rule running the other way
+
+Drawn twice, rendered at 368, 544 and 900px in both grounds, refused twice. **Pass one** gave the mark colour fills and features — rust pelt, marigold dome, an eye, an inner ear, a white bib, blocked feet — and read as children’s-book clip-art, fighting the house register of ink line on vellum and sitting four inches above two wood engravings whose hatching makes a flat rust mass look like a sticker. **Pass two** stripped it to one ink colour and no features; the cabinet inversion came out right, and at 900px the construction showed: the neck a facet, the two ears horns with a notch, the nose a ball, the legs and feet six rectangles, and thirty spines that are a coat at 40px turning into a cog.
+
+**The rule is the favicon rule inverted.** That one says a mark is judged at 16px because two earlier marks looked good large and died small. The converse is less obvious and cost two passes here: **a mark drawn to survive 20px carries 20px tolerances, and enlarging it enlarges them.** A masthead is a different drawing, not the same drawing bigger.
+
+**And the position has a weight.** Every other masthead here is thin moss stems, small lichen leaves, a small moth — sparse line. Two filled quadrupeds are the wrong weight for that slot however well drawn, which is why another iteration on the same approach was not the answer. The sheet carries no drawn masthead; the Bewick plates carry the animals, which is what a mounted specimen is for. Whether an outline masthead — single closed contours, thin ink stroke, animals as line rather than as mass — would sit in the register is left open in [the decision log](https://queering.earth/what-is-settled). **The tray mark is unchanged.**
+
+2026 · 10 September
+
 ## A third founding paper, on the fox and the hedgehog, and an unlabelled door in the top bar
 
 Ryan’s, and he supplied most of the sourcing: Edith King’s hedgehog poem, Liv’s *Life as a hedgehog*, the Vanhuysse review, the two Sagans, and the Stimpunks research page. He asked for a complement to [Star Stuff’s *Who Is Holding the Candle*](https://starstuff.earth/who-is-holding-the-candle), for the hedgehog poem in full, for a suitable fox poem to be found, and for a fox-and-hedgehog mark in the top bar as whimsy and as an easter egg. Four things surfaced in the sourcing before a word of the sheet was written, and none of them were ours.
