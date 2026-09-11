@@ -232,7 +232,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
   - [The fox, entire](https://queering.earth/two-cohabitating-modes#the-fox)
   - [Both of them are feeding a family](https://queering.earth/two-cohabitating-modes#the-family)
   - [The coat, and the curl](https://queering.earth/two-cohabitating-modes#the-coat)
-  - [Monotropy is not a personality, and the pairing is newer than it looks](https://queering.earth/two-cohabitating-modes#monotropy)
+  - [Monotropism is not a personality, and the pairing is newer than it looks](https://queering.earth/two-cohabitating-modes#monotropism)
   - [A ranking of six against six](https://queering.earth/two-cohabitating-modes#the-network)
   - [Why uneasily is the word to keep](https://queering.earth/two-cohabitating-modes#uneasily)
 
@@ -282,7 +282,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-205 entries across 53 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+206 entries across 54 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

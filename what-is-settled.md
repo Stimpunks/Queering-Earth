@@ -273,6 +273,25 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
+### Monotropism, never monotropy — they are different people's words (2026-09-11)
+
+Ryan, on the masthead section of `/two-cohabitating-modes`: *the word "Monotropy" is associated with Bowlby's attachment theory, which we do not endorse. Let's avoid using monotropy.*
+
+**Two words one syllable apart, from two unrelated literatures.**
+
+- **Monotropism** is ours to use. Coined by **Dinah Murray** with her neighbour **Jeanette Buirski**, set out in Murray, Lesser and Lawson (2005), and it describes **attention** — how it pools into few interests at a time. It is the subject of Sheet No. 8.
+- **Monotropy** is **John Bowlby's**, from attachment theory: the claim that an infant has an innate drive to attach to *one* primary figure, **usually the mother**, whose bond is qualitatively different from and ranked above every other, with father, siblings and grandparents below her. That hierarchy is the part this house does not endorse, and it is the root of the maternal-deprivation arguments built on it.
+
+**So the near-homonym does real damage in one letter.** Writing *monotropy* for a theory of attention hands the reader a framework about mothers, ranked caregivers and innate deficiency — on a page whose whole argument is that two modes are equal and neither is a grade. It would import the exact thing the page is written against.
+
+**The rule: this site writes monotropism and polytropism, and never monotropy or polytropy.** The words are not interchangeable and the shorter one is not a shorter form of the longer.
+
+**Sheet No. 8 had it right and the new sheet did not**, which is the useful detail: `/monotropa-uniflora` uses *monotropism* thirteen times and *monotropy* never, because it was written with the 2005 paper open. `/two-cohabitating-modes` got the term right in its prose and wrong in the heading above it, the id under that heading, two drawing comments, the stylesheet and two of the cabinet's own records — **a correct body under an incorrect label**, which is this site's characteristic failure appearing in its own house rather than in a source.
+
+**`#monotropy` became `#monotropism`, and that is a published address changed.** The sheet was one day old and the only things pointing at it were the finding aid's generated manifest and its own contents list, both derived. Worth noting rather than doing silently: an authored id is meant to be permanent, and the reason to break one has to be better than tidiness. Carrying a repudiated term in a URL is better than tidiness.
+
+---
+
 ### A ninth gate, because three pages scrolled sideways past eight of them (2026-09-11)
 
 Ryan found it by hand on `/changelog`: a 414px document at a 375px viewport, pushed out by one inline `code` span holding `performance.getEntriesByType('resource')`. He asked whether the failure being invisible to every existing gate justified a small guard, and asked for the reasoning either way. **It does, and the argument is not that the fault was bad — it is that the fault recurs by construction.**
@@ -401,7 +420,7 @@ Two overlay panels in one tray **can both be open with JavaScript off**: a `deta
 
 ### Two attention shapes, and the width a masthead is actually reviewed at (2026-09-11)
 
-Ryan's call after the blown-up tray mark was refused twice: something else for the header. The page already carries a fox and a hedgehog twice over in Bewick's 1792 engravings, so **the masthead carries the argument rather than the animals** — one unbranched stem with a single five-petalled flower against a low stem branching into a broad head of many small florets. Monotropy against polytropy, and *Monotropa uniflora* means one turn, one flower, which is Sheet No. 8's whole subject. It sits in the register this site does not get wrong, and it cannot restage the predation problem, because plants do not eat each other.
+Ryan's call after the blown-up tray mark was refused twice: something else for the header. The page already carries a fox and a hedgehog twice over in Bewick's 1792 engravings, so **the masthead carries the argument rather than the animals** — one unbranched stem with a single five-petalled flower against a low stem branching into a broad head of many small florets. Monotropism against polytropism, and *Monotropa uniflora* means one turn, one flower, which is Sheet No. 8's whole subject. It sits in the register this site does not get wrong, and it cannot restage the predation problem, because plants do not eat each other.
 
 **THE INVARIANT IS EQUAL FLOWER AREA AND IT IS COMPUTED.** The claim the drawing makes is *different distribution, equal mass*; two areas that were merely near would rank the two modes by accident, which is a gold join on an uncorrected sheet in the most prominent place on the sheet. The rosette is a five-lobed polar rose whose area is exact — πR²(a² + b²/2) = 826.24 — and the floret radius is solved back out of it: 29 × π × 3.011² = 826.24, residual 1.1e-13.
 

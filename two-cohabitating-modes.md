@@ -196,7 +196,7 @@ And the curl is its own subject. **He *only has to curl himself* to bristle like
 
 **Which is why the spikes are ours and the ranking is not.** Hedgehogs carry punk, Disabled and neurodivergent associations that have nothing to do with Archilochus, and those are the associations this cabinet means: the spikiness of a person, the spikiness of a [population](https://stimpunks.org/glossary/diversity/), and the fact that we form better [competency networks](https://stimpunks.org/glossary/competency-network/) when we build them in a way that respects the spikes rather than averaging them away.
 
-## Monotropy is not a personality, and the pairing is newer than it looks
+## Monotropism is not a personality, and the pairing is newer than it looks
 
 The hedgehog’s one big thing and the fox’s many things have been mapped, in neurodivergent writing and talking, onto **monotropism** and polytropism — attention that pools deeply into few interests at a time, against attention spread thinly across many. Monotropism was coined by **Dinah Murray** with her neighbour **Jeanette Buirski**, and set out in Murray, Lesser and Lawson (2005). [Sheet No. 8](https://queering.earth/monotropa-uniflora) is this cabinet’s reading of it, through a plant that lives the way the theory describes.
 

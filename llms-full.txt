@@ -3023,7 +3023,7 @@ And the curl is its own subject. **He *only has to curl himself* to bristle like
 
 **Which is why the spikes are ours and the ranking is not.** Hedgehogs carry punk, Disabled and neurodivergent associations that have nothing to do with Archilochus, and those are the associations this cabinet means: the spikiness of a person, the spikiness of a [population](https://stimpunks.org/glossary/diversity/), and the fact that we form better [competency networks](https://stimpunks.org/glossary/competency-network/) when we build them in a way that respects the spikes rather than averaging them away.
 
-## Monotropy is not a personality, and the pairing is newer than it looks
+## Monotropism is not a personality, and the pairing is newer than it looks
 
 The hedgehog’s one big thing and the fox’s many things have been mapped, in neurodivergent writing and talking, onto **monotropism** and polytropism — attention that pools deeply into few interests at a time, against attention spread thinly across many. Monotropism was coined by **Dinah Murray** with her neighbour **Jeanette Buirski**, and set out in Murray, Lesser and Lawson (2005). [Sheet No. 8](https://queering.earth/monotropa-uniflora) is this cabinet’s reading of it, through a plant that lives the way the theory describes.
 
@@ -3591,6 +3591,22 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 11 September · latest
 
+## A word one syllable from the right one, and it belonged to Bowlby
+
+Ryan, reading the sheet mounted the day before: “The word ‘Monotropy’ on *Two Cohabitating Modes* is associated with Bowlby’s attachment theory, which we do not endorse. Let’s avoid using monotropy.”
+
+Label correctedMonotropism is Dinah Murray’s; monotropy is John Bowlby’s, and they are not the same word shortened
+
+**Monotropism** was coined by **Dinah Murray** with her neighbour **Jeanette Buirski** and set out in Murray, Lesser and Lawson (2005); it describes **attention**, and it is [Sheet No. 8](https://queering.earth/monotropa-uniflora)’s subject. **Monotropy** is **John Bowlby’s**, from attachment theory: an infant’s innate drive to attach to *one* primary figure, **usually the mother**, whose bond is ranked above every other, with father, siblings and grandparents below her. **That hierarchy is what this house does not endorse**, and the maternal-deprivation arguments were built on it.
+
+**One letter of difference does real damage here.** Writing *monotropy* for a theory of attention hands a reader a framework about mothers, ranked caregivers and innate deficiency — on the one page whose argument is that two modes are equal and neither is a grade. It imports the exact thing the sheet is written against.
+
+**The body was right and the label was wrong, which is this site’s characteristic failure turning up in its own house.** The section’s prose said *monotropism and polytropism* correctly and cited the 2005 paper; the heading above it, the `id` under that heading, two comments inside the masthead drawing, the stylesheet’s own note and two of the cabinet’s records all said *monotropy*. Sheet No. 8 has it right thirteen times over and never got it wrong, because it was written with the paper open.
+
+**`#monotropy` is now `#monotropism`, and a published address was changed to do it.** The sheet was a day old and the only things pointing at it were derived — the finding aid’s manifest and the sheet’s own contents list. An authored id is meant to be permanent and the reason to break one has to beat tidiness; carrying a repudiated term in a URL does. Recorded in [the decision log](https://queering.earth/what-is-settled) as a standing rule: **monotropism and polytropism, never monotropy or polytropy.**
+
+2026 · 11 September
+
 ## The masthead read *Queering.Ear / th*, and the measurement that certified it was of the wrong thing
 
 Ryan, with a screenshot, on the fix mounted directly below: “The title now wraps.” It did. The rule that stopped three pages scrolling sideways had been put on `body`, it cleared every page, it passed all nine gates — and it broke the wordmark in half on the front of the cabinet.
@@ -3733,7 +3749,7 @@ Ryan’s, after the blown-up tray mark was [refused twice](https://queering.eart
 
 MountedOne flower against many, with the two flower areas equal by computation
 
-`.qe-tropisms` is two plants on one ground line: a single unbranched stem carrying one five-petalled flower, and a low stem branching three times into a broad flat head of twenty-nine florets. **Monotropy against polytropy** — and *Monotropa uniflora* means *one turn, one flower*, which is [Sheet No. 8](https://queering.earth/monotropa-uniflora)’s whole subject, so this site already reads monotropy through a plant. **It also cannot restage the predation problem the tray mark had**, because plants do not eat each other.
+`.qe-tropisms` is two plants on one ground line: a single unbranched stem carrying one five-petalled flower, and a low stem branching three times into a broad flat head of twenty-nine florets. **Monotropism against polytropism** — and *Monotropa uniflora* means *one turn, one flower*, which is [Sheet No. 8](https://queering.earth/monotropa-uniflora)’s whole subject, so this site already reads monotropism through a plant. **It also cannot restage the predation problem the tray mark had**, because plants do not eat each other.
 
 **The invariant is equal flower area and it is computed, not eyeballed.** The drawing’s claim is *different distribution, equal mass*; two areas that were merely near would rank the two modes by accident, which is a gold join on an uncorrected sheet in the most prominent place on the sheet. The rosette is a five-lobed polar rose whose area is exact — `πR²(a² + b²/2)` = 826.24 — and the floret radius is solved back out of it: 29 × π × 3.011² = 826.24, residual 1.1e−13.
 
@@ -5898,7 +5914,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
   - [The fox, entire](https://queering.earth/two-cohabitating-modes#the-fox)
   - [Both of them are feeding a family](https://queering.earth/two-cohabitating-modes#the-family)
   - [The coat, and the curl](https://queering.earth/two-cohabitating-modes#the-coat)
-  - [Monotropy is not a personality, and the pairing is newer than it looks](https://queering.earth/two-cohabitating-modes#monotropy)
+  - [Monotropism is not a personality, and the pairing is newer than it looks](https://queering.earth/two-cohabitating-modes#monotropism)
   - [A ranking of six against six](https://queering.earth/two-cohabitating-modes#the-network)
   - [Why uneasily is the word to keep](https://queering.earth/two-cohabitating-modes#uneasily)
 
@@ -5948,7 +5964,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-205 entries across 53 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+206 entries across 54 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -8004,6 +8020,25 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
+### Monotropism, never monotropy — they are different people's words (2026-09-11)
+
+Ryan, on the masthead section of `/two-cohabitating-modes`: *the word "Monotropy" is associated with Bowlby's attachment theory, which we do not endorse. Let's avoid using monotropy.*
+
+**Two words one syllable apart, from two unrelated literatures.**
+
+- **Monotropism** is ours to use. Coined by **Dinah Murray** with her neighbour **Jeanette Buirski**, set out in Murray, Lesser and Lawson (2005), and it describes **attention** — how it pools into few interests at a time. It is the subject of Sheet No. 8.
+- **Monotropy** is **John Bowlby's**, from attachment theory: the claim that an infant has an innate drive to attach to *one* primary figure, **usually the mother**, whose bond is qualitatively different from and ranked above every other, with father, siblings and grandparents below her. That hierarchy is the part this house does not endorse, and it is the root of the maternal-deprivation arguments built on it.
+
+**So the near-homonym does real damage in one letter.** Writing *monotropy* for a theory of attention hands the reader a framework about mothers, ranked caregivers and innate deficiency — on a page whose whole argument is that two modes are equal and neither is a grade. It would import the exact thing the page is written against.
+
+**The rule: this site writes monotropism and polytropism, and never monotropy or polytropy.** The words are not interchangeable and the shorter one is not a shorter form of the longer.
+
+**Sheet No. 8 had it right and the new sheet did not**, which is the useful detail: `/monotropa-uniflora` uses *monotropism* thirteen times and *monotropy* never, because it was written with the 2005 paper open. `/two-cohabitating-modes` got the term right in its prose and wrong in the heading above it, the id under that heading, two drawing comments, the stylesheet and two of the cabinet's own records — **a correct body under an incorrect label**, which is this site's characteristic failure appearing in its own house rather than in a source.
+
+**`#monotropy` became `#monotropism`, and that is a published address changed.** The sheet was one day old and the only things pointing at it were the finding aid's generated manifest and its own contents list, both derived. Worth noting rather than doing silently: an authored id is meant to be permanent, and the reason to break one has to be better than tidiness. Carrying a repudiated term in a URL is better than tidiness.
+
+---
+
 ### A ninth gate, because three pages scrolled sideways past eight of them (2026-09-11)
 
 Ryan found it by hand on `/changelog`: a 414px document at a 375px viewport, pushed out by one inline `code` span holding `performance.getEntriesByType('resource')`. He asked whether the failure being invisible to every existing gate justified a small guard, and asked for the reasoning either way. **It does, and the argument is not that the fault was bad — it is that the fault recurs by construction.**
@@ -8132,7 +8167,7 @@ Two overlay panels in one tray **can both be open with JavaScript off**: a `deta
 
 ### Two attention shapes, and the width a masthead is actually reviewed at (2026-09-11)
 
-Ryan's call after the blown-up tray mark was refused twice: something else for the header. The page already carries a fox and a hedgehog twice over in Bewick's 1792 engravings, so **the masthead carries the argument rather than the animals** — one unbranched stem with a single five-petalled flower against a low stem branching into a broad head of many small florets. Monotropy against polytropy, and *Monotropa uniflora* means one turn, one flower, which is Sheet No. 8's whole subject. It sits in the register this site does not get wrong, and it cannot restage the predation problem, because plants do not eat each other.
+Ryan's call after the blown-up tray mark was refused twice: something else for the header. The page already carries a fox and a hedgehog twice over in Bewick's 1792 engravings, so **the masthead carries the argument rather than the animals** — one unbranched stem with a single five-petalled flower against a low stem branching into a broad head of many small florets. Monotropism against polytropism, and *Monotropa uniflora* means one turn, one flower, which is Sheet No. 8's whole subject. It sits in the register this site does not get wrong, and it cannot restage the predation problem, because plants do not eat each other.
 
 **THE INVARIANT IS EQUAL FLOWER AREA AND IT IS COMPUTED.** The claim the drawing makes is *different distribution, equal mass*; two areas that were merely near would rank the two modes by accident, which is a gold join on an uncorrected sheet in the most prominent place on the sheet. The rosette is a five-lobed polar rose whose area is exact — πR²(a² + b²/2) = 826.24 — and the floret radius is solved back out of it: 29 × π × 3.011² = 826.24, residual 1.1e-13.
 

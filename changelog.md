@@ -37,6 +37,22 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 11 September · latest
 
+## A word one syllable from the right one, and it belonged to Bowlby
+
+Ryan, reading the sheet mounted the day before: “The word ‘Monotropy’ on *Two Cohabitating Modes* is associated with Bowlby’s attachment theory, which we do not endorse. Let’s avoid using monotropy.”
+
+Label correctedMonotropism is Dinah Murray’s; monotropy is John Bowlby’s, and they are not the same word shortened
+
+**Monotropism** was coined by **Dinah Murray** with her neighbour **Jeanette Buirski** and set out in Murray, Lesser and Lawson (2005); it describes **attention**, and it is [Sheet No. 8](https://queering.earth/monotropa-uniflora)’s subject. **Monotropy** is **John Bowlby’s**, from attachment theory: an infant’s innate drive to attach to *one* primary figure, **usually the mother**, whose bond is ranked above every other, with father, siblings and grandparents below her. **That hierarchy is what this house does not endorse**, and the maternal-deprivation arguments were built on it.
+
+**One letter of difference does real damage here.** Writing *monotropy* for a theory of attention hands a reader a framework about mothers, ranked caregivers and innate deficiency — on the one page whose argument is that two modes are equal and neither is a grade. It imports the exact thing the sheet is written against.
+
+**The body was right and the label was wrong, which is this site’s characteristic failure turning up in its own house.** The section’s prose said *monotropism and polytropism* correctly and cited the 2005 paper; the heading above it, the `id` under that heading, two comments inside the masthead drawing, the stylesheet’s own note and two of the cabinet’s records all said *monotropy*. Sheet No. 8 has it right thirteen times over and never got it wrong, because it was written with the paper open.
+
+**`#monotropy` is now `#monotropism`, and a published address was changed to do it.** The sheet was a day old and the only things pointing at it were derived — the finding aid’s manifest and the sheet’s own contents list. An authored id is meant to be permanent and the reason to break one has to beat tidiness; carrying a repudiated term in a URL does. Recorded in [the decision log](https://queering.earth/what-is-settled) as a standing rule: **monotropism and polytropism, never monotropy or polytropy.**
+
+2026 · 11 September
+
 ## The masthead read *Queering.Ear / th*, and the measurement that certified it was of the wrong thing
 
 Ryan, with a screenshot, on the fix mounted directly below: “The title now wraps.” It did. The rule that stopped three pages scrolling sideways had been put on `body`, it cleared every page, it passed all nine gates — and it broke the wordmark in half on the front of the cabinet.
@@ -179,7 +195,7 @@ Ryan’s, after the blown-up tray mark was [refused twice](https://queering.eart
 
 MountedOne flower against many, with the two flower areas equal by computation
 
-`.qe-tropisms` is two plants on one ground line: a single unbranched stem carrying one five-petalled flower, and a low stem branching three times into a broad flat head of twenty-nine florets. **Monotropy against polytropy** — and *Monotropa uniflora* means *one turn, one flower*, which is [Sheet No. 8](https://queering.earth/monotropa-uniflora)’s whole subject, so this site already reads monotropy through a plant. **It also cannot restage the predation problem the tray mark had**, because plants do not eat each other.
+`.qe-tropisms` is two plants on one ground line: a single unbranched stem carrying one five-petalled flower, and a low stem branching three times into a broad flat head of twenty-nine florets. **Monotropism against polytropism** — and *Monotropa uniflora* means *one turn, one flower*, which is [Sheet No. 8](https://queering.earth/monotropa-uniflora)’s whole subject, so this site already reads monotropism through a plant. **It also cannot restage the predation problem the tray mark had**, because plants do not eat each other.
 
 **The invariant is equal flower area and it is computed, not eyeballed.** The drawing’s claim is *different distribution, equal mass*; two areas that were merely near would rank the two modes by accident, which is a gold join on an uncorrected sheet in the most prominent place on the sheet. The rosette is a five-lobed polar rose whose area is exact — `πR²(a² + b²/2)` = 826.24 — and the floret radius is solved back out of it: 29 × π × 3.011² = 826.24, residual 1.1e−13.
 
