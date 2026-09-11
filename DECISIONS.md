@@ -645,13 +645,30 @@ are the differences most likely to appear in a throwaway one-liner:
 - **A parameter expansion followed by `[` is an array subscript.** `grep -c "\.$c[ ,:{>]"`
   produces `bad math expression: operand expected` &mdash; zsh is subscripting `$c`, where bash
   sees `$c` and then a literal bracket.
+- **AND A HISTORY MODIFIER IS APPLIED INSIDE DOUBLE QUOTES, WHICH IS THE WORST OF THEM.**
+  `git show "$c:tools/make-markdown.mjs"` does not ask for that path at that commit. zsh reads
+  `$c:t` as the *tail* modifier, consumes the `:t`, and leaves
+  `<sha>ools/make-markdown.mjs` &mdash; a path that cannot exist. Bash produces
+  `<sha>:tools/…` and works. `"${c}:tools/…"` works in both.
 
-**Two of those four were misfiled at the time, which is the entry's own thesis operating on the
+**THE LAST ONE IS THE BEST INSTANCE IN THIS ENTRY, BECAUSE THREE THINGS HAD TO LINE UP AND ALL
+THREE ARE ORDINARY.** It was used to check whether the verse fix had survived every commit
+since it landed &mdash; the one thing actually at risk. zsh mangled the path; `2>/dev/null`,
+added to keep the loop's output clean, hid `fatal: ambiguous argument`; and an empty stream
+made `grep -q` fail, which printed as **`MISSING` for all eleven commits, uniformly and
+confidently.** A uniform answer reads as a real finding rather than a broken probe. **The report
+it was one keystroke from producing was that the converter fix had been reverted from the
+entire branch** &mdash; a false alarm about precisely the thing the session had been warned to
+protect. **Suppressing stderr converts an error into an answer**, and it is worth writing that
+down on its own.
+
+**Several of these were misfiled at the time, which is the entry's own thesis operating on the
 entry's own contents.** The glob refusal was recorded as a grep quirk; the array subscript was
-read as a quoting problem and silently worked around in Python without being diagnosed. Neither
-idiom errored in a way that named its cause: **one returned a plausible wrong explanation and
-the other returned a plausible wrong culprit**, and both stood until somebody asked what the
-shell actually was.
+read as a quoting problem and silently worked around in Python without being diagnosed; and the
+history modifier was read, for one command, as the probe string being wrong. None of them
+errored in a way that named its cause: **one returned a plausible wrong explanation, one a
+plausible wrong culprit, and one a plausible wrong result** &mdash; and they stood until
+somebody asked what the shell actually was.
 
 **Two were regexes against our own markup, and they are the ones to actually worry about**,
 because the first four are general knowledge and these two are specific to this house:
