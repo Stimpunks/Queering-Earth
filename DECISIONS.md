@@ -232,6 +232,18 @@ size limit in the extractor; check the other large PDFs in `raw/` for the same s
 ending mid-sentence is the tell); and consider whether `qmd` can report extracted-versus-expected
 length so a short extraction is visible rather than silent.
 
+**A second case, found the same day, is the absolute form of it.** `inbox/Kurt Cobain - Journals.pdf`
+is a photographic facsimile of handwritten notebooks — 76 pages, each a 2×2 spread, so about 300
+notebook pages — and it has **no text layer at all**: `pdftotext` returns zero words. The library
+can never find anything in that book, by any search, ever. No re-extraction fixes it; it would
+need OCR, and OCR of handwriting is a transcription with a confidence interval rather than a text.
+
+**So the two cases want the same thing and it is not a better extractor.** A file whose extracted
+length is implausible against its page count or byte size should be **visibly flagged as
+unsearchable**, so that an empty result can be distinguished from an absence at the point of
+searching. A facsimile in the library is a book we own and cannot grep, and that is a fine thing
+to hold — as long as nobody concludes from silence that we do not hold it.
+
 ### An open item for a session in the SKS repo: two attributions on stimpunks.org (2026-09-11)
 
 Not to be fixed from here. Both found while researching a proposed sheet on Van Zandt, Van Gogh,
