@@ -528,6 +528,51 @@ sentences. Neither changes the manifesto's argument, which is why it survived th
 
 ## Settled
 
+### Seven of the eight gates cannot tell a fresh build from the last successful one (2026-09-11)
+
+**Measured by deliberately breaking a source file, not recalled from the accident that prompted
+it** &mdash; the house rule being to make a gate fail before believing it. An entry with a
+paragraph indented outside any list was inserted into `DECISIONS.md`, which `make-records.mjs`
+correctly refuses, and the eight gates were then run against output that had not been rebuilt:
+
+| | |
+|---|---|
+| `check-markup.mjs --check` | PASS |
+| `check-sitemap.mjs --check` | PASS |
+| **`check-metadata.mjs`** | **FAIL** |
+| `check-card-order.mjs --check` | PASS |
+| `check-addresses.mjs` | PASS |
+| `check-cache.mjs` | PASS |
+| `check-contrast.mjs --check` | PASS |
+| `check-overlap.mjs --check` | PASS |
+
+**This is the only evidence anybody has that `check-metadata.mjs`'s regenerate-into-memory
+design is load-bearing rather than belt-and-braces.** `CLAUDE.md` claims that comparing against
+a fresh in-memory build makes staleness exact where an `mtime` guess would be weaker. It is
+right, and nothing had ever demonstrated it: **an `mtime` check would also have caught this
+one, but seven gates reading the files on disk did not, because a stale file is a perfectly
+valid file.** Seven of them are measuring markup, colour, geometry and cache headers, and all
+of those are true statements about yesterday's build.
+
+**THE INTERLOCK EXISTS, IT FIRED, AND IT WAS IGNORED &mdash; which is the actual fault and is
+worth stating precisely, because the tempting conclusion is that a guard is missing.** The
+documented command is `make-records && make-search-index && make-markdown`, and `&&` is the
+guard: tested here, a throw in the first aborts the chain and steps two and three never run, so
+no stale intermediate is propagated into `search-index.json` or the `.md` files. What went wrong
+in the original accident is that **the gate run came after that chain as an unconditional
+separate statement.** The chain aborted, its final `echo regenerated` never printed, the signal
+was sitting in the output, and the gates ran anyway.
+
+**Two rules.**
+
+- **Regenerate and gate in one chain, or read the regeneration's output before trusting the
+  gates.** Seven green results are not evidence that anything was rebuilt.
+- **A green suite is a claim about the files on disk, never about whether they are current.**
+  Only one gate here makes the second claim, and it is the one to look at first when a source
+  file has changed.
+
+----
+
 ### Counting idioms that answered a different question than the one asked, and none of them errored (2026-09-10)
 
 Measuring one number &mdash; how much verse the Markdown flattening fault had flattened &mdash;
