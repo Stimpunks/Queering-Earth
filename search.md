@@ -22,11 +22,11 @@ This is the finding aid. It searches the whole cabinet — the eight sheets, [th
 
 Every page on the site and every section of it, in the order a reader might meet them. This list is **generated from the pages themselves** by `tools/make-search-index.mjs` and written into this sheet between two markers — the same way the typefaces are declared in the stylesheet. Nobody types it, so no heading here can drift from the heading it names.
 
-### The readings
+### The plate
 
 -
 
-[The plate](https://queering.earth/the-plate) Drawer · the readings
+[The plate](https://queering.earth/the-plate) Drawer
 
   - [Mounted so far](https://queering.earth/the-plate#mounted-so-far)
   - [What a sheet is](https://queering.earth/the-plate#what-a-sheet-is)
@@ -188,7 +188,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 -
 
-[The founding papers](https://queering.earth/the-founding-papers) Drawer · the founding papers
+[The founding papers](https://queering.earth/the-founding-papers) Drawer
 
   - [The three papers](https://queering.earth/the-founding-papers#the-papers)
   - [Why these are papers and not sheets](https://queering.earth/the-founding-papers#not-a-sheet)
@@ -247,13 +247,13 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
   - [To queer is to adapt](https://queering.earth/#to-queer-is-to-adapt)
   - [The sentence adapts itself](https://queering.earth/#the-sentence-adapts)
   - [The type plays, and the words do not move](https://queering.earth/#the-type-plays)
-  - [What grows here](https://queering.earth/#what-grows-here)
+  - [The plate](https://queering.earth/#what-grows-here)
   - [The founding papers](https://queering.earth/#the-founding-papers)
   - [The cabinet itself](https://queering.earth/#the-cabinet-itself)
 
 -
 
-[The cabinet itself](https://queering.earth/the-cabinet-itself) Drawer · the cabinet itself
+[The cabinet itself](https://queering.earth/the-cabinet-itself) Drawer
 
   - [The six pages](https://queering.earth/the-cabinet-itself#the-six)
   - [Why these six are one drawer](https://queering.earth/the-cabinet-itself#why-these-are-together)
@@ -282,7 +282,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-198 entries across 50 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+199 entries across 50 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

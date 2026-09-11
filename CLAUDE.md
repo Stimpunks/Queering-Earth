@@ -1091,8 +1091,8 @@ sentences are authored, and `queering.js` may not write words. So such a page is
 JSON-LD block — no plate number, no accession stamp, no `.qe-provenance`, because a stamp
 is for a specimen.
 
-**EACH LIST IS A DRAWER, AND SINCE 2026-09-11 EACH DRAWER HAS A PAGE.** `/the-founding-papers`,
-`/the-cabinet-itself`, and `/the-plate` for the readings — the three groups `tools/pages.mjs`
+**EACH LIST IS A DRAWER, AND SINCE 2026-09-11 EACH DRAWER HAS A PAGE.** `/the-plate`,
+`/the-founding-papers` and `/the-cabinet-itself` — the three groups `tools/pages.mjs`
 has always held, given addresses, reachable from the **Drawers** menu in the controls tray and
 from the breadcrumb on every member. **Each group's collection page is the first entry in its
 own group** in `pages.mjs`, so the reader's index, `/llms.txt` and the finding aid's manifest
@@ -1105,6 +1105,35 @@ ported badge check stood down and armed. These three are structural, and **nothi
 into them**: two hold the pages that are not readings, the third holds every reading there is.
 That is also why the word *Drawers* is allowed here after *six drawers* was refused as a
 taxonomy — no sheet is single-filed.
+
+**EACH DRAWER HAS EXACTLY ONE NAME, IN ALL FIVE PLACES.** The group heading in
+`tools/pages.mjs`, the section heading on the home page, `/llms.txt`, the finding aid's
+manifest, and the collection page's own `h1` — five copies of one word, and the rule against a
+second name for a set is what keeps them one. **The plate had three** when the drawers shipped:
+*The readings* in `pages.mjs`, *What grows here* on the home page, *The plate* on the page. Two
+of those predated the drawers, which is how a set acquires a third name without anybody
+choosing one. Reconciled to **The plate** on 2026-09-11, on Ryan's call:
+
+- **it is what this site's own prose already called it** — *the plate of sheets* in the
+  register, *Kept on the plate, one sheet at a time* on `/mission`, *the plate is the authority
+  for a sheet's number and kind* in `check-card-order.mjs`, and `.qe-plate-grid` and *Elsewhere
+  on the plate* in the markup. *What grows here* only ever appeared as a section title in
+  italics, never as the thing's name in a sentence;
+- **and *The readings* was the one name that was factually wrong**, for a set holding eight
+  readings, an essay and a wall.
+
+**`/#what-grows-here` DID NOT MOVE, AND THAT IS THE ID RULE WORKING.** Ids here are authored
+topical anchors, never slugs of their own headings, *precisely so a reworded heading does not
+take every shared link with it*. **Seven anchors point at it and all seven still resolve** —
+three in the register, one on `/mission`, one on `/the-plate`, one in the finding aid's
+manifest, and the section's own `.qe-anchor` — plus five more mentions in prose and code spans.
+**Do not "tidy" it to `#the-plate`** —
+that would break exactly what the rule exists to protect, to make two strings match that were
+never meant to.
+
+**The register's older entries still italicise *What grows here* and stay that way.** They are
+dated records of what the page said at the time; rewriting them to use a name that did not
+exist yet would falsify the register in the file that exists to prevent that.
 
 **A COLLECTION PAGE MUST NOT REPEAT THE GLOSS.** The one-sentence gloss of every page lives
 once, in `.qe-furniture`. A collection page's line says what the member is **for** and where it

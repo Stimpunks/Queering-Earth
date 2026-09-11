@@ -528,6 +528,55 @@ sentences. Neither changes the manifesto's argument, which is why it survived th
 
 ## Settled
 
+### The readings drawer had three names and now has one: The plate (2026-09-11)
+
+Raised after the drawers shipped, settled by Ryan the same day. Every other drawer's name
+appears in five places and is the same word in all five — the group heading in
+`tools/pages.mjs`, the section heading on the home page, `/llms.txt`, the finding aid's
+manifest, and the collection page's own `h1`. **The readings drawer had three:** *The readings*
+in `pages.mjs`, *What grows here* on the home page, and *The plate* on the page itself.
+
+**Two of the three predated the collection pages**, which is the part worth keeping. *The
+readings* and *What grows here* had disagreed since the finding aid shipped, and nobody
+noticed because nothing put them side by side. Giving the set a page put all three in one
+sentence and the drift became visible in an afternoon. **A set acquires its second name long
+before anybody chooses one.**
+
+**The plate wins, and the evidence is that the site had already chosen it in prose.**
+
+- The register says *the plate of sheets*; `/mission` says *Kept on the plate, one sheet at a
+  time*; `check-card-order.mjs` prints *the plate is the authority for a sheet's number and
+  kind*; the markup has `.qe-plate-grid` and eighteen sibling navs headed *Elsewhere on the
+  plate*. **Every one of those is the name used as a noun in a sentence.**
+- *What grows here* never appears that way. It is quoted four times in the register, always
+  italicised, always as the title of a section — which is what a title does and not what a name
+  does.
+- ***The readings* was the one that was actually wrong.** The set holds eight readings, one
+  essay and one wall. The kind chip on a card is *Reading*, *Essay* or *Wall*, so naming the
+  whole set after one of the three collides with the vocabulary it contains.
+
+**What it costs: *What grows here* is gone as a visible heading**, and it was a good one —
+botanical, a question rather than a label, older than almost everything around it. That is the
+price of one name, and it is the right price: the alternative is three names, one of them
+false.
+
+**`/#what-grows-here` DID NOT MOVE.** The id rule — authored topical anchors, never slugs of
+headings — exists exactly for this, and this is the first time it has been cashed in: the
+heading was reworded and **all seven anchors pointing at it still resolve** — three in the
+register, one on `/mission`, one on `/the-plate`, one in the finding aid's manifest, and the
+section's own `.qe-anchor` — along with five further mentions in prose and code spans. Tidying the id to match the new heading would break
+precisely what the rule protects. The address quietly keeps the old name, which is the most
+honest place for it.
+
+**The register's own older entries were not rewritten.** Four of them italicise *What grows
+here*; they are dated records of what the page said when they were written, and editing them to
+use a name that did not exist yet would falsify the register in the one file whose job is to
+record that kind of failure.
+
+**The three collection-page kickers became one word, `Drawer`.** *Drawer · the readings*
+carried the dead name, and *Drawer · the plate* would have said the `h1` twice — which the
+other two had been doing since they shipped.
+
 ### Three drawers, and "Drawers" is a word this file already refused once (2026-09-11)
 
 Ryan: *"I like breadcrumbs and collection pages."* The two lists at the foot of the home page

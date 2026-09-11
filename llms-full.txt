@@ -9,11 +9,11 @@
 # The plate
 
 https://queering.earth/the-plate
-The readings · updated 2026-09-11
+The plate · updated 2026-09-11
 
 1. [Queering Earth](https://queering.earth/)
 
-Drawer · the readings
+Drawer
 
 # The plate
 
@@ -109,7 +109,7 @@ There are no hard facts here for everything, and that is the brief rather than a
 # The Army of the Upright
 
 https://queering.earth/on-being-ill
-The readings · updated 2026-09-09
+The plate · updated 2026-09-09
 
 1. [Queering Earth](https://queering.earth/)
 2. [The plate](https://queering.earth/the-plate)
@@ -250,7 +250,7 @@ Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09
 # Coming to Terms
 
 https://queering.earth/coming-to-terms
-The readings · updated 2026-09-09
+The plate · updated 2026-09-09
 
 1. [Queering Earth](https://queering.earth/)
 2. [The plate](https://queering.earth/the-plate)
@@ -453,7 +453,7 @@ Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09
 # The Die Uncast
 
 https://queering.earth/promises-like-pie-crust
-The readings · updated 2026-09-09
+The plate · updated 2026-09-09
 
 1. [Queering Earth](https://queering.earth/)
 2. [The plate](https://queering.earth/the-plate)
@@ -741,7 +741,7 @@ Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09
 # Wyrd, Weird, and the Invention of Normal
 
 https://queering.earth/invention-of-normal
-The readings · updated 2026-09-09
+The plate · updated 2026-09-09
 
 1. [Queering Earth](https://queering.earth/)
 2. [The plate](https://queering.earth/the-plate)
@@ -1092,7 +1092,7 @@ Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09
 # Miranda: To Be Wondered With
 
 https://queering.earth/the-tempest
-The readings · updated 2026-09-09
+The plate · updated 2026-09-09
 
 1. [Queering Earth](https://queering.earth/)
 2. [The plate](https://queering.earth/the-plate)
@@ -1328,7 +1328,7 @@ Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09
 # The Swell and the Dwell
 
 https://queering.earth/wild-nights
-The readings · updated 2026-09-09
+The plate · updated 2026-09-09
 
 1. [Queering Earth](https://queering.earth/)
 2. [The plate](https://queering.earth/the-plate)
@@ -1652,7 +1652,7 @@ Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09
 # A Waste Garden, Flowering at Its Will
 
 https://queering.earth/flower-codes
-The readings · updated 2026-09-09
+The plate · updated 2026-09-09
 
 1. [Queering Earth](https://queering.earth/)
 2. [The plate](https://queering.earth/the-plate)
@@ -1830,7 +1830,7 @@ Provenance Mounted [8 September 2026](https://queering.earth/changelog#a-2026-09
 # The Preferred Flower of Life
 
 https://queering.earth/monotropa-uniflora
-The readings · updated 2026-09-09
+The plate · updated 2026-09-09
 
 1. [Queering Earth](https://queering.earth/)
 2. [The plate](https://queering.earth/the-plate)
@@ -2015,7 +2015,7 @@ Provenance Mounted [9 September 2026](https://queering.earth/changelog#a-2026-09
 # The Five Unmistakable Marks
 
 https://queering.earth/five-unmistakable-marks
-The readings · updated 2026-09-10
+The plate · updated 2026-09-10
 
 1. [Queering Earth](https://queering.earth/)
 2. [The plate](https://queering.earth/the-plate)
@@ -2302,7 +2302,7 @@ Provenance Mounted [10 September 2026](https://queering.earth/changelog#a-2026-0
 # Other People Who Have It
 
 https://queering.earth/other-people-who-have-it
-The readings · updated 2026-09-10
+The plate · updated 2026-09-10
 
 1. [Queering Earth](https://queering.earth/)
 2. [The plate](https://queering.earth/the-plate)
@@ -2577,7 +2577,7 @@ The founding papers · updated 2026-09-11
 
 1. [Queering Earth](https://queering.earth/)
 
-Drawer · the founding papers
+Drawer
 
 # The founding papers
 
@@ -3157,9 +3157,9 @@ Max Alexander, [*A Playful Manifesto*](https://playradical.com/a-playful-manifes
 
 It also is not a trade. Every page here has a **plain view** — the control at the top of this one. It turns off the play, the motion, and the display faces, and leaves the words exactly as they are. One page, two ways to read it, and no second-class copy. Nothing on this site will ever be readable only in the decorated version.
 
-## What grows here
+## The plate
 
-Every sheet mounted so far, numbered on the plate below in the order it was accessioned. [About this drawer](https://queering.earth/the-plate) — what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say.
+Every sheet mounted so far, numbered below in the order it was accessioned. [About this drawer](https://queering.earth/the-plate) — what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say.
 
 -
 
@@ -3271,7 +3271,7 @@ The cabinet itself · updated 2026-09-11
 
 1. [Queering Earth](https://queering.earth/)
 
-Drawer · the cabinet itself
+Drawer
 
 # The cabinet itself
 
@@ -3608,6 +3608,16 @@ MountedThe breadcrumb was already here, one crumb long, on twelve pages
 **It sits inside the landmark, which the nav rule otherwise forbids**, for the reason the contents list does: that rule stops one sheet’s navigation being indexed as another sheet’s content, and a trail naming this page’s own position cannot do that. It lives in `.qe-masthead`, which the search index already skips, so it reaches the `.md` — where an agent wants to know where a page sits — and not the finding aid, where it would be nineteen identical results. **Targets measured after:** 45px tall, 107px and 67px wide, 18px apart, at 375px and at 1280px.
 
 **The menu is a native disclosure and writes no words**, like the reading settings beside it. Three links and three lines of hint, all authored in the markup; `queering.js` gained nothing but a loop, and lost a copy — the Escape and click-away handlers the reading panel had to itself now run over both, which is also what makes opening one close the other.
+
+Label correctedThe readings drawer answered to three names, and two of them were older than the drawer
+
+Every other drawer’s name appears in five places and is the same word in all five: the group heading in `tools/pages.mjs`, the section heading on the home page, `/llms.txt`, the finding aid’s manifest, and the collection page’s own heading. **This one had three** — *The readings*, *What grows here*, and *The plate*. The first two had disagreed since the finding aid shipped and nobody had noticed, because nothing put them side by side; giving the set a page put all three in one sentence. **A set acquires its second name long before anybody chooses one.**
+
+**Reconciled to *The plate*, and the evidence is that this site had already chosen it in prose.** Four entries on this page say *the plate of sheets*; [the aims](https://queering.earth/mission) say “Kept on the plate, one sheet at a time”; `check-card-order.mjs` prints “the plate is the authority for a sheet’s number and kind”; the markup carries `.qe-plate-grid` and eighteen sibling navs headed *Elsewhere on the plate*. Every one of those uses the name as a noun in a sentence. *What grows here* never does — it appears four times on this page, always italicised, always as the *title* of a section, which is a different job. **And *The readings* was the one that was plainly wrong**, for a set holding eight readings, an essay and a wall: the kind chip on a card is *Reading*, *Essay* or *Wall*, so naming the set after one of the three collides with the vocabulary inside it.
+
+**`/#what-grows-here` did not move, and this is the first time that rule has been cashed in.** Ids here are authored topical anchors and never slugs of their own headings, precisely so a reworded heading does not take every shared link with it. The heading changed and **all seven anchors pointing at it still resolve** — three on this page, one on the aims, one on the drawer, one in the finding aid’s manifest, and the section’s own mark. Tidying the id to match would break exactly what the rule protects.
+
+**The older entries on this page were not rewritten.** They are dated records of what the page said when they were written, and editing them to use a name that did not exist yet would falsify the register in the file whose job is to record that kind of failure. **What is lost is *What grows here* as a visible heading**, and it was a good one — botanical, a question rather than a label, older than almost everything around it. That is the price of one name, and the alternative was three, one of them false.
 
 CabinetThe three drawers joined the footer row, and their labels are the one place a short label is not allowed
 
@@ -5592,11 +5602,11 @@ This is the finding aid. It searches the whole cabinet — the eight sheets, [th
 
 Every page on the site and every section of it, in the order a reader might meet them. This list is **generated from the pages themselves** by `tools/make-search-index.mjs` and written into this sheet between two markers — the same way the typefaces are declared in the stylesheet. Nobody types it, so no heading here can drift from the heading it names.
 
-### The readings
+### The plate
 
 -
 
-[The plate](https://queering.earth/the-plate) Drawer · the readings
+[The plate](https://queering.earth/the-plate) Drawer
 
   - [Mounted so far](https://queering.earth/the-plate#mounted-so-far)
   - [What a sheet is](https://queering.earth/the-plate#what-a-sheet-is)
@@ -5758,7 +5768,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 -
 
-[The founding papers](https://queering.earth/the-founding-papers) Drawer · the founding papers
+[The founding papers](https://queering.earth/the-founding-papers) Drawer
 
   - [The three papers](https://queering.earth/the-founding-papers#the-papers)
   - [Why these are papers and not sheets](https://queering.earth/the-founding-papers#not-a-sheet)
@@ -5817,13 +5827,13 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
   - [To queer is to adapt](https://queering.earth/#to-queer-is-to-adapt)
   - [The sentence adapts itself](https://queering.earth/#the-sentence-adapts)
   - [The type plays, and the words do not move](https://queering.earth/#the-type-plays)
-  - [What grows here](https://queering.earth/#what-grows-here)
+  - [The plate](https://queering.earth/#what-grows-here)
   - [The founding papers](https://queering.earth/#the-founding-papers)
   - [The cabinet itself](https://queering.earth/#the-cabinet-itself)
 
 -
 
-[The cabinet itself](https://queering.earth/the-cabinet-itself) Drawer · the cabinet itself
+[The cabinet itself](https://queering.earth/the-cabinet-itself) Drawer
 
   - [The six pages](https://queering.earth/the-cabinet-itself#the-six)
   - [Why these six are one drawer](https://queering.earth/the-cabinet-itself#why-these-are-together)
@@ -5852,7 +5862,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-198 entries across 50 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+199 entries across 50 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -7787,6 +7797,26 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### The readings drawer had three names and now has one: The plate (2026-09-11)
+
+Raised after the drawers shipped, settled by Ryan the same day. Every other drawer's name appears in five places and is the same word in all five — the group heading in `tools/pages.mjs`, the section heading on the home page, `/llms.txt`, the finding aid's manifest, and the collection page's own `h1`. **The readings drawer had three:** *The readings* in `pages.mjs`, *What grows here* on the home page, and *The plate* on the page itself.
+
+**Two of the three predated the collection pages**, which is the part worth keeping. *The readings* and *What grows here* had disagreed since the finding aid shipped, and nobody noticed because nothing put them side by side. Giving the set a page put all three in one sentence and the drift became visible in an afternoon. **A set acquires its second name long before anybody chooses one.**
+
+**The plate wins, and the evidence is that the site had already chosen it in prose.**
+
+- The register says *the plate of sheets*; `/mission` says *Kept on the plate, one sheet at a time*; `check-card-order.mjs` prints *the plate is the authority for a sheet's number and kind*; the markup has `.qe-plate-grid` and eighteen sibling navs headed *Elsewhere on the plate*. **Every one of those is the name used as a noun in a sentence.**
+- *What grows here* never appears that way. It is quoted four times in the register, always italicised, always as the title of a section — which is what a title does and not what a name does.
+- ***The readings* was the one that was actually wrong.** The set holds eight readings, one essay and one wall. The kind chip on a card is *Reading*, *Essay* or *Wall*, so naming the whole set after one of the three collides with the vocabulary it contains.
+
+**What it costs: *What grows here* is gone as a visible heading**, and it was a good one — botanical, a question rather than a label, older than almost everything around it. That is the price of one name, and it is the right price: the alternative is three names, one of them false.
+
+**`/#what-grows-here` DID NOT MOVE.** The id rule — authored topical anchors, never slugs of headings — exists exactly for this, and this is the first time it has been cashed in: the heading was reworded and **all seven anchors pointing at it still resolve** — three in the register, one on `/mission`, one on `/the-plate`, one in the finding aid's manifest, and the section's own `.qe-anchor` — along with five further mentions in prose and code spans. Tidying the id to match the new heading would break precisely what the rule protects. The address quietly keeps the old name, which is the most honest place for it.
+
+**The register's own older entries were not rewritten.** Four of them italicise *What grows here*; they are dated records of what the page said when they were written, and editing them to use a name that did not exist yet would falsify the register in the one file whose job is to record that kind of failure.
+
+**The three collection-page kickers became one word, `Drawer`.** *Drawer · the readings* carried the dead name, and *Drawer · the plate* would have said the `h1` twice — which the other two had been doing since they shipped.
 
 ### Three drawers, and "Drawers" is a word this file already refused once (2026-09-11)
 

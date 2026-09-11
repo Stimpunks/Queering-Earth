@@ -87,9 +87,9 @@ Max Alexander, [*A Playful Manifesto*](https://playradical.com/a-playful-manifes
 
 It also is not a trade. Every page here has a **plain view** — the control at the top of this one. It turns off the play, the motion, and the display faces, and leaves the words exactly as they are. One page, two ways to read it, and no second-class copy. Nothing on this site will ever be readable only in the decorated version.
 
-## What grows here
+## The plate
 
-Every sheet mounted so far, numbered on the plate below in the order it was accessioned. [About this drawer](https://queering.earth/the-plate) — what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say.
+Every sheet mounted so far, numbered below in the order it was accessioned. [About this drawer](https://queering.earth/the-plate) — what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say.
 
 -
 

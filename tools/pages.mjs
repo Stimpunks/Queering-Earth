@@ -22,10 +22,10 @@
  * agents under a heading that disagrees with the one a reader sees.
  */
 export const GROUPS = [
-  ['The readings', ['the-plate',
-                    'on-being-ill', 'coming-to-terms', 'promises-like-pie-crust', 'invention-of-normal',
-                    'the-tempest', 'wild-nights', 'flower-codes', 'monotropa-uniflora',
-                    'five-unmistakable-marks', 'other-people-who-have-it']],
+  ['The plate', ['the-plate',
+                 'on-being-ill', 'coming-to-terms', 'promises-like-pie-crust', 'invention-of-normal',
+                 'the-tempest', 'wild-nights', 'flower-codes', 'monotropa-uniflora',
+                 'five-unmistakable-marks', 'other-people-who-have-it']],
   ['The founding papers', ['the-founding-papers', 'mission', 'manifesto', 'two-cohabitating-modes']],
   ['The cabinet itself', ['index', 'the-cabinet-itself',
                           'design', 'changelog', 'search', 'ledger', 'what-is-settled', 'privacy']],
@@ -35,7 +35,7 @@ export const GROUPS = [
  * The collection page at the head of each group, keyed by the group's heading.
  *
  * EACH GROUP'S FIRST ENTRY IS ITS OWN INDEX, and that is the whole of the mapping —
- * `the-plate` leads the readings, `the-founding-papers` leads the founding papers,
+ * `the-plate` leads the plate, `the-founding-papers` leads the founding papers,
  * and `the-cabinet-itself` sits under `index` in the cabinet because the home page
  * is the front of the cabinet and the collection page is the drawer inside it.
  *
@@ -45,7 +45,7 @@ export const GROUPS = [
  * /llms.txt and the finding aid's manifest all read.
  */
 export const COLLECTIONS = new Map([
-  ['The readings', 'the-plate'],
+  ['The plate', 'the-plate'],
   ['The founding papers', 'the-founding-papers'],
   ['The cabinet itself', 'the-cabinet-itself'],
 ]);

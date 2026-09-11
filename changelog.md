@@ -61,6 +61,16 @@ MountedThe breadcrumb was already here, one crumb long, on twelve pages
 
 **The menu is a native disclosure and writes no words**, like the reading settings beside it. Three links and three lines of hint, all authored in the markup; `queering.js` gained nothing but a loop, and lost a copy — the Escape and click-away handlers the reading panel had to itself now run over both, which is also what makes opening one close the other.
 
+Label correctedThe readings drawer answered to three names, and two of them were older than the drawer
+
+Every other drawer’s name appears in five places and is the same word in all five: the group heading in `tools/pages.mjs`, the section heading on the home page, `/llms.txt`, the finding aid’s manifest, and the collection page’s own heading. **This one had three** — *The readings*, *What grows here*, and *The plate*. The first two had disagreed since the finding aid shipped and nobody had noticed, because nothing put them side by side; giving the set a page put all three in one sentence. **A set acquires its second name long before anybody chooses one.**
+
+**Reconciled to *The plate*, and the evidence is that this site had already chosen it in prose.** Four entries on this page say *the plate of sheets*; [the aims](https://queering.earth/mission) say “Kept on the plate, one sheet at a time”; `check-card-order.mjs` prints “the plate is the authority for a sheet’s number and kind”; the markup carries `.qe-plate-grid` and eighteen sibling navs headed *Elsewhere on the plate*. Every one of those uses the name as a noun in a sentence. *What grows here* never does — it appears four times on this page, always italicised, always as the *title* of a section, which is a different job. **And *The readings* was the one that was plainly wrong**, for a set holding eight readings, an essay and a wall: the kind chip on a card is *Reading*, *Essay* or *Wall*, so naming the set after one of the three collides with the vocabulary inside it.
+
+**`/#what-grows-here` did not move, and this is the first time that rule has been cashed in.** Ids here are authored topical anchors and never slugs of their own headings, precisely so a reworded heading does not take every shared link with it. The heading changed and **all seven anchors pointing at it still resolve** — three on this page, one on the aims, one on the drawer, one in the finding aid’s manifest, and the section’s own mark. Tidying the id to match would break exactly what the rule protects.
+
+**The older entries on this page were not rewritten.** They are dated records of what the page said when they were written, and editing them to use a name that did not exist yet would falsify the register in the file whose job is to record that kind of failure. **What is lost is *What grows here* as a visible heading**, and it was a good one — botanical, a question rather than a label, older than almost everything around it. That is the price of one name, and the alternative was three, one of them false.
+
 CabinetThe three drawers joined the footer row, and their labels are the one place a short label is not allowed
 
 Ryan’s, after the drawers shipped. They sit directly after *Queering Earth* on all twenty-three rows, which is the level they are: the home page, then the drawers, then the pages they collect.

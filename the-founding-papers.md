@@ -11,7 +11,7 @@ generated_by: "tools/make-markdown.mjs from the page's own <main> landmark"
 
 1. [Queering Earth](https://queering.earth/)
 
-Drawer · the founding papers
+Drawer
 
 # The founding papers
 
