@@ -3843,6 +3843,130 @@ html.plain .qe-orig { font-variation-settings: normal; }
   margin-bottom: 0.6rem;
 }
 
+/* ─────────────────────────────────────────────── the content warning
+ *
+ * A SHEET THAT NEEDS ONE PUTS IT ABOVE EVERYTHING, INCLUDING THE SPECIMEN LABEL.
+ * Sheet No. 11 carries psychiatric coercion, four deaths and the account of a rape,
+ * and it first shipped with that stated in a <dt> row inside the label block — true,
+ * accurate, and four rows down a card a reader scans rather than reads. A warning
+ * that arrives after the reader has started is not a warning.
+ *
+ * IT IS THE RULED-OFF TIER AND NOT A TINTED PANEL, for the reason the three-surface
+ * rule gives: a fill would make it a mounted object, and this is not an object. Two
+ * hairlines and space.
+ *
+ * THE COLOUR IS ON THE RULE AND NEVER ON THE GLYPH. --qe-rust is 7.0:1 as text and
+ * would pass, but a whole block set in an accent reads as decoration exactly where it
+ * must not, so the rules take the accent and the words stay --qe-ink. Same rule the
+ * register's entry bullets are under, arrived at from the other side.
+ *
+ * THE LABEL IS A PARAGRAPH AND NOT A HEADING, and that is not a downgrade. Both the
+ * contents list and the drift rail derive from the h2s inside the landmark, so a
+ * heading here would file a content warning as a SECTION OF THE ARGUMENT — first in
+ * the list, and a tick on a rail whose ticks are a scale drawing of the sheet. It is
+ * front matter, like the label block and the lede, and neither of those is listed
+ * either. The section carries an aria-label instead, which makes it a named region a
+ * screen-reader rotor still lists. It is NOT an aside: an aside is tangential, and
+ * this is the most load-bearing block on the sheet. */
+.qe-cw {
+  margin: var(--qe-space-4) 0 var(--qe-space-6);
+  padding: var(--qe-space-3) 0;
+  border-top: 2px solid var(--qe-rust);
+  border-bottom: 2px solid var(--qe-rust);
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--qe-ink);
+}
+.qe-cw p { margin: 0 0 0.7rem; }
+.qe-cw p:last-child { margin-bottom: 0; }
+.qe-cw-label {
+  display: block;
+  font-family: var(--qe-body);
+  font-size: 0.76rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--qe-ink);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+/* THE WARNING NEEDED A WARNING. The first version of this block was three paragraphs
+ * of prose, and the second of them named the case behind one of the songs — so a
+ * reader who came to the box to find out whether to continue was told by being shown.
+ * Ryan's call, and it is obviously right: keywords first, specifics behind a press.
+ *
+ * The disclosure is a native details, like the two in the controls tray and for the
+ * same reason. It carries NO name attribute, so it is not part of their exclusive
+ * accordion. reveal.mjs opens every closed details before the rendering gates measure
+ * and closes them again after, so nothing here is hidden from check-contrast or
+ * check-overlap and no new REVEAL line was needed — checked rather than assumed.
+ *
+ * THE SEPARATOR INHERITS ITS COLOUR ON PURPOSE. A ::before is not an element with its
+ * own text, so check-contrast.mjs cannot measure it — the ::marker blind spot wearing
+ * a different hat. Colouring it with an accent would put an unmeasurable glyph on the
+ * page, so it stays --qe-ink and the accent stays on the rules. */
+.qe-cw-brief {
+  list-style: none;
+  margin: 0 0 var(--qe-space-2);
+  padding: 0;
+  font-family: var(--qe-body);
+  font-weight: 600;
+  line-height: 1.9;
+}
+.qe-cw-brief li { display: inline; }
+.qe-cw-brief li + li::before { content: " \00b7  "; }
+
+.qe-cw-note { font-size: 0.92rem; }
+
+/* A DETAILS CANNOT LIVE INSIDE THE LANDMARK, AND THAT IS A HOUSE CONSTRAINT RATHER
+ * THAN A PREFERENCE. The specifics were behind a disclosure for one draft. With it
+ * closed, Chrome reports 45px for the parent and full-height rects for the children,
+ * which run straight through the specimen label below — not painted, but really in the
+ * layout, and check-overlap.mjs reported 22 collisions across Letter and A4. It could
+ * not have reported them on screen, because reveal.mjs opens every details for the
+ * screen pass and undoes it before paper: the closed state only exists on paper, and
+ * paper is the medium this house has already been burned by.
+ *
+ * The tray's two details never hit this because they sit outside main and the print
+ * sheet drops the controls entirely. This was the first one inside the landmark.
+ *
+ * So both halves are visible and the order does the work: keywords, then the detail.
+ * A reader deciding whether to go on reads eight words, not three paragraphs. */
+/* The summary is a control, so it takes real padding rather than the ::after box the
+ * controls tray uses — that technique needs a positioned child and this is a lone
+ * block. 0.95rem at 1.5 is 22.8px, and 0.66rem either side gives 43.92: MEASURED, and
+ * 0.08px short, which is the whole reason this house says measure the rendered box
+ * rather than trust the arithmetic. 0.7rem gives 45.2. */
+.qe-cw-full > summary {
+  cursor: pointer;
+  font-family: var(--qe-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding: 0.7rem 0;
+  color: var(--qe-ink);
+}
+.qe-cw-full > summary:focus-visible { outline: 3px solid var(--qe-rust); outline-offset: 2px; }
+.qe-cw-full[open] > summary { margin-bottom: var(--qe-space-2); }
+
+/* PAPER GETS THE KEYWORDS AND NOT THE DETAIL, DELIBERATELY. A closed details prints
+ * closed, and forcing it open from CSS is the thing that put 22 collisions on Letter
+ * and A4 — and, now that check-overlap.mjs skips unpainted closed-details content,
+ * forcing it would paint text the gate no longer measures. The keyword list is the
+ * half built to stand alone and it prints in full. */
+
+/* A CLOSED DETAILS CANNOT BE FORCE-OPENED FROM CSS, AND TRYING IT PUT TEXT ON TEXT.
+   The first version set `display: revert !important` on the children so paper would
+   carry the full warning. The children painted and the closed parent reserved no
+   height for them, so on Letter and A4 the detail landed on the specimen label above
+   it — ten collisions and twelve, caught by check-overlap.mjs, which undoes REVEAL
+   before its paper passes and so measures the disclosure shut exactly as a printer
+   would. The keyword list prints, which is a real warning on its own and is the half
+   built to stand alone. */
+@media print {
+  .qe-cw { border-color: #000; }
+  .qe-cw, .qe-cw-label, .qe-cw-full > summary { color: #000; }
+}
+
 /* The legend. A list, because it is one: four kinds, named. */
 .qe-legend {
   list-style: none;

@@ -37,6 +37,32 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 11 September · latest
 
+## Two van Goghs, two recordings, and a privacy page that had a number in it
+
+Ryan asked for the *Almond Blossom* on the sheet, for any other public-domain paintings that fit, and for click-to-load recordings of the songs with some lyrics quoted under the new policy. Three of those four were straightforward.
+
+MountedTwo paintings, and two recordings that fetch nothing until pressed
+
+*Almond Blossom* (Van Gogh Museum, February 1890) sits with letter 857, and *Still Life: Vase with Fifteen Sunflowers* (National Gallery, August 1888) sits with Gadsby’s line, which had been arguing about that painting without showing it. Both are public domain, both came from Wikimedia Commons at 1280px, and the figcaptions say so — **what is out of copyright is the painting, and what we serve is somebody else’s photograph of it at a size we chose.**
+
+*Almond Blossom* is the sheet’s second wide plate holder for a reason unlike the other five: the existing wide plates are all line work losing hatching to a short ladder, and this is a landscape painting of a canopy, where the spread *is* the subject.
+
+Townes playing “Waitin’ Around to Die” to a weeping Uncle Seymour Washington in *Heartworn Highways* gives [Sheet No. 11](https://queering.earth/gloomy-sunflowers#galveston) the Townes tether it did not have — every other artist on it had one. “Polly” sits under the *Incesticide* liner note, because that passage only works if you know what the song is. **Both ids were checked against YouTube’s oEmbed endpoint before they were mounted, and the first id a search returned for “Polly” did not resolve at all.**
+
+Label correctedThe privacy page stops counting
+
+Two sentences there became false the moment the sheet gained a recording: that **one** thing could reach a third party, and that the Eliot recording was **the only place** another company could learn anything about you. Corrected in the same change, which is the rule.
+
+**The fix is not a new number.** That sentence has now gone stale twice — once when the first recording was mounted and once today — so the count came out of it altogether. The page names the three recordings and then says the thing that actually matters and does not change: **Google is one party however many recordings there are.** Adding two did not add a company; it added two more places where a reader can choose to reach the one already there.
+
+CabinetNo lyric was quoted, for two different reasons
+
+The request included lyrics. For “Waitin’ Around to Die” the answer is the ordinary rule — [we quote what we have read](https://queering.earth/how-we-quote), and no licensed text was in front of the session; the performance is embedded instead.
+
+For “Polly” the same applied, and a second reason is stated on the sheet itself. **Every word of that song is spoken by the man who committed the crime**, which is what Cobain built it to do. Setting those words in a ruled box under a herbarium label would give a rapist’s speech the mounting this cabinet gives to Woolf and to Plath. The recording is linked whole instead. **Whether the wording belongs on the page is Ryan’s call, and it is recorded here as a decision rather than left as a gap.**
+
+2026 · 11 September
+
 ## Sheet No. 11, and four biographies that would not say what they were supposed to
 
 Ryan’s, opening the research: “They help me process the immense ache of this world. They are my gloomy sunflowers.” The sheet was proposed, researched over one day against five primary sources, and mounted the same day — and the research overturned most of what the proposal had asserted on the strength of secondary sources.
@@ -2198,6 +2224,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes) the founding papers
 
 ### [The attribution ledger](https://queering.earth/ledger) every quotation traced
+
+### [What this site knows about you](https://queering.earth/privacy) the privacy page
 
 ### [What we quote, and why we may](https://queering.earth/how-we-quote) the quoting policy
 

@@ -214,6 +214,29 @@ const MEASURE = String.raw`((cfg) => {
        Sniffing for clip-path instead would silently swallow a REAL clip the day
        somebody uses clip-path as a decorative mask, so the list is declared. */
     if (INVISIBLE.some((q) => el.closest && el.closest(q))) return true;
+    /* A CLOSED <details> PAINTS ITS SUMMARY AND NOTHING ELSE, AND ITS CHILDREN KEEP
+       THEIR RECTS ANYWAY. Chrome reports 45px for the element and full-height boxes
+       for the paragraphs inside it, which then lie across whatever follows — 22
+       phantom collisions on Letter and A4 the first time one appeared inside a
+       landmark. It cannot surface on screen, because reveal.mjs opens every details
+       for the screen pass and undoes it before the paper passes, so the closed state
+       exists only on the medium this house has already been burned by.
+
+       THIS IS THE SPEC AND NOT A STYLE TEST, which is why it is allowed to be here
+       next to a declared selector list. A closed details renders its summary alone in
+       every engine; the children are not painted on any medium. And nothing that CAN
+       be revealed escapes measurement: REVEAL opens every details before the screen
+       pass, so the open state — the one a reader can actually produce — is measured in
+       full. This suppresses phantom text and no real text.
+
+       THE SUMMARY IS PAINTED AND IS DELIBERATELY NOT EXCLUDED. Nor is anything inside
+       an OPEN details, which is the case a print stylesheet must not try to force:
+       force the content visible on paper and it becomes painted text this rule would
+       skip, which would be a blind spot rather than a fix. */
+    for (let n = el; n && n.nodeType === 1; n = n.parentElement) {
+      const par = n.parentElement;
+      if (par && par.tagName === 'DETAILS' && !par.open && n.tagName !== 'SUMMARY') return true;
+    }
     for (let n = el; n && n.nodeType === 1; n = n.parentElement) {
       const cs = getComputedStyle(n);
       if (cs.display === 'none' || cs.visibility === 'hidden') return true;

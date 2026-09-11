@@ -254,6 +254,40 @@
       736
     ]
   },
+  "van-gogh-almond-blossom-1890-vgm-google-art-project.jpg": {
+    "native": [
+      1280,
+      1011
+    ],
+    "sha256": "07abb267296ef68e17db221fc1721080db772e1631eb2debd49c951e11e362f9",
+    "variants": [
+      "van-gogh-almond-blossom-1890-vgm-google-art-project-544.avif",
+      "van-gogh-almond-blossom-1890-vgm-google-art-project-544.webp",
+      "van-gogh-almond-blossom-1890-vgm-google-art-project-1088.avif",
+      "van-gogh-almond-blossom-1890-vgm-google-art-project-1088.webp"
+    ],
+    "widths": [
+      544,
+      1088
+    ]
+  },
+  "van-gogh-sunflowers-1888-national-gallery-ng3863.jpg": {
+    "native": [
+      1280,
+      1615
+    ],
+    "sha256": "faa207bdb29220ba3263045937baeaacccec2acef8342d58bb25d9ddfa9208cd",
+    "variants": [
+      "van-gogh-sunflowers-1888-national-gallery-ng3863-368.avif",
+      "van-gogh-sunflowers-1888-national-gallery-ng3863-368.webp",
+      "van-gogh-sunflowers-1888-national-gallery-ng3863-736.avif",
+      "van-gogh-sunflowers-1888-national-gallery-ng3863-736.webp"
+    ],
+    "widths": [
+      368,
+      736
+    ]
+  },
   "violet-viola-pedata-house-wild-flowers-of-new-york-1918.jpg": {
     "native": [
       1000,

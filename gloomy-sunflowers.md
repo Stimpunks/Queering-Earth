@@ -16,6 +16,27 @@ Sheet · an essay
 
 # My Gloomy Sunflowers
 
+Content warning — in brief
+
+- Suicide
+- Depression
+- Psychiatric coercion
+- Chronic pain
+- Opioid use
+- Domestic violence
+- Rape
+- Sexual violence against a child
+
+Keywords first, so the decision can be made without reading the detail. **The full version names specifics**, including the real case behind one of the songs; open it only if you want them. [Crisis lines are at the foot of the sheet.](#help)
+
+Content warning in full
+
+This sheet is about four artists who were very ill and who mostly did not survive it. It carries **suicide** — three of the four died by it, and the fourth of alcoholism — **depression and psychiatric crisis**, **coercive psychiatric treatment** including insulin coma therapy and electroshock given to two twenty-year-olds, **chronic pain and opioid use**, and **domestic violence**.
+
+It also carries **the abduction, rape and torture of a fourteen-year-old girl** — the 1987 case behind Nirvana’s “Polly” — and an account, in Kurt Cobain’s own words, of **two men raping a girl while singing that song**. Both are discussed in [the last of the four sections](#hi-how-are-you), and the song itself is embedded there.
+
+**No method of suicide is described anywhere on this sheet**, and no death is presented as an ending the work was building towards. If you want the argument without the case histories, [the first section](#the-tether) and [the last](#what-else-it-could-have-been) carry it between them.
+
 **Written by**
 : Ryan Boren
 
@@ -28,10 +49,7 @@ Sheet · an essay
 **Also read**
 : Hannah Gadsby, *Nanette* (2018) · Shoshana Kessock, [*Falling/Burning*](https://shoshanakessock.wordpress.com/2018/07/12/falling-burning-hannah-gadsby-nanette-and-the-myth-of-the-mad-artist/) (2018)
 
-**Content**
-: Psychiatric treatment, suicide, and one account of a rape. No methods are described. Help, at the foot.
-
-I have spent years with four artists, usually together: a van Gogh open on the screen, Plath in my hands, Townes Van Zandt and Kurt Cobain in my ears. They help me process what a writer about Townes once called “the immense ache of this world.” **They are my gloomy sunflowers.** All four are sold to me, and have been my whole life, as proof of one idea — that the pain is where the work came from. I do not believe it any more. This sheet is the reading that stopped me, and the four records that would not support it.
+I have spent years with four artists, usually together: a van Gogh open on the screen, Plath in my hands, Townes Van Zandt and Kurt Cobain in my ears. They help me process what a writer about Townes once called “the immense ache of this world.” **They are my gloomy sunflowers.** All four are sold to me, and have been my whole life, as proof of one idea — that the pain is where the work came from. **The pain is real and it is in the work.** I am not going to pretend otherwise; it is audible and it is visible and it is a large part of why I keep going back to them. What I have stopped believing is the arrow. Not that they suffered — that the suffering is what made the work possible, that it was the price of it, that it was somehow the necessary cost of being that good. This sheet is the reading that moved me off that, and four records that do not support the bargain.
 
 ## The tether
 
@@ -52,6 +70,10 @@ Specimen — what she used to believe
 Shoshana Kessock, *Falling/Burning: Hannah Gadsby, Nanette, and Being a Bipolar Creator*, in *Disability Visibility*, ed. Alice Wong, 2020.
 
 *Because I used to believe it was true.* So did I. That is the sentence this sheet is written out of, and it is worth saying plainly that it is hers and not ours — she is a Disabled writer whose byline has more than once been absorbed into the anthology’s title, including, until recently, on our own sister site.
+
+![Fifteen sunflowers crowded into a plain earthenware vase on a table, painted almost entirely in yellows — the wall behind, the table, the vase and the flowers all shades of the same colour. Some heads are in full flower, some have gone to seed and turned brown, and several are bent or facing away.](images/van-gogh-sunflowers-1888-national-gallery-ng3863.jpg)
+
+Vincent van Gogh, *Still Life: Vase with Fifteen Sunflowers*, Arles, August 1888. National Gallery, London (NG3863). Public domain; this copy from Wikimedia Commons at 1280px. **These are the sunflowers Gadsby means.** Half of them are already going over, which is a fact about the painting that the myth has never had much use for.
 
 ### What the four do not share
 
@@ -122,9 +144,43 @@ Fran Petters, quoted in Hardy, *A Deeper Blue*.
 
 **Hardy will not close the loop, and I am not going to close it for him.** A doctor at the same hospital told him that electroshock causes short-term loss but that wiping out blocks of childhood “is not the result of such treatment”, and offered alcoholism as an alternative explanation; other people close to Townes thought he was exaggerating it to work on his parents. **The clean story — the treatment took his childhood — is the one thing the careful biography declines to assert.** I want it to be true because it is a better sentence. That is exactly why I should not have it.
 
+### The blacksmith in the kitchen
+
+There is one more document from this part of his life, and it is the only place on this sheet where you can watch the argument happen rather than read about it.
+
+In 1975 James Szalapski filmed Townes at home outside Nashville for *Heartworn Highways*. Sitting on a stool in the kitchen is Uncle Seymour Washington, a retired blacksmith and a neighbour. Townes plays him “Waitin’ Around to Die” — the bleakest song in his catalogue, and the one usually offered as proof of everything this sheet is arguing against — and partway through, Uncle Seymour begins to cry, and somebody comforts him.
+
+[  Play the recording Townes Van Zandt, *Waitin’ Around to Die* · on YouTube ](https://www.youtube.com/watch?v=IC6vcyTN8S0)
+
+Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
+
+Townes Van Zandt, “Waitin’ Around to Die”, filmed 1975 for *Heartworn Highways* (dir. James Szalapski, released 1981). Posted by Light in the Attic Records, who reissued the film.
+
+**That is the whole thesis in ninety seconds, and nobody had to write it down.** The song is not doing what the myth says songs like this do. It is not a symptom being displayed. It is one man singing to another man in a kitchen, and the other man is moved, and that is what the song was for. Uncle Seymour is not weeping at a diagnosis. He is weeping because somebody found words for something and handed them over.
+
+The song is a life told in five verses — a father who beat a mother, a girl in a Tuscaloosa bar, a robbery, two years inside — and it arrives here:
+
+Specimen — the friend at last
+
+> Ah, but now, I’m out of prison, I got me a friend at last\
+> He don’t drink or steal or cheat or lie\
+> Ah his name is Codeine, he’s the nicest thing I’ve seen
+
+Townes Van Zandt, “Waitin’ Around to Die”, fifth verse, less its closing refrain. Recorded for *For the Sake of the Song* (Poppy, 1968) and performed in the film above.
+
+**The whole song is a search for a tether, and it ends by finding the wrong one.** Every verse is somebody leaving, and the last one is a man who has finally got a friend who will not let him down, and the friend is a drug. That is the bleakest joke Townes ever wrote and it is why the song is Exhibit A for the version of him I am arguing against.
+
+But look at what is actually in the room. **The man in the song has nobody. The man listening to it has somebody — he is sitting in the kitchen of the person singing to him, and he is allowed to cry there.** The song is the case for despair and the scene around it is the refutation, in the same ninety seconds.
+
+One more thing, because it comes back in Kurt’s section: **the narrator is not Townes.** He never went to prison. It is a character, written in a first person that is not his, by a man of twenty-four — and it has been read as autobiography for sixty years, because a first person in a song is almost always taken as a confession. Hold onto that.
+
 ## The almond tree
 
 On 31 January 1890 Theo wrote to his brother in the asylum at Saint-Rémy to say that his son had been born, and that they had named him Vincent Willem. Vincent started a painting for the child: branches in flower, seen from below, against a blue sky. To his mother, on 19 February, he described it as “large branches of white almond blossom against a blue sky.”
+
+![Branches of an almond tree in white blossom, seen from directly underneath and spreading across the whole canvas against a flat pale turquoise sky. The branches are dark and angular, cropped by every edge, so the tree has no trunk and no ground — only canopy and sky.](images/van-gogh-almond-blossom-1890-vgm-google-art-project.jpg)
+
+Vincent van Gogh, *Almond Blossom*, Saint-Rémy-de-Provence, February 1890. Van Gogh Museum, Amsterdam; digitised by the Google Art Project. Public domain; this copy from Wikimedia Commons at 1280px. Painted for his nephew, and hung over the child’s bed.
 
 Then, in a letter to Theo of about 17 March 1890, three passages. They are in this order:
 
@@ -159,6 +215,18 @@ Sylvia Plath, *The Unabridged Journals of Sylvia Plath*, ed. Karen V. Kukil, 20 
 Read what the passage actually says. It is not a cry. It is a weather report, written by somebody who has been through this before and expects to again, and it ends on *weapons* — on self-knowledge as a tool. She is describing an illness while working, which is what almost every day of a working artist’s illness looks like and almost nothing in the myth allows for.
 
 Five years earlier she had been twenty, in the room described above. She would write *Ariel*. And the poems of hers I return to most are not the ones the myth wants: “Morning Song” and “Nick and the Candlestick”, both written for her children, both tender, neither ever quoted at me as evidence of anything.
+
+### What she was read as
+
+There is a thing this sheet is slower to say about Sylvia Plath than it is about Townes Van Zandt.
+
+The 1964 Galveston file reads a young man’s gentleness as a threat to his adequacy as a male, and I said that document queers itself. **Plath’s is the same argument run the other way, and it is so ordinary that it is easy to walk past.** Cooper’s case-formulation — the careful one, the one that refuses manic depression — places her illness in the context of “borderline personality disorder”. Set that beside the life it is describing: a woman in the 1950s who was ferociously ambitious, who wanted the work and the marriage and the children and would not choose between them, whose anger was large and whose standards for herself were merciless.
+
+I am not competent to re-diagnose her and I am not going to try; a sheet that spent four sections objecting to retrospective diagnosis does not get to do one at the end. What I will say is what this sheet has said about the other three. **A label is doing work the person did not consent to and cannot answer**, and the question this cabinet exists to ask is what else it could have been.
+
+**Because none of the expectations around her were neutral, and most of them were not about illness at all.** She was a woman expected to be a wife who wrote, in that order. Her husband could leave and go on being a poet; she could not leave and go on being anything. She was given unmodified electroconvulsive therapy at twenty. She had two small children and no money of her own. When she wrote to her psychiatrist about her marriage — [those fourteen letters](#the-insulin) — she was describing violence to the one person who might believe her, in a decade with no word for what was happening to her and no door out of it.
+
+**Alive now, almost every line of that paragraph is different.** Not the illness — the illness was real, it is still real, and people are still dying of it. But a woman writing today can leave a marriage without being ruined by it, can hold her own money, is not given unmodified ECT at twenty, and would not have her manuscript reordered after her death by the husband she had separated from, because he happened to be her executor. **The illness was hers. Nearly everything arranged around it was an arrangement** — and arrangements are precisely the thing this site was built to say were [never inevitable](https://queering.earth/manifesto).
 
 ### An editor, and a sheet still to come
 
@@ -196,6 +264,12 @@ Azerrad, *Come As You Are*, on the specialists Cobain saw for his stomach.
 
 Thirty years of people calling that voice the sound of a tortured soul. It may have been the sound of a man whose back hurt.
 
+**And there is a conclusion all of this points at.** Read the Azerrad passage again as a record of care rather than as a detail about a singer. Nine specialists in the first half of one year. Ulcers ruled out. No diagnosis at the end of it. A man in continuous, documented pain, and the only two things that reliably touched it were opiates and a stage.
+
+**He had no adequate pain relief, so he treated himself.** That sentence is the right way round, and the usual one is backwards. The heroin is the thing everybody remembers about Kurt Cobain and it is the *second* thing that happened; the first is that a medical system examined a young man in pain nine times in six months and could not tell him what was wrong, and he went on hurting in the meantime. Whatever else his addiction was, it began as a person doing the only thing left to do about a pain nobody would name.
+
+Which makes it the same shape as Plath’s, one decade over. **Not people who failed to hold him** — he had a wife, a daughter, a band and the attention of the world — **but arrangements with no provision in them for what was actually wrong with him.** You cannot be held by a system that has not worked out what it is holding.
+
 ### What he did with it
 
 Which brings me to the document I would put on the wall. The liner notes Cobain wrote for *Incesticide* in late 1992 open with him hunting a record: the out-of-print first Raincoats LP, a trip to Rough Trade, a hand-drawn map, and Ana da Silva found working in an antique shop, who offers to send him her own copy. He writes:
@@ -220,6 +294,24 @@ Kurt Cobain, liner notes to *Incesticide*, 1992.
 
 **Mounted alone, the request is a slogan. It is not a slogan.** It is the second half of a man working out, in public, on the sleeve of a record, what he owes the people his work reaches — after learning what two of them did to a woman while singing something he wrote. Cutting it loose from its reason is the kind of tidying this cabinet keeps a ledger to prevent, and it happens to this passage constantly.
 
+### The song they were singing
+
+It is worth knowing what “Polly” actually is, because the liner note only works if you do.
+
+In August 1987 a fourteen-year-old girl leaving a concert in Tacoma was abducted by a man named Gerald Arthur Friend, who suspended her from a pulley in his mobile home and raped and tortured her. She escaped by jumping from his truck at a filling station. Cobain read about the case and wrote a song about it — **in the abductor’s voice**, first person, without editorial, so that a listener has no position to occupy except his. It is on *Nevermind*, and he wrote it alone.
+
+[  Play the recording Nirvana, *Polly* · on YouTube ](https://www.youtube.com/watch?v=DrlaVYKWeLU)
+
+Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
+
+Kurt Cobain, “Polly”, from *Nevermind* (DGC, 1991). Official audio, posted by the rightsholder.
+
+**Then two men sang it while raping a girl.** That is the sentence in the liner notes above, and this is what it means: Cobain wrote a first-person account of a rapist in order to make the position unbearable, and two members of his audience heard the same words as a soundtrack. They did not misunderstand a difficult metaphor. They took a voice the songwriter had put on in horror and wore it in earnest.
+
+He said afterwards that the thing that actually needs doing is “teaching men not to rape.” It is the least ambiguous sentence in this entire sheet and it is thirty-five years old.
+
+**I have deliberately quoted no words from this song, and Townes’ is quoted three sections up, so the difference is worth stating.** It is not that the words were hard to check. **Every word of “Polly” is spoken by the man who did it** — that is the whole construction of the song, and it is why it works. Setting those words on this paper, in the display face, inside a ruled box with a herbarium label pinned to it, would give a rapist’s speech the exact mounting this cabinet gives to Woolf and to Plath, on the one sheet that also carries the account of two men singing them at a real girl. The recording is above, whole, in his own arrangement. That is where that voice belongs.
+
 He signs the notes “Kurdt (the blond one)”.
 
 **This is the tether, and it runs outward.** The Daniel Johnston T-shirt he wore — another Disabled artist’s drawing, worn on television by the most photographed man in music — is the same gesture in one object. The liner notes are that gesture at full length, in his own prose: a famous man spending his platform on other people’s records and closing the door on the part of his audience that hates queers, women and people of colour. **Connection was not something that happened to Kurt Cobain. It was something he did, repeatedly, in writing.**
@@ -240,7 +332,19 @@ Three of these four died by suicide. The fourth drank himself to death at fifty-
 
 So: what else could any of it have been? A clinic that read a sensitive boy as a sensitive boy. A profession that asked Sylvia Plath what she needed instead of what was wrong with her. Nine specialists who found the nerve. An audience that heard Kurt Cobain ask, and listened. **None of those is a fantasy. Every one of them was available at the time, to somebody paying attention, and in at least one case somebody was** — a young doctor in Galveston who quit his profession over what was being done to a twenty-year-old, and told his wife he did not think there was anything really wrong with him.
 
-They are still my gloomy sunflowers. I still put the painting up and the records on. What has changed is what I think I am looking at. Not four people destroyed into greatness. **Four people who kept working, in the gaps, for as long as somebody held the line for them.**
+### Held, and what that word is doing
+
+It would be easy to end this by saying they kept working for as long as somebody held the line for them. **It is not true of any of them.** Theo never let go; Vincent died anyway. Plath was writing at the highest rate of her life in the months she was least supported. It is a tidy sentence and it quietly blames the living — it says that when these four died, somebody had stopped holding on.
+
+And there is something wrong with the word *held* itself. **All four of these people were markedly self-reliant, and that is not incidental to why neurodivergent readers find them.** They were not waiting to be carried. The tether in Gadsby’s line was never a rescue — Theo did not save Vincent, he wrote to him and paid for the paint.
+
+**For Plath the point is political rather than personal.** It is not that the people around her put her down. It is that the structures of 1963 did not permit her to be held at all: no money of her own, no way out of a marriage that would not ruin her, a psychiatry that had already given her electricity at twenty, and a literary world that would hand her manuscript to the husband she had separated from. **You cannot be held by arrangements built so that holding is unavailable.**
+
+Cobain is the same failure one decade over. He had a wife, a daughter, a band and the attention of the world, and none of that could tell him what was wrong with his stomach. **Neither of them was failed by a shortage of people. They were failed by arrangements with no provision in them for what was actually wrong.**
+
+So the sentence I want is not about who held on. **They endured this, at length, on their own terms, until it exceeded what a person can carry.** The going was theirs.
+
+They are still my gloomy sunflowers. I still put the painting up and the records on. What has changed is what I think I am looking at. Not four people destroyed into greatness, and not four people rescued for a while either. **Four self-reliant people who worked whenever they were well enough to — far more often than the story admits — and who endured, on their own terms, until enduring became impossible. What failed them was not mostly the people. It was the arrangements, and arrangements are the thing this site was built to say were never inevitable.**
 
 ## If this is your weather too
 

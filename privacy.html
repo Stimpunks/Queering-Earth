@@ -77,7 +77,7 @@
       "url": "https://morerealms.com/"
     }
   ],
-  "dateModified": "2026-09-09",
+  "dateModified": "2026-09-11",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Queering Earth",
@@ -253,7 +253,7 @@
 
   <p class="qe-lede">This is the privacy policy, and it is short because there is little to describe. This site is a folder of files on a web host. It runs no analytics, sets no cookies, has no accounts, no comments, and no advertising. <strong>Reading it makes no request to anybody else&rsquo;s server</strong> &mdash; there is exactly one place where you can choose to make one, a recording on the home page that fetches nothing until you press play, and it has <a href="#the-embed">its own section below</a>. There is one field on the whole site, on <a href="/search">the finding aid</a>, and it never submits anywhere. Two things nevertheless happen when you read a page, and both are below.</p>
 
-  <p class="qe-register-note"><span class="qe-register-note-label">Last updated</span> 9 September 2026. Any change to this page gets an entry in <a href="/changelog">the accession register</a>, the same as a correction to a sheet &mdash; so <q>we may update this policy from time to time</q> is not something we have to ask you to accept on trust.</p>
+  <p class="qe-register-note"><span class="qe-register-note-label">Last updated</span> 11 September 2026. Any change to this page gets an entry in <a href="/changelog">the accession register</a>, the same as a correction to a sheet &mdash; so <q>we may update this policy from time to time</q> is not something we have to ask you to accept on trust.</p>
 
   <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
     <h2 id="qe-contents-h">On this sheet</h2>
@@ -288,7 +288,7 @@
   <ul>
     <li><strong>No analytics of any kind.</strong> No page-view counter, no tag manager, no heatmap, no session recording. We do not know how many people read this.</li>
     <li><strong>No cookies.</strong> The word <code>document.cookie</code> does not appear anywhere in this site&rsquo;s code, which is why there is no consent banner: there is nothing to consent to, and a banner would be theatre.</li>
-    <li><strong>No third-party requests you did not ask for.</strong> Until 9 September 2026 the pages loaded their two typefaces from Google&rsquo;s font CDN, which told Google your IP address and user agent on every page load, before you had read a word. <strong>The fonts are now served from this domain</strong> and that request is gone. Nothing on this site now reaches another server on its own account. The one thing that <em>can</em> reach another server needs a press first, and is described <a href="#the-embed">below</a>. Until this line said <q>it was the only one</q>, which stopped being true the day the recording was mounted; the line was corrected in the same change, <a href="/changelog#a-2026-09-09-embed">in the register</a>.</li>
+    <li><strong>No third-party requests you did not ask for.</strong> Until 9 September 2026 the pages loaded their two typefaces from Google&rsquo;s font CDN, which told Google your IP address and user agent on every page load, before you had read a word. <strong>The fonts are now served from this domain</strong> and that request is gone. Nothing on this site now reaches another server on its own account. The things that <em>can</em> reach another server all need a press first, and they are described <a href="#the-embed">below</a>. This line has now been corrected twice: it once said the fonts were the only third-party request, which stopped being true the day the first recording was mounted, and it then said there was exactly one such recording, which stopped being true when <a href="/gloomy-sunflowers">Sheet No.&nbsp;11</a> mounted two more. Both corrections are <a href="/changelog">in the register</a>, and the count is no longer written into this sentence &mdash; a number that has already gone stale twice is a number this page should not be keeping.</li>
     <li><strong>No accounts and no comments</strong>, and <strong>nothing that submits</strong>. There is exactly one place on this site to type: the search field on <a href="/search">the finding aid</a>. It has no server behind it. What you type is matched against a file your browser has already downloaded, inside your browser, and it is never sent anywhere &mdash; not to us, because there is no us to send it to. Until 9 September 2026 this line said there was nowhere on the site to type anything at all; the field is new and the line was corrected in the same change that added it, which is <a href="/changelog#a-2026-09-09-search">in the register</a>.</li>
     <li><strong>No advertising, and nothing sold or shared.</strong> There is no commercial arrangement here to share anything under.</li>
   </ul>
@@ -305,9 +305,17 @@
 
   <h2 id="the-embed">The one embedded thing <a class="qe-anchor" href="#the-embed"><span class="qe-sr">Link to this section</span></a></h2>
 
-  <p>At the foot of <a href="/">the home page</a> there is a recording of T. S. Eliot reading <cite>The Waste Land</cite>. It is hosted on YouTube, which is Google, and it is the only place on this site where another company can learn anything about you.</p>
+  <p>There are <strong>three embedded recordings</strong> on this site, and they are the only places where another company can learn anything about you. All three are on YouTube, which is Google, and all three behave identically:</p>
 
-  <p><strong>Nothing is fetched from it until you press play.</strong> What the page actually contains is a picture we drew and a link. No YouTube script, no YouTube thumbnail, no invisible pixel, no <code>preconnect</code> hint &mdash; a reader who never presses play makes exactly the same requests as a reader of any other page here, which is to say requests to this domain and no other. That is checked by <code>tools/check-metadata.mjs</code> on every run, and the check reads our JavaScript as well as our markup, because a script that quietly reaches a third party would otherwise make this paragraph false while every page looked clean.</p>
+  <ul>
+    <li>T.&nbsp;S. Eliot reading <cite>The Waste Land</cite>, at the foot of <a href="/">the home page</a>.</li>
+    <li>Townes Van Zandt playing <q>Waitin&rsquo; Around to Die</q>, on <a href="/gloomy-sunflowers#galveston">Sheet No.&nbsp;11</a>.</li>
+    <li>Nirvana&rsquo;s <q>Polly</q>, on <a href="/gloomy-sunflowers#hi-how-are-you">the same sheet</a>.</li>
+  </ul>
+
+  <p><strong>Google is still one party, however many recordings there are</strong>, and that is the fact this section is really about. Adding the second and third did not add a company to this page; it added two more places where you can choose to reach the one that was already here.</p>
+
+  <p><strong>Nothing is fetched from any of them until you press play.</strong> What each page actually contains is a picture we drew and a link. No YouTube script, no YouTube thumbnail, no invisible pixel, no <code>preconnect</code> hint &mdash; a reader who never presses play makes exactly the same requests as a reader of a page with no recording on it at all, which is to say requests to this domain and no other. That is checked by <code>tools/check-metadata.mjs</code> on every run, and the check reads our JavaScript as well as our markup, because a script that quietly reaches a third party would otherwise make this paragraph false while every page looked clean.</p>
 
   <p><strong>What happens if you do press it.</strong> Your browser asks <code>www.youtube-nocookie.com</code> for a video player, and Google learns your IP address, your user-agent string, and which video you asked for. It is told that you arrived from <code>queering.earth</code> and is <em>not</em> told which page you were on, because of the referrer policy described below. From that moment Google&rsquo;s privacy policy applies to that player, not ours, and we have no visibility into it and no arrangement with them.</p>
 

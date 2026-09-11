@@ -75,7 +75,15 @@ WIDE = {"waterhouse-1916-miranda-the-tempest",
         # the fox in his undergrowth is 232px tall and the animal stops being findable
         # inside his own thicket.
         "hedgehog-bewick-general-history-of-quadrupeds-1792",
-        "cur-fox-bewick-general-history-of-quadrupeds-1792"}
+        "cur-fox-bewick-general-history-of-quadrupeds-1792",
+        # Almond Blossom is wide for a different reason from the four above, which are
+        # all about losing fine line to a short ladder. This is a painting, and it is
+        # LANDSCAPE — 1280x1011. In a 368px box it is 291px tall, and the subject is a
+        # canopy seen from below, so the thing the picture is about is the spread. It
+        # is also the sheet's ending rather than one of its illustrations. The
+        # Sunflowers beside it stays narrow: it is portrait, and a vase on a table
+        # reads perfectly well at 368.
+        "van-gogh-almond-blossom-1890-vgm-google-art-project"}
 LADDER_NORMAL = (368, 736)
 LADDER_WIDE = (544, 1088)
 

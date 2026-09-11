@@ -297,7 +297,7 @@ Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-212 entries across 57 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+215 entries across 58 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

@@ -34,6 +34,36 @@ It is **not** a rule that Ryan's quote collection is unusable. A direct quotatio
 
 ## Verified
 
+### Sheet No. 11 — two plates and two recordings, added 11 September 2026
+
+**Both paintings are Vincent van Gogh's, and both are public domain** — he died in 1890, so the works have been out of copyright for more than a century. Neither is a borrowed reading; both are the objects the sheet is already arguing about, which is the standard [/how-we-quote](https://queering.earth/how-we-quote) sets for a quotation and the one a plate should meet too.
+
+- *Still Life: Vase with Fifteen Sunflowers*, Arles, August 1888. **National Gallery, London (NG3863).** On `#the-tether`, because Gadsby's argument is about this painting and the sheet had been discussing it without showing it.
+- *Almond Blossom*, Saint-Rémy-de-Provence, February 1890. **Van Gogh Museum, Amsterdam**, digitised by the Google Art Project. On `#almond-blossom`, where letter 857 is mounted.
+
+**Both copies came from Wikimedia Commons at 1280px**, not from the museums directly, and the figcaptions say so. That is a rendition of a digitisation, not the canvas and not the museum's own master, and the distinction is worth keeping: what is public domain is the painting, and what we are serving is somebody else's photograph of it, at a size we chose. The licence on both Commons files is recorded as public domain, with Van Gogh named as the artist.
+
+**A note on the alt text.** Both descriptions say what is in the picture and decline to say what it means — the sunflowers one records that half the heads have gone over, and the almond one that the tree has no trunk and no ground, because those are facts about the canvas. The reading is the sheet's job and it is in the prose, where a reader who cannot see the plate gets it on the same terms as one who can.
+
+**Two recordings are embedded, and neither is ours.**
+
+- **Townes Van Zandt, "Waitin' Around to Die"**, filmed 1975 for *Heartworn Highways* (dir. James Szalapski, released 1981). Posted by **Light in the Attic Records**, who reissued the film — so the link goes to the rightsholder's own channel, which is what our policy asks for.
+- **Nirvana, "Polly"**, from *Nevermind* (DGC, 1991), written by Kurt Cobain. Official audio, posted by the rightsholder.
+
+**Both video ids were verified to resolve before they were mounted**, through YouTube's oEmbed endpoint, and the first id a search returned for "Polly" did not resolve at all. A dead embed on a sheet is a citation to nothing.
+
+**One lyric is quoted; one is not, and the two are different decisions.**
+
+**Townes Van Zandt, "Waitin' Around to Die"** — the fifth verse, less its closing refrain, three lines, on `#galveston`. Recorded for *For the Sake of the Song* (Poppy, 1968) and performed in the 1975 film embedded beside it. **Text supplied by Ryan from Genius, which is NMPA-licensed, and checked by him against the recording.** That is the standard [/how-we-quote](https://queering.earth/how-we-quote) asks for and it is why this one is here: the first draft of the sheet declined to quote it, because the session writing it had no licensed text in front of it and this file does not record quotations nobody read.
+
+**It is three lines of a five-verse song, it is not the refrain, and every line of it is discussed on the page** — the policy's three tests. The refrain is the song's title line and the most quotable thing in it, which is exactly why it is the part left out.
+
+**Nirvana, "Polly" — no lyric, and verification is not the reason.** Ryan has offered to supply a checked text and could do so in minutes. The reason the sheet quotes none is stated on its own face: **every word of that song is spoken by the man who committed the crime.** Cobain wrote it in the abductor's first person deliberately, so that a listener has no position to occupy but his. Mounting those words as a `.qe-specimen` would give a rapist's speech the same ruled box, display face and herbarium label this cabinet gives to Woolf and to Plath, on the one sheet that also carries the account of two men singing them at a real girl. The recording is linked whole instead.
+
+**This is recorded as a decision, not a gap, and it is Ryan's to reverse.** If the wording goes on the page it should go on deliberately and with the mounting thought about, rather than arriving because a lyric became available.
+
+**The background to "Polly" is sourced, not remembered:** the August 1987 abduction in Tacoma, the escape at a filling station, Cobain's choice of the perpetrator's voice, and his line that what needs doing is "teaching men not to rape" were read on Wikipedia's article for the song on 11 September 2026. **That is a tertiary source and it is marked as one here.** The primary for the 1992 incident is the *Incesticide* sleeve, already recorded above.
+
 ### Sheet No. 11 — four artists, five primaries, read 11 September 2026
 
 **Quoted on:** [My Gloomy Sunflowers](https://queering.earth/gloomy-sunflowers), Sheet No. 11.

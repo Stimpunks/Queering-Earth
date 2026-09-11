@@ -118,6 +118,24 @@ And a third, at Sower 12: the doctors call it an "organic **delusional** syndrom
 
 **What is not settled, and what it changes.** Nothing in the sheet's argument. The clauses in dispute are not the ones the sheet turns on, and "A biological conscience is better than no conscience at all" is identical in both. **It is a label question and a possible third instance of the edition pattern**, which would make that pattern a rule. Settling it needs one look at a 1993 or Seven Stories printing, which nobody here has.
 
+### A third fault in the imported overlap gate: a closed `details` reads as text on text (2026-09-11)
+
+Fixed here; recorded because Star Stuff is not edited from this repo and its copy has the same blind spot.
+
+`check-overlap.mjs` walks text nodes and calls `hidden()` on each, which tests `display:none`, `visibility:hidden` and `opacity:0` plus a declared list of visually-hidden selectors. **None of those describe a closed `details`.** Chrome reports the element's own height as the summary alone — 45px — while its children keep full-height rects that lie across whatever follows. The first `details` ever placed inside a landmark here produced **22 phantom collisions**, 10 on Letter and 12 on A4.
+
+**It cannot surface on screen, which is why it went unnoticed in two repos.** `reveal.mjs` opens every closed `details` before the screen pass and undoes it before the paper passes, so the closed state exists only on paper — the medium this house has already been burned by and the one Star Stuff's copy does not measure at all.
+
+**The fix is one loop in `hidden()`**: a node that is a non-`summary` child of a `details` without `open` is not painted, on any medium, in any engine. That is the HTML spec rather than a style heuristic, which is what earns it a place beside a declared selector list rather than being the kind of sniffing the gate's own comment refuses.
+
+**Proved in both directions before it was believed**, per the house rule:
+
+- a real in-flow overlap **inside an open `details`** is still reported — screen, Letter and A4;
+- a closed `details` does not mask a real overlap **elsewhere on the same page**;
+- and the clean page reports zero.
+
+**A print stylesheet must not force the content visible**, and that is now the load-bearing constraint rather than a preference. Forcing it would paint text this rule skips, turning a false-positive fix into a genuine blind spot. Sheet No. 11's content warning therefore prints its keyword list and not its detail — the keyword half is built to stand alone.
+
 ### An open item for a session in the SKS repo: the library's index holds a third of a book, silently (2026-09-11)
 
 Not to be fixed from here. `pdftotext` extracts **299,336 words** from `raw/The Unabridged Journals of Sylvia Plath - PDF Room.pdf`. The qmd extraction at `.qmd/library/The Unabridged Journals of Sylvia Plath - PDF Room.pdf.md` holds **109,718** — about 37% — and ends mid-word, part-way through the 1956 material.

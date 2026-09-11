@@ -1452,8 +1452,10 @@ a gate is a reason to build the gate. Three things about the port are worth know
   288×39px rects happen to miss everything on these fourteen pages. Position luck, one moved
   heading from being noisy.
 
-**Two faults in the imported tool were found and fixed here**, and both are recorded in
-`DECISIONS.md` because Star Stuff is not edited from this repo: its clip walk started at
+**Three faults in the imported tool were found and fixed here**, and all are recorded in
+`DECISIONS.md` because Star Stuff is not edited from this repo. The third is that a closed
+`details` reports child rects it never paints, which read as text on text on paper and on
+paper only; the first two: its clip walk started at
 `el.parentElement`, so an element clipping its **own** overflowing text was never a clip
 host, and its `locate()` reported `page` for precisely the absolutely-positioned case the
 gate exists to catch.

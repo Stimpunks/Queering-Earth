@@ -2586,6 +2586,27 @@ Sheet · an essay
 
 # My Gloomy Sunflowers
 
+Content warning — in brief
+
+- Suicide
+- Depression
+- Psychiatric coercion
+- Chronic pain
+- Opioid use
+- Domestic violence
+- Rape
+- Sexual violence against a child
+
+Keywords first, so the decision can be made without reading the detail. **The full version names specifics**, including the real case behind one of the songs; open it only if you want them. [Crisis lines are at the foot of the sheet.](#help)
+
+Content warning in full
+
+This sheet is about four artists who were very ill and who mostly did not survive it. It carries **suicide** — three of the four died by it, and the fourth of alcoholism — **depression and psychiatric crisis**, **coercive psychiatric treatment** including insulin coma therapy and electroshock given to two twenty-year-olds, **chronic pain and opioid use**, and **domestic violence**.
+
+It also carries **the abduction, rape and torture of a fourteen-year-old girl** — the 1987 case behind Nirvana’s “Polly” — and an account, in Kurt Cobain’s own words, of **two men raping a girl while singing that song**. Both are discussed in [the last of the four sections](#hi-how-are-you), and the song itself is embedded there.
+
+**No method of suicide is described anywhere on this sheet**, and no death is presented as an ending the work was building towards. If you want the argument without the case histories, [the first section](#the-tether) and [the last](#what-else-it-could-have-been) carry it between them.
+
 **Written by**
 : Ryan Boren
 
@@ -2598,10 +2619,7 @@ Sheet · an essay
 **Also read**
 : Hannah Gadsby, *Nanette* (2018) · Shoshana Kessock, [*Falling/Burning*](https://shoshanakessock.wordpress.com/2018/07/12/falling-burning-hannah-gadsby-nanette-and-the-myth-of-the-mad-artist/) (2018)
 
-**Content**
-: Psychiatric treatment, suicide, and one account of a rape. No methods are described. Help, at the foot.
-
-I have spent years with four artists, usually together: a van Gogh open on the screen, Plath in my hands, Townes Van Zandt and Kurt Cobain in my ears. They help me process what a writer about Townes once called “the immense ache of this world.” **They are my gloomy sunflowers.** All four are sold to me, and have been my whole life, as proof of one idea — that the pain is where the work came from. I do not believe it any more. This sheet is the reading that stopped me, and the four records that would not support it.
+I have spent years with four artists, usually together: a van Gogh open on the screen, Plath in my hands, Townes Van Zandt and Kurt Cobain in my ears. They help me process what a writer about Townes once called “the immense ache of this world.” **They are my gloomy sunflowers.** All four are sold to me, and have been my whole life, as proof of one idea — that the pain is where the work came from. **The pain is real and it is in the work.** I am not going to pretend otherwise; it is audible and it is visible and it is a large part of why I keep going back to them. What I have stopped believing is the arrow. Not that they suffered — that the suffering is what made the work possible, that it was the price of it, that it was somehow the necessary cost of being that good. This sheet is the reading that moved me off that, and four records that do not support the bargain.
 
 ## The tether
 
@@ -2622,6 +2640,10 @@ Specimen — what she used to believe
 Shoshana Kessock, *Falling/Burning: Hannah Gadsby, Nanette, and Being a Bipolar Creator*, in *Disability Visibility*, ed. Alice Wong, 2020.
 
 *Because I used to believe it was true.* So did I. That is the sentence this sheet is written out of, and it is worth saying plainly that it is hers and not ours — she is a Disabled writer whose byline has more than once been absorbed into the anthology’s title, including, until recently, on our own sister site.
+
+![Fifteen sunflowers crowded into a plain earthenware vase on a table, painted almost entirely in yellows — the wall behind, the table, the vase and the flowers all shades of the same colour. Some heads are in full flower, some have gone to seed and turned brown, and several are bent or facing away.](images/van-gogh-sunflowers-1888-national-gallery-ng3863.jpg)
+
+Vincent van Gogh, *Still Life: Vase with Fifteen Sunflowers*, Arles, August 1888. National Gallery, London (NG3863). Public domain; this copy from Wikimedia Commons at 1280px. **These are the sunflowers Gadsby means.** Half of them are already going over, which is a fact about the painting that the myth has never had much use for.
 
 ### What the four do not share
 
@@ -2692,9 +2714,43 @@ Fran Petters, quoted in Hardy, *A Deeper Blue*.
 
 **Hardy will not close the loop, and I am not going to close it for him.** A doctor at the same hospital told him that electroshock causes short-term loss but that wiping out blocks of childhood “is not the result of such treatment”, and offered alcoholism as an alternative explanation; other people close to Townes thought he was exaggerating it to work on his parents. **The clean story — the treatment took his childhood — is the one thing the careful biography declines to assert.** I want it to be true because it is a better sentence. That is exactly why I should not have it.
 
+### The blacksmith in the kitchen
+
+There is one more document from this part of his life, and it is the only place on this sheet where you can watch the argument happen rather than read about it.
+
+In 1975 James Szalapski filmed Townes at home outside Nashville for *Heartworn Highways*. Sitting on a stool in the kitchen is Uncle Seymour Washington, a retired blacksmith and a neighbour. Townes plays him “Waitin’ Around to Die” — the bleakest song in his catalogue, and the one usually offered as proof of everything this sheet is arguing against — and partway through, Uncle Seymour begins to cry, and somebody comforts him.
+
+[  Play the recording Townes Van Zandt, *Waitin’ Around to Die* · on YouTube ](https://www.youtube.com/watch?v=IC6vcyTN8S0)
+
+Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
+
+Townes Van Zandt, “Waitin’ Around to Die”, filmed 1975 for *Heartworn Highways* (dir. James Szalapski, released 1981). Posted by Light in the Attic Records, who reissued the film.
+
+**That is the whole thesis in ninety seconds, and nobody had to write it down.** The song is not doing what the myth says songs like this do. It is not a symptom being displayed. It is one man singing to another man in a kitchen, and the other man is moved, and that is what the song was for. Uncle Seymour is not weeping at a diagnosis. He is weeping because somebody found words for something and handed them over.
+
+The song is a life told in five verses — a father who beat a mother, a girl in a Tuscaloosa bar, a robbery, two years inside — and it arrives here:
+
+Specimen — the friend at last
+
+> Ah, but now, I’m out of prison, I got me a friend at last\
+> He don’t drink or steal or cheat or lie\
+> Ah his name is Codeine, he’s the nicest thing I’ve seen
+
+Townes Van Zandt, “Waitin’ Around to Die”, fifth verse, less its closing refrain. Recorded for *For the Sake of the Song* (Poppy, 1968) and performed in the film above.
+
+**The whole song is a search for a tether, and it ends by finding the wrong one.** Every verse is somebody leaving, and the last one is a man who has finally got a friend who will not let him down, and the friend is a drug. That is the bleakest joke Townes ever wrote and it is why the song is Exhibit A for the version of him I am arguing against.
+
+But look at what is actually in the room. **The man in the song has nobody. The man listening to it has somebody — he is sitting in the kitchen of the person singing to him, and he is allowed to cry there.** The song is the case for despair and the scene around it is the refutation, in the same ninety seconds.
+
+One more thing, because it comes back in Kurt’s section: **the narrator is not Townes.** He never went to prison. It is a character, written in a first person that is not his, by a man of twenty-four — and it has been read as autobiography for sixty years, because a first person in a song is almost always taken as a confession. Hold onto that.
+
 ## The almond tree
 
 On 31 January 1890 Theo wrote to his brother in the asylum at Saint-Rémy to say that his son had been born, and that they had named him Vincent Willem. Vincent started a painting for the child: branches in flower, seen from below, against a blue sky. To his mother, on 19 February, he described it as “large branches of white almond blossom against a blue sky.”
+
+![Branches of an almond tree in white blossom, seen from directly underneath and spreading across the whole canvas against a flat pale turquoise sky. The branches are dark and angular, cropped by every edge, so the tree has no trunk and no ground — only canopy and sky.](images/van-gogh-almond-blossom-1890-vgm-google-art-project.jpg)
+
+Vincent van Gogh, *Almond Blossom*, Saint-Rémy-de-Provence, February 1890. Van Gogh Museum, Amsterdam; digitised by the Google Art Project. Public domain; this copy from Wikimedia Commons at 1280px. Painted for his nephew, and hung over the child’s bed.
 
 Then, in a letter to Theo of about 17 March 1890, three passages. They are in this order:
 
@@ -2729,6 +2785,18 @@ Sylvia Plath, *The Unabridged Journals of Sylvia Plath*, ed. Karen V. Kukil, 20 
 Read what the passage actually says. It is not a cry. It is a weather report, written by somebody who has been through this before and expects to again, and it ends on *weapons* — on self-knowledge as a tool. She is describing an illness while working, which is what almost every day of a working artist’s illness looks like and almost nothing in the myth allows for.
 
 Five years earlier she had been twenty, in the room described above. She would write *Ariel*. And the poems of hers I return to most are not the ones the myth wants: “Morning Song” and “Nick and the Candlestick”, both written for her children, both tender, neither ever quoted at me as evidence of anything.
+
+### What she was read as
+
+There is a thing this sheet is slower to say about Sylvia Plath than it is about Townes Van Zandt.
+
+The 1964 Galveston file reads a young man’s gentleness as a threat to his adequacy as a male, and I said that document queers itself. **Plath’s is the same argument run the other way, and it is so ordinary that it is easy to walk past.** Cooper’s case-formulation — the careful one, the one that refuses manic depression — places her illness in the context of “borderline personality disorder”. Set that beside the life it is describing: a woman in the 1950s who was ferociously ambitious, who wanted the work and the marriage and the children and would not choose between them, whose anger was large and whose standards for herself were merciless.
+
+I am not competent to re-diagnose her and I am not going to try; a sheet that spent four sections objecting to retrospective diagnosis does not get to do one at the end. What I will say is what this sheet has said about the other three. **A label is doing work the person did not consent to and cannot answer**, and the question this cabinet exists to ask is what else it could have been.
+
+**Because none of the expectations around her were neutral, and most of them were not about illness at all.** She was a woman expected to be a wife who wrote, in that order. Her husband could leave and go on being a poet; she could not leave and go on being anything. She was given unmodified electroconvulsive therapy at twenty. She had two small children and no money of her own. When she wrote to her psychiatrist about her marriage — [those fourteen letters](#the-insulin) — she was describing violence to the one person who might believe her, in a decade with no word for what was happening to her and no door out of it.
+
+**Alive now, almost every line of that paragraph is different.** Not the illness — the illness was real, it is still real, and people are still dying of it. But a woman writing today can leave a marriage without being ruined by it, can hold her own money, is not given unmodified ECT at twenty, and would not have her manuscript reordered after her death by the husband she had separated from, because he happened to be her executor. **The illness was hers. Nearly everything arranged around it was an arrangement** — and arrangements are precisely the thing this site was built to say were [never inevitable](https://queering.earth/manifesto).
 
 ### An editor, and a sheet still to come
 
@@ -2766,6 +2834,12 @@ Azerrad, *Come As You Are*, on the specialists Cobain saw for his stomach.
 
 Thirty years of people calling that voice the sound of a tortured soul. It may have been the sound of a man whose back hurt.
 
+**And there is a conclusion all of this points at.** Read the Azerrad passage again as a record of care rather than as a detail about a singer. Nine specialists in the first half of one year. Ulcers ruled out. No diagnosis at the end of it. A man in continuous, documented pain, and the only two things that reliably touched it were opiates and a stage.
+
+**He had no adequate pain relief, so he treated himself.** That sentence is the right way round, and the usual one is backwards. The heroin is the thing everybody remembers about Kurt Cobain and it is the *second* thing that happened; the first is that a medical system examined a young man in pain nine times in six months and could not tell him what was wrong, and he went on hurting in the meantime. Whatever else his addiction was, it began as a person doing the only thing left to do about a pain nobody would name.
+
+Which makes it the same shape as Plath’s, one decade over. **Not people who failed to hold him** — he had a wife, a daughter, a band and the attention of the world — **but arrangements with no provision in them for what was actually wrong with him.** You cannot be held by a system that has not worked out what it is holding.
+
 ### What he did with it
 
 Which brings me to the document I would put on the wall. The liner notes Cobain wrote for *Incesticide* in late 1992 open with him hunting a record: the out-of-print first Raincoats LP, a trip to Rough Trade, a hand-drawn map, and Ana da Silva found working in an antique shop, who offers to send him her own copy. He writes:
@@ -2790,6 +2864,24 @@ Kurt Cobain, liner notes to *Incesticide*, 1992.
 
 **Mounted alone, the request is a slogan. It is not a slogan.** It is the second half of a man working out, in public, on the sleeve of a record, what he owes the people his work reaches — after learning what two of them did to a woman while singing something he wrote. Cutting it loose from its reason is the kind of tidying this cabinet keeps a ledger to prevent, and it happens to this passage constantly.
 
+### The song they were singing
+
+It is worth knowing what “Polly” actually is, because the liner note only works if you do.
+
+In August 1987 a fourteen-year-old girl leaving a concert in Tacoma was abducted by a man named Gerald Arthur Friend, who suspended her from a pulley in his mobile home and raped and tortured her. She escaped by jumping from his truck at a filling station. Cobain read about the case and wrote a song about it — **in the abductor’s voice**, first person, without editorial, so that a listener has no position to occupy except his. It is on *Nevermind*, and he wrote it alone.
+
+[  Play the recording Nirvana, *Polly* · on YouTube ](https://www.youtube.com/watch?v=DrlaVYKWeLU)
+
+Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
+
+Kurt Cobain, “Polly”, from *Nevermind* (DGC, 1991). Official audio, posted by the rightsholder.
+
+**Then two men sang it while raping a girl.** That is the sentence in the liner notes above, and this is what it means: Cobain wrote a first-person account of a rapist in order to make the position unbearable, and two members of his audience heard the same words as a soundtrack. They did not misunderstand a difficult metaphor. They took a voice the songwriter had put on in horror and wore it in earnest.
+
+He said afterwards that the thing that actually needs doing is “teaching men not to rape.” It is the least ambiguous sentence in this entire sheet and it is thirty-five years old.
+
+**I have deliberately quoted no words from this song, and Townes’ is quoted three sections up, so the difference is worth stating.** It is not that the words were hard to check. **Every word of “Polly” is spoken by the man who did it** — that is the whole construction of the song, and it is why it works. Setting those words on this paper, in the display face, inside a ruled box with a herbarium label pinned to it, would give a rapist’s speech the exact mounting this cabinet gives to Woolf and to Plath, on the one sheet that also carries the account of two men singing them at a real girl. The recording is above, whole, in his own arrangement. That is where that voice belongs.
+
 He signs the notes “Kurdt (the blond one)”.
 
 **This is the tether, and it runs outward.** The Daniel Johnston T-shirt he wore — another Disabled artist’s drawing, worn on television by the most photographed man in music — is the same gesture in one object. The liner notes are that gesture at full length, in his own prose: a famous man spending his platform on other people’s records and closing the door on the part of his audience that hates queers, women and people of colour. **Connection was not something that happened to Kurt Cobain. It was something he did, repeatedly, in writing.**
@@ -2810,7 +2902,19 @@ Three of these four died by suicide. The fourth drank himself to death at fifty-
 
 So: what else could any of it have been? A clinic that read a sensitive boy as a sensitive boy. A profession that asked Sylvia Plath what she needed instead of what was wrong with her. Nine specialists who found the nerve. An audience that heard Kurt Cobain ask, and listened. **None of those is a fantasy. Every one of them was available at the time, to somebody paying attention, and in at least one case somebody was** — a young doctor in Galveston who quit his profession over what was being done to a twenty-year-old, and told his wife he did not think there was anything really wrong with him.
 
-They are still my gloomy sunflowers. I still put the painting up and the records on. What has changed is what I think I am looking at. Not four people destroyed into greatness. **Four people who kept working, in the gaps, for as long as somebody held the line for them.**
+### Held, and what that word is doing
+
+It would be easy to end this by saying they kept working for as long as somebody held the line for them. **It is not true of any of them.** Theo never let go; Vincent died anyway. Plath was writing at the highest rate of her life in the months she was least supported. It is a tidy sentence and it quietly blames the living — it says that when these four died, somebody had stopped holding on.
+
+And there is something wrong with the word *held* itself. **All four of these people were markedly self-reliant, and that is not incidental to why neurodivergent readers find them.** They were not waiting to be carried. The tether in Gadsby’s line was never a rescue — Theo did not save Vincent, he wrote to him and paid for the paint.
+
+**For Plath the point is political rather than personal.** It is not that the people around her put her down. It is that the structures of 1963 did not permit her to be held at all: no money of her own, no way out of a marriage that would not ruin her, a psychiatry that had already given her electricity at twenty, and a literary world that would hand her manuscript to the husband she had separated from. **You cannot be held by arrangements built so that holding is unavailable.**
+
+Cobain is the same failure one decade over. He had a wife, a daughter, a band and the attention of the world, and none of that could tell him what was wrong with his stomach. **Neither of them was failed by a shortage of people. They were failed by arrangements with no provision in them for what was actually wrong.**
+
+So the sentence I want is not about who held on. **They endured this, at length, on their own terms, until it exceeded what a person can carry.** The going was theirs.
+
+They are still my gloomy sunflowers. I still put the painting up and the records on. What has changed is what I think I am looking at. Not four people destroyed into greatness, and not four people rescued for a while either. **Four self-reliant people who worked whenever they were well enough to — far more often than the story admits — and who endured, on their own terms, until enduring became impossible. What failed them was not mostly the people. It was the arrangements, and arrangements are the thing this site was built to say were never inevitable.**
 
 ## If this is your weather too
 
@@ -3849,6 +3953,32 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Cabinet
 
 2026 · 11 September · latest
+
+## Two van Goghs, two recordings, and a privacy page that had a number in it
+
+Ryan asked for the *Almond Blossom* on the sheet, for any other public-domain paintings that fit, and for click-to-load recordings of the songs with some lyrics quoted under the new policy. Three of those four were straightforward.
+
+MountedTwo paintings, and two recordings that fetch nothing until pressed
+
+*Almond Blossom* (Van Gogh Museum, February 1890) sits with letter 857, and *Still Life: Vase with Fifteen Sunflowers* (National Gallery, August 1888) sits with Gadsby’s line, which had been arguing about that painting without showing it. Both are public domain, both came from Wikimedia Commons at 1280px, and the figcaptions say so — **what is out of copyright is the painting, and what we serve is somebody else’s photograph of it at a size we chose.**
+
+*Almond Blossom* is the sheet’s second wide plate holder for a reason unlike the other five: the existing wide plates are all line work losing hatching to a short ladder, and this is a landscape painting of a canopy, where the spread *is* the subject.
+
+Townes playing “Waitin’ Around to Die” to a weeping Uncle Seymour Washington in *Heartworn Highways* gives [Sheet No. 11](https://queering.earth/gloomy-sunflowers#galveston) the Townes tether it did not have — every other artist on it had one. “Polly” sits under the *Incesticide* liner note, because that passage only works if you know what the song is. **Both ids were checked against YouTube’s oEmbed endpoint before they were mounted, and the first id a search returned for “Polly” did not resolve at all.**
+
+Label correctedThe privacy page stops counting
+
+Two sentences there became false the moment the sheet gained a recording: that **one** thing could reach a third party, and that the Eliot recording was **the only place** another company could learn anything about you. Corrected in the same change, which is the rule.
+
+**The fix is not a new number.** That sentence has now gone stale twice — once when the first recording was mounted and once today — so the count came out of it altogether. The page names the three recordings and then says the thing that actually matters and does not change: **Google is one party however many recordings there are.** Adding two did not add a company; it added two more places where a reader can choose to reach the one already there.
+
+CabinetNo lyric was quoted, for two different reasons
+
+The request included lyrics. For “Waitin’ Around to Die” the answer is the ordinary rule — [we quote what we have read](https://queering.earth/how-we-quote), and no licensed text was in front of the session; the performance is embedded instead.
+
+For “Polly” the same applied, and a second reason is stated on the sheet itself. **Every word of that song is spoken by the man who committed the crime**, which is what Cobain built it to do. Setting those words in a ruled box under a herbarium label would give a rapist’s speech the mounting this cabinet gives to Woolf and to Plath. The recording is linked whole instead. **Whether the wording belongs on the page is Ryan’s call, and it is recorded here as a decision rather than left as a gap.**
+
+2026 · 11 September
 
 ## Sheet No. 11, and four biographies that would not say what they were supposed to
 
@@ -6012,6 +6142,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 
 ### [The attribution ledger](https://queering.earth/ledger) every quotation traced
 
+### [What this site knows about you](https://queering.earth/privacy) the privacy page
+
 ### [What we quote, and why we may](https://queering.earth/how-we-quote) the quoting policy
 
 ### [What is settled, and what is open](https://queering.earth/what-is-settled) the decision log
@@ -6318,7 +6450,7 @@ Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-212 entries across 57 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+215 entries across 58 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -6407,6 +6539,36 @@ It is **not** a rule that Ryan's quote collection is unusable. A direct quotatio
 ---
 
 ## Verified
+
+### Sheet No. 11 — two plates and two recordings, added 11 September 2026
+
+**Both paintings are Vincent van Gogh's, and both are public domain** — he died in 1890, so the works have been out of copyright for more than a century. Neither is a borrowed reading; both are the objects the sheet is already arguing about, which is the standard [/how-we-quote](https://queering.earth/how-we-quote) sets for a quotation and the one a plate should meet too.
+
+- *Still Life: Vase with Fifteen Sunflowers*, Arles, August 1888. **National Gallery, London (NG3863).** On `#the-tether`, because Gadsby's argument is about this painting and the sheet had been discussing it without showing it.
+- *Almond Blossom*, Saint-Rémy-de-Provence, February 1890. **Van Gogh Museum, Amsterdam**, digitised by the Google Art Project. On `#almond-blossom`, where letter 857 is mounted.
+
+**Both copies came from Wikimedia Commons at 1280px**, not from the museums directly, and the figcaptions say so. That is a rendition of a digitisation, not the canvas and not the museum's own master, and the distinction is worth keeping: what is public domain is the painting, and what we are serving is somebody else's photograph of it, at a size we chose. The licence on both Commons files is recorded as public domain, with Van Gogh named as the artist.
+
+**A note on the alt text.** Both descriptions say what is in the picture and decline to say what it means — the sunflowers one records that half the heads have gone over, and the almond one that the tree has no trunk and no ground, because those are facts about the canvas. The reading is the sheet's job and it is in the prose, where a reader who cannot see the plate gets it on the same terms as one who can.
+
+**Two recordings are embedded, and neither is ours.**
+
+- **Townes Van Zandt, "Waitin' Around to Die"**, filmed 1975 for *Heartworn Highways* (dir. James Szalapski, released 1981). Posted by **Light in the Attic Records**, who reissued the film — so the link goes to the rightsholder's own channel, which is what our policy asks for.
+- **Nirvana, "Polly"**, from *Nevermind* (DGC, 1991), written by Kurt Cobain. Official audio, posted by the rightsholder.
+
+**Both video ids were verified to resolve before they were mounted**, through YouTube's oEmbed endpoint, and the first id a search returned for "Polly" did not resolve at all. A dead embed on a sheet is a citation to nothing.
+
+**One lyric is quoted; one is not, and the two are different decisions.**
+
+**Townes Van Zandt, "Waitin' Around to Die"** — the fifth verse, less its closing refrain, three lines, on `#galveston`. Recorded for *For the Sake of the Song* (Poppy, 1968) and performed in the 1975 film embedded beside it. **Text supplied by Ryan from Genius, which is NMPA-licensed, and checked by him against the recording.** That is the standard [/how-we-quote](https://queering.earth/how-we-quote) asks for and it is why this one is here: the first draft of the sheet declined to quote it, because the session writing it had no licensed text in front of it and this file does not record quotations nobody read.
+
+**It is three lines of a five-verse song, it is not the refrain, and every line of it is discussed on the page** — the policy's three tests. The refrain is the song's title line and the most quotable thing in it, which is exactly why it is the part left out.
+
+**Nirvana, "Polly" — no lyric, and verification is not the reason.** Ryan has offered to supply a checked text and could do so in minutes. The reason the sheet quotes none is stated on its own face: **every word of that song is spoken by the man who committed the crime.** Cobain wrote it in the abductor's first person deliberately, so that a listener has no position to occupy but his. Mounting those words as a `.qe-specimen` would give a rapist's speech the same ruled box, display face and herbarium label this cabinet gives to Woolf and to Plath, on the one sheet that also carries the account of two men singing them at a real girl. The recording is linked whole instead.
+
+**This is recorded as a decision, not a gap, and it is Ryan's to reverse.** If the wording goes on the page it should go on deliberately and with the mounting thought about, rather than arriving because a lyric became available.
+
+**The background to "Polly" is sourced, not remembered:** the August 1987 abduction in Tacoma, the escape at a filling station, Cobain's choice of the perpetrator's voice, and his line that what needs doing is "teaching men not to rape" were read on Wikipedia's article for the song on 11 September 2026. **That is a tertiary source and it is marked as one here.** The primary for the 1992 incident is the *Incesticide* sleeve, already recorded above.
 
 ### Sheet No. 11 — four artists, five primaries, read 11 September 2026
 
@@ -8251,6 +8413,24 @@ And a third, at Sower 12: the doctors call it an "organic **delusional** syndrom
 
 **What is not settled, and what it changes.** Nothing in the sheet's argument. The clauses in dispute are not the ones the sheet turns on, and "A biological conscience is better than no conscience at all" is identical in both. **It is a label question and a possible third instance of the edition pattern**, which would make that pattern a rule. Settling it needs one look at a 1993 or Seven Stories printing, which nobody here has.
 
+### A third fault in the imported overlap gate: a closed `details` reads as text on text (2026-09-11)
+
+Fixed here; recorded because Star Stuff is not edited from this repo and its copy has the same blind spot.
+
+`check-overlap.mjs` walks text nodes and calls `hidden()` on each, which tests `display:none`, `visibility:hidden` and `opacity:0` plus a declared list of visually-hidden selectors. **None of those describe a closed `details`.** Chrome reports the element's own height as the summary alone — 45px — while its children keep full-height rects that lie across whatever follows. The first `details` ever placed inside a landmark here produced **22 phantom collisions**, 10 on Letter and 12 on A4.
+
+**It cannot surface on screen, which is why it went unnoticed in two repos.** `reveal.mjs` opens every closed `details` before the screen pass and undoes it before the paper passes, so the closed state exists only on paper — the medium this house has already been burned by and the one Star Stuff's copy does not measure at all.
+
+**The fix is one loop in `hidden()`**: a node that is a non-`summary` child of a `details` without `open` is not painted, on any medium, in any engine. That is the HTML spec rather than a style heuristic, which is what earns it a place beside a declared selector list rather than being the kind of sniffing the gate's own comment refuses.
+
+**Proved in both directions before it was believed**, per the house rule:
+
+- a real in-flow overlap **inside an open `details`** is still reported — screen, Letter and A4;
+- a closed `details` does not mask a real overlap **elsewhere on the same page**;
+- and the clean page reports zero.
+
+**A print stylesheet must not force the content visible**, and that is now the load-bearing constraint rather than a preference. Forcing it would paint text this rule skips, turning a false-positive fix into a genuine blind spot. Sheet No. 11's content warning therefore prints its keyword list and not its detail — the keyword half is built to stand alone.
+
 ### An open item for a session in the SKS repo: the library's index holds a third of a book, silently (2026-09-11)
 
 Not to be fixed from here. `pdftotext` extracts **299,336 words** from `raw/The Unabridged Journals of Sylvia Plath - PDF Room.pdf`. The qmd extraction at `.qmd/library/The Unabridged Journals of Sylvia Plath - PDF Room.pdf.md` holds **109,718** — about 37% — and ends mid-word, part-way through the 1956 material.
@@ -9882,7 +10062,7 @@ Almost nothing, and this is the whole of it.
 
 This is the privacy policy, and it is short because there is little to describe. This site is a folder of files on a web host. It runs no analytics, sets no cookies, has no accounts, no comments, and no advertising. **Reading it makes no request to anybody else’s server** — there is exactly one place where you can choose to make one, a recording on the home page that fetches nothing until you press play, and it has [its own section below](#the-embed). There is one field on the whole site, on [the finding aid](https://queering.earth/search), and it never submits anywhere. Two things nevertheless happen when you read a page, and both are below.
 
-Last updated 9 September 2026. Any change to this page gets an entry in [the accession register](https://queering.earth/changelog), the same as a correction to a sheet — so “we may update this policy from time to time” is not something we have to ask you to accept on trust.
+Last updated 11 September 2026. Any change to this page gets an entry in [the accession register](https://queering.earth/changelog), the same as a correction to a sheet — so “we may update this policy from time to time” is not something we have to ask you to accept on trust.
 
 ## What your own browser keeps
 
@@ -9911,7 +10091,7 @@ We do not use those logs for analytics and we do not build anything from them. T
 
 - **No analytics of any kind.** No page-view counter, no tag manager, no heatmap, no session recording. We do not know how many people read this.
 - **No cookies.** The word `document.cookie` does not appear anywhere in this site’s code, which is why there is no consent banner: there is nothing to consent to, and a banner would be theatre.
-- **No third-party requests you did not ask for.** Until 9 September 2026 the pages loaded their two typefaces from Google’s font CDN, which told Google your IP address and user agent on every page load, before you had read a word. **The fonts are now served from this domain** and that request is gone. Nothing on this site now reaches another server on its own account. The one thing that *can* reach another server needs a press first, and is described [below](#the-embed). Until this line said “it was the only one”, which stopped being true the day the recording was mounted; the line was corrected in the same change, [in the register](https://queering.earth/changelog#a-2026-09-09-embed).
+- **No third-party requests you did not ask for.** Until 9 September 2026 the pages loaded their two typefaces from Google’s font CDN, which told Google your IP address and user agent on every page load, before you had read a word. **The fonts are now served from this domain** and that request is gone. Nothing on this site now reaches another server on its own account. The things that *can* reach another server all need a press first, and they are described [below](#the-embed). This line has now been corrected twice: it once said the fonts were the only third-party request, which stopped being true the day the first recording was mounted, and it then said there was exactly one such recording, which stopped being true when [Sheet No. 11](https://queering.earth/gloomy-sunflowers) mounted two more. Both corrections are [in the register](https://queering.earth/changelog), and the count is no longer written into this sentence — a number that has already gone stale twice is a number this page should not be keeping.
 - **No accounts and no comments**, and **nothing that submits**. There is exactly one place on this site to type: the search field on [the finding aid](https://queering.earth/search). It has no server behind it. What you type is matched against a file your browser has already downloaded, inside your browser, and it is never sent anywhere — not to us, because there is no us to send it to. Until 9 September 2026 this line said there was nowhere on the site to type anything at all; the field is new and the line was corrected in the same change that added it, which is [in the register](https://queering.earth/changelog#a-2026-09-09-search).
 - **No advertising, and nothing sold or shared.** There is no commercial arrangement here to share anything under.
 
@@ -9927,9 +10107,15 @@ One thing worth being plain about, since it is the general case and not ours: **
 
 ## The one embedded thing
 
-At the foot of [the home page](https://queering.earth/) there is a recording of T. S. Eliot reading *The Waste Land*. It is hosted on YouTube, which is Google, and it is the only place on this site where another company can learn anything about you.
+There are **three embedded recordings** on this site, and they are the only places where another company can learn anything about you. All three are on YouTube, which is Google, and all three behave identically:
 
-**Nothing is fetched from it until you press play.** What the page actually contains is a picture we drew and a link. No YouTube script, no YouTube thumbnail, no invisible pixel, no `preconnect` hint — a reader who never presses play makes exactly the same requests as a reader of any other page here, which is to say requests to this domain and no other. That is checked by `tools/check-metadata.mjs` on every run, and the check reads our JavaScript as well as our markup, because a script that quietly reaches a third party would otherwise make this paragraph false while every page looked clean.
+- T. S. Eliot reading *The Waste Land*, at the foot of [the home page](https://queering.earth/).
+- Townes Van Zandt playing “Waitin’ Around to Die”, on [Sheet No. 11](https://queering.earth/gloomy-sunflowers#galveston).
+- Nirvana’s “Polly”, on [the same sheet](https://queering.earth/gloomy-sunflowers#hi-how-are-you).
+
+**Google is still one party, however many recordings there are**, and that is the fact this section is really about. Adding the second and third did not add a company to this page; it added two more places where you can choose to reach the one that was already here.
+
+**Nothing is fetched from any of them until you press play.** What each page actually contains is a picture we drew and a link. No YouTube script, no YouTube thumbnail, no invisible pixel, no `preconnect` hint — a reader who never presses play makes exactly the same requests as a reader of a page with no recording on it at all, which is to say requests to this domain and no other. That is checked by `tools/check-metadata.mjs` on every run, and the check reads our JavaScript as well as our markup, because a script that quietly reaches a third party would otherwise make this paragraph false while every page looked clean.
 
 **What happens if you do press it.** Your browser asks `www.youtube-nocookie.com` for a video player, and Google learns your IP address, your user-agent string, and which video you asked for. It is told that you arrived from `queering.earth` and is *not* told which page you were on, because of the referrer policy described below. From that moment Google’s privacy policy applies to that player, not ours, and we have no visibility into it and no arrangement with them.
 

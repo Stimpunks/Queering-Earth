@@ -91,6 +91,14 @@ const BLOCK = new Set(['p', 'div', 'section', 'header', 'footer', 'article', 'as
   'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'dl', 'dt', 'dd',
   'blockquote', 'figure', 'figcaption', 'table', 'thead', 'tbody', 'tfoot',
   'tr', 'th', 'td', 'caption', 'nav', 'hr', 'br', 'img', 'main', 'a', 'colgroup', 'col',
+  /* A DISCLOSURE IS FLATTENED, NOT DROPPED. No page inside the landmark uses one today
+     — Sheet No. 11's content warning did for a draft and does not now, because a closed
+     details leaves child rects in the layout and check-overlap.mjs reads them as text on
+     text on paper. These stay taught anyway: the failure mode this converter is built
+     against is silently dropping content, and a summary dropped from a content warning
+     is the worst version of that. Block boundaries, so the summary lands on its own line
+     and the detail follows it whole. */
+  'details', 'summary',
   'picture', 'source', 'pre']);
 
 /** Convert one <main> inner HTML to Markdown. */
