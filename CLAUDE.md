@@ -1303,7 +1303,7 @@ anything that needs fixing there in `DECISIONS.md` instead.
 
 ## The checks
 
-Run before shipping. All eight are browser-free or Chrome-only; nothing needs `npm install`,
+Run before shipping. All nine are browser-free or Chrome-only; nothing needs `npm install`,
 and the default path of every one of them is offline.
 
 Regenerate first, in this order — `check-metadata.mjs` fails on any of them being stale:
@@ -1321,6 +1321,7 @@ node tools/check-metadata.mjs           # derived files current, JSON-LD agreein
 node tools/check-cache.mjs              # no markup-coupled asset outliving the markup
 node tools/check-overlap.mjs --check    # no text on text, on screen and on paper, nothing clipped
 node tools/check-card-order.mjs --check # every grid ascends, every card agrees with the plate
+node tools/check-width.mjs             # nothing scrolls sideways, on screen or on paper
 ```
 
 **`--check` is load-bearing on the contrast gate and this file left it off until
@@ -1338,6 +1339,34 @@ them tells every agent on the web that we wrote Woolf.
 **`check-addresses.mjs --live` probes the deployed site**, which no other gate does. Run it
 after any change to `_redirects`, because **a redirect loop is how that file fails** and a
 loop is invisible offline. It asserts each twin is a single hop and not a chain.
+
+**`check-width.mjs` is native and was written on 2026-09-11 because three pages were
+already failing it.** `/changelog` was a 414px document at a 375px viewport, `/ledger` 812px
+at 320 and 943 at 768, `/what-is-settled` 425 — each since the day it was mounted, and all
+eight other gates passed them. **Text past the right margin is on top of nothing**, so
+`check-overlap.mjs` — the only other gate that knows where anything is — structurally cannot
+see it, and its screen pass is 1280px where none of the three faults exists.
+
+**The strings that do this are the ones a ledger is made of**: DOIs, archive.org identifiers,
+sha256 masters, SKS file paths, a deploy hook URL, none with a space or a hyphen in it. The
+`credit-source` skill adds one every time it records a source and `make-records.mjs` pours it
+onto a page, so **the hazard is attached to a routine and will recur** — which is the argument
+for a gate rather than an edit. It has **no `--check` flag on purpose**: a gate whose default
+is to pass has not shipped.
+
+**It measures paper, and paper is where text was actually lost.** `@media print` switches the
+editions scroller off on purpose, so `/ledger` printed 802px onto a 717px A4 sheet with both
+master hashes off the edge. It found a second fault on its first run that nothing else could:
+`.qe-vined` bleeds out by its own padding and **paper has no gutter to absorb it**, so the home
+page's frame hung off both sheet edges — the print block had reset the padding and not the
+margin. **A new block with a negative inline margin needs its print margin reset too.**
+
+**The cure is a break opportunity, not a scroll box, whenever the string is inline.** The
+scroll-container pattern is for BLOCKS and is already spent on `.qe-record pre` and
+`.qe-editions-scroll`; an inline element has no scroll box. `body` carries
+`overflow-wrap: anywhere`, and **`break-word` is not a substitute** — only `anywhere` shrinks
+intrinsic min-content, which is the whole difference inside a table and therefore the whole
+difference on paper. See `DECISIONS.md`.
 
 Star Stuff has three more (`check-classes`, `check-sheets`, `check-embeds`).
 **Port one when the failure it catches becomes possible here** — not before. A check that

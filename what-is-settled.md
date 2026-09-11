@@ -273,6 +273,40 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
+### A ninth gate, because three pages scrolled sideways past eight of them (2026-09-11)
+
+Ryan found it by hand on `/changelog`: a 414px document at a 375px viewport, pushed out by one inline `code` span holding `performance.getEntriesByType('resource')`. He asked whether the failure being invisible to every existing gate justified a small guard, and asked for the reasoning either way. **It does, and the argument is not that the fault was bad — it is that the fault recurs by construction.**
+
+**Three pages, not one, and the sweep is the part that changed the answer.** `/changelog` measured 414px at 320 and 375. `/ledger` measured **812px at 320 and 375, and 943 at 768**. `/what-is-settled` measured 425. All three had been live since the day each was mounted. A single overlong span on one page is an edit; three pages and six failing conditions is a class.
+
+**The strings are what a ledger is made of.** DOIs, archive.org identifiers, sha256 masters, SKS file paths, a deploy hook URL — none has a space or a hyphen in it, so a line box cannot end anywhere inside one. `ATTRIBUTIONS.md` grows one of these every time the `credit-source` skill records a source; `DECISIONS.md` grows one every time a session settles something; `make-records.mjs` pours both onto a page between markers. **The hazard is attached to a routine workflow, so the guard has to be too.** That is the same standing-hazard argument that justified `check-cache.mjs`, and it is stronger than "the failure happened once".
+
+**What no existing gate could see, and why `check-overlap.mjs` is the near miss.** It is the only other tool here that knows where anything is, and it asks a different question: is this text on top of that text. Text running past the right margin is on top of *nothing* — there is nothing out there to collide with. Its clip walk does not catch it either, because the document is not a clipping container: it grows to fit. And its screen pass is 1280px, where none of the three faults exists.
+
+**Folding it into that gate was considered and refused, for two reasons.** Widening the overlap sweep to 320 and 375 would surface a flood of narrow-width collisions nobody has ever triaged, and gating on those is a separate project that would have to start by deciding which are real. And a tool named for text landing on text should not quietly also be the one that measures margins — this house spends a lot of care on a name meaning one thing, and the overlap gate's own header argues its three fault kinds are one positional sweep. Document width is not that sweep; it is one number per pass.
+
+**320 is not an arbitrary floor.** WCAG 1.4.10 asks that content reflow to 320 CSS px without two-dimensional scrolling, which is 1280px at the 400% zoom the same criterion names. 375 is the phone this house already measures controls at. 768 and 1280 are in the list because `/ledger` failed at 768 — a fault that exists only on a phone is a guess, and this one was not.
+
+**It has no `--check` flag, deliberately.** Two gates here shipped as a report that printed its findings and exited 0, and the contrast gate stayed advice for as long as `CLAUDE.md` forgot to pass the flag. A gate whose default is to pass has not shipped. This one fails when it finds something, always.
+
+**It measures paper, and paper is where text was actually being lost.** On screen an over-wide string is a nuisance the reader can swipe past. On paper there is no swiping, and `@media print` deliberately sets `.qe-editions-scroll { overflow-x: visible }` — so `/ledger` was putting 802px of content onto a 717px A4 sheet with both master sha256 hashes running off the edge of the provenance table. Text off the sheet, in the file whose entire job is recording provenance, on a site whose predecessor shipped 44 of 46 pages printing blank.
+
+**It found a second fault on its first honest run, which is the best evidence for it.** The home page's `.qe-vined` frame bleeds out by its own padding so the cards keep the full measure — correct on screen, where `main` carries a gutter to absorb it. In print `main` is `max-width: none; padding: 0` and there is nothing left to absorb anything: 775px of home page on a 739px Letter sheet, hanging off *both* edges. The print block had already overridden the padding and left the margin alone. **One half of a pair reset, and no eye was going to catch it** — the cards stayed inside the sheet, so only the rule and the corner sprigs were being trimmed, and a frame cut flush with the paper looks deliberate.
+
+**Made to fail before being believed, per the house rule, and both halves separately.** Withdrawing the wrap rule reports nine failing passes across the three pages; withdrawing the print margin reports two on the home page; the restored stylesheet reports `PASS` across 25 pages, four screen widths and two papers. **Its first draft named the wrong words** — it reported the overflowing run ending furthest right, which for an unbreakable string is the innocent tail *after* it, so on `/changelog` it pointed at ", not out of a reading of the source." rather than at the `code` span before it. It reports the widest overflowing run now. A gate that names the wrong words is a gate somebody edits the wrong words to satisfy.
+
+### `overflow-wrap: anywhere`, not `break-word`, and the difference is only visible on paper (2026-09-11)
+
+The fix for the above, and the choice between the two is a measurement rather than a reading of the specification.
+
+**Fixed in `queering.css` and not in the register's prose**, on Ryan's instruction and for the reason the register exists: it is a dated record, and rewording an entry to make a layout fit would falsify it.
+
+**The house pattern for wide content — scroll it inside its own `overflow-x: auto` box — is for BLOCKS, and it is already spent where it belongs.** `.qe-record pre` scrolls, with its reason written beside it: a wrapped command line is one somebody pastes wrong. `.qe-editions-scroll` scrolls because a comparison table is an object with columns. Neither answers an identifier set inside a sentence. An inline element has no scroll box at all; making a `code` span `inline-block` to give it one would put a scrollbar in the middle of a line and split the ruled tier this site uses to say what a panel is. **So the inline form wraps and the block form scrolls, which is the same decision both times** — show the whole string, by whatever means that medium has.
+
+**`break-word` and `anywhere` are indistinguishable in flowing prose and both clear all three pages on screen.** They part company inside `.qe-editions`, because only `anywhere` shrinks intrinsic min-content: under `break-word` the sha256 column stays as wide as the hash, since the table's track sizing never learns the string can break. On screen the table's own scroller hides that completely. **On paper it does not**, for the reason above — and paper is where the hashes were being lost. Measured both ways before choosing; the specification says this and the measurement is what made it matter here.
+
+**It fires only when a word would otherwise overflow its line**, so ordinary prose is untouched. Every other page measured identically before and after, at 320, 375, 768 and 1280 and on both papers.
+
 ### The readings drawer had three names and now has one: The plate (2026-09-11)
 
 Raised after the drawers shipped, settled by Ryan the same day. Every other drawer's name appears in five places and is the same word in all five — the group heading in `tools/pages.mjs`, the section heading on the home page, `/llms.txt`, the finding aid's manifest, and the collection page's own `h1`. **The readings drawer had three:** *The readings* in `pages.mjs`, *What grows here* on the home page, and *The plate* on the page itself.

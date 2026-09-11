@@ -37,6 +37,44 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 11 September · latest
 
+## Three pages had been scrolling sideways since the day each was mounted, and a ninth gate to say so
+
+Found by hand on this page, at a 375px viewport: a 414px document, pushed out by one `code` span holding `performance.getEntriesByType('resource')`. **Eight gates passed the page.** Looking for the rest of it found two more.
+
+Label correctedA string with no break opportunity breaks the page instead
+
+This register measured 414px at 375 and at 320. [The ledger](https://queering.earth/ledger) measured **812px at 320 and 943 at 768**; [the decision log](https://queering.earth/what-is-settled) 425. “The page body must never scroll horizontally” is a rule this house states outright, and it had been broken on three pages for as long as each of them has been up.
+
+**The strings are the ones a ledger is made of** — DOIs, archive.org identifiers, sha256 masters, file paths into the knowledge system, a deploy hook URL. None has a space or a hyphen in it, so a line box cannot end anywhere inside one. **That is why this will happen again**, and it is the argument for a gate rather than an edit: `ATTRIBUTIONS.md` grows one of these every time a source is credited and `DECISIONS.md` every time something is settled, and `make-records.mjs` pours both onto a page. The hazard is attached to the routine, so the guard is too.
+
+**Fixed in the stylesheet and not in the prose**, on Ryan’s instruction: the register is a dated record, and rewording an entry to make a layout fit would falsify it.
+
+**The house pattern for wide content is a scroll box, and it is for blocks.** It is already spent where it belongs — `.qe-record pre` scrolls because a wrapped command line is one somebody pastes wrong, and a comparison table scrolls because it is an object with columns. Neither answers an identifier set inside a sentence: an inline element has no scroll box, and giving a `code` span one would put a scrollbar in the middle of a line. So the inline form wraps and the block form scrolls, which is the same decision twice — show the whole string, by whatever means the medium has.
+
+**`break-word` looks equivalent and is not, and the difference is only visible on paper.** In flowing prose the two are indistinguishable and both clear all three pages on screen. Inside a comparison table they part company, because only `anywhere` shrinks intrinsic min-content — under `break-word` the sha256 column stays as wide as the hash. On screen the table’s own scroller hides that. **On paper it does not**: the print sheet switches that scroller off on purpose, and the ledger was printing 802px of content onto a 717px A4 sheet with both master hashes running off the edge of the provenance table — in the file whose entire job is recording provenance. Measured, not read off the specification.
+
+Label correctedThe plate’s frame bled into a gutter that paper does not have
+
+Found by the new gate on its first honest run, and by nothing and nobody before it. `.qe-vined` pulls itself out by exactly its own padding so the cards keep the full measure — correct on screen, where `main` carries a gutter to absorb it. In print `main` is `max-width: none; padding: 0`, so there is nothing left to absorb anything: **775px of home page on a 739px Letter sheet**, 752 on a 717px A4, hanging off both edges. The print block had already overridden the padding and left the margin alone, which is the whole fault — one half of a pair reset.
+
+**The corner sprigs came in flush in the same edit**, and that is the same fix rather than a second one: with the frame no longer bleeding, a sprig hung 0.9rem outside it hangs 13px off the paper. The stylesheet already had this answer for narrow screens, with its reason written down — under 30rem the corners come in flush because a sprig hung outside gets its flowers clipped by the viewport. **A sheet edge is a viewport edge that cannot be scrolled.**
+
+**No eye was going to catch it.** The cards themselves stayed inside the sheet, so only the rule and the sprigs were being trimmed, and a frame cut flush with the paper looks deliberate.
+
+CabinetA ninth gate, which could have failed on three pages the hour before it was written
+
+`tools/check-width.mjs`: no page scrolls sideways, at 320, 375, 768 and 1280, and nothing runs past a Letter or A4 sheet. **Native, not ported**, and it clears the bar `check-cache.mjs` set — the failure had already reached production. This house runs eight gates rather than eleven because a check that cannot fail is a check nobody reads; this one had three live faults waiting for it.
+
+**No existing gate could see it, and `check-overlap.mjs` is the near miss worth naming.** It is the only other tool here that knows where anything is, and it asks a different question: is this text on top of that text. Text past the right margin is on top of *nothing* — there is nothing out there. Its clip walk does not catch it either, because the document is not a clipping container: it grows. And its screen pass is 1280px, where none of the three faults exists.
+
+**Folding it into that gate was considered and refused.** Widening the overlap sweep to 320 and 375 would surface a flood of narrow-width collisions nobody has ever triaged, which is a separate project; and a gate named for text landing on text should not also be the one that measures margins. 320 is not arbitrary either — WCAG 1.4.10 asks that content reflow to 320 CSS px without two-dimensional scrolling, which is 1280 at 400% zoom.
+
+**It has no `--check` flag, deliberately.** Two gates here shipped as a report that printed its findings and exited 0, and the contrast gate stayed advice for as long as `CLAUDE.md` forgot the flag. A gate whose default is to pass has not shipped.
+
+**Made to fail before being believed**, per the house rule, and both halves separately: withdrawing the wrap rule reports nine failing passes across the three pages, withdrawing the print margin reports two on the home page, and the restored stylesheet reports `PASS` across twenty-five pages and six passes each. **Its first draft named the wrong words** and was corrected — it reported the run ending furthest right, which for an unbreakable string is the innocent tail after it, so it pointed at “, not out of a reading of the source.” rather than at the `code` span before it. It reports the *widest* overflowing run now. A gate that names the wrong words is a gate somebody edits the wrong words to satisfy.
+
+2026 · 11 September
+
 ## A fair-use position, written down before the sheet that needs it
 
 Ryan, on being told a proposed sheet could not quote two of its four subjects: “This is a copyright maximalist approach that absolutely destroys fair use. My open source, copyleft soul weeps. It’s also a huge accessibility problem.” He was right on both counts, and the rule he was objecting to was never this house’s rule — it was asserted in a research note by a drafting assistant and reported as ours.

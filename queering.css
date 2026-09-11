@@ -648,6 +648,41 @@ body {
   line-height: 1.65;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
+  /* A STRING WITH NO BREAK OPPORTUNITY BREAKS THE PAGE INSTEAD, AND THE ONLY CURE
+     THAT REACHES PAPER IS `anywhere`.
+     This ledger cites its sources the way a ledger has to: DOIs, archive.org
+     identifiers, sha256 masters, file paths into the knowledge system, a Netlify
+     hook URL. None of those has a space or a hyphen in it, so a line box cannot
+     end anywhere inside one, and the widest of them simply pushes the document
+     out. `/changelog` measured 414px at a 375px viewport on one `code` span;
+     `/ledger` 812px at 320 and 943 at 768; `/what-is-settled` 425. That is the
+     horizontal body scroll the layout rule forbids outright, and it had been live
+     on all three since each was mounted.
+     The house pattern for wide content — scroll it inside its own `overflow-x`
+     box — is for BLOCKS, and it is already spent where it belongs: `.qe-record pre`
+     scrolls because a wrapped command line is one somebody pastes wrong, and
+     `.qe-editions-scroll` scrolls because a comparison table is an object with
+     columns. Neither answers an identifier set inside a sentence: an inline
+     element has no scroll box, and giving one to a `code` span would put a
+     scrollbar in the middle of a line and split the ruled tier this site uses to
+     say what a panel is. So the inline form wraps and the block form scrolls,
+     which is the same decision both times — show the whole string, by whatever
+     means that medium has.
+     `break-word` LOOKS EQUIVALENT AND IS NOT, which is why this says `anywhere`.
+     Measured, not read: in flowing prose the two are indistinguishable and both
+     clear all three pages on screen. Inside `.qe-editions` they part company,
+     because only `anywhere` shrinks intrinsic min-content — so under `break-word`
+     the sha256 column stays as wide as the hash. On screen that is hidden by the
+     table's own scroller. ON PAPER IT IS NOT: `@media print` sets
+     `.qe-editions-scroll { overflow-x: visible }` on purpose, and `/ledger`
+     printed 802px of content onto a 717px A4 sheet with the two master hashes
+     running off the edge, in the file whose entire job is recording provenance.
+     Nothing here measures that either — `check-overlap.mjs` sweeps paper for text
+     on text, not for text past the margin.
+     It fires only when a word would otherwise overflow its line, so ordinary
+     prose is untouched: every other page measured the same document width before
+     and after, at 320, 375, 768 and 1280 and on both papers. */
+  overflow-wrap: anywhere;
 }
 
 /* The foxed-paper wash: four soft, off-centre stains, no image and no noise.
@@ -2669,7 +2704,27 @@ a.card:focus-visible .qe-card-title {
    cannot reach prints as a solid block or as nothing at all. Every new fill
    above is listed here the day it is written, not the day it fails. */
 @media print {
-  .qe-vined { border: 0.5pt solid #999; padding: 0.5rem; }
+  /* THE BLEED IS CANCELLED BY THE GUTTER, AND PAPER HAS NO GUTTER. The frame above
+     pulls itself out by exactly its own padding so the cards keep the full measure,
+     and the note there is right that it never reaches the window edge — on screen,
+     where `main` carries `--qe-gutter` to absorb it. In print `main` is
+     `max-width: none; padding: 0`, so there is nothing left to absorb anything and
+     the frame hung 22px off BOTH edges of the sheet: 775px of home page on a 739px
+     Letter, 752 on a 717px A4. The padding was already overridden here and the
+     margin was not, which is the whole fault — one half of a pair reset.
+     Found by `check-width.mjs` on its first run, and not by any eye: the plate's own
+     cards stayed inside the sheet, so only the rule and the sprigs were being cut,
+     and a frame trimmed flush with the paper looks deliberate. */
+  .qe-vined { border: 0.5pt solid #999; padding: 0.5rem; margin-inline: 0; }
+  /* AND THE SPRIGS COME IN FLUSH, which is not a second fix but the same one: with
+     the frame no longer bleeding, a corner hung 0.9rem outside it hangs 13px off the
+     paper, and the sheet has no scrollbar to recover it with. The house already has
+     this answer and states it above — under 30rem the corners come in flush because
+     "a sprig hung outside it gets its flowers clipped by the viewport". A sheet edge
+     is a viewport edge that cannot be scrolled. Horizontal only: a sprig riding above
+     the frame costs nothing, because paper runs out sideways and not downward. */
+  .qe-corner--tl, .qe-corner--bl { left: 0; }
+  .qe-corner--tr, .qe-corner--br { right: 0; }
   .qe-botanical .petal-violet,
   .qe-botanical .petal-pansy,
   .qe-botanical .petal-carnation,
