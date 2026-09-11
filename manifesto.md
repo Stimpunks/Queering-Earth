@@ -59,7 +59,8 @@ A canon is not only a list of works. It is a settled set of readings of those wo
 
 Specimen — the hierarchy in the words
 
-> They have facts, we have opinions.They have knowledges, we have experiences.
+> They have facts, we have opinions.\
+> They have knowledges, we have experiences.
 
 Grada Kilomba, *Who Can Speak?*, in *Decolonizing Knowledge* (2016). **Quoted from the rendering in the [Neuroqueer Learning Spaces Manifesto](https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/); the primary has not been read here.** Two contiguous lines of a longer passage, so nothing is elided inside the quotation.
 

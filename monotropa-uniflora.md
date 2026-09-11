@@ -55,7 +55,10 @@ Emily Dickinson to Mabel Loomis Todd, 30 September 1882 — Letter 997, in penci
 
 -
 
-> This limitless HyperboleEach one of us shall be -‘Tis Drama - if HypothesisIt be not Tragedy -
+> This limitless Hyperbole\
+> Each one of us shall be -\
+> ‘Tis Drama - if Hypothesis\
+> It be not Tragedy -
 
 Emily Dickinson, *‘Tis whiter than an Indian pipe*, about 1879 — the last quatrain, from R. W. Franklin’s reading of Amherst Manuscript 483 (Fr1513A).
 
@@ -131,7 +134,18 @@ Gift and alteration, one hand.
 
 Three years before the letter, Dickinson had already written the plant down. The poem survives on a fragment of stationery, in pencil, about 1879.
 
-> ‘Tis whiter than an Indian Pipe - ‘Tis dimmer than a Lace - No stature has it, like a Fog When you approach the place - Not any voice imply it here - Or intimate it there - A spirit - how doth it accost - What function hath the Air? This limitless Hyperbole Each one of us shall be - ‘Tis Drama - if Hypothesis It be not Tragedy -
+> ‘Tis whiter than an Indian Pipe -\
+> ‘Tis dimmer than a Lace -\
+> No stature has it, like a Fog\
+> When you approach the place -\
+> Not any voice imply it here -\
+> Or intimate it there -\
+> A spirit - how doth it accost -\
+> What function hath the Air?\
+> This limitless Hyperbole\
+> Each one of us shall be -\
+> ‘Tis Drama - if Hypothesis\
+> It be not Tragedy -
 
 Emily Dickinson, about 1879. Amherst Manuscript 483, in pencil on a fragment of stationery. Text from R. W. Franklin, *The Poems of Emily Dickinson: Variorum Edition* (Belknap Press, 1998), Fr1513A, as published in the [Emily Dickinson Archive](https://curiosity.lib.harvard.edu/emily-dickinson-archive/catalog/195-EDA2078_F1513A).
 

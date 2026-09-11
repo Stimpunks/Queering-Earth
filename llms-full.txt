@@ -390,11 +390,32 @@ In 1861 Christina Rossetti wrote twenty-four lines refusing to promise anybody a
 
 Specimen — the poem, entire
 
-> Promise me no promises, So will I not promise you: Keep we both our liberties, Never false and never true: Let us hold the die uncast, Free to come as free to go: For I cannot know your past, And of mine what can you know?
+> Promise me no promises,\
+>   So will I not promise you:\
+> Keep we both our liberties,\
+>   Never false and never true:\
+> Let us hold the die uncast,\
+>   Free to come as free to go:\
+> For I cannot know your past,\
+>   And of mine what can you know?
 
-> You, so warm, may once have been Warmer towards another one: I, so cold, may once have seen Sunlight, once have felt the sun: Who shall show us if it was Thus indeed in time of old? Fades the image from the glass, And the fortune is not told.
+> You, so warm, may once have been\
+>   Warmer towards another one:\
+> I, so cold, may once have seen\
+>   Sunlight, once have felt the sun:\
+> Who shall show us if it was\
+>   Thus indeed in time of old?\
+> Fades the image from the glass,\
+>   And the fortune is not told.
 
-> If you promised, you might grieve For lost liberty again: If I promised, I believe I should fret to break the chain: Let us be the friends we were, Nothing more but nothing less: Many thrive on frugal fare Who would perish of excess.
+> If you promised, you might grieve\
+>   For lost liberty again:\
+> If I promised, I believe\
+>   I should fret to break the chain:\
+> Let us be the friends we were,\
+>   Nothing more but nothing less:\
+> Many thrive on frugal fare\
+>   Who would perish of excess.
 
 Christina Rossetti, *Promises like Pie-crust*, written 20 April 1861. Text from the first printing in [*New Poems by Christina Rossetti, Hitherto Unpublished or Uncollected*](https://archive.org/details/newpoemshitherto00rossuoft), edited by William Michael Rossetti (New York and London: Macmillan, 1896), pages 130–131, read in two separate scanned copies of that edition. Public domain. The alternating indent is hers as printed; the spaces the compositor set before every colon are not, and are closed up here — see below.
 
@@ -716,9 +737,19 @@ Where does a power like that live? In the Norse telling, at the foot of the worl
 
 Specimen — Völuspá 20
 
-> Þaðan koma meyiar, margs vitandi,þriár, ór þeim sal, er und þolli stendr;Urð héto eina, aðra Verðandi,—skaro á skíði— Skuld ina þriðio;þær lǫg lǫgðo, þær líf kuroalda bǫrnum, ørlǫg seggia.
+> Þaðan koma meyiar, margs vitandi,\
+> þriár, ór þeim sal, er und þolli stendr;\
+> Urð héto eina, aðra Verðandi,\
+> —skaro á skíði— Skuld ina þriðio;\
+> þær lǫg lǫgðo, þær líf kuro\
+> alda bǫrnum, ørlǫg seggia.
 
-> Thence come the maidens mighty in wisdom,Three from the dwelling down ’neath the tree;Urth is one named, Verthandi the next, —On the wood they scored, — and Skuld the third.Laws they made there, and life allottedTo the sons of men, and set their fates.
+> Thence come the maidens mighty in wisdom,\
+> Three from the dwelling down ’neath the tree;\
+> Urth is one named, Verthandi the next, —\
+> On the wood they scored, — and Skuld the third.\
+> Laws they made there, and life allotted\
+> To the sons of men, and set their fates.
 
 *Völuspá*, stanza 20. Old Norse after Gustav Neckel’s 1914 edition; English from Henry Adams Bellows, *The Poetic Edda* (New York: The American-Scandinavian Foundation, 1923). Both texts as set out at [Mimisbrunnr.info](https://www.mimisbrunnr.info/cv-st-19-21).
 
@@ -791,11 +822,20 @@ Across Northern Europe, when a child did not develop the way a family expected, 
 
 What the same tradition also holds, though, is the other half of the story — the one where somebody refuses to let go. In the Scots ballad of Tam Lin, Janet is told exactly what the fairy host will do to the man she is trying to get back. They will change him in her arms, over and over, into things designed to make her drop him:
 
-> ‘They’ll turn me in your arms, lady, Into an esk and adder; But hold me fast, and fear me not, I am your bairn’s father.
+> ‘They’ll turn me in your arms, lady,\
+>   Into an esk and adder;\
+> But hold me fast, and fear me not,\
+>   I am your bairn’s father.
 
-> ‘They’ll turn me to a bear sae grim, And then a lion bold; But hold me fast, and fear me not, As ye shall love your child.
+> ‘They’ll turn me to a bear sae grim,\
+>   And then a lion bold;\
+> But hold me fast, and fear me not,\
+>   As ye shall love your child.
 
-> ‘Again they’ll turn me in your arms To a red het gaud of airn; But hold me fast, and fear me not, I’ll do to you nae harm.
+> ‘Again they’ll turn me in your arms\
+>   To a red het gaud of airn;\
+> But hold me fast, and fear me not,\
+>   I’ll do to you nae harm.
 
 *Tam Lin*, stanzas 31–33 of version A, from Francis James Child, *The English and Scottish Popular Ballads* (Boston, 1882–98), ballad 39. *Esk* is a newt; a *red het gaud of airn* is a red-hot bar of iron.
 
@@ -805,7 +845,10 @@ Set beside a hundred years of therapy aimed at making a child hold still, that i
 
 And the other half of the fae bargain, the one where the child is glad to go, is the poem everybody knows:
 
-> Come away, O human child! To the waters and the wild With a faery, hand in hand, For the world’s more full of weeping than you can understand.
+> Come away, O human child!\
+> To the waters and the wild\
+> With a faery, hand in hand,\
+> For the world’s more full of weeping than you can understand.
 
 W. B. Yeats, [‘The Stolen Child’](https://en.wikisource.org/wiki/The_Wanderings_of_Oisin_and_Other_Poems/The_Stolen_Child), from *The Wanderings of Oisin and Other Poems* (1889). In the last stanza the refrain turns around: “For he comes, the human child, / To the waters and the wild… / From a world more full of weeping than he can understand.”
 
@@ -1011,7 +1054,12 @@ The very first thing Miranda does on stage, before Prospero has told her anythin
 
 Specimen — Act 1, Scene 2
 
-> If by your art, my dearest father, you havePut the wild waters in this roar, allay them.… O, I have sufferedWith those that I saw suffer: a brave vessel,Who had, no doubt, some noble creature in her,Dash’d all to pieces.
+> If by your art, my dearest father, you have\
+> Put the wild waters in this roar, allay them.\
+> … O, I have suffered\
+> With those that I saw suffer: a brave vessel,\
+> Who had, no doubt, some noble creature in her,\
+> Dash’d all to pieces.
 
 *The Tempest*, Act 1, Scene 2 (Shakespeare, 1611/2004)
 
@@ -1023,7 +1071,9 @@ And then, within a dozen lines, her father tells her to stop.
 
 Specimen — Act 1, Scene 2
 
-> Be collected.No more amazement. Tell your piteous heartThere’s no harm done.
+> Be collected.\
+> No more amazement. Tell your piteous heart\
+> There’s no harm done.
 
 *The Tempest*, Act 1, Scene 2 (Shakespeare, 1611/2004)
 
@@ -1035,7 +1085,11 @@ A few dozen lines later Miranda is given, in the First Folio of 1623, the hardes
 
 <del>PROSPERO</del><ins>Miranda, First Folio, 1623</ins>
 
-> Abhorred slave,Which any print of goodness wilt not take,Being capable of all ill! I pitied thee,Took pains to make thee speak, taught thee each hourOne thing or other…
+> Abhorred slave,\
+> Which any print of goodness wilt not take,\
+> Being capable of all ill! I pitied thee,\
+> Took pains to make thee speak, taught thee each hour\
+> One thing or other…
 
 Reassigned to Prospero by editor Lewis Theobald, 1733, restored to Miranda in the Folger edition and others since (Folger Shakespeare Library, n.d.; Shakespeare Navigators, n.d.).
 
@@ -1051,7 +1105,9 @@ Miranda’s courtship is not something that happens to her so much as something 
 
 Specimen — Act 4, Scene 1
 
-> If thou dost break her virgin-knot beforeAll sanctimonious ceremonies mayWith full and holy rite be minister’d…
+> If thou dost break her virgin-knot before\
+> All sanctimonious ceremonies may\
+> With full and holy rite be minister’d…
 
 *The Tempest*, Act 4, Scene 1 (Shakespeare, 1611/2004)
 
@@ -1059,7 +1115,9 @@ This is heteronormativity staged as literal stagecraft: a father choreographing,
 
 Specimen — Act 1, Scene 2
 
-> O ho, O ho! would’t had been done!Thou didst prevent me; I had peopled elseThis isle with Calibans.
+> O ho, O ho! would’t had been done!\
+> Thou didst prevent me; I had peopled else\
+> This isle with Calibans.
 
 *The Tempest*, Act 1, Scene 2 (Shakespeare, 1611/2004)
 
@@ -1071,7 +1129,10 @@ And yet inside all that staging, Miranda does something the plot did not strictl
 
 Specimen — Act 3, Scene 1
 
-> I am your wife, if you will marry me;If not, I’ll die your maid: to be your fellowYou may deny me; but I’ll be your servant,Whether you will or no.
+> I am your wife, if you will marry me;\
+> If not, I’ll die your maid: to be your fellow\
+> You may deny me; but I’ll be your servant,\
+> Whether you will or no.
 
 *The Tempest*, Act 3, Scene 1 (Shakespeare, 1611/2004)
 
@@ -1083,7 +1144,10 @@ By Act 5, Miranda has spent twelve years in a household of three. Then Prospero�
 
 Specimen — Act 5, Scene 1
 
-> O, wonder!How many goodly creatures are there here!How beauteous mankind is! O brave new world,That has such people in’t!
+> O, wonder!\
+> How many goodly creatures are there here!\
+> How beauteous mankind is! O brave new world,\
+> That has such people in’t!
 
 *The Tempest*, Act 5, Scene 1 (Shakespeare, 1611/2004)
 
@@ -1201,11 +1265,20 @@ Emily Dickinson wrote twelve lines asking for one night in harbour, and there is
 
 Specimen — the poem, entire
 
-> Wild nights – Wild nights! Were I with thee Wild nights should be Our luxury!
+> Wild nights – Wild nights!\
+> Were I with thee\
+> Wild nights should be\
+> Our luxury!
 
-> Futile – the winds – To a Heart in port – Done with the Compass – Done with the Chart!
+> Futile – the winds –\
+> To a Heart in port –\
+> Done with the Compass –\
+> Done with the Chart!
 
-> Rowing in Eden – Ah – the Sea! Might I but moor – tonight – In thee!
+> Rowing in Eden –\
+> Ah – the Sea!\
+> Might I but moor – tonight –\
+> In thee!
 
 Emily Dickinson, *Wild nights – Wild nights!*, written about late 1861 in Fascicle 11. Text as R. W. Franklin reads the manuscript, published in the [Emily Dickinson Archive](https://www.edickinson.org/) and printed identically by the [Poetry Foundation](https://www.poetryfoundation.org/poems/44087/wild-nights-wild-nights-269) from Franklin’s Reading Edition (Belknap Press, 1999). Her dashes are set here as spaced en dashes; in her hand they vary in length and angle, and telling one from a flourish is the standing problem of editing her. Line 11 runs on to line 12 on the leaf itself, and the 1891 editors made that break a line break — see below.
 
@@ -1215,9 +1288,15 @@ Emily Dickinson, *Wild nights – Wild nights!*, written about late 1861 in Fasc
 
 In reply — Ryan Boren
 
-Erotic and cozy. Turbulent and safe. We share space that we co-make.
+Erotic and cozy.\
+Turbulent and safe.\
+We share space\
+that we co-make.
 
-Passionate gratification segued to the calm [co-regulation](https://stimpunks.org/glossary/co-regulation/) that is our shared balm.
+Passionate gratification\
+segued to the calm\
+[co-regulation](https://stimpunks.org/glossary/co-regulation/)\
+that is our shared balm.
 
 To be in [safe space](https://stimpunks.org/glossary/safe-space/) with one you adore, basking in reciprocation and mutual understanding, that is a great feeling. That is THE feeling — craved by our kind.
 
@@ -1225,17 +1304,35 @@ Dickinson captures well [the swell and the dwell of relational tides](https://st
 
 In reply, continued
 
-Oh to be human, in a deep easy rhythm, of reciprocal need, held not in tension.
+Oh to be human,\
+in a deep easy rhythm,\
+of reciprocal need,\
+held not in tension.
 
-[Stimmy](https://stimpunks.org/glossary/stimming/) [glimmers](https://stimpunks.org/glossary/glimmers/) [Somatic](https://stimpunks.org/glossary/somatic/) release Sensory ease Regulated peace.
+[Stimmy](https://stimpunks.org/glossary/stimming/) [glimmers](https://stimpunks.org/glossary/glimmers/)\
+[Somatic](https://stimpunks.org/glossary/somatic/) release\
+Sensory ease\
+Regulated peace.
 
-Calm quiescence, Denouement after arrival, Preceded by A love-tangled spiral.
+Calm quiescence,\
+Denouement after arrival,\
+Preceded by\
+A love-tangled spiral.
 
-Might I but moor In your heart and your body, In your mind and your soul, Woven delightfully.
+Might I but moor\
+In your heart and your body,\
+In your mind and your soul,\
+Woven delightfully.
 
-We need not our masks Nor our constructs of gender. Let’s rest the guise And be our realest [assemblage](https://morerealms.com/expanding-the-mycelial-network-of-care-autistic-community-safety-and-rhizomatic-futures/).
+We need not our masks\
+Nor our constructs of gender.\
+Let’s rest the guise\
+And be our realest [assemblage](https://morerealms.com/expanding-the-mycelial-network-of-care-autistic-community-safety-and-rhizomatic-futures/).
 
-With the strength of [limerence](https://stimpunks.org/glossary/limerence/) that has been requited and matched, Let’s be together And let the world pass.
+With the strength of [limerence](https://stimpunks.org/glossary/limerence/)\
+that has been requited and matched,\
+Let’s be together\
+And let the world pass.
 
 ## Futile – the winds
 
@@ -1517,7 +1614,14 @@ Lord Alfred Douglas published *Two Loves* in *The Chameleon* in December 1894. I
 
 Specimen — the garden
 
-> I dreamed I stood upon a little hill,And at my feet there lay a ground, that seemedLike a waste garden, flowering at its willWith buds and blossoms. There were pools that dreamedBlack and unruffled; there were white liliesA few, and crocuses, and violetsPurple or pale, snake-like fritillariesScarce seen for the rank grass…
+> I dreamed I stood upon a little hill,\
+> And at my feet there lay a ground, that seemed\
+> Like a waste garden, flowering at its will\
+> With buds and blossoms. There were pools that dreamed\
+> Black and unruffled; there were white lilies\
+> A few, and crocuses, and violets\
+> Purple or pale, snake-like fritillaries\
+> Scarce seen for the rank grass…
 
 Lord Alfred Douglas, *Two Loves*, first published in *The Chameleon*, December 1894. The poem ends: “I am the Love that dare not speak its name.”
 
@@ -1667,7 +1771,10 @@ Emily Dickinson to Mabel Loomis Todd, 30 September 1882 — Letter 997, in penci
 
 -
 
-> This limitless HyperboleEach one of us shall be -‘Tis Drama - if HypothesisIt be not Tragedy -
+> This limitless Hyperbole\
+> Each one of us shall be -\
+> ‘Tis Drama - if Hypothesis\
+> It be not Tragedy -
 
 Emily Dickinson, *‘Tis whiter than an Indian pipe*, about 1879 — the last quatrain, from R. W. Franklin’s reading of Amherst Manuscript 483 (Fr1513A).
 
@@ -1743,7 +1850,18 @@ Gift and alteration, one hand.
 
 Three years before the letter, Dickinson had already written the plant down. The poem survives on a fragment of stationery, in pencil, about 1879.
 
-> ‘Tis whiter than an Indian Pipe - ‘Tis dimmer than a Lace - No stature has it, like a Fog When you approach the place - Not any voice imply it here - Or intimate it there - A spirit - how doth it accost - What function hath the Air? This limitless Hyperbole Each one of us shall be - ‘Tis Drama - if Hypothesis It be not Tragedy -
+> ‘Tis whiter than an Indian Pipe -\
+> ‘Tis dimmer than a Lace -\
+> No stature has it, like a Fog\
+> When you approach the place -\
+> Not any voice imply it here -\
+> Or intimate it there -\
+> A spirit - how doth it accost -\
+> What function hath the Air?\
+> This limitless Hyperbole\
+> Each one of us shall be -\
+> ‘Tis Drama - if Hypothesis\
+> It be not Tragedy -
 
 Emily Dickinson, about 1879. Amherst Manuscript 483, in pencil on a fragment of stationery. Text from R. W. Franklin, *The Poems of Emily Dickinson: Variorum Edition* (Belknap Press, 1998), Fr1513A, as published in the [Emily Dickinson Archive](https://curiosity.lib.harvard.edu/emily-dickinson-archive/catalog/195-EDA2078_F1513A).
 
@@ -1837,7 +1955,10 @@ The Bellman does not describe a Snark. He describes how you will know one, which
 
 Specimen — the marks
 
-> “Come, listen, my men, while I tell you againThe five unmistakable marksBy which you may know, wheresoever you go,The warranted genuine Snarks.
+> “Come, listen, my men, while I tell you again\
+> The five unmistakable marks\
+> By which you may know, wheresoever you go,\
+> The warranted genuine Snarks.
 
 Lewis Carroll, *The Hunting of the Snark*, Fit the Second, *The Bellman’s Speech*, 1876. The opening quotation mark is his; the Bellman is still speaking four stanzas later.
 
@@ -1917,7 +2038,10 @@ Henry Holiday, the Ocean-Chart, the fourth of his nine illustrations to *The Hun
 
 Specimen — the best chart
 
-> “Other maps are such shapes, with their islands and capes!But we’ve got our brave Captain to thank:”(So the crew would protest) “that he’s bought us the best—A perfect and absolute blank!”
+> “Other maps are such shapes, with their islands and capes!\
+> But we’ve got our brave Captain to thank:”\
+> (So the crew would protest) “that he’s bought us the best—\
+> A perfect and absolute blank!”
 
 Lewis Carroll, *The Hunting of the Snark*, Fit the Second — the same Fit as the five marks, twenty lines later.
 
@@ -2023,7 +2147,10 @@ The poem ends with the Baker finding what the crew came for, and the finding cos
 
 Specimen — the vanishing
 
-> In the midst of the word he was trying to say,In the midst of his laughter and glee,He had softly and suddenly vanished away—For the Snark *was* a Boojum, you see.
+> In the midst of the word he was trying to say,\
+> In the midst of his laughter and glee,\
+> He had softly and suddenly vanished away—\
+> For the Snark *was* a Boojum, you see.
 
 Lewis Carroll, *The Hunting of the Snark*, Fit the Eighth, *The Vanishing*, 1876 — the last stanza of the poem. The italic on *was* is Carroll’s.
 
@@ -2512,7 +2639,8 @@ A canon is not only a list of works. It is a settled set of readings of those wo
 
 Specimen — the hierarchy in the words
 
-> They have facts, we have opinions.They have knowledges, we have experiences.
+> They have facts, we have opinions.\
+> They have knowledges, we have experiences.
 
 Grada Kilomba, *Who Can Speak?*, in *Decolonizing Knowledge* (2016). **Quoted from the rendering in the [Neuroqueer Learning Spaces Manifesto](https://stimpunks.org/projects/neuroqueer-learning-spaces/manifesto/); the primary has not been read here.** Two contiguous lines of a longer passage, so nothing is elided inside the quotation.
 
@@ -2603,13 +2731,25 @@ Berlin’s hedgehog is a figure of speech with Dostoyevsky inside it. Here is a 
 
 Specimen — the poem, entire
 
-> The hedgehog is a little beast Who likes a quiet wood, Where he can feed his family On proper hedgehog food.
+> The hedgehog is a little beast\
+> Who likes a quiet wood,\
+> Where he can feed his family\
+> On proper hedgehog food.
 
-> He has a funny little snout That’s rather like a pig’s, With which he smells, like us, of course, But also runts and digs.
+> He has a funny little snout\
+> That’s rather like a pig’s,\
+> With which he smells, like us, of course,\
+> But also runts and digs.
 
-> He wears the queerest prickle coat, Instead of hair or fur, And only has to curl himself To bristle like a burr.
+> He wears the queerest prickle coat,\
+> Instead of hair or fur,\
+> And only has to curl himself\
+> To bristle like a burr.
 
-> He does not need to battle with Or run away from foes, His coat does all the work for him, It pricks them on the nose.
+> He does not need to battle with\
+> Or run away from foes,\
+> His coat does all the work for him,\
+> It pricks them on the nose.
 
 Edith King, *The Hedgehog*, in [*Fifty New Poems for Children: An Anthology*](https://commons.wikimedia.org/wiki/File:Fifty_new_poems_for_children;an_anthology_..._(IA_fiftynewpoemsfor00unse).pdf) (Oxford: Basil Blackwell, 1922), page 49. Public domain. **Read off the page scan of that edition** 10 September 2026, not from a transcription — see below for why that mattered. The first letter is a woodcut initial block in the original and is an ordinary capital here.
 
@@ -2635,23 +2775,51 @@ There is no fox in that anthology. There is one in the oldest nursery collection
 
 Specimen — the rhyme, entire
 
-> The fox and his wife they had a great strife, They never eat mustard in all their whole life; They eat their meat without fork or knife, And loved to be picking a bone, e-ho!
+> The fox and his wife they had a great strife,\
+> They never eat mustard in all their whole life;\
+> They eat their meat without fork or knife,\
+>   And loved to be picking a bone, e-ho!
 
-> The fox jumped up on a moonlight night; The stars they were shining, and all things bright; Oh, ho! said the fox, it’s a very fine night For me to go through the town, e-ho!
+> The fox jumped up on a moonlight night;\
+> The stars they were shining, and all things bright;\
+> Oh, ho! said the fox, it’s a very fine night\
+>   For me to go through the town, e-ho!
 
-> The fox when he came to yonder stile, He lifted his lugs and he listened a while! Oh, ho! said the fox, it’s but a short mile From this unto yonder wee town, e-ho!
+> The fox when he came to yonder stile,\
+> He lifted his lugs and he listened a while!\
+> Oh, ho! said the fox, it’s but a short mile\
+>   From this unto yonder wee town, e-ho!
 
-> The fox when he came to the farmer’s gate, Who should he see but the farmer’s drake; I love you well for your master’s sake, And long to be picking your bone, e-ho!
+> The fox when he came to the farmer’s gate,\
+> Who should he see but the farmer’s drake;\
+> I love you well for your master’s sake,\
+>   And long to be picking your bone, e-ho!
 
-> The gray goose she ran round the hay-stack, Oh, ho! said the fox, you are very fat; You’ll grease my beard and ride on my back From this into yonder wee town, e-ho!
+> The gray goose she ran round the hay-stack,\
+> Oh, ho! said the fox, you are very fat;\
+> You’ll grease my beard and ride on my back\
+>   From this into yonder wee town, e-ho!
 
-> Old Gammer Hipple-hopple hopped out of bed, She opened the casement, and popped out her head; Oh! husband, oh! husband, the gray goose is dead, And the fox is gone through the town, oh!
+> Old Gammer Hipple-hopple hopped out of bed,\
+> She opened the casement, and popped out her head;\
+> Oh! husband, oh! husband, the gray goose is dead,\
+>   And the fox is gone through the town, oh!
 
-> Then the old man got up in his red cap, And swore he would catch the fox in a trap; But the fox was too cunning, and gave him the slip, And ran thro’ the town, the town, oh!
+> Then the old man got up in his red cap,\
+> And swore he would catch the fox in a trap;\
+> But the fox was too cunning, and gave him the slip,\
+>   And ran thro’ the town, the town, oh!
 
-> When he got to the top of the hill, He blew his trumpet both loud and shrill, For joy that he was safe Thro’ the town, oh!
+> When he got to the top of the hill,\
+> He blew his trumpet both loud and shrill,\
+> For joy that he was safe\
+>   Thro’ the town, oh!
 
-> When the fox came back to his den, He had young ones both nine and ten, “You’re welcome home, daddy, you may go again, If you bring us such nice meat From the town, oh!”
+> When the fox came back to his den,\
+> He had young ones both nine and ten,\
+> “You’re welcome home, daddy, you may go again,\
+> If you bring us such nice meat\
+>   From the town, oh!”
 
 Anonymous, rhyme CXXXIII, collected in James Orchard Halliwell, *The Nursery Rhymes of England*, fifth edition (London and New York: Frederick Warne and Co., 1886), pages 84–86. Public domain. The same rhyme is in Halliwell’s 1843 edition, so it was already in the collection forty years earlier. **Text from the [Project Gutenberg transcription](https://www.gutenberg.org/files/32415/32415-h/32415-h.htm) of that fifth edition, checked line by line against the text layers of two separate scanned copies of it** — 10 September 2026. The indent on each refrain is the 1886 setting’s; the spaces the compositor set before every exclamation mark are not, and are closed up here. **Thirteen of these thirty-seven lines are too long for the measure here and wrap, which the hanging indent is there to make unmistakable — and six of them were too long for Halliwell’s measure too.** His compositor broke “and all things / bright;”, “hopped out of / bed,”, “the gray goose / is dead,”, “and gave him / the slip,”, “you may go / again,” — and “She opened the casement, and popped out / her head;”, which is the longest line in the poem and the one that overruns furthest here. It is also sung, as *The Fox* or *Daddy Fox*, in variants that reach much further back than this printing.
 
@@ -2883,7 +3051,10 @@ Say *lilac* and something answers. For Helen it is always Eliot, instantly — t
 
 Specimen — the lilacs
 
-> April is the cruellest month, breeding Lilacs out of the dead land, mixing Memory and desire, stirring Dull roots with spring rain.
+> April is the cruellest month, breeding\
+> Lilacs out of the dead land, mixing\
+> Memory and desire, stirring\
+> Dull roots with spring rain.
 
 T. S. Eliot, [*The Waste Land*](https://www.poetryfoundation.org/poems/47311/the-waste-land), lines 1–4 (1922). Public domain in the United States; wording checked against [Project Gutenberg’s transcription](https://www.gutenberg.org/ebooks/1321) of the 1922 text.
 
@@ -3220,6 +3391,32 @@ Drawn twice, rendered at 368, 544 and 900px in both grounds, refused twice. **Pa
 **The rule is the favicon rule inverted.** That one says a mark is judged at 16px because two earlier marks looked good large and died small. The converse is less obvious and cost two passes here: **a mark drawn to survive 20px carries 20px tolerances, and enlarging it enlarges them.** A masthead is a different drawing, not the same drawing bigger.
 
 **And the position has a weight.** Every other masthead here is thin moss stems, small lichen leaves, a small moth — sparse line. Two filled quadrupeds are the wrong weight for that slot however well drawn, which is why another iteration on the same approach was not the answer. The sheet carries no drawn masthead; the Bewick plates carry the animals, which is what a mounted specimen is for. Whether an outline masthead — single closed contours, thin ink stroke, animals as line rather than as mass — would sit in the register is left open in [the decision log](https://queering.earth/what-is-settled). **The tray mark is unchanged.**
+
+2026 · 10 September
+
+## Every poem on the site was arriving in the Markdown mirror as prose
+
+Reported against [Sheet No. 3](https://queering.earth/promises-like-pie-crust), where Rossetti’s first stanza had been reading “Promise me no promises, So will I not promise you: Keep we both our liberties,” in `promises-like-pie-crust.md` since the Markdown mirror shipped. Ten pages were affected, and `llms-full.txt` carried all of them. **[*Two Cohabitating Modes*](https://queering.earth/two-cohabitating-modes) was accessioned the same day and landed inside the fault** — its hedgehog poem and its fox rhyme, fifty-three lines, were flat in `two-cohabitating-modes.md` from the hour it was mounted. The fix reached it on the merge, which is the argument for fixing the converter rather than the ten files.
+
+Label correctedA verse line is the one span on this site that is not a bare wrapper
+
+`tools/make-markdown.mjs` listed `span` in its inline table as a wrapper, which is right for nearly every span here and wrong for the one that is not. `<span class="l">` does not wrap words inside a sentence — **it is a line**, and `queering.css` has said since the Rossetti sheet that a poem’s line breaks are the object being mounted and that reflowed into prose it is a different poem. Rossetti, Dickinson twice, Eliot, Douglas, Carroll, Shakespeare, Völuspá, Tam Lin, Yeats, Edith King’s hedgehog and the Halliwell fox rhyme on [the sheet mounted this same day](https://queering.earth/two-cohabitating-modes), the *Stimpunks Manifesto* and [Ryan’s own reply verse](https://queering.earth/wild-nights) were all being handed to an agent as paragraphs.
+
+**The sheets that set their lines on one source line were worse than reflowed.** `.qe-lines` puts every span on a single line of markup, so there was no inter-line whitespace to become a space and the converter emitted “againThe five unmistakable marks”. Not a different poem: not words.
+
+**The fix is keyed on `.l` and not on a list of containers, and the stylesheet had already paid for that lesson.** The obvious shape is a break for `.l` inside `.qe-poem` or `.qe-verse` — which is exactly what `queering.css` tried and abandoned, scoping the display rule first to `.qe-specimen`, then copying it to `.qe-correction`, and then watching Sheet No. 8 put verse in a `.qe-slip` that inherited neither. A container list here would have rebuilt that wall in the Markdown, and would have missed [Sheet No. 7](https://queering.earth/flower-codes) on the first pass, whose Douglas sits in a plain `.qe-specimen`. A `.l` is a line of verse wherever it appears, in both files, for one reason.
+
+**It is not a break after every span**, which would put line breaks through the middle of ordinary prose — the same error facing the other way. The ten files that changed are exactly the ten with a `.l` in them.
+
+MountedThe hard break is a backslash, because two trailing spaces would have been erased after they were written
+
+Markdown spells a hard break two ways. **The tidier at the foot of the converter strips trailing whitespace from every line**, so the two-space spelling would have been emitted and then silently removed — a fix that reports success and changes nothing, which is worse than no fix at all. A backslash also survives the `> ` prefixes that `.qe-poem` needs and `.qe-verse` does not.
+
+**It is written on the open of the next line rather than the close of this one**, so a stanza never ends on a dangling backslash. CommonMark reads a backslash at the end of a paragraph as a literal backslash, so the close-tag spelling would have hung a stray mark under every stanza on the site.
+
+**`.l-in` re-indents in the source**, two spaces, reproducing the 1896 compositor’s alternating indent on Rossetti and on Tam Lin. A strict renderer may collapse it; the text an agent reads carries it.
+
+**`search-index.json` was already right and did not change.** `make-search-index.mjs` keeps a `blockquote` and a `div.qe-verse` as whole records, so the finding aid had never flattened a poem. Only the Markdown had — which is the drift the generator exists to prevent, arriving through the one door nobody had checked.
 
 2026 · 10 September
 
@@ -5332,7 +5529,7 @@ Octavia E. Butler and Sami Schalk, on hyperempathy
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-188 entries across 47 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+190 entries across 48 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -7264,22 +7461,6 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ---
 
-### The Markdown mirror flattens every poem on the site into prose (2026-09-10)
-
-**Found while checking `two-cohabitating-modes.md`, and it is not that page's fault.** `make-markdown.mjs` treats `span` as an inline wrapper, which is right nearly everywhere and wrong for `.qe-poem .l` and `.qe-verse .l` — the one element on this site whose whole job is to be a line. So every stanza arrives in the `.md` as a single reflowed paragraph:
-
-> Promise me no promises, So will I not promise you: Keep we both our liberties, Never false and never true: …
-
-**This contradicts the rule the component was built on**, verbatim from `CLAUDE.md`: *a poem is a specimen whose line breaks are the object. Reflowed into prose it is a different poem.* And it contradicts the reason the generator exists at all, which is that the Markdown an agent fetches must not disagree with the page.
-
-**Everything affected**, all of it pre-existing: Rossetti on `/promises-like-pie-crust`, Dickinson and Ryan's own reply verse on `/wild-nights`, Sappho on `/flower-codes`, and now both poems on `/two-cohabitating-modes` — 53 lines, which is what made it visible. `llms-full.txt` carries the same flattening, and `search-index.json` does **not**: `make-search-index.mjs` keeps a `blockquote` and a `div.qe-verse` as whole records, so the finding aid is already right and only the Markdown is wrong.
-
-**Open, and deliberately not fixed in the accession that found it.** The fix is small — emit a Markdown hard break after each `.l` inside a verse container, which is two trailing spaces or a backslash — but it edits a shared generator and rewrites eight `.md` files plus `llms-full.txt`, and `CLAUDE.md` is emphatic that the converter's vocabulary is narrow on purpose. That is its own accession with its own diff to read, not a rider on a new sheet.
-
-**One thing to get right when it is done:** the break belongs to `.l` *inside* `.qe-poem` or `.qe-verse`, not to `span` generally. A hard break after every span on the site would put line breaks through the middle of ordinary prose, which is the same class of error in the other direction.
-
----
-
 ## Settled
 
 ### A blown-up tray mark is not a masthead, and two passes proved it (2026-09-10)
@@ -7297,6 +7478,28 @@ Ryan asked for "a large version of the fox and hedgehog icon as the header art".
 **Settled for now: the page carries no drawn masthead, and the two Bewick plates carry the animals instead** — which is what a mounted specimen is for, and they are better at it than anything drawn here would be. **Open:** whether a masthead in outline — single closed contours, thin ink stroke, no fills, animals drawn as line rather than as mass — would sit in the house register. That is a real drawing job and worth doing deliberately, not in the tail of an accession. The tray mark stays exactly as it is; nothing above changes it.
 
 ---
+
+---
+
+### The Markdown mirror flattened every poem on the site into prose, and the fix is keyed on the line and not on its container (2026-09-10)
+
+`tools/make-markdown.mjs` listed `span` in its INLINE table as a bare wrapper, which is right for nearly every span on this site and wrong for the one that is not. `<span class="l">` does not wrap words inside a sentence — **it is a line**, and `queering.css` has said since the Rossetti sheet that *a poem's line breaks are the object being mounted; reflowed into prose it is a different poem.* Ten pages were shipping stanzas as single reflowed paragraphs in the `.md` an agent fetches, and in `llms-full.txt`: Rossetti, Dickinson twice, Eliot, Douglas, Carroll, Shakespeare, Völuspá, Tam Lin, Yeats, Edith King's hedgehog and the Halliwell fox rhyme, the *Stimpunks Manifesto*, and Ryan's own reply verse on `/wild-nights`.
+
+**`/two-cohabitating-modes` was accessioned the same day and landed inside the fault.** Its two poems — fifty-three lines — were flat in the `.md` from the hour the sheet was mounted, and the fix reached them on the merge without anybody touching that page. **That is the argument for fixing the converter rather than the ten files**: a generator fault is a fault in every page that has not been written yet.
+
+**The pages with no whitespace between their spans were worse than reflowed.** Where the markup sets all the lines on one source line — `.qe-lines` does, on five sheets — there was no inter-line whitespace for the converter to turn into a space, so it produced `againThe five unmistakable marks`. Not a different poem: not words.
+
+**KEYED ON `.l`, NOT ON A LIST OF CONTAINERS, AND THE STYLESHEET HAD ALREADY PAID FOR THAT LESSON.** The obvious fix is a hard break for `.l` inside `.qe-poem` or `.qe-verse`. That is the shape `queering.css` tried and abandoned: the display rule started as `.qe-specimen .qe-lines .l`, was copied to `.qe-correction .qe-lines .l` for the Miranda sheet, and then Sheet No. 8 put verse in a `.qe-slip`, where it inherited neither and printed four lines of Dickinson as one jammed run. The rule is unscoped now, and the comment beside it says a fourth component would have hit the same wall. A container list in the converter would have rebuilt that wall in the Markdown — **and `/flower-codes`, named in the brief as affected, is `.qe-lines` inside a plain `.qe-specimen` and would have been missed by it on the first pass.** A `.l` is a line of verse wherever it appears, in both files, for one reason.
+
+**This is not a break after every span**, which would put line breaks through the middle of ordinary prose — the same error facing the other way. It is a break for the one class whose whole job is to be a line, and the ten files that changed are exactly the ten with a `.l` in them.
+
+**The marker is a trailing backslash, and two trailing spaces would have been erased after they were written.** Markdown has both spellings of a hard break. The tidier at the foot of `toMarkdown()` strips trailing whitespace from every line, so the two-space spelling would have been emitted and then silently removed — a fix that reports success and changes nothing, which is worse than no fix. A backslash also survives the `> ` prefixes that `.qe-poem` needs and `.qe-verse` does not.
+
+**It is emitted on the OPEN of the next line rather than the close of this one**, so a stanza never ends on a dangling backslash. CommonMark renders a backslash at the end of a paragraph as a literal backslash, so the close-tag spelling would have put a stray `\\` under every stanza on the site.
+
+**`.l-in` re-indents in the source.** Two leading spaces reproduce the 1896 compositor's alternating indent on Rossetti and on Tam Lin. A strict renderer may collapse them; the text an agent reads carries them, and that is the copy this file exists to protect.
+
+**`search-index.json` was already correct and did not change.** `make-search-index.mjs` keeps a `blockquote` and a `div.qe-verse` as whole records, so the finding aid had never flattened a poem. Only the Markdown had — which is the drift the generator exists to prevent, arriving through the one door nobody had checked.
 
 ### An easter egg may hide the door and may never hide the room (2026-09-10)
 

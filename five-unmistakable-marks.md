@@ -55,7 +55,10 @@ The Bellman does not describe a Snark. He describes how you will know one, which
 
 Specimen — the marks
 
-> “Come, listen, my men, while I tell you againThe five unmistakable marksBy which you may know, wheresoever you go,The warranted genuine Snarks.
+> “Come, listen, my men, while I tell you again\
+> The five unmistakable marks\
+> By which you may know, wheresoever you go,\
+> The warranted genuine Snarks.
 
 Lewis Carroll, *The Hunting of the Snark*, Fit the Second, *The Bellman’s Speech*, 1876. The opening quotation mark is his; the Bellman is still speaking four stanzas later.
 
@@ -135,7 +138,10 @@ Henry Holiday, the Ocean-Chart, the fourth of his nine illustrations to *The Hun
 
 Specimen — the best chart
 
-> “Other maps are such shapes, with their islands and capes!But we’ve got our brave Captain to thank:”(So the crew would protest) “that he’s bought us the best—A perfect and absolute blank!”
+> “Other maps are such shapes, with their islands and capes!\
+> But we’ve got our brave Captain to thank:”\
+> (So the crew would protest) “that he’s bought us the best—\
+> A perfect and absolute blank!”
 
 Lewis Carroll, *The Hunting of the Snark*, Fit the Second — the same Fit as the five marks, twenty lines later.
 
@@ -241,7 +247,10 @@ The poem ends with the Baker finding what the crew came for, and the finding cos
 
 Specimen — the vanishing
 
-> In the midst of the word he was trying to say,In the midst of his laughter and glee,He had softly and suddenly vanished away—For the Snark *was* a Boojum, you see.
+> In the midst of the word he was trying to say,\
+> In the midst of his laughter and glee,\
+> He had softly and suddenly vanished away—\
+> For the Snark *was* a Boojum, you see.
 
 Lewis Carroll, *The Hunting of the Snark*, Fit the Eighth, *The Vanishing*, 1876 — the last stanza of the poem. The italic on *was* is Carroll’s.
 

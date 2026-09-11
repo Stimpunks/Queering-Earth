@@ -61,13 +61,25 @@ Berlin’s hedgehog is a figure of speech with Dostoyevsky inside it. Here is a 
 
 Specimen — the poem, entire
 
-> The hedgehog is a little beast Who likes a quiet wood, Where he can feed his family On proper hedgehog food.
+> The hedgehog is a little beast\
+> Who likes a quiet wood,\
+> Where he can feed his family\
+> On proper hedgehog food.
 
-> He has a funny little snout That’s rather like a pig’s, With which he smells, like us, of course, But also runts and digs.
+> He has a funny little snout\
+> That’s rather like a pig’s,\
+> With which he smells, like us, of course,\
+> But also runts and digs.
 
-> He wears the queerest prickle coat, Instead of hair or fur, And only has to curl himself To bristle like a burr.
+> He wears the queerest prickle coat,\
+> Instead of hair or fur,\
+> And only has to curl himself\
+> To bristle like a burr.
 
-> He does not need to battle with Or run away from foes, His coat does all the work for him, It pricks them on the nose.
+> He does not need to battle with\
+> Or run away from foes,\
+> His coat does all the work for him,\
+> It pricks them on the nose.
 
 Edith King, *The Hedgehog*, in [*Fifty New Poems for Children: An Anthology*](https://commons.wikimedia.org/wiki/File:Fifty_new_poems_for_children;an_anthology_..._(IA_fiftynewpoemsfor00unse).pdf) (Oxford: Basil Blackwell, 1922), page 49. Public domain. **Read off the page scan of that edition** 10 September 2026, not from a transcription — see below for why that mattered. The first letter is a woodcut initial block in the original and is an ordinary capital here.
 
@@ -93,23 +105,51 @@ There is no fox in that anthology. There is one in the oldest nursery collection
 
 Specimen — the rhyme, entire
 
-> The fox and his wife they had a great strife, They never eat mustard in all their whole life; They eat their meat without fork or knife, And loved to be picking a bone, e-ho!
+> The fox and his wife they had a great strife,\
+> They never eat mustard in all their whole life;\
+> They eat their meat without fork or knife,\
+>   And loved to be picking a bone, e-ho!
 
-> The fox jumped up on a moonlight night; The stars they were shining, and all things bright; Oh, ho! said the fox, it’s a very fine night For me to go through the town, e-ho!
+> The fox jumped up on a moonlight night;\
+> The stars they were shining, and all things bright;\
+> Oh, ho! said the fox, it’s a very fine night\
+>   For me to go through the town, e-ho!
 
-> The fox when he came to yonder stile, He lifted his lugs and he listened a while! Oh, ho! said the fox, it’s but a short mile From this unto yonder wee town, e-ho!
+> The fox when he came to yonder stile,\
+> He lifted his lugs and he listened a while!\
+> Oh, ho! said the fox, it’s but a short mile\
+>   From this unto yonder wee town, e-ho!
 
-> The fox when he came to the farmer’s gate, Who should he see but the farmer’s drake; I love you well for your master’s sake, And long to be picking your bone, e-ho!
+> The fox when he came to the farmer’s gate,\
+> Who should he see but the farmer’s drake;\
+> I love you well for your master’s sake,\
+>   And long to be picking your bone, e-ho!
 
-> The gray goose she ran round the hay-stack, Oh, ho! said the fox, you are very fat; You’ll grease my beard and ride on my back From this into yonder wee town, e-ho!
+> The gray goose she ran round the hay-stack,\
+> Oh, ho! said the fox, you are very fat;\
+> You’ll grease my beard and ride on my back\
+>   From this into yonder wee town, e-ho!
 
-> Old Gammer Hipple-hopple hopped out of bed, She opened the casement, and popped out her head; Oh! husband, oh! husband, the gray goose is dead, And the fox is gone through the town, oh!
+> Old Gammer Hipple-hopple hopped out of bed,\
+> She opened the casement, and popped out her head;\
+> Oh! husband, oh! husband, the gray goose is dead,\
+>   And the fox is gone through the town, oh!
 
-> Then the old man got up in his red cap, And swore he would catch the fox in a trap; But the fox was too cunning, and gave him the slip, And ran thro’ the town, the town, oh!
+> Then the old man got up in his red cap,\
+> And swore he would catch the fox in a trap;\
+> But the fox was too cunning, and gave him the slip,\
+>   And ran thro’ the town, the town, oh!
 
-> When he got to the top of the hill, He blew his trumpet both loud and shrill, For joy that he was safe Thro’ the town, oh!
+> When he got to the top of the hill,\
+> He blew his trumpet both loud and shrill,\
+> For joy that he was safe\
+>   Thro’ the town, oh!
 
-> When the fox came back to his den, He had young ones both nine and ten, “You’re welcome home, daddy, you may go again, If you bring us such nice meat From the town, oh!”
+> When the fox came back to his den,\
+> He had young ones both nine and ten,\
+> “You’re welcome home, daddy, you may go again,\
+> If you bring us such nice meat\
+>   From the town, oh!”
 
 Anonymous, rhyme CXXXIII, collected in James Orchard Halliwell, *The Nursery Rhymes of England*, fifth edition (London and New York: Frederick Warne and Co., 1886), pages 84–86. Public domain. The same rhyme is in Halliwell’s 1843 edition, so it was already in the collection forty years earlier. **Text from the [Project Gutenberg transcription](https://www.gutenberg.org/files/32415/32415-h/32415-h.htm) of that fifth edition, checked line by line against the text layers of two separate scanned copies of it** — 10 September 2026. The indent on each refrain is the 1886 setting’s; the spaces the compositor set before every exclamation mark are not, and are closed up here. **Thirteen of these thirty-seven lines are too long for the measure here and wrap, which the hanging indent is there to make unmistakable — and six of them were too long for Halliwell’s measure too.** His compositor broke “and all things / bright;”, “hopped out of / bed,”, “the gray goose / is dead,”, “and gave him / the slip,”, “you may go / again,” — and “She opened the casement, and popped out / her head;”, which is the longest line in the poem and the one that overruns furthest here. It is also sung, as *The Fox* or *Daddy Fox*, in variants that reach much further back than this printing.
 

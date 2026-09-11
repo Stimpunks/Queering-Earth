@@ -106,9 +106,19 @@ Where does a power like that live? In the Norse telling, at the foot of the worl
 
 Specimen — Völuspá 20
 
-> Þaðan koma meyiar, margs vitandi,þriár, ór þeim sal, er und þolli stendr;Urð héto eina, aðra Verðandi,—skaro á skíði— Skuld ina þriðio;þær lǫg lǫgðo, þær líf kuroalda bǫrnum, ørlǫg seggia.
+> Þaðan koma meyiar, margs vitandi,\
+> þriár, ór þeim sal, er und þolli stendr;\
+> Urð héto eina, aðra Verðandi,\
+> —skaro á skíði— Skuld ina þriðio;\
+> þær lǫg lǫgðo, þær líf kuro\
+> alda bǫrnum, ørlǫg seggia.
 
-> Thence come the maidens mighty in wisdom,Three from the dwelling down ’neath the tree;Urth is one named, Verthandi the next, —On the wood they scored, — and Skuld the third.Laws they made there, and life allottedTo the sons of men, and set their fates.
+> Thence come the maidens mighty in wisdom,\
+> Three from the dwelling down ’neath the tree;\
+> Urth is one named, Verthandi the next, —\
+> On the wood they scored, — and Skuld the third.\
+> Laws they made there, and life allotted\
+> To the sons of men, and set their fates.
 
 *Völuspá*, stanza 20. Old Norse after Gustav Neckel’s 1914 edition; English from Henry Adams Bellows, *The Poetic Edda* (New York: The American-Scandinavian Foundation, 1923). Both texts as set out at [Mimisbrunnr.info](https://www.mimisbrunnr.info/cv-st-19-21).
 
@@ -181,11 +191,20 @@ Across Northern Europe, when a child did not develop the way a family expected, 
 
 What the same tradition also holds, though, is the other half of the story — the one where somebody refuses to let go. In the Scots ballad of Tam Lin, Janet is told exactly what the fairy host will do to the man she is trying to get back. They will change him in her arms, over and over, into things designed to make her drop him:
 
-> ‘They’ll turn me in your arms, lady, Into an esk and adder; But hold me fast, and fear me not, I am your bairn’s father.
+> ‘They’ll turn me in your arms, lady,\
+>   Into an esk and adder;\
+> But hold me fast, and fear me not,\
+>   I am your bairn’s father.
 
-> ‘They’ll turn me to a bear sae grim, And then a lion bold; But hold me fast, and fear me not, As ye shall love your child.
+> ‘They’ll turn me to a bear sae grim,\
+>   And then a lion bold;\
+> But hold me fast, and fear me not,\
+>   As ye shall love your child.
 
-> ‘Again they’ll turn me in your arms To a red het gaud of airn; But hold me fast, and fear me not, I’ll do to you nae harm.
+> ‘Again they’ll turn me in your arms\
+>   To a red het gaud of airn;\
+> But hold me fast, and fear me not,\
+>   I’ll do to you nae harm.
 
 *Tam Lin*, stanzas 31–33 of version A, from Francis James Child, *The English and Scottish Popular Ballads* (Boston, 1882–98), ballad 39. *Esk* is a newt; a *red het gaud of airn* is a red-hot bar of iron.
 
@@ -195,7 +214,10 @@ Set beside a hundred years of therapy aimed at making a child hold still, that i
 
 And the other half of the fae bargain, the one where the child is glad to go, is the poem everybody knows:
 
-> Come away, O human child! To the waters and the wild With a faery, hand in hand, For the world’s more full of weeping than you can understand.
+> Come away, O human child!\
+> To the waters and the wild\
+> With a faery, hand in hand,\
+> For the world’s more full of weeping than you can understand.
 
 W. B. Yeats, [‘The Stolen Child’](https://en.wikisource.org/wiki/The_Wanderings_of_Oisin_and_Other_Poems/The_Stolen_Child), from *The Wanderings of Oisin and Other Poems* (1889). In the last stanza the refrain turns around: “For he comes, the human child, / To the waters and the wild… / From a world more full of weeping than he can understand.”
 

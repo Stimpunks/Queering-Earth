@@ -60,6 +60,32 @@ Drawn twice, rendered at 368, 544 and 900px in both grounds, refused twice. **Pa
 
 2026 · 10 September
 
+## Every poem on the site was arriving in the Markdown mirror as prose
+
+Reported against [Sheet No. 3](https://queering.earth/promises-like-pie-crust), where Rossetti’s first stanza had been reading “Promise me no promises, So will I not promise you: Keep we both our liberties,” in `promises-like-pie-crust.md` since the Markdown mirror shipped. Ten pages were affected, and `llms-full.txt` carried all of them. **[*Two Cohabitating Modes*](https://queering.earth/two-cohabitating-modes) was accessioned the same day and landed inside the fault** — its hedgehog poem and its fox rhyme, fifty-three lines, were flat in `two-cohabitating-modes.md` from the hour it was mounted. The fix reached it on the merge, which is the argument for fixing the converter rather than the ten files.
+
+Label correctedA verse line is the one span on this site that is not a bare wrapper
+
+`tools/make-markdown.mjs` listed `span` in its inline table as a wrapper, which is right for nearly every span here and wrong for the one that is not. `<span class="l">` does not wrap words inside a sentence — **it is a line**, and `queering.css` has said since the Rossetti sheet that a poem’s line breaks are the object being mounted and that reflowed into prose it is a different poem. Rossetti, Dickinson twice, Eliot, Douglas, Carroll, Shakespeare, Völuspá, Tam Lin, Yeats, Edith King’s hedgehog and the Halliwell fox rhyme on [the sheet mounted this same day](https://queering.earth/two-cohabitating-modes), the *Stimpunks Manifesto* and [Ryan’s own reply verse](https://queering.earth/wild-nights) were all being handed to an agent as paragraphs.
+
+**The sheets that set their lines on one source line were worse than reflowed.** `.qe-lines` puts every span on a single line of markup, so there was no inter-line whitespace to become a space and the converter emitted “againThe five unmistakable marks”. Not a different poem: not words.
+
+**The fix is keyed on `.l` and not on a list of containers, and the stylesheet had already paid for that lesson.** The obvious shape is a break for `.l` inside `.qe-poem` or `.qe-verse` — which is exactly what `queering.css` tried and abandoned, scoping the display rule first to `.qe-specimen`, then copying it to `.qe-correction`, and then watching Sheet No. 8 put verse in a `.qe-slip` that inherited neither. A container list here would have rebuilt that wall in the Markdown, and would have missed [Sheet No. 7](https://queering.earth/flower-codes) on the first pass, whose Douglas sits in a plain `.qe-specimen`. A `.l` is a line of verse wherever it appears, in both files, for one reason.
+
+**It is not a break after every span**, which would put line breaks through the middle of ordinary prose — the same error facing the other way. The ten files that changed are exactly the ten with a `.l` in them.
+
+MountedThe hard break is a backslash, because two trailing spaces would have been erased after they were written
+
+Markdown spells a hard break two ways. **The tidier at the foot of the converter strips trailing whitespace from every line**, so the two-space spelling would have been emitted and then silently removed — a fix that reports success and changes nothing, which is worse than no fix at all. A backslash also survives the `> ` prefixes that `.qe-poem` needs and `.qe-verse` does not.
+
+**It is written on the open of the next line rather than the close of this one**, so a stanza never ends on a dangling backslash. CommonMark reads a backslash at the end of a paragraph as a literal backslash, so the close-tag spelling would have hung a stray mark under every stanza on the site.
+
+**`.l-in` re-indents in the source**, two spaces, reproducing the 1896 compositor’s alternating indent on Rossetti and on Tam Lin. A strict renderer may collapse it; the text an agent reads carries it.
+
+**`search-index.json` was already right and did not change.** `make-search-index.mjs` keeps a `blockquote` and a `div.qe-verse` as whole records, so the finding aid had never flattened a poem. Only the Markdown had — which is the drift the generator exists to prevent, arriving through the one door nobody had checked.
+
+2026 · 10 September
+
 ## A third founding paper, on the fox and the hedgehog, and an unlabelled door in the top bar
 
 Ryan’s, and he supplied most of the sourcing: Edith King’s hedgehog poem, Liv’s *Life as a hedgehog*, the Vanhuysse review, the two Sagans, and the Stimpunks research page. He asked for a complement to [Star Stuff’s *Who Is Holding the Candle*](https://starstuff.earth/who-is-holding-the-candle), for the hedgehog poem in full, for a suitable fox poem to be found, and for a fox-and-hedgehog mark in the top bar as whimsy and as an easter egg. Four things surfaced in the sourcing before a word of the sheet was written, and none of them were ours.
