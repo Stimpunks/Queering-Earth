@@ -67,10 +67,9 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { REVEAL, UNREVEAL } from './reveal.mjs';
-import { CHROME, withPage as withPageOnPort, evaluated, sleep, settle, resolveTargets } from './cdp.mjs';
+import { launchChrome, withPage as withPageOnPort, evaluated, sleep, settle, resolveTargets } from './cdp.mjs';
 
 /* The picker's faces, from the one table that owns them. `null` is the reader who has
    chosen nothing, which is the state every other gate here measures. */
@@ -166,15 +165,7 @@ const SET_FACE = (id) => '(() => {'
 async function main() {
   const files = resolveTargets(ROOT);
 
-  const chrome = spawn(
-    CHROME,
-    ['--headless=new', '--disable-gpu', `--remote-debugging-port=${PORT}`,
-     `--user-data-dir=${path.join(fs.mkdtempSync('/tmp/qe-width-'), 'profile')}`, 'about:blank'],
-    { stdio: 'ignore' }
-  );
-  for (let i = 0; i < 60; i++) {
-    try { await fetch(`http://127.0.0.1:${PORT}/json/version`); break; } catch { await sleep(250); }
-  }
+  const { dispose } = await launchChrome(PORT, 'width');
 
   const findings = [];
   const unread = [];
@@ -255,7 +246,7 @@ async function main() {
       }
     }
   } finally {
-    chrome.kill();
+    await dispose();
   }
 
   console.log();

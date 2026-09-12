@@ -148,12 +148,10 @@
  *
  * Requires: Google Chrome. Node 22+ for the global WebSocket. Netlify never runs it.
  */
-import fs from 'node:fs';
 import path from 'node:path';
-import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { REVEAL, UNREVEAL } from './reveal.mjs';
-import { CHROME, withPage as withPageOnPort, evaluated, sleep, settle, resolveTargets } from './cdp.mjs';
+import { launchChrome, withPage as withPageOnPort, evaluated, sleep, settle, resolveTargets } from './cdp.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PORT = 9413; // 9411 the search index, 9412 the contrast gate — one each, so they run together
@@ -473,15 +471,7 @@ const CFG = {
 async function main() {
   const files = resolveTargets(ROOT);
 
-  const chrome = spawn(
-    CHROME,
-    ['--headless=new', '--disable-gpu', `--remote-debugging-port=${PORT}`,
-     `--user-data-dir=${path.join(fs.mkdtempSync('/tmp/qe-overlap-'), 'profile')}`, 'about:blank'],
-    { stdio: 'ignore' }
-  );
-  for (let i = 0; i < 60; i++) {
-    try { await fetch(`http://127.0.0.1:${PORT}/json/version`); break; } catch { await sleep(250); }
-  }
+  const { dispose } = await launchChrome(PORT, 'overlap');
 
   const results = [];
   const unread = [];
@@ -548,7 +538,7 @@ async function main() {
       }
     }
   } finally {
-    chrome.kill();
+    await dispose();
   }
 
   // ── report ──────────────────────────────────────────────────────────────────

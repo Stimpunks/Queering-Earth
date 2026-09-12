@@ -344,6 +344,41 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
+### `tools/check.mjs`, and a gate that spent five days measuring in a browser it did not launch (2026-09-12)
+
+Ryan, after the lilac coda shipped: *"It took over 20 minutes to test and deploy this simple change. The width gate is especially slow, and it looks like it ran three times."* All three observations were right, and timing them turned up a second fault nobody was looking for.
+
+**Where the time went, measured rather than felt.** The four generators are 4.8s and the six offline gates 5.6s together. `check-overlap` is 40s, `check-contrast` 53s, and **`check-width` is 4:22** — three quarters of the whole bill, because it renders 27 pages × 10 typefaces × 4 widths × 2 papers. Nothing that is not Chrome costs ten seconds.
+
+**Settled: `tools/check.mjs` regenerates, then runs every gate, scoped to what moved.** Three fixes, none of which needed new capability:
+
+- **The three Chrome gates run at once.** They take ports 9412, 9413 and 9414 *for exactly this reason* and `cdp.mjs` has said so since it was written; running them in sequence was a habit, not a requirement. Full sweep in parallel is 4:47 end to end.
+- **The sweep is scoped to the pages git says moved**, through the positional arguments `resolveTargets` already accepted. A one-page change is **24s**, generators and all nine gates included.
+- **Nothing runs twice.** The twenty minutes included `check-width` three times: once in a loop whose pipe discarded the exit code, once again to read it, once more after a second edit.
+
+**The scope is computed AFTER the generators run, and that is why this is a tool rather than a shell alias.** `make-records` and `make-whats-new` write into pages nobody touched — the coda moved `index.html` by hand and `what-is-settled.html` and `search.html` by generation — so asking git first would scope to the edit and miss the pages the edit *caused*. Untracked files count too: **a new page is the case most in need of measuring** and a plain `git diff` cannot see one.
+
+**Which assets break scoping is DECLARED in the tool, in the two-list shape `check-cache.mjs` already uses.** Nothing in a file's bytes says whether it can move a page it is not named in, so the inference is available, plausible and wrong. The stylesheet, the script, the fonts, `font-files.json`, `reveal.mjs` and the gates themselves force a full sweep; `queering-search.js` adds `/search` and nothing else; everything else is page-local by declaration. **A new shared asset needs a line in one of the two lists.** `--all` is always available and always correct.
+
+**Open: whether `check-width` itself should be made faster.** Two candidates, neither built — render pages across three or four concurrent tabs in one browser, or sweep the nine extra faces only on pages that changed while the default face walks everything. Scoping made it moot for the edit loop; a full sweep is still four and a half minutes.
+
+### A gate must own the browser it measures in (2026-09-12)
+
+**Found by timing the gates, not by any check, and no check here could have found it.** Every gate reports on the site; nothing reports on the instruments.
+
+Each Chrome gate spawned Chrome and then polled `/json/version` until **something** answered. On 7 September an orphaned headless Chrome from a neighbouring project's probe script took port 9414 and never let go. **Every `check-width.mjs` run from that day to 12 September bound nothing, attached to that five-day-old browser, measured 27 pages in Chrome 152.0.7977.77 while .84 was installed, killed its own portless process on the way out, and reported PASS with no sign whatsoever.** Five such orphans were up, one per interrupted probe, holding about 400MB, with 303 temp profiles behind them.
+
+**Settled: `cdp.mjs` owns the spawn, which reverses that file's own stated position.** Its header argued the duplicated `spawn` boilerplate was fine because it "carries no footgun." That clause was false, and false in production. `launchChrome()` refuses two ways a sweep can happen in something we did not start:
+
+- **The port must be free before the spawn.** If anything answers, the run stops and names what answered rather than driving it.
+- **The process we spawned must still be alive when the endpoint answers.** The old poll swallowed every fetch failure and fell out of its loop silently, so a Chrome that died on launch produced a sweep of nothing rather than an error.
+
+It also removes the temp profile, which no copy did — **awaited**, because `kill()` only sends a signal: the first version removed it on the next line and left 25 directories behind in a single evening, since Chrome was still flushing and macOS lets a running process recreate a file you just unlinked. **Made to fail in three shapes before being believed**: a decoy holding the port refuses and exits 1, a browser that cannot start reports `Nothing was measured`, and the port free again passes.
+
+**The orphans came from ad-hoc probe scripts, not from the gates** — the gates do clean up on their normal exit, confirmed after. So the transferable rule is about the probes: **a script written to measure something once must still clean up after itself**, because the bill arrives somewhere else entirely, days later, as a gate that cannot fail.
+
+**Clearing them did not speed anything up** — 4:22 against 4:30, which is noise. That is a correctness finding, not a performance one, and the two were kept apart deliberately.
+
 ### The lilac coda goes last, and being last had been its heading (2026-09-12)
 
 Eliot's four lines, the lilac bush and the click-to-load recording were mounted above the footer and last on the page on 9 September, and **they were the last thing on it for two and a half hours.** The cabinet's list came out of the footer that evening, the aims followed, and the drawers reorganised both on 11 September. Every one of those edits appended, which is the ordinary thing to do; the sum of them left a coda in the middle of the page, reading as a digression between the plate and the furniture. **A coda stops being a coda the moment anything is appended beneath it.**

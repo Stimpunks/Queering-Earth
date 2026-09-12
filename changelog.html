@@ -326,8 +326,35 @@
        which a derived href would have. -->
   <div class="qe-register" id="latest">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-12-quiet-need">
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-12-runner">
       <p class="qe-accession-date">2026 &middot; 12 September &middot; latest</p>
+      <h2 id="a-2026-09-12-runner">A gate that had been measuring in somebody else&rsquo;s browser for five days, and a runner that makes a one-page edit cost a minute <a class="qe-anchor" href="#a-2026-09-12-runner"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Ryan asked why moving one block inside one page took twenty minutes to check. Timing the answer turned up a second thing nobody was looking for.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">A gate reported PASS for five days while driving a browser it did not launch</span></div>
+        <div class="qe-entry-body">
+          <p>Each Chrome gate spawned Chrome and then polled <code>/json/version</code> until <strong>something</strong> answered. On 7 September an orphaned headless Chrome from a neighbouring project&rsquo;s probe script took port <code>9414</code> and never let go. <strong>Every <code>check-width.mjs</code> run from that day to this one bound nothing, attached to that five-day-old browser, measured all 27 pages in Chrome 152.0.7977.77 while .84 was installed, killed its own portless process on the way out, and reported <code>PASS</code> with no sign whatsoever.</strong> Five such orphans were up, one per interrupted probe, holding about 400MB, with 303 temp profiles behind them.</p>
+          <p><strong>This is the house&rsquo;s own recurring fault in a new place</strong> &mdash; a run that measures a fraction of what it claims looks exactly like a clean one. It was found by timing the gates, not by any check, and no check here could have found it: every gate reports on the site, and nothing reports on the instruments.</p>
+          <p><code>cdp.mjs</code> now owns the spawn, which <strong>reverses that file&rsquo;s own stated position</strong> that the duplication &ldquo;carries no footgun&rdquo;. The port must be free <em>before</em> the spawn, and the process we started must still be alive when the endpoint answers &mdash; the old poll swallowed every failure and fell out of its loop silently, so a Chrome that died on launch produced a sweep of nothing rather than an error. The temp profile is removed on the way out, which no copy did. <strong>Made to fail in three shapes before being believed</strong>: a decoy on the port refuses and exits 1, a browser that cannot start reports <q>Nothing was measured</q>, and the port free again passes.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><code>tools/check.mjs</code>: twenty minutes becomes twenty-four seconds</span></div>
+        <div class="qe-entry-body">
+          <p>Measured before anything was written. The four generators are 4.8s and the six offline gates 5.6s together; <code>check-overlap</code> is 40s, <code>check-contrast</code> 53s, and <strong><code>check-width</code> is 4:22 &mdash; three quarters of the whole bill</strong>, because it renders 27 pages &times; 10 typefaces &times; 4 widths &times; 2 papers.</p>
+          <p>Three things made twenty minutes out of six, and none of them needed new capability. <strong>The three Chrome gates run at once</strong>, which they were always built for &mdash; they take one port each and <code>cdp.mjs</code> has said why since it was written. <strong>The sweep is scoped to the pages that moved</strong>, through the positional arguments all three already accepted. And nothing is run twice to read an exit code a pipeline discarded. Full sweep: <strong>4:47</strong>. A one-page change: <strong>24s</strong>, generators and all nine gates included.</p>
+          <p><strong>The scope is taken from git, and only after the generators have run.</strong> That order is the reason this is a tool and not an alias: <code>make-records</code> and <code>make-whats-new</code> write into pages nobody touched, so asking git first scopes to the edit and misses the pages the edit <em>caused</em>. Untracked files count, because <strong>a new page is the case most in need of measuring</strong> and a plain diff cannot see one.</p>
+          <p><strong>Which assets break scoping is declared, never inferred</strong> &mdash; the two-list shape <code>check-cache.mjs</code> already uses, because nothing in a file&rsquo;s bytes says whether it can move a page it is not named in. The stylesheet, the script, the fonts and the gates themselves force a full sweep; <code>queering-search.js</code> adds <a href="/search">the finding aid</a> and nothing else. Everything else is page-local by declaration, <code>--all</code> is always available and always right, and <strong>a new shared asset needs a line in one of the two lists</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-12-quiet-need">
+      <p class="qe-accession-date">2026 &middot; 12 September</p>
       <h2 id="a-2026-09-12-quiet-need">Sheet No.&nbsp;12, and a rule relaxed on the record rather than quietly <a class="qe-anchor" href="#a-2026-09-12-quiet-need"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">An essay that began as a note in the inbox about a piece of music, and turned into an argument about who is allowed to love the way the canon does.</p>

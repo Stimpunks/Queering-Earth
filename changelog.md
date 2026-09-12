@@ -37,6 +37,30 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 12 September · latest
 
+## A gate that had been measuring in somebody else’s browser for five days, and a runner that makes a one-page edit cost a minute
+
+Ryan asked why moving one block inside one page took twenty minutes to check. Timing the answer turned up a second thing nobody was looking for.
+
+CabinetA gate reported PASS for five days while driving a browser it did not launch
+
+Each Chrome gate spawned Chrome and then polled `/json/version` until **something** answered. On 7 September an orphaned headless Chrome from a neighbouring project’s probe script took port `9414` and never let go. **Every `check-width.mjs` run from that day to this one bound nothing, attached to that five-day-old browser, measured all 27 pages in Chrome 152.0.7977.77 while .84 was installed, killed its own portless process on the way out, and reported `PASS` with no sign whatsoever.** Five such orphans were up, one per interrupted probe, holding about 400MB, with 303 temp profiles behind them.
+
+**This is the house’s own recurring fault in a new place** — a run that measures a fraction of what it claims looks exactly like a clean one. It was found by timing the gates, not by any check, and no check here could have found it: every gate reports on the site, and nothing reports on the instruments.
+
+`cdp.mjs` now owns the spawn, which **reverses that file’s own stated position** that the duplication “carries no footgun”. The port must be free *before* the spawn, and the process we started must still be alive when the endpoint answers — the old poll swallowed every failure and fell out of its loop silently, so a Chrome that died on launch produced a sweep of nothing rather than an error. The temp profile is removed on the way out, which no copy did. **Made to fail in three shapes before being believed**: a decoy on the port refuses and exits 1, a browser that cannot start reports “Nothing was measured”, and the port free again passes.
+
+Cabinet`tools/check.mjs`: twenty minutes becomes twenty-four seconds
+
+Measured before anything was written. The four generators are 4.8s and the six offline gates 5.6s together; `check-overlap` is 40s, `check-contrast` 53s, and **`check-width` is 4:22 — three quarters of the whole bill**, because it renders 27 pages × 10 typefaces × 4 widths × 2 papers.
+
+Three things made twenty minutes out of six, and none of them needed new capability. **The three Chrome gates run at once**, which they were always built for — they take one port each and `cdp.mjs` has said why since it was written. **The sweep is scoped to the pages that moved**, through the positional arguments all three already accepted. And nothing is run twice to read an exit code a pipeline discarded. Full sweep: **4:47**. A one-page change: **24s**, generators and all nine gates included.
+
+**The scope is taken from git, and only after the generators have run.** That order is the reason this is a tool and not an alias: `make-records` and `make-whats-new` write into pages nobody touched, so asking git first scopes to the edit and misses the pages the edit *caused*. Untracked files count, because **a new page is the case most in need of measuring** and a plain diff cannot see one.
+
+**Which assets break scoping is declared, never inferred** — the two-list shape `check-cache.mjs` already uses, because nothing in a file’s bytes says whether it can move a page it is not named in. The stylesheet, the script, the fonts and the gates themselves force a full sweep; `queering-search.js` adds [the finding aid](https://queering.earth/search) and nothing else. Everything else is page-local by declaration, `--all` is always available and always right, and **a new shared asset needs a line in one of the two lists**.
+
+2026 · 12 September
+
 ## Sheet No. 12, and a rule relaxed on the record rather than quietly
 
 An essay that began as a note in the inbox about a piece of music, and turned into an argument about who is allowed to love the way the canon does.

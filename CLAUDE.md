@@ -1442,6 +1442,53 @@ anything that needs fixing there in `DECISIONS.md` instead.
 Run before shipping. All nine are browser-free or Chrome-only; nothing needs `npm install`,
 and the default path of every one of them is offline.
 
+### `tools/check.mjs` runs all of it, and a one-page edit costs a minute
+
+```bash
+node tools/check.mjs          # regenerate, then every gate, scoped to what moved
+node tools/check.mjs --all    # the same, over all 27 pages
+```
+
+**Written on 2026-09-12 because shipping a move of one block inside one page took over
+twenty minutes.** Timed afterwards: the four generators are 4.8s and the six offline gates
+5.6s together, `check-overlap` is 40s, `check-contrast` 53s, and **`check-width` is 4:22 —
+three quarters of the bill**, because it renders 27 pages × 10 typefaces × 4 widths × 2
+papers. Nothing that is not Chrome costs ten seconds.
+
+Three things made twenty minutes out of six, and the runner removes all three.
+
+- **THE THREE CHROME GATES RUN AT ONCE, WHICH THEY WERE ALWAYS BUILT FOR.** They take
+  ports 9412, 9413 and 9414 for exactly this reason and `cdp.mjs` has said so since it was
+  written; running them one after another was never required by anything. Full sweep in
+  parallel is **4:47 end to end**, because the two cheap gates finish inside width's shadow.
+- **THE SWEEP IS SCOPED TO THE PAGES THAT MOVED.** All three already take positional file
+  arguments through `resolveTargets` — nothing had to be written for this, it had to be
+  passed. A one-page change is **24s end to end**, generators and all nine gates included.
+- **Nothing is run twice.** A gate's exit code is read once, from the process, not from a
+  pipeline that threw it away.
+
+**THE SCOPE IS TAKEN FROM GIT, AND ONLY AFTER THE GENERATORS HAVE RUN.** That order is the
+reason this is a tool and not a shell alias: `make-records` and `make-whats-new` write into
+pages nobody touched, so asking git first scopes to the edit and misses the pages the edit
+*caused*. The lilac coda moved `index.html` by hand and `what-is-settled.html` and
+`search.html` by generation. Generate, then ask what moved — untracked files included,
+because **a new page is the case most in need of measuring** and a plain `git diff` cannot
+see one.
+
+**WHICH ASSETS BREAK SCOPING IS DECLARED IN THE TOOL, NEVER INFERRED.** Same two-list shape
+as `check-cache.mjs` and for the same reason: nothing in a file's bytes says whether it can
+move a page it is not named in. `queering.css`, `queering.js`, the fonts, `font-files.json`,
+`reveal.mjs` and the gates themselves force a full sweep; `queering-search.js` adds `/search`
+to the scope and nothing else. Everything not on a list is page-local **by declaration**.
+**A new shared asset needs a line in one of the two**, and the failure of forgetting is this
+house's own recurring one — a run that measures 8% of itself and looks exactly like a clean
+one. **When in doubt, `--all`.**
+
+A scoped run is not a full sweep. Use `--all` before anything that touches how the site is
+built, and whenever the answer matters more than the minute.
+
+### Running them by hand
+
 Regenerate first, in this order — `check-metadata.mjs` fails on any of them being stale:
 
 ```bash
@@ -1541,6 +1588,28 @@ metric fact about that face the way `sets_body` is. Sporting is `clamp(1.9rem, 8
 and **the number came from a measurement whose expected answer was wrong**: the target was not
 "clear the 20px gutter", because the default face does not clear it either — at 320px Fraunces
 leaves 12.1px. The bar is *no tighter than the house's own tightest*.
+
+**A GATE MUST OWN THE BROWSER IT MEASURES IN, AND FOR FIVE DAYS ONE DID NOT.** Each Chrome
+gate used to spawn Chrome and then poll `/json/version` until **something** answered. On
+7 September an orphaned headless Chrome from a neighbouring project's probe script took port
+9414 and never let go, so **every `check-width.mjs` run from that day to 12 September bound
+nothing, attached to that five-day-old browser, measured 27 pages in Chrome 152.0.7977.77
+while .84 was installed, killed its own portless process on the way out, and reported PASS
+with no sign whatsoever.** Five such orphans were up, one per interrupted probe, with 303
+temp profiles behind them.
+
+`cdp.mjs`'s `launchChrome()` is the one place a browser is opened here now, and it refuses
+two ways a sweep can happen in something we did not start: **the port must be free before the
+spawn** — if anything answers, the run stops and names what answered rather than driving it —
+and **the process we spawned must still be alive when the endpoint answers**, because the old
+poll swallowed every fetch failure and fell out of its loop silently, so a Chrome that died on
+launch produced a sweep of nothing rather than an error. It also removes the temp profile,
+which no copy did — **awaited**, since `kill()` only sends a signal and removing the directory
+on the next line left 25 of them behind in one evening. **Proved in all three shapes before being believed**: a decoy on the port
+refuses and exits 1, a Chrome that cannot start reports `Nothing was measured`, and the port
+free again passes. **This is why an ad-hoc measuring script must clean up after itself** —
+the orphans came from probe scripts, not from the gates, and the gates are where the bill
+arrived.
 
 Star Stuff has three more (`check-classes`, `check-sheets`, `check-embeds`).
 **Port one when the failure it catches becomes possible here** — not before. A check that

@@ -16,13 +16,33 @@
  * `withPage` takes its debugging port as an argument rather than closing over one,
  * because the two gates deliberately run on different ports so they can run at once.
  *
- * WHAT IS NOT HERE: each gate launches its own Chrome and keeps its own `main()`.
- * That is a dozen lines of `spawn` boilerplate duplicated on purpose — it is
- * entangled with each gate's reporting, and moving it would risk a working
- * measurement to save repetition that carries no footgun.
+ * THE SPAWN IS HERE NOW, AND THIS HEADER USED TO ARGUE THE OPPOSITE. It said each
+ * gate should keep its own `spawn` because the duplication "carries no footgun."
+ * **That clause was false, and it was false in production.** Each copy spawned
+ * Chrome, then polled `/json/version` until SOMETHING answered — and on 7 September
+ * an orphaned headless Chrome from a neighbouring project's probe script took port
+ * 9414 and never let go. Every `check-width.mjs` run from that day to 12 September
+ * bound nothing, attached to that five-day-old browser, measured 27 pages in Chrome
+ * 152.0.7977.77 while .84 was installed, killed its own portless process on the way
+ * out, and **reported PASS with no sign whatsoever.** Five such orphans were up, one
+ * per interrupted probe, and 303 temp profiles with them.
+ *
+ * So `launchChrome()` is the one place that opens a browser here, and it refuses two
+ * ways a sweep can be measured in something we did not start:
+ *
+ *   - **The port must be free BEFORE the spawn.** If anything answers there, the run
+ *     stops and names what answered rather than driving it. A gate that attaches to a
+ *     stranger's browser is the house's own recurring fault — a page that checks 8% of
+ *     itself reports zero failures and looks exactly like a clean one.
+ *   - **The process we spawned must still be alive when the endpoint answers.** The old
+ *     poll swallowed every fetch failure and fell out of its loop silently, so a Chrome
+ *     that died on launch produced a sweep of nothing rather than an error.
+ *
+ * It also removes the temp profile on the way out, which no copy did.
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { spawn } from 'node:child_process';
 
 export const CHROME = [
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
@@ -127,6 +147,88 @@ export async function settle(send) {
     await sleep(150);
   }
   return null;
+}
+
+/**
+ * Open a headless Chrome this process owns, on a port nothing else holds.
+ *
+ * Returns `{ chrome, dispose }`. Call `dispose()` in a `finally` — it kills the
+ * browser AND removes the temp profile, which the three hand-rolled copies of this
+ * never did: 303 of them were sitting in /tmp when this was written.
+ *
+ * `label` names the gate, for the profile directory and for the error text a reader
+ * gets when the port is busy. The prefix is `qe-` for every gate here; the contrast
+ * gate carried `ss-` from the day it was ported and that is why a cleanup sweep for
+ * this project's leavings had to know a second project's prefix.
+ */
+export async function launchChrome(PORT, label) {
+  const held = await portHolder(PORT);
+  if (held) {
+    console.error(
+      `\nREFUSING TO RUN — something is already listening on 127.0.0.1:${PORT}, which is ` +
+      `${label}'s debugging port.\n` +
+      `  It answers as: ${held}\n` +
+      `  This is not our browser. Attaching to it would measure these pages in a browser\n` +
+      `  this run did not launch, at whatever version and state it happens to be in — and\n` +
+      `  the sweep would report PASS regardless. That is exactly how this check was\n` +
+      `  silently driving a five-day-old orphan until 12 September 2026.\n\n` +
+      `  Find it:  lsof -nP -iTCP:${PORT} -sTCP:LISTEN\n` +
+      `  Orphans from an interrupted probe are safe to kill; they are headless and their\n` +
+      `  profiles live in /tmp.`
+    );
+    process.exit(1);
+  }
+
+  const profile = fs.mkdtempSync(path.join('/tmp', `qe-${label}-`));
+  const chrome = spawn(
+    CHROME,
+    ['--headless=new', '--disable-gpu', `--remote-debugging-port=${PORT}`,
+     `--user-data-dir=${path.join(profile, 'profile')}`, 'about:blank'],
+    { stdio: 'ignore' }
+  );
+
+  /* AWAITED, because `kill()` only SENDS a signal. The first version removed the
+     profile on the next line and left 25 directories behind in one evening: Chrome was
+     still flushing, and on macOS unlinking an open file succeeds while the process
+     happily recreates it. Wait for the child to be gone, then remove — with a bounded
+     wait, since a gate must not hang on a browser that will not die. */
+  const dispose = async () => {
+    try { chrome.kill(); } catch { /* already gone */ }
+    if (chrome.exitCode === null && chrome.signalCode === null) {
+      await Promise.race([
+        new Promise((r) => chrome.once('exit', r)),
+        sleep(3000).then(() => { try { chrome.kill('SIGKILL'); } catch { /* gone */ } }),
+      ]);
+    }
+    try { fs.rmSync(profile, { recursive: true, force: true }); } catch { /* not ours to insist on */ }
+  };
+
+  for (let i = 0; i < 60; i++) {
+    /* A dead child is the case the old poll could not see: it swallowed the fetch
+       failure, ran out of tries, and returned as though Chrome were up. */
+    if (chrome.exitCode !== null || chrome.signalCode !== null) {
+      dispose();
+      console.error(`\nFAIL — ${label}'s Chrome exited before it opened a debugging port. Nothing was measured.`);
+      process.exit(1);
+    }
+    if (await portHolder(PORT)) return { chrome, dispose };
+    await sleep(250);
+  }
+  await dispose();
+  console.error(`\nFAIL — ${label}'s Chrome never opened port ${PORT} within 15s. Nothing was measured.`);
+  process.exit(1);
+}
+
+/* The browser string if anything answers CDP on this port, else null. Short timeout:
+   a free port refuses at once, and we are about to wait on a spawn anyway. */
+async function portHolder(PORT) {
+  try {
+    const r = await fetch(`http://127.0.0.1:${PORT}/json/version`, { signal: AbortSignal.timeout(1000) });
+    const v = await r.json();
+    return v.Browser || 'an unidentified CDP endpoint';
+  } catch {
+    return null;
+  }
 }
 
 export function resolveTargets(ROOT) {

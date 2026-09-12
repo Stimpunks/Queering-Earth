@@ -9,6 +9,14 @@
     <copyright>CC BY-SA 4.0</copyright>
     <lastBuildDate>Sat, 12 Sep 2026 12:00:00 GMT</lastBuildDate>
     <item>
+      <title>A gate that had been measuring in somebody else’s browser for five days, and a runner that makes a one-page edit cost a minute</title>
+      <link>https://queering.earth/changelog#a-2026-09-12-runner</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-12-runner</guid>
+      <pubDate>Sat, 12 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: A gate reported PASS for five days while driving a browser it did not launch
+Cabinet: tools/check.mjs: twenty minutes becomes twenty-four seconds</description>
+    </item>
+    <item>
       <title>Sheet No. 12, and a rule relaxed on the record rather than quietly</title>
       <link>https://queering.earth/changelog#a-2026-09-12-quiet-need</link>
       <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-12-quiet-need</guid>
