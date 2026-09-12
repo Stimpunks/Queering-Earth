@@ -44,18 +44,35 @@ const git = (...args) => execFileSync('git', args, { encoding: 'utf8' });
 /** The address a page answers at, house style: extensionless, index at the root. */
 const addressOf = (f) => (f === 'index.html' ? '/' : '/' + f.replace(/\.html$/, ''));
 
-export function currentDrafts() {
-  let hits = [];
+/** git grep, with "no matches" treated as the empty answer it is rather than a failure. */
+function grepFor(args) {
   try {
-    hits = git('grep', '-lE', MARKER, BRANCH, '--', '*.html')
+    return git('grep', ...args)
       .split('\n').filter(Boolean)
-      .map((l) => l.slice(l.indexOf(':') + 1))
+      .map((l) => (l.startsWith(BRANCH + ':') ? l.slice(BRANCH.length + 1) : l))
       .filter((f) => !f.includes('/'));            // root pages only, as everything here is
   } catch (e) {
     if (e.status === 1) return [];                 // git grep: no matches
     throw e;
   }
-  return hits.filter((f) => !NOT_A_DRAFT.has(f)).sort();
+}
+
+export function currentDrafts() {
+  const hits = new Set(grepFor(['-lE', MARKER, BRANCH, '--', '*.html']));
+
+  /* THE WORKING TREE COUNTS WHEN IT IS THE BRANCH'S OWN, and leaving it out was a real
+     fault found by walking the workflow rather than reading it. A draft that has been
+     written but not yet committed lives nowhere in `refs/heads/drafts`, so the committed
+     scan alone reported "no draft in progress" for the whole of `start-draft` and for the
+     FIRST `save-draft` — which is the one run where the skill is told to stop and ask.
+     `--untracked` is the half that matters: a brand-new sheet is not in the index either. */
+  if (onDraftsBranch()) for (const f of grepFor(['-lE', '--untracked', MARKER, '--', '*.html'])) hits.add(f);
+
+  return [...hits].filter((f) => !NOT_A_DRAFT.has(f)).sort();
+}
+
+function onDraftsBranch() {
+  try { return git('branch', '--show-current').trim() === 'drafts'; } catch { return false; }
 }
 
 /** Is this draft a revision of a page that is already published, or a new one? */
