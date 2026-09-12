@@ -360,6 +360,24 @@
           <p>Two smaller things, each paid for by watching it go wrong. <strong>A definition list is one target</strong>, like a quotation &mdash; the specimen block fragmented into twelve note buttons first, which is the cropping fault from the other direction. And <strong>a note whose paragraph is rewritten under it is marked, never dropped</strong>: it re-attaches by position, says so on its face, and still exports. Silently losing a reviewer&rsquo;s note is the worse failure.</p>
         </div>
       </div>
+    
+      <div class="qe-entry qe-entry--redet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--redet">Re-determined</span><span class="qe-entry-name">Netlify does not noindex a branch deploy, and <q>promotion is a merge</q> was wrong the day it was written</span></div>
+        <div class="qe-entry-body">
+          <p>The entry above asked for one <code>curl</code> against the first real branch deploy, and it was worth asking. The <code>.netlify.app</code> rule in <code>_redirects</code> does <strong>not</strong> reach a branch host, as expected. But <strong>Netlify sends no <code>X-Robots-Tag</code> on a branch deploy at all</strong> &mdash; Deploy Previews get one, branch deploys do not. The draft page itself was covered by its own three-line block; the <strong>full copy of all 27 published pages</strong> that a branch deploy also carries had nothing but <code>rel=canonical</code> holding it. Real mitigation, and exactly what this site already judged insufficient one layer up, where the apex <code>.netlify.app</code> host is 301&rsquo;d rather than left to canonicals.</p>
+          <p><code>_headers</code> on the drafts branch now carries <code>X-Robots-Tag: noindex</code> on <code>/*</code>, and <strong>that line must never reach the published site</strong> &mdash; if it does, every page here drops out of every index.</p>
+          <p><strong>It is safe only because of a correction to the day&rsquo;s own design.</strong> Promotion takes the file and never merges the branch. <q>Promotion is a merge</q> was written into <a href="/what-is-settled">what is settled</a> and into the house rules before the branch had more than one thing on it, and it was wrong on its own terms: <strong>a branch holding three drafts cannot be merged to publish one of them.</strong> Cherry-picking the single file is what the workflow required anyway, so the header costs nothing that was not already being spent. The two halves are one decision, and weakening either breaks the other.</p>
+        </div>
+      </div>
+    
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Three skills, so drafting never requires a git command</span></div>
+        <div class="qe-entry-body">
+          <p><code>start-draft</code> puts a page on the branch and prints the URL to send Helen. <code>save-draft</code> commits, pushes and hands the URL back. <code>publish-draft</code> takes the file onto <code>main</code> &mdash; never the branch &mdash; and walks the accession checklist this file already states: mount it, card it, log it, file it, stamp it, route it, crumb it, group it, rail it.</p>
+          <p><code>tools/draft.mjs</code> holds the one thing all three need to agree about, which is <strong>which file is the draft</strong>. Written out three times it would be three answers the day one was edited, in the one place where being wrong means publishing the wrong page. A draft is identified by its marker rather than by a name kept somewhere, so <strong>a page stops being a draft at exactly the moment it is published</strong>, with no state file to fall out of step.</p>
+          <p><strong>It matched the bare filename first, which is the third time in one day.</strong> Check 10 shipped that way and fired on this page and on <a href="/what-is-settled">what is settled</a>; this tool did the same an hour later and reported both of them as drafts in progress. On a site that documents its own build, anything matching a filename matches the prose about that filename &mdash; and the discriminator is always the same, because prose escapes the tag or wraps the name in a code span.</p>
+        </div>
+      </div>
     </section>
 
 

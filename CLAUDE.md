@@ -1487,7 +1487,32 @@ for two reasons that have nothing to do with the plumbing. It would publish unre
 attributions to **queering.earth** itself, unlisted but public, which is the exposure
 `ATTRIBUTIONS.md` exists around; and a page in a subdirectory needs `../queering.css`, so it
 does not render what will ship and promotion becomes a rewrite of every asset href. On the
-branch the draft is byte-identical to the published page and **promotion is a merge**.
+branch the draft is byte-identical to the published page.
+
+**PROMOTION TAKES THE FILE, IT NEVER MERGES THE BRANCH, AND THE FIRST VERSION OF THIS RULE
+SAID THE OPPOSITE.** `git checkout drafts -- on-being-ill.html` from `main`, then the
+accession checklist. *Promotion is a merge* was written down before the branch had more than
+one thing on it, and **a long-lived branch holding three drafts cannot be merged to publish
+one of them** — it publishes all three. Cherry-picking the single file is what you would have
+had to do anyway. **Nothing ever merges out of `drafts`**, which is what makes the header
+below safe.
+
+**THREE SKILLS DRIVE THIS, AND RYAN SHOULD NEVER TYPE A GIT COMMAND FOR IT.**
+`start-draft` puts a page on the branch and prints the URL; `save-draft` commits, pushes and
+hands the URL back; `publish-draft` takes the file onto `main` and walks the accession
+checklist. `tools/draft.mjs` holds the one derivation all three need — **which file is the
+draft** — because written out three times it would be three answers the day one was edited,
+in the one place where being wrong means publishing the wrong page. A draft is identified by
+its marker rather than by a name kept somewhere, which is the same fact check 10 keys on, so
+a page stops being a draft at exactly the moment it is published.
+
+**IT MATCHES THE INCLUDE AND NOT THE NAME, WHICH IS THE THIRD TIME IN ONE DAY.** Check 10
+shipped with the bare string and fired on `/changelog` and `/what-is-settled` the moment the
+feature was written up on them; `draft.mjs` did the same an hour later, from the same
+instinct, and reported both pages as drafts in progress. **On a site that documents its own
+build, anything matching a filename matches the prose about that filename.** Prose writes
+`&lt;script` or wraps the name in a `code` span, so the unescaped tag is the discriminator.
+`review-practice.html` is declared as the one standing exception, with its reason.
 
 **The failing gates on that branch are the accession checklist, reported by name.**
 `check-addresses` names the missing `301!`, `check-card-order` the missing card,
@@ -1541,10 +1566,26 @@ wherever the two of you already talk. **No endpoint, no account, no third party.
 - **There is no draft template, on purpose.** A skeleton page would be a second copy of the
   markup every sheet already carries, and it would rot. Copy the nearest sheet.
 
-**Nothing under `/drafts/` is for an index** — `_headers` sends `X-Robots-Tag: noindex`, and
-Netlify noindexes branch deploys and deploy previews of its own accord. **Verify both with
-one `curl -sI` on the first draft**, along with whether the `.netlify.app` hostname rule in
-`_redirects` reaches a branch host; it names the production hostname, so it should not.
+**NETLIFY DOES NOT NOINDEX A BRANCH DEPLOY, AND THIS FILE ASSUMED IT DID.** Measured on
+2026-09-12 against the first real branch deploy: `drafts--queering-earth.netlify.app`
+answered **200 with no `X-Robots-Tag` at all**. Deploy Previews get one; branch deploys do
+not. A draft page is still covered, because `noindex, nofollow` is one of the three lines in
+its own block — but **a branch deploy also carries a full copy of all 27 published pages**,
+and those had nothing but `rel=canonical` holding them. That is the same defect `_redirects`
+already fixed one layer up, where this file records that byte-identical documents at two
+addresses are a duplicate-content problem and an ambiguity about which address is real.
+
+**So `_headers` ON THE `drafts` BRANCH CARRIES `X-Robots-Tag: noindex` ON `/*`, AND THAT LINE
+MUST NEVER REACH `main`.** It is safe only because promotion takes a file and never merges
+the branch — the two halves of this are one decision, and weakening either one breaks the
+other. If that header ever appears on production every page on the site drops out of every
+index, which is the loudest possible failure and therefore the one to state here in capitals
+rather than trust to memory. Nothing gates it; the live probe would be
+`curl -sI https://queering.earth/ | grep -i x-robots`.
+
+**What the same measurement settled:** the `.netlify.app` rule in `_redirects` does **not**
+reach a branch host — no `location:` — which is what it looked like it should do and had
+never been checked.
 
 ## The checks
 
