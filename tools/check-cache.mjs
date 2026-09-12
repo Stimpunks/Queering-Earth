@@ -91,6 +91,11 @@ const COUPLED = new Map([
   ['/queering-search.js', 'clones result templates authored in search.html'],
   ['/queering-embed.js', 'reads the facade\'s data-embed-* attributes out of index.html'],
   ['/search-index.json', 'derived from the sheets; a stale copy can quote a sentence no longer on the page it cites'],
+  /* Draft-only, and it never appears on a published page — check-metadata.mjs check 10 is
+     the guard. It is declared anyway: it reads the draft's own blocks and writes controls
+     against them, so a stale copy on a draft branch would anchor a reviewer's notes to
+     markup that has moved. It inherits `max-age=0, must-revalidate` from `/*`. */
+  ['/drafts/review.js', 'anchors a reviewer\'s notes to the blocks of the draft it is reading'],
 ]);
 const DECOUPLED = new Map([
   ['/fonts/*', 'glyph outlines; a face has no knowledge of structure or class names'],

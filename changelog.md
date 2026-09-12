@@ -37,6 +37,38 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 12 September · latest
 
+## A draft can now be read at a real address and marked up without an account
+
+Ryan asked for a lightweight way to show Helen a sheet before it is mounted, and then supplied the constraint that decided it: nothing requiring GitHub or editing HTML works for her. One sentence, and a settled decision stopped being true.
+
+Re-determinedThe review path this site had written down did not work for the person it named
+
+[What is settled](https://queering.earth/what-is-settled) deferred a CMS partly on the grounds that “the zero-cost path already works: Helen edits files in the GitHub web editor, opens a pull request, and Netlify posts a deploy preview URL on it.” **It had been false for as long as it had been written.** The sentence came from Star Stuff, which really does run 192 pages that way, and was carried across as a fact about this collaboration without ever being checked against the person in it.
+
+Reason 3 is struck on the record rather than quietly rewritten; reasons 1 and 2 stand, and the deferral survives on two legs instead of three. **The open question beside it is half-answered** — the friction is the tooling, in both directions. Reviewing is solved below. Authoring is still open, and is the half the CMS trigger is really waiting on.
+
+CabinetDrafts live on a branch, and `drafts/review.js` lets a reviewer write on them
+
+**Only half the problem was ever hard.** Reading a draft never needed an account — a Netlify branch deploy is a permanent URL. Giving feedback did, because a pull-request comment thread was the whole of the answer.
+
+Drafts now sit at the root of a long-lived `drafts` branch, so a draft is byte-identical to the page that will ship and promotion is a merge. **A `drafts/` folder on `main` was measured and refused**: it works mechanically, because every generator and gate here reads the root non-recursively, but it would put unreviewed attributions on queering.earth itself — unlisted, public, unauthenticated — and a page one directory down needs `../queering.css`, so it renders something other than what ships. **The gates that fail on that branch are the accession checklist reported by name**: the missing `301!`, the missing card, the missing `<loc>`.
+
+The review layer is three lines in one head block, and publishing means deleting them. Armed, every block grows a visible focusable *Note* control; notes live in `localStorage` and leave only through **Copy my notes**, which builds plain text carrying the section, a deep link to its authored anchor, the quoted line and the reviewer’s own words. **No endpoint, no account, no third party** — this site makes no third-party request and a review tool is not the place to start one.
+
+**It writes words, which every other script here is forbidden to do**, and that carve-out is stated rather than taken. These are instrument labels on a page that will never be published, and deleting the include line removes every one of them; authored templates instead would mean a block of markup pasted into every draft, which is the friction this exists to spare.
+
+Cabinet`check-metadata.mjs` check 10, and four faults found by measuring what no gate measures
+
+The guard keys on `sitemap.xml`, because that is this site’s own manifest of published addresses: a draft is not in it, so the branch stays green, and the moment a page is accessioned the gate demands the block be gone. It fails on the `noindex` half too — a page the manifest advertises and the markup hides is two statements that cannot both be true. **Made to fail in both shapes on a real published page before being believed**, and reverted.
+
+**Its first version was defeated by this register.** The check grepped for the bare string `drafts/review.js`, and the sweep failed on this page and on [what is settled](https://queering.earth/what-is-settled) — the two pages that had just been given an entry describing the feature. A gate that matches a string matches the documentation of that string, which on a site that documents its own build is not an edge case. It requires an unescaped script tag now. **Check 7 in the same file already knew this**, exempting a link because a link the reader chooses is not a request the page made; that distinction is called “the whole difference between a usable gate and a useless one” in its own comment. Same lesson, second gate.
+
+**Nothing gates runtime furniture, so it was measured by hand, and the first two measurements found real faults.** `--qe-paper-deep` was the obvious ground and is wrong: moss and rust measure 6.90:1 and 6.21:1 on it in daylight, reproducing to two decimals the numbers that withdrew the recessed panel once already. Everything sits on `--qe-card` instead — ink 15.26:1 and 13.39:1, moss 8.35:1 and 7.53:1, rust 7.52:1 and 7.57:1 across the two grounds. And the 44px floor missed every *Note* button, because a selector for a button *inside* the review element does not match a button that **is** one; they were 40.3px until they were measured. All 54 controls clear 44×44 at 375px, none overlap, nothing scrolls sideways.
+
+Two smaller things, each paid for by watching it go wrong. **A definition list is one target**, like a quotation — the specimen block fragmented into twelve note buttons first, which is the cropping fault from the other direction. And **a note whose paragraph is rewritten under it is marked, never dropped**: it re-attaches by position, says so on its face, and still exports. Silently losing a reviewer’s note is the worse failure.
+
+2026 · 12 September
+
 ## A gate that had been measuring in somebody else’s browser for five days, and a runner that makes a one-page edit cost a minute
 
 Ryan asked why moving one block inside one page took twenty minutes to check. Timing the answer turned up a second thing nobody was looking for.

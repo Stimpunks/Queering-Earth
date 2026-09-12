@@ -252,6 +252,13 @@
 /register.xml
   Cache-Control: public, max-age=600, stale-if-error=604800
 
+# The draft review layer. Dormant on the published site — no page here references it, and
+# check-metadata.mjs check 10 is what keeps that true — but it is served, so it says plainly
+# that nothing under this path is for an index. Cache-Control is inherited from /*, which is
+# correct: it reads a draft's own markup and must not outlive it.
+/drafts/*
+  X-Robots-Tag: noindex
+
 # Agent Skills discovery. The spec asks for CORS wide open on both files so a
 # browser-based agent can fetch them; they are a public description of a public site.
 /.well-known/agent-skills/*

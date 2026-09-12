@@ -327,8 +327,44 @@
   <div class="qe-register" id="latest">
 
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-12-runner">
+    <section class="qe-accession" aria-labelledby="a-2026-09-12-drafts">
       <p class="qe-accession-date">2026 &middot; 12 September &middot; latest</p>
+      <h2 id="a-2026-09-12-drafts">A draft can now be read at a real address and marked up without an account <a class="qe-anchor" href="#a-2026-09-12-drafts"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Ryan asked for a lightweight way to show Helen a sheet before it is mounted, and then supplied the constraint that decided it: nothing requiring GitHub or editing HTML works for her. One sentence, and a settled decision stopped being true.</p>
+
+      <div class="qe-entry qe-entry--redet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--redet">Re-determined</span><span class="qe-entry-name">The review path this site had written down did not work for the person it named</span></div>
+        <div class="qe-entry-body">
+          <p><a href="/what-is-settled">What is settled</a> deferred a CMS partly on the grounds that <q>the zero-cost path already works: Helen edits files in the GitHub web editor, opens a pull request, and Netlify posts a deploy preview URL on it.</q> <strong>It had been false for as long as it had been written.</strong> The sentence came from Star Stuff, which really does run 192 pages that way, and was carried across as a fact about this collaboration without ever being checked against the person in it.</p>
+          <p>Reason 3 is struck on the record rather than quietly rewritten; reasons 1 and 2 stand, and the deferral survives on two legs instead of three. <strong>The open question beside it is half-answered</strong> &mdash; the friction is the tooling, in both directions. Reviewing is solved below. Authoring is still open, and is the half the CMS trigger is really waiting on.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Drafts live on a branch, and <code>drafts/review.js</code> lets a reviewer write on them</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Only half the problem was ever hard.</strong> Reading a draft never needed an account &mdash; a Netlify branch deploy is a permanent URL. Giving feedback did, because a pull-request comment thread was the whole of the answer.</p>
+          <p>Drafts now sit at the root of a long-lived <code>drafts</code> branch, so a draft is byte-identical to the page that will ship and promotion is a merge. <strong>A <code>drafts/</code> folder on <code>main</code> was measured and refused</strong>: it works mechanically, because every generator and gate here reads the root non-recursively, but it would put unreviewed attributions on queering.earth itself &mdash; unlisted, public, unauthenticated &mdash; and a page one directory down needs <code>../queering.css</code>, so it renders something other than what ships. <strong>The gates that fail on that branch are the accession checklist reported by name</strong>: the missing <code>301!</code>, the missing card, the missing <code>&lt;loc&gt;</code>.</p>
+          <p>The review layer is three lines in one head block, and publishing means deleting them. Armed, every block grows a visible focusable <em>Note</em> control; notes live in <code>localStorage</code> and leave only through <strong>Copy my notes</strong>, which builds plain text carrying the section, a deep link to its authored anchor, the quoted line and the reviewer&rsquo;s own words. <strong>No endpoint, no account, no third party</strong> &mdash; this site makes no third-party request and a review tool is not the place to start one.</p>
+          <p><strong>It writes words, which every other script here is forbidden to do</strong>, and that carve-out is stated rather than taken. These are instrument labels on a page that will never be published, and deleting the include line removes every one of them; authored templates instead would mean a block of markup pasted into every draft, which is the friction this exists to spare.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><code>check-metadata.mjs</code> check 10, and four faults found by measuring what no gate measures</span></div>
+        <div class="qe-entry-body">
+          <p>The guard keys on <code>sitemap.xml</code>, because that is this site&rsquo;s own manifest of published addresses: a draft is not in it, so the branch stays green, and the moment a page is accessioned the gate demands the block be gone. It fails on the <code>noindex</code> half too &mdash; a page the manifest advertises and the markup hides is two statements that cannot both be true. <strong>Made to fail in both shapes on a real published page before being believed</strong>, and reverted.</p>
+          <p><strong>Its first version was defeated by this register.</strong> The check grepped for the bare string <code>drafts/review.js</code>, and the sweep failed on this page and on <a href="/what-is-settled">what is settled</a> &mdash; the two pages that had just been given an entry describing the feature. A gate that matches a string matches the documentation of that string, which on a site that documents its own build is not an edge case. It requires an unescaped script tag now. <strong>Check 7 in the same file already knew this</strong>, exempting a link because a link the reader chooses is not a request the page made; that distinction is called <q>the whole difference between a usable gate and a useless one</q> in its own comment. Same lesson, second gate.</p>
+          <p><strong>Nothing gates runtime furniture, so it was measured by hand, and the first two measurements found real faults.</strong> <code>--qe-paper-deep</code> was the obvious ground and is wrong: moss and rust measure 6.90:1 and 6.21:1 on it in daylight, reproducing to two decimals the numbers that withdrew the recessed panel once already. Everything sits on <code>--qe-card</code> instead &mdash; ink 15.26:1 and 13.39:1, moss 8.35:1 and 7.53:1, rust 7.52:1 and 7.57:1 across the two grounds. And the 44px floor missed every <em>Note</em> button, because a selector for a button <em>inside</em> the review element does not match a button that <strong>is</strong> one; they were 40.3px until they were measured. All 54 controls clear 44&times;44 at 375px, none overlap, nothing scrolls sideways.</p>
+          <p>Two smaller things, each paid for by watching it go wrong. <strong>A definition list is one target</strong>, like a quotation &mdash; the specimen block fragmented into twelve note buttons first, which is the cropping fault from the other direction. And <strong>a note whose paragraph is rewritten under it is marked, never dropped</strong>: it re-attaches by position, says so on its face, and still exports. Silently losing a reviewer&rsquo;s note is the worse failure.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-12-runner">
+      <p class="qe-accession-date">2026 &middot; 12 September</p>
       <h2 id="a-2026-09-12-runner">A gate that had been measuring in somebody else&rsquo;s browser for five days, and a runner that makes a one-page edit cost a minute <a class="qe-anchor" href="#a-2026-09-12-runner"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Ryan asked why moving one block inside one page took twenty minutes to check. Timing the answer turned up a second thing nobody was looking for.</p>
@@ -359,8 +395,8 @@
 
       <p class="qe-accession-note">An essay that began as a note in the inbox about a piece of music, and turned into an argument about who is allowed to love the way the canon does.</p>
 
-      <div class="qe-entry qe-entry--mount" data-sheet="most-quiet-need">
-        <div class="qe-entry-head"><span class="qe-tag qe-tag--mount">Mounted</span><span class="qe-entry-name"><a href="/most-quiet-need">Every Day&rsquo;s Most Quiet Need</a>, Sheet No.&nbsp;12, an essay</span></div>
+      <div class="qe-entry qe-entry--mounted" data-sheet="most-quiet-need">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name"><a href="/most-quiet-need">Every Day&rsquo;s Most Quiet Need</a>, Sheet No.&nbsp;12, an essay</span></div>
         <div class="qe-entry-body">
           <p>Limerence, read as monotropic attention rather than as a disorder. Four objects are held against that vocabulary &mdash; Glass&rsquo;s <cite>Mad Rush</cite>, the first movement of Beethoven&rsquo;s Op.&nbsp;47, Mustapha Mond&rsquo;s hydraulics of feeling in <cite>Brave New World</cite>, and Florentino Ariza&rsquo;s fifty-three years &mdash; and then Elizabeth Barrett Browning&rsquo;s Sonnet&nbsp;43, which does something in its fifth line the standard reading treats as the modest beat.</p>
           <p><strong>The argument the sheet exists for is the asymmetry.</strong> Attention that pools on one person, will not redirect, survives years without reciprocation and refuses the cure is a masterpiece when a novelist does it and a symptom when an Autistic person does it. The canon is the evidence, and this sheet puts it on the record: either the sonata is a symptom too, or the longing is not one.</p>

@@ -61,6 +61,16 @@
  *    a system serif silently, which is a typographic regression nobody would notice in
  *    a diff.
  *
+ * 10. DRAFT — a page listed in `sitemap.xml` may not include `drafts/review.js`, and may
+ *    not ask robots to skip it. The review layer exists so somebody can mark a draft up
+ *    without a GitHub account; it writes its own words onto the page, which every other
+ *    script here is forbidden to do, and it is only tolerable because it can never reach
+ *    a reader. **The sitemap is this site's manifest of published addresses**, so it is
+ *    the right authority for "published": a draft is not in it, so a draft branch stays
+ *    green, and the moment the page is accessioned this demands the include line be gone.
+ *    The `noindex` half catches the same edit from the other side — a page the manifest
+ *    advertises and the markup hides is two statements that cannot both be true.
+ *
  * (1), (6) and (8) are all freshness, which is why they live in one gate: every derived
  * artefact here — Markdown, indexes, feed, the search index, the finding aid's manifest,
  * plate variants — is only true until somebody edits a source and does not re-run the
@@ -209,6 +219,7 @@ for (const f of files) {
 /* ── 6. the plates ────────────────────────────────────────────────────────────── */
 let plateCount = 0;
 let storageKeys = 0;
+let draftPages = 0;
 try {
   const manifest = JSON.parse(await readFile(join(ROOT, 'tools', 'plate-variants.json'), 'utf8'));
 
@@ -404,9 +415,39 @@ try {
   fail('storage', `cannot verify the storage keys against /privacy: ${e.message}`);
 }
 
+/* ── 10. draft furniture never reaches a published page ────────────────────── */
+try {
+  const sitemap = await readFile(join(ROOT, 'sitemap.xml'), 'utf8');
+  const published = new Set(
+    [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
+      .map((m) => m[1].replace(/^https?:\/\/[^/]+/, ''))
+      .map((a) => (a === '/' ? 'index.html' : a.replace(/^\//, '') + '.html'))
+  );
+
+  for (const f of files) {
+    if (!published.has(f)) continue;          // not in the manifest, therefore not published
+    const html = await readFile(join(ROOT, f), 'utf8');
+    /* MATCH THE INCLUDE, NOT THE NAME. The first version tested for the bare string
+       and fired on /changelog and /what-is-settled the moment this feature was written
+       up on them — a gate defeated by the site documenting its own build. Requiring an
+       unescaped script tag is the exact discriminator, because prose that names the file
+       writes `&lt;script` or wraps it in `code`. Check 7 already learned this in the same
+       file: an `a href` is a citation, not a request. */
+    if (/<script\b[^>]*\bsrc="[^"]*drafts\/review\.js/.test(html))
+      fail('draft', `${f} is in sitemap.xml and still includes drafts/review.js — ` +
+        `delete the draft block before publishing`);
+    if (/<meta[^>]+name="robots"[^>]*noindex/i.test(html))
+      fail('draft', `${f} is in sitemap.xml and asks robots not to index it — ` +
+        `the manifest and the page disagree about whether this is published`);
+  }
+  draftPages = published.size;
+} catch (e) {
+  fail('draft', `cannot verify the draft furniture against sitemap.xml: ${e.message}`);
+}
+
 /* ── report ────────────────────────────────────────────────────────────────────── */
 const line = (l, v) => console.log(`  ${l.padEnd(42)} ${v}`);
-console.log(`\n  ${files.length} page(s) · ${GENERATED.length} generated file(s) · ${plateCount} plate figure(s) · ${storageKeys} storage key(s)\n`);
+console.log(`\n  ${files.length} page(s) · ${GENERATED.length} generated file(s) · ${plateCount} plate figure(s) · ${storageKeys} storage key(s) · ${draftPages} published address(es)\n`);
 for (const [kind, label] of [
   ['stale', 'generated files out of date'],
   ['digest', 'Agent Skill digest problems'],
@@ -417,6 +458,7 @@ for (const [kind, label] of [
   ['thirdparty', 'third-party requests'],
   ['fonts', 'self-hosted face problems'],
   ['storage', 'storage keys not named on /privacy'],
+  ['draft', 'draft furniture on a published page'],
 ]) {
   const hits = problems.filter((p) => p.kind === kind);
   line(label, hits.length ? `${hits.length}` : 'none');

@@ -1470,6 +1470,82 @@ is where that copy itself lives until it is ingested.
   Academy*, the *Snark*, the children's anthology, Ashley, and Vanhuysse on foxes and
   hedgehogs. They had been sitting in five scratchpads.
 
+### A draft is reviewed at a real address, and the review layer never ships
+
+**Helen reviews drafts, and neither GitHub nor HTML is a route she can use.** That is the
+constraint the old answer failed: `DECISIONS.md` recorded the review path as *she edits in
+the GitHub web editor and opens a pull request*, which was wrong about the person it named
+and had been wrong for as long as it had been written. **Reading a draft never needed an
+account** — a deploy URL is a URL — but giving feedback did, because a PR comment thread
+was the whole of the answer.
+
+**Drafts live at the root of a long-lived `drafts` branch, never in a folder on `main`.** A
+`drafts/` folder was measured and it works mechanically — every generator and every gate
+reads `readdir(ROOT)` non-recursively, and `check.mjs` filters `!c.includes('/')`, so a
+subdirectory is invisible with **no `NOT_CONTENT` entries to keep in step**. It was refused
+for two reasons that have nothing to do with the plumbing. It would publish unreviewed
+attributions to **queering.earth** itself, unlisted but public, which is the exposure
+`ATTRIBUTIONS.md` exists around; and a page in a subdirectory needs `../queering.css`, so it
+does not render what will ship and promotion becomes a rewrite of every asset href. On the
+branch the draft is byte-identical to the published page and **promotion is a merge**.
+
+**The failing gates on that branch are the accession checklist, reported by name.**
+`check-addresses` names the missing `301!`, `check-card-order` the missing card,
+`check-sitemap` the missing `<loc>`. A draft is not supposed to pass.
+
+**`drafts/review.js` is the annotation layer, and it is three lines in one head block:**
+
+```html
+<!-- DRAFT. Delete these three lines to publish. Guarded by check-metadata.mjs check 10. -->
+<meta name="robots" content="noindex, nofollow">
+<script src="drafts/review.js" defer></script>
+```
+
+Armed, every block grows a visible focusable **Note** control; notes live in `localStorage`
+and the only way out is **Copy my notes**, which builds plain text — the section, a deep
+link to its authored anchor, the quoted line, and the reviewer's words — for pasting
+wherever the two of you already talk. **No endpoint, no account, no third party.**
+
+- **IT WRITES WORDS, WHICH EVERY OTHER SCRIPT HERE IS FORBIDDEN TO DO.** `queering.js` may
+  never create words and `queering-search.js` clones templates authored in `search.html`.
+  The carve-out is that these are instrument labels on a page that will never be published,
+  and deleting the one include line removes every one of them. Authored templates instead
+  would put a block of markup in every draft, which is the friction this exists to spare.
+- **`check-metadata.mjs` check 10 is the guard, and it keys on `sitemap.xml`** — this site's
+  own manifest of published addresses. A draft is not in it, so the branch stays green; the
+  moment a page is accessioned the gate demands the block be gone. It fails on the `noindex`
+  half too, because a page the manifest advertises and the markup hides is two statements
+  that cannot both be true. **Made to fail in both shapes before being believed**, on a real
+  published page, and reverted.
+- **IT MATCHES THE INCLUDE, NOT THE NAME, AND THE FIRST VERSION DID NOT.** Grepping for the
+  bare string fired on `/changelog` and `/what-is-settled` the moment this feature was
+  written up on them — **a gate defeated by the site documenting its own build.** Requiring
+  an unescaped `script` tag is the exact discriminator, because prose naming the file writes
+  `&lt;script` or wraps it in a `code` span. **Check 7 in the same file already learned this**
+  — it exempts `a href` because a link the reader chooses is not a request the page made.
+  On a site that cites everything and documents its own tooling, a gate that matches a
+  string matches the documentation of that string.
+- **NO GATE MEASURES THIS FURNITURE, so it was measured by hand.** `check-contrast.mjs`
+  sweeps root pages and this is built at runtime on a page it never sees. Every pair is on
+  `--qe-card`: ink 15.26:1 in daylight and 13.39:1 in the cabinet, moss 8.35:1 and 7.53:1,
+  rust 7.52:1 and 7.57:1. **`--qe-paper-deep` is not a ground for text here** — moss and rust
+  measure 6.90:1 and 6.21:1 on it in daylight, which is the recessed panel this house already
+  withdrew once. All 54 controls clear 44&times;44 at 375px, none overlap, and nothing scrolls
+  sideways. **Re-measure after changing it.**
+- **A `dl` is one target, and so is a `blockquote`.** The specimen block fragmented into
+  twelve note buttons before that rule, which is the quotation-cropping fault from the other
+  direction.
+- **A note whose paragraph is rewritten is marked, never dropped.** It re-attaches by
+  position and says *the text here has changed since this note was written*, and it still
+  exports. Silently losing a reviewer's note is the worse failure.
+- **There is no draft template, on purpose.** A skeleton page would be a second copy of the
+  markup every sheet already carries, and it would rot. Copy the nearest sheet.
+
+**Nothing under `/drafts/` is for an index** — `_headers` sends `X-Robots-Tag: noindex`, and
+Netlify noindexes branch deploys and deploy previews of its own accord. **Verify both with
+one `curl -sI` on the first draft**, along with whether the `.netlify.app` hostname rule in
+`_redirects` reaches a branch host; it names the production hostname, so it should not.
+
 ## The checks
 
 Run before shipping. All nine are browser-free or Chrome-only; nothing needs `npm install`,

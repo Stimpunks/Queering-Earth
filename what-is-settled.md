@@ -259,11 +259,11 @@ The rail's breakpoint is measured against what actually renders rather than agai
 
 1. The design intent — queering the zine itself, playing with graphic font layout, each piece interpreting its own subject — is what a CMS structurally cannot hold. A CMS earns its cost when content is uniform and layout is fixed. Here the layout **is** the argument.
 2. Netlify Identity's git-gateway is being sunset, so Decap or Sveltia means standing up GitHub OAuth ourselves, writing a schema for a content model that does not exist yet, and adding a build step to a site that has none.
-3. The zero-cost path already works: Helen edits files in the GitHub web editor, opens a pull request, and Netlify posts a deploy preview URL on it. She sees the real page at a real URL before it goes live. Star Stuff runs 192 pages this way with no CMS.
+3. ~~The zero-cost path already works: Helen edits files in the GitHub web editor, opens a pull request, and Netlify posts a deploy preview URL on it.~~ **Struck 2026-09-12, on Ryan's word: nothing that requires GitHub or editing HTML works for Helen, and this reason had been false for as long as it had been written.** Star Stuff runs 192 pages that way, which is where the sentence came from — it was carried over as a fact about this collaboration without being checked against the person in it. **Reasons 1 and 2 stand on their own and the deferral survives**, but it now rests on two legs rather than three. See *A draft is reviewed at a real address* below for what replaced it.
 
 **The trigger:** the first repeating, uniform content type — a series where every entry has the same sections in the same order. Then Sveltia CMS, and not before.
 
-**The question still worth asking Helen:** is the friction *publishing*, or *authoring*? If she writes prose and a session builds the artifact around it, no CMS touches that problem.
+**The question still worth asking Helen:** is the friction *publishing*, or *authoring*? If she writes prose and a session builds the artifact around it, no CMS touches that problem. **Half-answered on 2026-09-12**: the *tooling* is the friction in both directions. Reviewing is now solved without a CMS and without an account. Authoring is still open, and is the half the trigger above is really waiting on.
 
 ### Which edition a sheet reads, when the work was revised
 
@@ -343,6 +343,34 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### A draft is reviewed at a real address, and the review layer never ships (2026-09-12)
+
+Ryan asked for a lightweight way to publish a draft for Helen to review before it is published, and then supplied the constraint that decided it: **"Nothing that requires using GitHub or directly editing HTML is going to work for Helen."**
+
+**That sentence falsified a standing decision.** *Whether Helen gets a static CMS* deferred partly on the grounds that *the zero-cost path already works: Helen edits files in the GitHub web editor, opens a pull request, and Netlify posts a deploy preview URL on it.* It had been false for as long as it had been written — carried over from Star Stuff, which does run 192 pages that way, as a fact about this collaboration that nobody checked against the person in it. Reason 3 is struck; reasons 1 and 2 stand and the deferral survives on two legs.
+
+**The problem splits, and only half of it was ever hard.** Reading a draft never needed an account — a deploy URL is a URL, and a Netlify branch deploy gives a permanent one. **Giving feedback** was the whole difficulty, because a PR comment thread was the entire answer.
+
+**Drafts live at the root of a long-lived `drafts` branch.** A `drafts/` folder on `main` was the other candidate and it works mechanically: every generator and every gate here reads `readdir(ROOT)` non-recursively and `check.mjs` filters `!c.includes('/')`, so a subdirectory is invisible to all of it with **no `NOT\_CONTENT` entries to keep in step** — which is better than the usual exclusion-list answer, since a second list is the drift this repo keeps warning about. It was refused for two reasons that are not about plumbing. It would put unreviewed attributions on **queering.earth** itself, unlisted but public and unauthenticated, which is precisely the exposure `ATTRIBUTIONS.md` exists around; and a page in a subdirectory needs `../queering.css`, so it does not render what will ship and promotion becomes a rewrite of every asset href. On a branch the draft is byte-identical to the published page and promotion is a merge.
+
+**The failing gates on that branch are a feature.** `check-addresses` names the missing `301!`, `check-card-order` the missing card, `check-sitemap` the missing `<loc>` — the accession checklist, reported by name, on a page that is not supposed to pass yet.
+
+**`drafts/review.js` is three lines in one head block, and publishing means deleting them.** Armed, every block grows a visible focusable *Note* control; notes live in `localStorage` and leave only through **Copy my notes**, which builds plain text carrying the section, a deep link to its authored anchor, the quoted line and the reviewer's words. No endpoint, no account, no third party — this site makes no third-party request and a review tool is not the place to start one.
+
+**IT WRITES WORDS, AND THAT IS A CARVE-OUT STATED RATHER THAN TAKEN.** `queering.js` may never create words; `queering-search.js` clones templates authored in `search.html` rather than writing labels of its own. Both rules exist because a second copy of the site's prose is the copy that rots. These are instrument labels on a page that will never be published, and deleting the one include line removes every one of them. The alternative — authored templates in every draft — is a block of markup pasted into each one, which is the friction this exists to spare.
+
+**`check-metadata.mjs` check 10 keys on `sitemap.xml`, because that is this site's manifest of published addresses.** A draft is not in it, so a draft branch stays green; the moment a page is accessioned the gate demands the block be gone. It fails on the `noindex` half too — a page the manifest advertises and the markup hides is two statements that cannot both be true. **Made to fail in both shapes on a real published page before being believed**, exit 1 with the fault and exit 0 reverted.
+
+**The gate's first version was defeated by this repository writing about it.** Check 10 grepped for the bare string `drafts/review.js`, and the full sweep failed on `/changelog` and `/what-is-settled` — two pages that had just been given a register entry and a decision entry describing the feature. **A gate matching a string matches the documentation of that string**, which on a site that documents its own build is not an edge case. It requires an unescaped `script` tag now: prose naming the file writes `&lt;script` or wraps it in a `code` span, so the tag is the exact discriminator. **Check 7 in the same file already knew this** — it exempts `a href` because a link the reader chooses is not a request the page made, and its own comment calls that distinction "the whole difference between a usable gate and a useless one". Same lesson, second gate, found only because the sweep was run over every page rather than the ones that changed.
+
+**No gate measures the review furniture, so it was measured by hand — and the first two measurements found real faults.** `check-contrast.mjs` sweeps root pages and this is built at runtime on a page it never sees. Every pair sits on `--qe-card`: ink 15.26:1 in daylight and 13.39:1 in the cabinet, moss 8.35:1 and 7.53:1, rust 7.52:1 and 7.57:1. **`--qe-paper-deep` was the obvious ground and is wrong** — moss and rust measure 6.90:1 and 6.21:1 on it in daylight, reproducing to two decimals the numbers that withdrew the recessed panel once already. And the 44px floor missed every *Note* button, because `.qe-review-ui button` does not match a button that **is** the review element rather than contains one; they shipped at 40.3px until they were measured. All 54 controls clear 44×44 at 375px now, none overlap, and `scrollWidth` equals the viewport.
+
+**Two smaller things, each paid for by watching it go wrong.** A `dl` is one target, like a `blockquote` — the specimen block fragmented into twelve note buttons first, which is the quotation-cropping fault from the other direction. And a note whose paragraph is rewritten under it re-attaches by position and is marked *the text here has changed since this note was written*, rather than vanishing; silently losing a reviewer's note is the worse failure, and it still exports.
+
+**There is no draft template, on purpose.** A skeleton page would be a second copy of the markup every sheet already carries, and it would rot. Copy the nearest sheet.
+
+**Open, and worth one `curl` on the first real draft:** whether Netlify's automatic `X-Robots-Tag: noindex` covers branch deploys as well as deploy previews, and whether the `.netlify.app` rule in `\_redirects` reaches a branch host. It names the production hostname, so it should not — but this house measures rather than remembers, and that is exactly the shape of assumption that put two invalid link relations on every response for a month.
 
 ### `tools/check.mjs`, and a gate that spent five days measuring in a browser it did not launch (2026-09-12)
 
