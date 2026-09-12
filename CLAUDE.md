@@ -1431,11 +1431,44 @@ Skill at `/.well-known/agent-skills/` whose main subject is how to cite this sit
 to tell a checkable fact from a reading. **Re-digest the skill when you edit it**;
 `check-metadata.mjs` fails on a stale hash, because a wrong digest reads as tampering.
 
-### SKS is read-only from here
+### SKS is read-only from here, and `inbox/` is the one exception because it is not the library
 
 `tools/sks-search.sh` and the `sks-search` skill search the Stimpunks Knowledge System.
-**A hit is a pointer, never a citation.** Never edit SKS from a session in this repo; record
-anything that needs fixing there in `DECISIONS.md` instead.
+**A hit is a pointer, never a citation.** Never edit SKS from a session in this repo — not
+`raw/`, not `wiki/`, not `notes/`, not the index; record anything that needs fixing there in
+`DECISIONS.md` instead.
+
+**`inbox/` is a tray, not a store, which is why writing to it does not breach that rule.** It
+is git-ignored, at `~/Documents/Claude/Projects/Stimpunks Knowledge System/inbox/`, and a file
+sitting in it is *awaiting processing*: nothing joins the library until the **process-inbox**
+skill is run **there**, which reads each file for a real title, copies it into `raw/` and
+clears the tray. Dropping a file in changes no page, no wiki link and no index entry.
+
+**STANDING RULE, RYAN'S CALL, 2026-09-12: EVERY SOURCE YOU FETCH GOES IN `inbox/`.** A paper,
+a scan, an OCR text, an out-of-copyright edition — if it was work to find, the next session
+must not have to find it again. **A scratchpad is not a filing cabinet**: everything under
+`/private/tmp/claude-501/…/scratchpad/` and every `tool-results/` directory is swept, and the
+copy this site cited goes with it. `ATTRIBUTIONS.md` records *which copy we read*; the inbox
+is where that copy itself lives until it is ingested.
+
+- **Name it by its identifier plus a few words.** The archive.org item
+  (`cu31924024538922-darwin-1876-movements-and-habits-of-climbing-plants-ocr.txt`), the DOI
+  suffix (`mind-fzac071-ashley-2023-what-is-it-like-to-have-a-gender-identity.pdf`), the
+  `sim_…` periodical id. The ingestion skill reads the file for its real title, so the
+  filename only has to be **findable** — and an identifier is what a later session will grep.
+- **Check `raw/` before you copy**, because most of the scholarship is already in. Of 25
+  sources this repo had fetched by 2026-09-12, **twelve were already ingested** — Schalk,
+  Deleuze, Woolf, Plath, van Gogh, Tuck and Yang, Murray, the Weird Sisters paper, both
+  Chapman and Fisher as epubs. A duplicate in the tray is work for whoever processes it.
+- **It goes both ways: read the tray before concluding a source is unreachable.** Ryan drops
+  primaries there for us, often **more than was asked for**, and a file he added today is on
+  disk but not yet in the `qmd` index — so `sks-search` will not find it and its absence from
+  a search is not an absence from the house.
+- **Backfilled on 2026-09-12**: thirteen sources from the sessions behind Sheets Nos. 1–12 —
+  Bewick's *Quadrupeds*, both Halliwell editions, the two 1890s Dickinson printings, Bingham's
+  *Ancestors' Brocades*, Rossetti's *New Poems*, Darwin on climbing plants, Holiday in *The
+  Academy*, the *Snark*, the children's anthology, Ashley, and Vanhuysse on foxes and
+  hedgehogs. They had been sitting in five scratchpads.
 
 ## The checks
 
