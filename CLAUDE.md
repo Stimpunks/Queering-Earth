@@ -1497,6 +1497,23 @@ one of them** — it publishes all three. Cherry-picking the single file is what
 had to do anyway. **Nothing ever merges out of `drafts`**, which is what makes the header
 below safe.
 
+**THREE SKILLS DRIVE THIS, AND RYAN SHOULD NEVER TYPE A GIT COMMAND FOR IT.**
+`start-draft` puts a page on the branch and prints the URL; `save-draft` commits, pushes and
+hands the URL back; `publish-draft` takes the file onto `main` and walks the accession
+checklist. `tools/draft.mjs` holds the one derivation all three need — **which file is the
+draft** — because written out three times it would be three answers the day one was edited,
+in the one place where being wrong means publishing the wrong page. A draft is identified by
+its marker rather than by a name kept somewhere, which is the same fact check 10 keys on, so
+a page stops being a draft at exactly the moment it is published.
+
+**IT MATCHES THE INCLUDE AND NOT THE NAME, WHICH IS THE THIRD TIME IN ONE DAY.** Check 10
+shipped with the bare string and fired on `/changelog` and `/what-is-settled` the moment the
+feature was written up on them; `draft.mjs` did the same an hour later, from the same
+instinct, and reported both pages as drafts in progress. **On a site that documents its own
+build, anything matching a filename matches the prose about that filename.** Prose writes
+`&lt;script` or wraps the name in a `code` span, so the unescaped tag is the discriminator.
+`review-practice.html` is declared as the one standing exception, with its reason.
+
 **The failing gates on that branch are the accession checklist, reported by name.**
 `check-addresses` names the missing `301!`, `check-card-order` the missing card,
 `check-sitemap` the missing `<loc>`. A draft is not supposed to pass.

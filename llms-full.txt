@@ -4269,6 +4269,14 @@ The entry above asked for one `curl` against the first real branch deploy, and i
 
 **It is safe only because of a correction to the day’s own design.** Promotion takes the file and never merges the branch. “Promotion is a merge” was written into [what is settled](https://queering.earth/what-is-settled) and into the house rules before the branch had more than one thing on it, and it was wrong on its own terms: **a branch holding three drafts cannot be merged to publish one of them.** Cherry-picking the single file is what the workflow required anyway, so the header costs nothing that was not already being spent. The two halves are one decision, and weakening either breaks the other.
 
+CabinetThree skills, so drafting never requires a git command
+
+`start-draft` puts a page on the branch and prints the URL to send Helen. `save-draft` commits, pushes and hands the URL back. `publish-draft` takes the file onto `main` — never the branch — and walks the accession checklist this file already states: mount it, card it, log it, file it, stamp it, route it, crumb it, group it, rail it.
+
+`tools/draft.mjs` holds the one thing all three need to agree about, which is **which file is the draft**. Written out three times it would be three answers the day one was edited, in the one place where being wrong means publishing the wrong page. A draft is identified by its marker rather than by a name kept somewhere, so **a page stops being a draft at exactly the moment it is published**, with no state file to fall out of step.
+
+**It matched the bare filename first, which is the third time in one day.** Check 10 shipped that way and fired on this page and on [what is settled](https://queering.earth/what-is-settled); this tool did the same an hour later and reported both of them as drafts in progress. On a site that documents its own build, anything matching a filename matches the prose about that filename — and the discriminator is always the same, because prose escapes the tag or wraps the name in a code span.
+
 2026 · 12 September
 
 ## A gate that had been measuring in somebody else’s browser for five days, and a runner that makes a one-page edit cost a minute
@@ -7187,7 +7195,7 @@ Ryan Boren, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-239 entries across 65 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+240 entries across 65 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
