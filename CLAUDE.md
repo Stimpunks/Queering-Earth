@@ -1387,6 +1387,35 @@ an invented source — it is a *tightened* one: a definition trimmed to fit a ma
 object quietly generalized, the attribution left attached. **If we changed the words, they
 are ours.** Credit the concept, quote the original exactly, or write our own line.
 
+### A `Link` relation is verified against the registry, not against how standard it looks
+
+`_headers` sends an RFC 8288 `Link` header so an agent that never parses our HTML still
+finds the index, the feeds and the licence. **Its own comment said "registered relation
+types only" and two of the five were not**, checked on 2026-09-11 by fetching all 236
+entries of the [IANA link-relations registry](https://www.iana.org/assignments/link-relations/link-relations-1.csv)
+rather than by remembering.
+
+**RFC 8288 admits an extension relation only as a FULL URI, never as a bare token**, so
+`sitemap` and `agent-skills` were not lax choices but invalid ones, riding on every
+response since the header shipped. Both are gone.
+
+- **`sitemap` cost nothing.** `robots.txt` carries `Sitemap:`, which is the canonical
+  mechanism every crawler already reads.
+- **`agent-skills` was the one nearly missed**, because the note that prompted the check
+  named only `sitemap` — the sweep found two. It is not a registered relation, and unlike
+  `security.txt`'s path it is **not a registered well-known URI either**, so the usual
+  "a well-known path is self-discovering" argument is weaker here and was weighed rather
+  than assumed. Dropped anyway, on Ryan's call: **nothing standard consumes it.** An agent
+  implementing the convention reads `/.well-known/agent-skills/index.json` by path and
+  would never look for that rel, because that rel is not a standard either. An invalid
+  relation nothing consumes is decoration asserting a fact — a gold join on a sheet nobody
+  corrected, in the header that tells machines what to trust about this site. **The skill
+  is unchanged and still sits at that path.**
+
+**`sitemap` is exactly the kind of token that reads as standard and is not**, which is the
+transferable part. Verify a relation against the registry — one `curl` — before adding one.
+**Nothing gates this yet.**
+
 ### The AI-crawler policy is permission, stated in the form a machine parses
 
 `robots.txt` names the training crawlers and the retrieval crawlers explicitly and

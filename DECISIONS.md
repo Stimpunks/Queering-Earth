@@ -7,6 +7,22 @@ re-litigated in three weeks.
 
 ## Open
 
+### Nothing verifies a `Link` relation, and two invalid ones shipped on every response (2026-09-11)
+
+Settled half: **both are gone.** `sitemap` and `agent-skills` were bare tokens in the RFC 8288 `Link` header in `_headers`, and RFC 8288 admits an extension relation **only as a full URI**. Verified against all 236 entries of the [IANA link-relations registry](https://www.iana.org/assignments/link-relations/link-relations-1.csv), fetched on the day rather than remembered. `describedby`, `alternate` and `license` are registered and stay.
+
+**What is open is whether a gate should exist**, because this fault has now shipped twice — once on Star Stuff, once here — and both times it was caught by a person recalling a note, not by a check. The header's own comment said *"registered relation types only"* while contradicting itself, so the file was not merely wrong but self-refuting, which is the failure mode this repo most often gates.
+
+**The obstacle is that the source of truth is a network resource** and the default path of every gate here is offline. Three shapes, none obviously right:
+
+- **Vendor all 236 tokens.** Exact, and a hand-kept copy of somebody else's registry that will rot silently — the drift this house warns about, at 236×.
+- **A short allowlist of the relations we actually use**, each with the date it was verified — the `SECURITY_EXPIRES` pattern. Cheap, catches reintroduction, and forces a `curl` when a relation is added. Does not notice a registry change, which is the rare case.
+- **Accept the full-URI escape hatch only**, and require any non-registered relation to be written as a URI. Mechanical, needs no list at all, but would have to hardcode the registered names it permits anyway.
+
+**The second is the likely answer** and would live in `check-cache.mjs`, which already parses `_headers` — a second parser for that file would be the `check-markup.mjs` entity-table drift arriving again. Not written, not measured.
+
+**The transferable lesson stands regardless:** `sitemap` reads as standard and is not. Verify a relation against the registry before adding one — it is one `curl`.
+
 ### The empathy study is a 2024 article with a 2023 DOI, and the accepted manuscript is not quotable (2026-09-10)
 
 The paper the proposed Sheet No. 10 rests its fairest reading of Schalk on. Ryan put the

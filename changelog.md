@@ -37,6 +37,28 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 11 September · latest
 
+## Two of the five link relations this site sent were not relations at all
+
+Noticed in passing while the feeds were being split, and it turned out to be twice the size of the note that prompted it.
+
+Label correctedThe header said “registered relation types only” and two of the five were not
+
+`\_headers` sends an RFC 8288 `Link` header so an agent that never reads our HTML still finds the index, the feeds and the licence. **Its own comment claimed registered relations only, and that sentence had been false for as long as it had been written.** Checked against the [IANA registry](https://www.iana.org/assignments/link-relations/link-relations-1.csv) on 11 September — all 236 entries, fetched rather than remembered — and neither `sitemap` nor `agent-skills` appears in it.
+
+**RFC 8288 admits an extension relation only as a full URI, never as a bare token**, so these were not lax choices but invalid ones, riding on every response the site has served since the header shipped. `sitemap` is exactly the kind of token that reads as standard and is not.
+
+**Dropping `sitemap` costs nothing:** `robots.txt` carries `Sitemap:`, which is the canonical mechanism every crawler already reads.
+
+Label correctedThe second one was the one nearly missed
+
+The note that prompted the check named only `sitemap`. **The sweep found two**, which is the argument for sweeping rather than fixing what you remember. `agent-skills` is not a registered relation, and — unlike `security.txt`’s path — **not a registered well-known URI either**, so the usual “a well-known path is self-discovering” argument is weaker here. That was weighed rather than assumed, and it went anyway, on Ryan’s call.
+
+**Nothing standard consumes it.** An agent implementing the convention reads `/.well-known/agent-skills/index.json` by path and would never look for that rel, because that rel is not a standard either. **An invalid relation that nothing consumes is decoration asserting a fact** — a gold join on a sheet nobody corrected, in the one header whose whole job is telling machines what to trust about this site.
+
+**The skill itself is unchanged** and still sits at that path, still named in this register and in the prose of `/llms.txt`. What went is a pointer no client ever asked for. **Nothing gates this yet**, and whether it should is open.
+
+2026 · 11 September
+
 ## A gate that counts closing tags, and the eight attributions it found wearing their emphasis inside out
 
 The unclosed accession found this morning was left as an open question: whether a check for it was worth the noise. Ryan settled it the same hour. It was not noisy, and it did not find one fault.

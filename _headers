@@ -53,10 +53,35 @@
   # RFC 8288 Link header, so an agent that never parses our HTML still finds the
   # index, the manifest, and the licence. Registered relation types only — the IANA
   # registry is the source of truth and inventing a rel is a bad signal.
+  #
+  # THAT SENTENCE WAS FALSE FOR AS LONG AS IT HAD BEEN WRITTEN. Checked against the
+  # registry on 2026-09-11 — all 236 entries, fetched, not remembered — and `sitemap`
+  # is not in it. RFC 8288 admits an extension relation only as a FULL URI, never as a
+  # bare token, so it was not a lax choice but an invalid one, riding on every response
+  # since the header shipped. `sitemap` is exactly the kind of token that reads as
+  # standard and is not.
+  #
+  # NOTHING IS LOST BY DROPPING IT. robots.txt carries `Sitemap:`, which is the
+  # canonical mechanism every crawler already reads, and sitemap.xml is named there.
+  # A second, invalid pointer bought nothing.
+  #
+  # `agent-skills` WENT THE SAME WAY, AND IT WAS THE ONE NEARLY MISSED. The note that
+  # prompted this check named only `sitemap`; the registry sweep found two. It is not a
+  # registered relation, and unlike security.txt's path it is not a registered
+  # well-known URI either — so the usual "a well-known path is self-discovering"
+  # argument is weaker here, and was weighed rather than assumed. It went anyway, on
+  # Ryan's call: NOTHING STANDARD CONSUMES IT. An agent implementing the convention
+  # reads /.well-known/agent-skills/index.json by path, and would never look for this
+  # rel, because this rel is not a standard either. An invalid relation that nothing
+  # consumes is decoration asserting a fact — a gold join on a sheet nobody corrected,
+  # in the header that tells machines what to trust about this site.
+  #
+  # THE SKILL ITSELF IS UNCHANGED and still sits at that path, still named in the
+  # register and in /llms.txt's own prose. What went is a pointer no client asked for.
   # rel=describedby on /llms.txt is llms.txt v2's one hard requirement: without it an
   # agent is back to guessing the root path. Per-page `rel=alternate` for the .md
   # source lives in each page's <head>, because it varies by path and this does not.
-  Link: </llms.txt>; rel="describedby"; type="text/markdown", </sitemap.xml>; rel="sitemap"; type="application/xml", </llms-full.txt>; rel="alternate"; type="text/markdown"; title="Full text", </feed.xml>; rel="alternate"; type="application/rss+xml"; title="What has arrived", </register.xml>; rel="alternate"; type="application/rss+xml"; title="The accession register", <https://creativecommons.org/licenses/by-sa/4.0/>; rel="license", </.well-known/agent-skills/index.json>; rel="agent-skills"; type="application/json"
+  Link: </llms.txt>; rel="describedby"; type="text/markdown", </llms-full.txt>; rel="alternate"; type="text/markdown"; title="Full text", </feed.xml>; rel="alternate"; type="application/rss+xml"; title="What has arrived", </register.xml>; rel="alternate"; type="application/rss+xml"; title="The accession register", <https://creativecommons.org/licenses/by-sa/4.0/>; rel="license"
 
   # TDM reservation (RFC-adjacent, W3C TDMRep). 0 means: mine it freely.
   # The header rather than /.well-known/tdmrep.json because the answer does not vary
