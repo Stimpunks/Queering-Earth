@@ -7,7 +7,15 @@
     <description>Every sheet as it was mounted, every plate that came off again, and every label we corrected — the register's own accessions, reasoning included. New pages alone are a separate feed at https://queering.earth/feed.xml. Generated from the register itself by tools/make-markdown.mjs.</description>
     <language>en</language>
     <copyright>CC BY-SA 4.0</copyright>
-    <lastBuildDate>Fri, 11 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>The lilacs went back to the foot of the home page, and needed a heading once they were in an outline</title>
+      <link>https://queering.earth/changelog#a-2026-09-12-lilacs</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-12-lilacs</guid>
+      <pubDate>Sat, 12 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: Moved to the end of main, where it was mounted
+Cabinet: Being last had been doing the work a heading does</description>
+    </item>
     <item>
       <title>Two of the five link relations this site sent were not relations at all</title>
       <link>https://queering.earth/changelog#a-2026-09-11-rels</link>

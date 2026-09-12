@@ -139,27 +139,6 @@ The border is four flowers that were once a way of saying it without saying it: 
 
 What follows will be made the way [Star Stuff](https://starstuff.earth/) is made — a piece at a time, in public, with the working-out left in, by [Helen Edgar](https://morerealms.com/) and the [Stimpunks Foundation](https://stimpunks.org/). Come back and watch it fill in.
 
-Say *lilac* and something answers. For Helen it is always Eliot, instantly — the four lines that open *The Waste Land*, which file the flower on the cruel side of the season rather than the kind one.
-
-Specimen — the lilacs
-
-> April is the cruellest month, breeding\
-> Lilacs out of the dead land, mixing\
-> Memory and desire, stirring\
-> Dull roots with spring rain.
-
-T. S. Eliot, [*The Waste Land*](https://www.poetryfoundation.org/poems/47311/the-waste-land), lines 1–4 (1922). Public domain in the United States; wording checked against [Project Gutenberg’s transcription](https://www.gutenberg.org/ebooks/1321) of the 1922 text.
-
-*Syringa vulgaris*, the common lilac, drawn from the shrubs in Ryan’s yard. *Lilac Wine* is James Shelton’s, written in 1950 for the revue *Dance Me a Song*; the readings that stayed with us are [Nina Simone’s](https://en.wikipedia.org/wiki/Wild_Is_the_Wind_(Nina_Simone_album)) on *Wild Is the Wind* (1966) and [Jeff Buckley’s](https://en.wikipedia.org/wiki/Grace_(Jeff_Buckley_album)) on *Grace* (1994). One song, read three ways — which is this site’s method, sung.
-
-Helen listens to Eliot read *The Waste Land* often, in what she calls “his dull but strangely calming tone”. Here he is.
-
-[  Play the recording T.S. Eliot reads *The Waste Land* · on YouTube ](https://www.youtube.com/watch?v=CqvhMeZ2PlY)
-
-Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
-
-Uploaded by [tim24frames](https://www.youtube.com/@tim24frames). Eliot recorded the poem more than once, and we have not established which reading this is or who holds the recording — so it is somebody else’s copy of somebody else’s tape, linked and labelled as exactly that.
-
 ## The founding papers
 
 Why this cabinet exists, and what it is for. [About this drawer](https://queering.earth/the-founding-papers) — what each paper is for, why none of them is a sheet, and which one is signed.
@@ -200,3 +179,26 @@ Eight pages that are not specimens. They are the cabinet — how it is made, wha
 
 **[What this site knows about you](https://queering.earth/privacy)**
 : Almost nothing, and the whole of it: no analytics, no cookies, no accounts, and exactly one thing on the site that can reach anybody else — which waits until you press it.
+
+## Coda: the lilacs
+
+Say *lilac* and something answers. For Helen it is always Eliot, instantly — the four lines that open *The Waste Land*, which file the flower on the cruel side of the season rather than the kind one.
+
+Specimen — the lilacs
+
+> April is the cruellest month, breeding\
+> Lilacs out of the dead land, mixing\
+> Memory and desire, stirring\
+> Dull roots with spring rain.
+
+T. S. Eliot, [*The Waste Land*](https://www.poetryfoundation.org/poems/47311/the-waste-land), lines 1–4 (1922). Public domain in the United States; wording checked against [Project Gutenberg’s transcription](https://www.gutenberg.org/ebooks/1321) of the 1922 text.
+
+*Syringa vulgaris*, the common lilac, drawn from the shrubs in Ryan’s yard. *Lilac Wine* is James Shelton’s, written in 1950 for the revue *Dance Me a Song*; the readings that stayed with us are [Nina Simone’s](https://en.wikipedia.org/wiki/Wild_Is_the_Wind_(Nina_Simone_album)) on *Wild Is the Wind* (1966) and [Jeff Buckley’s](https://en.wikipedia.org/wiki/Grace_(Jeff_Buckley_album)) on *Grace* (1994). One song, read three ways — which is this site’s method, sung.
+
+Helen listens to Eliot read *The Waste Land* often, in what she calls “his dull but strangely calming tone”. Here he is.
+
+[  Play the recording T.S. Eliot reads *The Waste Land* · on YouTube ](https://www.youtube.com/watch?v=CqvhMeZ2PlY)
+
+Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
+
+Uploaded by [tim24frames](https://www.youtube.com/@tim24frames). Eliot recorded the poem more than once, and we have not established which reading this is or who holds the recording — so it is somebody else’s copy of somebody else’s tape, linked and labelled as exactly that.

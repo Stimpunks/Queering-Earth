@@ -588,7 +588,7 @@ on both her domains. **Never edited from this repo.**
 
 ### Two lists at the foot of the home page, not one
 
-The home page ends with the pages that are not specimens. **They divide in two**, and the
+The home page's back matter is the pages that are not specimens. **They divide in two**, and the
 first version of this note got it wrong by putting everything in one list.
 
 - **The founding papers** — why this cabinet exists and what it is for. `/mission`,
@@ -672,6 +672,16 @@ sentences. Neither changes the manifesto's argument, which is why it survived th
 
 
 ## Settled
+
+### The lilac coda goes last, and being last had been its heading (2026-09-12)
+
+Eliot's four lines, the lilac bush and the click-to-load recording were mounted above the footer and last on the page on 9 September, and **they were the last thing on it for two and a half hours.** The cabinet's list came out of the footer that evening, the aims followed, and the drawers reorganised both on 11 September. Every one of those edits appended, which is the ordinary thing to do; the sum of them left a coda in the middle of the page, reading as a digression between the plate and the furniture. **A coda stops being a coda the moment anything is appended beneath it.**
+
+**Settled: it sits after both furniture lists, at the foot of `main`** — last for a structural reason now rather than a chronological accident, since nothing on the home page follows the drawers. Ryan's call, 12 September 2026.
+
+**It also needed a heading, which it had never had, and the reason it had never needed one is the useful part.** A passage at the end of a page, after the argument has finished, announces its genre by position. Moved into an outline — the rail derives from the page's own `h2`s — it has to be named in that outline, so it is *Coda: the lilacs*. **The word does the job the position used to do.**
+
+**The address is `#lilacs`, not a slug of the heading.** Ids here are topical and authored precisely so a reworded heading does not take every shared link with it, and *Coda* is a word somebody might argue about later. The lilacs are not. Nothing else was needed: the rail picks the section up on its own, and the home page has no contents list to keep in step, its plate being the index it already has.
 
 ### Tag balance is check 9 in `check-markup.mjs`, and turning it on found two more faults (2026-09-11, **closes the open item raised the same day**)
 

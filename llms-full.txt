@@ -3568,27 +3568,6 @@ The border is four flowers that were once a way of saying it without saying it: 
 
 What follows will be made the way [Star Stuff](https://starstuff.earth/) is made — a piece at a time, in public, with the working-out left in, by [Helen Edgar](https://morerealms.com/) and the [Stimpunks Foundation](https://stimpunks.org/). Come back and watch it fill in.
 
-Say *lilac* and something answers. For Helen it is always Eliot, instantly — the four lines that open *The Waste Land*, which file the flower on the cruel side of the season rather than the kind one.
-
-Specimen — the lilacs
-
-> April is the cruellest month, breeding\
-> Lilacs out of the dead land, mixing\
-> Memory and desire, stirring\
-> Dull roots with spring rain.
-
-T. S. Eliot, [*The Waste Land*](https://www.poetryfoundation.org/poems/47311/the-waste-land), lines 1–4 (1922). Public domain in the United States; wording checked against [Project Gutenberg’s transcription](https://www.gutenberg.org/ebooks/1321) of the 1922 text.
-
-*Syringa vulgaris*, the common lilac, drawn from the shrubs in Ryan’s yard. *Lilac Wine* is James Shelton’s, written in 1950 for the revue *Dance Me a Song*; the readings that stayed with us are [Nina Simone’s](https://en.wikipedia.org/wiki/Wild_Is_the_Wind_(Nina_Simone_album)) on *Wild Is the Wind* (1966) and [Jeff Buckley’s](https://en.wikipedia.org/wiki/Grace_(Jeff_Buckley_album)) on *Grace* (1994). One song, read three ways — which is this site’s method, sung.
-
-Helen listens to Eliot read *The Waste Land* often, in what she calls “his dull but strangely calming tone”. Here he is.
-
-[  Play the recording T.S. Eliot reads *The Waste Land* · on YouTube ](https://www.youtube.com/watch?v=CqvhMeZ2PlY)
-
-Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
-
-Uploaded by [tim24frames](https://www.youtube.com/@tim24frames). Eliot recorded the poem more than once, and we have not established which reading this is or who holds the recording — so it is somebody else’s copy of somebody else’s tape, linked and labelled as exactly that.
-
 ## The founding papers
 
 Why this cabinet exists, and what it is for. [About this drawer](https://queering.earth/the-founding-papers) — what each paper is for, why none of them is a sheet, and which one is signed.
@@ -3629,6 +3608,29 @@ Eight pages that are not specimens. They are the cabinet — how it is made, wha
 
 **[What this site knows about you](https://queering.earth/privacy)**
 : Almost nothing, and the whole of it: no analytics, no cookies, no accounts, and exactly one thing on the site that can reach anybody else — which waits until you press it.
+
+## Coda: the lilacs
+
+Say *lilac* and something answers. For Helen it is always Eliot, instantly — the four lines that open *The Waste Land*, which file the flower on the cruel side of the season rather than the kind one.
+
+Specimen — the lilacs
+
+> April is the cruellest month, breeding\
+> Lilacs out of the dead land, mixing\
+> Memory and desire, stirring\
+> Dull roots with spring rain.
+
+T. S. Eliot, [*The Waste Land*](https://www.poetryfoundation.org/poems/47311/the-waste-land), lines 1–4 (1922). Public domain in the United States; wording checked against [Project Gutenberg’s transcription](https://www.gutenberg.org/ebooks/1321) of the 1922 text.
+
+*Syringa vulgaris*, the common lilac, drawn from the shrubs in Ryan’s yard. *Lilac Wine* is James Shelton’s, written in 1950 for the revue *Dance Me a Song*; the readings that stayed with us are [Nina Simone’s](https://en.wikipedia.org/wiki/Wild_Is_the_Wind_(Nina_Simone_album)) on *Wild Is the Wind* (1966) and [Jeff Buckley’s](https://en.wikipedia.org/wiki/Grace_(Jeff_Buckley_album)) on *Grace* (1994). One song, read three ways — which is this site’s method, sung.
+
+Helen listens to Eliot read *The Waste Land* often, in what she calls “his dull but strangely calming tone”. Here he is.
+
+[  Play the recording T.S. Eliot reads *The Waste Land* · on YouTube ](https://www.youtube.com/watch?v=CqvhMeZ2PlY)
+
+Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
+
+Uploaded by [tim24frames](https://www.youtube.com/@tim24frames). Eliot recorded the poem more than once, and we have not established which reading this is or who holds the recording — so it is somebody else’s copy of somebody else’s tape, linked and labelled as exactly that.
 
 
 ---
@@ -3958,7 +3960,25 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Label corrected
 - Cabinet
 
-2026 · 11 September · latest
+2026 · 12 September · latest
+
+## The lilacs went back to the foot of the home page, and needed a heading once they were in an outline
+
+A coda stops being a coda the moment anything is appended beneath it. Nobody moved this one; three sections arrived under it, one at a time, each of them correct.
+
+CabinetMoved to the end of `main`, where it was mounted
+
+Eliot’s four lines, the *Syringa vulgaris* drawn from Ryan’s yard and the click-to-load recording were mounted **above the footer and last on the page**, at 16:17 on 9 September. **They were the last thing on it for two and a half hours.** The cabinet’s own pages came out of the footer and onto the home page at 18:54 that evening, the thirteen aims followed at 19:47, and the two lists became [the founding papers](https://queering.earth/the-founding-papers) and [the cabinet itself](https://queering.earth/the-cabinet-itself) on 11 September. Every one of those edits appended, which is the ordinary thing to do, and the sum of them left a coda in the middle of the page reading as a digression between the plate and the furniture.
+
+It now sits after both lists, which is the foot of `main` again — and last for a structural reason rather than a chronological accident, since nothing on the home page follows the drawers.
+
+CabinetBeing last had been doing the work a heading does
+
+The section had no `h2` and had never needed one: a passage at the end of a page, after the argument has finished, announces its own genre by position. **Moved into an outline it has to be named in that outline**, so it is [Coda: the lilacs](https://queering.earth/#lilacs) — the word says what the section is, which is the job the position used to do.
+
+**The address is `#lilacs` and not a slug of the heading.** Ids here are topical and authored precisely so a reworded heading does not take every shared link with it; *Coda* is a word we might argue about, and the lilacs are not. The rail picks the section up with nothing else added, because it derives from the page’s own headings — and the home page has no contents list to keep in step, its plate being the index it already has.
+
+2026 · 11 September
 
 ## Two of the five link relations this site sent were not relations at all
 
@@ -6731,6 +6751,7 @@ Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth
   - [The plate](https://queering.earth/#what-grows-here)
   - [The founding papers](https://queering.earth/#the-founding-papers)
   - [The cabinet itself](https://queering.earth/#the-cabinet-itself)
+  - [Coda: the lilacs](https://queering.earth/#lilacs)
 
 -
 
@@ -6763,7 +6784,7 @@ Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-226 entries across 61 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+228 entries across 62 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -8918,7 +8939,7 @@ Rossetti's case adds a wrinkle Woolf's did not have. Woolf revised her own text,
 
 ### Two lists at the foot of the home page, not one
 
-The home page ends with the pages that are not specimens. **They divide in two**, and the first version of this note got it wrong by putting everything in one list.
+The home page's back matter is the pages that are not specimens. **They divide in two**, and the first version of this note got it wrong by putting everything in one list.
 
 - **The founding papers** — why this cabinet exists and what it is for. `/mission`, a manifesto, and whatever else states the project's stance rather than describing it. **Nothing is in it yet**, which is why the section is not built: an empty heading is worse than no heading.
 - **The cabinet itself** — how it is made, what it has recorded, how to search it, and what it knows about you. `/design`, `/changelog`, `/search`, `/privacy`. Built and live.
@@ -8959,6 +8980,16 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### The lilac coda goes last, and being last had been its heading (2026-09-12)
+
+Eliot's four lines, the lilac bush and the click-to-load recording were mounted above the footer and last on the page on 9 September, and **they were the last thing on it for two and a half hours.** The cabinet's list came out of the footer that evening, the aims followed, and the drawers reorganised both on 11 September. Every one of those edits appended, which is the ordinary thing to do; the sum of them left a coda in the middle of the page, reading as a digression between the plate and the furniture. **A coda stops being a coda the moment anything is appended beneath it.**
+
+**Settled: it sits after both furniture lists, at the foot of `main`** — last for a structural reason now rather than a chronological accident, since nothing on the home page follows the drawers. Ryan's call, 12 September 2026.
+
+**It also needed a heading, which it had never had, and the reason it had never needed one is the useful part.** A passage at the end of a page, after the argument has finished, announces its genre by position. Moved into an outline — the rail derives from the page's own `h2`s — it has to be named in that outline, so it is *Coda: the lilacs*. **The word does the job the position used to do.**
+
+**The address is `#lilacs`, not a slug of the heading.** Ids here are topical and authored precisely so a reworded heading does not take every shared link with it, and *Coda* is a word somebody might argue about later. The lilacs are not. Nothing else was needed: the rail picks the section up on its own, and the home page has no contents list to keep in step, its plate being the index it already has.
 
 ### Tag balance is check 9 in `check-markup.mjs`, and turning it on found two more faults (2026-09-11, **closes the open item raised the same day**)
 

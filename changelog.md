@@ -35,7 +35,25 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Label corrected
 - Cabinet
 
-2026 · 11 September · latest
+2026 · 12 September · latest
+
+## The lilacs went back to the foot of the home page, and needed a heading once they were in an outline
+
+A coda stops being a coda the moment anything is appended beneath it. Nobody moved this one; three sections arrived under it, one at a time, each of them correct.
+
+CabinetMoved to the end of `main`, where it was mounted
+
+Eliot’s four lines, the *Syringa vulgaris* drawn from Ryan’s yard and the click-to-load recording were mounted **above the footer and last on the page**, at 16:17 on 9 September. **They were the last thing on it for two and a half hours.** The cabinet’s own pages came out of the footer and onto the home page at 18:54 that evening, the thirteen aims followed at 19:47, and the two lists became [the founding papers](https://queering.earth/the-founding-papers) and [the cabinet itself](https://queering.earth/the-cabinet-itself) on 11 September. Every one of those edits appended, which is the ordinary thing to do, and the sum of them left a coda in the middle of the page reading as a digression between the plate and the furniture.
+
+It now sits after both lists, which is the foot of `main` again — and last for a structural reason rather than a chronological accident, since nothing on the home page follows the drawers.
+
+CabinetBeing last had been doing the work a heading does
+
+The section had no `h2` and had never needed one: a passage at the end of a page, after the argument has finished, announces its own genre by position. **Moved into an outline it has to be named in that outline**, so it is [Coda: the lilacs](https://queering.earth/#lilacs) — the word says what the section is, which is the job the position used to do.
+
+**The address is `#lilacs` and not a slug of the heading.** Ids here are topical and authored precisely so a reworded heading does not take every shared link with it; *Coda* is a word we might argue about, and the lilacs are not. The rail picks the section up with nothing else added, because it derives from the page’s own headings — and the home page has no contents list to keep in step, its plate being the index it already has.
+
+2026 · 11 September
 
 ## Two of the five link relations this site sent were not relations at all
 
