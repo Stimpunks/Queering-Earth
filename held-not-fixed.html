@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- DRAFT. Delete these three lines to publish. Guarded by check-metadata.mjs check 10. -->
+<meta name="robots" content="noindex, nofollow">
+<script src="drafts/review.js" defer></script>
+<title>Held, Not Fixed &mdash; Queering Earth</title>
+<meta name="description" content="Helen Edgar on lost things, wonder, and the cabinets we keep for one another &mdash; Emily&rsquo;s shop, the herbarium type specimen, Ole Worm&rsquo;s unicorn horn, and attention that refuses to be filed.">
+<link rel="canonical" href="https://queering.earth/held-not-fixed">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- The faces are self-hosted and declared in queering.css. Preloading the body
+     roman is the one that pays: it is the first thing every page needs, and there
+     is no cross-origin handshake to wait on any more. crossorigin is required
+     even same-origin — a font is always fetched in CORS mode. -->
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's choices BEFORE first paint. A reader who asked for the
+     cabinet asked for it here too — an error page is the worst place to flash the
+     wrong ground, because it is the page they did not choose to be on. -->
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
+</head>
+<body style="--qe-fox-a: 14% 22%; --qe-fox-b: 84% 41%; --qe-fox-c: 27% 88%; --qe-fox-d: 72% 12%">
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+  <details class="qe-reading" name="qe-tray">
+    <summary class="qe-reading-summary">Reading</summary>
+    <div class="qe-reading-panel">
+      <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
+      <ul class="qe-reading-list">
+        <li>
+          <label><input type="checkbox" id="qe-set-motion"> <span>Reduce motion</span></label>
+          <span class="qe-reading-hint">The drawings appear finished instead of drawing themselves on.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-contrast"> <span>More contrast</span></label>
+          <span class="qe-reading-hint">Darker ink, firmer rules, and the foxing lifted off the paper.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
+          <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-textsize">Text size</label>
+            <select class="qe-reading-select" id="qe-set-textsize">
+              <option value="">Your device&rsquo;s size</option>
+              <option value="larger">Larger</option>
+              <option value="largest">Largest</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-font">Typeface</label>
+            <select class="qe-reading-select qe-reading-select-wide" id="qe-set-font">
+              <option value="">Fraunces &amp; Newsreader</option>
+              <option value="adelphe">Adelphe</option>
+              <option value="atkinson">Atkinson Hyperlegible</option>
+              <option value="baskervvol">BBB Baskervvol</option>
+              <option value="coxinelle">Coxinelle</option>
+              <option value="insolente">Insolente</option>
+              <option value="redaction">Redaction Inclusive</option>
+              <option value="sporting">Sporting Grotesque</option>
+              <option value="trickster">Trickster</option>
+              <option value="victorianna">Victorianna</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">The first four also set the reading face, because they have a real italic. The rest change the headings and leave Newsreader to read.</span>
+        </li>
+      </ul>
+      <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
+  <!-- The drawers. Three collections, and everything on the site is in one of
+       them. A native details element, like the reading settings beside it and for
+       the same reason: a hand-built menu would need focus trapping, a roving
+       tabindex and an Escape handler, and getting any of that wrong makes the
+       navigation the least navigable thing on the sheet. -->
+  <details class="qe-drawers" name="qe-tray">
+    <summary class="qe-drawers-summary">Drawers</summary>
+    <div class="qe-drawers-panel">
+      <ul class="qe-drawers-list">
+        <li>
+          <a class="qe-drawers-link" href="/the-plate">The plate</a>
+          <span class="qe-drawers-hint">The sheets themselves, mounted and numbered on one plate.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-founding-papers">The founding papers</a>
+          <span class="qe-drawers-hint">Why this cabinet exists, and what it is for.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-cabinet-itself">The cabinet itself</a>
+          <span class="qe-drawers-hint">How it is made, what it has recorded, and what it knows about you.</span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <!-- The easter egg. An ornament that is a door: unlabelled to the eye,
+       named in the DOM, and pointing at a page that is listed in the
+       footer row, on the home page and in the sitemap like any other. -->
+  <a class="qe-modes-link" href="/two-cohabitating-modes">
+  <svg class="qe-modes-mark" viewBox="1 2.2 41.3 20" aria-hidden="true" focusable="false">
+    <!-- the fox: brush, body, neck, skull, muzzle, nose, two ears, four legs -->
+    <path d="M7.4,15.6 C4.2,16.2 1.4,14.2 1.5,10.4 C1.6,8.5 2.6,7.2 4.0,6.9 C4.5,9.1 5.7,10.8 7.9,12.0 L7.4,15.6 Z"/>
+    <path d="M6.6,16.2 C5.8,12.9 8.0,10.7 11.8,10.7 C15.2,10.7 17.2,12.1 17.2,14.6 C17.2,16.6 15.6,17.5 12.2,17.5 C9.0,17.5 7.0,17.0 6.6,16.2 Z"/>
+    <path d="M14.2,12 L15.8,9.2 L18.8,11 L17,13.8 Z"/>
+    <path d="M15.1,8.4 C15.1,6.8 16.4,5.7 18.0,5.7 C19.7,5.7 20.9,6.9 20.9,8.5 C20.9,10.2 19.6,11.3 17.9,11.3 C16.3,11.3 15.1,10.1 15.1,8.4 Z"/>
+    <path d="M19.3,7 L22.3,8.6 L19.5,10.2 Z"/>
+    <path d="M21.9,8.6 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M15.2,6.5 L14.6,2.9 L17.5,5.6 Z"/>
+    <path d="M17.7,5.4 L19.1,2.7 L20.3,6.1 Z"/>
+    <path d="M7,16.6 L6.6,21.7 L8.25,21.7 L8.65,16.6 Z"/>
+    <path d="M8.7,17.1 L8.7,21.7 L10.35,21.7 L10.35,17.1 Z"/>
+    <path d="M13,17.2 L13,21.7 L14.65,21.7 L14.65,17.2 Z"/>
+    <path d="M14.7,16.8 L15.15,21.7 L16.8,21.7 L16.35,16.8 Z"/>
+    <!-- the hedgehog: the dome, sixteen spines on its own normal, snout, nose, two feet -->
+    <path d="M25.92,20 L25.92,19.63 L26.01,18.85 L26.19,17.98 L26.45,17.08 L26.8,16.19 L27.21,15.32 L27.7,14.51 L28.25,13.76 L28.85,13.1 L29.5,12.54 L30.19,12.09 L30.91,11.77 L31.65,11.57 L32.4,11.5 L33.15,11.57 L33.89,11.77 L34.61,12.09 L35.3,12.54 L35.95,13.1 L36.55,13.76 L37.1,14.51 L37.59,15.32 L38,16.19 L38.35,17.08 L38.61,17.98 L38.79,18.85 L38.88,19.63 L38.88,20 Z"/>
+    <path d="M25.62,18.2 L23.5,20.11 L26.34,19.89 Z"/>
+    <path d="M26.04,16.77 L23.67,18.35 L26.51,18.55 Z"/>
+    <path d="M26.69,15.31 L24.1,16.5 L26.88,17.14 Z"/>
+    <path d="M27.53,13.94 L24.78,14.69 L27.42,15.77 Z"/>
+    <path d="M28.56,12.75 L25.72,13 L28.13,14.54 Z"/>
+    <path d="M29.74,11.83 L26.91,11.51 L28.96,13.49 Z"/>
+    <path d="M31.02,11.23 L28.32,10.31 L29.89,12.68 Z"/>
+    <path d="M32.35,10.99 L29.94,9.47 L30.91,12.15 Z"/>
+    <path d="M33.66,11.13 L31.69,9.08 L32,11.91 Z"/>
+    <path d="M34.92,11.63 L33.48,9.17 L33.11,12 Z"/>
+    <path d="M36.07,12.45 L35.21,9.73 L34.23,12.41 Z"/>
+    <path d="M37.08,13.55 L36.8,10.71 L35.29,13.13 Z"/>
+    <path d="M37.93,14.86 L38.18,12.02 L36.25,14.12 Z"/>
+    <path d="M38.61,16.33 L39.33,13.57 L37.07,15.32 Z"/>
+    <path d="M39.08,17.87 L40.22,15.25 L37.72,16.63 Z"/>
+    <path d="M39.34,19.38 L40.85,16.96 L38.18,17.96 Z"/>
+    <path d="M38.01,17.91 L41.81,21.11 L37.21,21.01 Z"/>
+    <path d="M41.11,20.61 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M27.8,19.7 L27.8,21.7 L29.35,21.7 L29.35,19.7 Z"/>
+    <path d="M35.2,19.7 L35.2,21.7 L36.75,21.7 L36.75,19.7 Z"/>
+  </svg>
+    <span class="qe-sr">Two cohabitating modes</span>
+  </a>
+</div>
+
+<nav class="qe-rail" aria-label="On this page" hidden>
+  <ol></ol>
+  <svg class="qe-botanical qe-rail-sprig" viewBox="0 0 28 27" aria-hidden="true" focusable="false">
+    <path class="stem" style="--len:34" d="M0.6,0 C0.7,7.2 1.9,13.4 4.6,18.4 C6.1,21.2 7.8,23.2 9.6,24.6"/>
+    <g class="sprout sprout-leaf" style="--i:0">
+      <path d="M1.7,7.9 C5.1,5.5 8.9,6.6 10.8,10.2 C7.3,11.3 3.6,10.4 1.7,7.9 Z"/>
+    </g>
+    <g class="sprout sprout-leaf" style="--i:1">
+      <path d="M3.5,14.6 C7.2,12.8 11.2,14.1 13.2,17.9 C9.5,18.8 5.6,17.4 3.5,14.6 Z"/>
+    </g>
+    <g class="sprout" style="--i:2">
+      <circle cx="10.4" cy="25.4" r="1.5"/>
+    </g>
+  </svg>
+</nav>
+
+<main id="main" tabindex="-1">
+
+  <header class="qe-masthead qe-masthead-sheet">
+    <nav class="qe-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Queering Earth</a></li>
+        <li><a href="/the-plate">The plate</a></li>
+      </ol>
+    </nav>
+    <p class="qe-kicker">Sheet &middot; an essay</p>
+    <h1>Held, Not Fixed</h1>
+
+    <!-- A pressed specimen with a blank label, which is the argument of section II
+         in one drawing: the plant is kept, the naming is refused. Helen's own page
+         03 carries the same idea as a stamp reading HELD NOT NAMED.
+         Positioning on the outer g, animation on the inner .sprout — a CSS transform
+         animation overrides an SVG transform attribute on the same element. -->
+    <svg class="qe-botanical" viewBox="40 20 460 180" role="img" aria-label="A pressed plant stem mounted across the sheet with three leaves, and a small blank paper label hanging from it on a thread, carrying no name." focusable="false">
+      <path class="stem" style="--len:404" stroke-width="2.4" d="M70 168 C 150 150, 240 126, 330 100 C 396 82, 440 68, 470 56"/>
+      <g transform="translate(148 152) rotate(-62)"><g class="sprout sprout-leaf" style="--i:1"><path class="leaf" stroke-width="1.1" d="M0 0 C 7.4 -9.6, 22.6 -10.1, 29.4 0 C 22.6 10.1, 7.4 9.6, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 28.2 0"/></g></g>
+      <g transform="translate(232 130) rotate(116)"><g class="sprout sprout-leaf" style="--i:2"><path class="leaf" stroke-width="1.1" d="M0 0 C 6.4 -8.3, 19.6 -8.8, 25.4 0 C 19.6 8.8, 6.4 8.3, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 24.4 0"/></g></g>
+      <g transform="translate(330 100) rotate(-58)"><g class="sprout sprout-leaf" style="--i:3"><path class="leaf" stroke-width="1.1" d="M0 0 C 5.2 -6.8, 16 -7.2, 20.8 0 C 16 7.2, 5.2 6.8, 0 0 Z"/><path class="rib" stroke-width="0.8" d="M0 0 L 20 0"/></g></g>
+      <!-- the label: a thread, a tag, and no writing on it -->
+      <g transform="translate(268 112) rotate(6)"><g class="sprout" style="--i:5">
+        <path class="stem" style="--len:36" stroke-width="0.9" d="M0 0 C 3 13, 5 24, 7 34"/>
+        <!-- A herbarium tag: one corner clipped where the thread ties on, a hole, and
+             NOTHING WRITTEN ON IT. That blank is the whole point of the drawing, so it
+             must read as a tag rather than as a shape — the first version was a small
+             hexagon at this scale and looked like a bud. -->
+        <path class="rib" stroke-width="1.2" fill="none" d="M7 34 L 16 29 L 52 36 L 47.5 58 L 11 51 Z"/>
+        <circle class="rivet" cx="14.5" cy="35.5" r="1.7"/>
+      </g></g>
+    </svg>
+  </header>
+
+  <div class="qe-label">
+    <dl>
+      <dt>Written by</dt>
+      <dd>Helen Edgar</dd>
+      <dt>First set as</dt>
+      <dd>A zine, draft one, September 2026</dd>
+      <dt>This text</dt>
+      <dd>Helen&rsquo;s draft one, transcribed to a sheet, with the citations added</dd>
+      <dt>Read by</dt>
+      <dd>Helen Edgar and Ryan Boren</dd>
+    </dl>
+  </div>
+
+  <p class="qe-lede">On lost things, wonder, and the cabinets we keep for one another. A shop where a broken object is looked at rather than mended, a herbarium sheet where one flattened plant is made to stand for every other, and a cabinet where a unicorn horn was allowed to stay wonderful after it turned out to be a whale.</p>
+
+  <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
+    <h2 id="qe-contents-h">On this sheet</h2>
+    <ol></ol>
+  </nav>
+
+  <h2 id="the-shop">What Emily brings <a class="qe-anchor" href="#the-shop"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <blockquote>
+    <p>Bagpuss, dear Bagpuss<br>Old fat furry cat-puss<br>Wake up and look at this thing that I bring<br>Wake up, be bright<br>Be golden and light<br>Bagpuss, Oh hear what I sing</p>
+    <cite>Oliver Postgate, narration for <cite>Bagpuss</cite>, Smallfilms for the BBC, 1974. The narration calls these <q>some magic words</q>.</cite>
+  </blockquote>
+
+  <p>Emily never once asks whether the thing she carries is broken beyond use. She simply brings it forward, and something in the shop turns toward it with attention rather than judgement. What follows is not a repair in the practical sense. It is a kind of restoration that has nothing to do with function and everything to do with meaning, the sort that is felt long before it can be explained.</p>
+
+  <p>This sheet follows that same found object into two other cabinets that hold lost and overlooked things without asking them to be fixed first: the herbarium sheet, and the cabinet of curiosities.</p>
+
+  <h2 id="the-sheet">The herbarium sheet <a class="qe-anchor" href="#the-sheet"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>A herbarium sheet holds a plant that has been pressed flat, dried, and pinned in place, yet what it preserves is never quite the living thing. Botanists call the specimen chosen to define a species its <em>type</em> &mdash; the one, as Flannery puts it, <q>upon which the description of a species is based</q>.</p>
+
+  <p><strong>The next step is Helen&rsquo;s and not Flannery&rsquo;s.</strong> Read the type as a single example held up as the standard, and every living plant after it becomes a measurement against that one: more or less faithful, more or less deviant. It is worth noticing how closely that resembles the way a &ldquo;normal&rdquo; mind gets defined &mdash; one flattened example made the standard, everything else read as a variation, or a deficiency. <span class="qe-sr">Note: </span>Flannery&rsquo;s paper makes no such argument, and the words <i>ideal</i>, <i>standard</i>, <i>normal</i> and <i>deviation</i> do not appear in it. The botany is hers; the reading is ours, and the two are kept apart here on purpose.</p>
+
+  <p>Some of the artists drawn to herbaria have resisted this flattening. Joseph Beuys made a series of what Flannery calls <q>what can only be called herbarium specimens</q>: pressed plants pasted to paper with a pencilled title, <cite>Ombelico Di Venere</cite>. The species attached was <i>Cotyledon Umbilicus Veneris</i>, and it is now botanically designated <i>Cotyledon rupestris</i> &mdash; so the older Latin carried the navel of Venus in it and the newer Latin does not. Beuys kept the name the textbooks dropped.</p>
+
+  <p>Mark Dion goes further in the other direction. He paints herbarium specimens and then exhibits, in Flannery&rsquo;s words, <q>not the sheets or the paintings, but photogravure prints of the paintings and leaves the place for the species name blank</q>. Both refuse to let the label finish the specimen&rsquo;s story before the looking has even begun.</p>
+
+  <h2 id="the-cabinet">The cabinet of curiosities <a class="qe-anchor" href="#the-cabinet"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Long before natural history collections were sorted into their proper drawers, cabinets of curiosities held the real and the mythical side by side, often with no need to settle which was which. Ole Worm kept what he had been sold as a unicorn horn, doubted it enough to go looking for proof, and in 1638 matched it to a narwhal&rsquo;s skull. Even once he was right, the courts of Europe went on prizing narwhal tusks as unicorn horns for a long while after, because the wonder of the thing had outgrown its label.</p>
+
+  <p>A cabinet like this asks its keeper to hold two things at once, curiosity and classification, without letting the second one win too quickly. That is not so different from what it means to sit with a mind, including one&rsquo;s own, that keeps refusing to be filed neatly away.</p>
+
+  <h2 id="the-pull">Monotropic flow <a class="qe-anchor" href="#the-pull"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>None of this needed to be urgent. Bagpuss did not rush toward usefulness, and neither does a cabinet of curiosities, and neither does a mind following the pull of its own attention wherever it leads.</p>
+
+  <p>What gets called a special interest in clinical language is, from the inside, something closer to a small cabinet of curiosities kept and tended by the person themselves rather than assembled by someone else&rsquo;s eye. Curating your own wonder, choosing what gets kept and what it means, is a quietly radical act when so much of the world still expects you to hand that decision to somebody else.</p>
+
+  <p><strong>Monotropism is Dinah Murray&rsquo;s theory</strong>, developed with Mike Lesser and Wenn Lawson: attention as a resource that pools deeply in a few interests at a time rather than spreading thinly across many. The reading above is what that looks like from inside a life rather than from across a desk.</p>
+
+  <p><strong>Field note.</strong> Restoration of meaning, not repair. Attention, not urgency. A cabinet kept by the one who fills it.</p>
+
+  <h2 id="invitation">Bring something forward <a class="qe-anchor" href="#invitation"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>What is the thing you have been keeping without quite knowing why? A shell, a phrase, a scrap of a television programme half remembered from childhood, an interest nobody else in the room seems to share.</p>
+
+  <p>Bring it forward the way Emily does, not to have it fixed, but to have it looked at properly, turned over, wondered about. Queering Earth is a cabinet of exactly this kind, herbarium sheets for the thoughts and objects and stories that do not need straightening out to be worth keeping.</p>
+
+  <p>Consider this an open invitation to add your own sheet to the collection.</p>
+
+  <h2 id="untidy">What this sheet does not settle <a class="qe-anchor" href="#untidy"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <div class="qe-untidy">
+    <p><strong>Wenn Lawson is named above as he names himself now</strong>, while the 2005 paper carries the byline <i>Wendy Lawson</i>. The citation below shows the published byline and the prose does not. On a site about naming yourself that is not a detail to settle silently, and it is the one thing on this sheet that wants a decision rather than a check.</p>
+    <p><strong>The zine setting is not built.</strong> The decision is that this stays one document and its print stylesheet renders Helen&rsquo;s A5 zine &mdash; no second file and no PDF beside it, because two copies of the same words drift and the accessible one is the copy that rots. The <code>@page</code> and section-break rules are the next pass and they live in <code>queering.css</code>, which is a shared asset rather than this page.</p>
+    <p><strong>The drawing is a first attempt</strong> &mdash; a pressed stem with a blank label, which is the middle section in one image. It has not been looked at beside the other eleven sheets.</p>
+    <p><strong>Two things from the zine have not been carried across.</strong> Its grid of drawers, two of them holding a question mark, and its washi tape. Both are outside this site&rsquo;s idiom as it stands and neither is lost by waiting.</p>
+  </div>
+
+  <h2 id="sources">Sources <a class="qe-anchor" href="#sources"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p><strong>Emily&rsquo;s verse is quoted from Smallfilms&rsquo; own text</strong> &mdash; Oliver Postgate and Peter Firmin&rsquo;s site, which prints the opening narration in full. It is six lines, not five. <strong>Two circulating versions are both wrong</strong>, in different directions: the reference works give <q>Old Fat Furry Catpuss</q>, capitalised throughout and unhyphenated, and run <q>Wake up, be bright, be golden and light</q> together as one line; the draft this sheet came from set it lowercase with commas at the line ends. Postgate hyphenates <i>cat-puss</i>, capitalises only the first word of each line and the <q>Oh</q>, and breaks the middle into two lines. <strong>It is spoken narration and not a song</strong>, which matters because the songs in the series are somebody else&rsquo;s work: the folk songs were put together and performed by Sandra Kerr and John Faulkner, who also voiced Madeleine and Gabriel. Emily was played by Emily Firmin, daughter of the series&rsquo; co-creator.</p>
+
+  <p>The herbarium material is Maura C. Flannery, <cite>The Herbarium as Muse: Plant Specimens as Inspiration</cite>, <i>Biology International</i> 53 (2013), 23&ndash;34. <strong>The draft carried this as <q>n.d.</q></strong>; the year is 2013, and the paper itself is in the house library.</p>
+
+  <p>Monotropism is Dinah Murray, Mike Lesser and Wenn Lawson, <cite>Attention, monotropism and the diagnostic criteria for autism</cite>, <i>Autism</i> 9:2 (2005), 139&ndash;156, <a href="https://doi.org/10.1177/1362361305051398">doi:10.1177/1362361305051398</a>, published under the byline <i>Wendy Lawson</i>. Helen keeps a resource page at <a href="https://autisticrealms.com/monotropism/">Autistic Realms</a>; Fergus Murray keeps <a href="https://monotropism.org/">monotropism.org</a>.</p>
+
+  <p>Ole Worm&rsquo;s demonstration is dated 1638, when he matched the horn to a narwhal&rsquo;s skull; his <cite>Museum Wormianum</cite> was published posthumously in 1655 by his son. <strong>The draft attached no source to this</strong> and it is not in Flannery.</p>
+
+  <p>The reading began as Helen Edgar, <cite>Bagpuss: Lost things. Holding space for emergence &amp; joy</cite>, <a href="https://autisticrealms.com/">Autistic Realms</a>, 11 September 2026.</p>
+
+</main>
+
+<footer class="qe-footer">
+  <p class="qe-footer-nav">
+    <a href="/">Queering Earth</a>
+    <a href="/the-plate">The plate</a>
+    <a href="/the-founding-papers">The founding papers</a>
+    <a href="/the-cabinet-itself">The cabinet itself</a>
+    <a href="/mission">Mission</a>
+    <a href="/manifesto">Manifesto</a>
+    <a href="/two-cohabitating-modes">Modes</a>
+    <a href="/design">Colophon</a>
+    <a href="/changelog">Register</a>
+    <a href="/whats-new">What&rsquo;s new</a>
+    <a href="/ledger">Ledger</a>
+    <a href="/what-is-settled">Decisions</a>
+    <a href="/search">Search</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/how-we-quote">Quoting</a>
+  </p>
+
+  <p>A collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+
+  <p>Words and art licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Take them and make something.</p>
+
+  <a class="qe-totop" href="#main">
+    <span class="qe-totop-label">Scroll to top</span>
+    <svg class="qe-botanical qe-totop-mark" viewBox="0 0 160 66" aria-hidden="true" focusable="false">
+      <path class="stem" style="--len:21" d="M22,64 C24,56 25,51 24,45"/>
+      <path class="stem" style="--len:24" d="M33,64 C32,55 30,49 28,43"/>
+      <path class="stem" style="--len:25" d="M44,64 C46,54 48,48 50,42"/>
+      <path class="stem" style="--len:52" d="M58,64 C60,46 67,32 77,21"/>
+      <path class="stem" style="--len:32" d="M68,64 C69,50 70,42 71,34"/>
+      <path class="stem" style="--len:44" d="M80,64 C79.4,48 80.6,34 80,22"/>
+      <path class="stem" style="--len:32" d="M92,64 C91,50 90,42 89,34"/>
+      <path class="stem" style="--len:52" d="M102,64 C100,46 93,32 83,21"/>
+      <path class="stem" style="--len:25" d="M116,64 C114,54 112,48 110,42"/>
+      <path class="stem" style="--len:24" d="M127,64 C128,55 130,49 132,43"/>
+      <path class="stem" style="--len:21" d="M138,64 C136,56 135,51 136,45"/>
+      <g class="sprout" style="--i:3">
+        <path class="head" d="M80,5 C77.4,11 77.4,18 80,25 C82.6,18 82.6,11 80,5 Z"/>
+      </g>
+    </svg>
+  </a>
+</footer>
+<script src="queering.js"></script>
+</body>
+</html>
