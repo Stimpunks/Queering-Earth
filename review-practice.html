@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- DRAFT. Delete these three lines to publish. Guarded by check-metadata.mjs check 10. -->
+<meta name="robots" content="noindex, nofollow">
+<script src="drafts/review.js" defer></script>
+<title>Leaving notes on a draft &mdash; Queering Earth</title>
+<meta name="description" content="A practice draft. It is not published, it is not in the register, and it exists so a reviewer can try the note-leaving tool on something that does not matter.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- The faces are self-hosted and declared in queering.css. Preloading the body
+     roman is the one that pays: it is the first thing every page needs, and there
+     is no cross-origin handshake to wait on any more. crossorigin is required
+     even same-origin — a font is always fetched in CORS mode. -->
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's choices BEFORE first paint. A reader who asked for the
+     cabinet asked for it here too — an error page is the worst place to flash the
+     wrong ground, because it is the page they did not choose to be on. -->
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
+</head>
+<body style="--qe-fox-a: 12% 18%; --qe-fox-b: 88% 34%; --qe-fox-c: 31% 82%; --qe-fox-d: 70% 9%">
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+  <details class="qe-reading" name="qe-tray">
+    <summary class="qe-reading-summary">Reading</summary>
+    <div class="qe-reading-panel">
+      <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
+      <ul class="qe-reading-list">
+        <li>
+          <label><input type="checkbox" id="qe-set-motion"> <span>Reduce motion</span></label>
+          <span class="qe-reading-hint">The drawings appear finished instead of drawing themselves on.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-contrast"> <span>More contrast</span></label>
+          <span class="qe-reading-hint">Darker ink, firmer rules, and the foxing lifted off the paper.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
+          <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-textsize">Text size</label>
+            <select class="qe-reading-select" id="qe-set-textsize">
+              <option value="">Your device&rsquo;s size</option>
+              <option value="larger">Larger</option>
+              <option value="largest">Largest</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-font">Typeface</label>
+            <select class="qe-reading-select qe-reading-select-wide" id="qe-set-font">
+              <option value="">Fraunces &amp; Newsreader</option>
+              <option value="adelphe">Adelphe</option>
+              <option value="atkinson">Atkinson Hyperlegible</option>
+              <option value="baskervvol">BBB Baskervvol</option>
+              <option value="coxinelle">Coxinelle</option>
+              <option value="insolente">Insolente</option>
+              <option value="redaction">Redaction Inclusive</option>
+              <option value="sporting">Sporting Grotesque</option>
+              <option value="trickster">Trickster</option>
+              <option value="victorianna">Victorianna</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">The first four also set the reading face, because they have a real italic. The rest change the headings and leave Newsreader to read.</span>
+        </li>
+      </ul>
+      <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
+  <!-- The drawers. Three collections, and everything on the site is in one of
+       them. A native details element, like the reading settings beside it and for
+       the same reason: a hand-built menu would need focus trapping, a roving
+       tabindex and an Escape handler, and getting any of that wrong makes the
+       navigation the least navigable thing on the sheet. -->
+  <details class="qe-drawers" name="qe-tray">
+    <summary class="qe-drawers-summary">Drawers</summary>
+    <div class="qe-drawers-panel">
+      <ul class="qe-drawers-list">
+        <li>
+          <a class="qe-drawers-link" href="/the-plate">The plate</a>
+          <span class="qe-drawers-hint">The sheets themselves, mounted and numbered on one plate.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-founding-papers">The founding papers</a>
+          <span class="qe-drawers-hint">Why this cabinet exists, and what it is for.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-cabinet-itself">The cabinet itself</a>
+          <span class="qe-drawers-hint">How it is made, what it has recorded, and what it knows about you.</span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <!-- The easter egg. An ornament that is a door: unlabelled to the eye,
+       named in the DOM, and pointing at a page that is listed in the
+       footer row, on the home page and in the sitemap like any other. -->
+  <a class="qe-modes-link" href="/two-cohabitating-modes">
+  <svg class="qe-modes-mark" viewBox="1 2.2 41.3 20" aria-hidden="true" focusable="false">
+    <!-- the fox: brush, body, neck, skull, muzzle, nose, two ears, four legs -->
+    <path d="M7.4,15.6 C4.2,16.2 1.4,14.2 1.5,10.4 C1.6,8.5 2.6,7.2 4.0,6.9 C4.5,9.1 5.7,10.8 7.9,12.0 L7.4,15.6 Z"/>
+    <path d="M6.6,16.2 C5.8,12.9 8.0,10.7 11.8,10.7 C15.2,10.7 17.2,12.1 17.2,14.6 C17.2,16.6 15.6,17.5 12.2,17.5 C9.0,17.5 7.0,17.0 6.6,16.2 Z"/>
+    <path d="M14.2,12 L15.8,9.2 L18.8,11 L17,13.8 Z"/>
+    <path d="M15.1,8.4 C15.1,6.8 16.4,5.7 18.0,5.7 C19.7,5.7 20.9,6.9 20.9,8.5 C20.9,10.2 19.6,11.3 17.9,11.3 C16.3,11.3 15.1,10.1 15.1,8.4 Z"/>
+    <path d="M19.3,7 L22.3,8.6 L19.5,10.2 Z"/>
+    <path d="M21.9,8.6 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M15.2,6.5 L14.6,2.9 L17.5,5.6 Z"/>
+    <path d="M17.7,5.4 L19.1,2.7 L20.3,6.1 Z"/>
+    <path d="M7,16.6 L6.6,21.7 L8.25,21.7 L8.65,16.6 Z"/>
+    <path d="M8.7,17.1 L8.7,21.7 L10.35,21.7 L10.35,17.1 Z"/>
+    <path d="M13,17.2 L13,21.7 L14.65,21.7 L14.65,17.2 Z"/>
+    <path d="M14.7,16.8 L15.15,21.7 L16.8,21.7 L16.35,16.8 Z"/>
+    <!-- the hedgehog: the dome, sixteen spines on its own normal, snout, nose, two feet -->
+    <path d="M25.92,20 L25.92,19.63 L26.01,18.85 L26.19,17.98 L26.45,17.08 L26.8,16.19 L27.21,15.32 L27.7,14.51 L28.25,13.76 L28.85,13.1 L29.5,12.54 L30.19,12.09 L30.91,11.77 L31.65,11.57 L32.4,11.5 L33.15,11.57 L33.89,11.77 L34.61,12.09 L35.3,12.54 L35.95,13.1 L36.55,13.76 L37.1,14.51 L37.59,15.32 L38,16.19 L38.35,17.08 L38.61,17.98 L38.79,18.85 L38.88,19.63 L38.88,20 Z"/>
+    <path d="M25.62,18.2 L23.5,20.11 L26.34,19.89 Z"/>
+    <path d="M26.04,16.77 L23.67,18.35 L26.51,18.55 Z"/>
+    <path d="M26.69,15.31 L24.1,16.5 L26.88,17.14 Z"/>
+    <path d="M27.53,13.94 L24.78,14.69 L27.42,15.77 Z"/>
+    <path d="M28.56,12.75 L25.72,13 L28.13,14.54 Z"/>
+    <path d="M29.74,11.83 L26.91,11.51 L28.96,13.49 Z"/>
+    <path d="M31.02,11.23 L28.32,10.31 L29.89,12.68 Z"/>
+    <path d="M32.35,10.99 L29.94,9.47 L30.91,12.15 Z"/>
+    <path d="M33.66,11.13 L31.69,9.08 L32,11.91 Z"/>
+    <path d="M34.92,11.63 L33.48,9.17 L33.11,12 Z"/>
+    <path d="M36.07,12.45 L35.21,9.73 L34.23,12.41 Z"/>
+    <path d="M37.08,13.55 L36.8,10.71 L35.29,13.13 Z"/>
+    <path d="M37.93,14.86 L38.18,12.02 L36.25,14.12 Z"/>
+    <path d="M38.61,16.33 L39.33,13.57 L37.07,15.32 Z"/>
+    <path d="M39.08,17.87 L40.22,15.25 L37.72,16.63 Z"/>
+    <path d="M39.34,19.38 L40.85,16.96 L38.18,17.96 Z"/>
+    <path d="M38.01,17.91 L41.81,21.11 L37.21,21.01 Z"/>
+    <path d="M41.11,20.61 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M27.8,19.7 L27.8,21.7 L29.35,21.7 L29.35,19.7 Z"/>
+    <path d="M35.2,19.7 L35.2,21.7 L36.75,21.7 L36.75,19.7 Z"/>
+  </svg>
+    <span class="qe-sr">Two cohabitating modes</span>
+  </a>
+</div>
+
+<nav class="qe-rail" aria-label="On this page" hidden>
+  <ol></ol>
+  <svg class="qe-botanical qe-rail-sprig" viewBox="0 0 28 27" aria-hidden="true" focusable="false">
+    <path class="stem" style="--len:34" d="M0.6,0 C0.7,7.2 1.9,13.4 4.6,18.4 C6.1,21.2 7.8,23.2 9.6,24.6"/>
+    <g class="sprout sprout-leaf" style="--i:0">
+      <path d="M1.7,7.9 C5.1,5.5 8.9,6.6 10.8,10.2 C7.3,11.3 3.6,10.4 1.7,7.9 Z"/>
+    </g>
+    <g class="sprout sprout-leaf" style="--i:1">
+      <path d="M3.5,14.6 C7.2,12.8 11.2,14.1 13.2,17.9 C9.5,18.8 5.6,17.4 3.5,14.6 Z"/>
+    </g>
+    <g class="sprout" style="--i:2">
+      <circle cx="10.4" cy="25.4" r="1.5"/>
+    </g>
+  </svg>
+</nav>
+
+<main id="main" tabindex="-1">
+
+  <header class="qe-masthead">
+    <p class="qe-kicker"><a href="/">Queering Earth</a></p>
+    <h1>Leaving notes on a draft</h1>
+  </header>
+
+  <p class="qe-lede">This is a practice sheet on the drafts branch. It is not published, it is not in the register, and nothing you do to it can reach anybody &mdash; which is the point. Try the tool here first, on a page that does not matter.</p>
+
+  <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
+    <h2 id="qe-contents-h">On this sheet</h2>
+    <ol></ol>
+  </nav>
+
+  <h2 id="what">What you are looking at <a class="qe-anchor" href="#what"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Everything at this address is a draft. It is the real site &mdash; the same typefaces, the same paper, the same cabinet when you shut the drawer &mdash; served from a branch that has not been published. A sheet sits here while it is being argued about, and goes to <a href="https://queering.earth/">queering.earth</a> only when it is finished.</p>
+
+  <p>The banner at the top of the page is the only thing here that will not exist on the published sheet. It disappears when the draft is mounted, along with every note anybody left on it.</p>
+
+  <h2 id="leaving">Leaving a note <a class="qe-anchor" href="#leaving"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Press <strong>Annotate</strong> in the banner. Every paragraph, heading, list item and quotation grows a small <em>Note</em> button on its right. Press one, write whatever you would have said out loud, and press <strong>Save note</strong>. The note appears under the paragraph it belongs to, and you can edit or delete it afterwards.</p>
+
+  <p>Press <strong>Stop annotating</strong> when you want to read without the buttons in the way. The notes you have already left stay where they are.</p>
+
+  <p>A quotation takes one note rather than one per line, because a quotation is one object:</p>
+
+  <blockquote>
+    <p>Considering how common illness is, how tremendous the spiritual change that it brings, how astonishing, when the lights of health go down, the undiscovered countries that are then disclosed &hellip; it becomes strange indeed that illness has not taken its place with love and battle and jealousy among the prime themes of literature.</p>
+    <cite>Virginia Woolf, <a href="https://queering.earth/on-being-ill">On Being Ill</a>, 1926</cite>
+  </blockquote>
+
+  <p>Try it on that one. The same is true of the specimen table at the head of a sheet: it is one object and takes one note.</p>
+
+  <h2 id="sending">Sending them back <a class="qe-anchor" href="#sending"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Press <strong>Copy my notes</strong>. That puts all of them on your clipboard as plain text, each one carrying the section it was in, a link straight to that section, and the sentence you were looking at. Paste it into a message and send it &mdash; email, Signal, wherever the two of you already talk.</p>
+
+  <p>Nothing is sent anywhere on its own. Until you paste them, your notes exist only in this browser on this device.</p>
+
+  <h2 id="knowing">Three things worth knowing <a class="qe-anchor" href="#knowing"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Your notes survive closing the tab, so you can review half a sheet on Tuesday and the rest on Thursday. They do not travel between devices, and a second reviewer on the same draft has their own set that you will never see.</p>
+
+  <p>If the paragraph under one of your notes is rewritten while you are away, the note stays put and says <em>the text here has changed since this note was written</em>. It is never quietly dropped, and it still copies out.</p>
+
+  <p class="qe-untidy">If a <em>Note</em> button is missing somewhere it ought to be, or lands somewhere it ought not, say so &mdash; that is a fault in the tool and not in the way you are using it.</p>
+
+</main>
+
+<footer class="qe-footer">
+  <p class="qe-footer-nav">
+    <a href="/">Queering Earth</a>
+    <a href="/the-plate">The plate</a>
+    <a href="/the-founding-papers">The founding papers</a>
+    <a href="/the-cabinet-itself">The cabinet itself</a>
+    <a href="/mission">Mission</a>
+    <a href="/manifesto">Manifesto</a>
+    <a href="/two-cohabitating-modes">Modes</a>
+    <a href="/design">Colophon</a>
+    <a href="/changelog">Register</a>
+    <a href="/whats-new">What&rsquo;s new</a>
+    <a href="/ledger">Ledger</a>
+    <a href="/what-is-settled">Decisions</a>
+    <a href="/search">Search</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/how-we-quote">Quoting</a>
+  </p>
+
+  <p>A collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+
+  <p>Words and art licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Take them and make something.</p>
+
+  <a class="qe-totop" href="#main">
+    <span class="qe-totop-label">Scroll to top</span>
+    <svg class="qe-botanical qe-totop-mark" viewBox="0 0 160 66" aria-hidden="true" focusable="false">
+      <path class="stem" style="--len:21" d="M22,64 C24,56 25,51 24,45"/>
+      <path class="stem" style="--len:24" d="M33,64 C32,55 30,49 28,43"/>
+      <path class="stem" style="--len:25" d="M44,64 C46,54 48,48 50,42"/>
+      <path class="stem" style="--len:52" d="M58,64 C60,46 67,32 77,21"/>
+      <path class="stem" style="--len:32" d="M68,64 C69,50 70,42 71,34"/>
+      <path class="stem" style="--len:44" d="M80,64 C79.4,48 80.6,34 80,22"/>
+      <path class="stem" style="--len:32" d="M92,64 C91,50 90,42 89,34"/>
+      <path class="stem" style="--len:52" d="M102,64 C100,46 93,32 83,21"/>
+      <path class="stem" style="--len:25" d="M116,64 C114,54 112,48 110,42"/>
+      <path class="stem" style="--len:24" d="M127,64 C128,55 130,49 132,43"/>
+      <path class="stem" style="--len:21" d="M138,64 C136,56 135,51 136,45"/>
+      <g class="sprout" style="--i:3">
+        <path class="head" d="M80,5 C77.4,11 77.4,18 80,25 C82.6,18 82.6,11 80,5 Z"/>
+      </g>
+    </svg>
+  </a>
+</footer>
+<script src="queering.js"></script>
+</body>
+</html>
