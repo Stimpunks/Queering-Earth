@@ -39,7 +39,14 @@ const NOT_A_DRAFT = new Map([
   ['review-practice.html', 'the practice sheet a reviewer learns the tool on; branch-only, never published'],
 ]);
 
-const git = (...args) => execFileSync('git', args, { encoding: 'utf8' });
+/* stderr is CAPTURED RATHER THAN INHERITED, so a handled failure stays handled.
+ * `git cat-file -e` on a path that is new prints `fatal: path ... exists on disk,
+ * but not in refs/heads/main` — which is the ANSWER to isRevision(), not an error,
+ * and it was being printed to the reader in the middle of the tool's own output
+ * every time a new-page draft was started. It is still on the error object if an
+ * unexpected failure ever needs reporting. */
+const git = (...args) =>
+  execFileSync('git', args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
 
 /** The address a page answers at, house style: extensionless, index at the root. */
 const addressOf = (f) => (f === 'index.html' ? '/' : '/' + f.replace(/\.html$/, ''));
