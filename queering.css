@@ -5695,3 +5695,89 @@ html.plain .qe-arrival-no { font-variation-settings: normal; }
   .qe-arrival-meta, .qe-arrival-kind, .qe-arrival-no,
   .qe-arrival-mend, .qe-arrival-mend--clean { color: #222; }
 }
+
+/* ── The zine setting ───────────────────────────────────────────────────────────
+ *
+ * `.qe-zine` on the body is a TREATMENT, not a kind. The plate's kind chip answers
+ * whose argument a sheet is — Reading, Essay, Wall — and how it is set is a different
+ * question with a different answer, so it is a class here rather than a fourth chip.
+ *
+ * IT IS ONE DOCUMENT IN TWO MEDIA, which is the whole reason it is a stylesheet. A
+ * zine published as a PDF beside an HTML sheet is the second document this house
+ * forbids outright: two copies of the same words drift, and the accessible one is the
+ * copy that rots. So the typography is live on screen and on paper, and only the
+ * pagination is print-only — a page number is a fact about paper and a lie on a page
+ * that scrolls.
+ *
+ * SMALL CAPS AND NOT MONOSPACE, on Ryan's call. The zine this came from sets its
+ * section labels in a monospace face, and a component here may mix the two type roles
+ * but may never name a family: exactly two things hardcode one, both the reader's own
+ * system face, both for a semantic reason, and a third added for looks would retire the
+ * reasoning behind the first two. `font-variant-caps` also keeps the authored
+ * capitalisation in the DOM, so the Markdown and the finding aid get `The shop` rather
+ * than a shouted copy of it.
+ *
+ * WHAT IS NOT HERE, AND WHY. `@page { size: A5 }` is deliberately absent. An `@page`
+ * rule CANNOT BE SCOPED BY A CLASS — it applies to the document — so putting one in
+ * this shared stylesheet would print every sheet on the site at A5. See DECISIONS.md.
+ */
+.qe-zine .qe-part {
+  font-family: var(--qe-display);
+  font-variant-caps: small-caps;
+  font-size: 1rem;
+  letter-spacing: 0.11em;
+  color: var(--qe-moss);              /* 7.8:1 on paper, 7.2:1 in the drawer */
+  margin: var(--qe-space-6) 0 var(--qe-space-2);
+  padding-top: var(--qe-space-2);
+  border-top: 1px solid var(--qe-rule);
+}
+.qe-zine .qe-part + h2 { margin-top: 0; }
+
+/* The specimen box: the RULED tier from the three surfaces, because a quotation set
+   inside a box is an object mounted here rather than our own commentary. */
+.qe-zine main blockquote {
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-radius: var(--qe-corner-a);
+  padding: var(--qe-space-3) var(--qe-space-3) var(--qe-space-2);
+}
+
+/* Washi tape. Decoration, and it is allowed to be a texture because it is NEVER under
+   text — it sits above the section label, in the space the scale already cleared. The
+   colour is aliased per element with --qe-tape so no page writes a hex.
+   IT STAYS INSIDE THE MEASURE ON PURPOSE: a strip bleeding off the left edge looks
+   more like tape and takes the document's scrollWidth with it, which is the horizontal
+   body scroll check-width.mjs forbids outright. */
+.qe-zine .qe-taped { position: relative; }
+.qe-zine .qe-taped::before {
+  content: "";
+  position: absolute;
+  /* It STRADDLES the section rule rather than floating above it. Placed in the gap
+     it read as a stray swatch with no job; laid across the hairline it reads as what
+     it is, a piece of tape holding the sheet down. Half its height above the border
+     and half below. */
+  top: -12px;
+  left: 6px;
+  width: 96px;
+  height: 24px;
+  transform: rotate(-5.5deg);
+  background: repeating-linear-gradient(
+    48deg, var(--qe-tape, var(--qe-lichen)) 0 5px, transparent 5px 11px);
+  border: 1px solid var(--qe-tape, var(--qe-lichen));
+  opacity: 0.5;
+  pointer-events: none;
+}
+html.plain .qe-zine .qe-taped::before { display: none; }
+
+/* Paper. AFTER the base rules it overrides, because same specificity means source
+   order decides — the lilac coda's caption printed moss-green for exactly that. */
+@media print {
+  .qe-zine .qe-part {
+    break-before: page;
+    border-top: none;
+    padding-top: 0;
+  }
+  .qe-zine .qe-part:first-of-type { break-before: auto; }
+  .qe-zine main blockquote,
+  .qe-zine .qe-botanical { break-inside: avoid; }
+}

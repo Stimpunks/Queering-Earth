@@ -28,7 +28,7 @@
      wrong ground, because it is the page they did not choose to be on. -->
 <script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
 </head>
-<body style="--qe-fox-a: 14% 22%; --qe-fox-b: 84% 41%; --qe-fox-c: 27% 88%; --qe-fox-d: 72% 12%">
+<body class="qe-zine" style="--qe-fox-a: 14% 22%; --qe-fox-b: 84% 41%; --qe-fox-c: 27% 88%; --qe-fox-d: 72% 12%">
 
 <a class="qe-skip" href="#main">Skip to the page</a>
 
@@ -226,6 +226,7 @@
     <ol></ol>
   </nav>
 
+  <p class="qe-part qe-taped" style="--qe-tape: var(--qe-lichen)">I &middot; The shop</p>
   <h2 id="the-shop">What Emily brings <a class="qe-anchor" href="#the-shop"><span class="qe-sr">Link to this section</span></a></h2>
 
   <blockquote>
@@ -237,6 +238,7 @@
 
   <p>This sheet follows that same found object into two other cabinets that hold lost and overlooked things without asking them to be fixed first: the herbarium sheet, and the cabinet of curiosities.</p>
 
+  <p class="qe-part">II &middot; The sheet</p>
   <h2 id="the-sheet">The herbarium sheet <a class="qe-anchor" href="#the-sheet"><span class="qe-sr">Link to this section</span></a></h2>
 
   <p>A herbarium sheet holds a plant that has been pressed flat, dried, and pinned in place, yet what it preserves is never quite the living thing. Botanists call the specimen chosen to define a species its <em>type</em> &mdash; the one, as Flannery puts it, <q>upon which the description of a species is based</q>.</p>
@@ -247,6 +249,7 @@
 
   <p>Mark Dion goes further in the other direction. He paints herbarium specimens and then exhibits, in Flannery&rsquo;s words, <q>not the sheets or the paintings, but photogravure prints of the paintings and leaves the place for the species name blank</q>. Both refuse to let the label finish the specimen&rsquo;s story before the looking has even begun.</p>
 
+  <p class="qe-part qe-taped" style="--qe-tape: var(--qe-coral)">III &middot; The cabinet</p>
   <h2 id="the-cabinet">The cabinet of curiosities <a class="qe-anchor" href="#the-cabinet"><span class="qe-sr">Link to this section</span></a></h2>
 
   <p>Long before natural history collections were sorted into their proper drawers, cabinets of curiosities held the real and the mythical side by side, often with no need to settle which was which. Ole Worm kept what he had been sold as a unicorn horn, doubted it enough to go looking for proof, and in 1638 matched it to a narwhal&rsquo;s skull. Even once he was right, the courts of Europe went on prizing narwhal tusks as unicorn horns for a long while after, because the wonder of the thing had outgrown its label.</p>
@@ -292,6 +295,7 @@
 
   <p>A cabinet like this asks its keeper to hold two things at once, curiosity and classification, without letting the second one win too quickly. That is not so different from what it means to sit with a mind, including one&rsquo;s own, that keeps refusing to be filed neatly away.</p>
 
+  <p class="qe-part">IV &middot; The pull</p>
   <h2 id="the-pull">Monotropic flow <a class="qe-anchor" href="#the-pull"><span class="qe-sr">Link to this section</span></a></h2>
 
   <p>None of this needed to be urgent. Bagpuss did not rush toward usefulness, and neither does a cabinet of curiosities, and neither does a mind following the pull of its own attention wherever it leads.</p>
@@ -302,6 +306,7 @@
 
   <p><strong>Field note.</strong> Restoration of meaning, not repair. Attention, not urgency. A cabinet kept by the one who fills it.</p>
 
+  <p class="qe-part qe-taped" style="--qe-tape: var(--qe-lilac)">V &middot; An invitation</p>
   <h2 id="invitation">Bring something forward <a class="qe-anchor" href="#invitation"><span class="qe-sr">Link to this section</span></a></h2>
 
   <p>What is the thing you have been keeping without quite knowing why? A shell, a phrase, a scrap of a television programme half remembered from childhood, an interest nobody else in the room seems to share.</p>
@@ -314,9 +319,11 @@
 
   <div class="qe-untidy">
     <p><strong>Wenn Lawson is named above as he names himself now</strong>, while the 2005 paper carries the byline <i>Wendy Lawson</i>. The citation below shows the published byline and the prose does not. On a site about naming yourself that is not a detail to settle silently, and it is the one thing on this sheet that wants a decision rather than a check.</p>
-    <p><strong>The zine setting is not built.</strong> The decision is that this stays one document and its print stylesheet renders Helen&rsquo;s A5 zine &mdash; no second file and no PDF beside it, because two copies of the same words drift and the accessible one is the copy that rots. The <code>@page</code> and section-break rules are the next pass and they live in <code>queering.css</code>, which is a shared asset rather than this page.</p>
+    <p><strong>The zine setting is built, except for the paper size, and that exception is structural.</strong> The typography is live in both media &mdash; the section rules, the small-caps labels, the tape, the specimen box &mdash; and each numbered section starts a new page when printed. What is missing is <code>@page &#123; size: A5 &#125;</code>, and it is missing because <strong>an <code>@page</code> rule cannot be scoped by a class</strong>. Put in the shared stylesheet it would print every sheet on the site at A5. Scoping it needs a style block in this page&rsquo;s own head, which is a house question rather than a line of CSS, so it is being asked rather than assumed.</p>
+    <p><strong>The section labels are set in small caps rather than the zine&rsquo;s monospace</strong>, on Ryan&rsquo;s call. A component here may mix the two type roles and may never name a family; the two things that hardcode one both use the reader&rsquo;s own system face for a semantic reason, and a third added for looks would retire the reasoning behind the first two. Small caps also keep the authored capitalisation in the markup, so the Markdown and the finding aid get <q>The shop</q> and not a shouted copy of it.</p>
+    <p><strong>The stamp has not been carried across.</strong> The zine&rsquo;s <q>HELD NOT NAMED</q> mark cannot be <code>.qe-stamp</code>: that component means accession, the number is real or there is no stamp, and a second stamp shape asserting a reading instead of a record would make the real ones unfindable.</p>
     <p><strong>The drawing is a first attempt</strong> &mdash; a pressed stem with a blank label, which is the middle section in one image. It has not been looked at beside the other eleven sheets.</p>
-    <p><strong>Two things from the zine have not been carried across.</strong> Its grid of drawers, two of them holding a question mark, and its washi tape. Both are outside this site&rsquo;s idiom as it stands and neither is lost by waiting.</p>
+    <p><strong>The grid of drawers is drawn and the question marks are not.</strong> A glyph in an SVG is a <code>text</code> element and this site never ships an image of text, so the argument is carried by the drawing instead: one drawer in a broken line, which is already the house mark for provisional, and one that will not shut because the horn is still in it. The zine&rsquo;s gold tint went too &mdash; <code>--qe-marigold</code> is the seam token and marks an actual repair in the register and nothing else.</p>
   </div>
 
   <h2 id="sources">Sources <a class="qe-anchor" href="#sources"><span class="qe-sr">Link to this section</span></a></h2>
