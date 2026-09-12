@@ -175,13 +175,16 @@ Why this cabinet exists, and what it is for. [About this drawer](https://queerin
 
 ## The cabinet itself
 
-Seven pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything. [About this drawer](https://queering.earth/the-cabinet-itself) — what each page is for, and what the build checks about it.
+Eight pages that are not specimens. They are the cabinet — how it is made, what it has recorded, how to look through the drawers, and what it knows about you. No cards and no numbers, deliberately: a card would file them with the readings, and none of these is a reading of anything. [About this drawer](https://queering.earth/the-cabinet-itself) — what each page is for, and what the build checks about it.
 
 **[How this site is made](https://queering.earth/design)**
 : The herbarium sheet, the palette, the type that leans, and the borrowed plates — each rule written down with the reason it exists, so it can be argued with.
 
 **[The accession register](https://queering.earth/changelog)**
 : Every sheet as it was mounted, every plate that came off again, and every label we corrected. Grouped by accession rather than by release, and indexed at the foot by which sheet it happened to.
+
+**[What has arrived, and when](https://queering.earth/whats-new)**
+: The cabinet by date rather than by drawer — every page here, newest first, with the day it arrived and how often it has been corrected since. The one list on the site that a feed reader can follow.
 
 **[Find a word in the cabinet](https://queering.earth/search)**
 : Every sheet, every quotation, and every correction, searched in your own browser. A quotation comes back whole with its source or not at all, and nothing you type is sent anywhere.

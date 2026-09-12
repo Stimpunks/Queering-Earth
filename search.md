@@ -270,8 +270,8 @@ Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth
 
 [The cabinet itself](https://queering.earth/the-cabinet-itself) Drawer
 
-  - [The seven pages](https://queering.earth/the-cabinet-itself#the-six)
-  - [Why these seven are one drawer](https://queering.earth/the-cabinet-itself#why-these-are-together)
+  - [The eight pages](https://queering.earth/the-cabinet-itself#the-six)
+  - [Why these eight are one drawer](https://queering.earth/the-cabinet-itself#why-these-are-together)
   - [What the build checks about this drawer](https://queering.earth/the-cabinet-itself#what-is-checked)
 
 -
@@ -297,7 +297,15 @@ Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-215 entries across 58 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+220 entries across 59 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+
+-
+
+[What has arrived, and when](https://queering.earth/whats-new)
+
+  - [Everything, newest first](https://queering.earth/whats-new#arrivals)
+  - [Where a date comes from](https://queering.earth/whats-new#the-date)
+  - [What this page is not](https://queering.earth/whats-new#not-the-register)
 
 -
 

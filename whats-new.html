@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What has arrived, and when &mdash; Queering Earth</title>
+<meta name="description" content="Every page in the cabinet, newest first, with the day it arrived and how often it has been corrected since. The register says why something changed; this page says what is here. Subscribe by feed, or read the register at length.">
+<link rel="canonical" href="https://queering.earth/whats-new">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Queering Earth">
+<meta property="og:title" content="What has arrived, and when">
+<meta property="og:description" content="Every page in the cabinet, newest first, with the day it arrived and how often it has been corrected since.">
+<meta property="og:url" content="https://queering.earth/whats-new">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://queering.earth/images/og-whats-new.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="What has arrived, and when. Every page in the cabinet, newest first.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What has arrived, and when">
+<meta name="twitter:description" content="Every page in the cabinet, newest first, with the day it arrived and how often it has been corrected since.">
+<meta name="twitter:image" content="https://queering.earth/images/og-whats-new.png">
+<meta name="twitter:image:alt" content="What has arrived, and when. Every page in the cabinet, newest first.">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- The faces are self-hosted and declared in queering.css. Preloading the body
+     roman is the one that pays: it is the first thing every page needs, and there
+     is no cross-origin handshake to wait on any more. crossorigin is required
+     even same-origin — a font is always fetched in CORS mode. -->
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
+     either one would flash the wrong page. The two keys this reads are the two
+     this page discloses; there is nothing else to restore. -->
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
+<!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
+     rel=alternate points an agent at this page's Markdown source, derived from this
+     page's own main landmark by tools/make-markdown.mjs.
+
+     THE FEED IS ADVERTISED HERE LIKE EVERYWHERE ELSE, and on this page alone it is
+     also a link a person can see and press. It sat in every head and in the Link
+     header for two days with no visible route to it at all.
+
+     NO ANGLE-BRACKET TAG NAMES IN A COMMENT NEAR THE HEAD. Writing the landmark's name
+     with brackets here made a /<main[^>]*>/ extractor match inside this very comment
+     and take the head as the page body. The SKS mirror reads that landmark too. -->
+<link rel="describedby" href="/llms.txt" type="text/markdown" title="Site index for agents">
+<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Queering Earth — what has arrived">
+<link rel="alternate" href="/register.xml" type="application/rss+xml" title="Queering Earth — the accession register">
+<link rel="alternate" href="https://queering.earth/whats-new.md" type="text/markdown" title="What has arrived, and when — Markdown source">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://queering.earth/whats-new#page",
+  "name": "What has arrived, and when",
+  "description": "Every page in the cabinet, newest first, with the day it arrived and how often it has been corrected since.",
+  "url": "https://queering.earth/whats-new",
+  "inLanguage": "en",
+  "isFamilyFriendly": true,
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "publisher": [
+    {
+      "@type": "Organization",
+      "name": "Stimpunks Foundation",
+      "url": "https://stimpunks.org/"
+    },
+    {
+      "@type": "Organization",
+      "name": "More Realms",
+      "url": "https://morerealms.com/"
+    }
+  ],
+  "dateModified": "2026-09-11",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Queering Earth",
+    "url": "https://queering.earth/"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Queering Earth",
+        "item": "https://queering.earth/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "The cabinet itself",
+        "item": "https://queering.earth/the-cabinet-itself"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "What has arrived, and when",
+        "item": "https://queering.earth/whats-new"
+      }
+    ]
+  },
+  "encoding": {
+    "@type": "MediaObject",
+    "encodingFormat": "text/markdown",
+    "contentUrl": "https://queering.earth/whats-new.md"
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+  <details class="qe-reading" name="qe-tray">
+    <summary class="qe-reading-summary">Reading</summary>
+    <div class="qe-reading-panel">
+      <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
+      <ul class="qe-reading-list">
+        <li>
+          <label><input type="checkbox" id="qe-set-motion"> <span>Reduce motion</span></label>
+          <span class="qe-reading-hint">The drawings appear finished instead of drawing themselves on.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-contrast"> <span>More contrast</span></label>
+          <span class="qe-reading-hint">Darker ink, firmer rules, and the foxing lifted off the paper.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
+          <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-textsize">Text size</label>
+            <select class="qe-reading-select" id="qe-set-textsize">
+              <option value="">Your device&rsquo;s size</option>
+              <option value="larger">Larger</option>
+              <option value="largest">Largest</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-font">Typeface</label>
+            <select class="qe-reading-select qe-reading-select-wide" id="qe-set-font">
+              <option value="">Fraunces &amp; Newsreader</option>
+              <option value="adelphe">Adelphe</option>
+              <option value="atkinson">Atkinson Hyperlegible</option>
+              <option value="baskervvol">BBB Baskervvol</option>
+              <option value="coxinelle">Coxinelle</option>
+              <option value="insolente">Insolente</option>
+              <option value="redaction">Redaction Inclusive</option>
+              <option value="sporting">Sporting Grotesque</option>
+              <option value="trickster">Trickster</option>
+              <option value="victorianna">Victorianna</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">The first four also set the reading face, because they have a real italic. The rest change the headings and leave Newsreader to read.</span>
+        </li>
+      </ul>
+      <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
+  <!-- The drawers. Three collections, and everything on the site is in one of
+       them. A native details element, like the reading settings beside it and for
+       the same reason: a hand-built menu would need focus trapping, a roving
+       tabindex and an Escape handler, and getting any of that wrong makes the
+       navigation the least navigable thing on the sheet. -->
+  <details class="qe-drawers" name="qe-tray">
+    <summary class="qe-drawers-summary">Drawers</summary>
+    <div class="qe-drawers-panel">
+      <ul class="qe-drawers-list">
+        <li>
+          <a class="qe-drawers-link" href="/the-plate">The plate</a>
+          <span class="qe-drawers-hint">The sheets themselves, mounted and numbered on one plate.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-founding-papers">The founding papers</a>
+          <span class="qe-drawers-hint">Why this cabinet exists, and what it is for.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-cabinet-itself" aria-current="true">The cabinet itself</a>
+          <span class="qe-drawers-hint">How it is made, what it has recorded, and what it knows about you.</span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <!-- The easter egg. An ornament that is a door: unlabelled to the eye,
+       named in the DOM, and pointing at a page that is listed in the
+       footer row, on the home page and in the sitemap like any other. -->
+  <a class="qe-modes-link" href="/two-cohabitating-modes">
+  <svg class="qe-modes-mark" viewBox="1 2.2 41.3 20" aria-hidden="true" focusable="false">
+    <!-- the fox: brush, body, neck, skull, muzzle, nose, two ears, four legs -->
+    <path d="M7.4,15.6 C4.2,16.2 1.4,14.2 1.5,10.4 C1.6,8.5 2.6,7.2 4.0,6.9 C4.5,9.1 5.7,10.8 7.9,12.0 L7.4,15.6 Z"/>
+    <path d="M6.6,16.2 C5.8,12.9 8.0,10.7 11.8,10.7 C15.2,10.7 17.2,12.1 17.2,14.6 C17.2,16.6 15.6,17.5 12.2,17.5 C9.0,17.5 7.0,17.0 6.6,16.2 Z"/>
+    <path d="M14.2,12 L15.8,9.2 L18.8,11 L17,13.8 Z"/>
+    <path d="M15.1,8.4 C15.1,6.8 16.4,5.7 18.0,5.7 C19.7,5.7 20.9,6.9 20.9,8.5 C20.9,10.2 19.6,11.3 17.9,11.3 C16.3,11.3 15.1,10.1 15.1,8.4 Z"/>
+    <path d="M19.3,7 L22.3,8.6 L19.5,10.2 Z"/>
+    <path d="M21.9,8.6 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M15.2,6.5 L14.6,2.9 L17.5,5.6 Z"/>
+    <path d="M17.7,5.4 L19.1,2.7 L20.3,6.1 Z"/>
+    <path d="M7,16.6 L6.6,21.7 L8.25,21.7 L8.65,16.6 Z"/>
+    <path d="M8.7,17.1 L8.7,21.7 L10.35,21.7 L10.35,17.1 Z"/>
+    <path d="M13,17.2 L13,21.7 L14.65,21.7 L14.65,17.2 Z"/>
+    <path d="M14.7,16.8 L15.15,21.7 L16.8,21.7 L16.35,16.8 Z"/>
+    <!-- the hedgehog: the dome, sixteen spines on its own normal, snout, nose, two feet -->
+    <path d="M25.92,20 L25.92,19.63 L26.01,18.85 L26.19,17.98 L26.45,17.08 L26.8,16.19 L27.21,15.32 L27.7,14.51 L28.25,13.76 L28.85,13.1 L29.5,12.54 L30.19,12.09 L30.91,11.77 L31.65,11.57 L32.4,11.5 L33.15,11.57 L33.89,11.77 L34.61,12.09 L35.3,12.54 L35.95,13.1 L36.55,13.76 L37.1,14.51 L37.59,15.32 L38,16.19 L38.35,17.08 L38.61,17.98 L38.79,18.85 L38.88,19.63 L38.88,20 Z"/>
+    <path d="M25.62,18.2 L23.5,20.11 L26.34,19.89 Z"/>
+    <path d="M26.04,16.77 L23.67,18.35 L26.51,18.55 Z"/>
+    <path d="M26.69,15.31 L24.1,16.5 L26.88,17.14 Z"/>
+    <path d="M27.53,13.94 L24.78,14.69 L27.42,15.77 Z"/>
+    <path d="M28.56,12.75 L25.72,13 L28.13,14.54 Z"/>
+    <path d="M29.74,11.83 L26.91,11.51 L28.96,13.49 Z"/>
+    <path d="M31.02,11.23 L28.32,10.31 L29.89,12.68 Z"/>
+    <path d="M32.35,10.99 L29.94,9.47 L30.91,12.15 Z"/>
+    <path d="M33.66,11.13 L31.69,9.08 L32,11.91 Z"/>
+    <path d="M34.92,11.63 L33.48,9.17 L33.11,12 Z"/>
+    <path d="M36.07,12.45 L35.21,9.73 L34.23,12.41 Z"/>
+    <path d="M37.08,13.55 L36.8,10.71 L35.29,13.13 Z"/>
+    <path d="M37.93,14.86 L38.18,12.02 L36.25,14.12 Z"/>
+    <path d="M38.61,16.33 L39.33,13.57 L37.07,15.32 Z"/>
+    <path d="M39.08,17.87 L40.22,15.25 L37.72,16.63 Z"/>
+    <path d="M39.34,19.38 L40.85,16.96 L38.18,17.96 Z"/>
+    <path d="M38.01,17.91 L41.81,21.11 L37.21,21.01 Z"/>
+    <path d="M41.11,20.61 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M27.8,19.7 L27.8,21.7 L29.35,21.7 L29.35,19.7 Z"/>
+    <path d="M35.2,19.7 L35.2,21.7 L36.75,21.7 L36.75,19.7 Z"/>
+  </svg>
+    <span class="qe-sr">Two cohabitating modes</span>
+  </a>
+</div>
+
+<!-- The drift rail: this page's own h2s, in the left margin, above 64rem and
+     nowhere below it. Empty here and filled by queering.js — one derivation, two
+     views, the other being the contents list inside the measure. OUTSIDE the
+     landmark, like every other nav here, so the mirror never reads it. -->
+<nav class="qe-rail" aria-label="On this page" hidden>
+  <ol></ol>
+  <svg class="qe-botanical qe-rail-sprig" viewBox="0 0 28 27" aria-hidden="true" focusable="false">
+    <path class="stem" style="--len:34" d="M0.6,0 C0.7,7.2 1.9,13.4 4.6,18.4 C6.1,21.2 7.8,23.2 9.6,24.6"/>
+    <g class="sprout sprout-leaf" style="--i:0">
+      <path d="M1.7,7.9 C5.1,5.5 8.9,6.6 10.8,10.2 C7.3,11.3 3.6,10.4 1.7,7.9 Z"/>
+    </g>
+    <g class="sprout sprout-leaf" style="--i:1">
+      <path d="M3.5,14.6 C7.2,12.8 11.2,14.1 13.2,17.9 C9.5,18.8 5.6,17.4 3.5,14.6 Z"/>
+    </g>
+    <g class="sprout" style="--i:2">
+      <circle cx="10.4" cy="25.4" r="1.5"/>
+    </g>
+  </svg>
+</nav>
+
+<main id="main" tabindex="-1">
+
+  <header class="qe-masthead">
+    <nav class="qe-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Queering Earth</a></li>
+        <li><a href="/the-cabinet-itself">The cabinet itself</a></li>
+      </ol>
+    </nav>
+    <h1>What has arrived, and when</h1>
+    <p class="qe-tagline">The cabinet by date, rather than by drawer.</p>
+  </header>
+
+  <p class="qe-lede">Every other index of this site is in the order somebody <em>chose</em>. The plate runs by accession number, the two lists on the front of the cabinet run by what a page is for, and the drawers menu runs the same way. <strong>This page is the one that runs by date</strong> &mdash; every page here, newest first, with the day it arrived, the line it leads with, and how often we have had to correct it since.</p>
+
+  <div class="qe-subscribe">
+    <p class="qe-subscribe-label">Subscribe</p>
+    <p class="qe-subscribe-text">There are two feeds, because there are two lists. <strong><a href="/feed.xml">The arrivals feed</a></strong> is this page in RSS &mdash; the same pages, the same order, out of the same pass, so the two cannot be made to say different things. <strong><a href="/register.xml">The register&rsquo;s feed</a></strong> carries <a href="/changelog">the accessions</a> instead, corrections and housekeeping included, which is the one to follow if you want to know when we put something right rather than when we added something.</p>
+    <p class="qe-subscribe-text">Nothing is sent anywhere when you subscribe. Your reader fetches a file, the way your browser just fetched this page, and <a href="/privacy">the privacy page</a> says what that leaves behind.</p>
+  </div>
+
+  <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
+    <h2 id="qe-contents-h">On this sheet</h2>
+    <ol></ol>
+  </nav>
+
+  <h2 id="arrivals">Everything, newest first <a class="qe-anchor" href="#arrivals"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The list below is generated by <code>tools/make-whats-new.mjs</code> and is not typed. Each title links to the page, each summary is that page&rsquo;s own one-line description, and each kind and number is whatever <a href="/the-plate">the plate</a> says it is. <strong>Nothing here is a second copy of anything</strong>, which is why it cannot fall out of step with the pages it lists.</p>
+
+  <!-- THE LISTING IS GENERATED BETWEEN THESE MARKERS by tools/make-whats-new.mjs.
+       Everything outside them is authored and is kept by hand, exactly like the two
+       record pages. A tool that owned the WHOLE file would silently revert any
+       site-wide edit that touched this page — Star Stuff lost a skip link that way,
+       with the tool reporting a clean build. Edit inside the markers and the next run
+       takes it back; edit outside them and it survives. -->
+  <!-- generated:arrivals:start -->
+    <div class="qe-arrival-list">
+      <section class="qe-arrival-day">
+        <h3 id="d-2026-09-11"><time datetime="2026-09-11">11 September 2026</time> <a class="qe-anchor" href="#d-2026-09-11"><span class="qe-sr">Link to this day</span></a></h3>
+        <ul class="qe-arrivals">
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/the-plate">The plate</a>
+          <p class="qe-arrival-sum">Every sheet on queering.earth in accession order, with what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The plate</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-11-drawers">Corrected once since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/gloomy-sunflowers">My Gloomy Sunflowers</a>
+          <p class="qe-arrival-sum">Townes Van Zandt, Vincent van Gogh, Sylvia Plath and Kurt Cobain, read against the myth that made them: four records in which the work was not the symptom but the thing that was going well.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind">Essay</span> <span class="qe-arrival-no">No.&nbsp;11</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-11-sunflowers">Corrected twice since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/the-founding-papers">The founding papers</a>
+          <p class="qe-arrival-sum">The founding papers of queering.earth: the aims, the manifesto, and the paper about the shelf — what each is for, why none of them is a sheet, and which one is signed.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The founding papers</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <span class="qe-arrival-mend qe-arrival-mend--clean">Not yet corrected</span></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/the-cabinet-itself">The cabinet itself</a>
+          <p class="qe-arrival-sum">The working pages of queering.earth: the colophon, the register, the ledger, the decisions, the finding aid and the privacy page — what each is for, and what the build checks about them.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The cabinet itself</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <span class="qe-arrival-mend qe-arrival-mend--clean">Not yet corrected</span></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/whats-new">What has arrived, and when</a>
+          <p class="qe-arrival-sum">Every page in the cabinet, newest first, with the day it arrived and how often it has been corrected since. The register says why something changed; this page says what is here. Subscribe by feed, or read the register at length.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The cabinet itself</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <span class="qe-arrival-mend qe-arrival-mend--clean">Not yet corrected</span></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/how-we-quote">What we quote, and why we may</a>
+          <p class="qe-arrival-sum">This site’s fair-use position, written down: what we quote from work still in copyright, how much of it, why we think we may, and what to do if you hold the rights and disagree.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The cabinet itself</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <span class="qe-arrival-mend qe-arrival-mend--clean">Not yet corrected</span></p>
+        </li>
+        </ul>
+      </section>
+      <section class="qe-arrival-day">
+        <h3 id="d-2026-09-10"><time datetime="2026-09-10">10 September 2026</time> <a class="qe-anchor" href="#d-2026-09-10"><span class="qe-sr">Link to this day</span></a></h3>
+        <ul class="qe-arrivals">
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/five-unmistakable-marks">The Five Unmistakable Marks</a>
+          <p class="qe-arrival-sum">Lewis Carroll's Snark, a creature named before anybody saw it; Deleuze's empty square; and Kassiane Asasumasu, who coined neurodivergent and had to say so out loud.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind">Reading</span> <span class="qe-arrival-no">No.&nbsp;9</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-10-snark">Corrected twice since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/other-people-who-have-it">Other People Who Have It</a>
+          <p class="qe-arrival-sum">Octavia Butler's hyperempathy, which Sami Schalk reads as a disability with no real-world equivalent, and the Autistic people who have been describing it under the same name for years.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind">Reading</span> <span class="qe-arrival-no">No.&nbsp;10</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-10-hyperempathy">Corrected twice since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/two-cohabitating-modes">Two Cohabitating Modes</a>
+          <p class="qe-arrival-sum">Why this cabinet has a sibling built on science: the fox and the hedgehog from Archilochus to Berlin to Gould, two public-domain animal poems that end in the same place, and the spiky profile the typology was never written about.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The founding papers</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-11-monotropism">Corrected twice since</a></p>
+        </li>
+        </ul>
+      </section>
+      <section class="qe-arrival-day">
+        <h3 id="d-2026-09-09"><time datetime="2026-09-09">9 September 2026</time> <a class="qe-anchor" href="#d-2026-09-09"><span class="qe-sr">Link to this day</span></a></h3>
+        <ul class="qe-arrivals">
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/monotropa-uniflora">The Preferred Flower of Life</a>
+          <p class="qe-arrival-sum">Monotropa uniflora, the ghost pipe: a plant with no chlorophyll that feeds off fungi, the flower Emily Dickinson called the preferred flower of life, and the Greek root it shares with monotropism.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind">Wall</span> <span class="qe-arrival-no">No.&nbsp;8</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-09-patina">Corrected twice since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/mission">What this cabinet is for</a>
+          <p class="qe-arrival-sum">The mission of queering.earth, in thirteen aims — each with the page where it is already being kept, and the failure that would show we had stopped. Then what a cabinet of readings has to do with a foundation whose first business is paying people's rent, including the half of that a reading cannot do.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The founding papers</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <span class="qe-arrival-mend qe-arrival-mend--clean">Not yet corrected</span></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/manifesto">Nothing here was inevitable</a>
+          <p class="qe-arrival-sum">The manifesto of queering.earth: normal is an arrangement and arrangements have authors, weird is a verb, and a reading is where an arrangement gets contested. Adapted from the Neuroqueer Learning Spaces Manifesto under its own licence.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The founding papers</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <span class="qe-arrival-mend qe-arrival-mend--clean">Not yet corrected</span></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/search">Find a word in the cabinet</a>
+          <p class="qe-arrival-sum">Search every sheet, every quotation and every correction on this site. The searching happens in your browser; nothing you type is sent anywhere, including to us.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The cabinet itself</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-09-searchtoc">Corrected twice since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/ledger">The attribution ledger</a>
+          <p class="qe-arrival-sum">The ledger for every quotation and credited idea on Queering Earth: what we quoted, whose it is, where it came from, and the day somebody read the primary source and confirmed the wording. Including the ones we got wrong.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The cabinet itself</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-11-width">Corrected once since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/what-is-settled">What is settled, and what is open</a>
+          <p class="qe-arrival-sum">The decision log for Queering Earth: what is settled, what is still open, and the reasoning for each — including the designs that were refused, and why.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The cabinet itself</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-11-width">Corrected once since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/privacy">What this site knows about you</a>
+          <p class="qe-arrival-sum">Almost nothing, and here is the whole of it: two view preferences your own browser keeps, and the server log our host writes. No analytics, no cookies, no forms, and one embedded recording that fetches nothing until you press play.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The cabinet itself</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-11-plates">Corrected once since</a></p>
+        </li>
+        </ul>
+      </section>
+      <section class="qe-arrival-day">
+        <h3 id="d-2026-09-08"><time datetime="2026-09-08">8 September 2026</time> <a class="qe-anchor" href="#d-2026-09-08"><span class="qe-sr">Link to this day</span></a></h3>
+        <ul class="qe-arrivals">
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/promises-like-pie-crust">The Die Uncast</a>
+          <p class="qe-arrival-sum">Christina Rossetti's Promises like Pie-crust, read as a charter for solo polyamory — the relationship escalator refused in 1861, and the colon her first printing keeps where everyone else prints a full stop.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind">Reading</span> <span class="qe-arrival-no">No.&nbsp;3</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-08-plates">Corrected seven times since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/invention-of-normal">Wyrd, Weird, and the Invention of Normal</a>
+          <p class="qe-arrival-sum">Wyrd was Old English for fate. It became weird, and then weird became a diagnosis. A sheet on the demotion of a word, the Weird Sisters, changelings, refusal, and an idea of normal barely two centuries old.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind">Reading</span> <span class="qe-arrival-no">No.&nbsp;4</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-08-wyrd">Corrected five times since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/the-tempest">Miranda: To Be Wondered With</a>
+          <p class="qe-arrival-sum">Shakespeare coined Miranda's name from the Latin for wonder at. A reading of The Tempest and Waterhouse's 1916 canvas: a boy actor, an editor who moved her hardest speech into her father's mouth, and who a story lets be difficult.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind">Reading</span> <span class="qe-arrival-no">No.&nbsp;5</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-09-plate">Corrected twice since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/wild-nights">The Swell and the Dwell</a>
+          <p class="qe-arrival-sum">Emily Dickinson's Wild nights – Wild nights! read as co-regulation: the winds futile rather than stilled, the compass and the chart put down, and one night asked for instead of a lifetime. With a reply in verse, and what her first editor tidied in 1891.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind">Reading</span> <span class="qe-arrival-no">No.&nbsp;6</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-08-dickinson">Corrected four times since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/flower-codes">A Waste Garden, Flowering at Its Will</a>
+          <p class="qe-arrival-sum">Violet, pansy, green carnation, and lavender were worn as code. Each was read by the people it was meant to escape and turned into the word that named you, and each was picked up again afterwards. With the 1926 sentence about a streak of lavender, and the man it is actually about.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind">Reading</span> <span class="qe-arrival-no">No.&nbsp;7</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-08-flowercodes">Corrected once since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/changelog">The accession register</a>
+          <p class="qe-arrival-sum">The changelog for Queering Earth: every sheet as it was mounted, every plate that came off again, and every label we corrected — including the attributions we got wrong and exactly how they were fixed.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The cabinet itself</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-11-arrivals">Corrected six times since</a></p>
+        </li>
+        </ul>
+      </section>
+      <section class="qe-arrival-day">
+        <h3 id="d-2026-09-07"><time datetime="2026-09-07">7 September 2026</time> <a class="qe-anchor" href="#d-2026-09-07"><span class="qe-sr">Link to this day</span></a></h3>
+        <ul class="qe-arrivals">
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/on-being-ill">The Army of the Upright</a>
+          <p class="qe-arrival-sum">Virginia Woolf's On Being Ill, mounted as she left it in 1930. Illness missing from literature, a language that runs dry, and the sentence she revised into something stranger.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind">Reading</span> <span class="qe-arrival-no">No.&nbsp;1</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-09-patina">Corrected three times since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/coming-to-terms">Coming to Terms</a>
+          <p class="qe-arrival-sum">Ryan Boren on a lifetime of not fitting gender norms, a pair of pink-tinted glasses, and the two words — autigender and neuroqueer — that finally fit.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind">Essay</span> <span class="qe-arrival-no">No.&nbsp;2</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-09-grind">Corrected twice since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/">Queering Earth</a>
+          <p class="qe-arrival-sum">Reading the world through a queering lens — art, literature, poetry, politics, people, history — and asking what else any of it could have been. A Stimpunks Foundation and More Realms collaboration.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The front of the cabinet</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-11-faces">Corrected 11 times since</a></p>
+        </li>
+        <li class="qe-arrival">
+          <a class="qe-arrival-title" href="/design">How this site is made</a>
+          <p class="qe-arrival-sum">The design of Queering Earth: a Victorian herbarium sheet as the model, biophilic ground rules, the palette, the type, the drawings, and what we mean by specimen, sheet, plate, and label.</p>
+          <p class="qe-arrival-meta"><span class="qe-arrival-kind qe-arrival-kind--cabinet">The cabinet itself</span> <span class="qe-arrival-sep" aria-hidden="true">&middot;</span> <a class="qe-arrival-mend" href="/changelog#a-2026-09-09-patina">Corrected three times since</a></p>
+        </li>
+        </ul>
+      </section>
+    </div>
+    <!-- generated:arrivals:end -->
+
+  <h2 id="the-date">Where a date comes from <a class="qe-anchor" href="#the-date"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>A page&rsquo;s date here is <strong>the commit that first added its file</strong> &mdash; the honest answer to the question <em>when did this address start working</em>. It is measured from the repository rather than written down anywhere, so there is no second copy of it to rot.</p>
+
+  <p><a href="/changelog">The register</a> cannot answer the question, and that was worth finding out before trusting it. Its word <em>Mounted</em> means anything added <em>to</em> a page, not a page coming into being: <a href="/design">the colophon</a> carries five such entries, <a href="/two-cohabitating-modes">Two Cohabitating Modes</a> six, the front of the cabinet ten &mdash; and <a href="/privacy">the privacy page</a> carries none at all, because nothing was ever mounted on it. Taking the earliest would have dated several pages by accident and one not at all.</p>
+
+  <p><strong>So the measurement is checked against what we wrote down.</strong> Every sheet carries an accession stamp with a date in it, and twelve pages carry a provenance line with another. The generator compares all three for every page it lists and refuses to run if any two disagree &mdash; because the day a stamp and a commit stop agreeing, this site is about to say two different things about one day, and it is better to stop than to pick one. They all agree today; that was measured rather than assumed.</p>
+
+  <h2 id="not-the-register">What this page is not <a class="qe-anchor" href="#not-the-register"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>It is not <a href="/changelog">the register</a>, and the two are deliberately different documents. The register is kept by <em>accession</em> &mdash; a dated group holding a new sheet, the corrections that came with it, and the reasoning behind both &mdash; and it runs to some forty thousand words because the reasoning is the point of it. <strong>It answers <em>why</em>.</strong> If you want to know what we got wrong and how it was caught, that is the page, and its own index at the foot files every entry by which sheet it happened to.</p>
+
+  <p>This page answers <strong>what</strong>, in one screen or two. The only thing it borrows from the register is the correction count beside each page, and that count is read from the register&rsquo;s own filing rather than counted by hand: every entry there states which sheet it concerns, and this page adds them up.</p>
+
+  <p><strong>The two have a feed each</strong>, for the same reason they are two pages: <a href="/feed.xml">one carries the arrivals</a> and <a href="/register.xml">one carries the accessions</a>. They were a single feed until 11 September 2026, and merging them made the corrections &mdash; the thing this site most wants you to be able to audit &mdash; look like noise around the new sheets.</p>
+
+  <p>It is not <a href="/search">the finding aid</a> either. That searches inside the pages; this one only lists them.</p>
+
+</main>
+
+<footer class="qe-footer">
+  <p class="qe-footer-nav">
+    <a href="/">Queering Earth</a>
+    <a href="/the-plate">The plate</a>
+    <a href="/the-founding-papers">The founding papers</a>
+    <a href="/the-cabinet-itself">The cabinet itself</a>
+    <a href="/mission">Mission</a>
+    <a href="/manifesto">Manifesto</a>
+    <a href="/two-cohabitating-modes">Modes</a>
+    <a href="/design">Colophon</a>
+    <a href="/changelog">Register</a>
+    <a href="/whats-new" aria-current="page">What&rsquo;s new</a>
+    <a href="/ledger">Ledger</a>
+    <a href="/what-is-settled">Decisions</a>
+    <a href="/search">Search</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/how-we-quote">Quoting</a>
+  </p>
+
+  <p>A collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+
+  <p>Our words licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. The list above is generated from the pages it names, so take it and check it against them.</p>
+
+  <a class="qe-totop" href="#main">
+    <span class="qe-totop-label">Scroll to top</span>
+    <svg class="qe-botanical qe-totop-mark" viewBox="0 0 160 66" aria-hidden="true" focusable="false">
+      <path class="stem" style="--len:21" d="M22,64 C24,56 25,51 24,45"/>
+      <path class="stem" style="--len:24" d="M33,64 C32,55 30,49 28,43"/>
+      <path class="stem" style="--len:25" d="M44,64 C46,54 48,48 50,42"/>
+      <path class="stem" style="--len:52" d="M58,64 C60,46 67,32 77,21"/>
+      <path class="stem" style="--len:32" d="M68,64 C69,50 70,42 71,34"/>
+      <path class="stem" style="--len:44" d="M80,64 C79.4,48 80.6,34 80,22"/>
+      <path class="stem" style="--len:32" d="M92,64 C91,50 90,42 89,34"/>
+      <path class="stem" style="--len:52" d="M102,64 C100,46 93,32 83,21"/>
+      <path class="stem" style="--len:25" d="M116,64 C114,54 112,48 110,42"/>
+      <path class="stem" style="--len:24" d="M127,64 C128,55 130,49 132,43"/>
+      <path class="stem" style="--len:21" d="M138,64 C136,56 135,51 136,45"/>
+      <g class="sprout" style="--i:3">
+        <path class="head" d="M80,5 C77.4,11 77.4,18 80,25 C82.6,18 82.6,11 80,5 Z"/>
+      </g>
+    </svg>
+  </a>
+</footer>
+<script src="queering.js"></script>
+</body>
+</html>

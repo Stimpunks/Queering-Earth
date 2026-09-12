@@ -449,10 +449,75 @@ one afternoon — a generator emitting `puff-pale` the stylesheet did not know, 
 means source order decides, and the bush's caption printed moss-green because the print
 block sat above it.
 
+### There are two feeds, because there are two lists
+
+**`/feed.xml` is the pages as they arrive. `/register.xml` is the register's accessions.**
+Split on Ryan's call on 2026-09-11, when a single feed carried both and made the corrections
+— the thing this site most wants a reader able to audit — look like noise around the new
+sheets. They are two lists for two readers: somebody following the work wants to know a sheet
+was mounted, somebody checking us wants to know a label was corrected.
+
+**The pages took the old name**, so a reader already subscribed stays subscribed to a working
+feed and simply begins receiving pages, which is the list most people mean by *feed*. The
+register's is named for what the site already calls that page. **Every page advertises both**,
+the `Link` header carries both, and `check-metadata.mjs` fails on a page that names one and
+not the other.
+
+**`/whats-new` is the human twin of `/feed.xml`, and it is why the pair exists at all.** The
+feed had shipped since the agent-readiness pass with **no visible link to it anywhere on the
+site** — in every head as `rel=alternate` and in the `Link` header, so a client handed the URL
+could find it and a person could not. A feed with no human twin is a feed for machines.
+
+**`tools/make-whats-new.mjs` writes the page's listing AND `/feed.xml`, in one pass**, so the
+two cannot be made to disagree about what arrived or when. It runs **after `make-records` and
+before `make-search-index` and `make-markdown`**, because its listing sits inside the landmark
+those two read — checked in the wrong order, a stale listing reports as a stale `.md`, which is
+the symptom pointing at the wrong tool.
+
+**IT WRITES BETWEEN MARKERS, AND THAT IS A DELIBERATE DEPARTURE FROM THE PORT.** Star Stuff
+generates the whole of its equivalent page from a template inside the tool, and its own notes
+record the cost: a site-wide pass added a skip link to all 197 pages, the next build rebuilt
+that one from the template, and **the skip link was gone with the tool reporting a clean
+build.** A generated page does not conflict, it reverts. So this follows `make-records.mjs`
+— authored page, generated listing — and a sweep that touches every page keeps its edit here.
+**Edit inside the markers and the next run takes it back; edit outside them and it survives.**
+
+**THE REGISTER CANNOT DATE A PAGE.** `Mounted` there means anything added *to* a page, not a
+page coming into being: `/design` carries five such entries, `/two-cohabitating-modes` six,
+the home page ten, and **`/privacy` none at all**. Earliest-Mounted-wins would have dated
+several pages by accident and one not at all — measured before the tool was written, not
+assumed. So the date is `git log --diff-filter=A` on the current path, which is a
+**measurement** of the repository and not a second hand-kept copy of anything.
+
+**AND IT IS GATED AGAINST THE AUTHORED FACT.** Eleven sheets carry an accession stamp with a
+`datetime`; twelve pages carry a `.qe-provenance` line with another. The generator compares
+all three for every page and **throws** on a disagreement, because the day a stamp and a
+commit stop agreeing this site is about to say two different things about one day. All twelve
+agree today. Neither source alone could do this: the stamp cannot date `/privacy`, and git
+cannot know what we meant. **A new sheet whose stamp disagrees with its commit stops the
+build**, which is the point.
+
+**An uncommitted page is dated today, loudly, and corrects itself on the next run.** That is
+self-healing rather than an override table — a table would have to be right forever; this has
+to be right once, and every run says when it is guessing. Its first version used
+`toISOString()` and dated the page **12 September while it was still the 11th at the desk**.
+git's `%aI` is author-local and the register is written in local days.
+
+**Nothing on the page is typed.** Summaries are each page's own `meta description` — the
+sentence `/llms.txt` already publishes, so there is no third copy and no repetition of the
+gloss a collection page is forbidden to repeat. Kind and number come from the plate, which
+`check-card-order.mjs` already calls the authority for both. Correction counts are read from
+the register's own `data-sheet` filing.
+
+**The listing is stripped from the search index as chrome** (`.qe-arrival-list`), the
+`.qe-plate-grid` treatment at twenty-six: a searcher who types a sheet's subject wants the
+sheet, not the index that names it, and this one page carries a line about every page on the
+site. The page's own prose still indexes, at four records.
+
 ### The machine-readable layer is generated, and the credit line is authored
 
 `tools/make-markdown.mjs` writes **a `.md` beside every page, `/llms.txt`,
-`/llms-full.txt`, and `/feed.xml`** — all derived, none typed. Each `.md` comes from that
+`/llms-full.txt`, and `/register.xml`** — all derived, none typed. Each `.md` comes from that
 page's own `<main>`, the same landmark the SKS mirror reads, so the Markdown an agent
 fetches cannot disagree with the page. The feed comes from the register's own accessions.
 Run it by hand like `make-images.py`, commit the output, and `check-metadata.mjs` fails
@@ -492,7 +557,8 @@ generator would have overwritten its own source with a round-tripped copy, silen
 the first run. Verified with a temp directory before anything was written. **Check this
 before adding any page whose slug matches a repo-root file.**
 
-**Run the generators in order: `make-records` → `make-search-index` → `make-markdown`.**
+**Run the generators in order: `make-records` → `make-whats-new` → `make-search-index` →
+`make-markdown`.**
 The record pages are an input to the other two, and `search.html`'s manifest is an input
 to its own `.md`. `check-metadata.mjs` checks them in that order for the same reason —
 otherwise a stale record page reports as a stale `.md`, which is the symptom and points
@@ -1070,7 +1136,7 @@ what they came for.
 | list | holds | today |
 |---|---|---|
 | **The founding papers** | why this cabinet exists and what it is for — stance | `/mission`, `/manifesto`, `/two-cohabitating-modes` |
-| **The cabinet itself** | how it is made, recorded, searched, and what it knows about you | `/design`, `/changelog`, `/search`, `/ledger`, `/what-is-settled`, `/privacy` |
+| **The cabinet itself** | how it is made, recorded, searched, and what it knows about you | `/design`, `/changelog`, `/whats-new`, `/search`, `/ledger`, `/how-we-quote`, `/what-is-settled`, `/privacy` |
 
 Purpose above plumbing. **The split is precedented, not invented** — Star Stuff already
 divides *What this project is* from *How it is made, and how it is checked*, and our
@@ -1183,8 +1249,10 @@ second name for a set that this file refuses everywhere else. They sit directly 
 *Queering Earth*, which is the level they are: the home page, then the drawers, then the pages
 they collect.
 
-**THE ROW WRAPS NOW, AND A SINGLE LINE WAS NEVER THE INVARIANT.** Thirteen links give two lines
-at 1280 and 768, four at 375, six at 320. What has to hold is that no two padded targets on
+**THE ROW WRAPS NOW, AND A SINGLE LINE WAS NEVER THE INVARIANT.** Fifteen links give two lines
+at 1280 and 768, five at 375, six at 320 — remeasured on 2026-09-11 when `/whats-new` was added
+and the row went from fourteen to fifteen. No overlaps at any of the four widths, every target
+past 64 × 55px, `scrollWidth` equal to the viewport throughout. What has to hold is that no two padded targets on
 adjacent wrapped lines can touch, which is what `line-height: 2.9` is for. **Measured after,
 because nothing here measures a hit area**: no overlaps at any of the four widths, every target
 past 44px in both directions, `scrollWidth` equal to the viewport. **Remeasure when a link is
@@ -1309,7 +1377,7 @@ and the default path of every one of them is offline.
 Regenerate first, in this order — `check-metadata.mjs` fails on any of them being stale:
 
 ```bash
-node tools/make-records.mjs && node tools/make-search-index.mjs && node tools/make-markdown.mjs
+node tools/make-records.mjs && node tools/make-whats-new.mjs && node tools/make-search-index.mjs && node tools/make-markdown.mjs
 ```
 
 ```bash

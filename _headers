@@ -56,7 +56,7 @@
   # rel=describedby on /llms.txt is llms.txt v2's one hard requirement: without it an
   # agent is back to guessing the root path. Per-page `rel=alternate` for the .md
   # source lives in each page's <head>, because it varies by path and this does not.
-  Link: </llms.txt>; rel="describedby"; type="text/markdown", </sitemap.xml>; rel="sitemap"; type="application/xml", </llms-full.txt>; rel="alternate"; type="text/markdown"; title="Full text", </feed.xml>; rel="alternate"; type="application/rss+xml"; title="The accession register", <https://creativecommons.org/licenses/by-sa/4.0/>; rel="license", </.well-known/agent-skills/index.json>; rel="agent-skills"; type="application/json"
+  Link: </llms.txt>; rel="describedby"; type="text/markdown", </sitemap.xml>; rel="sitemap"; type="application/xml", </llms-full.txt>; rel="alternate"; type="text/markdown"; title="Full text", </feed.xml>; rel="alternate"; type="application/rss+xml"; title="What has arrived", </register.xml>; rel="alternate"; type="application/rss+xml"; title="The accession register", <https://creativecommons.org/licenses/by-sa/4.0/>; rel="license", </.well-known/agent-skills/index.json>; rel="agent-skills"; type="application/json"
 
   # TDM reservation (RFC-adjacent, W3C TDMRep). 0 means: mine it freely.
   # The header rather than /.well-known/tdmrep.json because the answer does not vary
@@ -217,7 +217,14 @@
 /robots.txt
   Cache-Control: public, max-age=600, stale-if-error=604800
 
+# TWO FEEDS, TWO LISTS. /feed.xml is the pages as they arrive; /register.xml is the
+# register's own accessions, corrections included. Same policy: both are fetched by a
+# reader's client long after any page has rendered, so neither can contradict markup
+# that is already on screen, and both take stale-if-error rather than must-revalidate.
 /feed.xml
+  Cache-Control: public, max-age=600, stale-if-error=604800
+
+/register.xml
   Cache-Control: public, max-age=600, stale-if-error=604800
 
 # Agent Skills discovery. The spec asks for CORS wide open on both files so a

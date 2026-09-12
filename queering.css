@@ -5528,3 +5528,170 @@ html.plain .qe-manifest-head { font-variation-settings: normal; }
   .qe-manifest-head, .qe-manifest-sections a { color: #000; }
   .qe-manifest-group, .qe-manifest-kind, .qe-manifest-no, .qe-manifest-sub { color: #222; }
 }
+
+/* ─────────────────────────────────────────────── what has arrived
+ *
+ * /whats-new: the cabinet by date. Every other index here is in the order
+ * somebody chose; this one is in the order things happened, which is the one
+ * question a returning reader has and the one nothing here answered.
+ *
+ * THE LISTING IS BARE, AND THAT IS THE THREE-SURFACE RULE APPLIED HONESTLY.
+ * It is not a mounted object and it is not housekeeping — it is our own index of
+ * our own pages, which is the default tier: space only, no fill, no box. Fifteen
+ * components once shared a card and a 1px rule, so a specimen and a listing were
+ * the same thing to the eye; a listing of twenty-six pages in cards would be that
+ * fault at scale, and would card the four pages the plate deliberately does not.
+ *
+ * ONE HAIRLINE PER ENTRY, ON THE LEFT, IN --qe-rule. The entries need grouping
+ * under their day and nothing else, and a rule is the cheapest thing that does
+ * it. THE COLOUR GOES ON THE RULE AND NEVER ON THE GLYPH — the register paid for
+ * that lesson with entry bullets at 2.15:1, and this file has repeated it twice
+ * since. Every word below is --qe-ink or --qe-moss, both past 7:1 in both grounds.
+ *
+ * THE SUBSCRIBE STRIP IS RULED OFF, the third tier, for the reason
+ * .qe-register-note is: it is the cabinet talking about how to follow the
+ * cabinet, which is housekeeping. Hairlines above and below, no fill.
+ */
+
+.qe-subscribe {
+  margin: var(--qe-space-4) 0 var(--qe-space-5);
+  padding: var(--qe-space-3) 0;
+  border-top: 1px solid var(--qe-rule);
+  border-bottom: 1px solid var(--qe-rule);
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+.qe-subscribe-label {
+  display: block;
+  margin: 0 0 0.6rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+}
+.qe-subscribe-text { margin: 0; }
+
+/* The day. A date is not a section of an argument, so these are h3s under one
+   h2 — which also keeps five dates out of the contents list and the rail, where
+   the page's three real sections belong. The id is derived and that is safe
+   here for once: it is a slug of a DATE, not of a heading somebody may reword,
+   so it cannot go stale the way a title slug does. */
+.qe-arrival-list { margin: var(--qe-space-4) 0 0; }
+
+.qe-arrival-day + .qe-arrival-day { margin-top: var(--qe-space-5); }
+
+.qe-arrival-day h3 {
+  margin: 0 0 var(--qe-space-2);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--qe-rule);
+  font-family: var(--qe-display);
+  font-size: 1.06rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--qe-moss);
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+}
+html.plain .qe-arrival-day h3 { font-variation-settings: normal; font-weight: 700; }
+
+.qe-arrivals {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Net of the title's own padding, the way .qe-furniture nets its descriptions:
+   otherwise every entry sits 11px lower than the scale says and a deviation
+   nobody authored makes the authored ones mean less. */
+.qe-arrival {
+  margin: 0 0 calc(var(--qe-space-3) - 0.7rem);
+  padding-left: var(--qe-space-2);
+  border-left: 1px solid var(--qe-rule);
+}
+.qe-arrival:last-child { margin-bottom: 0; }
+
+/* THE TARGET IS THE LINE, NOT THE LETTERS, exactly as in .qe-furniture: a title
+   that is entirely a link is not an inline link inside a sentence, so WCAG
+   2.5.8's inline exception does not cover it. The padding grows into the gap
+   above the summary rather than pushing entries apart, and the next target is a
+   whole summary and a meta line later, so no two can touch.
+
+   0.7rem IS .qe-furniture's ALREADY-MEASURED NUMBER AT THIS EXACT TYPE SIZE, and
+   0.62rem was the first draft: 1.14rem at 1.25 is a 22.8px line, so 0.62 either
+   side gives 42.6px and 0.7 gives 45.2. Measured after and not before, which is
+   the only reason the 42.6 was caught — this file has shipped a target at 31.1px
+   under a comment claiming 44 once already. MEASURE THE RENDERED BOX. */
+.qe-arrival-title {
+  display: inline-block;
+  padding: 0.7rem 0;
+  font-family: var(--qe-display);
+  font-size: 1.14rem;
+  line-height: 1.25;
+  font-weight: 600;
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+}
+html.plain .qe-arrival-title { font-variation-settings: normal; font-weight: 700; }
+
+.qe-arrival-sum {
+  margin: 0 0 0.3rem;
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--qe-ink);
+}
+
+.qe-arrival-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--qe-moss);
+}
+
+.qe-arrival-kind {
+  font-size: 0.74rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--qe-moss);
+}
+
+.qe-arrival-no {
+  font-family: var(--qe-display);
+  font-size: 0.85rem;
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+  color: var(--qe-moss);
+  white-space: nowrap;
+}
+html.plain .qe-arrival-no { font-variation-settings: normal; }
+
+ /* THE SEPARATOR IS INK, NOT A RULE, AND THE FIRST DRAFT GOT THAT BACKWARDS. It
+   shipped as --qe-rule and check-contrast.mjs reported 1.81:1 twenty-six times on
+   this page alone. "The colour goes on the rule and never on the glyph" cuts both
+   ways: a rule token on a glyph is the same fault as an accent on a letter, and a
+   middot IS a glyph however small and however aria-hidden. It takes the meta
+   line's own moss, so it is the same ink as the words either side of it, which is
+   all a separator was ever supposed to be. */
+.qe-arrival-sep { padding: 0 0.2rem; }
+
+/* The mend reads in rust because it is a link, like every other link here; the
+   clean state is moss and is not a link, because there is nowhere for it to go.
+   Neither of them is an accent spent on a letter. */
+.qe-arrival-mend { color: var(--qe-rust); }
+.qe-arrival-mend--clean { color: var(--qe-moss); }
+
+@media print {
+  /* The listing stays on paper for the reason .qe-furniture does: it names other
+     pages by title, and a printed sheet that says what else is in the cabinet is
+     more use than one that pretends this is the whole of it.
+
+     THE SUBSCRIBE STRIP STAYS TOO, which was the second answer. Hiding it was the
+     first, on the grounds that nothing can be pressed on paper — but the strip is
+     the only place on this site that says out loud that there are feeds at all,
+     and a printed page that silently drops that says the site has none. It reads
+     as a sentence rather than a control, which is what it already was. */
+  .qe-subscribe { border-color: #999; }
+  .qe-subscribe-label { color: #222; }
+  .qe-arrival-day h3 { break-after: avoid; color: #222; }
+  .qe-arrival { break-inside: avoid; }
+  .qe-arrival-title { color: #000; }
+  .qe-arrival-sum { color: #222; }
+  .qe-arrival-meta, .qe-arrival-kind, .qe-arrival-no,
+  .qe-arrival-mend, .qe-arrival-mend--clean { color: #222; }
+}

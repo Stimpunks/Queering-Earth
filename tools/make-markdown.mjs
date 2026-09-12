@@ -18,7 +18,7 @@
  * THAT GATE IS `check-metadata.mjs`, NOT a `check-markdown.mjs`. This comment named the
  * latter until 2026-09-09; no such file was ever written, because the check was built
  * inside the metadata gate instead — where it belongs, since staleness here is one case
- * of the same question that gate already asks about llms.txt, llms-full.txt and feed.xml.
+ * of the same question that gate already asks about llms.txt, llms-full.txt and the feeds.
  * It regenerates into memory and compares, so the test is exact rather than an mtime
  * guess, and it separately asserts that every page still advertises its sibling with
  * rel=alternate. Both were verified firing on 2026-09-09.
@@ -422,11 +422,23 @@ for (const [heading, slugs] of GROUPS)
   }
 await writeFile(join(ROOT, 'llms-full.txt'), full);
 
-/* ── /feed.xml ────────────────────────────────────────────────────────────────
+/* ── /register.xml ──────────────────────────────────────────────────
  * The spec's machine-readable-formats item wants a feed, and the register already IS
  * one: an accession is a dated group with a headline and a permanent address. Derived
  * from changelog.html, so it cannot disagree with the register it summarises. Items
- * are accessions, not entries — grouping by accession is the register's own unit. */
+ * are accessions, not entries — grouping by accession is the register's own unit.
+ *
+ * IT WAS `/feed.xml` UNTIL 2026-09-11, AND THE SPLIT IS THE POINT OF THE RENAME. One
+ * feed carrying both the new sheets and the register's housekeeping made the sheets
+ * hard to find inside a stream of corrections and CSS notes — and made the corrections,
+ * which are the thing this site most wants a reader able to audit, look like noise
+ * around the sheets. They are two lists for two readers. `/feed.xml` is now the pages,
+ * written by make-whats-new.mjs out of the same pass that writes /whats-new; this one
+ * keeps the register, under the name the site already uses for that page.
+ *
+ * ANY READER SUBSCRIBED TO THE OLD FEED IS STILL SUBSCRIBED TO A WORKING ONE and simply
+ * starts receiving pages instead of accessions. That is why the pages took the old name
+ * rather than the other way round: it is the list most subscribers meant by `feed`. */
 const MONTHS = ['January','February','March','April','May','June','July','August',
                 'September','October','November','December'];
 const registerHtml = await readFile(join(ROOT, 'changelog.html'), 'utf8');
@@ -461,8 +473,8 @@ const feed = `<?xml version="1.0" encoding="UTF-8"?>
   <channel>
     <title>Queering Earth \u2014 the accession register</title>
     <link>${ORIGIN}/changelog</link>
-    <atom:link href="${ORIGIN}/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Every sheet as it was mounted, every plate that came off again, and every label we corrected. Generated from the register itself by tools/make-markdown.mjs.</description>
+    <atom:link href="${ORIGIN}/register.xml" rel="self" type="application/rss+xml"/>
+    <description>Every sheet as it was mounted, every plate that came off again, and every label we corrected \u2014 the register's own accessions, reasoning included. New pages alone are a separate feed at ${ORIGIN}/feed.xml. Generated from the register itself by tools/make-markdown.mjs.</description>
     <language>en</language>
     <copyright>CC BY-SA 4.0</copyright>
     <lastBuildDate>${(items[0]?.date ?? new Date()).toUTCString()}</lastBuildDate>
@@ -476,12 +488,12 @@ ${items.map((it) => `    <item>
   </channel>
 </rss>
 `;
-await writeFile(join(ROOT, 'feed.xml'), feed);
+await writeFile(join(ROOT, 'register.xml'), feed);
 
 const kb = (s) => `${(Buffer.byteLength(s) / 1024).toFixed(1)} KB`;
 console.log(`\n  ${pages.length} page(s) -> Markdown\n`);
 for (const p of pages) console.log(`  ${(p.slug + '.md').padEnd(30)} ${kb(p.markdown).padStart(9)}`);
 console.log(`\n  ${'llms.txt'.padEnd(30)} ${kb(llms).padStart(9)}`);
 console.log(`  ${'llms-full.txt'.padEnd(30)} ${kb(full).padStart(9)}`);
-console.log(`  ${'feed.xml'.padEnd(30)} ${kb(feed).padStart(9)}  ${items.length} accession(s)`);
-console.log('\nWrote the Markdown siblings, both index files and the feed. Commit them.');
+console.log(`  ${'register.xml'.padEnd(30)} ${kb(feed).padStart(9)}  ${items.length} accession(s)`);
+console.log('\nWrote the Markdown siblings, both index files and the register feed. Commit them.');

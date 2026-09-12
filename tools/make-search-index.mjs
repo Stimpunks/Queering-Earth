@@ -92,7 +92,22 @@ const SKIP_CLASS = new Set(['qe-anchor', 'qe-sr', 'qe-contents', 'qe-sheet-index
      number is written out across the register's own entries. A stamp is the sheet
      restating its accession in the object's own form, not a new fact to find. It
      stays in the Markdown sibling, where there is no ranking to crowd. */
-  'qe-stamp']);
+  'qe-stamp',
+  /* /whats-new's LISTING IS THE PLATE GRID'S PROBLEM AT TWENTY-SIX, and it is skipped
+     for the same reason that one is: it is a list of OTHER pages, and a searcher who
+     types a sheet's subject wants the sheet, not the index that names it. Indexed, the
+     finding aid would return /whats-new alongside — or above — almost every page on the
+     site, because this one page carries a line about every one of them.
+
+     NOTHING IS LOST. Each summary here is that page's own meta description, which is
+     already what /llms.txt publishes and is one hop from the title beside it; the dates
+     are in the register and on the sheets' own provenance lines. The page's own prose —
+     what it is, where a date comes from, what it is not — sits outside this container
+     and IS indexed, which is the part of the page that is actually about anything.
+
+     The class is specific to this listing on purpose, so it can never start stripping
+     some future component that happens to be near it. */
+  'qe-arrival-list']);
 
 /* Anything that separates words. Everything else is inline and must not, or
  * "port</em><em>Done" becomes one token. */

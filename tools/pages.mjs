@@ -29,7 +29,7 @@ export const GROUPS = [
                  'gloomy-sunflowers']],
   ['The founding papers', ['the-founding-papers', 'mission', 'manifesto', 'two-cohabitating-modes']],
   ['The cabinet itself', ['index', 'the-cabinet-itself',
-                          'design', 'changelog', 'search', 'ledger', 'how-we-quote',
+                          'design', 'changelog', 'whats-new', 'search', 'ledger', 'how-we-quote',
                           'what-is-settled', 'privacy']],
 ];
 

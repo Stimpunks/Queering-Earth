@@ -333,6 +333,11 @@ og_card(REPO/"images"/"og-ledger.png", "The attribution ledger", "The cabinet it
         "What we quoted, whose it is, and the day somebody read the primary.", RUST)
 og_card(REPO/"images"/"og-settled.png", "What is settled, and what is open", "The cabinet itself",
         "The reasoning, kept so the same question is not re-litigated in three weeks.", MOSS)
+# LICHEN is the register's own token for the routine event of MOUNTING, which is
+# exactly what every line on this page is. It is shared with the finding aid's card
+# and that is fine — an accent is not an identifier here.
+og_card(REPO/"images"/"og-whats-new.png", "What has arrived, and when", "The cabinet itself",
+        "The cabinet by date rather than by drawer. Newest first.", LICHEN)
 og_card(REPO/"images"/"og-how-we-quote.png", "What we quote, and why we may", "The cabinet itself",
         "Quote what you analyse. Analyse what you quote.", CORAL)
 og_card(REPO/"images"/"og-privacy.png", "What this site knows about you", "Privacy",

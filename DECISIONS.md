@@ -7,6 +7,19 @@ re-litigated in three weeks.
 
 ## Open
 
+### Nothing balances tags, and an unclosed `section` cost the feed an accession for a day (2026-09-11)
+
+Found on 2026-09-11 by counting the new arrivals feed's items against the register page: **58 accessions on the page, 57 in the feed.** The Bewick accession of 10 September was missing its closing `section` and the two `div`s inside it, so every accession below it nested one level deeper and the file ended one tag short.
+
+**Nothing looked wrong, and that is the whole of the problem.** A browser closes the tags itself, so `/changelog` rendered correctly the entire time. `check-markup.mjs` passed it — it reads parser-rewriting markup, duplicate ids and the single landmark, and does not balance containers. What it cost was silent: `make-markdown.mjs` matches an accession from its opening tag to the first `</section>` it finds, so the unclosed one **swallowed the next accession whole**, and the entry about every poem arriving in the Markdown mirror as prose had never been in the feed at all.
+
+**Fixed. The question left open is whether a gate should exist for it.** Arguments both ways, and the house bar is that a check which cannot fail is a check nobody reads:
+
+- **For.** This is the third generator on this site that parses HTML with regexes — the feed, the search index, the Markdown mirror — and all three assume balanced containers. It failed silently, in the direction this site cares about most, and it was caught only by a count that happened to exist because the feed was being rebuilt. It would not have been caught otherwise.
+- **Against.** One fault in fifty-eight accessions, and `check-markup.mjs` already tokenises every page — a depth counter there is a dozen lines rather than a tenth gate, which would keep the count at nine and put the check where the tokeniser already is.
+
+**The likely answer is the second**, but it is a change to a gate rather than a new one and it has not been made or measured. Star Stuff's `check-classes` is still the standing next port; this would be ahead of it if it lands.
+
 ### The empathy study is a 2024 article with a 2023 DOI, and the accepted manuscript is not quotable (2026-09-10)
 
 The paper the proposed Sheet No. 10 rests its fairest reading of Schalk on. Ryan put the
@@ -656,6 +669,34 @@ sentences. Neither changes the manifesto's argument, which is why it survived th
 
 
 ## Settled
+
+### /whats-new is the cabinet by date, and the one feed became two (2026-09-11)
+
+Ryan asked for the pair Star Stuff has kept from the start — a What's New page and an RSS feed. Half of it already existed and could not be reached; the other half turned out to be two things.
+
+**The feed was already there and nothing linked to it.** `/feed.xml` has shipped since the agent-readiness pass, advertised in every page's head as `rel=alternate` and on every response as a `Link` header — so a client handed the URL could find it and **a person could not.** There was no visible, pressable link to it anywhere on the site. That is the actual gap Star Stuff's page fills: `whats-new.html` and `feed.xml` there are one list in two formats, for people and for machines.
+
+**One feed became two, on Ryan's call, mid-build.** The old feed carried this register's *accessions* — new sheets, corrections and housekeeping in one stream. Split: **`/feed.xml` is the pages as they arrive**, and **`/register.xml` is the register**. They are two lists for two readers — somebody following the work wants to know a sheet was mounted, somebody auditing us wants to know a label was corrected — and merging them made the second invisible inside the first, on the site that least wants its corrections buried. **The pages took the old name**, so anyone already subscribed stays subscribed to a working feed and simply begins receiving pages, which is the list most people mean by *feed*; the register's is named for what the site already calls that page.
+
+**The page and its feed come out of ONE tool and one pass**, so they cannot be made to disagree about what arrived or when. `make-markdown.mjs` keeps the register feed, because it already parses the register.
+
+**The listing is written between markers, which is a deliberate departure from the port.** Star Stuff generates the whole of its page from a template inside the tool, and its own notes record the cost: a site-wide pass added a skip link to all 197 pages, the next build rebuilt that one from the template, and **the skip link was gone with the tool reporting a clean build.** A generated page does not conflict, it reverts. So this follows `make-records.mjs` instead — authored page, generated listing — and a sweep that touches every page keeps its edit here.
+
+**THE REGISTER CANNOT DATE A PAGE, AND THAT WAS MEASURED RATHER THAN ASSUMED.** The obvious source was this site's own register, and it does not work: **`Mounted` means anything added *to* a page**, not a page coming into being. `/design` carries five such entries, `/two-cohabitating-modes` six, the home page ten — and **`/privacy` carries none at all**, because nothing was ever mounted on it. Earliest-Mounted-wins would have dated several pages by accident and one not at all.
+
+So the date is `git log --diff-filter=A` on the current path — a *measurement* of the repository, with the same standing as `check-width.mjs` measuring a rendered box, and not a second hand-kept copy of an authored fact. **And it is gated against the authored fact wherever one exists**: eleven sheets carry an accession stamp with a `datetime` and twelve pages carry a provenance line with another, the generator compares all three for every page, and it **throws** on a disagreement. All twelve agree today — checked before a line of the tool was written. Neither source alone could do this: the stamp cannot date `/privacy`, and git cannot know what we meant.
+
+**The bootstrap is self-healing rather than an override table.** A page being written has no commit that added it, so an uncommitted page is dated today, loudly, and the next run after the commit takes git's answer — a hand-kept date table would have had to be right forever; this has to be right once, and says on every run when it is guessing.
+
+**Three things were found by running it rather than by reading it**, which is this house's own rule about new gates arriving three times in one build:
+
+- the fallback used `toISOString()` and dated the page **12 September while it was still the 11th at the desk**, a day ahead of the accession that mounts it. git's `%aI` is author-local and the register is written in local days;
+- the separator in the meta line shipped as `--qe-rule` and `check-contrast.mjs` reported **1.81:1, twenty-six times on one page**. *The colour goes on the rule and never on the glyph* cuts both ways: a rule token on a glyph is the same fault as an accent on a letter, and a middot is a glyph however small and however `aria-hidden`;
+- the title hit area shipped at **42.6px under a comment claiming 44**, which is the 31.1px failure recorded in `CLAUDE.md` repeating itself. `.qe-furniture` had already measured the answer at this exact type size — `0.7rem`, giving 45.2px. **Measure the rendered box.**
+
+**The listing is stripped from the search index as chrome**, the `.qe-plate-grid` treatment at twenty-six: a searcher who types a sheet's subject wants the sheet, not the index that names it, and this one page carries a line about every page on the site. Nothing is lost — each summary is that page's own `meta description`, which `/llms.txt` already publishes. The page's own prose stays indexed, at four records.
+
+**The footer row went from 14 links to 15 and was remeasured**, because nothing in `tools/` measures a hit area: 6 lines at 320, 5 at 375, 2 at 768 and 1280; no overlaps at any width; every target at least 64.7 × 55.7px; `scrollWidth` equal to the viewport throughout.
 
 ### Sporting Grotesque is set smaller, and the width gate now sweeps all nine faces (2026-09-11)
 

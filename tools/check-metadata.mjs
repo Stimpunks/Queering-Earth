@@ -88,7 +88,7 @@ const files = (await readdir(ROOT)).filter((f) => f.endsWith('.html') && !NOT_CO
  * files, run it, compare, and restore anything it changed — then report. */
 const GENERATED = [
   ...files.map((f) => f.replace(/\.html$/, '.md')),
-  'llms.txt', 'llms-full.txt', 'feed.xml',
+  'llms.txt', 'llms-full.txt', 'register.xml',
 ];
 const { writeFile } = await import('node:fs/promises');
 
@@ -118,6 +118,13 @@ async function freshness(tool, outputs) {
  * Checked in the other order, a stale record page reports as a stale .md — the symptom
  * rather than the cause, pointing at the wrong tool. */
 await freshness('make-records.mjs', ['ledger.html', 'what-is-settled.html']);
+
+/* THEN /whats-new, FOR THE SAME REASON AND ONE MORE. Its listing is written between
+ * markers INSIDE the landmark, so make-markdown.mjs derives whats-new.md from whatever
+ * this tool last wrote — a stale listing would report as a stale .md, which points at
+ * the wrong tool. It writes /feed.xml in the same pass, because the page and the feed
+ * are one list in two formats and must come out of one read of the pages. */
+await freshness('make-whats-new.mjs', ['whats-new.html', 'feed.xml']);
 
 await freshness('make-markdown.mjs', GENERATED);
 
@@ -181,8 +188,16 @@ for (const f of files) {
   if (!/<link rel="describedby" href="\/llms\.txt"/.test(html))
     fail('discovery', `${f} has no rel=describedby to /llms.txt — llms.txt v2's one hard requirement`);
 
-  if (!/<link rel="alternate" href="\/feed\.xml" type="application\/rss\+xml"/.test(html))
-    fail('discovery', `${f} does not link /feed.xml — the spec asks for the feed in <head>, not only in a Link header`);
+  /* BOTH FEEDS, since 2026-09-11. They are two lists for two readers — the pages as
+   * they arrive, and the register's accessions including every correction — and a page
+   * that advertises one of them hides the other from every reader who subscribes from
+   * the browser rather than by typing a path. The spec asks for the feed in the head
+   * and not only in a Link header; there are two, so there are two links. */
+  for (const feed of ['/feed.xml', '/register.xml']) {
+    const re = new RegExp(`<link rel="alternate" href="${feed.replace('.', '\\.')}" type="application/rss\\+xml"`);
+    if (!re.test(html))
+      fail('discovery', `${f} does not link ${feed} — every page advertises both feeds`);
+  }
 
   const alt = grab(/<link rel="alternate" href="([^"]+)" type="text\/markdown"/);
   const wantMd = canonical?.replace(/\/$/, '/index') + '.md';

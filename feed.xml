@@ -1,563 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Queering Earth — the accession register</title>
-    <link>https://queering.earth/changelog</link>
+    <title>Queering Earth — what has arrived</title>
+    <link>https://queering.earth/whats-new</link>
     <atom:link href="https://queering.earth/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Every sheet as it was mounted, every plate that came off again, and every label we corrected. Generated from the register itself by tools/make-markdown.mjs.</description>
+    <description>Every page in the cabinet as it arrives — the sheets and the pages that are not sheets, newest first. The register's own accessions, including every correction, are a separate feed at https://queering.earth/register.xml. Generated from the pages themselves by tools/make-whats-new.mjs.</description>
     <language>en</language>
     <copyright>CC BY-SA 4.0</copyright>
     <lastBuildDate>Fri, 11 Sep 2026 12:00:00 GMT</lastBuildDate>
     <item>
-      <title>Two van Goghs, two recordings, and a privacy page that had a number in it</title>
-      <link>https://queering.earth/changelog#a-2026-09-11-plates</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-plates</guid>
+      <title>The plate</title>
+      <link>https://queering.earth/the-plate</link>
+      <guid isPermaLink="true">https://queering.earth/the-plate</guid>
       <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Two paintings, and two recordings that fetch nothing until pressed
-Label corrected: The privacy page stops counting
-Cabinet: No lyric was quoted, for two different reasons</description>
+      <category>The plate</category>
+      <description>Every sheet on queering.earth in accession order, with what a sheet is, what a reading, an essay and a wall each mean, and what the numbers do and do not say.</description>
     </item>
     <item>
-      <title>Sheet No. 11, and four biographies that would not say what they were supposed to</title>
-      <link>https://queering.earth/changelog#a-2026-09-11-sunflowers</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-sunflowers</guid>
+      <title>My Gloomy Sunflowers</title>
+      <link>https://queering.earth/gloomy-sunflowers</link>
+      <guid isPermaLink="true">https://queering.earth/gloomy-sunflowers</guid>
       <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: My Gloomy Sunflowers
-Re-determined: Galveston was 1964, the diagnosis was not manic depression, and it was the Army
-Label corrected: Which ever, two words</description>
+      <category>Essay · No. 11</category>
+      <description>Townes Van Zandt, Vincent van Gogh, Sylvia Plath and Kurt Cobain, read against the myth that made them: four records in which the work was not the symptom but the thing that was going well.</description>
     </item>
     <item>
-      <title>One typeface was too wide for the masthead, and the gate had been rendering one of ten states</title>
-      <link>https://queering.earth/changelog#a-2026-09-11-faces</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-faces</guid>
+      <title>The founding papers</title>
+      <link>https://queering.earth/the-founding-papers</link>
+      <guid isPermaLink="true">https://queering.earth/the-founding-papers</guid>
       <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: Sporting Grotesque is set smaller, and the number is a measurement whose expected answer was wrong
-Cabinet: The width gate renders ten states now, and reads the face list from the table that owns it</description>
+      <category>The founding papers</category>
+      <description>The founding papers of queering.earth: the aims, the manifesto, and the paper about the shelf — what each is for, why none of them is a sheet, and which one is signed.</description>
     </item>
     <item>
-      <title>The masthead had been 34px right of centre since the day it was drawn</title>
-      <link>https://queering.earth/changelog#a-2026-09-11-centre</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-centre</guid>
+      <title>The cabinet itself</title>
+      <link>https://queering.earth/the-cabinet-itself</link>
+      <guid isPermaLink="true">https://queering.earth/the-cabinet-itself</guid>
       <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: A centring rule that stops working when the sign changes</description>
+      <category>The cabinet itself</category>
+      <description>The working pages of queering.earth: the colophon, the register, the ledger, the decisions, the finding aid and the privacy page — what each is for, and what the build checks about them.</description>
     </item>
     <item>
-      <title>A word one syllable from the right one, and it belonged to Bowlby</title>
-      <link>https://queering.earth/changelog#a-2026-09-11-monotropism</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-monotropism</guid>
+      <title>What has arrived, and when</title>
+      <link>https://queering.earth/whats-new</link>
+      <guid isPermaLink="true">https://queering.earth/whats-new</guid>
       <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: Monotropism is Dinah Murray’s; monotropy is John Bowlby’s, and they are not the same word shortened</description>
+      <category>The cabinet itself</category>
+      <description>Every page in the cabinet, newest first, with the day it arrived and how often it has been corrected since. The register says why something changed; this page says what is here. Subscribe by feed, or read the register at length.</description>
     </item>
     <item>
-      <title>The masthead read Queering.Ear / th, and the measurement that certified it was of the wrong thing</title>
-      <link>https://queering.earth/changelog#a-2026-09-11-wordmark</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-wordmark</guid>
+      <title>What we quote, and why we may</title>
+      <link>https://queering.earth/how-we-quote</link>
+      <guid isPermaLink="true">https://queering.earth/how-we-quote</guid>
       <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: The rule was right and the scope was wrong</description>
+      <category>The cabinet itself</category>
+      <description>This site’s fair-use position, written down: what we quote from work still in copyright, how much of it, why we think we may, and what to do if you hold the rights and disagree.</description>
     </item>
     <item>
-      <title>Three pages had been scrolling sideways since the day each was mounted, and a ninth gate to say so</title>
-      <link>https://queering.earth/changelog#a-2026-09-11-width</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-width</guid>
-      <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: A string with no break opportunity breaks the page instead
-Label corrected: The plate’s frame bled into a gutter that paper does not have
-Cabinet: A ninth gate, which could have failed on three pages the hour before it was written</description>
-    </item>
-    <item>
-      <title>A fair-use position, written down before the sheet that needs it</title>
-      <link>https://queering.earth/changelog#a-2026-09-11-quoting</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-quoting</guid>
-      <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: What we quote, and why we may
-Cabinet: A seventh page in the drawer, and a fourteenth link in the row</description>
-    </item>
-    <item>
-      <title>Three drawers, a breadcrumb on every sheet, and a panel that moved when a control was added</title>
-      <link>https://queering.earth/changelog#a-2026-09-11-drawers</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-drawers</guid>
-      <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Three collection pages, and not one of them repeats a sentence the home page already carries
-Mounted: The breadcrumb was already here, one crumb long, on twelve pages
-Label corrected: The readings drawer answered to three names, and two of them were older than the drawer
-Cabinet: The three drawers joined the footer row, and their labels are the one place a short label is not allowed
-Label corrected: The home page said eight sheets, and the plate has held ten since 10 September
-Cabinet: A panel hung off its own control moves when a control is added, and the one that moved was the old one</description>
-    </item>
-    <item>
-      <title>A masthead for the two modes, and the width a masthead is actually reviewed at</title>
-      <link>https://queering.earth/changelog#a-2026-09-11-tropisms</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-11-tropisms</guid>
-      <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: One flower against many, with the two flower areas equal by computation
-Label corrected: A masthead is reviewed at 448px, not at the 34rem measure — a number this register already held
-Cabinet: Three more refused drawings, one of them this file’s own recorded mistake repeated</description>
-    </item>
-    <item>
-      <title>Two Bewick cuts from 1792, and a masthead refused twice</title>
-      <link>https://queering.earth/changelog#a-2026-09-10-bewick</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-10-bewick</guid>
+      <title>The Five Unmistakable Marks</title>
+      <link>https://queering.earth/five-unmistakable-marks</link>
+      <guid isPermaLink="true">https://queering.earth/five-unmistakable-marks</guid>
       <pubDate>Thu, 10 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Thomas Bewick engraved both animals for one 1792 volume, and his prose is as good as his cuts
-Cabinet: A blown-up tray mark is not a masthead, and that is favicon.svg’s rule running the other way
-Label corrected: A verse line is the one span on this site that is not a bare wrapper
-Mounted: The hard break is a backslash, because two trailing spaces would have been erased after they were written</description>
+      <category>Reading · No. 9</category>
+      <description>Lewis Carroll's Snark, a creature named before anybody saw it; Deleuze's empty square; and Kassiane Asasumasu, who coined neurodivergent and had to say so out loud.</description>
     </item>
     <item>
-      <title>A third founding paper, on the fox and the hedgehog, and an unlabelled door in the top bar</title>
-      <link>https://queering.earth/changelog#a-2026-09-10-modes</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-10-modes</guid>
+      <title>Other People Who Have It</title>
+      <link>https://queering.earth/other-people-who-have-it</link>
+      <guid isPermaLink="true">https://queering.earth/other-people-who-have-it</guid>
       <pubDate>Thu, 10 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Two children’s poems that end in the same place, which is the argument
-Mounted: The anthology has no fox, so the fox came from the oldest nursery collection in English
-Mounted: The 1922 edition prints runts and digs, and we went to the letterforms to be sure
-Label corrected: A journal credits a review to the author of the book it reviews, and dates a poet two centuries wrong
-Mounted: The fox-and-hedgehog mark, and why the two of them do not face each other
-Cabinet: Found and deliberately not fixed: the Markdown mirror flattens every poem on the site into prose
-Cabinet: The controls tray wraps, because a fifth control would have scrolled the body sideways</description>
+      <category>Reading · No. 10</category>
+      <description>Octavia Butler's hyperempathy, which Sami Schalk reads as a disability with no real-world equivalent, and the Autistic people who have been describing it under the same name for years.</description>
     </item>
     <item>
-      <title>One sentence of Max Alexander pasted up as a broadside, and the rule that a component mixes type roles and never families</title>
-      <link>https://queering.earth/changelog#a-2026-09-10-broadside</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-10-broadside</guid>
+      <title>Two Cohabitating Modes</title>
+      <link>https://queering.earth/two-cohabitating-modes</link>
+      <guid isPermaLink="true">https://queering.earth/two-cohabitating-modes</guid>
       <pubDate>Thu, 10 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: A broadside: one sentence, six lines, six sizes, and not a word of it altered
-Mounted: A component may mix the two type roles; it may never name a family
-Mounted: Plain view keeps the composition and drops the ornament, which is a split the cut-out line already drew</description>
+      <category>The founding papers</category>
+      <description>Why this cabinet has a sibling built on science: the fox and the hedgehog from Archilochus to Berlin to Gould, two public-domain animal poems that end in the same place, and the spiky profile the typology was never written about.</description>
     </item>
     <item>
-      <title>Sheet No. 10, on a disability invented because nobody had it, and the readers who do</title>
-      <link>https://queering.earth/changelog#a-2026-09-10-hyperempathy</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-10-hyperempathy</guid>
-      <pubDate>Thu, 10 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: The argument is not that Schalk is wrong, and finding the version that is not cheap took the whole research pass
-Mounted: One sprig drawn twice and translated, because a mirrored pair says reflection and this is not a reflection
-Label corrected: A quotation arrived under the wrong Butler novel, at a page number that was not a page number
-Label corrected: The empathy study is a 2024 article behind a 2023 DOI, and its accepted manuscript is not quotable
-Label corrected: Two glossary pages of our own splice two Butler passages ninety pages apart into one quotation
-Mounted: A section that argues against the sheet it is on</description>
-    </item>
-    <item>
-      <title>Sheet No. 9, on a definition recited for a beast nobody has seen, and on the coiner an empty word leaves behind</title>
-      <link>https://queering.earth/changelog#a-2026-09-10-snark</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-10-snark</guid>
-      <pubDate>Thu, 10 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: The primary was not in the house, and the answer was the French rather than a summary
-Mounted: Five mounting straps and no specimen, after the diagonal version was drawn, measured, and thrown away
-Mounted: The unmended provenance line ships for the first time, on the ninth sheet
-Mounted: Two of Henry Holiday’s 1876 engravings, one of which is an empty square and the other of which is the Snark wearing a wig
-Label corrected: The story everybody tells about Carroll refusing the Boojum drops three words, and the three words are the point
-Cabinet: A half-hour reading of the poem is linked and not embedded, and the reader is named
-Label corrected: A sentence of Carroll’s preface is quoted around rather than repaired
-Cabinet: The masthead’s own borrowed coinage is now a section of a sheet, not just a ledger entry</description>
-    </item>
-    <item>
-      <title>A crooked tree for the sheet that says queering is adaptation, and the stump of the straight one beside it</title>
-      <link>https://queering.earth/changelog#a-2026-09-10-crooked</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-10-crooked</guid>
-      <pubDate>Thu, 10 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: The drawing is the pair, because a crooked tree on its own is only a picture of a crooked tree
-Label corrected: Four words have an author, and we do not know whose these are</description>
-    </item>
-    <item>
-      <title>Nine typefaces a reader can set the sheet in, six of them drawing letters that exist because the grammar refused the person</title>
-      <link>https://queering.earth/changelog#a-2026-09-10-typefaces</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-10-typefaces</guid>
-      <pubDate>Thu, 10 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: A typeface picker where four options set the reading face and five only set the headings, and that split is a constraint rather than a taste
-Cabinet: CUTE is not the OFL, and reading it is what turned up two faults in our own house</description>
-    </item>
-    <item>
-      <title>The device decides, and the reader may say otherwise: three reading settings, and a motion rule that had to be turned inside out to allow the second answer</title>
-      <link>https://queering.earth/changelog#a-2026-09-10-reading</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-10-reading</guid>
-      <pubDate>Thu, 10 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: The fonts were redistributed for a day with no licence beside them, and their designers were credited to a search engine
-Label corrected: The panel shipped unable to open, and every test that passed had bypassed the thing that was broken
-Mounted: Reduce motion, more contrast and looser lines, each starting from what the device already asks for
-Cabinet: Text size, which the sheet already followed — and the first setting that is not a yes or a no
-Re-determined: Motion is off by default now, and the rule that guarded it came out of the change stronger than it went in
-Cabinet: Forced colours, which is the one setting here that is not ours to offer — and a gate that makes /privacy name every key the site keeps</description>
-    </item>
-    <item>
-      <title>The manifesto, adapted under its own licence — and a tightened quotation found on our own foundation’s page while sourcing it</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-manifesto</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-manifesto</guid>
+      <title>The Preferred Flower of Life</title>
+      <link>https://queering.earth/monotropa-uniflora</link>
+      <guid isPermaLink="true">https://queering.earth/monotropa-uniflora</guid>
       <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: One preposition and an undeclared ellipsis, in the version of Max Alexander this site was handed
-Mounted: Two quotations that cannot be verified, carried anyway, with the transcription named instead of the tape
-Cabinet: Two of the nine authors wrote this page, which is exactly why the credit is not a formality</description>
+      <category>Wall · No. 8</category>
+      <description>Monotropa uniflora, the ghost pipe: a plant with no chlorophyll that feeds off fungi, the flower Emily Dickinson called the preferred flower of life, and the Greek root it shares with monotropism.</description>
     </item>
     <item>
-      <title>A new accession goes at the top, anchored on the register, and this one proves it</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-anchor</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-anchor</guid>
+      <title>What this cabinet is for</title>
+      <link>https://queering.earth/mission</link>
+      <guid isPermaLink="true">https://queering.earth/mission</guid>
       <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: The fixed anchor cannot go wrong whoever else is editing; the relative one is correct only while nobody is</description>
+      <category>The founding papers</category>
+      <description>The mission of queering.earth, in thirteen aims — each with the page where it is already being kept, and the failure that would show we had stopped. Then what a cabinet of readings has to do with a foundation whose first business is paying people's rent, including the half of that a reading cannot do.</description>
     </item>
     <item>
-      <title>A way straight to the newest accession, and the discovery that it was not where the page said it was</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-latest</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-latest</guid>
+      <title>Nothing here was inevitable</title>
+      <link>https://queering.earth/manifesto</link>
+      <guid isPermaLink="true">https://queering.earth/manifesto</guid>
       <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: The address is on the register, not on the newest accession, which is what makes it permanent
-Label corrected: Four accessions written after 22:43 were sitting below four written before it
-Cabinet: Two assertions on the register’s order, and only one of them would have caught this</description>
+      <category>The founding papers</category>
+      <description>The manifesto of queering.earth: normal is an arrangement and arrangements have authors, weird is a verb, and a reading is where an arrangement gets contested. Adapted from the Neuroqueer Learning Spaces Manifesto under its own licence.</description>
     </item>
     <item>
-      <title>The finding aid gets one too, and three thresholds in a row turn out to have been the same mistake</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-searchtoc</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-searchtoc</guid>
+      <title>Find a word in the cabinet</title>
+      <link>https://queering.earth/search</link>
+      <guid isPermaLink="true">https://queering.earth/search</guid>
       <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: Three thresholds tried, three retired, each measuring the list instead of the reader
-Label corrected: Straight after the lede put the search box below the fold, on the page that is a search box</description>
+      <category>The cabinet itself</category>
+      <description>Search every sheet, every quotation and every correction on this site. The searching happens in your browser; nothing you type is sent anywhere, including to us.</description>
     </item>
     <item>
-      <title>This register now has the contents list an earlier entry measured, refused, and wrote a rule against</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-registertoc</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-registertoc</guid>
+      <title>The attribution ledger</title>
+      <link>https://queering.earth/ledger</link>
+      <guid isPermaLink="true">https://queering.earth/ledger</guid>
       <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Re-determined: Block height was the wrong measure, the same way heading count was the wrong measure an hour ago</description>
+      <category>The cabinet itself</category>
+      <description>The ledger for every quotation and credited idea on Queering Earth: what we quoted, whose it is, where it came from, and the day somebody read the primary source and confirmed the wording. Including the ones we got wrong.</description>
     </item>
     <item>
-      <title>A feature was mistaken for a fault, removed, and put back within the hour</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-navheads</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-navheads</guid>
+      <title>What is settled, and what is open</title>
+      <link>https://queering.earth/what-is-settled</link>
+      <guid isPermaLink="true">https://queering.earth/what-is-settled</guid>
       <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: The test is the element now, not the class, so the next navigation block needs no line
-Re-determined: It was not a fault. Ryan liked the rail pointing at the index, and a destination inside a nav is still a destination
-Mounted: And the two record pages got the contents list they could not have had an hour earlier
-Cabinet: The two-heading threshold is retired, because it measured the wrong thing
-Label corrected: The removal also broke the rail’s tick scale in the quietest way available, because the derivation existed twice</description>
+      <category>The cabinet itself</category>
+      <description>The decision log for Queering Earth: what is settled, what is still open, and the reasoning for each — including the designs that were refused, and why.</description>
     </item>
     <item>
-      <title>The two longest pages on the site could not be surveyed without reading all of them</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-entryindex</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-entryindex</guid>
+      <title>What this site knows about you</title>
+      <link>https://queering.earth/privacy</link>
+      <guid isPermaLink="true">https://queering.earth/privacy</guid>
       <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Back matter again, and built at runtime for the reason the contents list is
-Cabinet: No line in REVEAL, and that was checked rather than assumed</description>
+      <category>The cabinet itself</category>
+      <description>Almost nothing, and here is the whole of it: two view preferences your own browser keeps, and the server log our host writes. No analytics, no cookies, no forms, and one embedded recording that fetches nothing until you press play.</description>
     </item>
     <item>
-      <title>Two pages of this cabinet had addresses, were listed on the home page, and were reachable from the foot of nothing</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-footers</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-footers</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: Eighty copies of five sentences, and the one place they were supposed to live
-Cabinet: Where a sheet says which copy it read, and why that is not the provenance line</description>
-    </item>
-    <item>
-      <title>A way back to the top, drawn as growth rather than as a chevron</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-totop</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-totop</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: The arrowhead is a seed head, because a chevron laid over grass is an interface arrow in a costume
-Label corrected: The landmark could not take focus, and the skip link had wanted it to since the day it was written</description>
-    </item>
-    <item>
-      <title>Sheet No. 2 had no lede and an essay with no heading, so its own contents list could not name the reason it exists</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-grind</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-grind</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: A heading in the author’s own words, and a note that stopped being true the moment anything sat above the essay</description>
-    </item>
-    <item>
-      <title>The plate was eight screens down its own home page and there was no way back up to it</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-rail</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-rail</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: Two contents lists on one screen, on purpose, and the argument for why they are not the same object
-Cabinet: The rule that says grow the hit area was followed with the wrong instrument, and then with the wrong arithmetic
-Cabinet: Built at runtime is free; hidden is not, and the rail was both in the same afternoon
-Label corrected: The rail would not appear for the person who asked for it, and the number keeping it away had been reserving room for a block that is not there
-Cabinet: The rail’s ticks became a scale drawing of the sheet, because an imperfection with no norm behind it just reads as an accident
-Cabinet: The rail’s rule ends in a leaf now, and the doodles that were asked for were drawn and refused
-Label corrected: This register said a rule did nothing, having measured it on screen and never on paper
-Cabinet: Three sheets had no contents list and no reason for not having one</description>
-    </item>
-    <item>
-      <title>The ledger and the decision log had no addresses, so the aim that pointed at them was the thinnest receipt on the mission page</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-records</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-records</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: A generator that runs backwards, because the Markdown is the thing being kept and the page is the copy
-Cabinet: The addresses are not /attributions and /decisions, and that is a filesystem fact rather than a preference
-Label corrected: The finding aid was describing a smaller cabinet than it searches
-Cabinet: Both walkers learned a tag on the same afternoon, and one of them had to learn not to tidy</description>
-    </item>
-    <item>
-      <title>A cabinet that publishes an attribution ledger, a privacy policy and a register of its own errors had never written down what any of it was for</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-mission</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-mission</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Thirteen aims, each naming the page already keeping it — and, for each, the observation that would falsify it
-Mounted: Two quotations from our own two organisations, held to the standard everybody else’s words are held to
-Cabinet: The Markdown converter now honours a list’s start attribute, because thirteen aims in four groups renumbered themselves four times</description>
-    </item>
-    <item>
-      <title>An eighth gate, ported the same day the failure it catches happened twice — and its first honest run found fifteen more</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-cardorder</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-cardorder</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: The upstream tool would have certified the exact plate that prompted it, and finding that out was most of the port
-Label corrected: Fifteen cards called a sheet something the plate does not call it, including an essay filed as a reading
-Cabinet: What it refuses to check, and the one that looks most like an omission</description>
-    </item>
-    <item>
-      <title>The plate said seven and carried eight, and two of them were in the wrong order — on the one page whose job is to say what is here</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-plate</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-plate</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Label corrected: Eight, and in order — the count above the plate and the sequence on it
-Label corrected: The same fault, found by looking for it: one sibling nav ran 4, 1, 2, 3</description>
-    </item>
-    <item>
-      <title>The four pages that are not specimens were only ever in the footer, which is where a site puts what it hopes nobody needs</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-cabinet</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-cabinet</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: A list with no cards, because a card would say these were readings and none of them is a reading of anything
-Cabinet: The target is the line and not the letters, which is the rule the ground control shipped one pixel over</description>
-    </item>
-    <item>
-      <title>A site that had spent a day removing its only third-party request mounted a YouTube player, and the whole of the work was making that honest</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-embed</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-embed</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: A facade, not an embed: the served page holds a drawing and a link, and nothing reaches Google until somebody presses play
-Cabinet: The gate now reads our JavaScript, because section 7 looked only at markup and a script is where a third party would actually appear
-Label corrected: Five statements on the privacy page stopped being true on the same afternoon, and all five were corrected in the change that broke them</description>
-    </item>
-    <item>
-      <title>A lilac bush from Ryan’s own yard, standing above the footer, and the song under it belongs to a man almost nobody names</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-lilac</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-lilac</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: The vase habit is the whole read, and two drafts got it wrong in the same way
-Cabinet: Eighty-five kilobytes of markup, nine over the wire — and the trick that would have shrunk it breaks the styling silently
-Mounted: Helen hears Eliot the instant anybody says lilac, so the plate got the four lines that come with the flower
-Label corrected: Lilac Wine is James Shelton’s, and the caption says so before it names either singer</description>
-    </item>
-    <item>
-      <title>A moth with the Earth where its body should be, in somebody else’s two colours, and the hardest part was stopping the middle of it from looking like a brain</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-moth</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-moth</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: The drawing is at the foot of a section rather than at the top of a page, which is the first time anything here has been
-Cabinet: Two new decorative tokens, because a wash and the thing washed onto it cannot be one value
-Cabinet: The coastlines are projected rather than drawn, because three passes of hand-drawn continents kept reading as a brain</description>
-    </item>
-    <item>
-      <title>A real herbarium stamps its sheets with an accession number that is a row in a ledger, which is the whole reason this one could have it and most of the work was proving the ink was legal</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-stamp</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-stamp</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Every sheet is stamped, and the fade is on the ring because no colour here can make a letter faint and legal
-Cabinet: The washed-out effect is a blend mode, the blend mode erases the stamp in the drawer, and the contrast gate reported it clean
-Label corrected: The stylesheet was cached for five minutes longer than the markup that needed it, and the first reader of the stamp saw the consequence
-Cabinet: A seventh gate, ported because a design was refused for want of it — and it measures paper, which the tool it came from does not
-Cabinet: A sixth gate, because a comment in a config file predicted this failure and a comment cannot fail a build
-Cabinet: The finding aid does not index the stamp, which is the masthead decision arriving one component further down</description>
-    </item>
-    <item>
-      <title>A cabinet made almost entirely of other people’s sentences grew a search field, which is a machine for trimming other people’s sentences, and most of the work was teaching it when to refuse</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-search</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-search</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: A finding aid that will show you a whole quotation or none of it
-Cabinet: The finding aid was nine thousand words down, and the control that fixes that is a drawing of a pocket lens
-Label corrected: The privacy policy said there was nowhere on this site to type anything, and then there was
-Cabinet: The gold stayed on the mend, and the mark that says found went onto a rule</description>
-    </item>
-    <item>
-      <title>The site was measured against somebody else’s specification, and the first thing it found was a defect this cabinet had already named, already fixed one layer up, and never thought to look for underneath</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-audit</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-audit</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: A privacy policy, and the one third-party request it would have had to confess
-Cabinet: The plates are AVIF now, and the manuscript that cost 312 KB costs 34
-Cabinet: Thirty days for the plates, five minutes for the stylesheet, and a promise we declined to make
-Cabinet: The site now says out loud, to machines, the permission it had only ever said to people — and puts the citation trail within reach of anything that takes it up
-Cabinet: A mistyped address no longer ejects the reader from the herbarium, and fixing it introduced a soft 404 the new gate caught
-Cabinet: One address per sheet at last, and a fourth gate that asks the site instead of the files
-Cabinet: Two response headers the site had simply never sent, and a policy that carries exactly one directive on purpose</description>
-    </item>
-    <item>
-      <title>Fifteen panels wore the specimen’s clothes, twenty-five margin values passed for a hand-kept register, and the site’s gold was being spent on the least interesting thing that happens to a sheet</title>
-      <link>https://queering.earth/changelog#a-2026-09-09-patina</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-09-patina</guid>
-      <pubDate>Wed, 09 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Every sheet now says when it was mounted and how often it has been corrected since
-Re-determined: The gold moved off mounting and onto the mend, and the drawing at the top of this page moved with it
-Cabinet: Three surfaces, because fifteen components were sharing one and a reader could only rank them by reading the label
-Label corrected: Dropping a fill from two panels took their list markers down to 3.89:1, and the fix was the rule this stylesheet already states everywhere else
-Cabinet: Space is a scale now, because twenty-five unrelated margin values do not read as a hand-kept register — they read as noise
-Cabinet: The foxing was pinned to the window while the paper moved under it, and all nine sheets were stained identically
-Mounted: Long sheets carry a contents list, every section has an address you can share, and the register has the addresses but not the list
-Cabinet: Every section on the site has an address now, and the home page still has no contents list, because its contents list is the plate
-Mounted: The Preferred Flower of Life — Sheet No. 8, and the first that is a wall rather than a reading
-Label corrected: A much-quoted Mary Oliver sentence is in the wrong book and is missing the half that answers it, and it took owning both books to find out
-Re-determined: Woolf’s resonant and porous is exactly right, and it is Woolf guessing at what Coleridge meant
-Label corrected: A 2005 paper’s byline deadnames its third author, and a citation generated from the record repeats it
-Cabinet: The card generator reported a hand-kept list of files rather than the files it wrote, and the new card went missing from its own summary
-Mounted: The register is indexed by sheet at the foot of the page, because a contents list is front matter and an index is back matter
-Cabinet: A fourth guard, because a mistyped sheet name drops an entry out of the index and leaves the page reading perfectly
-Cabinet: The register looked like the strongest case for a contents list and measured as the worst one, so it was built, measured, and taken out again
-Mounted: The colophon scores this site against the seven principles, including the two it fails, and names what it cannot vouch for in them
-Label corrected: This entry claimed a source swapped one principle for another, which was written from memory and is not established
-Label corrected: Our own foundation published the line this site’s gold seam is built on, four months before we reinvented a near copy of it
-Cabinet: The guard now measures the number this house publishes, and it was raised on the day the gap was nearly spent
-Label corrected: The wash was made to tile so that no long sheet had clean paper through the middle, and it drew a visible line across the page at every repeat</description>
-    </item>
-    <item>
-      <title>The sheet has a second ground, and it is the drawer shut rather than the lamp switched off</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-cabinet</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-cabinet</guid>
+      <title>The Die Uncast</title>
+      <link>https://queering.earth/promises-like-pie-crust</link>
+      <guid isPermaLink="true">https://queering.earth/promises-like-pie-crust</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: Brown rather than green, and the reason is measurable rather than a preference
-Cabinet: A card is lighter than the page in daylight and would be darker than it here, which is a trap and not a taste
-Cabinet: A discreet control, a machine that decides when nobody has, and paper that is daylight whatever either of them says
-Label corrected: Two claims about this site’s own measurements were describing the daylight sheet only, and one of them was describing a check that does not exist
-Cabinet: The guard measures both grounds, and it was made to fail before it was believed</description>
+      <category>Reading · No. 3</category>
+      <description>Christina Rossetti's Promises like Pie-crust, read as a charter for solo polyamory — the relationship escalator refused in 1861, and the colon her first printing keeps where everyone else prints a full stop.</description>
     </item>
     <item>
-      <title>A first-person account that ends the moment two words fit had nothing under it about what a word that fits is for, and the writers who answer that were gathered on Stimpunks pages that are a finding aid and not a citation</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-labels</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-labels</guid>
+      <title>Wyrd, Weird, and the Invention of Normal</title>
+      <link>https://queering.earth/invention-of-normal</link>
+      <guid isPermaLink="true">https://queering.earth/invention-of-normal</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Six sections below the essay, on what a label buys and what it charges
-Label corrected: The mounting label described a sheet that carried one text, and it now carries two
-Cabinet: Every quotation named to the copy it was read in, and a rule about our own library corrected in the middle of applying it</description>
+      <category>Reading · No. 4</category>
+      <description>Wyrd was Old English for fate. It became weird, and then weird became a diagnosis. A sheet on the demotion of a word, the Weird Sisters, changelings, refusal, and an idea of normal barely two centuries old.</description>
     </item>
     <item>
-      <title>The most-quoted sentence about lavender and Abraham Lincoln is word for word what Carl Sandburg wrote, and the man it describes is Joshua Speed</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-flowercodes</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-flowercodes</guid>
+      <title>Miranda: To Be Wondered With</title>
+      <link>https://queering.earth/the-tempest</link>
+      <guid isPermaLink="true">https://queering.earth/the-tempest</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: A Waste Garden, Flowering at Its Will — Sheet No. 7
-Re-determined: The streak of lavender belongs to Joshua Speed, and only the referent has moved
-Cabinet: Two of the four plates are the wrong object, and both captions say so</description>
+      <category>Reading · No. 5</category>
+      <description>Shakespeare coined Miranda's name from the Latin for wonder at. A reading of The Tempest and Waterhouse's 1916 canvas: a boy actor, an editor who moved her hardest speech into her father's mouth, and who a story lets be difficult.</description>
     </item>
     <item>
-      <title>Four flowers people wore when saying it in words was dangerous, drawn onto the corners of the plate of sheets</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-vine</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-vine</guid>
+      <title>The Swell and the Dwell</title>
+      <link>https://queering.earth/wild-nights</link>
+      <guid isPermaLink="true">https://queering.earth/wild-nights</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: The border is an argument, and the line under it says whose set of four this is
-Cabinet: The frame is CSS and the corners are SVG, and the plate nearly became a list again</description>
+      <category>Reading · No. 6</category>
+      <description>Emily Dickinson's Wild nights – Wild nights! read as co-regulation: the winds futile rather than stilled, the compass and the chart put down, and one night asked for instead of a lifetime. With a reply in verse, and what her first editor tidied in 1891.</description>
     </item>
     <item>
-      <title>A heading that says the type plays was set in the same even measure as every other heading, which is a claim arguing against itself</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-typeplays</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-typeplays</guid>
+      <title>A Waste Garden, Flowering at Its Will</title>
+      <link>https://queering.earth/flower-codes</link>
+      <guid isPermaLink="true">https://queering.earth/flower-codes</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: The heading performs its own sentence, and the verb carries the axis wherever it is a heading</description>
+      <category>Reading · No. 7</category>
+      <description>Violet, pansy, green carnation, and lavender were worn as code. Each was read by the people it was meant to escape and turned into the word that named you, and each was picked up again afterwards. With the 1926 sentence about a streak of lavender, and the man it is actually about.</description>
     </item>
     <item>
-      <title>Higginson wrote let us alter as little as possible and then printed Dickinson’s poem with eight of its nine dashes gone — and the copy a reader will find today has lost a word out of the line that asks to be moored</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-dickinson</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-dickinson</guid>
+      <title>The accession register</title>
+      <link>https://queering.earth/changelog</link>
+      <guid isPermaLink="true">https://queering.earth/changelog</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: The Swell and the Dwell — Sheet No. 6
-Re-determined: The poem in general circulation is missing the word but, and the page that prints it names no edition
-Re-determined: What 1891 did to the leaf, and the one change that is not a tidy
-Label corrected: Two scans agreed with each other and were both wrong, because they came out of the same library
-Label corrected: Three citations in the first draft of this sheet were written from memory, and one of them was an invented DOI
-Cabinet: A licensed plate for the first time, a title that breaks its own convention, and punctuation added to a poem of ours</description>
+      <category>The cabinet itself</category>
+      <description>The changelog for Queering Earth: every sheet as it was mounted, every plate that came off again, and every label we corrected — including the attributions we got wrong and exactly how they were fixed.</description>
     </item>
     <item>
-      <title>A scholar cut her own sentence down to fit a later argument, marked every cut, and in doing so demonstrated the thing the sentence says</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-demory</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-demory</guid>
-      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Two sections on the front page: To queer is to adapt and The sentence adapts itself
-Cabinet: The second quotation is a trimmed version of the first, and that is why both are on the page
-Label corrected: Half of one quotation on this page has not been read against its primary, and the ledger says so</description>
-    </item>
-    <item>
-      <title>An editor in 1733 decided Miranda’s hardest speech was not credible coming from her, moved it into her father’s mouth, and three centuries of editions followed him</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-miranda</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-miranda</guid>
-      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Miranda: To Be Wondered With — Sheet No. 5
-Label corrected: Two citations in the incoming draft, wrong before the sheet was ever built
-Cabinet: Four devices from Helen’s draft, kept — and its colours, not kept</description>
-    </item>
-    <item>
-      <title>A site that publishes a ledger of everyone else’s words was keeping the account of its own mistakes in a file only we could read</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-register</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-register</guid>
-      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: The register itself</description>
-    </item>
-    <item>
-      <title>A sheet shipped with Helen Edgar’s name over prose she did not write — she declined the credit, and the answer had been written in our own colophon before the sheet was made</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-wyrd</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-wyrd</guid>
-      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: Wyrd, Weird, and the Invention of Normal — Sheet No. 4
-Label corrected: The byline. It shipped wrong, and it was corrected on Helen’s word
-Re-determined: The sheet’s kind changed from essay to reading, and No. 1 gained a second reader
-Mounted: Two paintings, chosen by Helen Edgar
-Label corrected: A journal citation we were handed had the wrong issue and the wrong pages
-Label corrected: Two captions checked against the primary rather than against the picture
-Label corrected: A scholar’s conclusion that cuts against the sheet, kept on the sheet
-Cabinet: The paste-up: a zine wall built out of herbarium furniture
-Cabinet: The colophon says how these sheets are drafted</description>
-    </item>
-    <item>
-      <title>Two grey woodcuts came off a colour sheet, and the drawing above them was rebuilt twice before it stopped standing to attention</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-plates</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-plates</guid>
-      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Re-determined: Colour over subject matter: three chromolithographs replace two Darwin woodcuts
-Label corrected: A digitiser’s metadata disagreed with the corner of the plate, for the third time
-Re-determined: The header drawing, rebuilt twice, and the first version was a fault rather than a preference</description>
-    </item>
-    <item>
-      <title>The first printing of Promises like Pie-crust ends line 20 with a colon, every copy in circulation ends it with a full stop, and the line is the one about breaking the chain</title>
-      <link>https://queering.earth/changelog#a-2026-09-08-rossetti</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-08-rossetti</guid>
-      <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: The Die Uncast — Sheet No. 3
-Label corrected: The colon at line 20, read in two separately scanned copies
-Label corrected: The proverb in the title has no owner here, on purpose
-Label corrected: Two elisions kept lower-case, and one character normalised with the reason written down
-Label corrected: A definition that circulates without a name got its name back
-Cabinet: Verse gets a shared component, and every line is its own element
-Cabinet: A sheet is titled from a phrase in the specimen, and the filename names the work</description>
-    </item>
-    <item>
-      <title>The site was linking to one address and declaring a different one canonical, and nobody would have found it by reading the repository</title>
-      <link>https://queering.earth/changelog#a-2026-09-07-colophon</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-07-colophon</guid>
+      <title>The Army of the Upright</title>
+      <link>https://queering.earth/on-being-ill</link>
+      <guid isPermaLink="true">https://queering.earth/on-being-ill</guid>
       <pubDate>Mon, 07 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: Addresses on this site are extensionless
-Cabinet: How this site is made — the colophon
-Cabinet: Sheets link to each other, outside the page’s main landmark</description>
+      <category>Reading · No. 1</category>
+      <description>Virginia Woolf's On Being Ill, mounted as she left it in 1930. Illness missing from literature, a language that runs dry, and the sentence she revised into something stranger.</description>
     </item>
     <item>
-      <title>The phrase on the masthead turned out to be one hyphen away from the subtitle of a book we quote on the same page</title>
-      <link>https://queering.earth/changelog#a-2026-09-07-sheets</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-07-sheets</guid>
+      <title>Coming to Terms</title>
+      <link>https://queering.earth/coming-to-terms</link>
+      <guid isPermaLink="true">https://queering.earth/coming-to-terms</guid>
       <pubDate>Mon, 07 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Mounted: The Army of the Upright — Sheet No. 1
-Mounted: Coming to Terms — Sheet No. 2
-Label corrected: The masthead credits Nick Walker, and the decision log stopped claiming there was no risk
-Label corrected: The paraphrase that did not ship, and the pronouns that did
-Label corrected: Woolf verified ahead of the sheet, because this trap does not survive verification-after-drafting
-Mounted: Plate 511, The Floral Magazine v.9 (1870), and the first metadata error
-Cabinet: The plate, the favicon, and the social cards</description>
+      <category>Essay · No. 2</category>
+      <description>Ryan Boren on a lifetime of not fitting gender norms, a pair of pink-tinted glasses, and the two words — autigender and neuroqueer — that finally fit.</description>
     </item>
     <item>
-      <title>For six minutes at a time the site looked deployed: a green dashboard, auto-publishing on, and a commit several pushes stale</title>
-      <link>https://queering.earth/changelog#a-2026-09-07-planted</link>
-      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-07-planted</guid>
+      <title>Queering Earth</title>
+      <link>https://queering.earth/</link>
+      <guid isPermaLink="true">https://queering.earth/</guid>
       <pubDate>Mon, 07 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Cabinet: The site is planted
-Cabinet: Continuous deployment, and the trap that made pushes silently not deploy
-Cabinet: queering.earth is live
-Cabinet: The content model: a sheet mounts a specimen and carries our label</description>
+      <category>The front of the cabinet</category>
+      <description>Reading the world through a queering lens — art, literature, poetry, politics, people, history — and asking what else any of it could have been. A Stimpunks Foundation and More Realms collaboration.</description>
+    </item>
+    <item>
+      <title>How this site is made</title>
+      <link>https://queering.earth/design</link>
+      <guid isPermaLink="true">https://queering.earth/design</guid>
+      <pubDate>Mon, 07 Sep 2026 12:00:00 GMT</pubDate>
+      <category>The cabinet itself</category>
+      <description>The design of Queering Earth: a Victorian herbarium sheet as the model, biophilic ground rules, the palette, the type, the drawings, and what we mean by specimen, sheet, plate, and label.</description>
     </item>
   </channel>
 </rss>

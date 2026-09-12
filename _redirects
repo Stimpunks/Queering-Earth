@@ -65,6 +65,7 @@ http://queering-earth.netlify.app/*   https://queering.earth/:splat  301!
 /the-founding-papers.html         /the-founding-papers          301!
 /the-plate.html                   /the-plate                    301!
 /the-tempest.html                 /the-tempest                  301!
+/whats-new.html                   /whats-new                    301!
 /wild-nights.html                 /wild-nights                  301!
 
 # The plate is `/`, not `/index.html`. Netlify already 301s the bare /index.
