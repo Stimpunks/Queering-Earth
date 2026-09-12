@@ -449,6 +449,45 @@ one afternoon — a generator emitting `puff-pale` the stylesheet did not know, 
 means source order decides, and the bush's caption printed moss-green because the print
 block sat above it.
 
+### Every tag closes, and closes in order — check 9 in `check-markup.mjs`
+
+Added 2026-09-11, **reversing that gate's own stated position** that unclosed tags were
+out of scope and that checking them would be noisy. Both halves were wrong.
+
+**What leaving it out cost.** An accession in `changelog.html` was missing its closing
+`section` and the two `div`s inside it. The page rendered perfectly — a browser repairs
+it — and every gate passed. What broke was invisible: **three generators here parse this
+HTML with regexes and all of them assume balance.** `make-markdown.mjs` matches an
+accession from its opening tag to the first `</section>` it finds, so the unclosed one
+**swallowed the next accession whole** and that entry had never been in the feed at all.
+It was caught by a count that existed only because the feed was being rebuilt.
+
+**It checks EVERY element, not a declared list of containers**, and that was measured
+first: the whole repo balanced but for two — that `section`, and an unclosed `<strong>`
+that had been bolding the rest of a list item on `/two-cohabitating-modes` since the
+sheet was mounted. A declared list is a second thing to keep in step and would have
+bought nothing.
+
+**THE HOUSE CLOSES EVERY TAG, AND THAT IS NOW A RULE RATHER THAN A HABIT.** HTML permits
+implicit closes for `p`, `li`, `dd` and `td`; this is stricter on purpose, because the
+regex generators need balance. A legal implicit close is reported, and the fix is to
+write the closing tag.
+
+**A STACK, NOT A COUNTER.** Counting opens against closes returns zero for
+`<div><section></div></section>`, which is mis-nested and breaks those generators
+identically. **That distinction paid for itself on the first run**: 16 problems on
+`/ledger` and `/what-is-settled`, both numerically balanced, from
+`make-records.mjs` shipping `<strong>A <em>B</strong></em>` — its bold regex is
+non-greedy, so `**A, *B***` gave it the first two of three closing asterisks and the
+italic pass closed the pair inside out. **Eight passages, in the two pages a reader goes
+to in order to check us.** The converter now resolves `*` runs with a stack and
+CommonMark's flanking rule, because `*A **B***` and `**A, *B***` both appear here and a
+regex cannot tell them apart.
+
+**Made to fail in three shapes before being believed** — the missing `</section>`, the
+unclosed `<strong>`, and a mis-nesting that balances numerically — each reverted after.
+**22,709 elements balanced across 27 pages**, and the count prints every run.
+
 ### There are two feeds, because there are two lists
 
 **`/feed.xml` is the pages as they arrive. `/register.xml` is the register's accessions.**
@@ -1381,7 +1420,7 @@ node tools/make-records.mjs && node tools/make-whats-new.mjs && node tools/make-
 ```
 
 ```bash
-node tools/check-markup.mjs --check      # parser-rewriting markup, duplicate ids, exactly one <main>
+node tools/check-markup.mjs --check      # parser-rewriting markup, duplicate ids, one <main>, every tag closed
 node tools/check-sitemap.mjs --check     # every page listed once, every entry resolves
 node tools/check-contrast.mjs --check   # 7:1 in BOTH grounds and under print emulation, two tiers
 node tools/check-addresses.mjs          # one address per page: a forced 301! per .html twin

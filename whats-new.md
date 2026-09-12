@@ -84,7 +84,7 @@ Reading No. 10 · [Corrected twice since](https://queering.earth/changelog#a-202
 
 Why this cabinet has a sibling built on science: the fox and the hedgehog from Archilochus to Berlin to Gould, two public-domain animal poems that end in the same place, and the spiky profile the typology was never written about.
 
-The founding papers · [Corrected twice since](https://queering.earth/changelog#a-2026-09-11-monotropism)
+The founding papers · [Corrected three times since](https://queering.earth/changelog#a-2026-09-11-balance)
 
 ### 9 September 2026
 
@@ -116,13 +116,13 @@ The cabinet itself · [Corrected twice since](https://queering.earth/changelog#a
 
 The ledger for every quotation and credited idea on Queering Earth: what we quoted, whose it is, where it came from, and the day somebody read the primary source and confirmed the wording. Including the ones we got wrong.
 
-The cabinet itself · [Corrected once since](https://queering.earth/changelog#a-2026-09-11-width)
+The cabinet itself · [Corrected twice since](https://queering.earth/changelog#a-2026-09-11-balance)
 
 -  [What is settled, and what is open](https://queering.earth/what-is-settled)
 
 The decision log for Queering Earth: what is settled, what is still open, and the reasoning for each — including the designs that were refused, and why.
 
-The cabinet itself · [Corrected once since](https://queering.earth/changelog#a-2026-09-11-width)
+The cabinet itself · [Corrected twice since](https://queering.earth/changelog#a-2026-09-11-balance)
 
 -  [What this site knows about you](https://queering.earth/privacy)
 

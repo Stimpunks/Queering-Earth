@@ -37,6 +37,38 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 11 September · latest
 
+## A gate that counts closing tags, and the eight attributions it found wearing their emphasis inside out
+
+The unclosed accession found this morning was left as an open question: whether a check for it was worth the noise. Ryan settled it the same hour. It was not noisy, and it did not find one fault.
+
+CabinetCheck 9: every element closes, and closes in order
+
+`check-markup.mjs`’s header had said for its whole life that unclosed tags were “out of scope by design” and that guessing at intent “would make the gate noisy”. **Both halves were wrong, and the header now says so.** The cost of the first was the accession this register lost from the feed for a day. The second was tested rather than argued: every non-void element on every page was counted before a line was written, and **the whole repo balanced but for two** — that `section`, and an unclosed `strong` on [Two Cohabitating Modes](https://queering.earth/two-cohabitating-modes) that had been bolding the rest of a list item since the sheet was mounted.
+
+So it checks **every element rather than a declared list of containers**: a list would be a second thing to keep in step and the measurement says it would buy nothing. It is stricter than HTML, which lets `p`, `li`, `dd` and `td` close implicitly. That is deliberate — three generators here parse this markup with regexes, so balance is a requirement of the repository and not a matter of taste.
+
+**A stack, not a counter.** Counting opens against closes returns zero for `<div><section></div></section>`, which is mis-nested and breaks those generators identically; a stack also names the element and the line where a counter can only say a total is off by one. **That distinction paid for itself on the first run.**
+
+Label correctedEight attributions had their bold and their italic closed in the wrong order
+
+The new check’s first run reported **16 problems across [the ledger](https://queering.earth/ledger) and [the decisions](https://queering.earth/what-is-settled)** — both generated pages, both numerically balanced, and invisible to the counting sweep done an hour earlier. `\*\*Robert Earl Hardy, \*A Deeper Blue\*\*\*` was reaching the page as `<strong>Robert Earl Hardy, <em>A Deeper Blue</strong></em>`: **the bold regex is non-greedy, so it took the first two of the three closing asterisks** and left the third for the italic pass, which closed the pair inside out.
+
+**Eight passages were built that way, in the two pages a reader goes to in order to check us.** The converter’s old comment was right that emphasis nests here and wrong that two ordered passes can read it: `\*\*A \*b\* C\*\*` happens to work, and `\*\*A, \*b\*\*\*` cannot, because the closing run is ambiguous to a regex and is not ambiguous to a stack.
+
+Replaced with a delimiter resolver using CommonMark’s flanking rule cut down to the one case these files have — a run may close only if the character before it is not a space, and open only if the character after it is not. That is what tells `\*A \*\*B\*\*\*`, italic holding bold, from `\*\*A, \*B\*\*\*`, bold holding italic, and **both shapes appear here**, so neither could be assumed. **Seven lines changed and nothing else**, checked by diff, with the generator’s own word-for-word round-trip proof passing unchanged.
+
+Label correctedAn open question about a 1922 printing had been bold to the end of its own paragraph
+
+In [what is unresolved](https://queering.earth/two-cohabitating-modes#what-is-unresolved), the item about whether “runts” survives into later printings of *Fifty New Poems for Children* was missing its closing `strong`. Its two siblings set the question in bold and the explanation in ordinary text; this one ran bold to the end. **Visible on the page since the sheet was mounted, and caught by a tag counter rather than by anybody reading it.**
+
+CabinetMade to fail in three shapes before being believed
+
+The house rule is that a guard nobody has watched fail is a guard nobody should trust. Three faults were reintroduced and each reverted after: the original missing `</section>`, reported against the `</main>` a browser would close it at; the unclosed `strong`, reported against its `</li>`; and **a deliberate mis-nesting that balances numerically**, which is the case a counter structurally cannot see. Each exits 1; the clean tree exits 0.
+
+**22,709 elements balanced across 27 pages**, and the count prints on every run — the same reasoning as the contrast gate’s element counts, because a gate that checked nothing looks exactly like a gate that passed.
+
+2026 · 11 September
+
 ## A page that says what arrived, two feeds instead of one, and a date that could not be taken from this register
 
 Ryan asked for the pair our sibling site has kept from the start: a *What’s New* page and a feed. Half of it turned out to exist already and to be unreachable, and the other half turned out to be two things rather than one.

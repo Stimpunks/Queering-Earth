@@ -85,16 +85,26 @@
  *    none — their titles being styled `<div>`s and `<span>`s, two of them with no heading
  *    element of any kind — and they were fixed the same day, so the baseline is 0.
  *
- * WHAT IT DOES NOT DO
- * It is not a validator and does not try to be. It does not check unclosed tags,
- * attribute syntax, or anything the browser recovers from harmlessly. Eight faults,
- * chosen because each one silently changes what the reader gets.
+ * 9. EVERY ELEMENT CLOSES, AND CLOSES IN ORDER — added 2026-09-11, and it REVERSES
+ *    what this header said for its whole life. The paragraph here used to read "it does
+ *    not check unclosed tags … unbalanced tags are out of scope by design and guessing
+ *    at intent would make the gate noisy." Both halves were wrong, and the cost of the
+ *    first was found by accident. See the block comment at the code for the full account;
+ *    in short, an accession in changelog.html was missing its closing `section`, the page
+ *    rendered perfectly because a browser repairs it, and THREE generators in tools/ that
+ *    parse this HTML with regexes were silently reading one block as part of another —
+ *    one whole accession had never appeared in the feed. The second half was wrong too:
+ *    every non-void element in the repo balanced, measured before this was written, with
+ *    exactly two exceptions, both of them real bugs. It cost nothing to turn on.
  *
- * The one edge that follows from that restraint, stated because it looks like a gap:
- * a `.card-wrap` whose `</div>` is simply missing is reported only if the file *ends*
- * with it still open. If some later `</div>` closes it by depth — an unbalanced grid,
- * say — the wrap looks closed and this check stays quiet, because unbalanced tags are
- * out of scope by design and guessing at intent would make the gate noisy.
+ * WHAT IT DOES NOT DO
+ * It is not a validator and does not try to be. It does not check attribute syntax,
+ * character references, or content models. Nine faults, chosen because each one
+ * silently changes what the reader gets — or, for the ninth, what a generator gets.
+ *
+ * The edge that used to be stated here is closed: a `.card-wrap` whose `</div>` is
+ * simply missing was previously reported only if the file ENDED with it still open, and
+ * check 9 now catches it at whichever tag the browser would close it against.
  *
  * USAGE
  *     node tools/check-markup.mjs                       # every root .html
@@ -282,6 +292,7 @@ let totalProblems = 0;
 let pagesWithProblems = 0;
 let scannedTags = 0;
 let scannedIds = 0;
+let scannedElements = 0;
 let memberPages = 0;
 let badgesSeen = 0;
 
@@ -299,6 +310,13 @@ for (const file of targets) {
   let openP = 0;
   let tagCount = 0;
   const ids = new Map();
+
+  /* Check 9's stack, and its findings kept apart from `problems` only so the report can
+     count them on their own line. One unclosed container usually produces exactly one
+     finding, because the walk unwinds to the tag that actually closed. */
+  const openStack = [];
+  const balance = [];
+  let elementCount = 0;
 
   /* The `.ss-nav` span, tracked here rather than by string search so that a nested
      <nav> cannot end it early — zines carry a second `<nav class="nav">` further
@@ -388,6 +406,31 @@ for (const file of targets) {
     }
 
     if (VOID.has(t.name) || t.selfClosed) continue;
+
+    /* ── 9. every element closes, and closes in order ──
+       Maintained here rather than in a pass of its own so the tag walk stays single —
+       see the block comment after the loop for why this check exists at all. */
+    if (!t.closing) {
+      elementCount++;
+      openStack.push({ name: t.name, line: t.line });
+    } else {
+      const top = openStack[openStack.length - 1];
+      if (top && top.name === t.name) {
+        openStack.pop();
+      } else if (openStack.some((o) => o.name === t.name)) {
+        /* The tag IS open, but something opened after it and never closed. Report the
+           inner one, which is the actual fault, and unwind to it so the rest of the
+           file is still checked instead of every later close cascading. */
+        const inner = openStack[openStack.length - 1];
+        balance.push(
+          `<${inner.name}> opened at line ${inner.line} is still open at </${t.name}> on line ${t.line} — it is never closed, so the browser closes it here and everything between is nested one level deeper than the source says`
+        );
+        while (openStack.length && openStack[openStack.length - 1].name !== t.name) openStack.pop();
+        openStack.pop();
+      } else {
+        balance.push(`stray </${t.name}> at line ${t.line} — nothing is open for it to close`);
+      }
+    }
 
     // ── locate the .ss-nav span, and any collection badge, for the checks below ──
     if (t.name === 'nav') {
@@ -480,6 +523,43 @@ for (const file of targets) {
     );
   }
 
+  /* ── 9. every element closes, and closes in order ─────────────────────────────
+     Added 2026-09-11, and it REVERSES this file's own stated position: the header used
+     to say that unclosed tags were out of scope by design and that guessing at intent
+     would make the gate noisy. Both halves turned out to be wrong here.
+
+     WHAT IT COST TO LEAVE OUT. On 2026-09-11 an accession in changelog.html was found
+     missing its closing `section` and the two `div`s inside it. The page rendered
+     perfectly — a browser closes the tags itself — and this gate passed it, because at
+     that point nothing here balanced containers. What it broke was invisible: THREE
+     generators in tools/ parse HTML with regexes and every one of them assumes balance.
+     make-markdown.mjs matches an accession from its opening tag to the first
+     `</section>` it finds, so the unclosed one SWALLOWED THE NEXT ACCESSION WHOLE and
+     that entry had never been in the feed at all. It was caught by a count that existed
+     only because the feed was being rebuilt that afternoon.
+
+     AND IT IS NOT NOISY, which was measured before it was written rather than argued.
+     Every non-void element on every page in this repo balanced, with exactly two
+     exceptions — the `section` above, and an unclosed `<strong>` on
+     /two-cohabitating-modes that had been bolding the rest of a list item since the
+     sheet was mounted. So this checks EVERY element rather than a declared list of
+     containers: a declared list is a second thing to keep in step, and the measurement
+     says it would buy nothing.
+
+     THE HOUSE CLOSES EVERY TAG, AND THAT IS NOW A RULE RATHER THAN A HABIT. HTML lets
+     `p`, `li`, `dd`, `td` and friends close implicitly, so a strict stack is stricter
+     than the spec. That is deliberate: the three regex generators need balance, so
+     balance is a requirement of this repo and not a matter of taste. A legal implicit
+     close would be reported here, and the fix is to write the closing tag.
+
+     A STACK, NOT A COUNTER. Counting opens against closes returns zero for
+     `<div><section></div></section>`, which is mis-nested and would break the same
+     generators in the same way. The stack also names the element and the line, where a
+     counter can only say that some total is off by one. */
+  for (const o of openStack) {
+    balance.push(`<${o.name}> opened at line ${o.line} is never closed — the file ends with it still open`);
+  }
+
   // ── card-wrap integrity ──
   // The third house-convention check, added 2026-09-01, and it earned its place the same
   // way the other two did: by shipping twice. A card is inserted after the *previous card's
@@ -501,6 +581,7 @@ for (const file of targets) {
   // record covering both cards: index.html measured 151 records nested and 152 separated,
   // meaning the newer card's text was not independently findable.
   for (const f of wrapFindings) problems.push(f);
+  for (const f of balance) problems.push(f);
   for (const open of wrapStack) {
     problems.push(`<div class="card-wrap"> at line ${open.line} is never closed`);
   }
@@ -775,10 +856,12 @@ for (const file of targets) {
 
   scannedTags += tagCount;
   scannedIds += ids.size;
+  scannedElements += elementCount;
 
   const status = problems.length ? 'FAIL' : 'ok  ';
   console.log(
-    `  ${file.padEnd(42)} ${status}  ${String(tagCount).padStart(5)} tags   ${String(ids.size).padStart(4)} ids`
+    `  ${file.padEnd(42)} ${status}  ${String(tagCount).padStart(5)} tags   ${String(ids.size).padStart(4)} ids` +
+      `   ${String(elementCount).padStart(5)} elements balanced`
   );
   for (const p of problems) console.log(`      ${p}`);
 
@@ -791,7 +874,8 @@ for (const file of targets) {
    claim that reads identically whether the map was built or came back empty. */
 console.log(
   `\n${targets.length} page(s) · ${scannedTags.toLocaleString()} tags · ${scannedIds.toLocaleString()} ids · ` +
-    `${badgesSeen}/${memberPages} collection badges across ${collectionFiles.length} collections · ${totalProblems} problem(s)`
+    `${badgesSeen}/${memberPages} collection badges across ${collectionFiles.length} collections · ` +
+    `${scannedElements.toLocaleString()} elements balanced · ${totalProblems} problem(s)`
 );
 
 if (totalProblems) {
@@ -807,7 +891,9 @@ if (totalProblems) {
     'PASS — no nested interactive elements, no blocks inside paragraphs, no duplicate ids,\n' +
       '       no nav outside its content shell, exactly one <main> landmark per page, every\n' +
       '       card in its own wrap, every page titled by exactly one <h1> inside its\n' +
-      '       main landmark, every collection member badged to the collection that cards it.'
+      '       main landmark, every collection member badged to the collection that cards it,\n' +
+      '       and every element closed, in order, so the generators that parse this with\n' +
+      '       regexes cannot swallow one block inside another.'
   );
 }
 

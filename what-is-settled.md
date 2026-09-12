@@ -24,19 +24,6 @@ What is settled, what is open, and the reasoning for each — so the same questi
 
 ## Open
 
-### Nothing balances tags, and an unclosed `section` cost the feed an accession for a day (2026-09-11)
-
-Found on 2026-09-11 by counting the new arrivals feed's items against the register page: **58 accessions on the page, 57 in the feed.** The Bewick accession of 10 September was missing its closing `section` and the two `div`s inside it, so every accession below it nested one level deeper and the file ended one tag short.
-
-**Nothing looked wrong, and that is the whole of the problem.** A browser closes the tags itself, so `/changelog` rendered correctly the entire time. `check-markup.mjs` passed it — it reads parser-rewriting markup, duplicate ids and the single landmark, and does not balance containers. What it cost was silent: `make-markdown.mjs` matches an accession from its opening tag to the first `</section>` it finds, so the unclosed one **swallowed the next accession whole**, and the entry about every poem arriving in the Markdown mirror as prose had never been in the feed at all.
-
-**Fixed. The question left open is whether a gate should exist for it.** Arguments both ways, and the house bar is that a check which cannot fail is a check nobody reads:
-
-- **For.** This is the third generator on this site that parses HTML with regexes — the feed, the search index, the Markdown mirror — and all three assume balanced containers. It failed silently, in the direction this site cares about most, and it was caught only by a count that happened to exist because the feed was being rebuilt. It would not have been caught otherwise.
-- **Against.** One fault in fifty-eight accessions, and `check-markup.mjs` already tokenises every page — a depth counter there is a dozen lines rather than a tenth gate, which would keep the count at nine and put the check where the tokeniser already is.
-
-**The likely answer is the second**, but it is a change to a gate rather than a new one and it has not been made or measured. Star Stuff's `check-classes` is still the standing next port; this would be ahead of it if it lands.
-
 ### The empathy study is a 2024 article with a 2023 DOI, and the accepted manuscript is not quotable (2026-09-10)
 
 The paper the proposed Sheet No. 10 rests its fairest reading of Schalk on. Ryan put the accepted manuscript in the SKS inbox and then the version of record beside it, which is what made the comparison below possible. **Settled; nothing here blocks the sheet.**
@@ -340,6 +327,37 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### Tag balance is check 9 in `check-markup.mjs`, and turning it on found two more faults (2026-09-11, **closes the open item raised the same day**)
+
+Raised as open that afternoon and settled by Ryan within the hour: *add the section balance check to check-markup*. The open entry is kept below for the reasoning that led here.
+
+**It checks every element, not `section`, and that was measured rather than argued.** Before writing a line, every non-void element on every page was counted open-against-close: the whole repo balanced except two — the `section` already known about, and an unclosed `<strong>` on `/two-cohabitating-modes` that had been bolding the rest of a list item since the sheet was mounted. So a declared list of containers would have bought nothing and been a second thing to keep in step. **The house closes every tag, and that is now a rule rather than a habit** — stricter than HTML, which permits implicit closes for `p`, `li`, `dd` and `td`, and justified because the three regex generators in `tools/` need balance.
+
+**A STACK, NOT A COUNTER, AND THAT DISTINCTION PAID FOR ITSELF IMMEDIATELY.** Counting opens against closes returns zero for `<div><section></div></section>`, which is mis-nested and breaks those generators in exactly the same way. The stack also names the element and the line where a counter can only say some total is off by one. **On its first run it reported 16 problems on `/ledger` and `/what-is-settled`** — both generated pages, both numerically balanced, and invisible to the counting sweep done an hour earlier.
+
+**The cause was `make-records.mjs`'s inline Markdown converter, shipping overlapping tags.** `\*\*Robert Earl Hardy, \*A Deeper Blue\*\*\* ` came out as `<strong>Robert Earl Hardy, <em>A Deeper Blue</strong></em>`: the bold regex is non-greedy, so it took the first two of the three closing asterisks and left the third for the italic pass, which then closed the pair in the wrong order. Eight passages were built that way, in the two pages a reader goes to in order to check us.
+
+**The old comment was right that emphasis nests here and wrong that two ordered passes can read it.** `\*\*A \*b\* C\*\*` happens to work; `\*\*A, \*b\*\*\*` cannot, because the closing run is ambiguous to a regex and is not ambiguous to a stack. Replaced with a delimiter resolver using CommonMark's flanking rule reduced to the one case this corpus has — a run may close only if the character before it is not a space, and open only if the character after it is not. That is what tells `\*A \*\*B\*\*\*` (italic holding bold) from `\*\*A, \*B\*\*\*` (bold holding italic), and **both shapes appear in these files**, so neither could be assumed. It still throws rather than emitting a stray asterisk, and now also throws on a run left open.
+
+**The fix changed seven lines across the two pages and nothing else**, checked by diff, and `make-records.mjs`'s own word-for-word round-trip proof passed unchanged.
+
+**Proved failing before being believed, in three shapes, each reverted after:** the original missing `</section>`, reported against the `</main>` the browser would close it at; the unclosed `<strong>`, reported against its `</li>`; and a deliberately mis-nested `</strong></em> … <em>` that **balances numerically**, which is the case a counter cannot see. Clean tree exits 0; each fault exits 1.
+
+**22,709 elements balanced across 27 pages**, and the count prints on every run — the same reasoning as the contrast gate's element counts, because a gate that checked nothing looks exactly like a gate that passed.
+
+### Nothing balances tags, and an unclosed `section` cost the feed an accession for a day (2026-09-11, **closed the same day**)
+
+Found on 2026-09-11 by counting the new arrivals feed's items against the register page: **58 accessions on the page, 57 in the feed.** The Bewick accession of 10 September was missing its closing `section` and the two `div`s inside it, so every accession below it nested one level deeper and the file ended one tag short.
+
+**Nothing looked wrong, and that is the whole of the problem.** A browser closes the tags itself, so `/changelog` rendered correctly the entire time. `check-markup.mjs` passed it — it reads parser-rewriting markup, duplicate ids and the single landmark, and does not balance containers. What it cost was silent: `make-markdown.mjs` matches an accession from its opening tag to the first `</section>` it finds, so the unclosed one **swallowed the next accession whole**, and the entry about every poem arriving in the Markdown mirror as prose had never been in the feed at all.
+
+**Fixed. The question left open is whether a gate should exist for it.** Arguments both ways, and the house bar is that a check which cannot fail is a check nobody reads:
+
+- **For.** This is the third generator on this site that parses HTML with regexes — the feed, the search index, the Markdown mirror — and all three assume balanced containers. It failed silently, in the direction this site cares about most, and it was caught only by a count that happened to exist because the feed was being rebuilt. It would not have been caught otherwise.
+- **Against.** One fault in fifty-eight accessions, and `check-markup.mjs` already tokenises every page — a depth counter there is a dozen lines rather than a tenth gate, which would keep the count at nine and put the check where the tokeniser already is.
+
+**The second answer was the one taken**, within the hour, on Ryan's call — see the entry above for what it found. Star Stuff's `check-classes` remains the standing next port.
 
 ### /whats-new is the cabinet by date, and the one feed became two (2026-09-11)
 
