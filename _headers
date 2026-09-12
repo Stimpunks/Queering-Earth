@@ -15,6 +15,33 @@
   # must-revalidate.
   Cache-Control: public, max-age=0, must-revalidate
 
+  # ── BRANCH-ONLY. THIS LINE MUST NEVER REACH `main`. ──────────────────────────
+  #
+  # IF IT DOES, EVERY PAGE ON QUEERING.EARTH DROPS OUT OF EVERY INDEX. That is the
+  # loudest failure this file can ship, which is why it is stated here in capitals
+  # rather than trusted to whoever reads the diff.
+  #
+  # Why it exists. Measured 2026-09-12 against the first real branch deploy:
+  # drafts--queering-earth.netlify.app answered 200 with NO X-Robots-Tag at all.
+  # Netlify sends one on Deploy Previews and not on branch deploys, and CLAUDE.md
+  # had assumed otherwise. A draft page is covered by the `noindex` line in its own
+  # three-line block — but a branch deploy also serves a full copy of all 27
+  # PUBLISHED pages, and those had only rel=canonical holding them. Canonical is the
+  # standard cross-host mechanism and it is real mitigation; it is also exactly what
+  # this site judged insufficient one layer up, which is why the rules at the head of
+  # _redirects 301 the .netlify.app apex instead of leaning on canonicals. Same
+  # defect, one hostname over.
+  #
+  # Why it is safe. NOTHING EVER MERGES OUT OF THIS BRANCH. Promotion takes the file
+  # — `git checkout drafts -- <page>.html` from main — and never the branch, because
+  # a branch holding three drafts cannot be merged to publish one of them. The header
+  # and that rule are one decision; weakening either one breaks the other.
+  #
+  # Nothing gates this. The live probe is:
+  #   curl -sI https://queering.earth/ | grep -i x-robots
+  # and it should return nothing at all.
+  X-Robots-Tag: noindex
+
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
