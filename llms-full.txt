@@ -4261,6 +4261,14 @@ The guard keys on `sitemap.xml`, because that is this site’s own manifest of p
 
 Two smaller things, each paid for by watching it go wrong. **A definition list is one target**, like a quotation — the specimen block fragmented into twelve note buttons first, which is the cropping fault from the other direction. And **a note whose paragraph is rewritten under it is marked, never dropped**: it re-attaches by position, says so on its face, and still exports. Silently losing a reviewer’s note is the worse failure.
 
+Re-determinedNetlify does not noindex a branch deploy, and “promotion is a merge” was wrong the day it was written
+
+The entry above asked for one `curl` against the first real branch deploy, and it was worth asking. The `.netlify.app` rule in `\_redirects` does **not** reach a branch host, as expected. But **Netlify sends no `X-Robots-Tag` on a branch deploy at all** — Deploy Previews get one, branch deploys do not. The draft page itself was covered by its own three-line block; the **full copy of all 27 published pages** that a branch deploy also carries had nothing but `rel=canonical` holding it. Real mitigation, and exactly what this site already judged insufficient one layer up, where the apex `.netlify.app` host is 301’d rather than left to canonicals.
+
+`\_headers` on the drafts branch now carries `X-Robots-Tag: noindex` on `/\*`, and **that line must never reach the published site** — if it does, every page here drops out of every index.
+
+**It is safe only because of a correction to the day’s own design.** Promotion takes the file and never merges the branch. “Promotion is a merge” was written into [what is settled](https://queering.earth/what-is-settled) and into the house rules before the branch had more than one thing on it, and it was wrong on its own terms: **a branch holding three drafts cannot be merged to publish one of them.** Cherry-picking the single file is what the workflow required anyway, so the header costs nothing that was not already being spent. The two halves are one decision, and weakening either breaks the other.
+
 2026 · 12 September
 
 ## A gate that had been measuring in somebody else’s browser for five days, and a runner that makes a one-page edit cost a minute
@@ -7179,7 +7187,7 @@ Ryan Boren, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-238 entries across 65 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+239 entries across 65 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -9443,7 +9451,7 @@ Ryan asked for a lightweight way to publish a draft for Helen to review before i
 
 **The problem splits, and only half of it was ever hard.** Reading a draft never needed an account — a deploy URL is a URL, and a Netlify branch deploy gives a permanent one. **Giving feedback** was the whole difficulty, because a PR comment thread was the entire answer.
 
-**Drafts live at the root of a long-lived `drafts` branch.** A `drafts/` folder on `main` was the other candidate and it works mechanically: every generator and every gate here reads `readdir(ROOT)` non-recursively and `check.mjs` filters `!c.includes('/')`, so a subdirectory is invisible to all of it with **no `NOT\_CONTENT` entries to keep in step** — which is better than the usual exclusion-list answer, since a second list is the drift this repo keeps warning about. It was refused for two reasons that are not about plumbing. It would put unreviewed attributions on **queering.earth** itself, unlisted but public and unauthenticated, which is precisely the exposure `ATTRIBUTIONS.md` exists around; and a page in a subdirectory needs `../queering.css`, so it does not render what will ship and promotion becomes a rewrite of every asset href. On a branch the draft is byte-identical to the published page and promotion is a merge.
+**Drafts live at the root of a long-lived `drafts` branch.** A `drafts/` folder on `main` was the other candidate and it works mechanically: every generator and every gate here reads `readdir(ROOT)` non-recursively and `check.mjs` filters `!c.includes('/')`, so a subdirectory is invisible to all of it with **no `NOT\_CONTENT` entries to keep in step** — which is better than the usual exclusion-list answer, since a second list is the drift this repo keeps warning about. It was refused for two reasons that are not about plumbing. It would put unreviewed attributions on **queering.earth** itself, unlisted but public and unauthenticated, which is precisely the exposure `ATTRIBUTIONS.md` exists around; and a page in a subdirectory needs `../queering.css`, so it does not render what will ship and promotion becomes a rewrite of every asset href. On a branch the draft is byte-identical to the published page.
 
 **The failing gates on that branch are a feature.** `check-addresses` names the missing `301!`, `check-card-order` the missing card, `check-sitemap` the missing `<loc>` — the accession checklist, reported by name, on a page that is not supposed to pass yet.
 
@@ -9461,7 +9469,15 @@ Ryan asked for a lightweight way to publish a draft for Helen to review before i
 
 **There is no draft template, on purpose.** A skeleton page would be a second copy of the markup every sheet already carries, and it would rot. Copy the nearest sheet.
 
-**Open, and worth one `curl` on the first real draft:** whether Netlify's automatic `X-Robots-Tag: noindex` covers branch deploys as well as deploy previews, and whether the `.netlify.app` rule in `\_redirects` reaches a branch host. It names the production hostname, so it should not — but this house measures rather than remembers, and that is exactly the shape of assumption that put two invalid link relations on every response for a month.
+**Both open questions were closed the same day, by the curl this entry asked for, and one answer was the bad one.** The `.netlify.app` rule in `\_redirects` does **not** reach a branch host — no `location:`, as expected. But **Netlify does not send `X-Robots-Tag` on a branch deploy at all**: `drafts--queering-earth.netlify.app/on-being-ill` answered 200, bare. Deploy Previews get the header; branch deploys do not. The draft page itself was covered, because `noindex, nofollow` is one of the three lines in its own block — but a branch deploy carries a **full copy of all 27 published pages**, and those had only `rel=canonical` holding them. That is real mitigation and it is the standard cross-host mechanism, but it is exactly what this site already judged insufficient one layer up, where `\_redirects` 301s the `.netlify.app` apex rather than leaning on canonicals.
+
+**The fix and a correction to this entry's own design, which are one thing.** `\_headers` on the `drafts` branch carries `X-Robots-Tag: noindex` on `/\*`, and that line must never reach `main` — if it does, every page on the site drops out of every index. It is safe only because **promotion takes the file and never merges the branch**: `git checkout drafts -- on-being-ill.html` from `main`, then the accession checklist.
+
+*Promotion is a merge* was written into this entry and into `CLAUDE.md` before the branch had more than one thing on it, and it was wrong on its own terms: **a long-lived branch holding three drafts cannot be merged to publish one of them** — it publishes all three. Cherry-picking the single file is what the workflow required anyway, so the header costs nothing it was not already going to cost. The two halves are one decision and weakening either breaks the other.
+
+**Rejected: Deploy Previews instead of a branch deploy.** Netlify does noindex those, and Helen would never see GitHub — Ryan would open the PR and send her the URL. But the URL changes per pull request, so she loses the stable bookmark that was the whole point, and a PR would have to exist for every draft. Not worth it for a header that one line supplies.
+
+**Nothing gates the header.** The live probe is `curl -sI https://queering.earth/ | grep -i x-robots`, and an offline gate cannot tell which branch it is reading without asking git, which was judged not worth the fragility for a rule whose failure is this loud.
 
 ### `tools/check.mjs`, and a gate that spent five days measuring in a browser it did not launch (2026-09-12)
 

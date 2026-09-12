@@ -15,7 +15,8 @@
       <pubDate>Sat, 12 Sep 2026 12:00:00 GMT</pubDate>
       <description>Re-determined: The review path this site had written down did not work for the person it named
 Cabinet: Drafts live on a branch, and drafts/review.js lets a reviewer write on them
-Cabinet: check-metadata.mjs check 10, and four faults found by measuring what no gate measures</description>
+Cabinet: check-metadata.mjs check 10, and four faults found by measuring what no gate measures
+Re-determined: Netlify does not noindex a branch deploy, and promotion is a merge was wrong the day it was written</description>
     </item>
     <item>
       <title>A gate that had been measuring in somebody else’s browser for five days, and a runner that makes a one-page edit cost a minute</title>

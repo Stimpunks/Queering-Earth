@@ -360,6 +360,15 @@
           <p>Two smaller things, each paid for by watching it go wrong. <strong>A definition list is one target</strong>, like a quotation &mdash; the specimen block fragmented into twelve note buttons first, which is the cropping fault from the other direction. And <strong>a note whose paragraph is rewritten under it is marked, never dropped</strong>: it re-attaches by position, says so on its face, and still exports. Silently losing a reviewer&rsquo;s note is the worse failure.</p>
         </div>
       </div>
+    
+      <div class="qe-entry qe-entry--redet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--redet">Re-determined</span><span class="qe-entry-name">Netlify does not noindex a branch deploy, and <q>promotion is a merge</q> was wrong the day it was written</span></div>
+        <div class="qe-entry-body">
+          <p>The entry above asked for one <code>curl</code> against the first real branch deploy, and it was worth asking. The <code>.netlify.app</code> rule in <code>_redirects</code> does <strong>not</strong> reach a branch host, as expected. But <strong>Netlify sends no <code>X-Robots-Tag</code> on a branch deploy at all</strong> &mdash; Deploy Previews get one, branch deploys do not. The draft page itself was covered by its own three-line block; the <strong>full copy of all 27 published pages</strong> that a branch deploy also carries had nothing but <code>rel=canonical</code> holding it. Real mitigation, and exactly what this site already judged insufficient one layer up, where the apex <code>.netlify.app</code> host is 301&rsquo;d rather than left to canonicals.</p>
+          <p><code>_headers</code> on the drafts branch now carries <code>X-Robots-Tag: noindex</code> on <code>/*</code>, and <strong>that line must never reach the published site</strong> &mdash; if it does, every page here drops out of every index.</p>
+          <p><strong>It is safe only because of a correction to the day&rsquo;s own design.</strong> Promotion takes the file and never merges the branch. <q>Promotion is a merge</q> was written into <a href="/what-is-settled">what is settled</a> and into the house rules before the branch had more than one thing on it, and it was wrong on its own terms: <strong>a branch holding three drafts cannot be merged to publish one of them.</strong> Cherry-picking the single file is what the workflow required anyway, so the header costs nothing that was not already being spent. The two halves are one decision, and weakening either breaks the other.</p>
+        </div>
+      </div>
     </section>
 
 

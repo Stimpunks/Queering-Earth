@@ -67,6 +67,14 @@ The guard keys on `sitemap.xml`, because that is this site’s own manifest of p
 
 Two smaller things, each paid for by watching it go wrong. **A definition list is one target**, like a quotation — the specimen block fragmented into twelve note buttons first, which is the cropping fault from the other direction. And **a note whose paragraph is rewritten under it is marked, never dropped**: it re-attaches by position, says so on its face, and still exports. Silently losing a reviewer’s note is the worse failure.
 
+Re-determinedNetlify does not noindex a branch deploy, and “promotion is a merge” was wrong the day it was written
+
+The entry above asked for one `curl` against the first real branch deploy, and it was worth asking. The `.netlify.app` rule in `\_redirects` does **not** reach a branch host, as expected. But **Netlify sends no `X-Robots-Tag` on a branch deploy at all** — Deploy Previews get one, branch deploys do not. The draft page itself was covered by its own three-line block; the **full copy of all 27 published pages** that a branch deploy also carries had nothing but `rel=canonical` holding it. Real mitigation, and exactly what this site already judged insufficient one layer up, where the apex `.netlify.app` host is 301’d rather than left to canonicals.
+
+`\_headers` on the drafts branch now carries `X-Robots-Tag: noindex` on `/\*`, and **that line must never reach the published site** — if it does, every page here drops out of every index.
+
+**It is safe only because of a correction to the day’s own design.** Promotion takes the file and never merges the branch. “Promotion is a merge” was written into [what is settled](https://queering.earth/what-is-settled) and into the house rules before the branch had more than one thing on it, and it was wrong on its own terms: **a branch holding three drafts cannot be merged to publish one of them.** Cherry-picking the single file is what the workflow required anyway, so the header costs nothing that was not already being spent. The two halves are one decision, and weakening either breaks the other.
+
 2026 · 12 September
 
 ## A gate that had been measuring in somebody else’s browser for five days, and a runner that makes a one-page edit cost a minute
