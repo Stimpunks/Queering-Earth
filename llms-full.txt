@@ -67,6 +67,10 @@ In accession order, which is the order they were mounted and not an order to rea
 
 [  Essay No. 11  My Gloomy Sunflowers ](https://queering.earth/gloomy-sunflowers)
 
+-
+
+[  Essay No. 12  Every Day’s Most Quiet Need ](https://queering.earth/most-quiet-need)
+
 The same run sits on the [front of the cabinet](https://queering.earth/#what-grows-here) with a sentence of gloss under each card. **Those sentences live in one place and this is not it.** Ten descriptions copied onto a second page are ten descriptions free to drift from the first, and the copy that drifts is never the one anybody is looking at. What this page has that the front does not is everything below.
 
 ## What a sheet is
@@ -2929,6 +2933,267 @@ Provenance Mounted [11 September 2026](https://queering.earth/changelog#a-2026-0
 
 ---
 
+# Every Day’s Most Quiet Need
+
+https://queering.earth/most-quiet-need
+The plate · updated 2026-09-12
+
+1. [Queering Earth](https://queering.earth/)
+2. [The plate](https://queering.earth/the-plate)
+
+Sheet · an essay
+
+# Every Day’s Most Quiet Need
+
+I have spent a lot of my life wanting somebody, at very high volume, and saying nothing about it. The word for that is **limerence**, and the literature I can find on it reaches for “excessive” and “obsessive” and “immature” almost before it has finished describing the thing. I want to put four objects next to that vocabulary. A piece of music that never resolves. A sonata named after a man who refused to play it. A novel in which one man waits fifty-three years and is not, in the end, wrong. And a sonnet everybody thinks they know, which does something in its fifth line that I have never seen anyone give it credit for. **The canon is full of people loving exactly the way I do.** It is only a disorder when I am the one doing it.
+
+## The suspension
+
+Start with the sound of it.
+
+[  Play the recording Philip Glass, *Mad Rush* · on YouTube ](https://www.youtube.com/watch?v=wVrODAN0xkM)
+
+Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
+
+Philip Glass, *Mad Rush*, from *Philip Glass: Solo Piano* (CBS Masterworks, 1989), the composer at the piano. Delivered to YouTube by Sony Classical.
+
+**If you cannot listen to it, here is what it does**, because a sheet whose argument can only be followed by ear is a sheet that has decided who is allowed to read it. A figure of a few notes turns over in the left hand. The right hand lays a slower line across it. The figure turns over again, and again, and by the second minute you have understood that it is going to keep turning. Twice the piece shifts into something more agitated and then subsides back into the winding. It does not build to an arrival and then arrive. **The winding is the whole event.** Eighteen minutes of a thing being held and not resolved, which stops feeling like a delay somewhere in the middle and starts feeling like a description.
+
+There is a word for the held note that makes this happen, and it is not the one I reached for first. A **suspension** is a note carried over from the chord before, sounding against a chord it no longer belongs to, and it has to fall to resolve. Two things are true about it at once. It is the past refusing to move on. **And its resolution goes downward.** Hold onto that; the sonnet at the end of this sheet does exactly the same thing, in words, and nobody reads it that way.
+
+## The carriage in the mud
+
+The other piece I keep going back to is the opening of Beethoven’s ninth violin sonata — the one the world calls the Kreutzer, after a violinist who never played a note of it. It begins alone and unaccompanied, gathers a slow ache of an introduction, and then breaks into a Presto that does not let up.
+
+[  Play the recording Beethoven, Op. 47, first movement · on YouTube ](https://www.youtube.com/watch?v=jJONuwJlkJA)
+
+Nothing is fetched from YouTube until you press play. Press it and your browser asks `www.youtube-nocookie.com` for the player, which is a request to Google — the only third party this site can reach, and only ever because you asked. [What that means.](https://queering.earth/privacy#the-embed)
+
+Beethoven, Violin Sonata No. 9 in A major, Op. 47, first movement (Adagio sostenuto – Presto). Renaud Capuçon, violin; Frank Braley, piano, from *Beethoven: Complete Violin Sonatas* (Erato, 2010). Delivered to YouTube by Warner Classics.
+
+I did not come to it that way. I came to it through a film — *Immortal Beloved*, in which Gary Oldman’s Beethoven is asked what music is, and answers by describing this sonata:
+
+Specimen — what the sound is of
+
+> A man is trying to reach his lover. His carriage has broken down in the rain. The wheels stuck in the mud. She will only wait so long. This is the sound of his agitation.
+
+Bernard Rose, *Immortal Beloved* (1994), spoken by Gary Oldman as Beethoven. [The scene is on YouTube](https://www.youtube.com/watch?v=xNq_G5QxVhk), posted by a viewer rather than by the rightsholder — we could find no copy the film’s owners are paid for, so it is a link and not an embed.
+
+**That is a screenwriter’s Beethoven, not Beethoven**, and the distinction is worth keeping because the line is doing neatly what the real history does messily. Beethoven wrote a letter in July 1812 to a woman he addressed as the Immortal Beloved. It was never delivered. Nobody has established for certain who she was; the film picks somebody, and the letter does not. What survives is the reaching, with the destination struck out. Rose invented a carriage to stand in a place that is genuinely empty.
+
+And the wheels-in-the-mud image is the right one for a reason the film does not go into. **The agitation is a function of the barrier, not of the beloved.** A man who gets there is not making that sound.
+
+## The physics of the barrier
+
+Somebody has already written the mechanism down precisely, and put it in the mouth of the villain.
+
+Specimen — the World Controller explains feeling
+
+> Impulse arrested spills over, and the flood is feeling, the flood is passion, the flood is even madness: it depends on the force of the current, the height and strength of the barrier. The unchecked stream flows smoothly down its appointed channels into a calm well-being.
+
+Mustapha Mond, in Aldous Huxley, *Brave New World* (1932), chapter 3.
+
+Mond is the Resident World Controller for Western Europe and he is not praising longing. He is explaining why his civilisation abolished it. Remove the interval between wanting a thing and having it, take down the barrier, and there is no flood — no feeling, no passion, no madness, and no further need for any of them. He calls what is left **stability**, and the whole book is the argument that he got exactly what he asked for.
+
+**I take his description and refuse his prescription.** The physics is right: the height of the barrier sets the force of the flood, which is why the sonata sounds like that and why the eighteen minutes wind. But a society that engineers away every obstacle so nobody ever floods has not cured longing. It has removed the conditions under which a person could want something they do not have, which is most of what I mean when I say I am alive.
+
+Say it plainly, because the same move gets made about limerence constantly, wearing a lab coat. **The flood gets treated as the pathology.** Almost nobody asks what the barrier was, or who built it, or why the current was running that hard to begin with.
+
+And Mond’s hydraulics are not a novelist’s conceit. Dorothy Tennov, who coined the word *limerence*, spent years collecting accounts of it, and the barrier is in her findings as a plain condition of the thing:
+
+Specimen — what the state requires
+
+> For the process to develop fully, some form of uncertainty or doubt, or even some threat to reciprocation appears necessary. There is considerable evidence that an externally imposed obstacle, such as Romeo and Juliet met in the resistance of family and society, may also serve.
+
+Dorothy Tennov, *Love and Limerence: The Experience of Being in Love* (Stein and Day, 1979), p. 26 in the Scarborough House edition of 1999.
+
+Her list of the state’s basic components carries the same fact in three words: **intensification through adversity.** Mond says the height of the barrier sets the force of the flood; Tennov found it by asking several hundred people. **An externally imposed obstacle, such as Romeo and Juliet met in the resistance of family and society** — hold that sentence until the end of this sheet, where a woman writes forty-four sonnets she does not show anybody, in a house with a father in it.
+
+## Fifty-three years, seven months, and eleven days
+
+My obsessive windings like stories of archaic and boldly romantic love, and *Love in the Time of Cholera* is the cathedral of them. Florentino Ariza waits for Fermina Daza for fifty-three years, seven months, and eleven days and nights. He does not stop. He is not cured.
+
+García Márquez knows precisely what he is describing, and he has the local doctor say it out loud:
+
+Specimen — the diagnosis
+
+> All that was needed was shrewd questioning, first of the patient and then of his mother, to conclude once again that the symptoms of love were the same as those of cholera.
+
+Gabriel García Márquez, *Love in the Time of Cholera* (1985), translated by Edith Grossman (Knopf, 1988); p. 58 in the Vintage International edition.
+
+It is a joke and it is also the title of the book. Lovesickness presents as an epidemic disease; the weak pulse, the pallor, the urgent wish to die. The doctor prescribes linden blossom and a change of air, which is the nineteenth century’s “go and touch some grass”, and the patient declines it:
+
+Specimen — the cure refused
+
+> He prescribed infusions of linden blossoms to calm the nerves and suggested a change of air so he could find consolation in distance, but Florentino Ariza longed for just the opposite: to enjoy his martyrdom.
+
+Gabriel García Márquez, *Love in the Time of Cholera* (1985), translated by Edith Grossman (Knopf, 1988); p. 58 in the Vintage International edition.
+
+I recognise that, and not the martyrdom part. The refusal. There is something inside the state that I did not want to be talked out of, because being talked out of it would have meant the thing I was reaching toward was never worth the reaching, and I knew that it was.
+
+## On the shelf, and in the clinic
+
+Here is the thing this sheet is actually for.
+
+Everything above is one kind of attention doing one kind of thing. A man holds a single channel open for fifty-three years and will not be redirected. A composer never gets over a letter he did not send and writes the ache into a sonata. A pianist writes eighteen minutes that refuse to arrive. **Those are masterpieces.** We give them Nobel prizes and concert halls and a shelf each. When people describe what those works are about, the words are “great” and “enduring” and “the immense ache of this world”.
+
+Now take the identical behaviour — attention that pools around one person, will not redirect, replays every exchange, survives years without reciprocation, refuses the cure — and put it in an Autistic person. The words change completely. **Excessive. Obsessive. Immature. Unhealthy.** Those four are not my straw men; they are the list Helen Edgar gives of how the literature actually frames limerence when it mentions autism at all.
+
+**Same behaviour. Masterpiece on the shelf, symptom in the clinic.** The only variable that moved is who was doing it.
+
+I do not think the canon is wrong about Florentino. I think the clinic is wrong about me, and I think the canon is the evidence. A culture that has built its highest romantic art out of unreciprocated single-channel devotion does not get to turn round and call that devotion a deficit when a monotropic person arrives holding it. **Either the sonata is a symptom too, or my longing is not one.**
+
+## The lake
+
+Helen Edgar and Stimpunks put a **Lake of Limerence** on the [Map of Monotropic Experiences](https://stimpunks.org/projects/map-of-monotropic-experiences/). It sits on the same island as the **River of Monotropic Flow States**, and the difference between those two pieces of water is the whole of what I am trying to say. A river has an outlet. A lake does not. Water gathers in a lake and stays.
+
+Specimen — what appears small on the map
+
+> For many Autistic people, this “lake” is anything but calm; it can feel vast, deep, and difficult to leave. What appears small on the map often becomes an entire landscape of longing, memory, and relational intensity, full of possibilities and ‘what ifs’ and ‘maybe’s.
+
+Helen Edgar, [*Monotropism, Limerence And Autistic ADHD Experiences*](https://autisticrealms.com/monotropism-limerence-and-autistic-adhd-experiences/), Autistic Realms, 12 February 2026.
+
+The map calls that a [stuck state](https://autisticrealms.com/autism-the-map-of-neuronormative-domination-stuck-states-vs-flow-states/), as against a flow state, and **stuck is not a synonym for bad.** It is the same attention that gives me flow, pooled instead of running. [Monotropism](https://stimpunks.org/glossary/monotropism/) does not keep a separate mode for people. When something becomes emotionally significant my attention gathers around it and will not be redirected, and it draws no distinction whatever between a research question and somebody who was kind to me once.
+
+None of which is a stretch laid over Tennov’s word from outside. **It is in her definition.** Among the basic components she lists in 1979, between the intrusive thinking and the fear of rejection, is this one: “inability to react limerently to more than one person at a time.” A quarter of a century before monotropism had a name, the woman who named limerence had written single-channel attention into what the thing *is*. She did not mean anything about autism by it. She was describing what several hundred people told her it was like.
+
+Here is mine.
+
+I felt limerence hard in high school. It was overwhelming. I never said anything to the person. **I didn’t want my feelings to be their problem.**
+
+I could fall hard for people who were kind to me. The smallest kindness made them bright in my eyes. I never said anything. I tried to be a good friend.
+
+I was the stereotypical Autistic kid in that I was awkward, afraid, and alone. My first date and first kiss were in my mid twenties. I didn’t think that would ever happen.
+
+I had no [co-regulation](https://stimpunks.org/glossary/co-regulation/) at home. My parents wouldn’t let me in their bed when I was terrified at night. I slept in the hallway, on the hardwood floor, with the lights on. No hugging. No cuddling. Ever.
+
+## What the lake was for
+
+A lot of the power of my limerence probably came from that desperate need for kindness and co-regulation.
+
+That is the part the pathology framing cannot see from where it stands. My limerence was not misfiring desire. It was an accurate instrument pointed at a real absence. I experience it as a longing for connection, [belonging](https://stimpunks.org/glossary/belonging/), and legibility — which is to say, for precisely the things that were not in that hallway. Anissa Ljanta describes limerence as a coping strategy, a way a nervous system reaches for regulation through imagined closeness. Read like that, **the flood is not the disease. The flood is the reading on the gauge.**
+
+There is a second hazard in the lake and it took me decades to name. Several times in my career I had a work-wife or a work-husband, somebody I teamed up with constantly. Package deals. I have come to think about those in terms of mutual limerence and **memory-foaming** — Attlee Hall’s word for the Autistic habit of taking the shape of whatever you come into contact with, conceding and bending and making yourself agreeable to the point of self-alienation:
+
+Specimen — becoming the room
+
+> It’s much easier to read, and become, the room than it is to try to read my own instincts.
+
+Attlee Hall, [*Autistic “Memory-Foaming”*](https://medium.com/@attleehall/autistic-memory-foaming-2cfecfcb9e8c).
+
+So the danger of the lake is not only that you cannot get out of it. **It is that you dissolve in it.** You mould to the person you are longing toward, become soft and accommodating and easy to have around, and after a while the longing is hard to tell apart from the disappearing. You are reaching for legibility by making yourself illegible. It does not work, and it cannot work, and that is a structural fact about the method rather than a shortcoming in the person.
+
+My heart’s all over the place.
+
+## And then the timing is right
+
+Stories of bad timing and could-have-beens. Lives lived longing for what never was.
+
+And then, one day, the timing is right, and the could-have-been becomes the requited actually.
+
+Florentino gets his. It takes fifty-three years and a riverboat flying a cholera flag so they will not have to put in anywhere. And what he imagines on the way to it is not the flood at all:
+
+Specimen — the other happiness
+
+> He saw no reason why Fermina Daza should not be a widow like them, prepared by life to accept him just as he was, without fantasies of guilt because of her dead husband, resolved to discover with him the other happiness of being happy twice, with one love for everyday use which would become, more and more, a miracle of being alive, and the other love that belonged to her alone, the love immunized by death against all contagion.
+
+Gabriel García Márquez, *Love in the Time of Cholera* (1985), translated by Edith Grossman (Knopf, 1988); p. 198 in the Vintage International edition.
+
+**One love for everyday use.** Fifty-three years of the most operatic longing in the language, and the thing he is finally reaching for is domestic. Not the flood. The channel.
+
+And notice what requital is doing there, because it is not what the clinic would do. Nobody treated Florentino. Nobody redirected his attention, distracted him, prescribed him an interest, or talked him out of it. **The stuck state ended because somebody arrived in it.** That is co-regulation, not therapy, and the difference is the whole argument: you do not fix a lake by draining it, you give it a river.
+
+## Every day’s most quiet need
+
+Specimen — the sonnet, entire
+
+> How do I love thee? Let me count the ways.\
+> I love thee to the depth and breadth and height\
+> My soul can reach, when feeling out of sight\
+> For the ends of being and ideal grace.\
+> I love thee to the level of every day’s\
+> Most quiet need, by sun and candle-light.\
+> I love thee freely, as men strive for right.\
+> I love thee purely, as they turn from praise.\
+> I love thee with the passion put to use\
+> In my old griefs, and with my childhood’s faith.\
+> I love thee with a love I seemed to lose\
+> With my lost saints. I love thee with the breath,\
+> Smiles, tears, of all my life; and, if God choose,\
+> I shall but love thee better after death.
+
+Elizabeth Barrett Browning, Sonnet 43 of *Sonnets from the Portuguese*, first published 1850. Text as the [Academy of American Poets](https://poets.org/poem/how-do-i-love-thee-sonnet-43) prints it.
+
+It is probably the most quoted love poem in English, which is a good way for a poem to become invisible. Read the first five lines slowly.
+
+The soul reaches to the end of its own capacity — “the depth and breadth and height”, three dimensions of it, a measured volume — and it is reaching “when feeling out of sight”. In the dark. Toward something not there. **That is the lake, and the suspension, and a man in a carriage with the wheels stuck.** Four lines of pure unreciprocated reaching, at the top of the poem, in the register of the sublime.
+
+And then the poem does something no one expects a love sonnet to do. **It comes down.**
+
+“I love thee to the level of every day’s / Most quiet need, by sun and candle-light.” *Level*, in a poem that has just finished measuring *height*. The flood arriving at grade. It is the same move the suspension makes in music: the held thing finally falls, and falling is how it resolves.
+
+The standard reading treats that line as the modest beat — the humble domestic interlude before the sonnet climbs back up to saints and God and death, where the real ambition supposedly lives. **I think it is the most ambitious line in the poem, and I think the poem knows it.** It is the only line that names both the sun and a candle: daylight and night, the whole revolution of one ordinary day. Anyone can love at altitude for an evening. Sustaining it at the level of every day’s most quiet need — every day, at both ends of every day, at the unglamorous scale of what a person actually needs — is the hard thing.
+
+**And read from a bodymind that has never had it, it is not the modest ask. It is the enormous one.** I knew what altitude felt like by fifteen. I did not know what the level felt like until I was well into my twenties. The sublime was never the part I could not imagine. The quiet need was.
+
+Elizabeth Barrett and Robert Browning wrote to each other across a barrier of the kind Mond wanted abolished: her father, her illness, a courtship conducted largely in letters, a marriage made in secret and paid for with her disinheritance. The sonnets were written during that, and she did not show them to him until afterwards. **The height of the barrier set the force of the flood.** And then they eloped, and had fifteen years in Florence, and the flood went where Huxley’s villain says it goes: “down its appointed channels into a calm well-being.”
+
+Which is Mond’s sentence, and I have taken it off him. He meant it as an argument for never damming anything. I mean it as a description of what it is like when the dam finally opens.
+
+## The swell and the dwell
+
+I wrote the other half of this on Dickinson, on [Sheet No. 6](https://queering.earth/wild-nights), and it turns out to have been about this all along:
+
+Specimen — from the sheet next door
+
+> The swell is of sensory passion and exploration, of bodyminds alive and alight in luxurious abandonment. The dwell is of belonging and legibility — where you can put down the compass and the chart and just be: accepted and understood.
+
+From [*The Swell and the Dwell*](https://queering.earth/wild-nights), Sheet No. 6.
+
+Everything on this sheet is a swell that was *about* a dwell. That is the thing I did not understand for about thirty years. I thought I was having enormous feelings about particular people. What I was doing was longing, at maximum volume, for a *condition* — connection, belonging, legibility — that I had no experience of, and so could only picture attached to somebody’s face.
+
+It also explains why the memory-foaming and the limerence ran together in me. If what you want is to be legible, and the only route you have ever found to being kept is to become the shape of the room, then **you will pursue legibility by way of self-erasure, indefinitely, and never arrive.** The lake has no outlet because you keep filling it with yourself.
+
+And the last word on that should go to the person who named the state, in the same paragraph in which she named it:
+
+Specimen — not preeminent
+
+> A relationship that includes no limerence may be a far more important one in your life, when all is said and done, than any relationship in which you experienced the strivings of limerent passion. Limerence is not in any way preeminent among types of human attractions or interactions; but when limerence is in full force, it eclipses other relationships.
+
+Dorothy Tennov, *Love and Limerence* (1979), p. 16 in the Scarborough House edition of 1999, continuous and unaltered.
+
+**She is pointing at the dwell.** Not as a consolation for people who failed at the swell, but as the thing that was more important all along, said by the one person with the least reason to undersell limerence — she gave it its name and a book.
+
+The dwell is the outlet. Not because being loved back cures the longing — it does not, and I would not want it to. Because being met *as yourself* is the single thing that stops the reaching being the only activity available. You can put down the compass. **That is not the end of love. That is love at the level of every day’s most quiet need**, which is where the sonnet said it was going in its fifth line, before anybody was listening.
+
+Florentino is asked, on the last page, how long they can keep going up and down the river like this.
+
+Specimen — the answer he had ready
+
+> Florentino Ariza had kept his answer ready for fifty-three years, seven months, and eleven days and nights.
+
+> “Forever,” he said.
+
+Gabriel García Márquez, *Love in the Time of Cholera* (1985), translated by Edith Grossman (Knopf, 1988); p. 345 in the Vintage International edition. These are the last lines of the novel, and 345 is its last page.
+
+## What this sheet does not settle
+
+Left open on purpose
+
+- **Every object on this sheet assumes love ends in two people, and I do not.** Browning’s sonnet is addressed to one “thee”. Florentino wants *one* love for everyday use. The marriage plot, the elopement, the riverboat: all of it terminates in a dyad. Elizabeth Brake’s word for that assumption is [*amatonormativity*](https://global.oup.com/academic/product/minimizing-marriage-9780195774144) — the belief that a central exclusive romantic pairing is the proper destination of a life. My monotropic attention does not produce one beloved. It produces many, in sequence and at once, and a work-spouse is one of the shapes it takes. **Which is a real problem for the vocabulary, and I would rather leave it visible than solve it with a word.** Tennov’s own criteria include the “inability to react limerently to more than one person at a time”, so on a strict reading the wider thing I am describing — wanting to co-regulate with nearly everybody — is not limerence at all, whatever the episodes with single people were. I do not know whether that means her definition is too narrow, or my word is too loose, or the two states are genuinely different and I have been calling both by the louder name. There are so many ways to love and people to love. I fall for everyone. I want to co-regulate with everyone. Monogamy does not make sense to me, though I am well-practised at it at this point. **The canon only knows how to hand me one, and that is a limit of the canon rather than of me.** This sheet arrives at the dwell and stops there; the question of how many dwells a person is allowed is a different sheet and it has not been written.
+- **Tennov is now read first-hand; the monotropism literature is not.** Every Tennov passage on this sheet was read in *Love and Limerence* itself. Dinah Murray, Wenn Lawson and Mike Lesser set out monotropism in 2005, and McDonnell and Milton describe attention “clumping” in 2014; both reached this sheet through [Helen Edgar’s essay](https://autisticrealms.com/monotropism-limerence-and-autistic-adhd-experiences/), which cites them properly, and **neither primary has been opened here.**
+- **Opening Tennov corrected an attribution this sheet was about to make.** A draft said she “described the crystallisation that idealises the limerent object”, which is true and misleading in the way that matters. **Crystallisation is Stendhal’s**, from *De l’Amour* in 1822 — the branch thrown into a salt mine and taken out months later as an object of shimmering beauty — and Tennov says so plainly on her page 30, calling it the term “he gave”. She is the one who carried it forward, and he is the one it belongs to. It reached us as hers because we had read a summary rather than the book, which is the whole argument for reading the book.
+- **The *Love in the Time of Cholera* passages were found in one copy and paginated from another, and both are named because neither would be honest alone.** The wording was read and checked character for character against a scan Ryan holds, which carries no usable pagination and is not an authorised copy. The page numbers come from his Vintage International ebook, whose reader shows a publisher-supplied page map — **checked by changing the text size and confirming the numbers do not move**, which is the difference between a book’s pagination and a device’s. A number that shifted with a font setting would be worse than none: it would look exact and be unreproducible for every other reader.
+- **The *Immortal Beloved* scene is linked to an upload the rightsholder is not paid for.** [Our policy](https://queering.earth/how-we-quote) asks for a copy whose owner gets something, and for this film we could not find one — no official clip, no licensed excerpt. The two recordings this sheet *embeds* both come from the rightsholders’ own deliveries, Sony Classical and Warner Classics. The film scene gets a plain link instead, so that following it is the reader’s decision and not a request this page makes on their behalf. **It is a relaxation of the rule and it is recorded as one.**
+- **Whether a stuck state ever simply ends is not something one life can answer.** Mine did, once, and this sheet is honest that the ending arrived from outside rather than from anything I did. That is a reason to build the conditions for co-regulation and a poor reason to tell anybody currently in the lake to wait. **I do not know what to say to the version of me who is still in the hallway**, except that the reaching was not the fault.
+
+Queering Earth Sheet No. 12 Accessioned 12 Sep 2026
+
+Provenance Mounted [12 September 2026](https://queering.earth/changelog#a-2026-09-12-quiet-need). Not yet corrected.
+
+
+---
+
 # The founding papers
 
 https://queering.earth/the-founding-papers
@@ -3564,6 +3829,10 @@ Every sheet mounted so far, numbered below in the order it was accessioned. [Abo
 
 [  Essay No. 11  My Gloomy Sunflowers Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth Four artists filed under *tortured*, and three archives that each say the work was the thing going well. ](https://queering.earth/gloomy-sunflowers)
 
+-
+
+[  Essay No. 12  Every Day’s Most Quiet Need Ryan Boren, 2026 Limerence as monotropic attention, and the line where a love sonnet stops climbing and comes down. ](https://queering.earth/most-quiet-need)
+
 The border is four flowers that were once a way of saying it without saying it: *violet*, *pansy*, *green carnation*, *lavender*. Gathered as a set by Sarah Prager in [*Four Flowering Plants That Have Been Decidedly Queered*](https://daily.jstor.org/four-flowering-plants-decidedly-queered/), JSTOR Daily, 29 January 2020.
 
 What follows will be made the way [Star Stuff](https://starstuff.earth/) is made — a piece at a time, in public, with the working-out left in, by [Helen Edgar](https://morerealms.com/) and the [Stimpunks Foundation](https://stimpunks.org/). Come back and watch it fill in.
@@ -3961,6 +4230,48 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Cabinet
 
 2026 · 12 September · latest
+
+## Sheet No. 12, and a rule relaxed on the record rather than quietly
+
+An essay that began as a note in the inbox about a piece of music, and turned into an argument about who is allowed to love the way the canon does.
+
+Mounted[Every Day’s Most Quiet Need](https://queering.earth/most-quiet-need), Sheet No. 12, an essay
+
+Limerence, read as monotropic attention rather than as a disorder. Four objects are held against that vocabulary — Glass’s *Mad Rush*, the first movement of Beethoven’s Op. 47, Mustapha Mond’s hydraulics of feeling in *Brave New World*, and Florentino Ariza’s fifty-three years — and then Elizabeth Barrett Browning’s Sonnet 43, which does something in its fifth line the standard reading treats as the modest beat.
+
+**The argument the sheet exists for is the asymmetry.** Attention that pools on one person, will not redirect, survives years without reciprocation and refuses the cure is a masterpiece when a novelist does it and a symptom when an Autistic person does it. The canon is the evidence, and this sheet puts it on the record: either the sonata is a symptom too, or the longing is not one.
+
+The drawing is a *Myosotis* — a water forget-me-not, which grows at the margin of standing water. **Its flower-head is a scorpioid cyme and the coil is computed rather than drawn**, sampled off a spiral whose radius grows as it unwinds, with tight buds at the curled tip and open flowers along the uncoiled part. Drawn by hand it came out a snail. The plant was chosen because the coil unwinds, which is the shape of the sheet’s own argument, and because its common name is the thing the whole essay is about.
+
+CabinetTwo recordings from the rightsholders, and one link that is not
+
+Both embedded recordings are the owners’ own deliveries and were verified as such before they were mounted, not assumed from the channel name: *Mad Rush* is Sony Classical’s delivery of the 1989 *Solo Piano* recording with Glass himself at the piano, and the Op. 47 first movement is Warner Classics’ delivery of Renaud Capuçon and Frank Braley. The first draft of this sheet carried a listener’s upload of the Glass; **the official one exists and was found by looking**, which is the outcome the policy is for.
+
+**The *Immortal Beloved* scene has no such copy and is linked rather than embedded.** No official clip or licensed excerpt of the film could be found. [The policy](https://queering.earth/how-we-quote) asks for a copy the rightsholder is paid for; this is not one, and the relaxation is Ryan’s call, recorded here and stated on the sheet’s own face in [what it does not settle](https://queering.earth/most-quiet-need#untidy). A link is a request the reader makes; an embed is one the page makes for them. **That distinction is the whole of what the relaxation rests on**, and it is why the film gets a link and not a facade.
+
+Label correctedFour quotations that said “no page numbers” now carry four
+
+The sheet shipped its *Love in the Time of Cholera* passages with the wording verified and the pagination missing, because the only copy to hand was an unauthorised scan with none. Ryan looked them up: **58, 58, 198, and 345** — the last being the final page of the novel. The citations now name both copies, because neither is enough alone. Knopf 1988 is where Edith Grossman’s translation was first published; the **Vintage International** edition is where these numbers live.
+
+**The page map was tested before it was believed, and that test is the transferable part.** A reader showing “Page 58 of 346” may be reporting the publisher’s print page map or may be inventing pages from the reader’s own font size and window width. **The two are indistinguishable on screen.** Ryan changed the text size and the numbers held, which settles it as the book’s pagination rather than the device’s. A number that moved with a font setting would have been worse than no number at all: exact-looking, authoritative, and unreproducible by any other reader. **Ask an ebook page number to prove itself before citing it.**
+
+Reading the pages also confirmed two transcriptions against the printed line rather than against the scan — Grossman’s American *immunized*, and “to enjoy his martyrdom” closing the linden-blossom passage.
+
+Label correctedCrystallisation is Stendhal’s, and the sheet was about to call it Tennov’s
+
+The sheet shipped its first draft citing Dorothy Tennov at one remove, through Helen Edgar’s essay, and said Tennov “described the crystallisation that idealises the limerent object”. She does describe it. **The term is Stendhal’s**, from *De l’Amour* in 1822 — the branch left in a salt mine and lifted out months later encrusted into something shimmering — and Tennov attributes it to him in plain words on her page 30. It had reached us through a summary that named only her.
+
+Caught because Ryan put a scan of *Love and Limerence* in the library and the book was opened. **That is the second near-miss on this one sheet**, after *memory-foaming*, and the two share a cause exactly: a term met in a secondary source and carried forward without opening the primary. The sheet now says on its own face that opening the book corrected it, because a correction a reader cannot see is a correction that only exists for us.
+
+**Reading the book also paid for itself three more times.** Tennov’s own list of the state’s components includes “intensification through adversity” and the finding that an “externally imposed obstacle, such as Romeo and Juliet met in the resistance of family and society” will serve — which is Huxley’s barrier, measured rather than asserted, and it is now mounted beside him. Her criteria also include the “inability to react limerently to more than one person at a time”, so single-channel attention was written into the definition in 1979, a quarter of a century before monotropism had a name. And she says herself that a relationship with no limerence in it “may be a far more important one in your life” — the woman who named the state, pointing at the dwell.
+
+Label correctedA borrowed term was about to be used to mean its opposite
+
+The draft reached for **memory-foaming** as though it meant fond or magnified memory. It does not. Attlee Hall’s term is for the Autistic habit of taking the shape of whatever you meet — conceding, bending and making yourself agreeable to the point of self-alienation. **Caught before it shipped, by reading the source rather than the phrase.**
+
+It is recorded here because the near-miss is the exact failure this cabinet is organised against: somebody else’s coinage, loosened one notch to fit the sentence we wanted, with the attribution still attached. Used correctly it improved the sheet — the danger of the lake is not only that a person cannot leave it but that they dissolve in it, which is Hall’s point and not ours.
+
+2026 · 12 September
 
 ## The lilacs went back to the foot of the home page, and needed a heading once they were in an outline
 
@@ -6244,6 +6555,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 
 ### [My Gloomy Sunflowers](https://queering.earth/gloomy-sunflowers) Sheet No. 11
 
+### [Every Day’s Most Quiet Need](https://queering.earth/most-quiet-need) Sheet No. 12
+
 ### [Find a word in the cabinet](https://queering.earth/search) the finding aid
 
 ### [Queering.Earth](https://queering.earth/) the plate
@@ -6302,6 +6615,14 @@ Nothing is sent anywhere when you subscribe. Your reader fetches a file, the way
 ## Everything, newest first
 
 The list below is generated by `tools/make-whats-new.mjs` and is not typed. Each title links to the page, each summary is that page’s own one-line description, and each kind and number is whatever [the plate](https://queering.earth/the-plate) says it is. **Nothing here is a second copy of anything**, which is why it cannot fall out of step with the pages it lists.
+
+### 12 September 2026
+
+-  [Every Day’s Most Quiet Need](https://queering.earth/most-quiet-need)
+
+Limerence read as monotropic attention rather than as a disorder — Glass, Beethoven, Huxley and García Márquez held against the line in Browning where a love poem stops climbing and comes down to the level of an ordinary day.
+
+Essay No. 12 · [Corrected three times since](https://queering.earth/changelog#a-2026-09-12-quiet-need)
 
 ### 11 September 2026
 
@@ -6685,6 +7006,24 @@ Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth
   - [What else it could have been](https://queering.earth/gloomy-sunflowers#what-else-it-could-have-been)
   - [If this is your weather too](https://queering.earth/gloomy-sunflowers#help)
 
+-
+
+No. 12 [Every Day’s Most Quiet Need](https://queering.earth/most-quiet-need) Essay
+
+Ryan Boren, 2026
+
+  - [The suspension](https://queering.earth/most-quiet-need#suspension)
+  - [The carriage in the mud](https://queering.earth/most-quiet-need#the-carriage)
+  - [The physics of the barrier](https://queering.earth/most-quiet-need#the-barrier)
+  - [Fifty-three years, seven months, and eleven days](https://queering.earth/most-quiet-need#florentino)
+  - [On the shelf, and in the clinic](https://queering.earth/most-quiet-need#the-clinic)
+  - [The lake](https://queering.earth/most-quiet-need#the-lake)
+  - [What the lake was for](https://queering.earth/most-quiet-need#memory-foam)
+  - [And then the timing is right](https://queering.earth/most-quiet-need#the-turn)
+  - [Every day’s most quiet need](https://queering.earth/most-quiet-need#most-quiet-need)
+  - [The swell and the dwell](https://queering.earth/most-quiet-need#the-dwell)
+  - [What this sheet does not settle](https://queering.earth/most-quiet-need#untidy)
+
 ### The founding papers
 
 -
@@ -6784,7 +7123,7 @@ Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-228 entries across 62 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+233 entries across 63 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -6881,6 +7220,65 @@ It is **not** a rule that Ryan's quote collection is unusable. A direct quotatio
 ---
 
 ## Verified
+
+### Sheet No. 12 — six sources, and one term that nearly went out meaning its opposite, read 12 September 2026
+
+**Quoted on:** [Every Day's Most Quiet Need](https://queering.earth/most-quiet-need), Sheet No. 12.
+
+**Elizabeth Barrett Browning, Sonnet 43 of *Sonnets from the Portuguese* (1850) — the whole sonnet, public domain.** She died in 1861, so the poem has been out of copyright for well over a century. Text as the [Academy of American Poets](https://poets.org/poem/how-do-i-love-thee-sonnet-43) prints it, which is the copy Ryan brought to the sheet. Mounted entire; the close reading is of lines 1–6.
+
+**Aldous Huxley, *Brave New World* (1932), chapter 3 — one sentence, spoken by Mustapha Mond.** *"Impulse arrested spills over, and the flood is feeling, the flood is passion, the flood is even madness: it depends on the force of the current, the height and strength of the barrier. The unchecked stream flows smoothly down its appointed channels into a calm well-being."*
+
+**No printed copy was opened; the wording was confirmed by full-text search across scanned editions**, which is weaker than reading the book and is recorded as such. Two things came out of doing it rather than trusting the transcription. **The house copy said "calm well being" and the printed editions carry "calm well-being"**, and the hyphen is now on the sheet. And the surrounding text — Lenina and Fanny in the changing room, cut against Mond's lecture — places it in chapter 3's intercut montage, which is what lets the sheet say who is speaking. **That attribution is load-bearing**: the sheet's argument depends on Mond being the villain and on his describing longing in order to justify abolishing it.
+
+**Gabriel García Márquez, *Love in the Time of Cholera* (1985), translated by Edith Grossman (Knopf, 1988) — four passages.** The diagnosis ("the symptoms of love were the same as those of cholera"), the cure refused, "one love for everyday use," and the last two lines of the novel.
+
+**Grossman is credited by name on every one of them, and that is not a courtesy.** The English wording is hers. "One love for everyday use" is a translator's phrase, and it is the phrase the sheet's argument turns on — it is what rhymes with Browning's "every day's / Most quiet need." Crediting only García Márquez would put her choices in his mouth, which is this file's characteristic failure wearing a respectable hat.
+
+**Found in one copy, paginated from another, and both are named.** All four passages were read in full in a scanned PDF Ryan holds and checked character for character against it. That scan is an unauthorised copy with no usable pagination, so it can support the wording and nothing else.
+
+**The page numbers come from Ryan's Vintage International ebook, read off the page on 12 September 2026:**
+
+| passage | page |
+| --- | --- |
+| "the symptoms of love were the same as those of cholera" | 58 |
+| the cure refused — linden blossoms, and enjoying his martyrdom | 58 |
+| "one love for everyday use" | 198 |
+| "Forever," he said. | 345, the last page of the novel |
+
+**The map was checked before it was trusted.** A reader that shows "Page 58 of 346" may be reporting a publisher-supplied print page map or may be generating pages from the reader's own font size and window width, and the two look identical on screen. Ryan changed the text size and the numbers did not move, which settles it: this is the book's pagination and not the device's. **A number that shifted with a font setting would have been worse than none** — exact-looking and unreproducible for anybody else.
+
+Both copies are named in the citations because neither is sufficient alone: Knopf 1988 is where Grossman's translation was first published, and the Vintage International edition is where these page numbers live. The sheet says the same thing on its own face in [what it does not settle](https://queering.earth/most-quiet-need#untidy).
+
+**Two transcriptions were confirmed against the screenshots**, not just against the scan: Grossman's US spelling *immunized* in the "everyday use" sentence, and "to enjoy his martyrdom" closing the linden-blossom passage.
+
+**Helen Edgar, *Monotropism, Limerence And Autistic ADHD Experiences*, Autistic Realms, 12 February 2026** — one paragraph, on the Lake of Limerence. Read in the SKS mirror of her site. The Lake of Limerence and the River of Monotropic Flow States are both named in the alt text of the **Map of Monotropic Experiences**, which Helen developed with Stimpunks, so the lake-and-river contrast the sheet builds on is drawn from our own map rather than invented for the occasion.
+
+**Attlee Hall, *Autistic "Memory-Foaming"* — one sentence**, and the term itself. *"It's much easier to read, and become, the room than it is to try to read my own instincts."* Read in Ryan's commonplace entry, which carries Hall's definition in full with the link.
+
+**This one is recorded as a near-miss, because it is the exact failure this file exists to catch.** A draft of the sheet used *memory-foaming* to mean fond or magnified memory — the sense the compound suggests if you have not read the source. **Hall's term means the opposite of a memory: it is self-loss by moulding to another person**, conceding and bending to the point of self-alienation. Loosening somebody's coinage one notch to fit the sentence you wanted, with their name still attached, is a tightened attribution in the other direction. It was caught by opening the source rather than by trusting the phrase, before anything shipped.
+
+**Bernard Rose, *Immortal Beloved* (1994) — one speech, spoken by Gary Oldman as Beethoven.** Supplied by Ryan from the film. **Credited to Rose and not to Beethoven**, on the sheet and here: it is a screenwriter's invention placed in a historical mouth, about a piece the real Beethoven left no comment on, and the sheet says so in the paragraph after the quotation.
+
+**Two recordings are embedded, and both are the rightsholders' own deliveries** — verified through the upload metadata before mounting, not inferred from the channel name.
+
+- **Philip Glass, *Mad Rush***, from *Philip Glass: Solo Piano* (CBS Masterworks, 1989), Glass at the piano. Delivered to YouTube by **Sony Classical**; the upload carries ℗ 1989 Sony Music Entertainment and names Glass as performer and composer. **The draft had a listener's upload of this and the official one existed** — it was found by looking, which is the outcome the policy is for.
+- **Beethoven, Violin Sonata No. 9 in A major, Op. 47, first movement**, Renaud Capuçon and Frank Braley, from *Beethoven: Complete Violin Sonatas* (Erato, 2010). Delivered to YouTube by **Warner Classics**.
+
+**The film scene is linked and not embedded, and that is a relaxation of the policy.** No official clip or licensed excerpt of *Immortal Beloved* could be found. Ryan's call, recorded in [the register](https://queering.earth/changelog#a-2026-09-12-quiet-need) and on the sheet. The reasoning that carries it: **a link is a request the reader makes and an embed is a request the page makes on their behalf**, so the two are not the same act and do not need the same permission.
+
+**Dorothy Tennov, *Love and Limerence: The Experience of Being in Love* (Stein and Day, 1979) — read first-hand on 12 September 2026**, in the Scarborough House edition of 1999, which reprints the 1979 text with a new preface. Ryan put a scan in the SKS inbox after the sheet was built, and opening it changed the sheet in four places.
+
+- **"For the process to develop fully, some form of uncertainty or doubt, or even some threat to reciprocation appears necessary…"** — p. 26. Mounted on `#the-barrier`, where it does the job of showing that Huxley's hydraulics are not a novelist's conceit.
+- **"intensification through adversity"** — p. 24, from her list of the state's basic components. Quoted as three words inside our prose.
+- **"inability to react limerently to more than one person at a time"** — p. 24, same list. **The scan's OCR reads "at a, time" and we have printed "at a time."** The comma is a scanning artifact, not a reading: no printed book sets that clause with a comma there, and every other word in the clause matches. Recorded because this file's rule is that where a copy is imperfect we say so — the same call as the mangled Holiday passage on Sheet No. 9.
+- **"A relationship that includes no limerence may be a far more important one in your life… Limerence is not in any way preeminent…"** — p. 16, two adjacent sentences quoted continuous and in the printed order. **A draft had them transposed for a better ending and that was reverted**; the punchier order was ours and not hers.
+
+**Opening Tennov corrected an attribution the sheet was about to publish.** The draft said Tennov "described the crystallisation that idealises the limerent object." She does describe it. **She did not coin it — Stendhal did**, in *De l'Amour* (1822), and Tennov attributes it to him explicitly on her p. 30, calling it the metaphorical term "he gave" and retelling his image of the branch left in a salt mine. It had reached us through a summary that named only Tennov. **This is the second near-miss on this one sheet**, after *memory-foaming*, and both have the same cause: a term met in a secondary source and carried forward without opening the primary. Corrected on the sheet, and stated there rather than quietly fixed.
+
+**What is still at one remove, and it is now a shorter list.** Dinah Murray, Wenn Lawson and Mike Lesser on monotropism (2005); McDonnell and Milton on "clumping" (2014); Anissa Ljanta on limerence as a coping strategy (2024). All three reached this sheet through Helen Edgar's essay, which cites them properly. **No primary among those three was opened here.** Said plainly on the sheet as well as here, because a reader checking us should not have to guess which citations we stand behind first-hand.
+
+**Elizabeth Brake, *Minimizing Marriage* (Oxford University Press, 2012)** — the term *amatonormativity*, credited for the concept only. **Not quoted, and the book has not been read here.** The sheet uses the word for the assumption it names and attributes it to her; nothing is put in her words.
 
 ### Sheet No. 11 — two plates and two recordings, added 11 September 2026
 

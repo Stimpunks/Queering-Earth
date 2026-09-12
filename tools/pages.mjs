@@ -26,7 +26,7 @@ export const GROUPS = [
                  'on-being-ill', 'coming-to-terms', 'promises-like-pie-crust', 'invention-of-normal',
                  'the-tempest', 'wild-nights', 'flower-codes', 'monotropa-uniflora',
                  'five-unmistakable-marks', 'other-people-who-have-it',
-                 'gloomy-sunflowers']],
+                 'gloomy-sunflowers', 'most-quiet-need']],
   ['The founding papers', ['the-founding-papers', 'mission', 'manifesto', 'two-cohabitating-modes']],
   ['The cabinet itself', ['index', 'the-cabinet-itself',
                           'design', 'changelog', 'whats-new', 'search', 'ledger', 'how-we-quote',

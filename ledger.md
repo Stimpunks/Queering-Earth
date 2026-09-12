@@ -34,6 +34,65 @@ It is **not** a rule that Ryan's quote collection is unusable. A direct quotatio
 
 ## Verified
 
+### Sheet No. 12 — six sources, and one term that nearly went out meaning its opposite, read 12 September 2026
+
+**Quoted on:** [Every Day's Most Quiet Need](https://queering.earth/most-quiet-need), Sheet No. 12.
+
+**Elizabeth Barrett Browning, Sonnet 43 of *Sonnets from the Portuguese* (1850) — the whole sonnet, public domain.** She died in 1861, so the poem has been out of copyright for well over a century. Text as the [Academy of American Poets](https://poets.org/poem/how-do-i-love-thee-sonnet-43) prints it, which is the copy Ryan brought to the sheet. Mounted entire; the close reading is of lines 1–6.
+
+**Aldous Huxley, *Brave New World* (1932), chapter 3 — one sentence, spoken by Mustapha Mond.** *"Impulse arrested spills over, and the flood is feeling, the flood is passion, the flood is even madness: it depends on the force of the current, the height and strength of the barrier. The unchecked stream flows smoothly down its appointed channels into a calm well-being."*
+
+**No printed copy was opened; the wording was confirmed by full-text search across scanned editions**, which is weaker than reading the book and is recorded as such. Two things came out of doing it rather than trusting the transcription. **The house copy said "calm well being" and the printed editions carry "calm well-being"**, and the hyphen is now on the sheet. And the surrounding text — Lenina and Fanny in the changing room, cut against Mond's lecture — places it in chapter 3's intercut montage, which is what lets the sheet say who is speaking. **That attribution is load-bearing**: the sheet's argument depends on Mond being the villain and on his describing longing in order to justify abolishing it.
+
+**Gabriel García Márquez, *Love in the Time of Cholera* (1985), translated by Edith Grossman (Knopf, 1988) — four passages.** The diagnosis ("the symptoms of love were the same as those of cholera"), the cure refused, "one love for everyday use," and the last two lines of the novel.
+
+**Grossman is credited by name on every one of them, and that is not a courtesy.** The English wording is hers. "One love for everyday use" is a translator's phrase, and it is the phrase the sheet's argument turns on — it is what rhymes with Browning's "every day's / Most quiet need." Crediting only García Márquez would put her choices in his mouth, which is this file's characteristic failure wearing a respectable hat.
+
+**Found in one copy, paginated from another, and both are named.** All four passages were read in full in a scanned PDF Ryan holds and checked character for character against it. That scan is an unauthorised copy with no usable pagination, so it can support the wording and nothing else.
+
+**The page numbers come from Ryan's Vintage International ebook, read off the page on 12 September 2026:**
+
+| passage | page |
+| --- | --- |
+| "the symptoms of love were the same as those of cholera" | 58 |
+| the cure refused — linden blossoms, and enjoying his martyrdom | 58 |
+| "one love for everyday use" | 198 |
+| "Forever," he said. | 345, the last page of the novel |
+
+**The map was checked before it was trusted.** A reader that shows "Page 58 of 346" may be reporting a publisher-supplied print page map or may be generating pages from the reader's own font size and window width, and the two look identical on screen. Ryan changed the text size and the numbers did not move, which settles it: this is the book's pagination and not the device's. **A number that shifted with a font setting would have been worse than none** — exact-looking and unreproducible for anybody else.
+
+Both copies are named in the citations because neither is sufficient alone: Knopf 1988 is where Grossman's translation was first published, and the Vintage International edition is where these page numbers live. The sheet says the same thing on its own face in [what it does not settle](https://queering.earth/most-quiet-need#untidy).
+
+**Two transcriptions were confirmed against the screenshots**, not just against the scan: Grossman's US spelling *immunized* in the "everyday use" sentence, and "to enjoy his martyrdom" closing the linden-blossom passage.
+
+**Helen Edgar, *Monotropism, Limerence And Autistic ADHD Experiences*, Autistic Realms, 12 February 2026** — one paragraph, on the Lake of Limerence. Read in the SKS mirror of her site. The Lake of Limerence and the River of Monotropic Flow States are both named in the alt text of the **Map of Monotropic Experiences**, which Helen developed with Stimpunks, so the lake-and-river contrast the sheet builds on is drawn from our own map rather than invented for the occasion.
+
+**Attlee Hall, *Autistic "Memory-Foaming"* — one sentence**, and the term itself. *"It's much easier to read, and become, the room than it is to try to read my own instincts."* Read in Ryan's commonplace entry, which carries Hall's definition in full with the link.
+
+**This one is recorded as a near-miss, because it is the exact failure this file exists to catch.** A draft of the sheet used *memory-foaming* to mean fond or magnified memory — the sense the compound suggests if you have not read the source. **Hall's term means the opposite of a memory: it is self-loss by moulding to another person**, conceding and bending to the point of self-alienation. Loosening somebody's coinage one notch to fit the sentence you wanted, with their name still attached, is a tightened attribution in the other direction. It was caught by opening the source rather than by trusting the phrase, before anything shipped.
+
+**Bernard Rose, *Immortal Beloved* (1994) — one speech, spoken by Gary Oldman as Beethoven.** Supplied by Ryan from the film. **Credited to Rose and not to Beethoven**, on the sheet and here: it is a screenwriter's invention placed in a historical mouth, about a piece the real Beethoven left no comment on, and the sheet says so in the paragraph after the quotation.
+
+**Two recordings are embedded, and both are the rightsholders' own deliveries** — verified through the upload metadata before mounting, not inferred from the channel name.
+
+- **Philip Glass, *Mad Rush***, from *Philip Glass: Solo Piano* (CBS Masterworks, 1989), Glass at the piano. Delivered to YouTube by **Sony Classical**; the upload carries ℗ 1989 Sony Music Entertainment and names Glass as performer and composer. **The draft had a listener's upload of this and the official one existed** — it was found by looking, which is the outcome the policy is for.
+- **Beethoven, Violin Sonata No. 9 in A major, Op. 47, first movement**, Renaud Capuçon and Frank Braley, from *Beethoven: Complete Violin Sonatas* (Erato, 2010). Delivered to YouTube by **Warner Classics**.
+
+**The film scene is linked and not embedded, and that is a relaxation of the policy.** No official clip or licensed excerpt of *Immortal Beloved* could be found. Ryan's call, recorded in [the register](https://queering.earth/changelog#a-2026-09-12-quiet-need) and on the sheet. The reasoning that carries it: **a link is a request the reader makes and an embed is a request the page makes on their behalf**, so the two are not the same act and do not need the same permission.
+
+**Dorothy Tennov, *Love and Limerence: The Experience of Being in Love* (Stein and Day, 1979) — read first-hand on 12 September 2026**, in the Scarborough House edition of 1999, which reprints the 1979 text with a new preface. Ryan put a scan in the SKS inbox after the sheet was built, and opening it changed the sheet in four places.
+
+- **"For the process to develop fully, some form of uncertainty or doubt, or even some threat to reciprocation appears necessary…"** — p. 26. Mounted on `#the-barrier`, where it does the job of showing that Huxley's hydraulics are not a novelist's conceit.
+- **"intensification through adversity"** — p. 24, from her list of the state's basic components. Quoted as three words inside our prose.
+- **"inability to react limerently to more than one person at a time"** — p. 24, same list. **The scan's OCR reads "at a, time" and we have printed "at a time."** The comma is a scanning artifact, not a reading: no printed book sets that clause with a comma there, and every other word in the clause matches. Recorded because this file's rule is that where a copy is imperfect we say so — the same call as the mangled Holiday passage on Sheet No. 9.
+- **"A relationship that includes no limerence may be a far more important one in your life… Limerence is not in any way preeminent…"** — p. 16, two adjacent sentences quoted continuous and in the printed order. **A draft had them transposed for a better ending and that was reverted**; the punchier order was ours and not hers.
+
+**Opening Tennov corrected an attribution the sheet was about to publish.** The draft said Tennov "described the crystallisation that idealises the limerent object." She does describe it. **She did not coin it — Stendhal did**, in *De l'Amour* (1822), and Tennov attributes it to him explicitly on her p. 30, calling it the metaphorical term "he gave" and retelling his image of the branch left in a salt mine. It had reached us through a summary that named only Tennov. **This is the second near-miss on this one sheet**, after *memory-foaming*, and both have the same cause: a term met in a secondary source and carried forward without opening the primary. Corrected on the sheet, and stated there rather than quietly fixed.
+
+**What is still at one remove, and it is now a shorter list.** Dinah Murray, Wenn Lawson and Mike Lesser on monotropism (2005); McDonnell and Milton on "clumping" (2014); Anissa Ljanta on limerence as a coping strategy (2024). All three reached this sheet through Helen Edgar's essay, which cites them properly. **No primary among those three was opened here.** Said plainly on the sheet as well as here, because a reader checking us should not have to guess which citations we stand behind first-hand.
+
+**Elizabeth Brake, *Minimizing Marriage* (Oxford University Press, 2012)** — the term *amatonormativity*, credited for the concept only. **Not quoted, and the book has not been read here.** The sheet uses the word for the assumption it names and attributes it to her; nothing is put in her words.
+
 ### Sheet No. 11 — two plates and two recordings, added 11 September 2026
 
 **Both paintings are Vincent van Gogh's, and both are public domain** — he died in 1890, so the works have been out of copyright for more than a century. Neither is a borrowed reading; both are the objects the sheet is already arguing about, which is the standard [/how-we-quote](https://queering.earth/how-we-quote) sets for a quotation and the one a plate should meet too.

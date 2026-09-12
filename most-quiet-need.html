@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every Day&rsquo;s Most Quiet Need &mdash; Queering Earth</title>
+<meta name="description" content="Limerence read as monotropic attention rather than as a disorder &mdash; Glass, Beethoven, Huxley and Garc&iacute;a M&aacute;rquez held against the line in Browning where a love poem stops climbing and comes down to the level of an ordinary day.">
+<link rel="canonical" href="https://queering.earth/most-quiet-need">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Queering Earth">
+<meta property="og:title" content="Every Day&rsquo;s Most Quiet Need">
+<meta property="og:description" content="The canon calls it great love. The clinic calls it a stuck state. A reading of limerence, and of the line where Browning comes down.">
+<meta property="og:url" content="https://queering.earth/most-quiet-need">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://queering.earth/images/og-most-quiet-need.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Every Day&rsquo;s Most Quiet Need. Sheet No. 12, an essay.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Every Day&rsquo;s Most Quiet Need">
+<meta name="twitter:description" content="The canon calls it great love. The clinic calls it a stuck state.">
+<meta name="twitter:image" content="https://queering.earth/images/og-most-quiet-need.png">
+<meta name="twitter:image:alt" content="Every Day&rsquo;s Most Quiet Need. Sheet No. 12, an essay.">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- The faces are self-hosted and declared in queering.css. Preloading the body
+     roman is the one that pays: it is the first thing every page needs, and there
+     is no cross-origin handshake to wait on any more. crossorigin is required
+     even same-origin — a font is always fetched in CORS mode. -->
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
+     either one would flash the wrong page: the decorated page at someone who
+     turned it off, or the daylight sheet at someone who asked for the cabinet.
+     With no stored ground, neither class is set and the media query decides. -->
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
+<!-- Discovery. rel=describedby on /llms.txt is llms.txt v2's one hard requirement;
+     rel=alternate points an agent at this page's Markdown source, derived from this
+     page's own main landmark by tools/make-markdown.mjs.
+
+     NO ANGLE-BRACKET TAG NAMES IN A COMMENT NEAR THE HEAD. Writing the landmark's name
+     with brackets here made a /<main[^>]*>/ extractor match inside this very comment
+     and take the head as the page body. The SKS mirror reads that landmark too. -->
+<link rel="describedby" href="/llms.txt" type="text/markdown" title="Site index for agents">
+<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Queering Earth — what has arrived">
+<link rel="alternate" href="/register.xml" type="application/rss+xml" title="Queering Earth — the accession register"><link rel="alternate" href="https://queering.earth/most-quiet-need.md" type="text/markdown" title="Every Day&rsquo;s Most Quiet Need — Markdown source">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://queering.earth/most-quiet-need#page",
+  "description": "Limerence read as monotropic attention rather than as a disorder — Glass, Beethoven, Huxley and García Márquez held against the line in Browning where a love poem stops climbing and comes down to the level of an ordinary day.",
+  "url": "https://queering.earth/most-quiet-need",
+  "inLanguage": "en",
+  "isFamilyFriendly": true,
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "publisher": [
+    { "@type": "Organization", "name": "Stimpunks Foundation", "url": "https://stimpunks.org/" },
+    { "@type": "Organization", "name": "More Realms", "url": "https://morerealms.com/" }
+  ],
+  "headline": "Every Day’s Most Quiet Need",
+  "dateModified": "2026-09-12",
+  "author": [
+    { "@type": "Person", "name": "Ryan Boren" }
+  ],
+  "about": [
+    { "@type": "CreativeWork", "name": "Sonnets from the Portuguese",
+      "author": { "@type": "Person", "name": "Elizabeth Barrett Browning" } },
+    { "@type": "CreativeWork", "name": "Brave New World",
+      "author": { "@type": "Person", "name": "Aldous Huxley" } },
+    { "@type": "CreativeWork", "name": "Love in the Time of Cholera",
+      "author": { "@type": "Person", "name": "Gabriel García Márquez" } },
+    { "@type": "MusicComposition", "name": "Mad Rush",
+      "composer": { "@type": "Person", "name": "Philip Glass" } },
+    { "@type": "MusicComposition", "name": "Violin Sonata No. 9 in A major, Op. 47",
+      "composer": { "@type": "Person", "name": "Ludwig van Beethoven" } },
+    { "@type": "Article", "name": "Monotropism, Limerence And Autistic ADHD Experiences",
+      "author": { "@type": "Person", "name": "Helen Edgar" } }
+  ],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Queering Earth", "item": "https://queering.earth/" },
+      { "@type": "ListItem", "position": 2, "name": "The plate", "item": "https://queering.earth/the-plate" },
+      { "@type": "ListItem", "position": 3, "name": "Every Day’s Most Quiet Need", "item": "https://queering.earth/most-quiet-need" }
+    ]
+  },
+  "isPartOf": { "@type": "WebSite", "name": "Queering Earth", "url": "https://queering.earth/" },
+  "encoding": {
+    "@type": "MediaObject",
+    "encodingFormat": "text/markdown",
+    "contentUrl": "https://queering.earth/most-quiet-need.md"
+  }
+}
+</script>
+</head>
+<!-- Where this sheet is foxed. Four stains, stated here because a stain is a
+     fact about one piece of paper and not about the site. -->
+<body style="--qe-fox-a: 11% 8%; --qe-fox-b: 82% 17%; --qe-fox-c: 57% 91%; --qe-fox-d: 24% 63%">
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+  <details class="qe-reading" name="qe-tray">
+    <summary class="qe-reading-summary">Reading</summary>
+    <div class="qe-reading-panel">
+      <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
+      <ul class="qe-reading-list">
+        <li>
+          <label><input type="checkbox" id="qe-set-motion"> <span>Reduce motion</span></label>
+          <span class="qe-reading-hint">The drawings appear finished instead of drawing themselves on.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-contrast"> <span>More contrast</span></label>
+          <span class="qe-reading-hint">Darker ink, firmer rules, and the foxing lifted off the paper.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
+          <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-textsize">Text size</label>
+            <select class="qe-reading-select" id="qe-set-textsize">
+              <option value="">Your device&rsquo;s size</option>
+              <option value="larger">Larger</option>
+              <option value="largest">Largest</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-font">Typeface</label>
+            <select class="qe-reading-select qe-reading-select-wide" id="qe-set-font">
+              <option value="">Fraunces &amp; Newsreader</option>
+              <option value="adelphe">Adelphe</option>
+              <option value="atkinson">Atkinson Hyperlegible</option>
+              <option value="baskervvol">BBB Baskervvol</option>
+              <option value="coxinelle">Coxinelle</option>
+              <option value="insolente">Insolente</option>
+              <option value="redaction">Redaction Inclusive</option>
+              <option value="sporting">Sporting Grotesque</option>
+              <option value="trickster">Trickster</option>
+              <option value="victorianna">Victorianna</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">The first four also set the reading face, because they have a real italic. The rest change the headings and leave Newsreader to read.</span>
+        </li>
+      </ul>
+      <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
+  <!-- The drawers. Three collections, and everything on the site is in one of
+       them. A native details element, like the reading settings beside it and for
+       the same reason: a hand-built menu would need focus trapping, a roving
+       tabindex and an Escape handler, and getting any of that wrong makes the
+       navigation the least navigable thing on the sheet. -->
+  <details class="qe-drawers" name="qe-tray">
+    <summary class="qe-drawers-summary">Drawers</summary>
+    <div class="qe-drawers-panel">
+      <ul class="qe-drawers-list">
+        <li>
+          <a class="qe-drawers-link" href="/the-plate" aria-current="true">The plate</a>
+          <span class="qe-drawers-hint">The sheets themselves, mounted and numbered on one plate.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-founding-papers">The founding papers</a>
+          <span class="qe-drawers-hint">Why this cabinet exists, and what it is for.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-cabinet-itself">The cabinet itself</a>
+          <span class="qe-drawers-hint">How it is made, what it has recorded, and what it knows about you.</span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <!-- The easter egg. An ornament that is a door: unlabelled to the eye,
+       named in the DOM, and pointing at a page that is listed in the
+       footer row, on the home page and in the sitemap like any other. -->
+  <a class="qe-modes-link" href="/two-cohabitating-modes">
+  <svg class="qe-modes-mark" viewBox="1 2.2 41.3 20" aria-hidden="true" focusable="false">
+    <!-- the fox: brush, body, neck, skull, muzzle, nose, two ears, four legs -->
+    <path d="M7.4,15.6 C4.2,16.2 1.4,14.2 1.5,10.4 C1.6,8.5 2.6,7.2 4.0,6.9 C4.5,9.1 5.7,10.8 7.9,12.0 L7.4,15.6 Z"/>
+    <path d="M6.6,16.2 C5.8,12.9 8.0,10.7 11.8,10.7 C15.2,10.7 17.2,12.1 17.2,14.6 C17.2,16.6 15.6,17.5 12.2,17.5 C9.0,17.5 7.0,17.0 6.6,16.2 Z"/>
+    <path d="M14.2,12 L15.8,9.2 L18.8,11 L17,13.8 Z"/>
+    <path d="M15.1,8.4 C15.1,6.8 16.4,5.7 18.0,5.7 C19.7,5.7 20.9,6.9 20.9,8.5 C20.9,10.2 19.6,11.3 17.9,11.3 C16.3,11.3 15.1,10.1 15.1,8.4 Z"/>
+    <path d="M19.3,7 L22.3,8.6 L19.5,10.2 Z"/>
+    <path d="M21.9,8.6 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M15.2,6.5 L14.6,2.9 L17.5,5.6 Z"/>
+    <path d="M17.7,5.4 L19.1,2.7 L20.3,6.1 Z"/>
+    <path d="M7,16.6 L6.6,21.7 L8.25,21.7 L8.65,16.6 Z"/>
+    <path d="M8.7,17.1 L8.7,21.7 L10.35,21.7 L10.35,17.1 Z"/>
+    <path d="M13,17.2 L13,21.7 L14.65,21.7 L14.65,17.2 Z"/>
+    <path d="M14.7,16.8 L15.15,21.7 L16.8,21.7 L16.35,16.8 Z"/>
+    <!-- the hedgehog: the dome, sixteen spines on its own normal, snout, nose, two feet -->
+    <path d="M25.92,20 L25.92,19.63 L26.01,18.85 L26.19,17.98 L26.45,17.08 L26.8,16.19 L27.21,15.32 L27.7,14.51 L28.25,13.76 L28.85,13.1 L29.5,12.54 L30.19,12.09 L30.91,11.77 L31.65,11.57 L32.4,11.5 L33.15,11.57 L33.89,11.77 L34.61,12.09 L35.3,12.54 L35.95,13.1 L36.55,13.76 L37.1,14.51 L37.59,15.32 L38,16.19 L38.35,17.08 L38.61,17.98 L38.79,18.85 L38.88,19.63 L38.88,20 Z"/>
+    <path d="M25.62,18.2 L23.5,20.11 L26.34,19.89 Z"/>
+    <path d="M26.04,16.77 L23.67,18.35 L26.51,18.55 Z"/>
+    <path d="M26.69,15.31 L24.1,16.5 L26.88,17.14 Z"/>
+    <path d="M27.53,13.94 L24.78,14.69 L27.42,15.77 Z"/>
+    <path d="M28.56,12.75 L25.72,13 L28.13,14.54 Z"/>
+    <path d="M29.74,11.83 L26.91,11.51 L28.96,13.49 Z"/>
+    <path d="M31.02,11.23 L28.32,10.31 L29.89,12.68 Z"/>
+    <path d="M32.35,10.99 L29.94,9.47 L30.91,12.15 Z"/>
+    <path d="M33.66,11.13 L31.69,9.08 L32,11.91 Z"/>
+    <path d="M34.92,11.63 L33.48,9.17 L33.11,12 Z"/>
+    <path d="M36.07,12.45 L35.21,9.73 L34.23,12.41 Z"/>
+    <path d="M37.08,13.55 L36.8,10.71 L35.29,13.13 Z"/>
+    <path d="M37.93,14.86 L38.18,12.02 L36.25,14.12 Z"/>
+    <path d="M38.61,16.33 L39.33,13.57 L37.07,15.32 Z"/>
+    <path d="M39.08,17.87 L40.22,15.25 L37.72,16.63 Z"/>
+    <path d="M39.34,19.38 L40.85,16.96 L38.18,17.96 Z"/>
+    <path d="M38.01,17.91 L41.81,21.11 L37.21,21.01 Z"/>
+    <path d="M41.11,20.61 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M27.8,19.7 L27.8,21.7 L29.35,21.7 L29.35,19.7 Z"/>
+    <path d="M35.2,19.7 L35.2,21.7 L36.75,21.7 L36.75,19.7 Z"/>
+  </svg>
+    <span class="qe-sr">Two cohabitating modes</span>
+  </a>
+</div>
+
+<!-- The drift rail: this page's own h2s, in the left margin, above 77rem and
+     nowhere below it. Empty here and filled by queering.js — one derivation, two
+     views, the other being the contents list inside the measure. OUTSIDE the
+     landmark, like every other nav here, so the mirror never reads it. -->
+<nav class="qe-rail" aria-label="On this page" hidden>
+  <ol></ol>
+  <svg class="qe-botanical qe-rail-sprig" viewBox="0 0 28 27" aria-hidden="true" focusable="false">
+    <path class="stem" style="--len:34" d="M0.6,0 C0.7,7.2 1.9,13.4 4.6,18.4 C6.1,21.2 7.8,23.2 9.6,24.6"/>
+    <g class="sprout sprout-leaf" style="--i:0">
+      <path d="M1.7,7.9 C5.1,5.5 8.9,6.6 10.8,10.2 C7.3,11.3 3.6,10.4 1.7,7.9 Z"/>
+    </g>
+    <g class="sprout sprout-leaf" style="--i:1">
+      <path d="M3.5,14.6 C7.2,12.8 11.2,14.1 13.2,17.9 C9.5,18.8 5.6,17.4 3.5,14.6 Z"/>
+    </g>
+    <g class="sprout" style="--i:2">
+      <circle cx="10.4" cy="25.4" r="1.5"/>
+    </g>
+  </svg>
+</nav>
+<main id="main" tabindex="-1">
+
+  <header class="qe-masthead qe-masthead-sheet">
+    <nav class="qe-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Queering Earth</a></li>
+        <li><a href="/the-plate">The plate</a></li>
+      </ol>
+    </nav>
+    <p class="qe-kicker">Sheet &middot; an essay</p>
+    <h1>Every Day&rsquo;s Most Quiet Need</h1>
+
+    <svg class="qe-botanical" viewBox="0 0 400 150" role="img" aria-label="A water forget-me-not: one stem rising from the left, its tip curled over into a crook of five-petalled flowers that open as the curl unwinds, with tight buds at the curled end." focusable="false">
+      <!-- THE CROOK IS A SCORPIOID CYME AND IT IS COMPUTED, NOT DRAWN. Myosotis
+           flowers along an axis curled tight at the tip that unwinds as it opens, so
+           the oldest flowers sit at the uncurled base and the buds at the tip. Nine
+           flowers at computed points on a spiral whose radius grows as it unwinds.
+           THREE THINGS WERE DRAWN WRONG FIRST, and each is a rule already in
+           CLAUDE.md arriving again. Flowers too small for their own 1.1px stroke read
+           as sparkles, not a head. More than one turn is a snail. And a full turn
+           closes into a RING, which is the wreath the lilac note warns about -- so
+           this is three-quarters of a turn, opening fast, and never meets itself. -->
+      <path class="stem" style="--len:248" stroke-width="2.6" d="M12,146 C54,128 90,116 130,110 C168,104 204,98 241.0,84.7"/>
+      <g transform="translate(54 128) rotate(-20)"><g class="sprout sprout-leaf" style="--i:0">
+        <path class="leaf" d="M0,0 C9,-6 18,-6 36,0 C25,6 9,6 0,0 Z"/>
+      </g></g>
+      <g transform="translate(102 114) rotate(13)"><g class="sprout sprout-leaf" style="--i:1">
+        <path class="leaf" d="M0,0 C8,-5 16,-5 32,0 C22,5 8,5 0,0 Z"/>
+      </g></g>
+      <g transform="translate(152 105) rotate(-11)"><g class="sprout sprout-leaf" style="--i:2">
+        <path class="leaf" d="M0,0 C7,-4 14,-4 28,0 C19,4 7,4 0,0 Z"/>
+      </g></g>
+      <path class="stem" style="--len:137" d="M301.7,80.8 L302.1,80.7 L302.5,80.6 L302.9,80.6 L303.4,80.5 L303.8,80.4 L304.3,80.3 L304.7,80.2 L305.2,80.0 L305.7,79.9 L306.2,79.7 L306.7,79.5 L307.3,79.2 L307.8,78.9 L308.4,78.6 L308.9,78.3 L309.5,77.9 L310.0,77.4 L310.6,76.9 L311.1,76.4 L311.7,75.8 L312.2,75.1 L312.7,74.4 L313.1,73.7 L313.5,72.9 L313.9,72.0 L314.3,71.1 L314.6,70.1 L314.8,69.1 L315.0,68.0 L315.2,66.9 L315.2,65.8 L315.2,64.6 L315.1,63.3 L314.9,62.1 L314.7,60.8 L314.3,59.5 L313.9,58.2 L313.4,56.9 L312.7,55.5 L312.0,54.2 L311.1,52.9 L310.2,51.7 L309.1,50.4 L307.9,49.2 L306.6,48.0 L305.2,46.9 L303.7,45.9 L302.1,44.9 L300.4,44.0 L298.6,43.2 L296.8,42.5 L294.8,41.9 L292.7,41.5 L290.6,41.1 L288.3,40.9 L286.1,40.8 L283.7,40.8 L281.4,41.0 L278.9,41.4 L276.5,41.9 L274.0,42.6 L271.6,43.5 L269.1,44.6 L266.7,45.8 L264.3,47.2 L261.9,48.8 L259.6,50.5 L257.4,52.5 L255.2,54.6 L253.1,56.9 L251.2,59.4 L249.3,62.0 L247.6,64.8 L246.1,67.8 L244.7,70.9 L243.5,74.2 L242.4,77.6 L241.6,81.1 L241.0,84.7"/>
+  <g transform="translate(301.7 80.8) rotate(78)"><g class="sprout" style="--i:0">
+    <ellipse class="bloom-alt" cx="0" cy="0" rx="2.3" ry="3.0"/>
+  </g></g>
+  <g transform="translate(305.2 80.0) rotate(72)"><g class="sprout" style="--i:1">
+    <ellipse class="bloom-alt" cx="0" cy="0" rx="4.4" ry="5.6"/>
+  </g></g>
+  <g transform="translate(309.8 77.6) rotate(48)"><g class="sprout" style="--i:2">
+    <ellipse class="bloom-alt" cx="0" cy="0" rx="5.7" ry="7.4"/>
+  </g></g>
+  <g transform="translate(314.3 71.0)"><g class="sprout" style="--i:3">
+    <path class="bloom-violet" d="M0,0 C4.1,-4.6 8.6,-1.9 8.8,-2.0 C8.6,-1.9 5.7,2.4 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C5.7,2.5 4.5,7.6 4.6,7.7 C4.5,7.6 -0.5,6.2 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-0.6,6.2 -5.8,6.6 -5.9,6.7 C-5.8,6.6 -6.0,1.4 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-6.1,1.3 -8.1,-3.5 -8.2,-3.6 C-8.1,-3.5 -3.2,-5.3 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-3.1,-5.4 0.8,-8.8 0.8,-8.9 C0.8,-8.8 4.1,-4.7 0,0 Z"/>
+    <circle class="leaf" cx="0" cy="0" r="2.96"/>
+  </g></g>
+  <g transform="translate(314.5 60.1)"><g class="sprout" style="--i:4">
+    <path class="bloom-violet" d="M0,0 C6.7,-2.7 10.0,2.3 10.2,2.4 C10.0,2.3 4.8,5.4 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C4.7,5.5 0.9,10.2 0.9,10.4 C0.9,10.2 -3.7,6.2 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-3.8,6.1 -9.4,4.0 -9.6,4.1 C-9.4,4.0 -7.0,-1.6 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-7.0,-1.7 -6.7,-7.7 -6.8,-7.9 C-6.7,-7.7 -0.7,-7.2 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-0.6,-7.2 5.3,-8.8 5.4,-8.9 C5.3,-8.8 6.6,-2.9 0,0 Z"/>
+    <circle class="leaf" cx="0" cy="0" r="3.44"/>
+  </g></g>
+  <g transform="translate(306.6 48.0)"><g class="sprout" style="--i:5">
+    <path class="bloom-violet" d="M0,0 C8.1,0.5 9.0,7.2 9.2,7.4 C9.0,7.2 2.2,7.8 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C2.0,7.9 -4.1,10.8 -4.2,11.0 C-4.1,10.8 -6.8,4.5 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-6.8,4.4 -11.5,-0.6 -11.8,-0.6 C-11.5,-0.6 -6.4,-5.0 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-6.3,-5.2 -3.0,-11.1 -3.1,-11.4 C-3.0,-11.1 2.8,-7.6 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C3.0,-7.6 9.7,-6.3 9.9,-6.4 C9.7,-6.3 8.1,0.3 0,0 Z"/>
+    <circle class="leaf" cx="0" cy="0" r="3.88"/>
+  </g></g>
+  <g transform="translate(287.7 40.8)"><g class="sprout" style="--i:6">
+    <path class="bloom-violet" d="M0,0 C7.9,4.4 5.5,11.6 5.6,11.9 C5.5,11.6 -1.6,8.9 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-1.8,8.9 -9.4,8.8 -9.6,9.0 C-9.4,8.8 -9.0,1.2 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-9.0,1.1 -11.3,-6.2 -11.5,-6.3 C-11.3,-6.2 -3.9,-8.2 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-3.8,-8.2 2.4,-12.6 2.4,-12.9 C2.4,-12.6 6.5,-6.3 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C6.6,-6.2 12.8,-1.6 13.0,-1.7 C12.8,-1.6 8.0,4.3 0,0 Z"/>
+    <circle class="leaf" cx="0" cy="0" r="4.33"/>
+  </g></g>
+  <g transform="translate(261.1 49.4)"><g class="sprout" style="--i:7">
+    <path class="bloom-violet" d="M0,0 C5.7,8.2 -0.1,14.2 -0.1,14.5 C-0.1,14.2 -5.9,8.1 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-6.0,8.0 -13.6,4.3 -13.8,4.4 C-13.6,4.3 -9.5,-3.1 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-9.5,-3.3 -8.3,-11.6 -8.4,-11.8 C-8.3,-11.6 0.0,-10.0 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C0.2,-10.0 8.5,-11.4 8.6,-11.7 C8.5,-11.4 9.5,-3.1 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C9.6,-2.9 13.5,4.5 13.8,4.6 C13.5,4.5 5.9,8.1 0,0 Z"/>
+    <circle class="leaf" cx="0" cy="0" r="4.79"/>
+  </g></g>
+  <g transform="translate(241.0 84.7)"><g class="sprout" style="--i:8">
+    <path class="bloom-violet" d="M0,0 C1.8,10.9 -6.9,14.1 -7.1,14.3 C-6.9,14.1 -9.7,5.2 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-9.8,5.1 -15.5,-2.3 -15.8,-2.3 C-15.5,-2.3 -8.0,-7.6 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C-7.8,-7.8 -2.7,-15.5 -2.7,-15.8 C-2.7,-15.5 4.8,-9.9 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C5.0,-9.9 13.9,-7.3 14.2,-7.4 C13.9,-7.3 10.9,1.5 0,0 Z"/>
+    <path class="bloom-violet" d="M0,0 C10.9,1.7 11.2,10.9 11.5,11.2 C11.2,10.9 2.0,10.9 0,0 Z"/>
+    <circle class="leaf" cx="0" cy="0" r="5.28"/>
+  </g></g>
+    </svg>  </header>
+
+  <p class="qe-lede">I have spent a lot of my life wanting somebody, at very high volume, and saying nothing about it. The word for that is <strong>limerence</strong>, and the literature I can find on it reaches for <q>excessive</q> and <q>obsessive</q> and <q>immature</q> almost before it has finished describing the thing. I want to put four objects next to that vocabulary. A piece of music that never resolves. A sonata named after a man who refused to play it. A novel in which one man waits fifty-three years and is not, in the end, wrong. And a sonnet everybody thinks they know, which does something in its fifth line that I have never seen anyone give it credit for. <strong>The canon is full of people loving exactly the way I do.</strong> It is only a disorder when I am the one doing it.</p>
+
+  <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
+    <h2 id="qe-contents-h">On this sheet</h2>
+    <ol></ol>
+  </nav>
+
+  <h2 id="suspension">The suspension <a class="qe-anchor" href="#suspension"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Start with the sound of it.</p>
+
+  <figure class="qe-embed" data-embed-id="wVrODAN0xkM" data-embed-title="Philip Glass plays Mad Rush, from Solo Piano">
+    <div class="qe-embed-stage">
+      <svg class="qe-embed-poster qe-botanical" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
+        <path class="stem" style="--len:104" d="M18,178 C28,144 36,116 44,88"/>
+        <path class="stem" style="--len:82" d="M54,178 C58,150 60,130 60,110"/>
+        <g transform="translate(44 88)"><g class="sprout" style="--i:0"><path class="bloom-violet" d="M0,-9 C-6,-6 -9,0 -5.5,6 C-1,10 5,8 7,2 C8.5,-3 5,-8 0,-9 Z"/></g></g>
+        <g transform="translate(60 110)"><g class="sprout" style="--i:1"><path class="bloom-violet" d="M0,-7 C-5,-4.5 -7,0 -4.5,4.5 C-1,7.5 4,6 5.5,1.5 C6.5,-2 4,-6 0,-7 Z"/></g></g>
+        <path class="stem" style="--len:100" d="M302,2 C292,36 284,62 278,90"/>
+        <path class="stem" style="--len:78" d="M266,2 C262,30 260,48 260,66"/>
+        <g transform="translate(278 90)"><g class="sprout" style="--i:2"><path class="bloom-violet" d="M0,-9 C-6,-6 -9,0 -5.5,6 C-1,10 5,8 7,2 C8.5,-3 5,-8 0,-9 Z"/></g></g>
+        <g transform="translate(260 66)"><g class="sprout" style="--i:3"><path class="bloom-violet" d="M0,-7 C-5,-4.5 -7,0 -4.5,4.5 C-1,7.5 4,6 5.5,1.5 C6.5,-2 4,-6 0,-7 Z"/></g></g>
+      </svg>
+      <a class="qe-embed-go" href="https://www.youtube.com/watch?v=wVrODAN0xkM">
+        <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true" focusable="false">
+          <circle cx="23" cy="23" r="21" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M18 14 L34 23 L18 32 Z" fill="currentColor"/>
+        </svg>
+        <span class="qe-embed-label">Play the recording</span>
+        <span class="qe-embed-who">Philip Glass, <cite>Mad Rush</cite> &middot; on YouTube</span>
+      </a>
+    </div>
+    <p class="qe-embed-note">Nothing is fetched from YouTube until you press play. Press it and your browser asks <code>www.youtube-nocookie.com</code> for the player, which is a request to Google &mdash; the only third party this site can reach, and only ever because you asked. <a href="/privacy#the-embed">What that means.</a></p>
+    <figcaption>Philip Glass, <cite>Mad Rush</cite>, from <cite>Philip Glass: Solo Piano</cite> (CBS Masterworks, 1989), the composer at the piano. Delivered to YouTube by Sony Classical.</figcaption>
+  </figure>
+
+  <p><strong>If you cannot listen to it, here is what it does</strong>, because a sheet whose argument can only be followed by ear is a sheet that has decided who is allowed to read it. A figure of a few notes turns over in the left hand. The right hand lays a slower line across it. The figure turns over again, and again, and by the second minute you have understood that it is going to keep turning. Twice the piece shifts into something more agitated and then subsides back into the winding. It does not build to an arrival and then arrive. <strong>The winding is the whole event.</strong> Eighteen minutes of a thing being held and not resolved, which stops feeling like a delay somewhere in the middle and starts feeling like a description.</p>
+
+  <p>There is a word for the held note that makes this happen, and it is not the one I reached for first. A <strong>suspension</strong> is a note carried over from the chord before, sounding against a chord it no longer belongs to, and it has to fall to resolve. Two things are true about it at once. It is the past refusing to move on. <strong>And its resolution goes downward.</strong> Hold onto that; the sonnet at the end of this sheet does exactly the same thing, in words, and nobody reads it that way.</p>
+
+  <h2 id="the-carriage">The carriage in the mud <a class="qe-anchor" href="#the-carriage"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The other piece I keep going back to is the opening of Beethoven&rsquo;s ninth violin sonata &mdash; the one the world calls the Kreutzer, after a violinist who never played a note of it. It begins alone and unaccompanied, gathers a slow ache of an introduction, and then breaks into a Presto that does not let up.</p>
+
+  <figure class="qe-embed" data-embed-id="jJONuwJlkJA" data-embed-title="Beethoven, Violin Sonata No. 9 in A major, Op. 47, first movement, Renaud Capu&ccedil;on and Frank Braley">
+    <div class="qe-embed-stage">
+      <svg class="qe-embed-poster qe-botanical" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
+        <path class="stem" style="--len:112" d="M22,178 C30,140 38,112 48,82"/>
+        <path class="stem" style="--len:70" d="M62,178 C64,152 64,136 62,118"/>
+        <g transform="translate(48 82)"><g class="sprout" style="--i:0"><path class="bloom-alt" d="M0,-9 C5,-5 7,0 5,5 C2,9 -2,9 -5,5 C-7,0 -5,-5 0,-9 Z"/></g></g>
+        <g transform="translate(62 118)"><g class="sprout" style="--i:1"><path class="bloom-alt" d="M0,-7 C4,-4 5.5,0 4,4 C1.5,7 -1.5,7 -4,4 C-5.5,0 -4,-4 0,-7 Z"/></g></g>
+        <path class="stem" style="--len:106" d="M298,2 C290,40 282,66 274,96"/>
+        <path class="stem" style="--len:70" d="M260,2 C258,28 258,44 260,62"/>
+        <g transform="translate(274 96)"><g class="sprout" style="--i:2"><path class="bloom-alt" d="M0,-9 C5,-5 7,0 5,5 C2,9 -2,9 -5,5 C-7,0 -5,-5 0,-9 Z"/></g></g>
+        <g transform="translate(260 62)"><g class="sprout" style="--i:3"><path class="bloom-alt" d="M0,-7 C4,-4 5.5,0 4,4 C1.5,7 -1.5,7 -4,4 C-5.5,0 -4,-4 0,-7 Z"/></g></g>
+      </svg>
+      <a class="qe-embed-go" href="https://www.youtube.com/watch?v=jJONuwJlkJA">
+        <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true" focusable="false">
+          <circle cx="23" cy="23" r="21" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M18 14 L34 23 L18 32 Z" fill="currentColor"/>
+        </svg>
+        <span class="qe-embed-label">Play the recording</span>
+        <span class="qe-embed-who">Beethoven, Op. 47, first movement &middot; on YouTube</span>
+      </a>
+    </div>
+    <p class="qe-embed-note">Nothing is fetched from YouTube until you press play. Press it and your browser asks <code>www.youtube-nocookie.com</code> for the player, which is a request to Google &mdash; the only third party this site can reach, and only ever because you asked. <a href="/privacy#the-embed">What that means.</a></p>
+    <figcaption>Beethoven, Violin Sonata No. 9 in A major, Op. 47, first movement (Adagio sostenuto &ndash; Presto). Renaud Capu&ccedil;on, violin; Frank Braley, piano, from <cite>Beethoven: Complete Violin Sonatas</cite> (Erato, 2010). Delivered to YouTube by Warner Classics.</figcaption>
+  </figure>
+
+  <p>I did not come to it that way. I came to it through a film &mdash; <cite>Immortal Beloved</cite>, in which Gary Oldman&rsquo;s Beethoven is asked what music is, and answers by describing this sonata:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; what the sound is of</span>
+    <blockquote>
+      <p>A man is trying to reach his lover. His carriage has broken down in the rain. The wheels stuck in the mud. She will only wait so long. This is the sound of his agitation.</p>
+    </blockquote>
+    <figcaption>Bernard Rose, <cite>Immortal Beloved</cite> (1994), spoken by Gary Oldman as Beethoven. <a href="https://www.youtube.com/watch?v=xNq_G5QxVhk">The scene is on YouTube</a>, posted by a viewer rather than by the rightsholder &mdash; we could find no copy the film&rsquo;s owners are paid for, so it is a link and not an embed.</figcaption>
+  </figure>
+
+  <p><strong>That is a screenwriter&rsquo;s Beethoven, not Beethoven</strong>, and the distinction is worth keeping because the line is doing neatly what the real history does messily. Beethoven wrote a letter in July 1812 to a woman he addressed as the Immortal Beloved. It was never delivered. Nobody has established for certain who she was; the film picks somebody, and the letter does not. What survives is the reaching, with the destination struck out. Rose invented a carriage to stand in a place that is genuinely empty.</p>
+
+  <p>And the wheels-in-the-mud image is the right one for a reason the film does not go into. <strong>The agitation is a function of the barrier, not of the beloved.</strong> A man who gets there is not making that sound.</p>
+
+  <h2 id="the-barrier">The physics of the barrier <a class="qe-anchor" href="#the-barrier"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Somebody has already written the mechanism down precisely, and put it in the mouth of the villain.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the World Controller explains feeling</span>
+    <blockquote>
+      <p>Impulse arrested spills over, and the flood is feeling, the flood is passion, the flood is even madness: it depends on the force of the current, the height and strength of the barrier. The unchecked stream flows smoothly down its appointed channels into a calm well-being.</p>
+    </blockquote>
+    <figcaption>Mustapha Mond, in Aldous Huxley, <cite>Brave New World</cite> (1932), chapter 3.</figcaption>
+  </figure>
+
+  <p>Mond is the Resident World Controller for Western Europe and he is not praising longing. He is explaining why his civilisation abolished it. Remove the interval between wanting a thing and having it, take down the barrier, and there is no flood &mdash; no feeling, no passion, no madness, and no further need for any of them. He calls what is left <strong>stability</strong>, and the whole book is the argument that he got exactly what he asked for.</p>
+
+  <p><strong>I take his description and refuse his prescription.</strong> The physics is right: the height of the barrier sets the force of the flood, which is why the sonata sounds like that and why the eighteen minutes wind. But a society that engineers away every obstacle so nobody ever floods has not cured longing. It has removed the conditions under which a person could want something they do not have, which is most of what I mean when I say I am alive.</p>
+
+  <p>Say it plainly, because the same move gets made about limerence constantly, wearing a lab coat. <strong>The flood gets treated as the pathology.</strong> Almost nobody asks what the barrier was, or who built it, or why the current was running that hard to begin with.</p>
+
+  <p>And Mond&rsquo;s hydraulics are not a novelist&rsquo;s conceit. Dorothy Tennov, who coined the word <em>limerence</em>, spent years collecting accounts of it, and the barrier is in her findings as a plain condition of the thing:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; what the state requires</span>
+    <blockquote>
+      <p>For the process to develop fully, some form of uncertainty or doubt, or even some threat to reciprocation appears necessary. There is considerable evidence that an externally imposed obstacle, such as Romeo and Juliet met in the resistance of family and society, may also serve.</p>
+    </blockquote>
+    <figcaption>Dorothy Tennov, <cite>Love and Limerence: The Experience of Being in Love</cite> (Stein and Day, 1979), p.&nbsp;26 in the Scarborough House edition of 1999.</figcaption>
+  </figure>
+
+  <p>Her list of the state&rsquo;s basic components carries the same fact in three words: <strong>intensification through adversity.</strong> Mond says the height of the barrier sets the force of the flood; Tennov found it by asking several hundred people. <strong>An externally imposed obstacle, such as Romeo and Juliet met in the resistance of family and society</strong> &mdash; hold that sentence until the end of this sheet, where a woman writes forty-four sonnets she does not show anybody, in a house with a father in it.</p>
+
+  <h2 id="florentino">Fifty-three years, seven months, and eleven days <a class="qe-anchor" href="#florentino"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>My obsessive windings like stories of archaic and boldly romantic love, and <cite>Love in the Time of Cholera</cite> is the cathedral of them. Florentino Ariza waits for Fermina Daza for fifty-three years, seven months, and eleven days and nights. He does not stop. He is not cured.</p>
+
+  <p>Garc&iacute;a M&aacute;rquez knows precisely what he is describing, and he has the local doctor say it out loud:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the diagnosis</span>
+    <blockquote>
+      <p>All that was needed was shrewd questioning, first of the patient and then of his mother, to conclude once again that the symptoms of love were the same as those of cholera.</p>
+    </blockquote>
+    <figcaption>Gabriel Garc&iacute;a M&aacute;rquez, <cite>Love in the Time of Cholera</cite> (1985), translated by Edith Grossman (Knopf, 1988); p.&nbsp;58 in the Vintage International edition.</figcaption>
+  </figure>
+
+  <p>It is a joke and it is also the title of the book. Lovesickness presents as an epidemic disease; the weak pulse, the pallor, the urgent wish to die. The doctor prescribes linden blossom and a change of air, which is the nineteenth century&rsquo;s <q>go and touch some grass</q>, and the patient declines it:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the cure refused</span>
+    <blockquote>
+      <p>He prescribed infusions of linden blossoms to calm the nerves and suggested a change of air so he could find consolation in distance, but Florentino Ariza longed for just the opposite: to enjoy his martyrdom.</p>
+    </blockquote>
+    <figcaption>Gabriel Garc&iacute;a M&aacute;rquez, <cite>Love in the Time of Cholera</cite> (1985), translated by Edith Grossman (Knopf, 1988); p.&nbsp;58 in the Vintage International edition.</figcaption>
+  </figure>
+
+  <p>I recognise that, and not the martyrdom part. The refusal. There is something inside the state that I did not want to be talked out of, because being talked out of it would have meant the thing I was reaching toward was never worth the reaching, and I knew that it was.</p>
+
+  <h2 id="the-clinic">On the shelf, and in the clinic <a class="qe-anchor" href="#the-clinic"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Here is the thing this sheet is actually for.</p>
+
+  <p>Everything above is one kind of attention doing one kind of thing. A man holds a single channel open for fifty-three years and will not be redirected. A composer never gets over a letter he did not send and writes the ache into a sonata. A pianist writes eighteen minutes that refuse to arrive. <strong>Those are masterpieces.</strong> We give them Nobel prizes and concert halls and a shelf each. When people describe what those works are about, the words are <q>great</q> and <q>enduring</q> and <q>the immense ache of this world</q>.</p>
+
+  <p>Now take the identical behaviour &mdash; attention that pools around one person, will not redirect, replays every exchange, survives years without reciprocation, refuses the cure &mdash; and put it in an Autistic person. The words change completely. <strong>Excessive. Obsessive. Immature. Unhealthy.</strong> Those four are not my straw men; they are the list Helen Edgar gives of how the literature actually frames limerence when it mentions autism at all.</p>
+
+  <p><strong>Same behaviour. Masterpiece on the shelf, symptom in the clinic.</strong> The only variable that moved is who was doing it.</p>
+
+  <p>I do not think the canon is wrong about Florentino. I think the clinic is wrong about me, and I think the canon is the evidence. A culture that has built its highest romantic art out of unreciprocated single-channel devotion does not get to turn round and call that devotion a deficit when a monotropic person arrives holding it. <strong>Either the sonata is a symptom too, or my longing is not one.</strong></p>
+
+  <h2 id="the-lake">The lake <a class="qe-anchor" href="#the-lake"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Helen Edgar and Stimpunks put a <strong>Lake of Limerence</strong> on the <a href="https://stimpunks.org/projects/map-of-monotropic-experiences/">Map of Monotropic Experiences</a>. It sits on the same island as the <strong>River of Monotropic Flow States</strong>, and the difference between those two pieces of water is the whole of what I am trying to say. A river has an outlet. A lake does not. Water gathers in a lake and stays.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; what appears small on the map</span>
+    <blockquote cite="https://autisticrealms.com/monotropism-limerence-and-autistic-adhd-experiences/">
+      <p>For many Autistic people, this &ldquo;lake&rdquo; is anything but calm; it can feel vast, deep, and difficult to leave. What appears small on the map often becomes an entire landscape of longing, memory, and relational intensity, full of possibilities and &lsquo;what ifs&rsquo; and &lsquo;maybe&rsquo;s.</p>
+    </blockquote>
+    <figcaption>Helen Edgar, <a href="https://autisticrealms.com/monotropism-limerence-and-autistic-adhd-experiences/"><cite>Monotropism, Limerence And Autistic ADHD Experiences</cite></a>, Autistic Realms, 12 February 2026.</figcaption>
+  </figure>
+
+  <p>The map calls that a <a href="https://autisticrealms.com/autism-the-map-of-neuronormative-domination-stuck-states-vs-flow-states/">stuck state</a>, as against a flow state, and <strong>stuck is not a synonym for bad.</strong> It is the same attention that gives me flow, pooled instead of running. <a href="https://stimpunks.org/glossary/monotropism/">Monotropism</a> does not keep a separate mode for people. When something becomes emotionally significant my attention gathers around it and will not be redirected, and it draws no distinction whatever between a research question and somebody who was kind to me once.</p>
+
+  <p>None of which is a stretch laid over Tennov&rsquo;s word from outside. <strong>It is in her definition.</strong> Among the basic components she lists in 1979, between the intrusive thinking and the fear of rejection, is this one: <q>inability to react limerently to more than one person at a time.</q> A quarter of a century before monotropism had a name, the woman who named limerence had written single-channel attention into what the thing <em>is</em>. She did not mean anything about autism by it. She was describing what several hundred people told her it was like.</p>
+
+  <p>Here is mine.</p>
+
+  <p>I felt limerence hard in high school. It was overwhelming. I never said anything to the person. <strong>I didn&rsquo;t want my feelings to be their problem.</strong></p>
+
+  <p>I could fall hard for people who were kind to me. The smallest kindness made them bright in my eyes. I never said anything. I tried to be a good friend.</p>
+
+  <p>I was the stereotypical Autistic kid in that I was awkward, afraid, and alone. My first date and first kiss were in my mid twenties. I didn&rsquo;t think that would ever happen.</p>
+
+  <p>I had no <a href="https://stimpunks.org/glossary/co-regulation/">co-regulation</a> at home. My parents wouldn&rsquo;t let me in their bed when I was terrified at night. I slept in the hallway, on the hardwood floor, with the lights on. No hugging. No cuddling. Ever.</p>
+
+  <h2 id="memory-foam">What the lake was for <a class="qe-anchor" href="#memory-foam"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>A lot of the power of my limerence probably came from that desperate need for kindness and co-regulation.</p>
+
+  <p>That is the part the pathology framing cannot see from where it stands. My limerence was not misfiring desire. It was an accurate instrument pointed at a real absence. I experience it as a longing for connection, <a href="https://stimpunks.org/glossary/belonging/">belonging</a>, and legibility &mdash; which is to say, for precisely the things that were not in that hallway. Anissa Ljanta describes limerence as a coping strategy, a way a nervous system reaches for regulation through imagined closeness. Read like that, <strong>the flood is not the disease. The flood is the reading on the gauge.</strong></p>
+
+  <p>There is a second hazard in the lake and it took me decades to name. Several times in my career I had a work-wife or a work-husband, somebody I teamed up with constantly. Package deals. I have come to think about those in terms of mutual limerence and <strong>memory-foaming</strong> &mdash; Attlee Hall&rsquo;s word for the Autistic habit of taking the shape of whatever you come into contact with, conceding and bending and making yourself agreeable to the point of self-alienation:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; becoming the room</span>
+    <blockquote cite="https://medium.com/@attleehall/autistic-memory-foaming-2cfecfcb9e8c">
+      <p>It&rsquo;s much easier to read, and become, the room than it is to try to read my own instincts.</p>
+    </blockquote>
+    <figcaption>Attlee Hall, <a href="https://medium.com/@attleehall/autistic-memory-foaming-2cfecfcb9e8c"><cite>Autistic &ldquo;Memory-Foaming&rdquo;</cite></a>.</figcaption>
+  </figure>
+
+  <p>So the danger of the lake is not only that you cannot get out of it. <strong>It is that you dissolve in it.</strong> You mould to the person you are longing toward, become soft and accommodating and easy to have around, and after a while the longing is hard to tell apart from the disappearing. You are reaching for legibility by making yourself illegible. It does not work, and it cannot work, and that is a structural fact about the method rather than a shortcoming in the person.</p>
+
+  <p>My heart&rsquo;s all over the place.</p>
+
+  <h2 id="the-turn">And then the timing is right <a class="qe-anchor" href="#the-turn"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Stories of bad timing and could-have-beens. Lives lived longing for what never was.</p>
+
+  <p>And then, one day, the timing is right, and the could-have-been becomes the requited actually.</p>
+
+  <p>Florentino gets his. It takes fifty-three years and a riverboat flying a cholera flag so they will not have to put in anywhere. And what he imagines on the way to it is not the flood at all:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the other happiness</span>
+    <blockquote>
+      <p>He saw no reason why Fermina Daza should not be a widow like them, prepared by life to accept him just as he was, without fantasies of guilt because of her dead husband, resolved to discover with him the other happiness of being happy twice, with one love for everyday use which would become, more and more, a miracle of being alive, and the other love that belonged to her alone, the love immunized by death against all contagion.</p>
+    </blockquote>
+    <figcaption>Gabriel Garc&iacute;a M&aacute;rquez, <cite>Love in the Time of Cholera</cite> (1985), translated by Edith Grossman (Knopf, 1988); p.&nbsp;198 in the Vintage International edition.</figcaption>
+  </figure>
+
+  <p><strong>One love for everyday use.</strong> Fifty-three years of the most operatic longing in the language, and the thing he is finally reaching for is domestic. Not the flood. The channel.</p>
+
+  <p>And notice what requital is doing there, because it is not what the clinic would do. Nobody treated Florentino. Nobody redirected his attention, distracted him, prescribed him an interest, or talked him out of it. <strong>The stuck state ended because somebody arrived in it.</strong> That is co-regulation, not therapy, and the difference is the whole argument: you do not fix a lake by draining it, you give it a river.</p>
+
+  <h2 id="most-quiet-need">Every day&rsquo;s most quiet need <a class="qe-anchor" href="#most-quiet-need"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <figure class="qe-poem">
+    <span class="qe-specimen-label">Specimen &mdash; the sonnet, entire</span>
+    <blockquote cite="https://poets.org/poem/how-do-i-love-thee-sonnet-43">
+      <p class="qe-stanza">
+        <span class="l">How do I love thee? Let me count the ways.</span>
+        <span class="l">I love thee to the depth and breadth and height</span>
+        <span class="l">My soul can reach, when feeling out of sight</span>
+        <span class="l">For the ends of being and ideal grace.</span>
+        <span class="l">I love thee to the level of every day&rsquo;s</span>
+        <span class="l">Most quiet need, by sun and candle-light.</span>
+        <span class="l">I love thee freely, as men strive for right.</span>
+        <span class="l">I love thee purely, as they turn from praise.</span>
+        <span class="l">I love thee with the passion put to use</span>
+        <span class="l">In my old griefs, and with my childhood&rsquo;s faith.</span>
+        <span class="l">I love thee with a love I seemed to lose</span>
+        <span class="l">With my lost saints. I love thee with the breath,</span>
+        <span class="l">Smiles, tears, of all my life; and, if God choose,</span>
+        <span class="l">I shall but love thee better after death.</span>
+      </p>
+    </blockquote>
+    <figcaption>Elizabeth Barrett Browning, Sonnet&nbsp;43 of <cite>Sonnets from the Portuguese</cite>, first published 1850. Text as the <a href="https://poets.org/poem/how-do-i-love-thee-sonnet-43">Academy of American Poets</a> prints it.</figcaption>
+  </figure>
+
+  <p>It is probably the most quoted love poem in English, which is a good way for a poem to become invisible. Read the first five lines slowly.</p>
+
+  <p>The soul reaches to the end of its own capacity &mdash; <q>the depth and breadth and height</q>, three dimensions of it, a measured volume &mdash; and it is reaching <q>when feeling out of sight</q>. In the dark. Toward something not there. <strong>That is the lake, and the suspension, and a man in a carriage with the wheels stuck.</strong> Four lines of pure unreciprocated reaching, at the top of the poem, in the register of the sublime.</p>
+
+  <p>And then the poem does something no one expects a love sonnet to do. <strong>It comes down.</strong></p>
+
+  <p><q>I love thee to the level of every day&rsquo;s / Most quiet need, by sun and candle-light.</q> <em>Level</em>, in a poem that has just finished measuring <em>height</em>. The flood arriving at grade. It is the same move the suspension makes in music: the held thing finally falls, and falling is how it resolves.</p>
+
+  <p>The standard reading treats that line as the modest beat &mdash; the humble domestic interlude before the sonnet climbs back up to saints and God and death, where the real ambition supposedly lives. <strong>I think it is the most ambitious line in the poem, and I think the poem knows it.</strong> It is the only line that names both the sun and a candle: daylight and night, the whole revolution of one ordinary day. Anyone can love at altitude for an evening. Sustaining it at the level of every day&rsquo;s most quiet need &mdash; every day, at both ends of every day, at the unglamorous scale of what a person actually needs &mdash; is the hard thing.</p>
+
+  <p><strong>And read from a bodymind that has never had it, it is not the modest ask. It is the enormous one.</strong> I knew what altitude felt like by fifteen. I did not know what the level felt like until I was well into my twenties. The sublime was never the part I could not imagine. The quiet need was.</p>
+
+  <p>Elizabeth Barrett and Robert Browning wrote to each other across a barrier of the kind Mond wanted abolished: her father, her illness, a courtship conducted largely in letters, a marriage made in secret and paid for with her disinheritance. The sonnets were written during that, and she did not show them to him until afterwards. <strong>The height of the barrier set the force of the flood.</strong> And then they eloped, and had fifteen years in Florence, and the flood went where Huxley&rsquo;s villain says it goes: <q>down its appointed channels into a calm well-being.</q></p>
+
+  <p>Which is Mond&rsquo;s sentence, and I have taken it off him. He meant it as an argument for never damming anything. I mean it as a description of what it is like when the dam finally opens.</p>
+
+  <h2 id="the-dwell">The swell and the dwell <a class="qe-anchor" href="#the-dwell"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>I wrote the other half of this on Dickinson, on <a href="/wild-nights">Sheet No.&nbsp;6</a>, and it turns out to have been about this all along:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; from the sheet next door</span>
+    <blockquote cite="https://queering.earth/wild-nights">
+      <p>The swell is of sensory passion and exploration, of bodyminds alive and alight in luxurious abandonment. The dwell is of belonging and legibility &mdash; where you can put down the compass and the chart and just be: accepted and understood.</p>
+    </blockquote>
+    <figcaption>From <a href="/wild-nights"><cite>The Swell and the Dwell</cite></a>, Sheet No.&nbsp;6.</figcaption>
+  </figure>
+
+  <p>Everything on this sheet is a swell that was <em>about</em> a dwell. That is the thing I did not understand for about thirty years. I thought I was having enormous feelings about particular people. What I was doing was longing, at maximum volume, for a <em>condition</em> &mdash; connection, belonging, legibility &mdash; that I had no experience of, and so could only picture attached to somebody&rsquo;s face.</p>
+
+  <p>It also explains why the memory-foaming and the limerence ran together in me. If what you want is to be legible, and the only route you have ever found to being kept is to become the shape of the room, then <strong>you will pursue legibility by way of self-erasure, indefinitely, and never arrive.</strong> The lake has no outlet because you keep filling it with yourself.</p>
+
+  <p>And the last word on that should go to the person who named the state, in the same paragraph in which she named it:</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; not preeminent</span>
+    <blockquote>
+      <p>A relationship that includes no limerence may be a far more important one in your life, when all is said and done, than any relationship in which you experienced the strivings of limerent passion. Limerence is not in any way preeminent among types of human attractions or interactions; but when limerence is in full force, it eclipses other relationships.</p>
+    </blockquote>
+    <figcaption>Dorothy Tennov, <cite>Love and Limerence</cite> (1979), p.&nbsp;16 in the Scarborough House edition of 1999, continuous and unaltered.</figcaption>
+  </figure>
+
+  <p><strong>She is pointing at the dwell.</strong> Not as a consolation for people who failed at the swell, but as the thing that was more important all along, said by the one person with the least reason to undersell limerence &mdash; she gave it its name and a book.</p>
+
+  <p>The dwell is the outlet. Not because being loved back cures the longing &mdash; it does not, and I would not want it to. Because being met <em>as yourself</em> is the single thing that stops the reaching being the only activity available. You can put down the compass. <strong>That is not the end of love. That is love at the level of every day&rsquo;s most quiet need</strong>, which is where the sonnet said it was going in its fifth line, before anybody was listening.</p>
+
+  <p>Florentino is asked, on the last page, how long they can keep going up and down the river like this.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the answer he had ready</span>
+    <blockquote>
+      <p>Florentino Ariza had kept his answer ready for fifty-three years, seven months, and eleven days and nights.</p>
+      <p>&ldquo;Forever,&rdquo; he said.</p>
+    </blockquote>
+    <figcaption>Gabriel Garc&iacute;a M&aacute;rquez, <cite>Love in the Time of Cholera</cite> (1985), translated by Edith Grossman (Knopf, 1988); p.&nbsp;345 in the Vintage International edition. These are the last lines of the novel, and 345 is its last page.</figcaption>
+  </figure>
+
+  <h2 id="untidy">What this sheet does not settle <a class="qe-anchor" href="#untidy"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <div class="qe-untidy">
+    <p class="qe-block-label">Left open on purpose</p>
+    <ul>
+      <li><strong>Every object on this sheet assumes love ends in two people, and I do not.</strong> Browning&rsquo;s sonnet is addressed to one <q>thee</q>. Florentino wants <em>one</em> love for everyday use. The marriage plot, the elopement, the riverboat: all of it terminates in a dyad. Elizabeth Brake&rsquo;s word for that assumption is <a href="https://global.oup.com/academic/product/minimizing-marriage-9780195774144"><em>amatonormativity</em></a> &mdash; the belief that a central exclusive romantic pairing is the proper destination of a life. My monotropic attention does not produce one beloved. It produces many, in sequence and at once, and a work-spouse is one of the shapes it takes. <strong>Which is a real problem for the vocabulary, and I would rather leave it visible than solve it with a word.</strong> Tennov&rsquo;s own criteria include the <q>inability to react limerently to more than one person at a time</q>, so on a strict reading the wider thing I am describing &mdash; wanting to co-regulate with nearly everybody &mdash; is not limerence at all, whatever the episodes with single people were. I do not know whether that means her definition is too narrow, or my word is too loose, or the two states are genuinely different and I have been calling both by the louder name. There are so many ways to love and people to love. I fall for everyone. I want to co-regulate with everyone. Monogamy does not make sense to me, though I am well-practised at it at this point. <strong>The canon only knows how to hand me one, and that is a limit of the canon rather than of me.</strong> This sheet arrives at the dwell and stops there; the question of how many dwells a person is allowed is a different sheet and it has not been written.</li>
+      <li><strong>Tennov is now read first-hand; the monotropism literature is not.</strong> Every Tennov passage on this sheet was read in <cite>Love and Limerence</cite> itself. Dinah Murray, Wenn Lawson and Mike Lesser set out monotropism in 2005, and McDonnell and Milton describe attention <q>clumping</q> in 2014; both reached this sheet through <a href="https://autisticrealms.com/monotropism-limerence-and-autistic-adhd-experiences/">Helen Edgar&rsquo;s essay</a>, which cites them properly, and <strong>neither primary has been opened here.</strong></li>
+      <li><strong>Opening Tennov corrected an attribution this sheet was about to make.</strong> A draft said she <q>described the crystallisation that idealises the limerent object</q>, which is true and misleading in the way that matters. <strong>Crystallisation is Stendhal&rsquo;s</strong>, from <cite>De l&rsquo;Amour</cite> in 1822 &mdash; the branch thrown into a salt mine and taken out months later as an object of shimmering beauty &mdash; and Tennov says so plainly on her page&nbsp;30, calling it the term <q>he gave</q>. She is the one who carried it forward, and he is the one it belongs to. It reached us as hers because we had read a summary rather than the book, which is the whole argument for reading the book.</li>
+      <li><strong>The <cite>Love in the Time of Cholera</cite> passages were found in one copy and paginated from another, and both are named because neither would be honest alone.</strong> The wording was read and checked character for character against a scan Ryan holds, which carries no usable pagination and is not an authorised copy. The page numbers come from his Vintage International ebook, whose reader shows a publisher-supplied page map &mdash; <strong>checked by changing the text size and confirming the numbers do not move</strong>, which is the difference between a book&rsquo;s pagination and a device&rsquo;s. A number that shifted with a font setting would be worse than none: it would look exact and be unreproducible for every other reader.</li>
+      <li><strong>The <cite>Immortal Beloved</cite> scene is linked to an upload the rightsholder is not paid for.</strong> <a href="/how-we-quote">Our policy</a> asks for a copy whose owner gets something, and for this film we could not find one &mdash; no official clip, no licensed excerpt. The two recordings this sheet <em>embeds</em> both come from the rightsholders&rsquo; own deliveries, Sony Classical and Warner Classics. The film scene gets a plain link instead, so that following it is the reader&rsquo;s decision and not a request this page makes on their behalf. <strong>It is a relaxation of the rule and it is recorded as one.</strong></li>
+      <li><strong>Whether a stuck state ever simply ends is not something one life can answer.</strong> Mine did, once, and this sheet is honest that the ending arrived from outside rather than from anything I did. That is a reason to build the conditions for co-regulation and a poor reason to tell anybody currently in the lake to wait. <strong>I do not know what to say to the version of me who is still in the hallway</strong>, except that the reaching was not the fault.</li>
+    </ul>
+  </div>
+
+  <div class="qe-accession-block">
+    <p class="qe-stamp" style="--qe-stamp-rot: -2.1deg">
+      <span class="qe-stamp-org">Queering Earth</span>
+      <span class="qe-stamp-no">Sheet No.&nbsp;12</span>
+      <span class="qe-stamp-date">Accessioned <time datetime="2026-09-12">12 Sep 2026</time></span>
+    </p>
+    <p class="qe-provenance">
+      <span class="qe-provenance-label">Provenance</span>
+      Mounted <a href="/changelog#a-2026-09-12-quiet-need"><time datetime="2026-09-12">12 September 2026</time></a>. Not yet corrected.
+    </p>
+  </div>
+
+</main>
+
+<!-- Elsewhere on the plate. OUTSIDE <main> on purpose: the SKS mirror takes page
+     content from the <main> landmark and nowhere else, so navigation placed inside
+     it would be indexed as this sheet's own content. See CLAUDE.md. -->
+<nav class="qe-elsewhere" aria-labelledby="qe-elsewhere-h">
+  <h2 id="qe-elsewhere-h">Elsewhere on the plate</h2>
+  <ul class="qe-elsewhere-grid">
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-violet)">
+        <a class="card" href="/coming-to-terms">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Essay</span>
+            <span class="qe-card-no">No.&nbsp;2</span>
+          </span>
+          <span class="qe-card-title">Coming to Terms</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/wild-nights">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;6</span>
+          </span>
+          <span class="qe-card-title">The Swell and the Dwell</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-lichen)">
+        <a class="card" href="/monotropa-uniflora">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Wall</span>
+            <span class="qe-card-no">No.&nbsp;8</span>
+          </span>
+          <span class="qe-card-title">The Preferred Flower of Life</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-verdigris)">
+        <a class="card" href="/other-people-who-have-it">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Reading</span>
+            <span class="qe-card-no">No.&nbsp;10</span>
+          </span>
+          <span class="qe-card-title">Other People Who Have It</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="card-wrap" style="--card-color: var(--qe-violet)">
+        <a class="card" href="/gloomy-sunflowers">
+          <span class="qe-card-head">
+            <span class="qe-card-kind">Essay</span>
+            <span class="qe-card-no">No.&nbsp;11</span>
+          </span>
+          <span class="qe-card-title">My Gloomy Sunflowers</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<footer class="qe-footer">
+  <p class="qe-footer-nav">
+    <a href="/">Queering Earth</a>
+    <a href="/the-plate">The plate</a>
+    <a href="/the-founding-papers">The founding papers</a>
+    <a href="/the-cabinet-itself">The cabinet itself</a>
+    <a href="/mission">Mission</a>
+    <a href="/manifesto">Manifesto</a>
+    <a href="/two-cohabitating-modes">Modes</a>
+    <a href="/design">Colophon</a>
+    <a href="/changelog">Register</a>
+    <a href="/whats-new">What&rsquo;s new</a>
+    <a href="/ledger">Ledger</a>
+    <a href="/what-is-settled">Decisions</a>
+    <a href="/search">Search</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/how-we-quote">Quoting</a>
+  </p>
+
+  <p>A collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+
+  <p>Our words licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Take them and make something.</p>
+
+  <p>Every quotation here was read in the work it comes from, and is logged in the site&rsquo;s <a href="/ledger">attribution ledger</a>.</p>
+
+  <a class="qe-totop" href="#main">
+    <span class="qe-totop-label">Scroll to top</span>
+    <svg class="qe-botanical qe-totop-mark" viewBox="0 0 160 66" aria-hidden="true" focusable="false">
+      <path class="stem" style="--len:21" d="M22,64 C24,56 25,51 24,45"/>
+      <path class="stem" style="--len:24" d="M33,64 C32,55 30,49 28,43"/>
+      <path class="stem" style="--len:25" d="M44,64 C46,54 48,48 50,42"/>
+      <path class="stem" style="--len:52" d="M58,64 C60,46 67,32 77,21"/>
+      <path class="stem" style="--len:32" d="M68,64 C69,50 70,42 71,34"/>
+      <path class="stem" style="--len:44" d="M80,64 C79.4,48 80.6,34 80,22"/>
+      <path class="stem" style="--len:32" d="M92,64 C91,50 90,42 89,34"/>
+      <path class="stem" style="--len:52" d="M102,64 C100,46 93,32 83,21"/>
+      <path class="stem" style="--len:25" d="M116,64 C114,54 112,48 110,42"/>
+      <path class="stem" style="--len:24" d="M127,64 C128,55 130,49 132,43"/>
+      <path class="stem" style="--len:21" d="M138,64 C136,56 135,51 136,45"/>
+      <g class="sprout" style="--i:3">
+        <path class="head" d="M80,5 C77.4,11 77.4,18 80,25 C82.6,18 82.6,11 80,5 Z"/>
+      </g>
+    </svg>
+  </a>
+</footer>
+
+<script src="queering.js"></script>
+<script src="queering-embed.js" defer></script>
+</body>
+</html>

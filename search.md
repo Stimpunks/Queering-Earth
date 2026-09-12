@@ -199,6 +199,24 @@ Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth
   - [What else it could have been](https://queering.earth/gloomy-sunflowers#what-else-it-could-have-been)
   - [If this is your weather too](https://queering.earth/gloomy-sunflowers#help)
 
+-
+
+No. 12 [Every Day’s Most Quiet Need](https://queering.earth/most-quiet-need) Essay
+
+Ryan Boren, 2026
+
+  - [The suspension](https://queering.earth/most-quiet-need#suspension)
+  - [The carriage in the mud](https://queering.earth/most-quiet-need#the-carriage)
+  - [The physics of the barrier](https://queering.earth/most-quiet-need#the-barrier)
+  - [Fifty-three years, seven months, and eleven days](https://queering.earth/most-quiet-need#florentino)
+  - [On the shelf, and in the clinic](https://queering.earth/most-quiet-need#the-clinic)
+  - [The lake](https://queering.earth/most-quiet-need#the-lake)
+  - [What the lake was for](https://queering.earth/most-quiet-need#memory-foam)
+  - [And then the timing is right](https://queering.earth/most-quiet-need#the-turn)
+  - [Every day’s most quiet need](https://queering.earth/most-quiet-need#most-quiet-need)
+  - [The swell and the dwell](https://queering.earth/most-quiet-need#the-dwell)
+  - [What this sheet does not settle](https://queering.earth/most-quiet-need#untidy)
+
 ### The founding papers
 
 -
@@ -298,7 +316,7 @@ Van Zandt, Van Gogh, Plath and Cobain, on the mad-genius myth
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-228 entries across 62 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+233 entries across 63 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

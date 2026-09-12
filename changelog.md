@@ -37,6 +37,48 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 12 September · latest
 
+## Sheet No. 12, and a rule relaxed on the record rather than quietly
+
+An essay that began as a note in the inbox about a piece of music, and turned into an argument about who is allowed to love the way the canon does.
+
+Mounted[Every Day’s Most Quiet Need](https://queering.earth/most-quiet-need), Sheet No. 12, an essay
+
+Limerence, read as monotropic attention rather than as a disorder. Four objects are held against that vocabulary — Glass’s *Mad Rush*, the first movement of Beethoven’s Op. 47, Mustapha Mond’s hydraulics of feeling in *Brave New World*, and Florentino Ariza’s fifty-three years — and then Elizabeth Barrett Browning’s Sonnet 43, which does something in its fifth line the standard reading treats as the modest beat.
+
+**The argument the sheet exists for is the asymmetry.** Attention that pools on one person, will not redirect, survives years without reciprocation and refuses the cure is a masterpiece when a novelist does it and a symptom when an Autistic person does it. The canon is the evidence, and this sheet puts it on the record: either the sonata is a symptom too, or the longing is not one.
+
+The drawing is a *Myosotis* — a water forget-me-not, which grows at the margin of standing water. **Its flower-head is a scorpioid cyme and the coil is computed rather than drawn**, sampled off a spiral whose radius grows as it unwinds, with tight buds at the curled tip and open flowers along the uncoiled part. Drawn by hand it came out a snail. The plant was chosen because the coil unwinds, which is the shape of the sheet’s own argument, and because its common name is the thing the whole essay is about.
+
+CabinetTwo recordings from the rightsholders, and one link that is not
+
+Both embedded recordings are the owners’ own deliveries and were verified as such before they were mounted, not assumed from the channel name: *Mad Rush* is Sony Classical’s delivery of the 1989 *Solo Piano* recording with Glass himself at the piano, and the Op. 47 first movement is Warner Classics’ delivery of Renaud Capuçon and Frank Braley. The first draft of this sheet carried a listener’s upload of the Glass; **the official one exists and was found by looking**, which is the outcome the policy is for.
+
+**The *Immortal Beloved* scene has no such copy and is linked rather than embedded.** No official clip or licensed excerpt of the film could be found. [The policy](https://queering.earth/how-we-quote) asks for a copy the rightsholder is paid for; this is not one, and the relaxation is Ryan’s call, recorded here and stated on the sheet’s own face in [what it does not settle](https://queering.earth/most-quiet-need#untidy). A link is a request the reader makes; an embed is one the page makes for them. **That distinction is the whole of what the relaxation rests on**, and it is why the film gets a link and not a facade.
+
+Label correctedFour quotations that said “no page numbers” now carry four
+
+The sheet shipped its *Love in the Time of Cholera* passages with the wording verified and the pagination missing, because the only copy to hand was an unauthorised scan with none. Ryan looked them up: **58, 58, 198, and 345** — the last being the final page of the novel. The citations now name both copies, because neither is enough alone. Knopf 1988 is where Edith Grossman’s translation was first published; the **Vintage International** edition is where these numbers live.
+
+**The page map was tested before it was believed, and that test is the transferable part.** A reader showing “Page 58 of 346” may be reporting the publisher’s print page map or may be inventing pages from the reader’s own font size and window width. **The two are indistinguishable on screen.** Ryan changed the text size and the numbers held, which settles it as the book’s pagination rather than the device’s. A number that moved with a font setting would have been worse than no number at all: exact-looking, authoritative, and unreproducible by any other reader. **Ask an ebook page number to prove itself before citing it.**
+
+Reading the pages also confirmed two transcriptions against the printed line rather than against the scan — Grossman’s American *immunized*, and “to enjoy his martyrdom” closing the linden-blossom passage.
+
+Label correctedCrystallisation is Stendhal’s, and the sheet was about to call it Tennov’s
+
+The sheet shipped its first draft citing Dorothy Tennov at one remove, through Helen Edgar’s essay, and said Tennov “described the crystallisation that idealises the limerent object”. She does describe it. **The term is Stendhal’s**, from *De l’Amour* in 1822 — the branch left in a salt mine and lifted out months later encrusted into something shimmering — and Tennov attributes it to him in plain words on her page 30. It had reached us through a summary that named only her.
+
+Caught because Ryan put a scan of *Love and Limerence* in the library and the book was opened. **That is the second near-miss on this one sheet**, after *memory-foaming*, and the two share a cause exactly: a term met in a secondary source and carried forward without opening the primary. The sheet now says on its own face that opening the book corrected it, because a correction a reader cannot see is a correction that only exists for us.
+
+**Reading the book also paid for itself three more times.** Tennov’s own list of the state’s components includes “intensification through adversity” and the finding that an “externally imposed obstacle, such as Romeo and Juliet met in the resistance of family and society” will serve — which is Huxley’s barrier, measured rather than asserted, and it is now mounted beside him. Her criteria also include the “inability to react limerently to more than one person at a time”, so single-channel attention was written into the definition in 1979, a quarter of a century before monotropism had a name. And she says herself that a relationship with no limerence in it “may be a far more important one in your life” — the woman who named the state, pointing at the dwell.
+
+Label correctedA borrowed term was about to be used to mean its opposite
+
+The draft reached for **memory-foaming** as though it meant fond or magnified memory. It does not. Attlee Hall’s term is for the Autistic habit of taking the shape of whatever you meet — conceding, bending and making yourself agreeable to the point of self-alienation. **Caught before it shipped, by reading the source rather than the phrase.**
+
+It is recorded here because the near-miss is the exact failure this cabinet is organised against: somebody else’s coinage, loosened one notch to fit the sentence we wanted, with the attribution still attached. Used correctly it improved the sheet — the danger of the lake is not only that a person cannot leave it but that they dissolve in it, which is Hall’s point and not ours.
+
+2026 · 12 September
+
 ## The lilacs went back to the foot of the home page, and needed a heading once they were in an outline
 
 A coda stops being a coda the moment anything is appended beneath it. Nobody moved this one; three sections arrived under it, one at a time, each of them correct.
@@ -2318,6 +2360,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [Other People Who Have It](https://queering.earth/other-people-who-have-it) Sheet No. 10
 
 ### [My Gloomy Sunflowers](https://queering.earth/gloomy-sunflowers) Sheet No. 11
+
+### [Every Day’s Most Quiet Need](https://queering.earth/most-quiet-need) Sheet No. 12
 
 ### [Find a word in the cabinet](https://queering.earth/search) the finding aid
 

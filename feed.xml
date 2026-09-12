@@ -7,7 +7,15 @@
     <description>Every page in the cabinet as it arrives — the sheets and the pages that are not sheets, newest first. The register's own accessions, including every correction, are a separate feed at https://queering.earth/register.xml. Generated from the pages themselves by tools/make-whats-new.mjs.</description>
     <language>en</language>
     <copyright>CC BY-SA 4.0</copyright>
-    <lastBuildDate>Fri, 11 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Every Day’s Most Quiet Need</title>
+      <link>https://queering.earth/most-quiet-need</link>
+      <guid isPermaLink="true">https://queering.earth/most-quiet-need</guid>
+      <pubDate>Sat, 12 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Essay · No. 12</category>
+      <description>Limerence read as monotropic attention rather than as a disorder — Glass, Beethoven, Huxley and García Márquez held against the line in Browning where a love poem stops climbing and comes down to the level of an ordinary day.</description>
+    </item>
     <item>
       <title>The plate</title>
       <link>https://queering.earth/the-plate</link>
