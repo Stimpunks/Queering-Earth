@@ -1497,6 +1497,15 @@ one of them** — it publishes all three. Cherry-picking the single file is what
 had to do anyway. **Nothing ever merges out of `drafts`**, which is what makes the header
 below safe.
 
+**IT IS THE PAGE PLUS WHATEVER SHARED ASSETS THE DRAFT NEEDED, NAMED ONE BY ONE.** The rule
+first shipped as *one file* and that was wrong: a draft that grows a component needs its
+rules in `queering.css`, a draft that quotes anybody needs its entries in `ATTRIBUTIONS.md`,
+and neither lives in the page. Publishing the page alone ships a sheet whose styles do not
+exist — **44 pages that printed blank**, the same failure from a new direction. Ask
+`git diff --stat main...drafts` what moved and take each by name. **Never a wildcard**: the
+branch also carries `_headers`, whose noindex must not reach `main`, and
+`review-practice.html`, which is branch-only for ever.
+
 **THREE SKILLS DRIVE THIS, AND RYAN SHOULD NEVER TYPE A GIT COMMAND FOR IT.**
 `start-draft` puts a page on the branch and prints the URL; `save-draft` commits, pushes and
 hands the URL back; `publish-draft` takes the file onto `main` and walks the accession

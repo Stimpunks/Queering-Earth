@@ -39,6 +39,32 @@ other draft on the branch at once, and it would carry the branch's `X-Robots-Tag
 onto production, dropping every page on the site out of every index. `CLAUDE.md` and the
 comment in `_headers` both say so.
 
+**BUT IT IS THE PAGE PLUS WHATEVER SHARED ASSETS THE DRAFT NEEDED, NAMED ONE BY ONE — AND
+THE FIRST VERSION OF THIS SKILL SAID "ONE FILE", WHICH WAS WRONG.** A draft that grew a new
+component needs its rules in `queering.css`; a draft that quotes anybody needs its entries in
+`ATTRIBUTIONS.md`; a new font, plate or card needs its generated output. None of that lives
+in the page. Taking only the page publishes a sheet whose styles do not exist, which is this
+house's characteristic failure — Star Stuff shipped 44 pages that printed blank for exactly
+that reason.
+
+**So ask the draft what it touched, rather than assuming:**
+
+```bash
+git diff --stat main...drafts -- . ':!review-practice.html'
+```
+
+Everything that comes back is in scope. Take each by name:
+
+```bash
+git checkout drafts -- <draft>.html queering.css ATTRIBUTIONS.md
+```
+
+**Named one by one and never as a wildcard**, because the branch also carries
+`_headers` — whose `X-Robots-Tag: noindex` must never reach `main` — and
+`review-practice.html`, which is branch-only for ever. A `git checkout drafts -- .` would
+take both. **If `_headers` appears in that diff for any reason other than the noindex block,
+stop and read it before taking anything.**
+
 Then **delete the three-line draft block** — the comment, the `robots` meta and the
 `review.js` script. `check-metadata.mjs` check 10 will stop the build if you forget, but do
 it here rather than relying on the gate.
@@ -123,8 +149,12 @@ The draft page still exists on `drafts` in its pre-publication form. Make the br
 identical to the published one **before** merging, so there is nothing to resolve:
 
 ```bash
-git switch drafts && git checkout main -- <draft>.html && git commit -m "Published; take main's version" && git merge main -m "Bring the drafts branch up to date with main" && git push && git switch main
+git switch drafts && git checkout main -- <draft>.html <every other file you took> && git commit -m "Published; take main's version" && git merge main -m "Bring the drafts branch up to date with main" && git push && git switch main
 ```
+
+**Every file you took, not just the page** — the same list from the diff above, minus
+`_headers`. A shared asset left in its draft state on the branch is a divergence that will
+conflict on the next merge and be resolved by whoever is least equipped to.
 
 For a **new** sheet the file is now a published page sitting on the branch, which is correct
 — the branch carries a full copy of the site. For a **rewrite**, the same. Either way
