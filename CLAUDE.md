@@ -1506,6 +1506,17 @@ in the one place where being wrong means publishing the wrong page. A draft is i
 its marker rather than by a name kept somewhere, which is the same fact check 10 keys on, so
 a page stops being a draft at exactly the moment it is published.
 
+**`drafts` IS AMBIGUOUS AS A BARE REVISION, PERMANENTLY, BECAUSE `drafts/` IS ALSO A
+DIRECTORY.** `git log drafts` fails with *ambiguous argument 'drafts': both revision and
+filename*, and will for as long as `drafts/review.js` exists. Harmless everywhere the
+workflow actually goes — `git switch drafts` and `git merge main` take a branch
+unambiguously, `git checkout drafts -- <page>` carries the `--`, and `tools/draft.mjs`
+spells it `refs/heads/drafts` throughout. It bites on read commands: write
+`git log refs/heads/drafts` or `git log drafts --`. **Diagnosed wrong the first time** — it
+was blamed on a stray local branch called `origin`, which does not exist; that name in
+`git branch -a` output is `refs/remotes/origin/HEAD`, rendered short, and deleting it would
+have been the wrong repair for a fault it did not cause.
+
 **IT MATCHES THE INCLUDE AND NOT THE NAME, WHICH IS THE THIRD TIME IN ONE DAY.** Check 10
 shipped with the bare string and fired on `/changelog` and `/what-is-settled` the moment the
 feature was written up on them; `draft.mjs` did the same an hour later, from the same
