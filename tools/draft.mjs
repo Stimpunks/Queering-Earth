@@ -56,9 +56,26 @@ const git = (...args) =>
 
 const addressOf = (f) => (f === 'index.html' ? '/' : '/' + f.replace(/\.html$/, ''));
 
+const PROJECT = 'queering-earth';
+/* Netlify's own limit, from its branch-deploy dialog: "Your project name and branch name
+ * combined have a character limit of 61." The subdomain is <branch>--<project>, so the
+ * project eats 14 of it and `draft-` another 6 — leaving 39 characters for a slug.
+ * `a-waste-garden-flowering-at-its-will` would be 36, so the real sheet names here fit,
+ * but not by a wide margin. A branch over the limit gets no deploy URL, which would look
+ * exactly like the branch simply not building. */
+const LABEL_LIMIT = 61;
+
 /** Netlify's branch subdomain: every run of non-alphanumerics becomes one dash. */
-export const hostFor = (branch) =>
-  'https://' + branch.replace(/[^A-Za-z0-9]+/g, '-').replace(/^-|-$/g, '') + HOST_SUFFIX;
+export const slugFor = (branch) =>
+  branch.replace(/[^A-Za-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+export const hostFor = (branch) => 'https://' + slugFor(branch) + HOST_SUFFIX;
+
+/** Does this branch name fit in a Netlify subdomain? */
+export function labelFits(branch) {
+  const label = `${slugFor(branch)}--${PROJECT}`;
+  return { ok: label.length <= LABEL_LIMIT, length: label.length, limit: LABEL_LIMIT, label };
+}
 
 /** Every draft branch, local or on the remote, deduplicated. */
 export function draftBranches() {
@@ -214,6 +231,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     console.log(`  branch    ${b}`);
     console.log(`  page      ${page ?? '(none carrying the draft block)'}`);
     if (page) console.log(`  read it   ${hostFor(b)}${addressOf(page)}`);
+    const fit = labelFits(b);
+    if (!fit.ok)
+      console.log(`  WARNING   the Netlify subdomain would be ${fit.length} characters and the ` +
+                  `limit is ${fit.limit} — this branch gets no deploy URL, which looks exactly ` +
+                  `like it simply never built. Rename it shorter.`);
     console.log();
   }
 }

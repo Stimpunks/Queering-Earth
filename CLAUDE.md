@@ -1532,6 +1532,15 @@ was refused for two reasons that are not about plumbing: it would put unreviewed
 attributions on **queering.earth** itself, unlisted but public; and a page one directory
 down needs `../queering.css`, so it does not render what will ship.
 
+**TWO NETLIFY FACTS THAT LOOK LIKE BROKEN SETUPS.** Neither is a fault in this repo and
+both cost a round trip. **A branch is only built on a push made AFTER it is added to the
+deploy list** — a branch pushed first and added second shows *No deploys found* with
+nothing wrong anywhere; an empty commit is the nudge. And **the subdomain has a 61-character
+limit**, `<branch>--queering-earth`, of which the project name and the `draft-` prefix take
+twenty — leaving **39 for a slug**. `a-waste-garden-flowering-at-its-will` is 36, so real
+sheet names fit and not by much. `tools/draft.mjs` warns when a branch is over; a branch
+over the limit gets no deploy URL, which looks exactly like one that never built.
+
 **THE PER-BRANCH MODEL MADE THE TOOLING SIMPLER, NOT HARDER.** `scope` used to derive
 ownership by commit archaeology — a file belongs to this draft if a commit that touched its
 page also touched it — because two drafts' changes were interleaved. With one draft to a
