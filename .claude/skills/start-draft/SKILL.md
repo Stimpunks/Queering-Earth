@@ -1,6 +1,6 @@
 ---
 name: start-draft
-description: Put a new sheet, or a rewrite of an existing one, on the drafts branch at a real address so the other collaborator can read and annotate it before it is published. Use when Ryan or Helen says "start a draft", "new draft", "draft a sheet on X", "I want Helen to look at this first", "rewrite /on-being-ill as a draft", or asks for a review link. Handles every git step; ends by printing the URL to send the reviewer.
+description: Put a new sheet, or a rewrite of an existing one, on its own draft branch at a real address so the other collaborator can read and annotate it before it is published. One branch per draft, named draft/<slug> and cut from the drafts base. Use when Ryan or Helen says "start a draft", "new draft", "draft a sheet on X", "I want Helen to look at this first", "rewrite /on-being-ill as a draft", or asks for a review link. Handles every git step; ends by printing the URL to send the reviewer.
 ---
 
 # start-draft
@@ -16,57 +16,63 @@ told which one if there are two, and there is no reason to run two.
 
 ## Steps
 
-1. **Is there already a draft?**
+**ONE BRANCH PER DRAFT, AND IT IS CUT FROM `drafts`.** `drafts` is a base, not a place to
+work: it carries the `X-Robots-Tag: noindex` block in `_headers`, which must never reach
+`main`, and `review-practice.html`. Cutting from it is how a draft branch inherits both.
+**Cutting from `main` instead would produce a branch deploy that is a fully crawlable copy
+of the published site.**
+
+1. **What is already in flight?**
 
    ```bash
    node tools/draft.mjs
    ```
 
-   If it reports one, stop and ask whether to publish it, throw it away (see `save-draft`),
-   or genuinely run two at once — and say whose draft it is, because it may be the other
-   collaborator's. Do not start a second silently.
+   Several at once is fine now — that is the point of the change. It is worth knowing what
+   else is open before naming a branch.
 
 2. **THE WORKING TREE MUST BE CLEAN BEFORE ANY BRANCH SWITCH.** `git switch` carries
-   uncommitted changes across to the other branch when the files match, which means edits
-   meant for `main` silently arrive on `drafts`. This happened during the session that built
-   this workflow.
+   uncommitted changes across when the files match, so edits meant for one branch arrive on
+   another. This caught the session that built the workflow twice.
 
    ```bash
    git status --short
    ```
 
-   Anything listed: commit it on `main` first, or ask. Never stash and hope.
-
-3. **Go to the branch and bring it up to date with the published site.**
+3. **Cut the branch from the base.**
 
    ```bash
-   git switch drafts && git merge main -m "Bring the drafts branch up to date with main"
+   git switch drafts && git merge main -m "Bring the drafts base up to date with main"
+   git switch -c draft/<slug> && git push -u origin draft/<slug>
    ```
 
-   **Main merges INTO drafts and never the other way.** The branch carries an
-   `X-Robots-Tag: noindex` in `_headers` that must never reach production — see the comment
-   in that file. Publishing takes the file, not the branch.
+   **Main merges INTO the base and never the other way**, and nothing merges out of a draft
+   branch either. Publishing takes files, never a merge.
 
-   A conflict here will be in `_headers`: keep both sides — main's changes *and* the
-   branch-only noindex block.
+   A conflict in that first merge will be in `_headers`: keep both sides — main's changes
+   *and* the branch-only noindex block.
 
-4. **Decide which kind of draft this is**, and say which you have concluded:
+4. **Tell Ryan to add `draft/<slug>` to Netlify's branch deploys.** Project configuration →
+   Build & deploy → Branches and deploy contexts → *Let me add individual branches*.
+   **Not "All branches"** — a branch cut from `main` rather than from `drafts` has no
+   noindex, and "all" would publish it crawlable.
+
+5. **Decide which kind of draft this is**, and say which you concluded:
 
    - **A rewrite of a published sheet.** The file already exists on the branch. Edit it in
      place, at its own filename, so the draft is byte-identical to what will ship.
-   - **A new sheet.** There is no template, on purpose — a skeleton page would be a second
-     copy of markup every sheet already carries. **Copy the nearest existing sheet** and
-     gut it: `cp on-being-ill.html <slug>.html`, then replace the title, the meta
-     description, the canonical, the `og:` block, the masthead and the body. Delete the
-     accession stamp, the provenance line and the JSON-LD — **those are accession, and a
-     draft is not accessioned.** Keep the controls tray, the footer, and the empty
-     `.qe-contents` / `.qe-rail` containers with their `<ol></ol>` and `hidden` attribute.
+   - **A new sheet.** There is no template, on purpose — a skeleton would be a second copy
+     of markup every sheet already carries. **Copy the nearest existing sheet** and gut it.
+     Keep the controls tray, the footer, the breadcrumb, the discovery links in the head,
+     and the empty `.qe-contents` / `.qe-rail` containers with their `<ol></ol>` and
+     `hidden`. Delete the accession stamp, the provenance line and the JSON-LD — **those
+     are accession, and a draft is not accessioned.**
 
-   **Check the slug against the repo root before choosing it.** macOS is case-insensitive, so
-   a slug matching a root file — `decisions`, `attributions`, `readme` — would make
-   `make-markdown.mjs` overwrite its own source. `CLAUDE.md` records this.
+   **Check the slug against the repo root**, because macOS is case-insensitive and a slug
+   matching a root file — `decisions`, `attributions`, `readme` — would make
+   `make-markdown.mjs` overwrite its own source.
 
-5. **Add the draft block**, immediately after the viewport meta:
+6. **Add the draft block**, immediately after the viewport meta:
 
    ```html
    <!-- DRAFT. Delete these three lines to publish. Guarded by check-metadata.mjs check 10. -->
@@ -74,37 +80,20 @@ told which one if there are two, and there is no reason to run two.
    <script src="drafts/review.js" defer></script>
    ```
 
-   Relative, not root-relative, like every other asset reference here.
-
-6. **Check the markup**, which is the one gate that matters on a draft:
+7. **Check the markup, then commit and push.**
 
    ```bash
    node tools/check-markup.mjs --check <slug>.html
-   ```
-
-   The accession gates are *supposed* to fail on a draft — the missing `301!`, the missing
-   card, the missing `<loc>` are the accession checklist reported by name. Do not chase them
-   now. This one is different: three generators parse this HTML with regexes and assume
-   every tag closes.
-
-7. **Commit and push.**
-
-   ```bash
    git add <slug>.html && git commit -m "Draft: <title>" && git push
    ```
 
-8. **Print the URL and say it is the reviewer's link** — the collaborator who did not write
-   this sheet. Netlify builds in about twenty seconds.
+8. **Print the URL and hand it over.** Netlify builds in about twenty seconds.
 
    ```bash
    node tools/draft.mjs
    ```
 
-9. **Go back to main** so the next session does not start on the branch by accident:
-
-   ```bash
-   git switch main
-   ```
+9. **Go back to main** so the next session does not start on a draft branch by accident.
 
 ## What a draft deliberately does not have
 
