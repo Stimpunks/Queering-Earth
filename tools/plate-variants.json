@@ -321,5 +321,39 @@
       544,
       1088
     ]
+  },
+  "wingendorp-1655-musei-wormiani-historia-frontispiece.jpg": {
+    "native": [
+      2700,
+      2314
+    ],
+    "sha256": "590bd58d2f24b3ff75671cb68a1addab7292b7ef187680724112532eb74dd9cc",
+    "variants": [
+      "wingendorp-1655-musei-wormiani-historia-frontispiece-544.avif",
+      "wingendorp-1655-musei-wormiani-historia-frontispiece-544.webp",
+      "wingendorp-1655-musei-wormiani-historia-frontispiece-1088.avif",
+      "wingendorp-1655-musei-wormiani-historia-frontispiece-1088.webp"
+    ],
+    "widths": [
+      544,
+      1088
+    ]
+  },
+  "worm-1655-museum-wormianum-narwhal-skull-p283.jpg": {
+    "native": [
+      2700,
+      730
+    ],
+    "sha256": "7e98d6abc43ef42f89518bc33ab89ecd1e95d25c16285fb6e6c0075cd001933b",
+    "variants": [
+      "worm-1655-museum-wormianum-narwhal-skull-p283-544.avif",
+      "worm-1655-museum-wormianum-narwhal-skull-p283-544.webp",
+      "worm-1655-museum-wormianum-narwhal-skull-p283-1088.avif",
+      "worm-1655-museum-wormianum-narwhal-skull-p283-1088.webp"
+    ],
+    "widths": [
+      544,
+      1088
+    ]
   }
 }

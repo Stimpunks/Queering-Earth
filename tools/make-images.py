@@ -320,6 +320,9 @@ og_card(REPO/"images"/"og-gloomy-sunflowers.png", "My Gloomy Sunflowers", "Sheet
         "Four artists filed under tortured, read for the people who kept them here.", MARIGOLD)
 og_card(REPO/"images"/"og-most-quiet-need.png", "Every Day\u2019s Most Quiet Need", "Sheet \u00b7 an essay",
         "The canon calls it great love. The clinic calls it a stuck state.", CORAL)
+
+og_card(REPO/"images"/"og-held-not-fixed.png", "Held, Not Fixed", "Sheet \u00b7 an essay",
+        "Emily brings the broken thing forward and the shop looks at it.", LICHEN)
 og_card(REPO/"images"/"og-mission.png", "What this cabinet is for", "The founding papers",
         "Thirteen aims, each with the page where it is already being kept.", VIOLET)
 og_card(REPO/"images"/"og-manifesto.png", "Nothing here was inevitable", "The founding papers",

@@ -217,6 +217,19 @@ Ryan Boren, 2026
   - [The swell and the dwell](https://queering.earth/most-quiet-need#the-dwell)
   - [What this sheet does not settle](https://queering.earth/most-quiet-need#untidy)
 
+-
+
+No. 13 [Held, Not Fixed](https://queering.earth/held-not-fixed) Essay
+
+Helen Edgar, 2026
+
+  - [What Emily brings](https://queering.earth/held-not-fixed#the-shop)
+  - [The herbarium sheet](https://queering.earth/held-not-fixed#the-sheet)
+  - [The cabinet of curiosities](https://queering.earth/held-not-fixed#the-cabinet)
+  - [Monotropic flow](https://queering.earth/held-not-fixed#the-pull)
+  - [Bring something forward](https://queering.earth/held-not-fixed#invitation)
+  - [Sources](https://queering.earth/held-not-fixed#sources)
+
 ### The founding papers
 
 -
@@ -316,7 +329,7 @@ Ryan Boren, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-250 entries across 69 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+253 entries across 70 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

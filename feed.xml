@@ -7,7 +7,15 @@
     <description>Every page in the cabinet as it arrives — the sheets and the pages that are not sheets, newest first. The register's own accessions, including every correction, are a separate feed at https://queering.earth/register.xml. Generated from the pages themselves by tools/make-whats-new.mjs.</description>
     <language>en</language>
     <copyright>CC BY-SA 4.0</copyright>
-    <lastBuildDate>Sat, 12 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Held, Not Fixed</title>
+      <link>https://queering.earth/held-not-fixed</link>
+      <guid isPermaLink="true">https://queering.earth/held-not-fixed</guid>
+      <pubDate>Sun, 13 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Essay · No. 13</category>
+      <description>Helen Edgar on lost things, wonder, and the cabinets we keep for one another — Emily’s shop, the herbarium type specimen, Ole Worm’s unicorn horn, and attention that refuses to be filed.</description>
+    </item>
     <item>
       <title>Every Day’s Most Quiet Need</title>
       <link>https://queering.earth/most-quiet-need</link>

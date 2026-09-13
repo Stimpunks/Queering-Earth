@@ -83,7 +83,16 @@ WIDE = {"waterhouse-1916-miranda-the-tempest",
         # is also the sheet's ending rather than one of its illustrations. The
         # Sunflowers beside it stays narrow: it is portrait, and a vase on a table
         # reads perfectly well at 368.
-        "van-gogh-almond-blossom-1890-vgm-google-art-project"}
+        "van-gogh-almond-blossom-1890-vgm-google-art-project",
+        # Both Wormianum plates are wide, for the Bewick reason and then some. The
+        # frontispiece is a 1655 line engraving of an entire room — a polar bear, a
+        # kayak, forty fishes on the ceiling and three walls of labelled shelving —
+        # and the whole subject IS the density: at 368px the objects stop being
+        # separable things and become grain. The narwhal is a woodcut, which is
+        # hatching, and it is 2700x730: in a 368px box the skull is 100px across and
+        # the spiral on the tusk, which is the entire point of the figure, is gone.
+        "wingendorp-1655-musei-wormiani-historia-frontispiece",
+        "worm-1655-museum-wormianum-narwhal-skull-p283"}
 LADDER_NORMAL = (368, 736)
 LADDER_WIDE = (544, 1088)
 

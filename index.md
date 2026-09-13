@@ -137,6 +137,10 @@ Every sheet mounted so far, numbered below in the order it was accessioned. [Abo
 
 [  Essay No. 12  Every Day’s Most Quiet Need Ryan Boren, 2026 Limerence as monotropic attention, and the line where a love sonnet stops climbing and comes down. ](https://queering.earth/most-quiet-need)
 
+-
+
+[  Essay No. 13  Held, Not Fixed Helen Edgar, 2026 A shop, a herbarium sheet and a cabinet of curiosities — three places that hold what is lost without asking it to be fixed first. ](https://queering.earth/held-not-fixed)
+
 The border is four flowers that were once a way of saying it without saying it: *violet*, *pansy*, *green carnation*, *lavender*. Gathered as a set by Sarah Prager in [*Four Flowering Plants That Have Been Decidedly Queered*](https://daily.jstor.org/four-flowering-plants-decidedly-queered/), JSTOR Daily, 29 January 2020.
 
 What follows will be made the way [Star Stuff](https://starstuff.earth/) is made — a piece at a time, in public, with the working-out left in, by [Helen Edgar](https://morerealms.com/) and the [Stimpunks Foundation](https://stimpunks.org/). Come back and watch it fill in.
