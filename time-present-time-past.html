@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- DRAFT. Delete these three lines to publish. Guarded by check-metadata.mjs check 10. -->
+<meta name="robots" content="noindex, nofollow">
+<script src="drafts/review.js" defer></script>
+<title>Time Present, Time Past &mdash; Queering Earth</title>
+<meta name="description" content="A neuroqueer reading of Eliot's Four Quartets: the year he spent arguing with Bergson in person, the durational time he kept writing his way back toward, and what masking, monotropism and co-regulation notice in the poem that a century of mystical readings did not.">
+<link rel="canonical" href="https://queering.earth/time-present-time-past">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2a1d19" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- The faces are self-hosted and declared in queering.css. Preloading the body
+     roman is the one that pays: it is the first thing every page needs, and there
+     is no cross-origin handshake to wait on any more. crossorigin is required
+     even same-origin — a font is always fetched in CORS mode. -->
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="queering.css">
+
+<!-- Restore the reader's choices BEFORE first paint. Deferred to queering.js
+     either one would flash the wrong page: the decorated page at someone who
+     turned it off, or the daylight sheet at someone who asked for the cabinet.
+     With no stored ground, neither class is set and the media query decides. -->
+<script>try{var d=document.documentElement,L=localStorage,g=L.getItem('qe-ground');if(L.getItem('qe-plain')==='1')d.classList.add('plain');if(g==='cabinet'||g==='daylight')d.classList.add(g);[['motion','on off'],['contrast','on off'],['spacing','on off'],['textsize','larger largest'],['font','adelphe atkinson baskervvol coxinelle insolente redaction sporting trickster victorianna']].forEach(function(p){var v=L.getItem('qe-'+p[0]);if(v&&p[1].split(' ').indexOf(v)>-1)d.classList.add('qe-'+p[0]+'-'+v)})}catch(e){}</script>
+</head>
+<body style="--qe-fox-a: 18% 9%; --qe-fox-b: 88% 33%; --qe-fox-c: 42% 91%; --qe-fox-d: 6% 62%">
+
+<a class="qe-skip" href="#main">Skip to the page</a>
+
+<div class="qe-controls">
+  <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
+  <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
+  <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
+  <details class="qe-reading" name="qe-tray">
+    <summary class="qe-reading-summary">Reading</summary>
+    <div class="qe-reading-panel">
+      <p class="qe-reading-note">These start from your device&rsquo;s own settings. Change one here and this browser will remember it for this site.</p>
+      <ul class="qe-reading-list">
+        <li>
+          <label><input type="checkbox" id="qe-set-motion"> <span>Reduce motion</span></label>
+          <span class="qe-reading-hint">The drawings appear finished instead of drawing themselves on.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-contrast"> <span>More contrast</span></label>
+          <span class="qe-reading-hint">Darker ink, firmer rules, and the foxing lifted off the paper.</span>
+        </li>
+        <li>
+          <label><input type="checkbox" id="qe-set-spacing"> <span>Looser lines</span></label>
+          <span class="qe-reading-hint">More air between the lines and between paragraphs.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-textsize">Text size</label>
+            <select class="qe-reading-select" id="qe-set-textsize">
+              <option value="">Your device&rsquo;s size</option>
+              <option value="larger">Larger</option>
+              <option value="largest">Largest</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">Scales the whole sheet &mdash; the lines, the gaps and the measure &mdash; from whatever size your browser is already set to.</span>
+        </li>
+        <li>
+          <div class="qe-reading-row">
+            <label for="qe-set-font">Typeface</label>
+            <select class="qe-reading-select qe-reading-select-wide" id="qe-set-font">
+              <option value="">Fraunces &amp; Newsreader</option>
+              <option value="adelphe">Adelphe</option>
+              <option value="atkinson">Atkinson Hyperlegible</option>
+              <option value="baskervvol">BBB Baskervvol</option>
+              <option value="coxinelle">Coxinelle</option>
+              <option value="insolente">Insolente</option>
+              <option value="redaction">Redaction Inclusive</option>
+              <option value="sporting">Sporting Grotesque</option>
+              <option value="trickster">Trickster</option>
+              <option value="victorianna">Victorianna</option>
+            </select>
+          </div>
+          <span class="qe-reading-hint">The first four also set the reading face, because they have a real italic. The rest change the headings and leave Newsreader to read.</span>
+        </li>
+      </ul>
+      <button type="button" class="qe-reading-reset" id="qe-reading-reset" disabled>Follow my device again</button>
+    </div>
+  </details>
+  <!-- The drawers. Three collections, and everything on the site is in one of
+       them. A native details element, like the reading settings beside it and for
+       the same reason: a hand-built menu would need focus trapping, a roving
+       tabindex and an Escape handler, and getting any of that wrong makes the
+       navigation the least navigable thing on the sheet. -->
+  <details class="qe-drawers" name="qe-tray">
+    <summary class="qe-drawers-summary">Drawers</summary>
+    <div class="qe-drawers-panel">
+      <ul class="qe-drawers-list">
+        <li>
+          <a class="qe-drawers-link" href="/the-plate" aria-current="true">The plate</a>
+          <span class="qe-drawers-hint">The sheets themselves, mounted and numbered on one plate.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-founding-papers">The founding papers</a>
+          <span class="qe-drawers-hint">Why this cabinet exists, and what it is for.</span>
+        </li>
+        <li>
+          <a class="qe-drawers-link" href="/the-cabinet-itself">The cabinet itself</a>
+          <span class="qe-drawers-hint">How it is made, what it has recorded, and what it knows about you.</span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <!-- The easter egg. An ornament that is a door: unlabelled to the eye,
+       named in the DOM, and pointing at a page that is listed in the
+       footer row, on the home page and in the sitemap like any other. -->
+  <a class="qe-modes-link" href="/two-cohabitating-modes">
+  <svg class="qe-modes-mark" viewBox="1 2.2 41.3 20" aria-hidden="true" focusable="false">
+    <path d="M7.4,15.6 C4.2,16.2 1.4,14.2 1.5,10.4 C1.6,8.5 2.6,7.2 4.0,6.9 C4.5,9.1 5.7,10.8 7.9,12.0 L7.4,15.6 Z"/>
+    <path d="M6.6,16.2 C5.8,12.9 8.0,10.7 11.8,10.7 C15.2,10.7 17.2,12.1 17.2,14.6 C17.2,16.6 15.6,17.5 12.2,17.5 C9.0,17.5 7.0,17.0 6.6,16.2 Z"/>
+    <path d="M14.2,12 L15.8,9.2 L18.8,11 L17,13.8 Z"/>
+    <path d="M15.1,8.4 C15.1,6.8 16.4,5.7 18.0,5.7 C19.7,5.7 20.9,6.9 20.9,8.5 C20.9,10.2 19.6,11.3 17.9,11.3 C16.3,11.3 15.1,10.1 15.1,8.4 Z"/>
+    <path d="M19.3,7 L22.3,8.6 L19.5,10.2 Z"/>
+    <path d="M21.9,8.6 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M15.2,6.5 L14.6,2.9 L17.5,5.6 Z"/>
+    <path d="M17.7,5.4 L19.1,2.7 L20.3,6.1 Z"/>
+    <path d="M7,16.6 L6.6,21.7 L8.25,21.7 L8.65,16.6 Z"/>
+    <path d="M8.7,17.1 L8.7,21.7 L10.35,21.7 L10.35,17.1 Z"/>
+    <path d="M13,17.2 L13,21.7 L14.65,21.7 L14.65,17.2 Z"/>
+    <path d="M14.7,16.8 L15.15,21.7 L16.8,21.7 L16.35,16.8 Z"/>
+    <path d="M25.92,20 L25.92,19.63 L26.01,18.85 L26.19,17.98 L26.45,17.08 L26.8,16.19 L27.21,15.32 L27.7,14.51 L28.25,13.76 L28.85,13.1 L29.5,12.54 L30.19,12.09 L30.91,11.77 L31.65,11.57 L32.4,11.5 L33.15,11.57 L33.89,11.77 L34.61,12.09 L35.3,12.54 L35.95,13.1 L36.55,13.76 L37.1,14.51 L37.59,15.32 L38,16.19 L38.35,17.08 L38.61,17.98 L38.79,18.85 L38.88,19.63 L38.88,20 Z"/>
+    <path d="M25.62,18.2 L23.5,20.11 L26.34,19.89 Z"/>
+    <path d="M26.04,16.77 L23.67,18.35 L26.51,18.55 Z"/>
+    <path d="M26.69,15.31 L24.1,16.5 L26.88,17.14 Z"/>
+    <path d="M27.53,13.94 L24.78,14.69 L27.42,15.77 Z"/>
+    <path d="M28.56,12.75 L25.72,13 L28.13,14.54 Z"/>
+    <path d="M29.74,11.83 L26.91,11.51 L28.96,13.49 Z"/>
+    <path d="M31.02,11.23 L28.32,10.31 L29.89,12.68 Z"/>
+    <path d="M32.35,10.99 L29.94,9.47 L30.91,12.15 Z"/>
+    <path d="M33.66,11.13 L31.69,9.08 L32,11.91 Z"/>
+    <path d="M34.92,11.63 L33.48,9.17 L33.11,12 Z"/>
+    <path d="M36.07,12.45 L35.21,9.73 L34.23,12.41 Z"/>
+    <path d="M37.08,13.55 L36.8,10.71 L35.29,13.13 Z"/>
+    <path d="M37.93,14.86 L38.18,12.02 L36.25,14.12 Z"/>
+    <path d="M38.61,16.33 L39.33,13.57 L37.07,15.32 Z"/>
+    <path d="M39.08,17.87 L40.22,15.25 L37.72,16.63 Z"/>
+    <path d="M39.34,19.38 L40.85,16.96 L38.18,17.96 Z"/>
+    <path d="M38.01,17.91 L41.81,21.11 L37.21,21.01 Z"/>
+    <path d="M41.11,20.61 m-0.62,0 a0.62,0.62 0 1,0 1.24,0 a0.62,0.62 0 1,0 -1.24,0 Z"/>
+    <path d="M27.8,19.7 L27.8,21.7 L29.35,21.7 L29.35,19.7 Z"/>
+    <path d="M35.2,19.7 L35.2,21.7 L36.75,21.7 L36.75,19.7 Z"/>
+  </svg>
+    <span class="qe-sr">Two cohabitating modes</span>
+  </a>
+</div>
+
+<nav class="qe-rail" aria-label="On this page" hidden>
+  <ol></ol>
+  <svg class="qe-botanical qe-rail-sprig" viewBox="0 0 28 27" aria-hidden="true" focusable="false">
+    <path class="stem" style="--len:34" d="M0.6,0 C0.7,7.2 1.9,13.4 4.6,18.4 C6.1,21.2 7.8,23.2 9.6,24.6"/>
+    <g class="sprout sprout-leaf" style="--i:0">
+      <path d="M1.7,7.9 C5.1,5.5 8.9,6.6 10.8,10.2 C7.3,11.3 3.6,10.4 1.7,7.9 Z"/>
+    </g>
+    <g class="sprout sprout-leaf" style="--i:1">
+      <path d="M3.5,14.6 C7.2,12.8 11.2,14.1 13.2,17.9 C9.5,18.8 5.6,17.4 3.5,14.6 Z"/>
+    </g>
+    <g class="sprout" style="--i:2">
+      <circle cx="10.4" cy="25.4" r="1.5"/>
+    </g>
+  </svg>
+</nav>
+
+<main id="main" tabindex="-1">
+
+  <header class="qe-masthead qe-masthead-sheet">
+    <nav class="qe-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Queering Earth</a></li>
+        <li><a href="/the-plate">The plate</a></li>
+      </ol>
+    </nav>
+    <p class="qe-kicker">Sheet &middot; a reading</p>
+    <h1>Time Present, Time Past</h1>
+    <p class="qe-sheet-sub">A neuroqueer reading of Four Quartets</p>
+  </header>
+
+  <div class="qe-label">
+    <dl>
+      <dt>Specimen</dt>
+      <dd><cite>Four Quartets</cite> &mdash; <cite>Burnt Norton</cite> (1936), <cite>East Coker</cite> (1940), <cite>The Dry Salvages</cite> (1941), <cite>Little Gidding</cite> (1942), collected as <cite>Four Quartets</cite> (New York: Harcourt, Brace, 1943)</dd>
+      <dt>Maker</dt>
+      <dd>T. S. Eliot</dd>
+      <dt>Written</dt>
+      <dd>1935&ndash;1942, individually; first collected 1943</dd>
+      <dt>This text</dt>
+      <dd>The poems as widely reprinted. Wording has <strong>not</strong> been checked here line by line against Christopher Ricks and Jim McCue&rsquo;s variorum, <cite>The Poems of T. S. Eliot: Volume I</cite> (Faber &amp; Faber, 2015) &mdash; see <a href="#sources">Sources</a></dd>
+      <dt>Read</dt>
+      <dd>13 September 2026</dd>
+      <dt>Read by</dt>
+      <dd>Helen Edgar</dd>
+      <dt>Terms</dt>
+      <dd><a href="https://stimpunks.org/glossary/monotropism/">Monotropism</a> &middot; <a href="https://stimpunks.org/glossary/masking/">Masking</a> &middot; <a href="https://stimpunks.org/glossary/co-regulation/">Co-regulation</a> &middot; <a href="https://stimpunks.org/glossary/glimmers/">Glimmers</a> &middot; <a href="https://stimpunks.org/glossary/neuroqueer/">Neuroqueer</a> &middot; <a href="https://stimpunks.org/glossary/neurodivergent/">Neurodivergent</a></dd>
+    </dl>
+  </div>
+
+  <p class="qe-lede">In the winter of 1910 a twenty-two-year-old Eliot sat in Henri Bergson&rsquo;s lecture hall at the Coll&egrave;ge de France, and spent the rest of his life half-agreeing with what he heard there. This sheet reads <cite>Four Quartets</cite> through that unfinished argument &mdash; and through monotropism, masking and co-regulation, which read the poem&rsquo;s own claims about time, attention and stillness more precisely than a century of accounts calling it detached mystical transcendence.</p>
+
+  <nav class="qe-contents" aria-labelledby="qe-contents-h" hidden>
+    <h2 id="qe-contents-h">On this sheet</h2>
+    <ol></ol>
+  </nav>
+
+  <p><strong>A note before starting.</strong> This is a neuroqueer reading, not a diagnosis. Nothing here claims Eliot was Autistic, or that his own mind produced these poems by some neurodivergent mechanism. The claim is smaller and does more work. Concepts built by and for neurodivergent thinkers &mdash; monotropism, masking, co-regulation &mdash; read the poem&rsquo;s own arguments about time, attention, and stillness more precisely than the standard account of detached mystical transcendence does. Where Bergson and Deleuze show up, it is because Eliot argued with them directly, not because this sheet needs philosophical cover for a diagnosis it isn&rsquo;t making.</p>
+
+  <h2 id="wisdom">I. Wisdom Common to All <a class="qe-anchor" href="#wisdom"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Before Eliot writes a line of his own, <cite>Burnt Norton</cite> opens with two fragments of Heraclitus. Wisdom is common to all, the first says, yet the many live as though they had wisdom of their own. The second: the way upward and the way downward are one and the same. Read as a threshold instead of decoration, the first fragment already states an argument this sheet wants to make, that a mind read as sealed and private is usually not sealed at all, that the appearance of private cognition is a misreading of something shared. Eliot sets that claim at the door and spends four long poems circling back to it.</p>
+
+  <p>None of what follows needs a theory imported from outside to make Eliot neuroqueer. It needs a reading that takes the poem&rsquo;s own opening claim seriously, and follows it through his own philosophical arguments rather than around them.</p>
+
+  <h2 id="duree">II. A Dur&eacute;e He&rsquo;d Already Argued With <a class="qe-anchor" href="#duree"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>In the winter of 1910, a twenty-two-year-old Eliot sat in Henri Bergson&rsquo;s lecture hall at the Coll&egrave;ge de France and took careful notes (Hargrove, 2017). He stayed in Paris through the following year, and biographers describe what happened next as something close to conversion, a season in which Bergson&rsquo;s account of time reorganised how Eliot thought before he had written anything that mattered. It didn&rsquo;t last. Within a few years Eliot had turned against Bergson in his own philosophical work, uneasy with a theory of consciousness that seemed to dissolve the thinking self into pure flow. He spent his Harvard doctorate arguing the opposite corner, defending something closer to structure against something closer to current.</p>
+
+  <p>That argument never really finished. It shows up thirty years later in the opening lines of <cite>Burnt Norton</cite>.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; time present, time past</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">Time present and time past</span><span class="l">Are both perhaps present in time future</span></p>
+    </blockquote>
+    <figcaption>T. S. Eliot, <cite>Burnt Norton</cite>, I, in <cite>Four Quartets</cite> (Harcourt, Brace, 1943).</figcaption>
+  </figure>
+
+  <p>which reads less like a mystical proposition and more like Bergson&rsquo;s distinction between <em>temps</em> and <em>dur&eacute;e</em> stated as compactly as it can be. <em>Temps</em> is clock time, spatialised, divided into identical units, laid out like a row of beads. <em>Dur&eacute;e</em> is lived time, qualitative, felt from the inside, not decomposable into separate moments because each moment carries the whole of what came before it (Bergson, 2001).</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the still point</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">At the still point of the turning world&hellip;</span><span class="l">there the dance is</span></p>
+    </blockquote>
+    <figcaption>T. S. Eliot, <cite>Burnt Norton</cite>, II, in <cite>Four Quartets</cite> (Harcourt, Brace, 1943).</figcaption>
+  </figure>
+
+  <p>sets the same opposition up as image. The turning world is <em>temps</em>, the clock, the calendar, the schedule that has to be kept. The still point is not the absence of movement. It is <em>dur&eacute;e</em>, breaking through the turning world for exactly as long as it can be borne.</p>
+
+  <p>Reading the still point this way doesn&rsquo;t require calling Eliot neurodivergent. It requires taking seriously that he spent a formative year arguing, in person, with one of the only Western philosophers to build a serious account of time as something other than a row of identical units, and that the argument left a mark he never fully closed. What makes this a neuroqueer reading rather than a straightforwardly Bergsonian one is what happens next: <em>dur&eacute;e</em>, felt time that refuses clock time&rsquo;s demand for even division and forward motion, is close kin to what monotropic and Autistic people have been describing about their own relationship to time for as long as anyone has been listening (Murray et al., 2005). The concept doesn&rsquo;t belong to Eliot&rsquo;s biography. It belongs to the reader bringing a durational, <a href="https://stimpunks.org/glossary/monotropism/">monotropic</a> relationship to time into the room with a text that is already arguing for one.</p>
+
+  <h2 id="somewhere">III. Somewhere, Not Nowhere <a class="qe-anchor" href="#somewhere"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>Each quartet is named for an actual place, and the placing matters more than most criticism allows. <cite>Burnt Norton</cite> is a manor house Eliot visited while working on <cite>Murder in the Cathedral</cite>. East Coker is the Somerset village his family left for America generations before, where his own ashes were later interred. The Dry Salvages are a set of rocks off Cape Ann, Massachusetts, remembered from childhood sailing. Little Gidding is the site of a small Anglican community founded by Nicholas Ferrar in 1626, damaged by Puritan forces in 1646, and visited by Eliot in May 1936, years before he wrote the poem carrying its name.</p>
+
+  <p>This isn&rsquo;t a poet floating free toward abstract stillness. It&rsquo;s a poet returning, four times, to a place that already holds him, and letting the place do the thinking. A monotropic reading practice recognises something specific in that method: attention that goes all the way down into one channel rather than spreading thin across many (Murray et al., 2005). That isn&rsquo;t a claim about how Eliot&rsquo;s own mind worked. It&rsquo;s a description of what this particular reading notices: the poem&rsquo;s stillness gets produced by narrowing into one corner of the world until the corner opens, not by leaving the world behind.</p>
+
+  <h2 id="the-fold">IV. The Fold in the Passage Not Taken <a class="qe-anchor" href="#the-fold"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The rose garden sequence in <cite>Burnt Norton</cite> doesn&rsquo;t only offer a vision. It offers an unchosen one first.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the door we never opened</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">Footfalls echo in the memory</span><span class="l">Down the passage which we did not take</span><span class="l">Towards the door we never opened</span><span class="l">Into the rose-garden</span></p>
+    </blockquote>
+    <figcaption>T. S. Eliot, <cite>Burnt Norton</cite>, I, in <cite>Four Quartets</cite> (Harcourt, Brace, 1943).</figcaption>
+  </figure>
+
+  <p>The path not taken doesn&rsquo;t vanish from the poem. It echoes, present in the same breath as the path that was.</p>
+
+  <p>Deleuze, working through Bergson&rsquo;s account of memory, describes something close to this directly. In <cite>Matter and Memory</cite>, Bergson argued that the whole of the past survives, coexisting with the present at different degrees of contraction, a cone with the present at its point and the entire past spread out behind it (Bergson, 1991). Deleuze took this up as the fold: the past doesn&rsquo;t sit behind the present in a queue, it folds into it, available, virtual, real without being actual (Deleuze, 1988, 1993). The passage not taken is exactly this kind of fold. It isn&rsquo;t lost time. It&rsquo;s virtual time, folded into the actual path Eliot&rsquo;s feet did take, audible as an echo because it never stopped being real.</p>
+
+  <p>This matters for a neuroqueer reading because non-linear, associative movement between what happened and what didn&rsquo;t, what was chosen and what runs alongside the choice, gets treated as a defect of attention when it shows up in conversation with an Autistic or ADHD person, and called profound when Eliot does it in verse. The poem&rsquo;s whole method in this passage is the thing that gets pathologised elsewhere. Reading it through Deleuze&rsquo;s fold doesn&rsquo;t soften that double standard. It names it.</p>
+
+  <h2 id="the-equipment">V. The Equipment, and What It Costs to Put Down <a class="qe-anchor" href="#the-equipment"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p><q>Human kind cannot bear very much reality</q> usually reads as a statement about human limitation in general, a resigned humanism. Read as a description of a specific mechanism instead, it says something more exact: there is equipment standing between a person and the full weight of what is actually happening, and the equipment exists because the raw input would otherwise be too much. That is a fair account of what <a href="https://stimpunks.org/glossary/masking/">masking</a> does. Not deception so much as load-bearing structure, built to make continuous exposure survivable (Pearson &amp; Rose, 2021).</p>
+
+  <p>The rose garden vision reads, on this account, as the moment the equipment comes off. It doesn&rsquo;t last. <q>Human kind cannot bear very much reality</q> arrives a few lines after the vision, as the reason it has to end. The poem doesn&rsquo;t think the vision was a mistake. It knows the equipment goes back on because the body has to keep functioning, and that setting it down, even briefly, was never free. <cite>Burnt Norton</cite> gives a moment like this its own name at its own close &mdash; and then, four poems and seven years later, names it again in exactly the same words.</p>
+
+  <p>&ldquo;<q>Quick now, here, now, always&mdash;</q>&rdquo; ends <cite>Burnt Norton</cite>, V, and the identical line recurs verbatim near the close of <cite>Little Gidding</cite>, V, immediately before <q>a condition of complete simplicity.</q> It is a <a href="https://stimpunks.org/glossary/glimmers/">glimmer</a>, in Dana&rsquo;s (2018) sense: a small, unforced moment of regulation rather than a permanent state. That Eliot returns to the identical five words to mark it &mdash; not a paraphrase, not a variation, the same line &mdash; is the kind of repetition Section VI takes up: not being stuck, but a return that changes what it returns to (Deleuze, 1994). Read back onto the rose garden, it says plainly what <cite>Burnt Norton</cite> only shows: that the vision was real, was brief, and was worth naming honestly rather than mistaking for a state that could be stayed in. The poem doesn&rsquo;t pretend otherwise, and neither should a reading of it.</p>
+
+  <h2 id="swell-and-dwell">VI. Swell and Dwell <a class="qe-anchor" href="#swell-and-dwell"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>If the rose garden is swell, sudden, sensory, gone almost as soon as it arrives, East Coker is dwell. <q>Old men ought to be explorers</q> and <q>in my end is my beginning</q> describe a stillness worked for rather than given, cultivated across a life rather than glimpsed in a garden. Eliot needs both registers and doesn&rsquo;t rank one above the other, which is worth noticing, because criticism of devotional poetry usually prizes the ecstatic swell and treats the dwelling as the unglamorous cost of getting there. A neuroqueer reading can sit with the dwell as its own achievement: unremarkable, daily, no less real for being quiet.</p>
+
+  <p>The same pattern shows up in how intensity of repetition gets valued depending entirely on who is doing it, and what they are diagnosed with. Formal obsession, returning to the same handful of images and the same five-part structure across four long poems, drafting and abandoning and redrafting, reads as mastery when critics discuss it as craft. The same shape, narrow and repeated and high-intensity, gets called restriction or perseveration when it belongs to a diagnosed person rather than a canonised one. This isn&rsquo;t a claim about what was happening in Eliot&rsquo;s head while he cut a full draft of <cite>Little Gidding</cite> and started over. It&rsquo;s a question about why identical behaviour earns different names depending on whose behaviour it is.</p>
+
+  <p>Deleuze gives a way to hold the repetition itself without needing to settle that question. In <cite>Difference and Repetition</cite>, he distinguishes bare repetition, the same thing recurring unchanged, from repetition that produces difference each time it returns (Deleuze, 1994). A return that changes what it returns to isn&rsquo;t failure to move on. It&rsquo;s how something gets made. Whether that is the right description of Eliot&rsquo;s redrafting, or of anyone&rsquo;s return to a single absorbing interest, the point holds either way: repetition is not evidence of being stuck unless you have already decided, before you look, that it must be.</p>
+
+  <h2 id="beginning-is-end">VII. In My Beginning Is My End <a class="qe-anchor" href="#beginning-is-end"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p><cite>East Coker</cite> opens and closes with the same six words reversed. &ldquo;<q>In my beginning is my end</q>,&rdquo; it starts. &ldquo;<q>In my end is my beginning</q>,&rdquo; it finishes. Freeman (2010) names the cultural demand to arrange a life along one forward timeline, marriage, career, retirement, the correct order for the correct milestones, chrononormativity. Eliot&rsquo;s reversal refuses exactly that arrangement. A life read through it doesn&rsquo;t move from immature to mature, incomplete to complete. It loops, and the loop isn&rsquo;t a failure to progress. It is the shape the poem insists a life actually takes.</p>
+
+  <p>That reversal maps cleanly onto a neuroqueer refusal of milestone-based narratives imposed on Autistic children and adults: first words by this age, independence by that one, as though a life arriving at things out of the expected order has arrived at them wrong. <cite>East Coker</cite> doesn&rsquo;t think there&rsquo;s a wrong order. It thinks the order is a fiction that clock time needs and duration doesn&rsquo;t.</p>
+
+  <h2 id="not-sealed-off">VIII. Not Sealed Off <a class="qe-anchor" href="#not-sealed-off"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The Blitz enters <cite>Little Gidding</cite> directly. Eliot served as a fire watcher on the roof of the Faber building during the bombing, and the poem&rsquo;s second section, the encounter with a &ldquo;familiar compound ghost&rdquo; walking the ashen streets at dawn, comes out of that duty. An early draft identified the ghost explicitly with a figure drawn from Dante&rsquo;s damned, and in correspondence with his friend and editorial reader John Hayward in August 1942, Eliot explained that he removed the identification because he didn&rsquo;t want to take responsibility for putting Yeats, or anyone else, into Hell.</p>
+
+  <p>That is a small scene worth sitting with. It isn&rsquo;t a lone genius sealed off with his private vision, deciding alone what the poem would say. It&rsquo;s two people in correspondence, one of them choosing restraint on another person&rsquo;s behalf, out of something close to care, and the poem changing shape because of it. <cite>Little Gidding</cite> itself insists the place you are standing in has been prayed in before you arrived, that <q>prayer has been valid</q> there long before your own, and that <q>the communication of the dead is tongued with fire beyond the language of the living</q>. Stillness, in this poem, is never a solitary achievement. Someone was always already in the room, whether the dead whose prayer soaked into a place, or a living friend reading a draft and weighing in on who got sent to hell and who didn&rsquo;t.</p>
+
+  <h2 id="river-and-sea">IX. The River and the Sea <a class="qe-anchor" href="#river-and-sea"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The Dry Salvages opens with a river running through the middle of things.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the strong brown god</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">I do not know much about gods; but I think that the river</span><span class="l">Is a strong brown god</span></p>
+      <p class="qe-lines"><span class="l">&hellip;</span></p>
+      <p class="qe-lines"><span class="l">The river is within us, the sea is all about us</span></p>
+    </blockquote>
+    <figcaption>T. S. Eliot, <cite>The Dry Salvages</cite>, I, in <cite>Four Quartets</cite> (Harcourt, Brace, 1943).</figcaption>
+  </figure>
+
+  <p>Von Uexk&uuml;ll (2010) described every organism as living inside its own umwelt, a perceptual world built from what that organism can sense, and autism has often been read through a flattened version of this idea as a sealed bubble, a private world cut off from the shared one. <cite>The Dry Salvages</cite> offers a different image entirely: porous rather than sealed, a river running inside the self and a sea moving all around it, water passing through the boundary rather than stopping at it.</p>
+
+  <p>A neuroqueer umwelt isn&rsquo;t a bubble. It&rsquo;s exactly this: continuous with what&rsquo;s around it, shaped by it, shaping it back.</p>
+
+  <h2 id="a-friction">X. A Friction Worth Naming <a class="qe-anchor" href="#a-friction"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>None of this should be smoothed into agreement. Eliot&rsquo;s temporality is, in the end, teleological. The whole sequence moves toward Incarnation, toward <q>the hint half guessed, the gift half understood</q>, toward a grace that arrives from outside history and redeems it. Deleuze&rsquo;s becoming has no such destination. It folds and repeats without arriving anywhere in particular, and would treat the idea of history redeemed by a single incarnate point as exactly the kind of transcendent anchor his philosophy spends itself refusing.</p>
+
+  <p>Reading <cite>Four Quartets</cite> through Bergson and Deleuze doesn&rsquo;t resolve this. Eliot wanted an answer waiting at the end of the exploring. Deleuze didn&rsquo;t think there was one to want. Both readings can be true of the same lines at once, and this sheet would rather leave that standing than pretend the tension isn&rsquo;t there.</p>
+
+  <h2 id="knowing-the-place">XI. Knowing the Place for the First Time <a class="qe-anchor" href="#knowing-the-place"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p><cite>Little Gidding</cite> ends with the sequence&rsquo;s most quoted lines.</p>
+
+  <figure class="qe-specimen">
+    <span class="qe-specimen-label">Specimen &mdash; the end of all our exploring</span>
+    <blockquote>
+      <p class="qe-lines"><span class="l">the end of all our exploring</span><span class="l">Will be to arrive where we started</span><span class="l">And know the place for the first time</span></p>
+    </blockquote>
+    <figcaption>T. S. Eliot, <cite>Little Gidding</cite>, V, in <cite>Four Quartets</cite> (Harcourt, Brace, 1943).</figcaption>
+  </figure>
+
+  <p>Read through <em>temps</em>, this is just circularity, a closed loop, the same place reached twice. Read through <em>dur&eacute;e</em>, it is something else. Bergson&rsquo;s <em>dur&eacute;e</em> means no return is ever a return to the same moment, because the moment you left has kept accumulating everything that happened since, folded into it the way the whole past folds into Bergson&rsquo;s cone of memory (Bergson, 1991). Arriving where you started and knowing it for the first time isn&rsquo;t a contradiction. It is what a return looks like from inside duration instead of clock time.</p>
+
+  <p>That closing image, the biographical record behind it, and the fold in the rose garden are the same shape asked three times. Nothing here needs Eliot to have been anything other than what the record shows: a man who studied <em>dur&eacute;e</em> directly, argued himself out of it, and kept writing his way back toward it anyway, in verse, for the rest of his life. What a neuroqueer reading does with that isn&rsquo;t diagnosis. It&rsquo;s recognition, of a philosophy of time that Bergson built, Deleuze extended, and monotropic, Autistic, and otherwise <a href="https://stimpunks.org/glossary/neuroqueer/">neuroqueer</a> readers have been living inside for a long time before anyone gave it that name (Walker, 2021).</p>
+
+  <h2 id="coda">Coda &middot; Costing Not Less Than Everything <a class="qe-anchor" href="#coda"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>The sequence ends on &ldquo;<q>a condition of complete simplicity (costing not less than everything)</q>,&rdquo; and on the fire and the rose becoming one. Simplicity here isn&rsquo;t innocence, and it isn&rsquo;t the absence of effort. It is what is left after everything has already been spent, a fair description of what unmasking actually costs: not a dramatic unveiling but a slow, expensive arrival at something plain.</p>
+
+  <p>This sheet is not going to decide whether Eliot&rsquo;s stillness was mysticism, philosophy, grief, or the exhaustion of a man fire-watching over a burning city while his own health failed under him. The poem doesn&rsquo;t seem to think those are different things. It holds the rose garden and the ashes in the same hand and calls the holding a dance. That is enough to leave standing.</p>
+
+  <h2 id="untidy">What this sheet does not settle <a class="qe-anchor" href="#untidy"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <div class="qe-untidy">
+    <p><strong>No masthead art yet.</strong> This sheet has not had a botanical drawing made for it. Something built around a still point &mdash; a turning line and a point of stillness at its centre &mdash; is the obvious direction, but it has not been drawn, measured, or looked at beside the other sheets on the plate.</p>
+    <p><strong>The biographical and compositional detail is secondary scholarship, not primary reading.</strong> The abandoned 1941 draft, the Yeats identification cut from an early draft of the ghost passage, the August 1942 Hayward correspondence, Eliot&rsquo;s year with Bergson: all of this rests on Hargrove (2017) and standard biographical accounts of the composition, not on the letters or manuscripts themselves. Nobody involved in drafting this sheet has read the Eliot&ndash;Hayward correspondence firsthand. That needs saying plainly before this goes anywhere public, and it needs checking against Hargrove and against Ricks and McCue&rsquo;s edition before it does.</p>
+    <p><strong>None of the quotations below have been run through <code>credit-source</code> yet</strong>, and no entry for this sheet exists in <code>ATTRIBUTIONS.md</code>. That is the next step before this is reviewed as ready to publish, not an oversight to fix later.</p>
+    <p><strong>The citation style is the original draft&rsquo;s own</strong> &mdash; parenthetical (Author, Year) in the running prose, full references below &mdash; rather than naming each source in a sentence the way <a href="/five-unmistakable-marks">The Five Unmistakable Marks</a> and <a href="/held-not-fixed">Held, Not Fixed</a> do. Left as a question rather than decided silently: worth changing to match, or a reasonable variation for a piece this dense with citation?</p>
+  </div>
+
+  <h2 id="sources">Sources <a class="qe-anchor" href="#sources"><span class="qe-sr">Link to this section</span></a></h2>
+
+  <p>T. S. Eliot, <cite>Four Quartets</cite> (New York: Harcourt, Brace, 1943) &mdash; <cite>Burnt Norton</cite> (1936), <cite>East Coker</cite> (1940), <cite>The Dry Salvages</cite> (1941) and <cite>Little Gidding</cite> (1942), individually written and collected here. Christopher Ricks and Jim McCue (eds.), <cite>The Poems of T. S. Eliot: Volume I</cite> (London: Faber &amp; Faber, 2015) is the standard scholarly edition and has not yet been checked line by line against the text quoted above.</p>
+
+  <p>Nancy D. Hargrove, &ldquo;Eliot at Bergson&rsquo;s Lectures, 1910&ndash;1911,&rdquo; in <cite>The T. S. Eliot Studies Annual</cite>, vol. 1, ed. John D. Morgenstern (Clemson, SC: Clemson University Press, in association with Liverpool University Press, 2017), 57&ndash;66 &mdash; the source for the biographical account of Eliot&rsquo;s year with Bergson.</p>
+
+  <p>Henri Bergson, <cite>Time and Free Will: An Essay on the Immediate Data of Consciousness</cite>, trans. F. L. Pogson (New York: Dover, 2001; first published 1889) &mdash; the <em>temps</em>/<em>dur&eacute;e</em> distinction.</p>
+
+  <p>Henri Bergson, <cite>Matter and Memory</cite>, trans. N. M. Paul and W. S. Palmer (New York: Zone Books, 1991; first published 1896) &mdash; the cone of memory.</p>
+
+  <p>Gilles Deleuze, <cite>Bergsonism</cite>, trans. H. Tomlinson and B. Habberjam (New York: Zone Books, 1988; first published 1966), and <cite>The Fold: Leibniz and the Baroque</cite>, trans. T. Conley (Minneapolis: University of Minnesota Press, 1993; first published 1988) &mdash; the fold, read out of Bergson.</p>
+
+  <p>Gilles Deleuze, <cite>Difference and Repetition</cite>, trans. P. Patton (New York: Columbia University Press, 1994; first published 1968) &mdash; bare repetition against repetition that produces difference.</p>
+
+  <p>Dinah Murray, Mike Lesser and Wenn Lawson, &ldquo;Attention, Monotropism and the Diagnostic Criteria for Autism,&rdquo; <cite>Autism</cite> 9, no. 2 (2005): 139&ndash;156, <a href="https://doi.org/10.1177/1362361305051398">doi:10.1177/1362361305051398</a>, published under the byline <i>Wendy Lawson</i> &mdash; monotropism.</p>
+
+  <p>Amy Pearson and Kieran Rose, &ldquo;A Conceptual Analysis of Autistic Masking: Understanding the Narrative of Stigma and the Illusion of Choice,&rdquo; <cite>Autism in Adulthood</cite> 3, no. 1 (2021): 52&ndash;60, <a href="https://doi.org/10.1089/aut.2020.0043">doi:10.1089/aut.2020.0043</a> &mdash; masking as load-bearing structure rather than deception.</p>
+
+  <p>Deb Dana, <cite>The Polyvagal Theory in Therapy: Engaging the Rhythm of Regulation</cite> (New York: W. W. Norton, 2018) &mdash; glimmers.</p>
+
+  <p>Elizabeth Freeman, <cite>Time Binds: Queer Temporalities, Queer Histories</cite> (Durham: Duke University Press, 2010) &mdash; chrononormativity.</p>
+
+  <p>Jakob von Uexk&uuml;ll, <cite>A Foray into the Worlds of Animals and Humans</cite>, trans. J. D. O&rsquo;Neil (Minneapolis: University of Minnesota Press, 2010; first published 1934) &mdash; umwelt.</p>
+
+  <p>Nick Walker, <cite>Neuroqueer Heresies: Notes on the Neurodiversity Paradigm, Autistic Empowerment, and Postnormal Possibilities</cite> (Fort Worth: Autonomous Press, 2021).</p>
+
+</main>
+
+<footer class="qe-footer">
+  <p class="qe-footer-nav">
+    <a href="/">Queering Earth</a>
+    <a href="/the-plate">The plate</a>
+    <a href="/the-founding-papers">The founding papers</a>
+    <a href="/the-cabinet-itself">The cabinet itself</a>
+    <a href="/mission">Mission</a>
+    <a href="/manifesto">Manifesto</a>
+    <a href="/two-cohabitating-modes">Modes</a>
+    <a href="/design">Colophon</a>
+    <a href="/changelog">Register</a>
+    <a href="/whats-new">What&rsquo;s new</a>
+    <a href="/ledger">Ledger</a>
+    <a href="/what-is-settled">Decisions</a>
+    <a href="/search">Search</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/how-we-quote">Quoting</a>
+  </p>
+
+  <p>A collaboration between the <a href="https://stimpunks.org/">Stimpunks Foundation</a> and <a href="https://morerealms.com/">More Realms</a>.</p>
+
+  <p>Words and art licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Take them and make something.</p>
+
+  <a class="qe-totop" href="#main">
+    <span class="qe-totop-label">Scroll to top</span>
+    <svg class="qe-botanical qe-totop-mark" viewBox="0 0 160 66" aria-hidden="true" focusable="false">
+      <path class="stem" style="--len:21" d="M22,64 C24,56 25,51 24,45"/>
+      <path class="stem" style="--len:24" d="M33,64 C32,55 30,49 28,43"/>
+      <path class="stem" style="--len:25" d="M44,64 C46,54 48,48 50,42"/>
+      <path class="stem" style="--len:52" d="M58,64 C60,46 67,32 77,21"/>
+      <path class="stem" style="--len:32" d="M68,64 C69,50 70,42 71,34"/>
+      <path class="stem" style="--len:44" d="M80,64 C79.4,48 80.6,34 80,22"/>
+      <path class="stem" style="--len:32" d="M92,64 C91,50 90,42 89,34"/>
+      <path class="stem" style="--len:52" d="M102,64 C100,46 93,32 83,21"/>
+      <path class="stem" style="--len:25" d="M116,64 C114,54 112,48 110,42"/>
+      <path class="stem" style="--len:24" d="M127,64 C128,55 130,49 132,43"/>
+      <path class="stem" style="--len:21" d="M138,64 C136,56 135,51 136,45"/>
+      <g class="sprout" style="--i:3">
+        <path class="head" d="M80,5 C77.4,11 77.4,18 80,25 C82.6,18 82.6,11 80,5 Z"/>
+      </g>
+    </svg>
+  </a>
+</footer>
+<script src="queering.js"></script>
+</body>
+</html>
