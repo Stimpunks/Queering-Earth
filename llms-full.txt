@@ -9545,6 +9545,24 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
+### The zine setting was built, measured, and dropped (2026-09-13)
+
+Helen's first piece arrived as an A5 zine — numbered sections, monospace kickers, washi tape, a rubber stamp reading HELD NOT NAMED, running feet. The question was whether to keep that setting. **It was built as `.qe-zine` and then removed on Ryan and Helen's joint call; `Held, Not Fixed` is a regular essay.** Recorded here so it is not rebuilt from scratch by somebody reading the zine and having the same good idea.
+
+**What was established while building it is worth keeping even though the thing is gone.**
+
+**Most of a zine setting really does work in both media, and only the pagination is print-only.** Section rules, small-caps labels, tape and the specimen box were live on screen and on paper; `break-before: page` gave one section per sheet when printed. A page number is a fact about paper and a lie on a page that scrolls, which is the line between the two halves.
+
+**`@page` CANNOT BE SCOPED BY A CLASS.** `@page { size: A5 }` applies to the document, so one in the shared stylesheet would have printed every sheet on the site at A5. Scoping it needs a `style` block in the page's own head. This is the reusable finding: any paged-media rule is site-wide by nature, and a per-page paper size is therefore a house question rather than a line of CSS. Chrome also does not support CSS margin boxes, so running feet were never available in a browser print regardless.
+
+**The monospace kickers could not come across and the reason is a standing rule.** A component may mix the two type roles and may never name a family; exactly two things hardcode one, both the reader's own system face, both for a semantic reason, and a third added for looks retires the reasoning behind the first two. Small caps were used instead, on Ryan's call — with the unlooked-for benefit that `font-variant-caps` keeps the authored capitalisation in the DOM, so the Markdown and the finding aid get `The shop` rather than a shouted copy of it.
+
+**The `HELD NOT NAMED` stamp could not be `.qe-stamp` and never can be.** That component means accession: the number is real or there is no stamp. A second stamp shape asserting a reading rather than recording an accession would make the real ones unfindable — the gold-seam failure, in the component that exists to prevent it.
+
+**The treatment never reached `main`**, so dropping it un-shipped nothing. What survives on the sheet is one line in the label block: *First set as: a zine, draft one, September 2026*. That is provenance and it is true — the same fact the Woolf sheet records when it says where the essay was first printed.
+
+**The trigger for revisiting:** a piece whose argument needs pagination, rather than one that merely arrived paginated. Nothing in `Held, Not Fixed` did.
+
 ### Helen contributes directly, and the constraint that shaped this repo is routed around rather than overturned (2026-09-13)
 
 Ryan: *"What's the best way to bootstrap Helen into direct contribution? I'd like to get her set up in Claude Code using this repo."*
