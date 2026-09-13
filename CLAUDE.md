@@ -1534,6 +1534,20 @@ build, anything matching a filename matches the prose about that filename.** Pro
 `&lt;script` or wraps the name in a `code` span, so the unescaped tag is the discriminator.
 `review-practice.html` is declared as the one standing exception, with its reason.
 
+**A DRAFT IS A PAGE CARRYING THE MARKER THAT `sitemap.xml` DOES NOT LIST, and both halves
+are load-bearing.** `tools/draft.mjs` holds that definition once and the three generators
+and `check-metadata.mjs` all ask it. The marker-only version was written first and was wrong
+in two directions at once: it **disarmed check 10**, because a published page that kept its
+draft block is exactly what that check exists to catch and a marker-only filter drops it
+before the check can see it; and it made `make-markdown.mjs` throw on that same page with a
+message about `llms.txt` groups, so the error pointed at the wrong thing entirely. Proved by
+putting the block on a published page and watching both happen.
+
+**The generators skip drafts, which is what lets anything run on the branch at all.** A
+draft has no canonical, no group in `pages.mjs` and no accession — all by design — so
+`make-whats-new` threw, `make-markdown` threw, and `check-metadata`, which runs them, went
+down with them. The branch could check nothing but its markup.
+
 **The failing gates on that branch are the accession checklist, reported by name.**
 `check-addresses` names the missing `301!`, `check-card-order` the missing card,
 `check-sitemap` the missing `<loc>`. A draft is not supposed to pass.

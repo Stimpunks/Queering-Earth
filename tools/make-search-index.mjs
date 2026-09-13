@@ -62,6 +62,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { decode, attrs, tokenize, stripComments, mainOf } from './html.mjs';
 import { GROUPS, REGISTER } from './pages.mjs';
+import { isDraft } from './draft.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ORIGIN = 'https://queering.earth';
@@ -378,7 +379,15 @@ function readPlate(html) {
 
 /* ── build ────────────────────────────────────────────────────────────────────── */
 
-const files = (await readdir(ROOT)).filter((f) => f.endsWith('.html') && !NOT_CONTENT.has(f)).sort();
+
+/* A DRAFT IS NOT A PAGE YET. Skipping it is what lets the generators — and therefore
+ * `check-metadata.mjs`, which runs them — work at all on the drafts branch. A draft has
+ * no canonical, no group in pages.mjs and no accession, all of it by design, so every
+ * generator here would throw or index prose nobody has published. The predicate lives
+ * once in draft.mjs beside the git-side one, so the two cannot drift. */
+const files = (await readdir(ROOT))
+  .filter((f) => f.endsWith('.html') && !NOT_CONTENT.has(f) && !isDraft(ROOT, f))
+  .sort();
 const plate = readPlate(await readFile(join(ROOT, 'index.html'), 'utf8'));
 
 const pages = [];

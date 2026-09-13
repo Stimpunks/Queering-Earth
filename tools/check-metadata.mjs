@@ -83,6 +83,7 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { execFile } from 'node:child_process';
+import { isDraft } from './draft.mjs';
 import { promisify } from 'node:util';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -91,7 +92,27 @@ const problems = [];
 const fail = (kind, detail) => problems.push({ kind, detail });
 
 const NOT_CONTENT = new Set(['404.html']);
-const files = (await readdir(ROOT)).filter((f) => f.endsWith('.html') && !NOT_CONTENT.has(f)).sort();
+const allFiles = (await readdir(ROOT)).filter((f) => f.endsWith('.html') && !NOT_CONTENT.has(f)).sort();
+
+/* ── what the manifest says is published, read once ────────────────────────────
+ * Needed in two places, and the ORDER OF THE TWO IS THE WHOLE POINT.
+ *
+ * A DRAFT IS A PAGE CARRYING THE MARKER THAT THE MANIFEST DOES NOT LIST. Both halves
+ * are load-bearing. Filtering on the marker alone would have quietly defeated check 10:
+ * a published page that kept its draft block is EXACTLY what that check exists to catch,
+ * and a marker-only filter would have dropped it from the list before the check could
+ * see it — a guard disarmed by the convenience added next to it. So drafts are excluded
+ * from the freshness and metadata checks, which they cannot satisfy by design, and
+ * check 10 still sweeps every page.
+ */
+const sitemapXml = await readFile(join(ROOT, 'sitemap.xml'), 'utf8');
+const published = new Set(
+  [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)]
+    .map((m) => m[1].replace(/^https?:\/\/[^/]+/, ''))
+    .map((a) => (a === '/' ? 'index.html' : a.replace(/^\//, '') + '.html'))
+);
+const drafts = allFiles.filter((f) => isDraft(ROOT, f));
+const files = allFiles.filter((f) => !drafts.includes(f));
 
 /* ── 1. staleness, by regenerating and comparing ───────────────────────────────
  * The generator writes files. To compare without clobbering, snapshot the generated
@@ -417,14 +438,7 @@ try {
 
 /* ── 10. draft furniture never reaches a published page ────────────────────── */
 try {
-  const sitemap = await readFile(join(ROOT, 'sitemap.xml'), 'utf8');
-  const published = new Set(
-    [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
-      .map((m) => m[1].replace(/^https?:\/\/[^/]+/, ''))
-      .map((a) => (a === '/' ? 'index.html' : a.replace(/^\//, '') + '.html'))
-  );
-
-  for (const f of files) {
+  for (const f of allFiles) {
     if (!published.has(f)) continue;          // not in the manifest, therefore not published
     const html = await readFile(join(ROOT, f), 'utf8');
     /* MATCH THE INCLUDE, NOT THE NAME. The first version tested for the bare string
@@ -447,6 +461,7 @@ try {
 
 /* ── report ────────────────────────────────────────────────────────────────────── */
 const line = (l, v) => console.log(`  ${l.padEnd(42)} ${v}`);
+if (drafts.length) console.log(`\n  ${drafts.length} draft(s) skipped: ${drafts.join(", ")}`);
 console.log(`\n  ${files.length} page(s) · ${GENERATED.length} generated file(s) · ${plateCount} plate figure(s) · ${storageKeys} storage key(s) · ${draftPages} published address(es)\n`);
 for (const [kind, label] of [
   ['stale', 'generated files out of date'],

@@ -30,20 +30,35 @@ queering.earth** — the branch is never merged out.
    Already on `drafts` with the draft's own changes uncommitted: that is the normal case,
    carry on.
 
-3. **Check the markup, and only the markup.**
+3. **Check the markup, and then whatever else is cheap and applies.**
 
    ```bash
    node tools/check-markup.mjs --check <draft>.html
    ```
 
-   **The other gates are supposed to fail on a draft** and chasing them wastes the session:
-   the missing `301!`, the missing card and the missing `<loc>` are the accession checklist,
-   not defects. Markup is the exception, because `make-markdown`, `make-search-index` and
-   `make-records` all parse this HTML with regexes and assume every tag closes — an unclosed
-   `section` once swallowed a whole register entry silently.
+   Markup is the one that always matters: `make-markdown`, `make-search-index` and
+   `make-records` all parse this HTML with regexes and assume every tag closes — an
+   unclosed `section` once swallowed a whole register entry silently.
 
-   **Do not run `tools/check.mjs` here.** It regenerates, and a draft has nothing to
-   regenerate into; its four-minute sweep belongs at publication.
+   **The three rendering gates take a file argument and are worth running on a draft**,
+   because they measure the page rather than the accession:
+
+   ```bash
+   node tools/check-contrast.mjs --check <draft>.html
+   node tools/check-width.mjs <draft>.html
+   node tools/check-overlap.mjs --check <draft>.html
+   ```
+
+   **`check-metadata.mjs` also runs on the branch now**, since the generators skip drafts.
+   It will not check the draft itself — a draft has no canonical, no group and no
+   accession, all by design — but it confirms the draft has not broken anything else,
+   which matters the moment a draft touches a shared asset like `queering.css` or adds a
+   plate. It names what it skipped.
+
+   **The accession gates are still supposed to fail** and chasing them wastes the session:
+   the missing `301!`, the missing card and the missing `<loc>` are the checklist, not
+   defects. **Do not run `tools/check.mjs`** — its scoping and its four-minute sweep belong
+   at publication.
 
 4. **Commit and push.** Ask Ryan for a message if the change is not obvious from the diff;
    otherwise say what moved.

@@ -53,6 +53,7 @@ import { decode, attrs, tokenize, stripComments } from './html.mjs';
 import { GROUPS } from './pages.mjs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { isDraft } from './draft.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ORIGIN = 'https://queering.earth';
@@ -326,7 +327,15 @@ function toMarkdown(html, file) {
 
 /* ── read the pages ───────────────────────────────────────────────────────────── */
 const NOT_CONTENT = new Set(['404.html']);
-const files = (await readdir(ROOT)).filter((f) => f.endsWith('.html') && !NOT_CONTENT.has(f)).sort();
+
+/* A DRAFT IS NOT A PAGE YET. Skipping it is what lets the generators — and therefore
+ * `check-metadata.mjs`, which runs them — work at all on the drafts branch. A draft has
+ * no canonical, no group in pages.mjs and no accession, all of it by design, so every
+ * generator here would throw or index prose nobody has published. The predicate lives
+ * once in draft.mjs beside the git-side one, so the two cannot drift. */
+const files = (await readdir(ROOT))
+  .filter((f) => f.endsWith('.html') && !NOT_CONTENT.has(f) && !isDraft(ROOT, f))
+  .sort();
 
 const sitemap = await readFile(join(ROOT, 'sitemap.xml'), 'utf8');
 const lastmodFor = (url) => {
