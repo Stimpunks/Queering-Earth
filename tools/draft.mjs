@@ -184,11 +184,25 @@ export function scopeFor(file) {
     ...[...NOT_A_DRAFT].map(([f, why]) => [f, why]),
   ]);
 
+  /* A COMMIT TOUCHED IT IS NOT THE SAME AS IT STILL DIFFERS. The zine setting was added
+     to queering.css and then taken out again, so that file is byte-identical to main and
+     taking it would be a no-op — but it was listed, because a commit on this draft had
+     touched it. A publish checklist that names files needing nothing is a checklist
+     somebody stops reading. */
+  const differs = (f) => {
+    /* BOTH REFS NAMED, NEVER `main` ALONE. `git diff main -- f` compares main to the
+       WORKING TREE, so run from a checkout of main it reports that nothing differs and
+       the take list comes back EMPTY — which would publish a sheet with no plates and no
+       manifest, the 44-blank-pages failure with a different cause. Caught by running the
+       skill for real rather than by reading it. */
+    try { git('diff', '--quiet', 'main', 'drafts', '--', f); return false; } catch { return true; }
+  };
+
   const take = [], contested = [], refused = [];
   for (const f of [...mine].sort()) {
     if (NEVER.has(f)) refused.push([f, NEVER.get(f)]);
     else if (others.has(f)) contested.push([f, 'also touched by another draft on this branch']);
-    else take.push(f);
+    else if (differs(f)) take.push(f);
   }
   const theirs = [...others].filter((f) => !mine.has(f) && !NEVER.has(f)).sort();
   return { take, contested, refused, theirs };

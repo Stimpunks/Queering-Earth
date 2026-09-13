@@ -69,6 +69,10 @@ In accession order, which is the order they were mounted and not an order to rea
 
 [  Essay No. 12  Every Day’s Most Quiet Need ](https://queering.earth/most-quiet-need)
 
+-
+
+[  Essay No. 13  Held, Not Fixed ](https://queering.earth/held-not-fixed)
+
 The same run sits on the [front of the cabinet](https://queering.earth/#what-grows-here) with a sentence of gloss under each card. **Those sentences live in one place and this is not it.** Ten descriptions copied onto a second page are ten descriptions free to drift from the first, and the copy that drifts is never the one anybody is looking at. What this page has that the front does not is everything below.
 
 ## What a sheet is

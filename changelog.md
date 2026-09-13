@@ -37,6 +37,34 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 13 September · latest
 
+## Sheet No. 13, and the first sheet written by Helen Edgar
+
+A zine arrived, and what it argued turned out to be about this cabinet. It is mounted as an essay; the zine setting was built, measured and dropped on the way.
+
+Mounted[Held, Not Fixed](https://queering.earth/held-not-fixed), Sheet No. 13, an essay
+
+Helen Edgar on lost things and the cabinets we keep for one another. Emily brings a broken object into the shop and it is looked at rather than mended; a herbarium sheet makes one flattened plant stand for every other, which is how a “normal” mind gets defined; and Ole Worm kept a unicorn horn that stayed wonderful after he proved it was a whale.
+
+**The argument the sheet exists for is the third move.** What gets called a special interest in clinical language is, from the inside, a small cabinet of curiosities kept and tended by the person who fills it. Three artists are held against that — Beuys keeping a name the textbooks dropped, Dion leaving the species blank, Klee gathering a herbarium for ten years and never using it — and only then is Dinah Murray’s monotropism named, after the experience rather than before it.
+
+**The drawing is a pressed specimen held down by three paper straps**, which is the title stated as a fact rather than as a metaphor: strapping is one of the three standard herbarium mountings and it is the reversible one, so a strapped sheet can be lifted and re-determined.
+
+MountedTwo plates from *Museum Wormianum*, 1655
+
+Wingendorp’s frontispiece — the room itself, a polar bear on the shelf and three walls of lettered categories — and the woodcut on printed page 283 of the narwhal skull with the tusk still in it, which is the figure by which Worm showed the horn was a whale’s tooth. **The leaf was found by full-text searching the scan for *Unicornu*** rather than by guessing, and the printed folio confirmed it.
+
+Public domain, digitised by the Biodiversity Heritage Library from the Smithsonian Libraries copy, and the rights were read at the item rather than taken from the blog post that led us to it. **The narwhal is cited to the Internet Archive leaf and not to a BHL page id**, because BHL sits behind a bot wall and the id could not be verified: a guessed citation is worse here than an inconsistent one.
+
+Label correctedThree corrections made while the sheet was being written
+
+**Emily’s verse arrived with no attribution and both circulating versions are wrong.** Postgate’s own site prints it as six lines, hyphenating *cat-puss* and capitalising only the first word of each line; the reference works run two of those lines together and capitalise throughout. It is spoken narration and not one of the folk songs, which matters because those are Sandra Kerr and John Faulkner’s work.
+
+**The type-specimen reading was cited to Flannery and is not in Flannery.** Her paper contains no instance of *ideal*, *standard*, *normal* or *deviation*. The botany is hers; the argument about how a normal mind gets defined is Helen’s, and the sheet keeps them apart.
+
+**Flannery was cited “n.d.” and is 2013**, and monotropism was used without crediting Dinah Murray. Both fixed. The paper was already in the house library and the search missed it because it had not been indexed yet, which is the case the house rules warn about.
+
+2026 · 13 September
+
 ## Two ways the instruments here mislead the next person, written down rather than remembered
 
 Neither is a fault in the site. Both cost a session time today, and both would have cost the next one the same.
@@ -2524,6 +2552,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [My Gloomy Sunflowers](https://queering.earth/gloomy-sunflowers) Sheet No. 11
 
 ### [Every Day’s Most Quiet Need](https://queering.earth/most-quiet-need) Sheet No. 12
+
+### [Held, Not Fixed](https://queering.earth/held-not-fixed) Sheet No. 13
 
 ### [Find a word in the cabinet](https://queering.earth/search) the finding aid
 
