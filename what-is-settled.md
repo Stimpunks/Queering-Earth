@@ -263,7 +263,7 @@ The rail's breakpoint is measured against what actually renders rather than agai
 
 **The trigger:** the first repeating, uniform content type — a series where every entry has the same sections in the same order. Then Sveltia CMS, and not before.
 
-**The question still worth asking Helen:** is the friction *publishing*, or *authoring*? If she writes prose and a session builds the artifact around it, no CMS touches that problem. **Half-answered on 2026-09-12**: the *tooling* is the friction in both directions. Reviewing is now solved without a CMS and without an account. Authoring is still open, and is the half the trigger above is really waiting on.
+**The question still worth asking Helen:** is the friction *publishing*, or *authoring*? If she writes prose and a session builds the artifact around it, no CMS touches that problem. **Half-answered on 2026-09-12**: the *tooling* is the friction in both directions. Reviewing is now solved without a CMS and without an account. Authoring is still open, and is the half the trigger above is really waiting on. **Answered 2026-09-13, and not by a CMS**: Helen contributes through a Claude Code session, which is exactly the case this paragraph named — she writes prose, a session builds the artifact, and no CMS touches the problem. **Reasons 1 and 2 and the trigger are all untouched.** See *Helen contributes directly* under Settled.
 
 ### Which edition a sheet reads, when the work was revised
 
@@ -343,6 +343,54 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### Helen contributes directly, and the constraint that shaped this repo is routed around rather than overturned (2026-09-13)
+
+Ryan: *"What's the best way to bootstrap Helen into direct contribution? I'd like to get her set up in Claude Code using this repo."*
+
+**The sentence that decided the review path is still true and has stopped being load-bearing.** *Nothing that requires using GitHub or directly editing HTML is going to work for Helen* struck reason 3 from the CMS deferral and built the whole `drafts` branch workflow. A Claude Code session requires neither thing: she says what a sheet is and which words are quoted, and the session writes the markup and runs the git. **Nothing was overturned — the requirement was removed from the path rather than the person moved onto it**, which is why the review layer survives intact below.
+
+**Settled: full parity, on Ryan's call.** *"She has full access, full power, same as me. Skills and anything else rewritten to consider us both."* Both draft, both review, both publish, both run the sweep. **Branch protection on `main` was offered and refused by that answer**, and the refusal is consistent with how this repo already works: the accession checklist is a checklist rather than a permission, and nine gates that do not care whose hands ran them are a better guard than a GitHub setting that only knows a name.
+
+**What parity cost was wording, and the wording was doing real damage.** The three draft skills addressed one operator by name — *ask Ryan whether to publish it*, *tell Ryan it is Helen's link* — which reads to a session as an instruction to go and consult somebody who is not in the room, on the machine where that person is the one typing. Rewritten to name the role: the collaborator who did not write the sheet is the reviewer, whichever of them that is. **Dated records keep their names.** *On Ryan's call, 2026-09-11* is a fact about who decided something, and rewriting it would falsify this file the way renaming an old accession would falsify the register.
+
+**`.claude/settings.json` is the other half of the answer and it is not a convenience.** A full sweep is four generators and nine gates; with no allowlist that is dozens of permission prompts in a row, which is **the same tooling friction that decided the review path in the first place** — the thing that loses a collaborator is never the hard part, it is being interrupted forty times on the way to it. Thirty-one commands, **enumerated rather than wildcarded**, in the pattern `\_redirects` already uses so a missing one is reportable by name.
+
+**`git push` is deliberately not on the list.** It is the one outward-facing, hard-to-take-back step in the workflow — the one that deploys to queering.earth — and one prompt per publish is not friction. Everything pre-approved is either a measurement or reversible in git.
+
+**The review layer's opening sentence needed correcting and the component did not.** `CLAUDE.md` led that section with *Helen reviews drafts, and neither GitHub nor HTML is a route she can use*, which is now half-false. But the thing was never really about what a reviewer could not do: a draft wants a real address before it is accessioned, and feedback wants somewhere to go that is not a pull-request thread. **Both are as true for a reviewer who could open a terminal as for one who would not.**
+
+**The CMS deferral survives, and its open half closes without a CMS.** *Whether Helen gets a static CMS* asked whether the friction was publishing or authoring, and half-answered on 2026-09-12 that the tooling was the friction in both directions. **Authoring is now answered too, by the answer that entry predicted:** *if she writes prose and a session builds the artifact around it, no CMS touches that problem.* Reasons 1 and 2 stand untouched — the layout is still the argument, and Netlify Identity is still being sunset — and **the named trigger is unmoved**: the first repeating, uniform content type, and not before.
+
+**`ONBOARDING.md` is the mechanism, because a guide nobody opens is a decision nobody acts on.** It is written for the new collaborator *and* for the session beside them, so the commands in it are things to ask for rather than type. It is also the first document here addressed to somebody outside the two people who built the site, which is why it says what cannot be broken before it says what to do.
+
+**Open, and stated rather than hidden: nothing verifies any of this.** No gate reads `ONBOARDING.md`, so a Node version, a `gh` flow or a renamed skill can rot there silently, and the guide's install path has not been walked on a second machine — it is reasoning about a clean Mac, not a measurement of one. **The first real session is the test**, and whatever it finds belongs back in that file the same day.
+
+### `grep` reports nothing, three times, because a tool here fences its placeholders with NUL (2026-09-13)
+
+**`tools/make-records.mjs` contains eight literal NUL bytes**, U+0000, fencing the code-span placeholders in `inline()` and `mdText()`. `file` therefore calls it *binary data*, and **`grep` prints nothing rather than saying why**. A plain `grep -n 'const ' tools/make-records.mjs` exits 1 with no output, which is indistinguishable from a file that does not contain the string. It cost a session three searches and a wrong theory about the file being corrupt before `file` was run on it.
+
+**The fence is right and is not the thing to change.** A placeholder needs a delimiter no source text can contain, and **this is a repository whose prose is about its own markup** — every printable candidate is one an entry may legitimately write inside a code span, and the day it does, a placeholder is restored into the middle of somebody's sentence. NUL cannot appear in the Markdown, so the fence cannot be forged. The same reasoning already protects `--qe-space-\*` from the emphasis stripper.
+
+**The cure is knowing, so: `grep -a`, and check `file` when a search comes back empty on a tool you can see the contents of.** The note is at the mechanism in `make-records.mjs` too, but it is recorded here because the person this catches next will be grepping the repository rather than reading that file.
+
+**It bites an edit script as well as a search.** The "spaces" around the placeholder index are NULs, so a pattern typed from what the terminal renders will never match — which is how the first attempt to teach that file strikethrough failed, on an anchor that looked character-for-character correct.
+
+### The gate ports are shared with Star Stuff, and two sessions on one machine collide (2026-09-13)
+
+**This repo's Chrome gates bind 9412, 9413 and 9414, and so do Star Stuff's.** The two repositories are checked out side by side, the gates were ported from there, and the port numbers came with them. **A session working in each repo at the same time is two suites contending for three ports**, which happened three times in one afternoon: a sweep hung for twenty minutes, and a later one had `check-width.mjs` refuse in 0.2s while a neighbouring `check-overlap.mjs` held 9414.
+
+**The refusal is `cdp.mjs` working exactly as designed and is not the fault.** That guard exists because a gate spent five days silently measuring in an orphaned browser it did not launch; *the port must be free before the spawn* is what stops that, and it cannot distinguish an orphan from a live neighbour — nor should it, because driving either one is the same mistake. **The twenty-minute hang is the part still unexplained**, and it is the shape to watch: a gate that neither refuses nor finishes.
+
+**Not fixed, on purpose, and here is what was weighed.** Renumbering this repo's ports would end the collision and is one line per gate — but it silently ends the *protection* too, in the one direction it has already paid off: an orphan left by a Star Stuff probe on 9414 is exactly the accident `cdp.mjs` was written for, and moving off that port means never being told. The collision is loud, correctly reported, and costs a wait. The alternative is quiet.
+
+**A PRE-FLIGHT `lsof` IS NOT THE ANSWER, AND THAT WAS WRITTEN DOWN WRONG FIRST.** The first version of this entry advised checking the port before starting a sweep. It was tried in the same hour and it does not work: the ports were free, the sweep started, contrast and overlap ran their 55 and 42 seconds — and `check-width.mjs` refused, because the neighbour had taken 9414 in the seconds between the check and the spawn. **The window is not the sweep, it is every moment until each gate binds**, and no check outside the tool can close it.
+
+**What works is retrying the refused gate**, which is cheap because the refusal costs 0.2s and is unambiguous. Width took **twelve attempts at twenty-second intervals** before it got a clear port, then passed. A sweep is not wasted by this: the other eight gates had already reported, and `check-width.mjs` alone is the one to re-run.
+
+**Wait rather than kill.** A neighbouring gate is somebody's real run, not litter. **Litter is a separate matter** — around 200 stale `/tmp/ss-\*` and `/tmp/qe-\*` profiles are on this machine from interrupted runs in both repos. `cdp.mjs` removes its own on a clean exit and cannot on a kill.
+
+**Star Stuff is read-only from here, so its half of this cannot be changed from this repo** — which is the other reason nothing was renumbered: a coordination problem fixed on one side only is a fix that one side remembers.
 
 ### A converter that does not know a syntax publishes the syntax (2026-09-13)
 

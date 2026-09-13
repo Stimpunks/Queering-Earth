@@ -123,6 +123,26 @@ function headingId(text) {
  * constantly — `<dt>`, `<main>`, `<loc>` — and emphasis characters inside a code span
  * are code, not emphasis. Escaping happens between the two, so a quoted tag renders as
  * text rather than becoming an element in the page it is describing.
+ *
+ * THE PLACEHOLDER FENCE IS A LITERAL NUL BYTE, U+0000, AND IT HAS TO BE SOMETHING NO
+ * SOURCE TEXT CAN CONTAIN. A printable fence is a fence these files will eventually
+ * quote: this is a repository whose prose is ABOUT its own markup, so every obvious
+ * candidate — a brace, a pipe, a private-use glyph — is one an entry may legitimately
+ * write inside a code span, and the day it does, a placeholder gets restored into the
+ * middle of somebody's sentence. NUL cannot appear in the Markdown, so the fence
+ * cannot be forged.
+ *
+ * THE PRICE IS THAT `grep` TREATS THIS FILE AS BINARY AND PRINTS NOTHING. Eight NULs
+ * live here and in `mdText()` below, and `file` calls the result "binary data", so a
+ * plain `grep -n 'const ' make-records.mjs` SUCCEEDS SILENTLY WITH NO OUTPUT — which
+ * reads exactly like a file that does not contain what you are looking for. It cost a
+ * session real time on 2026-09-13, three searches deep, before `file` was run.
+ *
+ * USE `grep -a`, or read the file with a tool that does not sniff. The same applies to
+ * an edit script that matches on these lines: the "spaces" around the index are NULs,
+ * so a pattern typed from what the terminal SHOWS will never match. Both facts are in
+ * DECISIONS.md as well, because the next person to be caught by this will be grepping
+ * the repo rather than reading this file.
  */
 /**
  * Resolve `*` emphasis with a STACK, not with two regexes.

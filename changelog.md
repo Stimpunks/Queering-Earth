@@ -37,6 +37,26 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 13 September · latest
 
+## Two ways the instruments here mislead the next person, written down rather than remembered
+
+Neither is a fault in the site. Both cost a session time today, and both would have cost the next one the same.
+
+Cabinet`grep` reports nothing on `make-records.mjs`, and silence is not an answer
+
+That tool fences its code-span placeholders with **literal NUL bytes**, so `file` calls it binary data and `grep` prints nothing rather than saying why. A search for a string that is plainly in the file exits quietly with no output, **which looks exactly like a file that does not contain it**. Three searches and one wrong theory about corruption before `file` was run on it.
+
+**The fence is right and is not the thing to change.** A placeholder needs a delimiter no source text can contain, and **this is a repository whose prose is about its own markup** — every printable candidate is one an entry may legitimately write inside a code span, and the day it does, a placeholder is restored into the middle of somebody’s sentence. The cure is knowing: `grep -a`, and run `file` when a search comes back empty on a file you can read. **It bites an edit script too** — the apparent spaces around the placeholder index are NULs, so a pattern typed from what the terminal renders will never match, which is how the first attempt to teach that tool strikethrough failed on an anchor that looked correct character for character.
+
+CabinetThe gate ports are shared with Star Stuff, and the collision is kept on purpose
+
+The three Chrome gates here bind 9412, 9413 and 9414. **So do Star Stuff’s, because these were ported from there and the numbers came with them**, and the two repositories sit side by side. A session working in each at once is two suites contending for three ports: today a sweep hung for twenty minutes, and a later one had `check-width.mjs` refuse in 0.2s while a neighbouring `check-overlap.mjs` held 9414.
+
+**The refusal is `cdp.mjs` working exactly as it was written to**, after [a gate spent five days measuring in an orphaned browser it did not launch](#a-2026-09-12-runner). That guard cannot tell an orphan from a live neighbour, and should not: driving either is the same mistake. **Renumbering would end the collision and end the protection with it**, in the one direction it has already paid off — so it was weighed and refused. The collision is loud and costs a wait; the alternative is quiet.
+
+**Checking the port first was the obvious advice and it is wrong**, which was found by writing it down and then trying it in the same hour. The ports were free, the sweep started, contrast and overlap ran their 55 and 42 seconds, and width refused anyway — the neighbour had taken 9414 in the seconds before it spawned. **The window is every moment until each gate binds, and nothing outside the tool can close it.** What works is re-running the one refused gate: the refusal costs 0.2s, the other eight have already reported, and width came through on the twelfth attempt. **Wait rather than kill** — a neighbouring gate is somebody’s real run.
+
+2026 · 13 September
+
 ## A retraction had been reading as a typo, on the page whose job is to show what was retracted
 
 Found by reading the page rather than by any check, which is the only instrument there is for a fault made of valid markup and wrong words.

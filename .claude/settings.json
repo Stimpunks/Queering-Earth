@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node tools/check.mjs:*)",
+      "Bash(node tools/check-markup.mjs:*)",
+      "Bash(node tools/check-sitemap.mjs:*)",
+      "Bash(node tools/check-contrast.mjs:*)",
+      "Bash(node tools/check-addresses.mjs:*)",
+      "Bash(node tools/check-metadata.mjs:*)",
+      "Bash(node tools/check-cache.mjs:*)",
+      "Bash(node tools/check-overlap.mjs:*)",
+      "Bash(node tools/check-card-order.mjs:*)",
+      "Bash(node tools/check-width.mjs:*)",
+      "Bash(node tools/make-records.mjs:*)",
+      "Bash(node tools/make-whats-new.mjs:*)",
+      "Bash(node tools/make-search-index.mjs:*)",
+      "Bash(node tools/make-markdown.mjs:*)",
+      "Bash(node tools/make-fonts.mjs:*)",
+      "Bash(node tools/make-specimen.mjs:*)",
+      "Bash(node tools/draft.mjs:*)",
+      "Bash(node tools/serve.mjs:*)",
+      "Bash(python3 tools/make-images.py:*)",
+      "Bash(python3 tools/make-plates.py:*)",
+      "Bash(tools/sks-search.sh:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git switch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git merge:*)",
+      "Bash(git checkout:*)"
+    ],
+    "deny": []
+  }
+}

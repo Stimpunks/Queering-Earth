@@ -1,6 +1,6 @@
 ---
 name: publish-draft
-description: Accession the draft in progress — take the file onto main, strip the draft block, work the accession checklist, run the full sweep, and push it live to queering.earth. Use when Ryan says "publish the draft", "ship it", "Helen has signed off", "mount the sheet", or "put the draft live". Handles every git step and drives the editorial ones.
+description: Accession the draft in progress — take the file onto main, strip the draft block, work the accession checklist, run the full sweep, and push it live to queering.earth. Use when Ryan or Helen says "publish the draft", "ship it", "the review is in", "mount the sheet", or "put the draft live". Handles every git step and drives the editorial ones.
 ---
 
 # publish-draft

@@ -327,8 +327,34 @@
   <div class="qe-register" id="latest">
 
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-13-struck">
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-instruments">
       <p class="qe-accession-date">2026 &middot; 13 September &middot; latest</p>
+      <h2 id="a-2026-09-13-instruments">Two ways the instruments here mislead the next person, written down rather than remembered <a class="qe-anchor" href="#a-2026-09-13-instruments"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Neither is a fault in the site. Both cost a session time today, and both would have cost the next one the same.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><code>grep</code> reports nothing on <code>make-records.mjs</code>, and silence is not an answer</span></div>
+        <div class="qe-entry-body">
+          <p>That tool fences its code-span placeholders with <strong>literal NUL bytes</strong>, so <code>file</code> calls it binary data and <code>grep</code> prints nothing rather than saying why. A search for a string that is plainly in the file exits quietly with no output, <strong>which looks exactly like a file that does not contain it</strong>. Three searches and one wrong theory about corruption before <code>file</code> was run on it.</p>
+          <p><strong>The fence is right and is not the thing to change.</strong> A placeholder needs a delimiter no source text can contain, and <strong>this is a repository whose prose is about its own markup</strong> &mdash; every printable candidate is one an entry may legitimately write inside a code span, and the day it does, a placeholder is restored into the middle of somebody&rsquo;s sentence. The cure is knowing: <code>grep -a</code>, and run <code>file</code> when a search comes back empty on a file you can read. <strong>It bites an edit script too</strong> &mdash; the apparent spaces around the placeholder index are NULs, so a pattern typed from what the terminal renders will never match, which is how the first attempt to teach that tool strikethrough failed on an anchor that looked correct character for character.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The gate ports are shared with Star Stuff, and the collision is kept on purpose</span></div>
+        <div class="qe-entry-body">
+          <p>The three Chrome gates here bind 9412, 9413 and 9414. <strong>So do Star Stuff&rsquo;s, because these were ported from there and the numbers came with them</strong>, and the two repositories sit side by side. A session working in each at once is two suites contending for three ports: today a sweep hung for twenty minutes, and a later one had <code>check-width.mjs</code> refuse in 0.2s while a neighbouring <code>check-overlap.mjs</code> held 9414.</p>
+          <p><strong>The refusal is <code>cdp.mjs</code> working exactly as it was written to</strong>, after <a href="#a-2026-09-12-runner">a gate spent five days measuring in an orphaned browser it did not launch</a>. That guard cannot tell an orphan from a live neighbour, and should not: driving either is the same mistake. <strong>Renumbering would end the collision and end the protection with it</strong>, in the one direction it has already paid off &mdash; so it was weighed and refused. The collision is loud and costs a wait; the alternative is quiet.</p>
+          <p><strong>Checking the port first was the obvious advice and it is wrong</strong>, which was found by writing it down and then trying it in the same hour. The ports were free, the sweep started, contrast and overlap ran their 55 and 42 seconds, and width refused anyway &mdash; the neighbour had taken 9414 in the seconds before it spawned. <strong>The window is every moment until each gate binds, and nothing outside the tool can close it.</strong> What works is re-running the one refused gate: the refusal costs 0.2s, the other eight have already reported, and width came through on the twelfth attempt. <strong>Wait rather than kill</strong> &mdash; a neighbouring gate is somebody&rsquo;s real run.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-struck">
+      <p class="qe-accession-date">2026 &middot; 13 September</p>
       <h2 id="a-2026-09-13-struck">A retraction had been reading as a typo, on the page whose job is to show what was retracted <a class="qe-anchor" href="#a-2026-09-13-struck"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Found by reading the page rather than by any check, which is the only instrument there is for a fault made of valid markup and wrong words.</p>
