@@ -1523,7 +1523,21 @@ shared branch is**, not errors anybody made.
 `X-Robots-Tag: noindex` block in `_headers`, which must never reach `main`, and
 `review-practice.html`. **Cutting a draft branch from `main` instead would produce a branch
 deploy that is a fully crawlable copy of the published site**, which is why the cut is from
-`drafts` and why Netlify must list branches individually rather than deploying "all".
+`drafts`.
+
+**NETLIFY DEPLOYS `draft/*` AS A WILDCARD, AND THE PREFIX IS DOING SAFETY WORK.** One entry
+covers every draft branch: nothing to add when a draft starts, nothing to remove when it is
+published and the branch deleted — the deploy goes with it. **"All branches" is still
+refused**, because it would deploy any branch at all, including one cut from `main` with no
+noindex.
+
+**THE WILDCARD LEAVES EXACTLY ONE HOLE AND IT IS GUARDED.** A `draft/…` branch cut from
+`main` rather than from `drafts` would deploy without the noindex — a fully crawlable copy
+of the published site, live, with nothing anywhere looking wrong. The header cannot be
+scoped by host, so the only defence is to look: `tools/draft.mjs` reads each draft branch's
+own `_headers`, finds the rule whose pattern is `/*`, and reports **DANGER** with the fix if
+it is missing. It is a real test rather than a string count, because `main` carries a
+`/drafts/*` noindex of its own and counting would pass either.
 
 **Drafts live at the root of their branch, never in a folder on `main`.** A `drafts/` folder
 was measured and it works mechanically — every generator and gate reads `readdir(ROOT)`

@@ -91,6 +91,34 @@ export function draftBranches() {
   return [...out].sort();
 }
 
+/**
+ * Does this branch carry the branch-only noindex?
+ *
+ * THE ONE RISK A `draft/*` WILDCARD LEAVES OPEN. Netlify can deploy every branch under a
+ * prefix, which removes the per-draft setup step — but it will then also deploy a
+ * `draft/…` branch somebody cut from `main` instead of from `drafts`, and that branch has
+ * no `X-Robots-Tag: noindex`. Its deploy would be a fully crawlable copy of the published
+ * site, live, with nothing anywhere looking wrong.
+ *
+ * The header cannot be scoped by host — `_headers` has no host matching and
+ * `netlify.toml` headers are not context-specific — so the only defence is to look. This
+ * reads the branch's own `_headers`, finds the rule whose pattern is `/*`, and checks it.
+ * `main`'s `/*` block must NOT have it, which is what makes this a real test rather than a
+ * string count: main carries a `/drafts/*` noindex too, and counting would pass either.
+ */
+export function hasBranchNoindex(branch) {
+  let raw = '';
+  try { raw = git('show', `${branch}:_headers`); } catch { return false; }
+  let inGlobal = false;
+  for (const line of raw.split('\n')) {
+    const bare = line.replace(/#.*$/, '');
+    if (!bare.trim()) continue;
+    if (/^\S/.test(bare)) { inGlobal = bare.trim() === '/*'; continue; }
+    if (inGlobal && /^\s*X-Robots-Tag\s*:\s*noindex/i.test(bare)) return true;
+  }
+  return false;
+}
+
 /** The draft page on a branch: the root page carrying the marker. */
 export function pageOn(branch) {
   let hits = [];
@@ -231,6 +259,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     console.log(`  branch    ${b}`);
     console.log(`  page      ${page ?? '(none carrying the draft block)'}`);
     if (page) console.log(`  read it   ${hostFor(b)}${addressOf(page)}`);
+    if (!hasBranchNoindex(b))
+      console.log(`  DANGER    this branch has no X-Robots-Tag: noindex on /* in _headers, so its\n` +
+                  `            deploy is a CRAWLABLE COPY OF THE PUBLISHED SITE. It was cut from\n` +
+                  `            main rather than from ${BASE}. Fix it before anything is pushed:\n` +
+                  `              git switch ${b} && git checkout ${BASE} -- _headers && git commit -m "Take the branch noindex" && git push`);
     const fit = labelFits(b);
     if (!fit.ok)
       console.log(`  WARNING   the Netlify subdomain would be ${fit.length} characters and the ` +

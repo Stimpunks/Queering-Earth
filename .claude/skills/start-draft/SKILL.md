@@ -64,18 +64,18 @@ of the published site.**
    is 36, so real sheet names fit — but not by much. **A branch over the limit gets no
    deploy URL, which looks exactly like a branch that simply never built.**
 
-5. **Tell Ryan to add `draft/<slug>` to Netlify's branch deploys.** Project configuration →
-   Build & deploy → Branches and deploy contexts → *Let me add individual branches*.
-   **Not "All branches"** — a branch cut from `main` rather than from `drafts` has no
-   noindex, and "all" would publish it crawlable.
-
-   **THEN PUSH AGAIN, BECAUSE NETLIFY ONLY BUILDS A BRANCH ON A PUSH MADE AFTER IT WAS
-   ADDED TO THE LIST.** A branch pushed first and added second shows *No deploys found*
-   with nothing wrong anywhere, and looks like a broken setup. An empty commit is enough:
+5. **Confirm the branch carries the noindex.**
 
    ```bash
-   git commit --allow-empty -m "Empty commit to wake Netlify's branch deploy" && git push
+   node tools/draft.mjs
    ```
+
+   **Netlify deploys `draft/*` as a wildcard**, so there is nothing to add and nobody to
+   ask — the branch builds on its first push and the deploy disappears when the branch is
+   deleted. What the wildcard cannot know is whether a branch was cut from `drafts` or from
+   `main`, and one cut from `main` has no `X-Robots-Tag: noindex`: its deploy would be a
+   crawlable copy of the published site with nothing looking wrong. The tool reports
+   **DANGER** and the one-line fix if so. **Do not push until it is clean.**
 
 6. **Decide which kind of draft this is**, and say which you concluded:
 
