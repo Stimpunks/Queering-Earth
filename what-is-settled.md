@@ -221,7 +221,7 @@ Paths, for a session in that repo: `site/stimpunks.org/glossary/canary.md` lines
 
 The masthead currently reads **Queering.Earth** with **"Post-normal possibilities."** under it. Both are provisional.
 
-The tagline is Helen Edgar's own phrase from the founding brainstorm, chosen because it is short and it is ours. The attribution question it raised is **settled** — the masthead now credits Nick Walker, see below. The *wording* of both wordmark and tagline is still open. It replaced the working tagline — "Subverting, defying, disrupting, and liberating oneself from all forms of normativity (props Nick Walker)" — which is a **paraphrase of Walker wearing his name**. See `ATTRIBUTIONS.md` for the full reasoning and for how the page handles Walker now.
+The tagline is Helen Edgar's own phrase from the founding brainstorm, chosen because it is short and it is ours. The attribution question it raised is **settled** — the home page credits Nick Walker in prose, see below. The *wording* of both wordmark and tagline is still open. It replaced the working tagline — "Subverting, defying, disrupting, and liberating oneself from all forms of normativity (props Nick Walker)" — which is a **paraphrase of Walker wearing his name**. See `ATTRIBUTIONS.md` for the full reasoning and for how the page handles Walker now.
 
 Changing either is one line in `index.html`. Whatever replaces them, the paraphrase problem does not come back: quote him exactly, or write our own line.
 
@@ -259,11 +259,11 @@ The rail's breakpoint is measured against what actually renders rather than agai
 
 1. The design intent — queering the zine itself, playing with graphic font layout, each piece interpreting its own subject — is what a CMS structurally cannot hold. A CMS earns its cost when content is uniform and layout is fixed. Here the layout **is** the argument.
 2. Netlify Identity's git-gateway is being sunset, so Decap or Sveltia means standing up GitHub OAuth ourselves, writing a schema for a content model that does not exist yet, and adding a build step to a site that has none.
-3. ~~The zero-cost path already works: Helen edits files in the GitHub web editor, opens a pull request, and Netlify posts a deploy preview URL on it.~~ **Struck 2026-09-12, on Ryan's word: nothing that requires GitHub or editing HTML works for Helen, and this reason had been false for as long as it had been written.** Star Stuff runs 192 pages that way, which is where the sentence came from — it was carried over as a fact about this collaboration without being checked against the person in it. **Reasons 1 and 2 stand on their own and the deferral survives**, but it now rests on two legs rather than three. See *A draft is reviewed at a real address* below for what replaced it.
+3. <del>The zero-cost path already works: Helen edits files in the GitHub web editor, opens a pull request, and Netlify posts a deploy preview URL on it.</del> **Struck 2026-09-12, on Ryan's word: nothing that requires GitHub or editing HTML works for Helen, and this reason had been false for as long as it had been written.** Star Stuff runs 192 pages that way, which is where the sentence came from — it was carried over as a fact about this collaboration without being checked against the person in it. **Reasons 1 and 2 stand on their own and the deferral survives**, but it now rests on two legs rather than three. See *A draft is reviewed at a real address* below for what replaced it.
 
 **The trigger:** the first repeating, uniform content type — a series where every entry has the same sections in the same order. Then Sveltia CMS, and not before.
 
-**The question still worth asking Helen:** is the friction *publishing*, or *authoring*? If she writes prose and a session builds the artifact around it, no CMS touches that problem. **Half-answered on 2026-09-12**: the *tooling* is the friction in both directions. Reviewing is now solved without a CMS and without an account. Authoring is still open, and is the half the trigger above is really waiting on.
+**The question still worth asking Helen:** is the friction *publishing*, or *authoring*? If she writes prose and a session builds the artifact around it, no CMS touches that problem. **Half-answered on 2026-09-12**: the *tooling* is the friction in both directions. Reviewing is now solved without a CMS and without an account. Authoring is still open, and is the half the trigger above is really waiting on. **Answered 2026-09-13, and not by a CMS**: Helen contributes through a Claude Code session, which is exactly the case this paragraph named — she writes prose, a session builds the artifact, and no CMS touches the problem. **Reasons 1 and 2 and the trigger are all untouched.** See *Helen contributes directly* under Settled.
 
 ### Which edition a sheet reads, when the work was revised
 
@@ -343,6 +343,84 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### Helen contributes directly, and the constraint that shaped this repo is routed around rather than overturned (2026-09-13)
+
+Ryan: *"What's the best way to bootstrap Helen into direct contribution? I'd like to get her set up in Claude Code using this repo."*
+
+**The sentence that decided the review path is still true and has stopped being load-bearing.** *Nothing that requires using GitHub or directly editing HTML is going to work for Helen* struck reason 3 from the CMS deferral and built the whole `drafts` branch workflow. A Claude Code session requires neither thing: she says what a sheet is and which words are quoted, and the session writes the markup and runs the git. **Nothing was overturned — the requirement was removed from the path rather than the person moved onto it**, which is why the review layer survives intact below.
+
+**Settled: full parity, on Ryan's call.** *"She has full access, full power, same as me. Skills and anything else rewritten to consider us both."* Both draft, both review, both publish, both run the sweep. **Branch protection on `main` was offered and refused by that answer**, and the refusal is consistent with how this repo already works: the accession checklist is a checklist rather than a permission, and nine gates that do not care whose hands ran them are a better guard than a GitHub setting that only knows a name.
+
+**What parity cost was wording, and the wording was doing real damage.** The three draft skills addressed one operator by name — *ask Ryan whether to publish it*, *tell Ryan it is Helen's link* — which reads to a session as an instruction to go and consult somebody who is not in the room, on the machine where that person is the one typing. Rewritten to name the role: the collaborator who did not write the sheet is the reviewer, whichever of them that is. **Dated records keep their names.** *On Ryan's call, 2026-09-11* is a fact about who decided something, and rewriting it would falsify this file the way renaming an old accession would falsify the register.
+
+**`.claude/settings.json` is the other half of the answer and it is not a convenience.** A full sweep is four generators and nine gates; with no allowlist that is dozens of permission prompts in a row, which is **the same tooling friction that decided the review path in the first place** — the thing that loses a collaborator is never the hard part, it is being interrupted forty times on the way to it. Thirty-one commands, **enumerated rather than wildcarded**, in the pattern `\_redirects` already uses so a missing one is reportable by name.
+
+**`git push` is deliberately not on the list.** It is the one outward-facing, hard-to-take-back step in the workflow — the one that deploys to queering.earth — and one prompt per publish is not friction. Everything pre-approved is either a measurement or reversible in git.
+
+**The review layer's opening sentence needed correcting and the component did not.** `CLAUDE.md` led that section with *Helen reviews drafts, and neither GitHub nor HTML is a route she can use*, which is now half-false. But the thing was never really about what a reviewer could not do: a draft wants a real address before it is accessioned, and feedback wants somewhere to go that is not a pull-request thread. **Both are as true for a reviewer who could open a terminal as for one who would not.**
+
+**The CMS deferral survives, and its open half closes without a CMS.** *Whether Helen gets a static CMS* asked whether the friction was publishing or authoring, and half-answered on 2026-09-12 that the tooling was the friction in both directions. **Authoring is now answered too, by the answer that entry predicted:** *if she writes prose and a session builds the artifact around it, no CMS touches that problem.* Reasons 1 and 2 stand untouched — the layout is still the argument, and Netlify Identity is still being sunset — and **the named trigger is unmoved**: the first repeating, uniform content type, and not before.
+
+**`ONBOARDING.md` is the mechanism, because a guide nobody opens is a decision nobody acts on.** It is written for the new collaborator *and* for the session beside them, so the commands in it are things to ask for rather than type. It is also the first document here addressed to somebody outside the two people who built the site, which is why it says what cannot be broken before it says what to do.
+
+**Open, and stated rather than hidden: nothing verifies any of this.** No gate reads `ONBOARDING.md`, so a Node version, a `gh` flow or a renamed skill can rot there silently, and the guide's install path has not been walked on a second machine — it is reasoning about a clean Mac, not a measurement of one. **The first real session is the test**, and whatever it finds belongs back in that file the same day.
+
+### `grep` reports nothing, three times, because a tool here fences its placeholders with NUL (2026-09-13)
+
+**`tools/make-records.mjs` contains eight literal NUL bytes**, U+0000, fencing the code-span placeholders in `inline()` and `mdText()`. `file` therefore calls it *binary data*, and **`grep` prints nothing rather than saying why**. A plain `grep -n 'const ' tools/make-records.mjs` exits 1 with no output, which is indistinguishable from a file that does not contain the string. It cost a session three searches and a wrong theory about the file being corrupt before `file` was run on it.
+
+**The fence is right and is not the thing to change.** A placeholder needs a delimiter no source text can contain, and **this is a repository whose prose is about its own markup** — every printable candidate is one an entry may legitimately write inside a code span, and the day it does, a placeholder is restored into the middle of somebody's sentence. NUL cannot appear in the Markdown, so the fence cannot be forged. The same reasoning already protects `--qe-space-\*` from the emphasis stripper.
+
+**The cure is knowing, so: `grep -a`, and check `file` when a search comes back empty on a tool you can see the contents of.** The note is at the mechanism in `make-records.mjs` too, but it is recorded here because the person this catches next will be grepping the repository rather than reading that file.
+
+**It bites an edit script as well as a search.** The "spaces" around the placeholder index are NULs, so a pattern typed from what the terminal renders will never match — which is how the first attempt to teach that file strikethrough failed, on an anchor that looked character-for-character correct.
+
+### The gate ports are shared with Star Stuff, and two sessions on one machine collide (2026-09-13)
+
+**This repo's Chrome gates bind 9412, 9413 and 9414, and so do Star Stuff's.** The two repositories are checked out side by side, the gates were ported from there, and the port numbers came with them. **A session working in each repo at the same time is two suites contending for three ports**, which happened three times in one afternoon: a sweep hung for twenty minutes, and a later one had `check-width.mjs` refuse in 0.2s while a neighbouring `check-overlap.mjs` held 9414.
+
+**The refusal is `cdp.mjs` working exactly as designed and is not the fault.** That guard exists because a gate spent five days silently measuring in an orphaned browser it did not launch; *the port must be free before the spawn* is what stops that, and it cannot distinguish an orphan from a live neighbour — nor should it, because driving either one is the same mistake. **The twenty-minute hang is the part still unexplained**, and it is the shape to watch: a gate that neither refuses nor finishes.
+
+**Not fixed, on purpose, and here is what was weighed.** Renumbering this repo's ports would end the collision and is one line per gate — but it silently ends the *protection* too, in the one direction it has already paid off: an orphan left by a Star Stuff probe on 9414 is exactly the accident `cdp.mjs` was written for, and moving off that port means never being told. The collision is loud, correctly reported, and costs a wait. The alternative is quiet.
+
+**A PRE-FLIGHT `lsof` IS NOT THE ANSWER, AND THAT WAS WRITTEN DOWN WRONG FIRST.** The first version of this entry advised checking the port before starting a sweep. It was tried in the same hour and it does not work: the ports were free, the sweep started, contrast and overlap ran their 55 and 42 seconds — and `check-width.mjs` refused, because the neighbour had taken 9414 in the seconds between the check and the spawn. **The window is not the sweep, it is every moment until each gate binds**, and no check outside the tool can close it.
+
+**What works is retrying the refused gate**, which is cheap because the refusal costs 0.2s and is unambiguous. Width took **twelve attempts at twenty-second intervals** before it got a clear port, then passed. A sweep is not wasted by this: the other eight gates had already reported, and `check-width.mjs` alone is the one to re-run.
+
+**Wait rather than kill.** A neighbouring gate is somebody's real run, not litter. **Litter is a separate matter** — around 200 stale `/tmp/ss-\*` and `/tmp/qe-\*` profiles are on this machine from interrupted runs in both repos. `cdp.mjs` removes its own on a clean exit and cannot on a kill.
+
+**Star Stuff is read-only from here, so its half of this cannot be changed from this repo** — which is the other reason nothing was renumbered: a coordination problem fixed on one side only is a fix that one side remembers.
+
+### A converter that does not know a syntax publishes the syntax (2026-09-13)
+
+**`/what-is-settled` had been showing `~~` fences as text since the day reason 3 of the CMS deferral was struck.** `make-records.mjs` knew emphasis, code spans and links, and did not know strikethrough, so it passed the tildes through and the page printed them. **On the page whose whole job is to show what was retracted, the retraction read as a typo.**
+
+**No gate here could have caught it and none should.** Every check reads structure — balance, order, colour, position, width — and this was valid markup saying the wrong thing in prose. It was found by reading the page, which remains the only instrument for this class of fault.
+
+**The tell is that it fails silently in exactly one direction.** An unknown *tag* makes `make-markdown.mjs` throw, deliberately, because a dropped element is a Markdown copy that says less than the page. An unknown *inline syntax* has no such guard: the characters survive, so nothing is lost and nothing is converted, and the output looks like a plain-text file that forgot to become HTML. **The converter now throws on an unclosed run** rather than emitting a stray fence, which is the shape `emphasis()` already had.
+
+**A single tilde is not strikethrough, and this corpus proves it five times.** `~100`, `~60px`, `~896px`, `~108px`, `~120` — *approximately*, in ordinary prose. The run has to be exactly two with GFM's flanking rule, and the round-trip proof had to be taught the same fence or it would have demanded text the converter was right not to produce. **That is the trap `mdText()`'s own note already records about underscores**: the proof has to model the converter, not approximate it, because a guard that cries wolf gets relaxed.
+
+**It is `del` and not a class.** A line-through drawn on a span is invisible to a screen reader, so the one mark on these pages that says *this is no longer true* would be missing for the readers least able to infer it. The element carries the meaning and the colour only shows it — **moss letters, coral strike, the colour on the rule and never on the word**, which is `.qe-correction-speaker del`'s idiom reused rather than restated.
+
+**The struck sentence leaves the search index, and that is correct.** `make-search-index.mjs` skips `del` subtrees, because plain text has no vocabulary for *this is what we got wrong* and a snippet would surface a retracted claim as a current one. Checked rather than assumed: `/what-is-settled` still indexes that passage once, through the 2026-09-12 entry that quotes it as history and explains why it was struck. **The retraction is findable; the retracted claim is not.**
+
+### A correction made while a sheet was being mounted is not a correction *since* it arrived (2026-09-13)
+
+**Found by reading `/whats-new` against the thirteen provenance lines, after an unrelated edit made one of them move.** The listing said Sheet No. 9 had been *Corrected twice since* while the sheet itself said *Not yet corrected*, and those are the two views of one fact this house says must agree.
+
+**The count was right and the word was wrong.** `make-whats-new.mjs` gathered every `Re-determined` and `Label corrected` entry filed to a page and reported the total under the word *since*. A sheet is routinely corrected **while it is being mounted** — a citation checked against the primary, a story everybody tells found to be wrong — and those entries are filed to the sheet like any other. So `/wild-nights` read *Corrected four times since* for four corrections made the day it went up, and five sheets read as corrected while their own lines said they were clean. **Nothing was miscounted; the listing was claiming a chronology it had not checked.**
+
+**The split is on the arrival day, and NOT on the mounting accession.** The obvious key is *the accession that mounted this page*, and it is not a thing: `/ledger` has three `Mounted` accessions on the day it arrived and `/gloomy-sunflowers` two, because `Mounted` is the register's word for anything added **to** a page. The arrival day is a thing, because it is `git log --diff-filter=A` and already measured for the listing itself.
+
+**It is also the only rule a generator is entitled to here.** Within one day the order of accessions is editorial and nothing can verify it — this file says so about the register's own ordering — so a tool that placed one same-day entry after another would be asserting a fact it does not have. `/promises-like-pie-crust` draws exactly that finer distinction in its own prose (*four times on mounting, then corrected once more … when the plates changed*, all seven on 8 September), and it is allowed to, because a provenance line is authored and knows which accession mounted it. **The listing says the coarser true thing; the sheet says the finer one.**
+
+**The four sheets reading *Not yet corrected* were right all along, and that is the part worth recording.** The first reading of this fault was that they had drifted and needed mending. Measured, the opposite: an accession history reports what has happened to a sheet **since it was accessioned**, twelve of the thirteen lines were exactly right under that reading, and five of them go further and mention mounting-time corrections in their own words. **A `--mended` seam forced onto those four would have been a gold join on sheets nobody had corrected** — decoration asserting a fact, in the component this house built to make real mends findable.
+
+**One real drift, and it was the sheet.** `/on-being-ill` never recorded the re-determination of 9 September, when a line of Woolf's turned out to be Woolf guessing at what Coleridge meant and the quotation was re-cut to start where the guess does. Its line said *re-determined once* against a register holding two. **Thirteen lines, one wrong** — which is a better result than the gate-shaped instinct predicted, and the reason to measure before mending.
+
+**Nothing gates this.** The counts agree today because they were compared by hand. A check would have to know what a provenance line means in prose, which is the thing that is authored.
 
 ### A draft is reviewed at a real address, and the review layer never ships (2026-09-12)
 
@@ -1474,13 +1552,17 @@ Two smaller things settled with it:
 
 Our tagline is **"Post-normal possibilities."** Walker's book is *Neuroqueer Heresies: Notes on the Neurodiversity Paradigm, Autistic Empowerment, and **Postnormal Possibilities***. One hyphen apart, on a site that quotes him on its home page, about the subject of his book. Found while building the *Coming to Terms* sheet, in our own glossary entry for *neuroqueer*, and verified against neuroqueer.com.
 
-**Ryan's call: credit him, on the masthead.** It now reads *after Nick Walker*, linked to the book, with the full explanation in [Queering is a verb](https://queering.earth/#queering-is-a-verb) where Walker already appears.
+**Ryan's call: credit him, on the masthead.** It read *after Nick Walker*, linked to the book, with the full explanation in [Queering is a verb](https://queering.earth/#queering-is-a-verb) where Walker already appears.
 
 **Why crediting was the right of the three options.** Helen may well have arrived at the phrase herself — she wrote it in the founding brainstorm — and *post-normal* has a genuine separate lineage in post-normal science, coined by Silvio Funtowicz and Jerome Ravetz in "Science for the post-normal age," *Futures*, September 1993 (checked 2026-09-07, so the file no longer carries that as an unverified aside). None of that makes the collision invisible. The page therefore says the true and generous thing — *he published it first* — and claims nothing about the route the phrase took to get here.
 
 **The wording on the page is deliberately "after."** Not "his phrase," which would take the coinage away from Helen, and not silence, which was the option that stayed defensible only until somebody noticed the subtitle. *After* is the form poetry uses for exactly this, and it is the only one of the three that is true no matter which way the origin actually ran.
 
 This settles the attribution question and **not** the wording of the tagline itself, which stays open above as Helen's and Ryan's.
+
+**Re-determined 2026-09-13, on Ryan's word: the masthead line comes off; the credit does not.** *Ryan's call: credit him, on the masthead* was half right and stays half right. Crediting was the right call of the three. **The masthead was the wrong place to do it**, and it took six days and three readers to find out — the same three words read as a death notice, as an endorsement, and as a statement that this site is built on one person's theory. Nobody misread the paragraph under *Queering is a verb*, which has said all of it since the same day and says it with room.
+
+**The transferable rule: a credit that needs a sentence must not be set as a label.** The masthead had room for three words, so three words is what it got, and every reader supplied the rest themselves — differently. That is the paraphrase failure this file already records about the working tagline, arriving from the other end: a form too small for the claim will shorten the claim, and the shortened claim is not a quieter version of the true one. The house's own test applies to our own credits, not only to other people's words: **if we changed the words, they are ours** — and three words that assert an endorsement nobody gave are ours in the worst way.
 
 ### A sheet is a reading or an essay, and the label flexes (2026-09-07)
 

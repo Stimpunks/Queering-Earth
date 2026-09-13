@@ -1,6 +1,6 @@
 ---
 name: save-draft
-description: Commit and push the draft in progress so the review URL updates, without touching the published site. Use when Ryan says "save the draft", "push the draft", "update the draft", "send that to Helen again", or has finished a round of edits on a draft. Also covers throwing a draft away.
+description: Commit and push the draft in progress so the review URL updates, without touching the published site. Use when Ryan or Helen says "save the draft", "push the draft", "update the draft", "send it back for review", or has finished a round of edits on a draft. Also covers throwing a draft away.
 ---
 
 # save-draft
@@ -60,7 +60,7 @@ queering.earth** — the branch is never merged out.
    defects. **Do not run `tools/check.mjs`** — its scoping and its four-minute sweep belong
    at publication.
 
-4. **Commit and push.** Ask Ryan for a message if the change is not obvious from the diff;
+4. **Commit and push.** Ask for a message if the change is not obvious from the diff;
    otherwise say what moved.
 
    ```bash
@@ -73,11 +73,11 @@ queering.earth** — the branch is never merged out.
    node tools/draft.mjs
    ```
 
-   Say plainly that Helen's link is unchanged and will show the new version shortly. **Her
-   notes survive** — they are keyed to the page's address in her own browser, not to the
-   version — and any note whose paragraph you rewrote will re-attach and say *the text here
-   has changed since this note was written*. Nothing is lost, but tell Ryan, because she may
-   have been commenting on the sentence he just deleted.
+   Say plainly that the review link is unchanged and will show the new version shortly.
+   **The notes survive** — they are keyed to the page's address in the reviewer's own
+   browser, not to the version — and any note whose paragraph you rewrote will re-attach and
+   say *the text here has changed since this note was written*. Nothing is lost, but say so,
+   because the reviewer may have been commenting on the sentence that just went.
 
 6. **Return to main** unless the next thing is more drafting:
 

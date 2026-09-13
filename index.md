@@ -13,8 +13,6 @@ generated_by: "tools/make-markdown.mjs from the page's own <main> landmark"
 
 Post-normal possibilities.
 
-after [Nick Walker](https://neuroqueer.com/neuroqueer-heresies/)
-
 What is normal?
 
 Who’s normal?

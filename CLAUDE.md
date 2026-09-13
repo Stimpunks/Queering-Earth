@@ -27,6 +27,30 @@ Room left open for the reader is the product. It does not extend to quotations, 
 held to the same standard as anything on Star Stuff, and arguably a stricter one — see
 `ATTRIBUTIONS.md`.
 
+## Two people work here, and a session must not assume which one
+
+**Ryan Boren and Helen Edgar both have full rights to this repository**, as of 2026-09-13:
+both draft, both review, both publish, both run the sweep. There is no tier and there is no
+branch protection — the accession checklist is a checklist rather than a permission, and the
+nine gates do not care whose hands ran them.
+
+**So *you* in this file is whoever is at the keyboard, and it is never safe to guess.** These
+rules were written in one pair of hands and addressed them by name in the three draft skills
+— *ask Ryan*, *tell Ryan it is Helen's link* — which reads to a session as an instruction to
+go and consult somebody who is not in the room. Those are rewritten. **A dated record keeps
+its name**: *on Ryan's call, 2026-09-11* is a fact about who decided something, and rewriting
+it would falsify this file the way renaming an old accession would falsify the register.
+
+**Ask which of them you are working with only when the answer changes the work** — a byline,
+the `author` in a JSON-LD block, whose reading a sheet is. It usually does not, and a session
+that opens by asking has spent the first thing it says on plumbing.
+
+**Neither of them should have to type a git command.** The three draft skills run git
+themselves and `tools/check.mjs` runs the whole sweep; the block at the end of an ordinary
+session is a convenience for a one-file edit, not the workflow. **`ONBOARDING.md` is the way
+in** — a new collaborator opens it in Claude Code and it walks the whole path, from clone to
+first draft.
+
 ## Source of truth & deployment
 
 - **This git repo IS the source of truth.** Cloned at `~/Documents/GitHub/Queering-Earth`.
@@ -1479,6 +1503,15 @@ and had been wrong for as long as it had been written. **Reading a draft never n
 account** — a deploy URL is a URL — but giving feedback did, because a PR comment thread
 was the whole of the answer.
 
+**THE CONSTRAINT THAT BUILT THIS RELAXED ON 2026-09-13, AND THE COMPONENT SURVIVES IT.**
+Helen has a Claude Code session of her own now, so *neither GitHub nor HTML is a route she
+can use* has stopped being the load-bearing sentence — a session writes the markup and runs
+the git either way. **The review layer was never really about what she could not do.** A
+draft wants a real address before it is accessioned, feedback wants somewhere to go that is
+not a pull-request thread, and both of those are as true for a reviewer who could open a
+terminal as for one who would not. What changes is only who the URL gets sent to: it is the
+collaborator who did **not** write the sheet, whichever of them that is.
+
 **Drafts live at the root of a long-lived `drafts` branch, never in a folder on `main`.** A
 `drafts/` folder was measured and it works mechanically — every generator and every gate
 reads `readdir(ROOT)` non-recursively, and `check.mjs` filters `!c.includes('/')`, so a
@@ -1506,7 +1539,7 @@ exist — **44 pages that printed blank**, the same failure from a new direction
 branch also carries `_headers`, whose noindex must not reach `main`, and
 `review-practice.html`, which is branch-only for ever.
 
-**THREE SKILLS DRIVE THIS, AND RYAN SHOULD NEVER TYPE A GIT COMMAND FOR IT.**
+**THREE SKILLS DRIVE THIS, AND NEITHER COLLABORATOR SHOULD EVER TYPE A GIT COMMAND FOR IT.**
 `start-draft` puts a page on the branch and prints the URL; `save-draft` commits, pushes and
 hands the URL back; `publish-draft` takes the file onto `main` and walks the accession
 checklist. `tools/draft.mjs` holds the one derivation all three need — **which file is the

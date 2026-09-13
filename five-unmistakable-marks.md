@@ -238,7 +238,9 @@ A sheet arguing that coinages get separated from their coiners had better show i
 
 The masthead of Queering Earth reads *Post-normal possibilities*. Helen wrote the phrase in the founding brainstorm for this project and may well have arrived at it herself. It is also, one hyphen apart, the end of the subtitle of Nick Walker’s *Neuroqueer Heresies* — *Notes on the Neurodiversity Paradigm, Autistic Empowerment, and Postnormal Possibilities* — on a site that quotes Walker on its home page, about the subject of his book. *Post-normal* has a third lineage too, in the post-normal science of Funtowicz and Ravetz in the early 1990s, which nobody here has yet read in the primary.
 
-So the masthead says *after Nick Walker*, linked to the book. Not *his phrase*, which would take the coinage off Helen; not silence, which was the state it shipped in and which our own [decisions file](https://queering.earth/what-is-settled) was busy asserting carried no risk. **The credit is written to be true about the one thing anybody can establish** — that he published it first — and to claim nothing about how the phrase reached us, which nobody can honestly claim in either direction.
+So the home page says it out loud, in the section where Walker is already quoted. Not *his phrase*, which would take the coinage off Helen; not silence, which was the state it shipped in and which our own [decisions file](https://queering.earth/what-is-settled) was busy asserting carried no risk. **The credit is written to be true about the one thing anybody can establish** — that he published it first — and to claim nothing about how the phrase reached us, which nobody can honestly claim in either direction.
+
+For six days it was also on the masthead, as a second line reading *after Nick Walker*. **Three words under a tagline cannot carry a sentence that long, and readers supplied the missing half themselves** — one read it as a death notice, one as an endorsement, one as a declaration that the whole site runs on one man’s theory, which is the opposite of what a cabinet of many lenses is for. The credit did not shrink when the line came off; it went back to the place that had room to say it properly.
 
 That is what an honest attribution looks like when two people may have made the same word: not an arbitration, and not a shrug. The full account is in the [ledger](https://queering.earth/ledger), where it was logged the day it was found.
 
@@ -286,4 +288,4 @@ What this sheet will not tidy
 
 Queering Earth Sheet No. 9 Accessioned 10 Sep 2026
 
-Provenance Mounted [10 September 2026](https://queering.earth/changelog#a-2026-09-10-snark). Not yet corrected.
+Provenance Mounted [10 September 2026](https://queering.earth/changelog#a-2026-09-10-snark). [Re-determined once](https://queering.earth/changelog#a-2026-09-13-masthead), when the masthead credit came off and the account of it on this sheet stopped being true.

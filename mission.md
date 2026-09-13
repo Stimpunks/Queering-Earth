@@ -77,7 +77,7 @@ Specimen — the other masthead
 
 Helen Edgar, [More Realms](https://morerealms.com/), landing page, read 9 September 2026. Her punctuation.
 
-“Not a place of conclusions or answers” is the same commitment this site makes when it says there are no hard facts here for everything, arrived at from her side rather than ours. **The tagline on the masthead is hers** — “post-normal possibilities”, written in the founding brainstorm — and the masthead credits Nick Walker beneath it because his book carries the phrase as a subtitle, one hyphen apart. That credit is not an admission of borrowing and does not claim one; it is what you do when a collision is real and a reader will eventually find it.
+“Not a place of conclusions or answers” is the same commitment this site makes when it says there are no hard facts here for everything, arrived at from her side rather than ours. **The tagline on the masthead is hers** — “post-normal possibilities”, written in the founding brainstorm — and the home page credits Nick Walker for it, because his book carries the phrase as a subtitle, one hyphen apart. That credit is not an admission of borrowing and does not claim one; it is what you do when a collision is real and a reader will eventually find it. It sat under the masthead itself for six days and came off on [13 September](https://queering.earth/changelog#a-2026-09-13-masthead): three words there were read three different ways, and none of them was the sentence.
 
 ## The limit, said plainly
 

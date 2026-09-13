@@ -123,6 +123,26 @@ function headingId(text) {
  * constantly — `<dt>`, `<main>`, `<loc>` — and emphasis characters inside a code span
  * are code, not emphasis. Escaping happens between the two, so a quoted tag renders as
  * text rather than becoming an element in the page it is describing.
+ *
+ * THE PLACEHOLDER FENCE IS A LITERAL NUL BYTE, U+0000, AND IT HAS TO BE SOMETHING NO
+ * SOURCE TEXT CAN CONTAIN. A printable fence is a fence these files will eventually
+ * quote: this is a repository whose prose is ABOUT its own markup, so every obvious
+ * candidate — a brace, a pipe, a private-use glyph — is one an entry may legitimately
+ * write inside a code span, and the day it does, a placeholder gets restored into the
+ * middle of somebody's sentence. NUL cannot appear in the Markdown, so the fence
+ * cannot be forged.
+ *
+ * THE PRICE IS THAT `grep` TREATS THIS FILE AS BINARY AND PRINTS NOTHING. Eight NULs
+ * live here and in `mdText()` below, and `file` calls the result "binary data", so a
+ * plain `grep -n 'const ' make-records.mjs` SUCCEEDS SILENTLY WITH NO OUTPUT — which
+ * reads exactly like a file that does not contain what you are looking for. It cost a
+ * session real time on 2026-09-13, three searches deep, before `file` was run.
+ *
+ * USE `grep -a`, or read the file with a tool that does not sniff. The same applies to
+ * an edit script that matches on these lines: the "spaces" around the index are NULs,
+ * so a pattern typed from what the terminal SHOWS will never match. Both facts are in
+ * DECISIONS.md as well, because the next person to be caught by this will be grepping
+ * the repo rather than reading this file.
  */
 /**
  * Resolve `*` emphasis with a STACK, not with two regexes.
@@ -199,6 +219,26 @@ function inline(md) {
   s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, (_, text, href) => `<a href="${href}">${text}</a>`);
   if (/\]\(/.test(s)) throw new Error(`unconvertible link (only absolute http links are handled): ${md.slice(0, 90)}`);
 
+  /* STRIKETHROUGH BEFORE EMPHASIS, for the reason links go before it: a struck
+   * passage may hold emphasis, and the `<del>` has to sit outside it.
+   *
+   * IT SHIPPED AS LITERAL TILDES AND NOTHING SAW IT. `DECISIONS.md` strikes reason 3
+   * of the CMS deferral with a pair of double tildes, this converter did not know the
+   * syntax, and `/what-is-settled` published the fences as text — on the page whose
+   * whole job is to show what was retracted, a retraction reading as a typo. Every
+   * gate passed it, because no gate here reads prose.
+   *
+   * A SINGLE TILDE IS NOT STRIKETHROUGH AND HAS TO SURVIVE. `DECISIONS.md` uses one
+   * for *approximately* five times — ~100, ~60px, ~896px, ~108px, ~120 — so the run
+   * must be exactly two, and the flanking rule is GFM's: no space inside the fences.
+   * `[\s\S]` rather than `.` because the one real pair in the corpus opens on one
+   * source line and closes on the next, and a block arrives here already joined.
+   *
+   * It throws on an unclosed run, as `emphasis()` does, rather than emitting a stray
+   * fence — a fence reaching the reader is the exact failure this replaces. */
+  s = s.replace(/~~(?=\S)([\s\S]+?)(?<=\S)~~/g, '<del>$1</del>');
+  if (s.includes('~~')) throw new Error(`unclosed strikethrough: ${md.slice(0, 90)}`);
+
   s = emphasis(s, md);
 
   return s.replace(/ (\d+) /g, (_, i) => `<code>${escapeHtml(spans[+i])}</code>`);
@@ -225,6 +265,7 @@ function mdText(s) {
   });
   t = t
     .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/~~/g, '')
     .replace(/\*/g, '');
   return t
     .replace(/ (\d+) /g, (_, i) => spans[+i])

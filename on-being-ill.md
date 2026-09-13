@@ -140,4 +140,4 @@ Not that the flowers care. That they do not, and are therefore not asking anythi
 
 Queering Earth Sheet No. 1 Accessioned 7 Sep 2026
 
-Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09-07-sheets). [Label corrected once](https://queering.earth/changelog#a-2026-09-07-sheets), when Woolf’s two printings were read against each other ahead of the sheet; [re-determined once](https://queering.earth/changelog#a-2026-09-08-wyrd), when the byline rule changed what kind of sheet this is.
+Provenance Mounted [7 September 2026](https://queering.earth/changelog#a-2026-09-07-sheets). [Label corrected once](https://queering.earth/changelog#a-2026-09-07-sheets), when Woolf’s two printings were read against each other ahead of the sheet; [re-determined once](https://queering.earth/changelog#a-2026-09-08-wyrd), when the byline rule changed what kind of sheet this is, and [once again](https://queering.earth/changelog#a-2026-09-09-patina), when a line of Woolf’s turned out to be Woolf guessing at what Coleridge meant, and the quotation was re-cut to start where the guess does.

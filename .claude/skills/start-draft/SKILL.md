@@ -1,13 +1,14 @@
 ---
 name: start-draft
-description: Put a new sheet, or a rewrite of an existing one, on the drafts branch at a real address so Helen can read and annotate it before it is published. Use when Ryan says "start a draft", "new draft", "draft a sheet on X", "I want Helen to look at this first", "rewrite /on-being-ill as a draft", or asks for a review link. Handles every git step; ends by printing the URL to send her.
+description: Put a new sheet, or a rewrite of an existing one, on the drafts branch at a real address so the other collaborator can read and annotate it before it is published. Use when Ryan or Helen says "start a draft", "new draft", "draft a sheet on X", "I want Helen to look at this first", "rewrite /on-being-ill as a draft", or asks for a review link. Handles every git step; ends by printing the URL to send the reviewer.
 ---
 
 # start-draft
 
-**Helen reviews at a real address, and neither GitHub nor editing HTML is a route she can
-use.** This skill puts a page on the `drafts` branch, where it is served by Netlify at a
-permanent hostname with the annotation layer switched on. See *A draft is reviewed at a real
+**A draft is reviewed by the collaborator who did not write it, at a real address.** Ryan
+and Helen both draft and both review; the reviewer needs no account, installs nothing and
+runs nothing. This skill puts a page on the `drafts` branch, where it is served by Netlify at
+a permanent hostname with the annotation layer switched on. See *A draft is reviewed at a real
 address* in `CLAUDE.md` for why it works this way.
 
 **One draft at a time is the assumption.** Nothing enforces it, but `publish-draft` has to be
@@ -21,8 +22,9 @@ told which one if there are two, and there is no reason to run two.
    node tools/draft.mjs
    ```
 
-   If it reports one, stop and ask Ryan whether to publish it, throw it away (see
-   `save-draft`), or genuinely run two at once. Do not start a second silently.
+   If it reports one, stop and ask whether to publish it, throw it away (see `save-draft`),
+   or genuinely run two at once — and say whose draft it is, because it may be the other
+   collaborator's. Do not start a second silently.
 
 2. **THE WORKING TREE MUST BE CLEAN BEFORE ANY BRANCH SWITCH.** `git switch` carries
    uncommitted changes across to the other branch when the files match, which means edits
@@ -33,7 +35,7 @@ told which one if there are two, and there is no reason to run two.
    git status --short
    ```
 
-   Anything listed: commit it on `main` first, or ask Ryan. Never stash and hope.
+   Anything listed: commit it on `main` first, or ask. Never stash and hope.
 
 3. **Go to the branch and bring it up to date with the published site.**
 
@@ -91,8 +93,8 @@ told which one if there are two, and there is no reason to run two.
    git add <slug>.html && git commit -m "Draft: <title>" && git push
    ```
 
-8. **Print the URL and tell Ryan it is Helen's link.** Netlify builds in about twenty
-   seconds.
+8. **Print the URL and say it is the reviewer's link** — the collaborator who did not write
+   this sheet. Netlify builds in about twenty seconds.
 
    ```bash
    node tools/draft.mjs

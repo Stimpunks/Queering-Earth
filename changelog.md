@@ -35,7 +35,97 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Label corrected
 - Cabinet
 
-2026 · 12 September · latest
+2026 · 13 September · latest
+
+## Two ways the instruments here mislead the next person, written down rather than remembered
+
+Neither is a fault in the site. Both cost a session time today, and both would have cost the next one the same.
+
+Cabinet`grep` reports nothing on `make-records.mjs`, and silence is not an answer
+
+That tool fences its code-span placeholders with **literal NUL bytes**, so `file` calls it binary data and `grep` prints nothing rather than saying why. A search for a string that is plainly in the file exits quietly with no output, **which looks exactly like a file that does not contain it**. Three searches and one wrong theory about corruption before `file` was run on it.
+
+**The fence is right and is not the thing to change.** A placeholder needs a delimiter no source text can contain, and **this is a repository whose prose is about its own markup** — every printable candidate is one an entry may legitimately write inside a code span, and the day it does, a placeholder is restored into the middle of somebody’s sentence. The cure is knowing: `grep -a`, and run `file` when a search comes back empty on a file you can read. **It bites an edit script too** — the apparent spaces around the placeholder index are NULs, so a pattern typed from what the terminal renders will never match, which is how the first attempt to teach that tool strikethrough failed on an anchor that looked correct character for character.
+
+CabinetThe gate ports are shared with Star Stuff, and the collision is kept on purpose
+
+The three Chrome gates here bind 9412, 9413 and 9414. **So do Star Stuff’s, because these were ported from there and the numbers came with them**, and the two repositories sit side by side. A session working in each at once is two suites contending for three ports: today a sweep hung for twenty minutes, and a later one had `check-width.mjs` refuse in 0.2s while a neighbouring `check-overlap.mjs` held 9414.
+
+**The refusal is `cdp.mjs` working exactly as it was written to**, after [a gate spent five days measuring in an orphaned browser it did not launch](#a-2026-09-12-runner). That guard cannot tell an orphan from a live neighbour, and should not: driving either is the same mistake. **Renumbering would end the collision and end the protection with it**, in the one direction it has already paid off — so it was weighed and refused. The collision is loud and costs a wait; the alternative is quiet.
+
+**Checking the port first was the obvious advice and it is wrong**, which was found by writing it down and then trying it in the same hour. The ports were free, the sweep started, contrast and overlap ran their 55 and 42 seconds, and width refused anyway — the neighbour had taken 9414 in the seconds before it spawned. **The window is every moment until each gate binds, and nothing outside the tool can close it.** What works is re-running the one refused gate: the refusal costs 0.2s, the other eight have already reported, and width came through on the twelfth attempt. **Wait rather than kill** — a neighbouring gate is somebody’s real run.
+
+2026 · 13 September
+
+## A retraction had been reading as a typo, on the page whose job is to show what was retracted
+
+Found by reading the page rather than by any check, which is the only instrument there is for a fault made of valid markup and wrong words.
+
+Label correctedA struck reason printed its own fences, and had done since the day it was struck
+
+[What is settled](https://queering.earth/what-is-settled) retracts reason 3 of the CMS deferral in place, so the record shows what was believed as well as what replaced it. **The retraction was written in Markdown strikethrough and `make-records.mjs` did not know the syntax**, so the tilde fences went onto the page as text. It knew emphasis, code spans and links; strikethrough had simply never come up.
+
+**It fails silently in exactly one direction, which is why it lasted.** An unknown *tag* makes the Markdown generator throw, deliberately, because a dropped element is a copy that says less than the page. An unknown inline *syntax* has no such guard: the characters survive, nothing is lost and nothing is converted, and the result looks like plain text that forgot to become HTML. The converter throws on an unclosed run now, the shape its emphasis parser already had.
+
+**A single tilde is not strikethrough, and this corpus proves it five times** — `~100`, `~60px`, `~896px`, `~108px`, `~120`, all of them *approximately* in ordinary prose. The run has to be exactly two, and the round-trip proof had to learn the same fence or it would have demanded text the converter was right not to produce.
+
+CabinetMoss letters, coral strike — and the struck sentence leaves the finding aid
+
+**It is `del` and not a class.** A line-through drawn on a span is invisible to a screen reader, so the one mark on these pages that says *this is no longer true* would be missing for the readers least able to infer it. The element carries the meaning and the colour only shows it: `--qe-coral` on the rule, `--qe-moss` on the letters, **the colour on the strike and never on the word** — the idiom the restored attribution on [Miranda](https://queering.earth/the-tempest) already uses, reused rather than restated.
+
+**The struck sentence drops out of [the finding aid](https://queering.earth/search), and that is correct.** The index skips `del` subtrees, because plain text has no vocabulary for *this is the reading we got wrong* and a snippet would hand a searcher a retracted claim as a current one. Checked rather than assumed: the page still indexes that passage once, through the [12 September](#a-2026-09-12-drafts) entry that quotes it as history and says why it was struck. **The retraction is findable; the retracted claim is not.**
+
+2026 · 13 September
+
+## A listing said five sheets had been corrected while the sheets said they were clean, and the sheets were right
+
+Moving one provenance line made the disagreement visible. Measuring it turned the expected answer around: twelve of the thirteen lines were exactly right, and the tool was the one making a claim it had not checked.
+
+Cabinet“Corrected four times since” for four corrections made the day the sheet went up
+
+[What has arrived](https://queering.earth/whats-new) counts a page’s corrections out of this register and prints the total under the word *since*. **A sheet is routinely corrected while it is being mounted** — a citation checked against the primary, a story everybody tells found to be wrong — and those entries are filed to the sheet like any other. So [The Swell and the Dwell](https://queering.earth/wild-nights) read “Corrected four times since” for four corrections dated the day it arrived, and five sheets read as corrected while their own provenance lines said “Not yet corrected”. **Nothing was miscounted. The listing was asserting a chronology it had never checked**, which is this house’s own recurring fault wearing a number: a claim that looks like a measurement and is not one.
+
+The line now splits the two — “Corrected twice on mounting and once since” — in the vocabulary [The Die Uncast](https://queering.earth/promises-like-pie-crust) already uses on its own provenance line.
+
+CabinetThe split is on the arrival day, because *the mounting accession* is not a thing
+
+The obvious key is the accession that mounted the page. Measured, several pages have more than one: this register files three **Mounted** accessions to the [ledger](https://queering.earth/ledger) on the day it arrived and two to [My Gloomy Sunflowers](https://queering.earth/gloomy-sunflowers), because **Mounted** is this register’s word for anything added *to* a page rather than for a page coming into being. The arrival day is a thing, because it is a measurement of the repository and the listing already had it.
+
+**It is also the only rule a generator is entitled to.** Within one day the order of accessions here is editorial and nothing can verify it, so a tool that placed one same-day entry after another would be claiming a fact it does not have. A provenance line may draw the finer distinction, because it is authored and knows which accession mounted its sheet — The Die Uncast separates four corrections on mounting from three more when the plates changed, all seven on 8 September. **The listing says the coarser true thing and the sheet says the finer one**, and neither contradicts the other now.
+
+CabinetThirteen provenance lines audited against the register, and twelve were right
+
+Thirteen provenance lines were read against this register and **twelve were exactly right**. [The Army of the Upright](https://queering.earth/on-being-ill) was the one: it said *re-determined once*, and the register holds two. The missing one is [9 September](#a-2026-09-09-patina), when a line of Woolf’s turned out to be Woolf guessing at what Coleridge meant and the quotation was re-cut to start where the guess does. The line names it now.
+
+**The expected answer was the other one.** Five sheets say “Not yet corrected” over register entries filed to them, and the first reading was that all five had drifted and wanted mending. They had not: an accession history reports what has happened to a sheet *since it was accessioned*, and five other lines go further and say “on mounting” or “before it shipped” in their own words because they chose to. **Forcing a gold seam onto four clean sheets would have been decoration asserting a fact**, in the component built to make real mends findable. Measured before mended.
+
+2026 · 13 September
+
+## Three words under the tagline, read three different ways, and none of them the one we wrote
+
+Readers told us what the masthead said to them. It was not what it said to us, and it was not the same thing twice.
+
+Re-determinedThe masthead credit comes off, and the credit stays
+
+Since [7 September](#a-2026-09-07-sheets) the masthead carried a second line under the tagline reading *after Nick Walker*, linked to his book. It is gone. **Three words cannot carry the paragraph that credit needs, so three readers finished the sentence themselves, three different ways** — as a death notice, as an endorsement, and as a declaration that this site is built on one person’s theory. **The third is the one that decided it.** A cabinet that reads the world through many lenses had appeared to run on one, in the first four words anybody meets.
+
+**Nothing about the attribution changed, only where it is made.** The paragraph under [Queering is a verb](https://queering.earth/#queering-is-a-verb) has carried the whole of it since the same day — the subtitle quoted, the hyphen named, *he published it first*, and no claim about the route the phrase took to reach us. Nobody has ever misread that. It is the place a credit of this shape belongs, because it needs a sentence, and the masthead had room for a label.
+
+**The rule worth keeping: a credit that needs a sentence must not be set as a label.** That is this register’s own paraphrase failure arriving from the other end. A form too small for the claim will shorten the claim, and the shortened claim is not a quieter version of the true one — it is a different one. *After* is still the right word where there is room for it, and it still stands in the caption under the moth.
+
+Re-determinedA sheet that quotes our own masthead had to be re-determined with it
+
+[The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks#our-own-masthead) argues that coinages get separated from their coiners, and shows its working on our own tagline. It said “So the masthead says *after Nick Walker*”, which stopped being true the moment the line came off. **A sheet that cites the site it is mounted on has to move when the site does**, and this is the first one here that did.
+
+The section keeps the whole argument and gains the episode: what the three words were, what three readers each took them to mean, and why the credit went back to the place with room for it. **The sheet’s first mend**, three days after it was mounted.
+
+Cabinet`.qe-tagline-credit` came out of the stylesheet in the same commit
+
+The rule had one user and the user is gone. **A rule with no element is not the fault this house watches for** — that one is a class with no rule, which renders black and no gate here catches it — but it is the same drift from the other side: a stylesheet describing a component the site no longer has, with a comment above it explaining why the component is “not optional”. The comment was true when it was written and had to go with the rule.
+
+The [ledger](https://queering.earth/ledger) and [what is settled](https://queering.earth/what-is-settled) both carried the old state as a resolved question. Both now carry the re-determination beneath it rather than instead of it, because **the 7 September call was half right and stays half right**: crediting him was the right one of the three options, and the masthead was the wrong place to do it.
+
+2026 · 12 September
 
 ## A draft can now be read at a real address and marked up without an account
 

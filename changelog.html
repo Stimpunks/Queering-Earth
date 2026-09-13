@@ -327,8 +327,127 @@
   <div class="qe-register" id="latest">
 
 
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-instruments">
+      <p class="qe-accession-date">2026 &middot; 13 September &middot; latest</p>
+      <h2 id="a-2026-09-13-instruments">Two ways the instruments here mislead the next person, written down rather than remembered <a class="qe-anchor" href="#a-2026-09-13-instruments"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Neither is a fault in the site. Both cost a session time today, and both would have cost the next one the same.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><code>grep</code> reports nothing on <code>make-records.mjs</code>, and silence is not an answer</span></div>
+        <div class="qe-entry-body">
+          <p>That tool fences its code-span placeholders with <strong>literal NUL bytes</strong>, so <code>file</code> calls it binary data and <code>grep</code> prints nothing rather than saying why. A search for a string that is plainly in the file exits quietly with no output, <strong>which looks exactly like a file that does not contain it</strong>. Three searches and one wrong theory about corruption before <code>file</code> was run on it.</p>
+          <p><strong>The fence is right and is not the thing to change.</strong> A placeholder needs a delimiter no source text can contain, and <strong>this is a repository whose prose is about its own markup</strong> &mdash; every printable candidate is one an entry may legitimately write inside a code span, and the day it does, a placeholder is restored into the middle of somebody&rsquo;s sentence. The cure is knowing: <code>grep -a</code>, and run <code>file</code> when a search comes back empty on a file you can read. <strong>It bites an edit script too</strong> &mdash; the apparent spaces around the placeholder index are NULs, so a pattern typed from what the terminal renders will never match, which is how the first attempt to teach that tool strikethrough failed on an anchor that looked correct character for character.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The gate ports are shared with Star Stuff, and the collision is kept on purpose</span></div>
+        <div class="qe-entry-body">
+          <p>The three Chrome gates here bind 9412, 9413 and 9414. <strong>So do Star Stuff&rsquo;s, because these were ported from there and the numbers came with them</strong>, and the two repositories sit side by side. A session working in each at once is two suites contending for three ports: today a sweep hung for twenty minutes, and a later one had <code>check-width.mjs</code> refuse in 0.2s while a neighbouring <code>check-overlap.mjs</code> held 9414.</p>
+          <p><strong>The refusal is <code>cdp.mjs</code> working exactly as it was written to</strong>, after <a href="#a-2026-09-12-runner">a gate spent five days measuring in an orphaned browser it did not launch</a>. That guard cannot tell an orphan from a live neighbour, and should not: driving either is the same mistake. <strong>Renumbering would end the collision and end the protection with it</strong>, in the one direction it has already paid off &mdash; so it was weighed and refused. The collision is loud and costs a wait; the alternative is quiet.</p>
+          <p><strong>Checking the port first was the obvious advice and it is wrong</strong>, which was found by writing it down and then trying it in the same hour. The ports were free, the sweep started, contrast and overlap ran their 55 and 42 seconds, and width refused anyway &mdash; the neighbour had taken 9414 in the seconds before it spawned. <strong>The window is every moment until each gate binds, and nothing outside the tool can close it.</strong> What works is re-running the one refused gate: the refusal costs 0.2s, the other eight have already reported, and width came through on the twelfth attempt. <strong>Wait rather than kill</strong> &mdash; a neighbouring gate is somebody&rsquo;s real run.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-struck">
+      <p class="qe-accession-date">2026 &middot; 13 September</p>
+      <h2 id="a-2026-09-13-struck">A retraction had been reading as a typo, on the page whose job is to show what was retracted <a class="qe-anchor" href="#a-2026-09-13-struck"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Found by reading the page rather than by any check, which is the only instrument there is for a fault made of valid markup and wrong words.</p>
+
+      <div class="qe-entry qe-entry--label" data-sheet="what-is-settled">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">A struck reason printed its own fences, and had done since the day it was struck</span></div>
+        <div class="qe-entry-body">
+          <p><a href="/what-is-settled">What is settled</a> retracts reason 3 of the CMS deferral in place, so the record shows what was believed as well as what replaced it. <strong>The retraction was written in Markdown strikethrough and <code>make-records.mjs</code> did not know the syntax</strong>, so the tilde fences went onto the page as text. It knew emphasis, code spans and links; strikethrough had simply never come up.</p>
+          <p><strong>It fails silently in exactly one direction, which is why it lasted.</strong> An unknown <em>tag</em> makes the Markdown generator throw, deliberately, because a dropped element is a copy that says less than the page. An unknown inline <em>syntax</em> has no such guard: the characters survive, nothing is lost and nothing is converted, and the result looks like plain text that forgot to become HTML. The converter throws on an unclosed run now, the shape its emphasis parser already had.</p>
+          <p><strong>A single tilde is not strikethrough, and this corpus proves it five times</strong> &mdash; <code>~100</code>, <code>~60px</code>, <code>~896px</code>, <code>~108px</code>, <code>~120</code>, all of them <em>approximately</em> in ordinary prose. The run has to be exactly two, and the round-trip proof had to learn the same fence or it would have demanded text the converter was right not to produce.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Moss letters, coral strike &mdash; and the struck sentence leaves the finding aid</span></div>
+        <div class="qe-entry-body">
+          <p><strong>It is <code>del</code> and not a class.</strong> A line-through drawn on a span is invisible to a screen reader, so the one mark on these pages that says <em>this is no longer true</em> would be missing for the readers least able to infer it. The element carries the meaning and the colour only shows it: <code>--qe-coral</code> on the rule, <code>--qe-moss</code> on the letters, <strong>the colour on the strike and never on the word</strong> &mdash; the idiom the restored attribution on <a href="/the-tempest">Miranda</a> already uses, reused rather than restated.</p>
+          <p><strong>The struck sentence drops out of <a href="/search">the finding aid</a>, and that is correct.</strong> The index skips <code>del</code> subtrees, because plain text has no vocabulary for <em>this is the reading we got wrong</em> and a snippet would hand a searcher a retracted claim as a current one. Checked rather than assumed: the page still indexes that passage once, through the <a href="#a-2026-09-12-drafts">12 September</a> entry that quotes it as history and says why it was struck. <strong>The retraction is findable; the retracted claim is not.</strong></p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-mends">
+      <p class="qe-accession-date">2026 &middot; 13 September</p>
+      <h2 id="a-2026-09-13-mends">A listing said five sheets had been corrected while the sheets said they were clean, and the sheets were right <a class="qe-anchor" href="#a-2026-09-13-mends"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Moving one provenance line made the disagreement visible. Measuring it turned the expected answer around: twelve of the thirteen lines were exactly right, and the tool was the one making a claim it had not checked.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><q>Corrected four times since</q> for four corrections made the day the sheet went up</span></div>
+        <div class="qe-entry-body">
+          <p><a href="/whats-new">What has arrived</a> counts a page&rsquo;s corrections out of this register and prints the total under the word <em>since</em>. <strong>A sheet is routinely corrected while it is being mounted</strong> &mdash; a citation checked against the primary, a story everybody tells found to be wrong &mdash; and those entries are filed to the sheet like any other. So <a href="/wild-nights">The Swell and the Dwell</a> read <q>Corrected four times since</q> for four corrections dated the day it arrived, and five sheets read as corrected while their own provenance lines said <q>Not yet corrected</q>. <strong>Nothing was miscounted. The listing was asserting a chronology it had never checked</strong>, which is this house&rsquo;s own recurring fault wearing a number: a claim that looks like a measurement and is not one.</p>
+          <p>The line now splits the two &mdash; <q>Corrected twice on mounting and once since</q> &mdash; in the vocabulary <a href="/promises-like-pie-crust">The Die Uncast</a> already uses on its own provenance line.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The split is on the arrival day, because <em>the mounting accession</em> is not a thing</span></div>
+        <div class="qe-entry-body">
+          <p>The obvious key is the accession that mounted the page. Measured, several pages have more than one: this register files three <strong>Mounted</strong> accessions to the <a href="/ledger">ledger</a> on the day it arrived and two to <a href="/gloomy-sunflowers">My Gloomy Sunflowers</a>, because <strong>Mounted</strong> is this register&rsquo;s word for anything added <em>to</em> a page rather than for a page coming into being. The arrival day is a thing, because it is a measurement of the repository and the listing already had it.</p>
+          <p><strong>It is also the only rule a generator is entitled to.</strong> Within one day the order of accessions here is editorial and nothing can verify it, so a tool that placed one same-day entry after another would be claiming a fact it does not have. A provenance line may draw the finer distinction, because it is authored and knows which accession mounted its sheet &mdash; The Die Uncast separates four corrections on mounting from three more when the plates changed, all seven on 8 September. <strong>The listing says the coarser true thing and the sheet says the finer one</strong>, and neither contradicts the other now.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Thirteen provenance lines audited against the register, and twelve were right</span></div>
+        <div class="qe-entry-body">
+          <p>Thirteen provenance lines were read against this register and <strong>twelve were exactly right</strong>. <a href="/on-being-ill">The Army of the Upright</a> was the one: it said <em>re-determined once</em>, and the register holds two. The missing one is <a href="#a-2026-09-09-patina">9 September</a>, when a line of Woolf&rsquo;s turned out to be Woolf guessing at what Coleridge meant and the quotation was re-cut to start where the guess does. The line names it now.</p>
+          <p><strong>The expected answer was the other one.</strong> Five sheets say <q>Not yet corrected</q> over register entries filed to them, and the first reading was that all five had drifted and wanted mending. They had not: an accession history reports what has happened to a sheet <em>since it was accessioned</em>, and five other lines go further and say <q>on mounting</q> or <q>before it shipped</q> in their own words because they chose to. <strong>Forcing a gold seam onto four clean sheets would have been decoration asserting a fact</strong>, in the component built to make real mends findable. Measured before mended.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-masthead">
+      <p class="qe-accession-date">2026 &middot; 13 September</p>
+      <h2 id="a-2026-09-13-masthead">Three words under the tagline, read three different ways, and none of them the one we wrote <a class="qe-anchor" href="#a-2026-09-13-masthead"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Readers told us what the masthead said to them. It was not what it said to us, and it was not the same thing twice.</p>
+
+      <div class="qe-entry qe-entry--redet" data-sheet="index">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--redet">Re-determined</span><span class="qe-entry-name">The masthead credit comes off, and the credit stays</span></div>
+        <div class="qe-entry-body">
+          <p>Since <a href="#a-2026-09-07-sheets">7 September</a> the masthead carried a second line under the tagline reading <em>after Nick Walker</em>, linked to his book. It is gone. <strong>Three words cannot carry the paragraph that credit needs, so three readers finished the sentence themselves, three different ways</strong> &mdash; as a death notice, as an endorsement, and as a declaration that this site is built on one person&rsquo;s theory. <strong>The third is the one that decided it.</strong> A cabinet that reads the world through many lenses had appeared to run on one, in the first four words anybody meets.</p>
+          <p><strong>Nothing about the attribution changed, only where it is made.</strong> The paragraph under <a href="/#queering-is-a-verb">Queering is a verb</a> has carried the whole of it since the same day &mdash; the subtitle quoted, the hyphen named, <em>he published it first</em>, and no claim about the route the phrase took to reach us. Nobody has ever misread that. It is the place a credit of this shape belongs, because it needs a sentence, and the masthead had room for a label.</p>
+          <p><strong>The rule worth keeping: a credit that needs a sentence must not be set as a label.</strong> That is this register&rsquo;s own paraphrase failure arriving from the other end. A form too small for the claim will shorten the claim, and the shortened claim is not a quieter version of the true one &mdash; it is a different one. <em>After</em> is still the right word where there is room for it, and it still stands in the caption under the moth.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--redet" data-sheet="five-unmistakable-marks">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--redet">Re-determined</span><span class="qe-entry-name">A sheet that quotes our own masthead had to be re-determined with it</span></div>
+        <div class="qe-entry-body">
+          <p><a href="/five-unmistakable-marks#our-own-masthead">The Five Unmistakable Marks</a> argues that coinages get separated from their coiners, and shows its working on our own tagline. It said <q>So the masthead says <em>after Nick Walker</em></q>, which stopped being true the moment the line came off. <strong>A sheet that cites the site it is mounted on has to move when the site does</strong>, and this is the first one here that did.</p>
+          <p>The section keeps the whole argument and gains the episode: what the three words were, what three readers each took them to mean, and why the credit went back to the place with room for it. <strong>The sheet&rsquo;s first mend</strong>, three days after it was mounted.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><code>.qe-tagline-credit</code> came out of the stylesheet in the same commit</span></div>
+        <div class="qe-entry-body">
+          <p>The rule had one user and the user is gone. <strong>A rule with no element is not the fault this house watches for</strong> &mdash; that one is a class with no rule, which renders black and no gate here catches it &mdash; but it is the same drift from the other side: a stylesheet describing a component the site no longer has, with a comment above it explaining why the component is <q>not optional</q>. The comment was true when it was written and had to go with the rule.</p>
+          <p>The <a href="/ledger">ledger</a> and <a href="/what-is-settled">what is settled</a> both carried the old state as a resolved question. Both now carry the re-determination beneath it rather than instead of it, because <strong>the 7 September call was half right and stays half right</strong>: crediting him was the right one of the three options, and the masthead was the wrong place to do it.</p>
+        </div>
+      </div>
+    </section>
+
+
+
     <section class="qe-accession" aria-labelledby="a-2026-09-12-drafts">
-      <p class="qe-accession-date">2026 &middot; 12 September &middot; latest</p>
+      <p class="qe-accession-date">2026 &middot; 12 September</p>
       <h2 id="a-2026-09-12-drafts">A draft can now be read at a real address and marked up without an account <a class="qe-anchor" href="#a-2026-09-12-drafts"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Ryan asked for a lightweight way to show Helen a sheet before it is mounted, and then supplied the constraint that decided it: nothing requiring GitHub or editing HTML works for her. One sentence, and a settled decision stopped being true.</p>
