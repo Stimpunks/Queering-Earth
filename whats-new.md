@@ -80,7 +80,7 @@ The cabinet itself · Not yet corrected
 
 Lewis Carroll's Snark, a creature named before anybody saw it; Deleuze's empty square; and Kassiane Asasumasu, who coined neurodivergent and had to say so out loud.
 
-Reading No. 9 · [Corrected twice since](https://queering.earth/changelog#a-2026-09-10-snark)
+Reading No. 9 · [Corrected three times since](https://queering.earth/changelog#a-2026-09-13-masthead)
 
 -  [Other People Who Have It](https://queering.earth/other-people-who-have-it)
 
@@ -194,7 +194,7 @@ Essay No. 2 · [Corrected twice since](https://queering.earth/changelog#a-2026-0
 
 Reading the world through a queering lens — art, literature, poetry, politics, people, history — and asking what else any of it could have been. A Stimpunks Foundation and More Realms collaboration.
 
-The front of the cabinet · [Corrected 11 times since](https://queering.earth/changelog#a-2026-09-11-faces)
+The front of the cabinet · [Corrected 12 times since](https://queering.earth/changelog#a-2026-09-13-masthead)
 
 -  [How this site is made](https://queering.earth/design)
 

@@ -2254,7 +2254,9 @@ A sheet arguing that coinages get separated from their coiners had better show i
 
 The masthead of Queering Earth reads *Post-normal possibilities*. Helen wrote the phrase in the founding brainstorm for this project and may well have arrived at it herself. It is also, one hyphen apart, the end of the subtitle of Nick Walker’s *Neuroqueer Heresies* — *Notes on the Neurodiversity Paradigm, Autistic Empowerment, and Postnormal Possibilities* — on a site that quotes Walker on its home page, about the subject of his book. *Post-normal* has a third lineage too, in the post-normal science of Funtowicz and Ravetz in the early 1990s, which nobody here has yet read in the primary.
 
-So the masthead says *after Nick Walker*, linked to the book. Not *his phrase*, which would take the coinage off Helen; not silence, which was the state it shipped in and which our own [decisions file](https://queering.earth/what-is-settled) was busy asserting carried no risk. **The credit is written to be true about the one thing anybody can establish** — that he published it first — and to claim nothing about how the phrase reached us, which nobody can honestly claim in either direction.
+So the home page says it out loud, in the section where Walker is already quoted. Not *his phrase*, which would take the coinage off Helen; not silence, which was the state it shipped in and which our own [decisions file](https://queering.earth/what-is-settled) was busy asserting carried no risk. **The credit is written to be true about the one thing anybody can establish** — that he published it first — and to claim nothing about how the phrase reached us, which nobody can honestly claim in either direction.
+
+For six days it was also on the masthead, as a second line reading *after Nick Walker*. **Three words under a tagline cannot carry a sentence that long, and readers supplied the missing half themselves** — one read it as a death notice, one as an endorsement, one as a declaration that the whole site runs on one man’s theory, which is the opposite of what a cabinet of many lenses is for. The credit did not shrink when the line came off; it went back to the place that had room to say it properly.
 
 That is what an honest attribution looks like when two people may have made the same word: not an arbitration, and not a shrug. The full account is in the [ledger](https://queering.earth/ledger), where it was logged the day it was found.
 
@@ -2302,7 +2304,7 @@ What this sheet will not tidy
 
 Queering Earth Sheet No. 9 Accessioned 10 Sep 2026
 
-Provenance Mounted [10 September 2026](https://queering.earth/changelog#a-2026-09-10-snark). Not yet corrected.
+Provenance Mounted [10 September 2026](https://queering.earth/changelog#a-2026-09-10-snark). [Re-determined once](https://queering.earth/changelog#a-2026-09-13-masthead), when the masthead credit came off and the account of it on this sheet stopped being true.
 
 
 ---
@@ -3312,7 +3314,7 @@ Specimen — the other masthead
 
 Helen Edgar, [More Realms](https://morerealms.com/), landing page, read 9 September 2026. Her punctuation.
 
-“Not a place of conclusions or answers” is the same commitment this site makes when it says there are no hard facts here for everything, arrived at from her side rather than ours. **The tagline on the masthead is hers** — “post-normal possibilities”, written in the founding brainstorm — and the masthead credits Nick Walker beneath it because his book carries the phrase as a subtitle, one hyphen apart. That credit is not an admission of borrowing and does not claim one; it is what you do when a collision is real and a reader will eventually find it.
+“Not a place of conclusions or answers” is the same commitment this site makes when it says there are no hard facts here for everything, arrived at from her side rather than ours. **The tagline on the masthead is hers** — “post-normal possibilities”, written in the founding brainstorm — and the home page credits Nick Walker for it, because his book carries the phrase as a subtitle, one hyphen apart. That credit is not an admission of borrowing and does not claim one; it is what you do when a collision is real and a reader will eventually find it. It sat under the masthead itself for six days and came off on [13 September](https://queering.earth/changelog#a-2026-09-13-masthead): three words there were read three different ways, and none of them was the sentence.
 
 ## The limit, said plainly
 
@@ -3706,8 +3708,6 @@ The cabinet itself · updated 2026-09-09
 # Queering.Earth
 
 Post-normal possibilities.
-
-after [Nick Walker](https://neuroqueer.com/neuroqueer-heresies/)
 
 What is normal?
 
@@ -4229,7 +4229,33 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Label corrected
 - Cabinet
 
-2026 · 12 September · latest
+2026 · 13 September · latest
+
+## Three words under the tagline, read three different ways, and none of them the one we wrote
+
+Readers told us what the masthead said to them. It was not what it said to us, and it was not the same thing twice.
+
+Re-determinedThe masthead credit comes off, and the credit stays
+
+Since [7 September](#a-2026-09-07-sheets) the masthead carried a second line under the tagline reading *after Nick Walker*, linked to his book. It is gone. **Three words cannot carry the paragraph that credit needs, so three readers finished the sentence themselves, three different ways** — as a death notice, as an endorsement, and as a declaration that this site is built on one person’s theory. **The third is the one that decided it.** A cabinet that reads the world through many lenses had appeared to run on one, in the first four words anybody meets.
+
+**Nothing about the attribution changed, only where it is made.** The paragraph under [Queering is a verb](https://queering.earth/#queering-is-a-verb) has carried the whole of it since the same day — the subtitle quoted, the hyphen named, *he published it first*, and no claim about the route the phrase took to reach us. Nobody has ever misread that. It is the place a credit of this shape belongs, because it needs a sentence, and the masthead had room for a label.
+
+**The rule worth keeping: a credit that needs a sentence must not be set as a label.** That is this register’s own paraphrase failure arriving from the other end. A form too small for the claim will shorten the claim, and the shortened claim is not a quieter version of the true one — it is a different one. *After* is still the right word where there is room for it, and it still stands in the caption under the moth.
+
+Re-determinedA sheet that quotes our own masthead had to be re-determined with it
+
+[The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks#our-own-masthead) argues that coinages get separated from their coiners, and shows its working on our own tagline. It said “So the masthead says *after Nick Walker*”, which stopped being true the moment the line came off. **A sheet that cites the site it is mounted on has to move when the site does**, and this is the first one here that did.
+
+The section keeps the whole argument and gains the episode: what the three words were, what three readers each took them to mean, and why the credit went back to the place with room for it. **The sheet’s first mend**, three days after it was mounted.
+
+Cabinet`.qe-tagline-credit` came out of the stylesheet in the same commit
+
+The rule had one user and the user is gone. **A rule with no element is not the fault this house watches for** — that one is a class with no rule, which renders black and no gate here catches it — but it is the same drift from the other side: a stylesheet describing a component the site no longer has, with a comment above it explaining why the component is “not optional”. The comment was true when it was written and had to go with the rule.
+
+The [ledger](https://queering.earth/ledger) and [what is settled](https://queering.earth/what-is-settled) both carried the old state as a resolved question. Both now carry the re-determination beneath it rather than instead of it, because **the 7 September call was half right and stays half right**: crediting him was the right one of the three options, and the masthead was the wrong place to do it.
+
+2026 · 12 September
 
 ## A draft can now be read at a real address and marked up without an account
 
@@ -6740,7 +6766,7 @@ The cabinet itself · Not yet corrected
 
 Lewis Carroll's Snark, a creature named before anybody saw it; Deleuze's empty square; and Kassiane Asasumasu, who coined neurodivergent and had to say so out loud.
 
-Reading No. 9 · [Corrected twice since](https://queering.earth/changelog#a-2026-09-10-snark)
+Reading No. 9 · [Corrected three times since](https://queering.earth/changelog#a-2026-09-13-masthead)
 
 -  [Other People Who Have It](https://queering.earth/other-people-who-have-it)
 
@@ -6854,7 +6880,7 @@ Essay No. 2 · [Corrected twice since](https://queering.earth/changelog#a-2026-0
 
 Reading the world through a queering lens — art, literature, poetry, politics, people, history — and asking what else any of it could have been. A Stimpunks Foundation and More Realms collaboration.
 
-The front of the cabinet · [Corrected 11 times since](https://queering.earth/changelog#a-2026-09-11-faces)
+The front of the cabinet · [Corrected 12 times since](https://queering.earth/changelog#a-2026-09-13-masthead)
 
 -  [How this site is made](https://queering.earth/design)
 
@@ -7195,7 +7221,7 @@ Ryan Boren, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-240 entries across 65 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+243 entries across 66 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -7612,7 +7638,7 @@ A hand-coloured lithograph of two orchid blooms, mounted as the sheet's plate.
 
 ### Nick Walker — *Postnormal Possibilities*, and our masthead
 
-**Credited on:** `index.html` — the masthead, and [Queering is a verb](https://queering.earth/#queering-is-a-verb).
+**Credited on:** `index.html` — [Queering is a verb](https://queering.earth/#queering-is-a-verb), in prose. It was on the masthead too, from 2026-09-07 to 2026-09-13; see the re-determination below.
 
 Not a quotation we made. A collision we found, and then said out loud.
 
@@ -7620,9 +7646,13 @@ The site's tagline is **"Post-normal possibilities."** The subtitle of Walker's 
 
 Helen Edgar wrote the phrase in the founding brainstorm and may well have arrived at it herself; *post-normal* also has a separate lineage in post-normal science (Funtowicz and Ravetz, early 1990s) which nobody here has yet checked against the primary. So this is not a finding of borrowing. It is a finding that `DECISIONS.md` was asserting there was no risk here when there plainly is one, and that assertion has been corrected.
 
-**Resolved 2026-09-07: the masthead credits him.** It reads *after Nick Walker*, linked to the book, with the full account in the section where Walker is already quoted. The page says he published it first, which is true, and claims nothing about how the phrase reached us, which nobody can honestly claim either way.
+**Resolved 2026-09-07: the masthead credits him.** It read *after Nick Walker*, linked to the book, with the full account in the section where Walker is already quoted. The page says he published it first, which is true, and claims nothing about how the phrase reached us, which nobody can honestly claim either way.
 
 *After* was chosen over "his phrase" — which would take the coinage off Helen — and over silence, which was defensible only until a reader noticed the subtitle. The separate lineage in post-normal science is real (Funtowicz and Ravetz, "Science for the post-normal age," *Futures*, September 1993, checked 2026-09-07) and is not on the page, because it reads as a hedge on a credit that was freely given.
+
+**Re-determined 2026-09-13, on Ryan's word: the masthead line comes off, and the credit stays.** The paragraph above describes a second line under the tagline reading *after Nick Walker*, linked to the book. It was there from 2026-09-07 to 2026-09-13, and it is gone. **Three words cannot carry that paragraph, and readers finished the sentence themselves** — three of them, three different ways, from the same masthead: as a death notice, as an endorsement, and as a declaration that this site runs on one person's theory. The third is the one that decided it. A cabinet that reads through many lenses had appeared to be running on one, in the first four words anybody meets.
+
+**Nothing about the attribution changed, only where it is made.** The paragraph under [Queering is a verb](https://queering.earth/#queering-is-a-verb) has carried the whole of it since 2026-09-07 — the subtitle quoted, the hyphen named, *he published it first*, and no claim about the route the phrase took. **That is where a credit of this shape belongs**, because it needs a sentence and the masthead had room for a label. A three-word credit that three readers each completed differently is not a shorter version of the paragraph; it is a different claim, and a worse one. *After* is still the right word where there is room for it, and it still stands in the moth's caption below.
 
 ---
 
@@ -9328,7 +9358,7 @@ Paths, for a session in that repo: `site/stimpunks.org/glossary/canary.md` lines
 
 The masthead currently reads **Queering.Earth** with **"Post-normal possibilities."** under it. Both are provisional.
 
-The tagline is Helen Edgar's own phrase from the founding brainstorm, chosen because it is short and it is ours. The attribution question it raised is **settled** — the masthead now credits Nick Walker, see below. The *wording* of both wordmark and tagline is still open. It replaced the working tagline — "Subverting, defying, disrupting, and liberating oneself from all forms of normativity (props Nick Walker)" — which is a **paraphrase of Walker wearing his name**. See `ATTRIBUTIONS.md` for the full reasoning and for how the page handles Walker now.
+The tagline is Helen Edgar's own phrase from the founding brainstorm, chosen because it is short and it is ours. The attribution question it raised is **settled** — the home page credits Nick Walker in prose, see below. The *wording* of both wordmark and tagline is still open. It replaced the working tagline — "Subverting, defying, disrupting, and liberating oneself from all forms of normativity (props Nick Walker)" — which is a **paraphrase of Walker wearing his name**. See `ATTRIBUTIONS.md` for the full reasoning and for how the page handles Walker now.
 
 Changing either is one line in `index.html`. Whatever replaces them, the paraphrase problem does not come back: quote him exactly, or write our own line.
 
@@ -10581,13 +10611,17 @@ Two smaller things settled with it:
 
 Our tagline is **"Post-normal possibilities."** Walker's book is *Neuroqueer Heresies: Notes on the Neurodiversity Paradigm, Autistic Empowerment, and **Postnormal Possibilities***. One hyphen apart, on a site that quotes him on its home page, about the subject of his book. Found while building the *Coming to Terms* sheet, in our own glossary entry for *neuroqueer*, and verified against neuroqueer.com.
 
-**Ryan's call: credit him, on the masthead.** It now reads *after Nick Walker*, linked to the book, with the full explanation in [Queering is a verb](https://queering.earth/#queering-is-a-verb) where Walker already appears.
+**Ryan's call: credit him, on the masthead.** It read *after Nick Walker*, linked to the book, with the full explanation in [Queering is a verb](https://queering.earth/#queering-is-a-verb) where Walker already appears.
 
 **Why crediting was the right of the three options.** Helen may well have arrived at the phrase herself — she wrote it in the founding brainstorm — and *post-normal* has a genuine separate lineage in post-normal science, coined by Silvio Funtowicz and Jerome Ravetz in "Science for the post-normal age," *Futures*, September 1993 (checked 2026-09-07, so the file no longer carries that as an unverified aside). None of that makes the collision invisible. The page therefore says the true and generous thing — *he published it first* — and claims nothing about the route the phrase took to get here.
 
 **The wording on the page is deliberately "after."** Not "his phrase," which would take the coinage away from Helen, and not silence, which was the option that stayed defensible only until somebody noticed the subtitle. *After* is the form poetry uses for exactly this, and it is the only one of the three that is true no matter which way the origin actually ran.
 
 This settles the attribution question and **not** the wording of the tagline itself, which stays open above as Helen's and Ryan's.
+
+**Re-determined 2026-09-13, on Ryan's word: the masthead line comes off; the credit does not.** *Ryan's call: credit him, on the masthead* was half right and stays half right. Crediting was the right call of the three. **The masthead was the wrong place to do it**, and it took six days and three readers to find out — the same three words read as a death notice, as an endorsement, and as a statement that this site is built on one person's theory. Nobody misread the paragraph under *Queering is a verb*, which has said all of it since the same day and says it with room.
+
+**The transferable rule: a credit that needs a sentence must not be set as a label.** The masthead had room for three words, so three words is what it got, and every reader supplied the rest themselves — differently. That is the paraphrase failure this file already records about the working tagline, arriving from the other end: a form too small for the claim will shorten the claim, and the shortened claim is not a quieter version of the true one. The house's own test applies to our own credits, not only to other people's words: **if we changed the words, they are ours** — and three words that assert an endorsement nobody gave are ours in the worst way.
 
 ### A sheet is a reading or an essay, and the label flexes (2026-09-07)
 

@@ -7,7 +7,16 @@
     <description>Every sheet as it was mounted, every plate that came off again, and every label we corrected — the register's own accessions, reasoning included. New pages alone are a separate feed at https://queering.earth/feed.xml. Generated from the register itself by tools/make-markdown.mjs.</description>
     <language>en</language>
     <copyright>CC BY-SA 4.0</copyright>
-    <lastBuildDate>Sat, 12 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Three words under the tagline, read three different ways, and none of them the one we wrote</title>
+      <link>https://queering.earth/changelog#a-2026-09-13-masthead</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-13-masthead</guid>
+      <pubDate>Sun, 13 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Re-determined: The masthead credit comes off, and the credit stays
+Re-determined: A sheet that quotes our own masthead had to be re-determined with it
+Cabinet: .qe-tagline-credit came out of the stylesheet in the same commit</description>
+    </item>
     <item>
       <title>A draft can now be read at a real address and marked up without an account</title>
       <link>https://queering.earth/changelog#a-2026-09-12-drafts</link>

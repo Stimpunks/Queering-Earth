@@ -316,7 +316,7 @@ Ryan Boren, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-240 entries across 65 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+243 entries across 66 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

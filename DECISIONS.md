@@ -424,8 +424,8 @@ The masthead currently reads **Queering.Earth** with **"Post-normal possibilitie
 it. Both are provisional.
 
 The tagline is Helen Edgar's own phrase from the founding brainstorm, chosen because it is
-short and it is ours. The attribution question it raised is **settled** — the masthead now
-credits Nick Walker, see below. The *wording* of both wordmark and tagline is still open. It replaced the working tagline
+short and it is ours. The attribution question it raised is **settled** — the home page credits
+Nick Walker in prose, see below. The *wording* of both wordmark and tagline is still open. It replaced the working tagline
 — "Subverting, defying, disrupting, and liberating oneself from all forms of normativity
 (props Nick Walker)" — which is a **paraphrase of Walker wearing his name**. See
 `ATTRIBUTIONS.md` for the full reasoning and for how the page handles Walker now.
@@ -3220,7 +3220,7 @@ hyphen apart, on a site that quotes him on its home page, about the subject of h
 Found while building the *Coming to Terms* sheet, in our own glossary entry for *neuroqueer*,
 and verified against neuroqueer.com.
 
-**Ryan's call: credit him, on the masthead.** It now reads *after Nick Walker*, linked to the
+**Ryan's call: credit him, on the masthead.** It read *after Nick Walker*, linked to the
 book, with the full explanation in [Queering is a verb](https://queering.earth/#queering-is-a-verb) where Walker already
 appears.
 
@@ -3239,6 +3239,21 @@ is the only one of the three that is true no matter which way the origin actuall
 
 This settles the attribution question and **not** the wording of the tagline itself, which
 stays open above as Helen's and Ryan's.
+
+**Re-determined 2026-09-13, on Ryan's word: the masthead line comes off; the credit does not.**
+*Ryan's call: credit him, on the masthead* was half right and stays half right. Crediting was the
+right call of the three. **The masthead was the wrong place to do it**, and it took six days and
+three readers to find out — the same three words read as a death notice, as an endorsement, and as
+a statement that this site is built on one person's theory. Nobody misread the paragraph under
+*Queering is a verb*, which has said all of it since the same day and says it with room.
+
+**The transferable rule: a credit that needs a sentence must not be set as a label.** The masthead
+had room for three words, so three words is what it got, and every reader supplied the rest
+themselves — differently. That is the paraphrase failure this file already records about the
+working tagline, arriving from the other end: a form too small for the claim will shorten the
+claim, and the shortened claim is not a quieter version of the true one. The house's own test
+applies to our own credits, not only to other people's words: **if we changed the words, they are
+ours** — and three words that assert an endorsement nobody gave are ours in the worst way.
 
 ### A sheet is a reading or an essay, and the label flexes (2026-09-07)
 

@@ -35,7 +35,33 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Label corrected
 - Cabinet
 
-2026 · 12 September · latest
+2026 · 13 September · latest
+
+## Three words under the tagline, read three different ways, and none of them the one we wrote
+
+Readers told us what the masthead said to them. It was not what it said to us, and it was not the same thing twice.
+
+Re-determinedThe masthead credit comes off, and the credit stays
+
+Since [7 September](#a-2026-09-07-sheets) the masthead carried a second line under the tagline reading *after Nick Walker*, linked to his book. It is gone. **Three words cannot carry the paragraph that credit needs, so three readers finished the sentence themselves, three different ways** — as a death notice, as an endorsement, and as a declaration that this site is built on one person’s theory. **The third is the one that decided it.** A cabinet that reads the world through many lenses had appeared to run on one, in the first four words anybody meets.
+
+**Nothing about the attribution changed, only where it is made.** The paragraph under [Queering is a verb](https://queering.earth/#queering-is-a-verb) has carried the whole of it since the same day — the subtitle quoted, the hyphen named, *he published it first*, and no claim about the route the phrase took to reach us. Nobody has ever misread that. It is the place a credit of this shape belongs, because it needs a sentence, and the masthead had room for a label.
+
+**The rule worth keeping: a credit that needs a sentence must not be set as a label.** That is this register’s own paraphrase failure arriving from the other end. A form too small for the claim will shorten the claim, and the shortened claim is not a quieter version of the true one — it is a different one. *After* is still the right word where there is room for it, and it still stands in the caption under the moth.
+
+Re-determinedA sheet that quotes our own masthead had to be re-determined with it
+
+[The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks#our-own-masthead) argues that coinages get separated from their coiners, and shows its working on our own tagline. It said “So the masthead says *after Nick Walker*”, which stopped being true the moment the line came off. **A sheet that cites the site it is mounted on has to move when the site does**, and this is the first one here that did.
+
+The section keeps the whole argument and gains the episode: what the three words were, what three readers each took them to mean, and why the credit went back to the place with room for it. **The sheet’s first mend**, three days after it was mounted.
+
+Cabinet`.qe-tagline-credit` came out of the stylesheet in the same commit
+
+The rule had one user and the user is gone. **A rule with no element is not the fault this house watches for** — that one is a class with no rule, which renders black and no gate here catches it — but it is the same drift from the other side: a stylesheet describing a component the site no longer has, with a comment above it explaining why the component is “not optional”. The comment was true when it was written and had to go with the rule.
+
+The [ledger](https://queering.earth/ledger) and [what is settled](https://queering.earth/what-is-settled) both carried the old state as a resolved question. Both now carry the re-determination beneath it rather than instead of it, because **the 7 September call was half right and stays half right**: crediting him was the right one of the three options, and the masthead was the wrong place to do it.
+
+2026 · 12 September
 
 ## A draft can now be read at a real address and marked up without an account
 

@@ -353,7 +353,7 @@ A hand-coloured lithograph of two orchid blooms, mounted as the sheet's plate.
 
 ### Nick Walker — *Postnormal Possibilities*, and our masthead
 
-**Credited on:** `index.html` — the masthead, and [Queering is a verb](https://queering.earth/#queering-is-a-verb).
+**Credited on:** `index.html` — [Queering is a verb](https://queering.earth/#queering-is-a-verb), in prose. It was on the masthead too, from 2026-09-07 to 2026-09-13; see the re-determination below.
 
 Not a quotation we made. A collision we found, and then said out loud.
 
@@ -361,9 +361,13 @@ The site's tagline is **"Post-normal possibilities."** The subtitle of Walker's 
 
 Helen Edgar wrote the phrase in the founding brainstorm and may well have arrived at it herself; *post-normal* also has a separate lineage in post-normal science (Funtowicz and Ravetz, early 1990s) which nobody here has yet checked against the primary. So this is not a finding of borrowing. It is a finding that `DECISIONS.md` was asserting there was no risk here when there plainly is one, and that assertion has been corrected.
 
-**Resolved 2026-09-07: the masthead credits him.** It reads *after Nick Walker*, linked to the book, with the full account in the section where Walker is already quoted. The page says he published it first, which is true, and claims nothing about how the phrase reached us, which nobody can honestly claim either way.
+**Resolved 2026-09-07: the masthead credits him.** It read *after Nick Walker*, linked to the book, with the full account in the section where Walker is already quoted. The page says he published it first, which is true, and claims nothing about how the phrase reached us, which nobody can honestly claim either way.
 
 *After* was chosen over "his phrase" — which would take the coinage off Helen — and over silence, which was defensible only until a reader noticed the subtitle. The separate lineage in post-normal science is real (Funtowicz and Ravetz, "Science for the post-normal age," *Futures*, September 1993, checked 2026-09-07) and is not on the page, because it reads as a hedge on a credit that was freely given.
+
+**Re-determined 2026-09-13, on Ryan's word: the masthead line comes off, and the credit stays.** The paragraph above describes a second line under the tagline reading *after Nick Walker*, linked to the book. It was there from 2026-09-07 to 2026-09-13, and it is gone. **Three words cannot carry that paragraph, and readers finished the sentence themselves** — three of them, three different ways, from the same masthead: as a death notice, as an endorsement, and as a declaration that this site runs on one person's theory. The third is the one that decided it. A cabinet that reads through many lenses had appeared to be running on one, in the first four words anybody meets.
+
+**Nothing about the attribution changed, only where it is made.** The paragraph under [Queering is a verb](https://queering.earth/#queering-is-a-verb) has carried the whole of it since 2026-09-07 — the subtitle quoted, the hyphen named, *he published it first*, and no claim about the route the phrase took. **That is where a credit of this shape belongs**, because it needs a sentence and the masthead had room for a label. A three-word credit that three readers each completed differently is not a shorter version of the paragraph; it is a different claim, and a worse one. *After* is still the right word where there is room for it, and it still stands in the moth's caption below.
 
 ---
 
