@@ -199,6 +199,26 @@ function inline(md) {
   s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, (_, text, href) => `<a href="${href}">${text}</a>`);
   if (/\]\(/.test(s)) throw new Error(`unconvertible link (only absolute http links are handled): ${md.slice(0, 90)}`);
 
+  /* STRIKETHROUGH BEFORE EMPHASIS, for the reason links go before it: a struck
+   * passage may hold emphasis, and the `<del>` has to sit outside it.
+   *
+   * IT SHIPPED AS LITERAL TILDES AND NOTHING SAW IT. `DECISIONS.md` strikes reason 3
+   * of the CMS deferral with a pair of double tildes, this converter did not know the
+   * syntax, and `/what-is-settled` published the fences as text — on the page whose
+   * whole job is to show what was retracted, a retraction reading as a typo. Every
+   * gate passed it, because no gate here reads prose.
+   *
+   * A SINGLE TILDE IS NOT STRIKETHROUGH AND HAS TO SURVIVE. `DECISIONS.md` uses one
+   * for *approximately* five times — ~100, ~60px, ~896px, ~108px, ~120 — so the run
+   * must be exactly two, and the flanking rule is GFM's: no space inside the fences.
+   * `[\s\S]` rather than `.` because the one real pair in the corpus opens on one
+   * source line and closes on the next, and a block arrives here already joined.
+   *
+   * It throws on an unclosed run, as `emphasis()` does, rather than emitting a stray
+   * fence — a fence reaching the reader is the exact failure this replaces. */
+  s = s.replace(/~~(?=\S)([\s\S]+?)(?<=\S)~~/g, '<del>$1</del>');
+  if (s.includes('~~')) throw new Error(`unclosed strikethrough: ${md.slice(0, 90)}`);
+
   s = emphasis(s, md);
 
   return s.replace(/ (\d+) /g, (_, i) => `<code>${escapeHtml(spans[+i])}</code>`);
@@ -225,6 +245,7 @@ function mdText(s) {
   });
   t = t
     .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/~~/g, '')
     .replace(/\*/g, '');
   return t
     .replace(/ (\d+) /g, (_, i) => spans[+i])

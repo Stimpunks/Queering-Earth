@@ -681,6 +681,20 @@ sentences. Neither changes the manifesto's argument, which is why it survived th
 
 ## Settled
 
+### A converter that does not know a syntax publishes the syntax (2026-09-13)
+
+**`/what-is-settled` had been showing `~~` fences as text since the day reason 3 of the CMS deferral was struck.** `make-records.mjs` knew emphasis, code spans and links, and did not know strikethrough, so it passed the tildes through and the page printed them. **On the page whose whole job is to show what was retracted, the retraction read as a typo.**
+
+**No gate here could have caught it and none should.** Every check reads structure — balance, order, colour, position, width — and this was valid markup saying the wrong thing in prose. It was found by reading the page, which remains the only instrument for this class of fault.
+
+**The tell is that it fails silently in exactly one direction.** An unknown *tag* makes `make-markdown.mjs` throw, deliberately, because a dropped element is a Markdown copy that says less than the page. An unknown *inline syntax* has no such guard: the characters survive, so nothing is lost and nothing is converted, and the output looks like a plain-text file that forgot to become HTML. **The converter now throws on an unclosed run** rather than emitting a stray fence, which is the shape `emphasis()` already had.
+
+**A single tilde is not strikethrough, and this corpus proves it five times.** `~100`, `~60px`, `~896px`, `~108px`, `~120` — *approximately*, in ordinary prose. The run has to be exactly two with GFM's flanking rule, and the round-trip proof had to be taught the same fence or it would have demanded text the converter was right not to produce. **That is the trap `mdText()`'s own note already records about underscores**: the proof has to model the converter, not approximate it, because a guard that cries wolf gets relaxed.
+
+**It is `del` and not a class.** A line-through drawn on a span is invisible to a screen reader, so the one mark on these pages that says *this is no longer true* would be missing for the readers least able to infer it. The element carries the meaning and the colour only shows it — **moss letters, coral strike, the colour on the rule and never on the word**, which is `.qe-correction-speaker del`'s idiom reused rather than restated.
+
+**The struck sentence leaves the search index, and that is correct.** `make-search-index.mjs` skips `del` subtrees, because plain text has no vocabulary for *this is what we got wrong* and a snippet would surface a retracted claim as a current one. Checked rather than assumed: `/what-is-settled` still indexes that passage once, through the 2026-09-12 entry that quotes it as history and explains why it was struck. **The retraction is findable; the retracted claim is not.**
+
 ### A correction made while a sheet was being mounted is not a correction *since* it arrived (2026-09-13)
 
 **Found by reading `/whats-new` against the thirteen provenance lines, after an unrelated edit made one of them move.** The listing said Sheet No. 9 had been *Corrected twice since* while the sheet itself said *Not yet corrected*, and those are the two views of one fact this house says must agree.

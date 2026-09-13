@@ -327,8 +327,34 @@
   <div class="qe-register" id="latest">
 
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-13-mends">
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-struck">
       <p class="qe-accession-date">2026 &middot; 13 September &middot; latest</p>
+      <h2 id="a-2026-09-13-struck">A retraction had been reading as a typo, on the page whose job is to show what was retracted <a class="qe-anchor" href="#a-2026-09-13-struck"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Found by reading the page rather than by any check, which is the only instrument there is for a fault made of valid markup and wrong words.</p>
+
+      <div class="qe-entry qe-entry--label" data-sheet="what-is-settled">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">A struck reason printed its own fences, and had done since the day it was struck</span></div>
+        <div class="qe-entry-body">
+          <p><a href="/what-is-settled">What is settled</a> retracts reason 3 of the CMS deferral in place, so the record shows what was believed as well as what replaced it. <strong>The retraction was written in Markdown strikethrough and <code>make-records.mjs</code> did not know the syntax</strong>, so the tilde fences went onto the page as text. It knew emphasis, code spans and links; strikethrough had simply never come up.</p>
+          <p><strong>It fails silently in exactly one direction, which is why it lasted.</strong> An unknown <em>tag</em> makes the Markdown generator throw, deliberately, because a dropped element is a copy that says less than the page. An unknown inline <em>syntax</em> has no such guard: the characters survive, nothing is lost and nothing is converted, and the result looks like plain text that forgot to become HTML. The converter throws on an unclosed run now, the shape its emphasis parser already had.</p>
+          <p><strong>A single tilde is not strikethrough, and this corpus proves it five times</strong> &mdash; <code>~100</code>, <code>~60px</code>, <code>~896px</code>, <code>~108px</code>, <code>~120</code>, all of them <em>approximately</em> in ordinary prose. The run has to be exactly two, and the round-trip proof had to learn the same fence or it would have demanded text the converter was right not to produce.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Moss letters, coral strike &mdash; and the struck sentence leaves the finding aid</span></div>
+        <div class="qe-entry-body">
+          <p><strong>It is <code>del</code> and not a class.</strong> A line-through drawn on a span is invisible to a screen reader, so the one mark on these pages that says <em>this is no longer true</em> would be missing for the readers least able to infer it. The element carries the meaning and the colour only shows it: <code>--qe-coral</code> on the rule, <code>--qe-moss</code> on the letters, <strong>the colour on the strike and never on the word</strong> &mdash; the idiom the restored attribution on <a href="/the-tempest">Miranda</a> already uses, reused rather than restated.</p>
+          <p><strong>The struck sentence drops out of <a href="/search">the finding aid</a>, and that is correct.</strong> The index skips <code>del</code> subtrees, because plain text has no vocabulary for <em>this is the reading we got wrong</em> and a snippet would hand a searcher a retracted claim as a current one. Checked rather than assumed: the page still indexes that passage once, through the <a href="#a-2026-09-12-drafts">12 September</a> entry that quotes it as history and says why it was struck. <strong>The retraction is findable; the retracted claim is not.</strong></p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-mends">
+      <p class="qe-accession-date">2026 &middot; 13 September</p>
       <h2 id="a-2026-09-13-mends">A listing said five sheets had been corrected while the sheets said they were clean, and the sheets were right <a class="qe-anchor" href="#a-2026-09-13-mends"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Moving one provenance line made the disagreement visible. Measuring it turned the expected answer around: twelve of the thirteen lines were exactly right, and the tool was the one making a claim it had not checked.</p>

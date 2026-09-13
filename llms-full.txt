@@ -4231,6 +4231,26 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 13 September · latest
 
+## A retraction had been reading as a typo, on the page whose job is to show what was retracted
+
+Found by reading the page rather than by any check, which is the only instrument there is for a fault made of valid markup and wrong words.
+
+Label correctedA struck reason printed its own fences, and had done since the day it was struck
+
+[What is settled](https://queering.earth/what-is-settled) retracts reason 3 of the CMS deferral in place, so the record shows what was believed as well as what replaced it. **The retraction was written in Markdown strikethrough and `make-records.mjs` did not know the syntax**, so the tilde fences went onto the page as text. It knew emphasis, code spans and links; strikethrough had simply never come up.
+
+**It fails silently in exactly one direction, which is why it lasted.** An unknown *tag* makes the Markdown generator throw, deliberately, because a dropped element is a copy that says less than the page. An unknown inline *syntax* has no such guard: the characters survive, nothing is lost and nothing is converted, and the result looks like plain text that forgot to become HTML. The converter throws on an unclosed run now, the shape its emphasis parser already had.
+
+**A single tilde is not strikethrough, and this corpus proves it five times** — `~100`, `~60px`, `~896px`, `~108px`, `~120`, all of them *approximately* in ordinary prose. The run has to be exactly two, and the round-trip proof had to learn the same fence or it would have demanded text the converter was right not to produce.
+
+CabinetMoss letters, coral strike — and the struck sentence leaves the finding aid
+
+**It is `del` and not a class.** A line-through drawn on a span is invisible to a screen reader, so the one mark on these pages that says *this is no longer true* would be missing for the readers least able to infer it. The element carries the meaning and the colour only shows it: `--qe-coral` on the rule, `--qe-moss` on the letters, **the colour on the strike and never on the word** — the idiom the restored attribution on [Miranda](https://queering.earth/the-tempest) already uses, reused rather than restated.
+
+**The struck sentence drops out of [the finding aid](https://queering.earth/search), and that is correct.** The index skips `del` subtrees, because plain text has no vocabulary for *this is the reading we got wrong* and a snippet would hand a searcher a retracted claim as a current one. Checked rather than assumed: the page still indexes that passage once, through the [12 September](#a-2026-09-12-drafts) entry that quotes it as history and says why it was struck. **The retraction is findable; the retracted claim is not.**
+
+2026 · 13 September
+
 ## A listing said five sheets had been corrected while the sheets said they were clean, and the sheets were right
 
 Moving one provenance line made the disagreement visible. Measuring it turned the expected answer around: twelve of the thirteen lines were exactly right, and the tool was the one making a claim it had not checked.
@@ -6840,7 +6860,7 @@ The cabinet itself · [Corrected twice since](https://queering.earth/changelog#a
 
 The decision log for Queering Earth: what is settled, what is still open, and the reasoning for each — including the designs that were refused, and why.
 
-The cabinet itself · [Corrected twice since](https://queering.earth/changelog#a-2026-09-11-balance)
+The cabinet itself · [Corrected three times since](https://queering.earth/changelog#a-2026-09-13-struck)
 
 -  [What this site knows about you](https://queering.earth/privacy)
 
@@ -7245,7 +7265,7 @@ Ryan Boren, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-246 entries across 67 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+248 entries across 68 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -9420,7 +9440,7 @@ The rail's breakpoint is measured against what actually renders rather than agai
 
 1. The design intent — queering the zine itself, playing with graphic font layout, each piece interpreting its own subject — is what a CMS structurally cannot hold. A CMS earns its cost when content is uniform and layout is fixed. Here the layout **is** the argument.
 2. Netlify Identity's git-gateway is being sunset, so Decap or Sveltia means standing up GitHub OAuth ourselves, writing a schema for a content model that does not exist yet, and adding a build step to a site that has none.
-3. ~~The zero-cost path already works: Helen edits files in the GitHub web editor, opens a pull request, and Netlify posts a deploy preview URL on it.~~ **Struck 2026-09-12, on Ryan's word: nothing that requires GitHub or editing HTML works for Helen, and this reason had been false for as long as it had been written.** Star Stuff runs 192 pages that way, which is where the sentence came from — it was carried over as a fact about this collaboration without being checked against the person in it. **Reasons 1 and 2 stand on their own and the deferral survives**, but it now rests on two legs rather than three. See *A draft is reviewed at a real address* below for what replaced it.
+3. <del>The zero-cost path already works: Helen edits files in the GitHub web editor, opens a pull request, and Netlify posts a deploy preview URL on it.</del> **Struck 2026-09-12, on Ryan's word: nothing that requires GitHub or editing HTML works for Helen, and this reason had been false for as long as it had been written.** Star Stuff runs 192 pages that way, which is where the sentence came from — it was carried over as a fact about this collaboration without being checked against the person in it. **Reasons 1 and 2 stand on their own and the deferral survives**, but it now rests on two legs rather than three. See *A draft is reviewed at a real address* below for what replaced it.
 
 **The trigger:** the first repeating, uniform content type — a series where every entry has the same sections in the same order. Then Sveltia CMS, and not before.
 
@@ -9504,6 +9524,20 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### A converter that does not know a syntax publishes the syntax (2026-09-13)
+
+**`/what-is-settled` had been showing `~~` fences as text since the day reason 3 of the CMS deferral was struck.** `make-records.mjs` knew emphasis, code spans and links, and did not know strikethrough, so it passed the tildes through and the page printed them. **On the page whose whole job is to show what was retracted, the retraction read as a typo.**
+
+**No gate here could have caught it and none should.** Every check reads structure — balance, order, colour, position, width — and this was valid markup saying the wrong thing in prose. It was found by reading the page, which remains the only instrument for this class of fault.
+
+**The tell is that it fails silently in exactly one direction.** An unknown *tag* makes `make-markdown.mjs` throw, deliberately, because a dropped element is a Markdown copy that says less than the page. An unknown *inline syntax* has no such guard: the characters survive, so nothing is lost and nothing is converted, and the output looks like a plain-text file that forgot to become HTML. **The converter now throws on an unclosed run** rather than emitting a stray fence, which is the shape `emphasis()` already had.
+
+**A single tilde is not strikethrough, and this corpus proves it five times.** `~100`, `~60px`, `~896px`, `~108px`, `~120` — *approximately*, in ordinary prose. The run has to be exactly two with GFM's flanking rule, and the round-trip proof had to be taught the same fence or it would have demanded text the converter was right not to produce. **That is the trap `mdText()`'s own note already records about underscores**: the proof has to model the converter, not approximate it, because a guard that cries wolf gets relaxed.
+
+**It is `del` and not a class.** A line-through drawn on a span is invisible to a screen reader, so the one mark on these pages that says *this is no longer true* would be missing for the readers least able to infer it. The element carries the meaning and the colour only shows it — **moss letters, coral strike, the colour on the rule and never on the word**, which is `.qe-correction-speaker del`'s idiom reused rather than restated.
+
+**The struck sentence leaves the search index, and that is correct.** `make-search-index.mjs` skips `del` subtrees, because plain text has no vocabulary for *this is what we got wrong* and a snippet would surface a retracted claim as a current one. Checked rather than assumed: `/what-is-settled` still indexes that passage once, through the 2026-09-12 entry that quotes it as history and explains why it was struck. **The retraction is findable; the retracted claim is not.**
 
 ### A correction made while a sheet was being mounted is not a correction *since* it arrived (2026-09-13)
 

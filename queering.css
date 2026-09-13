@@ -3087,10 +3087,34 @@ html.plain .qe-record h3 { font-variation-settings: normal; font-weight: 700; }
   color: var(--qe-ink);
 }
 
+/* A struck passage. `DECISIONS.md` retracts a reason in place rather than deleting
+   it, so the record shows what was believed as well as what replaced it — and a
+   retraction has to LOOK retracted. It shipped as literal `~~` fences for as long as
+   the strike had existed, because the converter did not know the syntax.
+
+   MOSS LETTERS, CORAL STRIKE — the same idiom as `.qe-correction-speaker del`, and
+   the same reason: THE COLOUR GOES ON THE RULE AND NEVER ON THE WORD. Coral is one of
+   the decorative seven and is not a text token in either ground; on the line through
+   the word it carries no letter.
+
+   IT IS `del` AND NOT A CLASS, WHICH IS THE POINT. A line-through drawn with CSS on a
+   span is invisible to a screen reader, so the one mark on these pages that says
+   *this is no longer true* would be missing for the readers least able to infer it.
+   The element says it; the colour only shows it. */
+.qe-record del {
+  color: var(--qe-moss);
+  text-decoration: line-through;
+  text-decoration-color: var(--qe-coral);
+  text-decoration-thickness: 2px;
+}
+
 @media print {
   /* An entry and its heading stay together, and the fence keeps its box. */
   .qe-record h3 { break-after: avoid; }
   .qe-record hr { break-before: auto; }
+  /* Paper has no coral. The strike survives in grey, which is the half that carries
+     the meaning — `.qe-correction-speaker del` prints the same way. */
+  .qe-record del { color: #000; text-decoration-color: #555; }
 }
 
 /* ─────────────────────────────────────────────── the colophon

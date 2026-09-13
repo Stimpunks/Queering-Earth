@@ -37,6 +37,26 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 13 September · latest
 
+## A retraction had been reading as a typo, on the page whose job is to show what was retracted
+
+Found by reading the page rather than by any check, which is the only instrument there is for a fault made of valid markup and wrong words.
+
+Label correctedA struck reason printed its own fences, and had done since the day it was struck
+
+[What is settled](https://queering.earth/what-is-settled) retracts reason 3 of the CMS deferral in place, so the record shows what was believed as well as what replaced it. **The retraction was written in Markdown strikethrough and `make-records.mjs` did not know the syntax**, so the tilde fences went onto the page as text. It knew emphasis, code spans and links; strikethrough had simply never come up.
+
+**It fails silently in exactly one direction, which is why it lasted.** An unknown *tag* makes the Markdown generator throw, deliberately, because a dropped element is a copy that says less than the page. An unknown inline *syntax* has no such guard: the characters survive, nothing is lost and nothing is converted, and the result looks like plain text that forgot to become HTML. The converter throws on an unclosed run now, the shape its emphasis parser already had.
+
+**A single tilde is not strikethrough, and this corpus proves it five times** — `~100`, `~60px`, `~896px`, `~108px`, `~120`, all of them *approximately* in ordinary prose. The run has to be exactly two, and the round-trip proof had to learn the same fence or it would have demanded text the converter was right not to produce.
+
+CabinetMoss letters, coral strike — and the struck sentence leaves the finding aid
+
+**It is `del` and not a class.** A line-through drawn on a span is invisible to a screen reader, so the one mark on these pages that says *this is no longer true* would be missing for the readers least able to infer it. The element carries the meaning and the colour only shows it: `--qe-coral` on the rule, `--qe-moss` on the letters, **the colour on the strike and never on the word** — the idiom the restored attribution on [Miranda](https://queering.earth/the-tempest) already uses, reused rather than restated.
+
+**The struck sentence drops out of [the finding aid](https://queering.earth/search), and that is correct.** The index skips `del` subtrees, because plain text has no vocabulary for *this is the reading we got wrong* and a snippet would hand a searcher a retracted claim as a current one. Checked rather than assumed: the page still indexes that passage once, through the [12 September](#a-2026-09-12-drafts) entry that quotes it as history and says why it was struck. **The retraction is findable; the retracted claim is not.**
+
+2026 · 13 September
+
 ## A listing said five sheets had been corrected while the sheets said they were clean, and the sheets were right
 
 Moving one provenance line made the disagreement visible. Measuring it turned the expected answer around: twelve of the thirteen lines were exactly right, and the tool was the one making a claim it had not checked.

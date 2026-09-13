@@ -130,7 +130,7 @@ The cabinet itself · [Corrected twice since](https://queering.earth/changelog#a
 
 The decision log for Queering Earth: what is settled, what is still open, and the reasoning for each — including the designs that were refused, and why.
 
-The cabinet itself · [Corrected twice since](https://queering.earth/changelog#a-2026-09-11-balance)
+The cabinet itself · [Corrected three times since](https://queering.earth/changelog#a-2026-09-13-struck)
 
 -  [What this site knows about you](https://queering.earth/privacy)
 
