@@ -190,7 +190,12 @@ export function scopeFor(file) {
      touched it. A publish checklist that names files needing nothing is a checklist
      somebody stops reading. */
   const differs = (f) => {
-    try { git('diff', '--quiet', 'main', '--', f); return false; } catch { return true; }
+    /* BOTH REFS NAMED, NEVER `main` ALONE. `git diff main -- f` compares main to the
+       WORKING TREE, so run from a checkout of main it reports that nothing differs and
+       the take list comes back EMPTY — which would publish a sheet with no plates and no
+       manifest, the 44-blank-pages failure with a different cause. Caught by running the
+       skill for real rather than by reading it. */
+    try { git('diff', '--quiet', 'main', 'drafts', '--', f); return false; } catch { return true; }
   };
 
   const take = [], contested = [], refused = [];
