@@ -184,11 +184,20 @@ export function scopeFor(file) {
     ...[...NOT_A_DRAFT].map(([f, why]) => [f, why]),
   ]);
 
+  /* A COMMIT TOUCHED IT IS NOT THE SAME AS IT STILL DIFFERS. The zine setting was added
+     to queering.css and then taken out again, so that file is byte-identical to main and
+     taking it would be a no-op — but it was listed, because a commit on this draft had
+     touched it. A publish checklist that names files needing nothing is a checklist
+     somebody stops reading. */
+  const differs = (f) => {
+    try { git('diff', '--quiet', 'main', '--', f); return false; } catch { return true; }
+  };
+
   const take = [], contested = [], refused = [];
   for (const f of [...mine].sort()) {
     if (NEVER.has(f)) refused.push([f, NEVER.get(f)]);
     else if (others.has(f)) contested.push([f, 'also touched by another draft on this branch']);
-    else take.push(f);
+    else if (differs(f)) take.push(f);
   }
   const theirs = [...others].filter((f) => !mine.has(f) && !NEVER.has(f)).sort();
   return { take, contested, refused, theirs };
