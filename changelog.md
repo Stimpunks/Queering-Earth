@@ -37,6 +37,30 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 13 September · latest
 
+## A listing said five sheets had been corrected while the sheets said they were clean, and the sheets were right
+
+Moving one provenance line made the disagreement visible. Measuring it turned the expected answer around: twelve of the thirteen lines were exactly right, and the tool was the one making a claim it had not checked.
+
+Cabinet“Corrected four times since” for four corrections made the day the sheet went up
+
+[What has arrived](https://queering.earth/whats-new) counts a page’s corrections out of this register and prints the total under the word *since*. **A sheet is routinely corrected while it is being mounted** — a citation checked against the primary, a story everybody tells found to be wrong — and those entries are filed to the sheet like any other. So [The Swell and the Dwell](https://queering.earth/wild-nights) read “Corrected four times since” for four corrections dated the day it arrived, and five sheets read as corrected while their own provenance lines said “Not yet corrected”. **Nothing was miscounted. The listing was asserting a chronology it had never checked**, which is this house’s own recurring fault wearing a number: a claim that looks like a measurement and is not one.
+
+The line now splits the two — “Corrected twice on mounting and once since” — in the vocabulary [The Die Uncast](https://queering.earth/promises-like-pie-crust) already uses on its own provenance line.
+
+CabinetThe split is on the arrival day, because *the mounting accession* is not a thing
+
+The obvious key is the accession that mounted the page. Measured, several pages have more than one: this register files three **Mounted** accessions to the [ledger](https://queering.earth/ledger) on the day it arrived and two to [My Gloomy Sunflowers](https://queering.earth/gloomy-sunflowers), because **Mounted** is this register’s word for anything added *to* a page rather than for a page coming into being. The arrival day is a thing, because it is a measurement of the repository and the listing already had it.
+
+**It is also the only rule a generator is entitled to.** Within one day the order of accessions here is editorial and nothing can verify it, so a tool that placed one same-day entry after another would be claiming a fact it does not have. A provenance line may draw the finer distinction, because it is authored and knows which accession mounted its sheet — The Die Uncast separates four corrections on mounting from three more when the plates changed, all seven on 8 September. **The listing says the coarser true thing and the sheet says the finer one**, and neither contradicts the other now.
+
+CabinetThirteen provenance lines audited against the register, and twelve were right
+
+Thirteen provenance lines were read against this register and **twelve were exactly right**. [The Army of the Upright](https://queering.earth/on-being-ill) was the one: it said *re-determined once*, and the register holds two. The missing one is [9 September](#a-2026-09-09-patina), when a line of Woolf’s turned out to be Woolf guessing at what Coleridge meant and the quotation was re-cut to start where the guess does. The line names it now.
+
+**The expected answer was the other one.** Five sheets say “Not yet corrected” over register entries filed to them, and the first reading was that all five had drifted and wanted mending. They had not: an accession history reports what has happened to a sheet *since it was accessioned*, and five other lines go further and say “on mounting” or “before it shipped” in their own words because they chose to. **Forcing a gold seam onto four clean sheets would have been decoration asserting a fact**, in the component built to make real mends findable. Measured before mended.
+
+2026 · 13 September
+
 ## Three words under the tagline, read three different ways, and none of them the one we wrote
 
 Readers told us what the masthead said to them. It was not what it said to us, and it was not the same thing twice.

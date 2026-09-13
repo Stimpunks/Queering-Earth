@@ -344,6 +344,22 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
+### A correction made while a sheet was being mounted is not a correction *since* it arrived (2026-09-13)
+
+**Found by reading `/whats-new` against the thirteen provenance lines, after an unrelated edit made one of them move.** The listing said Sheet No. 9 had been *Corrected twice since* while the sheet itself said *Not yet corrected*, and those are the two views of one fact this house says must agree.
+
+**The count was right and the word was wrong.** `make-whats-new.mjs` gathered every `Re-determined` and `Label corrected` entry filed to a page and reported the total under the word *since*. A sheet is routinely corrected **while it is being mounted** — a citation checked against the primary, a story everybody tells found to be wrong — and those entries are filed to the sheet like any other. So `/wild-nights` read *Corrected four times since* for four corrections made the day it went up, and five sheets read as corrected while their own lines said they were clean. **Nothing was miscounted; the listing was claiming a chronology it had not checked.**
+
+**The split is on the arrival day, and NOT on the mounting accession.** The obvious key is *the accession that mounted this page*, and it is not a thing: `/ledger` has three `Mounted` accessions on the day it arrived and `/gloomy-sunflowers` two, because `Mounted` is the register's word for anything added **to** a page. The arrival day is a thing, because it is `git log --diff-filter=A` and already measured for the listing itself.
+
+**It is also the only rule a generator is entitled to here.** Within one day the order of accessions is editorial and nothing can verify it — this file says so about the register's own ordering — so a tool that placed one same-day entry after another would be asserting a fact it does not have. `/promises-like-pie-crust` draws exactly that finer distinction in its own prose (*four times on mounting, then corrected once more … when the plates changed*, all seven on 8 September), and it is allowed to, because a provenance line is authored and knows which accession mounted it. **The listing says the coarser true thing; the sheet says the finer one.**
+
+**The four sheets reading *Not yet corrected* were right all along, and that is the part worth recording.** The first reading of this fault was that they had drifted and needed mending. Measured, the opposite: an accession history reports what has happened to a sheet **since it was accessioned**, twelve of the thirteen lines were exactly right under that reading, and five of them go further and mention mounting-time corrections in their own words. **A `--mended` seam forced onto those four would have been a gold join on sheets nobody had corrected** — decoration asserting a fact, in the component this house built to make real mends findable.
+
+**One real drift, and it was the sheet.** `/on-being-ill` never recorded the re-determination of 9 September, when a line of Woolf's turned out to be Woolf guessing at what Coleridge meant and the quotation was re-cut to start where the guess does. Its line said *re-determined once* against a register holding two. **Thirteen lines, one wrong** — which is a better result than the gate-shaped instinct predicted, and the reason to measure before mending.
+
+**Nothing gates this.** The counts agree today because they were compared by hand. A check would have to know what a provenance line means in prose, which is the thing that is authored.
+
 ### A draft is reviewed at a real address, and the review layer never ships (2026-09-12)
 
 Ryan asked for a lightweight way to publish a draft for Helen to review before it is published, and then supplied the constraint that decided it: **"Nothing that requires using GitHub or directly editing HTML is going to work for Helen."**

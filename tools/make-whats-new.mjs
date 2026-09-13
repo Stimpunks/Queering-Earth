@@ -254,9 +254,33 @@ const listing = days.map((d) => {
     /* The mend. Its words are the provenance line's own, so a reader meets one
      * vocabulary; the link lands on the most recent accession that did it, and the
      * sheet's own provenance line — one hop away through the title — carries a link
-     * per correction. */
+     * per correction.
+     *
+     * `SINCE` WAS FALSE FOR A THIRD OF THESE, AND THE SPLIT IS THE FIX. A sheet is
+     * routinely corrected while it is being mounted — a citation checked, a story
+     * everybody tells found to be wrong — and those entries are filed to the sheet
+     * like any other. Counted into one total under the word *since*, they said a page
+     * had been corrected after it arrived when it had not: `/wild-nights` read
+     * "Corrected four times since" for four corrections made the day it went up. Five
+     * more sheets read as corrected while their own provenance lines said *Not yet
+     * corrected*, which is the drift this pair exists to prevent.
+     *
+     * THE SPLIT IS ON THE ARRIVAL DAY AND NOT ON THE MOUNTING ACCESSION, which was
+     * measured rather than assumed: a page can have several `Mounted` accessions on
+     * the day it arrives — `/ledger` has three, `/gloomy-sunflowers` two — so *the*
+     * mounting accession is not a thing to key on. The day is, because the day is a
+     * git measurement. And it is the only rule a generator is entitled to here:
+     * WITHIN ONE DAY THE ORDER OF ACCESSIONS IS EDITORIAL AND NOTHING CAN VERIFY IT,
+     * so a tool that claimed one entry came after another on the same day would be
+     * asserting a fact it does not have. A sheet's own provenance line may draw the
+     * finer distinction in its own words, and `/promises-like-pie-crust` does. */
+    const mounting = mine.filter((x) => x.day <= p.day).length;
+    const since = mine.length - mounting;
+    const phrase = mounting && since ? `Corrected ${times(mounting)} on mounting and ${times(since)} since`
+      : mounting ? `Corrected ${times(mounting)} on mounting`
+      : `Corrected ${times(since)} since`;
     const mend = mine.length
-      ? `<a class="qe-arrival-mend" href="/changelog#${mine[0].id}">Corrected ${times(mine.length)} since</a>`
+      ? `<a class="qe-arrival-mend" href="/changelog#${mine[0].id}">${phrase}</a>`
       : '<span class="qe-arrival-mend qe-arrival-mend--clean">Not yet corrected</span>';
 
     return `
@@ -348,8 +372,9 @@ if (process.argv.includes('--check')) {
   console.log(`\n  ${pages.length} page(s) over ${days.length} day(s), newest first\n`);
   for (const d of days)
     console.log(`  ${longDate(d.day).padEnd(20)} ${d.items.map((p) => p.slug).join(', ')}`);
-  const mended = pages.filter((p) => (mends.get(p.slug) ?? []).length).length;
-  console.log(`\n  ${mended} of ${pages.length} pages have been corrected since they arrived.`);
+  const onMounting = pages.filter((p) => (mends.get(p.slug) ?? []).some((x) => x.day <= p.day)).length;
+  const sinceArrival = pages.filter((p) => (mends.get(p.slug) ?? []).some((x) => x.day > p.day)).length;
+  console.log(`\n  ${sinceArrival} of ${pages.length} pages have been corrected since they arrived; ${onMounting} were corrected on mounting.`);
   if (unborn.length) {
     console.log(`\n  NOT YET COMMITTED, so dated today rather than from git:`);
     for (const f of unborn) console.log(`    ${f}`);
