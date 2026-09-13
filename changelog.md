@@ -55,6 +55,12 @@ Wingendorp’s frontispiece — the room itself, a polar bear on the shelf and t
 
 Public domain, digitised by the Biodiversity Heritage Library from the Smithsonian Libraries copy, and the rights were read at the item rather than taken from the blog post that led us to it. **The narwhal is cited to the Internet Archive leaf and not to a BHL page id**, because BHL sits behind a bot wall and the id could not be verified: a guessed citation is worse here than an inconsistent one.
 
+MountedAn introduction to Ole Worm, who had been arriving mid-sentence
+
+Helen’s note after publication: he comes out of nowhere. He did — the sheet named him in the second sentence of a paragraph about cabinets in general and went straight into the unicorn horn, so a reader met the anecdote before the man. Three sentences now say who he was: a Danish physician and antiquary who taught Greek, Latin, physics and medicine at Copenhagen, was physician to Christian IV, and read runestones for years. The engraving above him is identified as his own room.
+
+**One detail was checked rather than copied.** Burkhardt’s *Verzeichnis eponymischer Pflanzennamen*, the authority consulted when this sheet’s plates were sourced, makes him physician to Christian V. It was Christian IV: Worm died in 1654 and Christian V acceded in 1670. The slip is noted in the library copy so nobody takes that detail from there later.
+
 Label correctedThree corrections made while the sheet was being written
 
 **Emily’s verse arrived with no attribution and both circulating versions are wrong.** Postgate’s own site prints it as six lines, hyphenating *cat-puss* and capitalising only the first word of each line; the reference works run two of those lines together and capitalise throughout. It is spoken narration and not one of the folk songs, which matters because those are Sandra Kerr and John Faulkner’s work.

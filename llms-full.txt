@@ -3265,7 +3265,11 @@ Paul Klee kept a herbarium of his own for ten years, from 1920 to 1930, across t
 
 Frontispiece, [*Museum Wormianum*](https://www.biodiversitylibrary.org/page/51143811) (Leiden: ex officina Elseviriorum, 1655). Engraved by G. Wingendorp. Public domain, digitised by the [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/) from the copy at Smithsonian Libraries.
 
-Long before natural history collections were sorted into their proper drawers, cabinets of curiosities held the real and the mythical side by side, often with no need to settle which was which. Ole Worm kept what he had been sold as a unicorn horn, doubted it enough to go looking for proof, and in 1638 matched it to a narwhal’s skull. Even once he was right, the courts of Europe went on prizing narwhal tusks as unicorn horns for a long while after, because the wonder of the thing had outgrown its label.
+Long before natural history collections were sorted into their proper drawers, cabinets of curiosities held the real and the mythical side by side, often with no need to settle which was which.
+
+[Ole Worm](https://en.wikipedia.org/wiki/Ole_Worm) (1588–1654) kept one of them. He was a Danish physician and antiquary who taught Greek, Latin, physics and medicine at Copenhagen, served as physician to Christian IV, and spent years reading runestones. The room in the engraving above is his own: the collection he kept at home, catalogued after his death as *Museum Wormianum*.
+
+He kept what he had been sold as a unicorn horn, doubted it enough to go looking for proof, and in 1638 matched it to a narwhal’s skull. Even once he was right, the courts of Europe went on prizing narwhal tusks as unicorn horns for a long while after, because the wonder of the thing had outgrown its label.
 
 ![A woodcut of a narwhal skull seen from above, drawn in fine hatching. The skull is broad and pitted at the back and narrows towards the snout; from its left side a single long tapering tusk runs the width of the page, its surface cut with the close diagonal lines of a spiral. Text from the other side of the leaf shows faintly through the paper.](images/worm-1655-museum-wormianum-narwhal-skull-p283.jpg)
 
@@ -4368,6 +4372,12 @@ MountedTwo plates from *Museum Wormianum*, 1655
 Wingendorp’s frontispiece — the room itself, a polar bear on the shelf and three walls of lettered categories — and the woodcut on printed page 283 of the narwhal skull with the tusk still in it, which is the figure by which Worm showed the horn was a whale’s tooth. **The leaf was found by full-text searching the scan for *Unicornu*** rather than by guessing, and the printed folio confirmed it.
 
 Public domain, digitised by the Biodiversity Heritage Library from the Smithsonian Libraries copy, and the rights were read at the item rather than taken from the blog post that led us to it. **The narwhal is cited to the Internet Archive leaf and not to a BHL page id**, because BHL sits behind a bot wall and the id could not be verified: a guessed citation is worse here than an inconsistent one.
+
+MountedAn introduction to Ole Worm, who had been arriving mid-sentence
+
+Helen’s note after publication: he comes out of nowhere. He did — the sheet named him in the second sentence of a paragraph about cabinets in general and went straight into the unicorn horn, so a reader met the anecdote before the man. Three sentences now say who he was: a Danish physician and antiquary who taught Greek, Latin, physics and medicine at Copenhagen, was physician to Christian IV, and read runestones for years. The engraving above him is identified as his own room.
+
+**One detail was checked rather than copied.** Burkhardt’s *Verzeichnis eponymischer Pflanzennamen*, the authority consulted when this sheet’s plates were sourced, makes him physician to Christian V. It was Christian IV: Worm died in 1654 and Christian V acceded in 1670. The slip is noted in the library copy so nobody takes that detail from there later.
 
 Label correctedThree corrections made while the sheet was being written
 
@@ -7456,7 +7466,7 @@ Helen Edgar, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-253 entries across 70 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+254 entries across 70 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
