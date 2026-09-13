@@ -98,6 +98,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { decode } from './html.mjs';
 import { GROUPS, COLLECTION_OF } from './pages.mjs';
+import { isDraft } from './draft.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PAGE = 'whats-new.html';
@@ -119,7 +120,15 @@ const times = (n) => COUNTS[n] ?? `${n} times`;
  * Same discovery as make-markdown.mjs: every .html at the root that is content. The
  * error page is not content and has no address, so it cannot have arrived. */
 const NOT_CONTENT = new Set(['404.html']);
-const files = (await readdir(ROOT)).filter((f) => f.endsWith('.html') && !NOT_CONTENT.has(f)).sort();
+
+/* A DRAFT IS NOT A PAGE YET. Skipping it is what lets the generators — and therefore
+ * `check-metadata.mjs`, which runs them — work at all on the drafts branch. A draft has
+ * no canonical, no group in pages.mjs and no accession, all of it by design, so every
+ * generator here would throw or index prose nobody has published. The predicate lives
+ * once in draft.mjs beside the git-side one, so the two cannot drift. */
+const files = (await readdir(ROOT))
+  .filter((f) => f.endsWith('.html') && !NOT_CONTENT.has(f) && !isDraft(ROOT, f))
+  .sort();
 
 /* The order a reader should meet the pages, flattened — the tiebreaker inside one
  * day. Two pages committed in the same commit have no chronological order at all, so
