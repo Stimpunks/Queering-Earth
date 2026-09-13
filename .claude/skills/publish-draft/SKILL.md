@@ -50,20 +50,29 @@ that reason.
 **So ask the draft what it touched, rather than assuming:**
 
 ```bash
-git diff --stat main...drafts -- . ':!review-practice.html'
+node tools/draft.mjs scope <draft>.html
 ```
 
-Everything that comes back is in scope. Take each by name:
+**DO NOT USE `git diff main...drafts` FOR THIS.** That was what this skill said until a
+second person started a second draft on the branch, and it turns a loose instruction into
+a dangerous one: the branch diff offers you the *other* draft's page and the other
+person's edits to shared files, at the moment somebody is working a checklist and inclined
+to trust the tool. `scope` derives the answer from commits instead — a file is this
+draft's if a commit that touched this draft's page also touched it — and it prints three
+lists: **take**, **leave** (another draft owns it), and **never** (branch furniture like
+`_headers`).
+
+**A file marked ASK is touched by both drafts.** That is a real collision between two
+people's work. Stop and agree what to do with it; do not pick a side inside this skill.
+
+Then take each `take` line by name:
 
 ```bash
-git checkout drafts -- <draft>.html queering.css ATTRIBUTIONS.md
+git checkout drafts -- <draft>.html queering.css tools/plate-variants.json
 ```
 
-**Named one by one and never as a wildcard**, because the branch also carries
-`_headers` — whose `X-Robots-Tag: noindex` must never reach `main` — and
-`review-practice.html`, which is branch-only for ever. A `git checkout drafts -- .` would
-take both. **If `_headers` appears in that diff for any reason other than the noindex block,
-stop and read it before taking anything.**
+**Named one by one and never as a wildcard.** `git checkout drafts -- .` would take
+`_headers`, whose noindex must never reach `main`, and every other draft in progress.
 
 Then **delete the three-line draft block** — the comment, the `robots` meta and the
 `review.js` script. `check-metadata.mjs` check 10 will stop the build if you forget, but do
