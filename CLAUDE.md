@@ -1913,6 +1913,33 @@ by injecting a 2.15:1 colour and confirming that reported as `FAIL` on the other
 checking both exit codes — then reverting. A guard nobody has watched fail is a guard nobody
 should trust.
 
+### Never deadname anyone, and a publisher's record is not an exception
+
+**Ryan's call, 2026-09-13.** Use the name a person uses. **This holds inside citations of work
+published under a former name**, which is the case that looks like an exception and is not.
+
+**The argument that printing it keeps the work findable is false, and this house had been
+making it.** Three entries said we cite Wenn Lawson as Wenn *and state what the byline says,
+so the paper is findable without that cost* — but **the DOI is what makes a paper findable.**
+The old byline was never doing that work, so the cost was being paid for nothing. Crossref,
+the journal record and most citation managers still carry it, which means an automatically
+generated citation deadnames him; that is a reason to write citations by hand here, not a
+reason to copy the database.
+
+**Reproducing a publisher's record over a living author's own name is not neutral accuracy —
+it is a database outranking a person.** That sentence was already in `ATTRIBUTIONS.md` and
+the entries around it contradicted it four times.
+
+**State the fact without the name.** *The journal's byline is not the name he uses* carries
+everything a reader needs. `/two-cohabitating-modes` had already found the graceful form on
+its own — a register label reading *and the journal's byline is not*, which stops exactly
+where the old name would go.
+
+**Swept 2026-09-13**: `ATTRIBUTIONS.md` (three), `/two-cohabitating-modes` (two),
+`/monotropa-uniflora` (one), and the `Held, Not Fixed` draft. Everything else was generated
+and regenerated. **Nothing gates this** — a deadname is not a shape a checker can recognise,
+so it is an editorial rule and it needs somebody to hold it.
+
 ## House voice
 
 Everything public-facing follows the **Stimpunks Editorial Voice**

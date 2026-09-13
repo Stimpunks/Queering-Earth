@@ -1952,7 +1952,7 @@ monotropism
 
 Attention pooled in one deep channel rather than spread thin across many. Coined by **Dinah Murray** with her neighbour **Jeanette Buirski**, and set out in Murray, Lesser and Lawson’s 2005 paper. A turn you are, not a turn you make.
 
-The 2005 paper is [Murray, Lesser and Lawson, *Attention, monotropism and the diagnostic criteria for autism*](https://doi.org/10.1177/1362361305051398), in *Autism* 9(2), 139–156. **Its third author is Wenn Lawson, and the journal’s byline still reads Wendy Lawson.** He is a trans man who has published under Wenn for years, and a citation that reproduces a publisher’s record over a living author’s own name is not neutral accuracy — it is a database outranking a person. We cite him as Wenn Lawson and say what the byline says, so a reader can find the paper and nobody has to be deadnamed to do it.
+The 2005 paper is [Murray, Lesser and Lawson, *Attention, monotropism and the diagnostic criteria for autism*](https://doi.org/10.1177/1362361305051398), in *Autism* 9(2), 139–156. **Its third author is Wenn Lawson, and the journal’s byline still is not the name he uses.** He is a trans man who has published under Wenn for years, and a citation that reproduces a publisher’s record over a living author’s own name is not neutral accuracy — it is a database outranking a person. We cite him as Wenn Lawson and say what the byline says, so a reader can find the paper and nobody has to be deadnamed to do it.
 
 ## Two hands, and one of them is the same hand
 
@@ -3653,7 +3653,7 @@ And the curl is its own subject. **He *only has to curl himself* to bristle like
 
 The hedgehog’s one big thing and the fox’s many things have been mapped, in neurodivergent writing and talking, onto **monotropism** and polytropism — attention that pools deeply into few interests at a time, against attention spread thinly across many. Monotropism was coined by **Dinah Murray** with her neighbour **Jeanette Buirski**, and set out in Murray, Lesser and Lawson (2005). [Sheet No. 8](https://queering.earth/monotropa-uniflora) is this cabinet’s reading of it, through a plant that lives the way the theory describes.
 
-The third author is Wenn Lawson, and the journal’s byline is not The 2005 paper is *Attention, monotropism and the diagnostic criteria for autism*, *Autism* 9(2), 139–156, [doi:10.1177/1362361305051398](https://doi.org/10.1177/1362361305051398). **The paper itself has not been read here and nothing is quoted from it.** Its byline reads “Wendy Lawson”; he is a trans man who has published as Wenn for years, and Crossref, the journal record and most citation managers still carry the 1999-era name, so a citation generated automatically deadnames him. **A publisher’s record outranking a living author’s own name is not neutral accuracy.** We cite him as Wenn Lawson and state what the byline says, so the paper stays findable without that cost. [Helen Edgar](https://autisticrealms.com/) does this correctly and is where we saw it done.
+The third author is Wenn Lawson, and the journal’s byline is not The 2005 paper is *Attention, monotropism and the diagnostic criteria for autism*, *Autism* 9(2), 139–156, [doi:10.1177/1362361305051398](https://doi.org/10.1177/1362361305051398). **The paper itself has not been read here and nothing is quoted from it.** Its byline is not the name he uses; he is a trans man who has published as Wenn for years, and Crossref, the journal record and most citation managers still carry the old byline, so a citation generated automatically deadnames him. **A publisher’s record outranking a living author’s own name is not neutral accuracy.** We cite him as Wenn Lawson and do not reproduce the byline. The DOI is what keeps the paper findable, so the old name was never doing that work. [Helen Edgar](https://autisticrealms.com/) does this correctly and is where we saw it done.
 
 **The pairing itself has no scholarly pedigree, and it is worth saying so out loud.** Berlin does not mention attention, autism, or anything of the kind — he is sorting novelists and philosophers. The 2005 paper does not mention foxes or hedgehogs. **The join between them is a later, informal synthesis**, made in community spaces, podcasts and conversation, and we have not found who made it first. It circulates widely enough to be described as established:
 
@@ -8741,7 +8741,7 @@ A dash where there was a full stop, a capital lowercased, and a word inserted. *
 
 **The coinage:** monotropism was coined by **Dinah Murray** with her neighbour **Jeanette Buirski**, and set out in Murray, Lesser and Lawson (2005), *Attention, monotropism and the diagnostic criteria for autism*, *Autism* 9(2), 139–156, <https://doi.org/10.1177/1362361305051398>. Citation pinned from Crossref. **The paper itself has not been read here**, and nothing is quoted from it.
 
-**The third author is Wenn Lawson, and the journal's byline reads Wendy Lawson.** He is a trans man who has published as Wenn for years. Crossref, the journal record and most citation managers still carry the 2005 byline, so a citation generated automatically deadnames him. **Reproducing a publisher's record over a living author's own name is not neutral accuracy — it is a database outranking a person.** The sheet cites him as Wenn Lawson and states what the byline says, so the paper is findable without that cost. Helen Edgar's essay already does this correctly and is where we saw it done.
+**The third author is Wenn Lawson, and the journal's byline is not the name he uses.** He is a trans man who has published as Wenn for years. Crossref, the journal record and most citation managers still carry the 2005 byline, so a citation generated automatically deadnames him. **Reproducing a publisher's record over a living author's own name is not neutral accuracy — it is a database outranking a person.** We cite him as Wenn Lawson and do not reproduce the byline. **The DOI is what makes the paper findable**, so the old name was never doing that work and printing it cost something for nothing. Helen Edgar's essay already does this correctly and is where we saw it done.
 
 ---
 
@@ -8980,7 +8980,7 @@ The sheet reports that the hedgehog's one big thing and the fox's many things ha
 
 Two things are established and the join between them is not. **Berlin does not mention attention, autism, or anything of the kind** — he is sorting novelists and philosophers. **Murray, Lesser and Lawson (2005) does not mention foxes or hedgehogs.** The pairing is a later, informal synthesis circulating in community spaces, podcasts and conversation.
 
-**Monotropism** was coined by **Dinah Murray** with her neighbour **Jeanette Buirski**, and set out in Murray, Lesser and Lawson (2005), *Attention, monotropism and the diagnostic criteria for autism*, *Autism* 9(2), 139–156, <https://doi.org/10.1177/1362361305051398>. **The paper has not been read here and nothing is quoted from it** — the citation is pinned from Crossref, as it is for the entry on `monotropa-uniflora.html`. **The third author is Wenn Lawson** and the journal's byline reads "Wendy Lawson"; see that entry for why we cite him as Wenn and state what the byline says.
+**Monotropism** was coined by **Dinah Murray** with her neighbour **Jeanette Buirski**, and set out in Murray, Lesser and Lawson (2005), *Attention, monotropism and the diagnostic criteria for autism*, *Autism* 9(2), 139–156, <https://doi.org/10.1177/1362361305051398>. **The paper has not been read here and nothing is quoted from it** — the citation is pinned from Crossref, as it is for the entry on `monotropa-uniflora.html`. **The third author is Wenn Lawson** and the journal's byline is not the name he uses; see that entry for why we cite him as Wenn and do not reproduce the byline.
 
 **The one instance the sheet cites is cited as an instance.** *The Fox and the Hedgehog: On Neurodiversity*, episode *Rethinking Scientific Minds*, 2 June 2025, as listed by podcast.app and credited there to Linda MacDonald Glenn. **The episode has not been listened to, the description reads as promotional copy, and the caption on the sheet says outright that it is evidence the pairing circulates and not a source for the claim.** Nothing on the page rests on it.
 
@@ -9544,6 +9544,18 @@ Much of the material already exists and is already checkable — cite to the pri
 ---
 
 ## Settled
+
+### A publisher's byline does not outrank a living author's name (2026-09-13)
+
+**Ryan's call: never deadname anyone, including in citations of work published under a former name.** Use the name the person uses. Settled, and it closes the open question that the `Held, Not Fixed` draft had been carrying on its own face.
+
+**What made this worth recording is that the site had already written the right principle and then broken it four times.** `ATTRIBUTIONS.md` says, in as many words, that *reproducing a publisher's record over a living author's own name is not neutral accuracy — it is a database outranking a person* — and the entries around that sentence printed the old byline of the third author of the monotropism paper, on two pages and twice in the ledger.
+
+**The justification given was findability, and it does not survive inspection.** The entries said we cite him as Wenn *and state what the byline says, so the paper is findable without that cost*. **The DOI is what makes a paper findable.** The old name was never doing that work, so the cost was being paid for nothing. Crossref and most citation managers still carry the 2005 byline, which is an argument for writing citations by hand here rather than generating them — not an argument for copying the database.
+
+**The form to use states the fact without the name:** *the journal's byline is not the name he uses*. `/two-cohabitating-modes` had already found the graceful version by accident — a register label that reads *and the journal's byline is not*, stopping exactly where the old name would have gone.
+
+**Nothing gates this and nothing can.** A deadname is not a shape a checker recognises; it is a fact about a person that only a person knows. It is an editorial rule in `CLAUDE.md` under House voice, next to identity-first language, and it needs somebody to hold it.
 
 ### The zine setting was built, measured, and dropped (2026-09-13)
 

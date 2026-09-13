@@ -121,7 +121,7 @@ monotropism
 
 Attention pooled in one deep channel rather than spread thin across many. Coined by **Dinah Murray** with her neighbour **Jeanette Buirski**, and set out in Murray, Lesser and Lawson’s 2005 paper. A turn you are, not a turn you make.
 
-The 2005 paper is [Murray, Lesser and Lawson, *Attention, monotropism and the diagnostic criteria for autism*](https://doi.org/10.1177/1362361305051398), in *Autism* 9(2), 139–156. **Its third author is Wenn Lawson, and the journal’s byline still reads Wendy Lawson.** He is a trans man who has published under Wenn for years, and a citation that reproduces a publisher’s record over a living author’s own name is not neutral accuracy — it is a database outranking a person. We cite him as Wenn Lawson and say what the byline says, so a reader can find the paper and nobody has to be deadnamed to do it.
+The 2005 paper is [Murray, Lesser and Lawson, *Attention, monotropism and the diagnostic criteria for autism*](https://doi.org/10.1177/1362361305051398), in *Autism* 9(2), 139–156. **Its third author is Wenn Lawson, and the journal’s byline still is not the name he uses.** He is a trans man who has published under Wenn for years, and a citation that reproduces a publisher’s record over a living author’s own name is not neutral accuracy — it is a database outranking a person. We cite him as Wenn Lawson and say what the byline says, so a reader can find the paper and nobody has to be deadnamed to do it.
 
 ## Two hands, and one of them is the same hand
 
