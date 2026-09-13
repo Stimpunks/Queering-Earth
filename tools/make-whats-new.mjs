@@ -150,10 +150,22 @@ for (const f of files) {
   if (!title) throw new Error(`${f}: no title`);
   if (!description) throw new Error(`${f}: no meta description, so there is no line to list it with`);
 
-  /* When this URL went live. */
-  const iso = execFileSync('git',
-    ['log', '--diff-filter=A', '--reverse', '--format=%aI', '--', f],
-    { cwd: ROOT, encoding: 'utf8' }).split('\n')[0].trim();
+  /* When this URL went live — ASKED OF `main`, NOT OF THE CURRENT BRANCH.
+   *
+   * "When did this URL go live" is a fact about the published site, and the published
+   * site is main. Asking the current branch gives a different and wrong answer on the
+   * drafts branch, where a page that spent three days as a draft was added on the day
+   * drafting STARTED. Held, Not Fixed hit exactly that: stamped 13 September, accessioned
+   * that day on main, and added to the drafts branch on the 12th — so the check below
+   * fired and stopped the build on a branch where nothing was wrong.
+   *
+   * It falls back to the current path when main cannot answer, which covers a fresh
+   * clone with no main and a page that has not reached main yet. */
+  const gitDate = (...args) => execFileSync('git', ['log', ...args], { cwd: ROOT, encoding: 'utf8' })
+    .split('\n')[0].trim();
+  let iso = '';
+  try { iso = gitDate('--diff-filter=A', '--reverse', '--format=%aI', 'main', '--', f); } catch { /* no main */ }
+  if (!iso) iso = gitDate('--diff-filter=A', '--reverse', '--format=%aI', '--', f);
 
   /* A PAGE BEING WRITTEN RIGHT NOW HAS NO COMMIT THAT ADDED IT, and refusing to list it
    * would mean no page could ever be mounted and listed in one pass. So an uncommitted
