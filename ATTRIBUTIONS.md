@@ -2577,12 +2577,11 @@ diagnostic criteria for autism*, *Autism* 9(2), 139–156,
 <https://doi.org/10.1177/1362361305051398>. Citation pinned from Crossref. **The paper itself
 has not been read here**, and nothing is quoted from it.
 
-**The third author is Wenn Lawson, and the journal's byline reads Wendy Lawson.** He is a trans
+**The third author is Wenn Lawson, and the journal's byline is not the name he uses.** He is a trans
 man who has published as Wenn for years. Crossref, the journal record and most citation
 managers still carry the 2005 byline, so a citation generated automatically deadnames him.
 **Reproducing a publisher's record over a living author's own name is not neutral accuracy — it
-is a database outranking a person.** The sheet cites him as Wenn Lawson and states what the
-byline says, so the paper is findable without that cost. Helen Edgar's essay already does this
+is a database outranking a person.** We cite him as Wenn Lawson and do not reproduce the byline. **The DOI is what makes the paper findable**, so the old name was never doing that work and printing it cost something for nothing. Helen Edgar's essay already does this
 correctly and is where we saw it done.
 
 ----
@@ -3054,8 +3053,7 @@ set out in Murray, Lesser and Lawson (2005), *Attention, monotropism and the dia
 criteria for autism*, *Autism* 9(2), 139–156,
 <https://doi.org/10.1177/1362361305051398>. **The paper has not been read here and nothing is
 quoted from it** — the citation is pinned from Crossref, as it is for the entry on
-`monotropa-uniflora.html`. **The third author is Wenn Lawson** and the journal's byline reads
-"Wendy Lawson"; see that entry for why we cite him as Wenn and state what the byline says.
+`monotropa-uniflora.html`. **The third author is Wenn Lawson** and the journal's byline is not the name he uses; see that entry for why we cite him as Wenn and do not reproduce the byline.
 
 **The one instance the sheet cites is cited as an instance.** *The Fox and the Hedgehog: On
 Neurodiversity*, episode *Rethinking Scientific Minds*, 2 June 2025, as listed by podcast.app

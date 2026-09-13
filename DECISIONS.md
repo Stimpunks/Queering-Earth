@@ -684,6 +684,18 @@ sentences. Neither changes the manifesto's argument, which is why it survived th
 
 ## Settled
 
+### A publisher's byline does not outrank a living author's name (2026-09-13)
+
+**Ryan's call: never deadname anyone, including in citations of work published under a former name.** Use the name the person uses. Settled, and it closes the open question that the `Held, Not Fixed` draft had been carrying on its own face.
+
+**What made this worth recording is that the site had already written the right principle and then broken it four times.** `ATTRIBUTIONS.md` says, in as many words, that *reproducing a publisher's record over a living author's own name is not neutral accuracy — it is a database outranking a person* — and the entries around that sentence printed the old byline of the third author of the monotropism paper, on two pages and twice in the ledger.
+
+**The justification given was findability, and it does not survive inspection.** The entries said we cite him as Wenn *and state what the byline says, so the paper is findable without that cost*. **The DOI is what makes a paper findable.** The old name was never doing that work, so the cost was being paid for nothing. Crossref and most citation managers still carry the 2005 byline, which is an argument for writing citations by hand here rather than generating them — not an argument for copying the database.
+
+**The form to use states the fact without the name:** *the journal's byline is not the name he uses*. `/two-cohabitating-modes` had already found the graceful version by accident — a register label that reads *and the journal's byline is not*, stopping exactly where the old name would have gone.
+
+**Nothing gates this and nothing can.** A deadname is not a shape a checker recognises; it is a fact about a person that only a person knows. It is an editorial rule in `CLAUDE.md` under House voice, next to identity-first language, and it needs somebody to hold it.
+
 ### The zine setting was built, measured, and dropped (2026-09-13)
 
 Helen's first piece arrived as an A5 zine — numbered sections, monospace kickers, washi tape, a rubber stamp reading HELD NOT NAMED, running feet. The question was whether to keep that setting. **It was built as `.qe-zine` and then removed on Ryan and Helen's joint call; `Held, Not Fixed` is a regular essay.** Recorded here so it is not rebuilt from scratch by somebody reading the zine and having the same good idea.
