@@ -1,83 +1,165 @@
 #!/usr/bin/env node
 /**
- * draft.mjs — which page is the draft, and where does a reviewer read it?
+ * draft.mjs — which branches hold drafts, which page each one is, and what publishing
+ * one of them may take with it.
  *
- * ONE DERIVATION, BECAUSE THREE SKILLS ASK THE SAME QUESTION. `start-draft`,
- * `save-draft` and `publish-draft` all need to know which file on the `drafts`
- * branch is the thing being worked on. Written out three times it would be three
- * answers the day one of them was edited — the drift this repo warns about, in the
- * one place where getting it wrong means publishing the wrong page.
+ * ONE BRANCH PER DRAFT, since 2026-09-13. Both drafts used to live together on `drafts`,
+ * and that shared branch produced, in one afternoon: a conflict in `ATTRIBUTIONS.md`
+ * between two people's ledger rows, a published page (`/ledger`) left stale on the branch
+ * by somebody else's edit, and a publish checklist that offered one person the other
+ * person's page. None of those are mistakes anybody made. They are what a shared branch
+ * is.
  *
- * THE DRAFT IS IDENTIFIED BY ITS MARKER, NOT BY A NAME KEPT SOMEWHERE. A draft is a
- * root page on the `drafts` branch carrying the three-line draft block, which is the
- * same fact `check-metadata.mjs` check 10 keys on. No state file, nothing to get out
- * of step, and nothing to remember between sessions. The marker is the deleted-on-
- * publish line, so a page stops being a draft at exactly the moment it is published.
+ * `drafts` IS NOW A BASE AND NOT A PLACE TO WORK. It carries the branch furniture and
+ * nothing else: the `X-Robots-Tag: noindex` block in `_headers`, which must never reach
+ * `main`, and `review-practice.html`. Every draft branch is cut from it and inherits both.
+ * Nothing is drafted on it.
  *
- * IT READS THE BRANCH THROUGH GIT, so it is correct from `main`, from `drafts`, or
- * from a worktree, without switching anything or caring what is checked out.
- *
- * ONE EXCEPTION, DECLARED. `review-practice.html` carries the marker for ever: it is
- * the page a reviewer learns the tool on, it lives only on this branch, and it is
- * never published. Left underclared it would be reported as the current draft every
- * time, which is the reading that makes this tool useless rather than merely wrong.
+ * THE PER-BRANCH MODEL MADE THIS TOOL SIMPLER RATHER THAN HARDER. Scope used to be
+ * derived by commit archaeology — a file belongs to this draft if a commit that touched
+ * this draft's page also touched it — because two drafts' changes were interleaved on one
+ * branch. With one draft to a branch the question is just "what differs from main",
+ * minus the furniture, and the contested-file case cannot arise at all.
  */
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { readFileSync, existsSync } from 'node:fs';
+import { join, dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const BRANCH = 'refs/heads/drafts';
-/* MATCH THE INCLUDE, NOT THE NAME — the third time in one day. `check-metadata.mjs`
- * check 10 shipped with the bare string and fired on /changelog and /what-is-settled
- * the moment the feature was written up on them; so did this, an hour later, from the
- * same instinct. On a site that documents its own build, ANY gate or tool matching a
- * filename matches the prose about that filename. Prose writes `&lt;script` or wraps
- * the name in a `code` span, so the unescaped tag is the discriminator. */
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+
+const PREFIX = 'draft/';
+const BASE = 'drafts';
+const HOST_SUFFIX = '--queering-earth.netlify.app';
+
+/* MATCH THE INCLUDE, NOT THE NAME. On a site that documents its own build, anything
+ * matching a filename matches the prose about that filename — `check-metadata.mjs`
+ * check 10 shipped with the bare string and fired on /changelog and /what-is-settled,
+ * and this tool did the same an hour later. Prose writes `&lt;script` or wraps the name
+ * in a `code` span, so the unescaped tag is the discriminator. */
 const MARKER = '<script[^>]*src="[^"]*drafts/review\\.js';
-const HOST = 'https://drafts--queering-earth.netlify.app';
-
-/** Never a draft, however it is marked. Each entry says why. */
-const NOT_A_DRAFT = new Map([
-  ['review-practice.html', 'the practice sheet a reviewer learns the tool on; branch-only, never published'],
-]);
-
-/* stderr is CAPTURED RATHER THAN INHERITED, so a handled failure stays handled.
- * `git cat-file -e` on a path that is new prints `fatal: path ... exists on disk,
- * but not in refs/heads/main` — which is the ANSWER to isRevision(), not an error,
- * and it was being printed to the reader in the middle of the tool's own output
- * every time a new-page draft was started. It is still on the error object if an
- * unexpected failure ever needs reporting. */
-/** The same pattern as a JS regex, from the same string, so a generator and this tool
- *  can never disagree about what a draft is. ERE and JS agree on this much syntax. */
 export const DRAFT_INCLUDE = new RegExp(MARKER);
 
+/** Never a draft page, however it is marked. Each entry says why. */
+const NOT_A_DRAFT = new Map([
+  ['review-practice.html', 'the practice sheet a reviewer learns the tool on; branch furniture, never published'],
+]);
+
+/** Carried by every draft branch and never publishable. Each entry says why. */
+const FURNITURE = new Map([
+  ['_headers', 'carries the branch-only X-Robots-Tag: noindex, which must never reach main'],
+  ...NOT_A_DRAFT,
+]);
+
+const git = (...args) =>
+  execFileSync('git', args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
+
+const addressOf = (f) => (f === 'index.html' ? '/' : '/' + f.replace(/\.html$/, ''));
+
+/** Netlify's branch subdomain: every run of non-alphanumerics becomes one dash. */
+export const hostFor = (branch) =>
+  'https://' + branch.replace(/[^A-Za-z0-9]+/g, '-').replace(/^-|-$/g, '') + HOST_SUFFIX;
+
+/** Every draft branch, local or on the remote, deduplicated. */
+export function draftBranches() {
+  const out = new Set();
+  for (const ref of ['refs/heads', 'refs/remotes/origin']) {
+    let lines = '';
+    try { lines = git('for-each-ref', '--format=%(refname:strip=2)', ref + '/' + PREFIX + '*'); }
+    catch { continue; }
+    for (const l of lines.split('\n').filter(Boolean)) {
+      out.add(ref.startsWith('refs/remotes') ? l.replace(/^origin\//, '') : l);
+    }
+  }
+  return [...out].sort();
+}
+
+/** The draft page on a branch: the root page carrying the marker. */
+export function pageOn(branch) {
+  let hits = [];
+  try {
+    hits = git('grep', '-lE', MARKER, branch, '--', '*.html')
+      .split('\n').filter(Boolean)
+      .map((l) => l.slice(l.indexOf(':') + 1))
+      .filter((f) => !f.includes('/') && !NOT_A_DRAFT.has(f));
+  } catch (e) {
+    if (e.status !== 1) throw e;
+  }
+  return hits.sort()[0] ?? null;
+}
+
 /**
- * Is the page at this path a draft?
+ * What publishing this branch takes.
  *
- * THE GENERATORS ASK THIS AND THEY MUST, because a draft breaks all three of them. Every
- * one reads every root `.html`: `make-whats-new.mjs` throws on a page with no
- * `rel=canonical`, `make-markdown.mjs` throws on a page in no group in `pages.mjs`, and
- * `make-search-index.mjs` would index prose nobody has agreed to publish. A draft has
- * none of those things BY DESIGN — they are accession, and a draft is not accessioned —
- * so the generators could not be run on the drafts branch at all, which took
- * `check-metadata.mjs` down with them and left the branch unable to check anything but
- * its markup.
- *
- * IT ASKS THE FILE AND NOT GIT, which is the difference from `currentDrafts()` above: a
- * generator is looking at a working tree, not at a branch, and it wants the answer for
- * the bytes in front of it.
+ * EVERYTHING THAT DIFFERS FROM MAIN, MINUS THE FURNITURE. A draft that grew a component
+ * needs its rules in `queering.css`; one that quotes anybody needs its rows in
+ * `ATTRIBUTIONS.md`; a new plate needs its variants and the manifest. None of that lives
+ * in the page, and taking only the page publishes a sheet whose styles do not exist —
+ * this house's characteristic failure, reached by a new road.
  */
+export function scopeFor(branch) {
+  let changed = [];
+  try {
+    /* TWO DOTS, NOT THREE. `main...branch` diffs the MERGE BASE against the branch, so a
+       change that has since landed on main by another route is still listed even though
+       the two tips now agree — `tools/make-whats-new.mjs` was offered that way, identical
+       on both sides. Two dots compares the tips, which is the question being asked: what
+       would actually change if this branch's version were taken. */
+    changed = git('diff', '--name-only', 'main', branch).split('\n').filter(Boolean);
+  } catch { /* no such branch */ }
+
+  const take = [], derived = [], refused = [];
+  for (const f of changed.sort()) {
+    if (FURNITURE.has(f)) refused.push([f, FURNITURE.get(f)]);
+    else if (isDerived(f)) derived.push(f);
+    else take.push(f);
+  }
+  return { take, derived, refused };
+}
+
+/**
+ * Written by a generator, so publishing rebuilds it from the sources above.
+ *
+ * DECLARED RATHER THAN INFERRED, the two-list shape `check-cache.mjs` and `check.mjs`
+ * already use: nothing in a file's bytes says whether a tool wrote it. Listing these as
+ * things to take is not wrong so much as noise, and a checklist with noise in it is one
+ * people skim — which matters when the list is what keeps two people out of each other's
+ * work.
+ */
+const DERIVED = [
+  /^(llms|llms-full)\.txt$/,                    // the agent indexes
+  /^(feed|register)\.xml$/,                     // the two feeds
+  /^search-index\.json$/,                       // the finding aid's index
+  /^(ledger|what-is-settled|whats-new)\.html$/,  // authored pages with generated bodies
+];
+
+/* A `.md` IS DERIVED ONLY IF A PAGE OF THAT NAME EXISTS, which is a test rather than a
+   list. `make-markdown.mjs` writes a sibling beside every page, so `on-being-ill.md` is
+   generated — but `ATTRIBUTIONS.md`, `DECISIONS.md`, `CLAUDE.md` and `README.md` are
+   SOURCES, and ATTRIBUTIONS.md is the one that generates `/ledger`. A bare `\.md$` rule
+   filed it as derived and would have left a draft's ledger rows behind at publication,
+   silently, with the page shipping and the credit missing. */
+const isDerived = (f) => {
+  if (DERIVED.some((re) => re.test(f))) return true;
+  if (!f.endsWith('.md') || f.includes('/')) return false;
+  return existsSync(join(process.cwd(), f.replace(/\.md$/, '.html')))
+      || existsSync(join(ROOT, f.replace(/\.md$/, '.html')));
+};
+
+/* ── the predicate the generators ask ──────────────────────────────────────────
+ * A draft has no canonical, no group in pages.mjs and no accession, all by design, so
+ * `make-whats-new`, `make-markdown` and `make-search-index` would each throw or index
+ * prose nobody has published. */
+
 export function isDraftPage(path) {
   try { return DRAFT_INCLUDE.test(readFileSync(path, 'utf8')); } catch { return false; }
 }
 
 let publishedCache = null;
-
-/** What `sitemap.xml` lists, as filenames. The site's own manifest of published addresses. */
 function publishedSet(root) {
   if (publishedCache) return publishedCache;
   let xml = '';
-  try { xml = readFileSync(join(root, 'sitemap.xml'), 'utf8'); } catch { /* no manifest, no published pages */ }
+  try { xml = readFileSync(join(root, 'sitemap.xml'), 'utf8'); } catch { /* no manifest */ }
   publishedCache = new Set(
     [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
       .map((m) => m[1].replace(/^https?:\/\/[^/]+/, ''))
@@ -87,166 +169,51 @@ function publishedSet(root) {
 }
 
 /**
- * THE definition, and the one every tool should ask: a draft carries the marker AND the
- * manifest does not list it.
+ * A draft is a page carrying the marker that the manifest does not list.
  *
- * BOTH HALVES ARE LOAD-BEARING, and the marker-only version was written first and was
- * wrong in two directions at once. It disarmed `check-metadata.mjs` check 10 — a
- * published page that kept its draft block is precisely what that check exists to catch,
- * and a marker-only filter drops it from the list before the check can see it. And it
- * made the generators throw on that same page with a message about `llms.txt` groups:
- * `make-markdown.mjs` skipped it as a draft, `pages.mjs` still named it, and the error a
- * reader got pointed at the wrong thing entirely. Proved by putting the block on a
- * published page and watching both happen.
+ * BOTH HALVES ARE LOAD-BEARING. Filtering on the marker alone disarms `check-metadata.mjs`
+ * check 10 — a published page that kept its draft block is exactly what that check exists
+ * to catch, and a marker-only filter drops it before the check can see it — and it makes
+ * `make-markdown.mjs` throw on that same page with a message about `llms.txt` groups.
+ * Proved by putting the block on a published page and watching both happen.
  */
 export function isDraft(root, file) {
   return !publishedSet(root).has(file) && isDraftPage(join(root, file));
-}
-
-const git = (...args) =>
-  execFileSync('git', args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
-
-/** The address a page answers at, house style: extensionless, index at the root. */
-const addressOf = (f) => (f === 'index.html' ? '/' : '/' + f.replace(/\.html$/, ''));
-
-/** git grep, with "no matches" treated as the empty answer it is rather than a failure. */
-function grepFor(args) {
-  try {
-    return git('grep', ...args)
-      .split('\n').filter(Boolean)
-      .map((l) => (l.startsWith(BRANCH + ':') ? l.slice(BRANCH.length + 1) : l))
-      .filter((f) => !f.includes('/'));            // root pages only, as everything here is
-  } catch (e) {
-    if (e.status === 1) return [];                 // git grep: no matches
-    throw e;
-  }
-}
-
-export function currentDrafts() {
-  const hits = new Set(grepFor(['-lE', MARKER, BRANCH, '--', '*.html']));
-
-  /* THE WORKING TREE COUNTS WHEN IT IS THE BRANCH'S OWN, and leaving it out was a real
-     fault found by walking the workflow rather than reading it. A draft that has been
-     written but not yet committed lives nowhere in `refs/heads/drafts`, so the committed
-     scan alone reported "no draft in progress" for the whole of `start-draft` and for the
-     FIRST `save-draft` — which is the one run where the skill is told to stop and ask.
-     `--untracked` is the half that matters: a brand-new sheet is not in the index either. */
-  if (onDraftsBranch()) for (const f of grepFor(['-lE', '--untracked', MARKER, '--', '*.html'])) hits.add(f);
-
-  return [...hits].filter((f) => !NOT_A_DRAFT.has(f)).sort();
-}
-
-function onDraftsBranch() {
-  try { return git('branch', '--show-current').trim() === 'drafts'; } catch { return false; }
-}
-
-/** Is this draft a revision of a page that is already published, or a new one? */
-export function isRevision(file) {
-  try {
-    git('cat-file', '-e', `refs/heads/main:${file}`);
-    return true;
-  } catch { return false; }
-}
-
-/**
- * What publishing ONE draft may take with it.
- *
- * WRITTEN THE DAY A SECOND PERSON STARTED A SECOND DRAFT, which turned a sentence in
- * `publish-draft` from loose into dangerous. It said: ask `git diff --stat main...drafts`
- * what moved, and "everything that comes back is in scope". With one draft on the branch
- * that was true. With two it offers you the other person's page and the other person's
- * edits to shared files, at the exact moment somebody is working through a checklist and
- * inclined to trust the tool.
- *
- * SCOPE IS DERIVED FROM COMMITS, NOT FROM THE BRANCH DIFF. A file is this draft's if it
- * was touched by a commit that also touched this draft's page. Everything else on the
- * branch is somebody else's, or is branch furniture that must never travel.
- *
- * IT REPORTS RATHER THAN DECIDES on a file both drafts have touched. That is a genuine
- * collision between two people's work and the answer is a conversation, not a heuristic.
- */
-export function scopeFor(file) {
-  const commits = git('log', '--format=%H', 'main..drafts', '--', file).split('\n').filter(Boolean);
-  const filesOf = (c) => git('show', '--pretty=', '--name-only', c).split('\n').filter(Boolean);
-
-  const mine = new Set();
-  for (const c of commits) for (const f of filesOf(c)) mine.add(f);
-
-  const others = new Set();
-  for (const d of currentDrafts()) {
-    if (d === file) continue;
-    for (const c of git('log', '--format=%H', 'main..drafts', '--', d).split('\n').filter(Boolean))
-      for (const f of filesOf(c)) others.add(f);
-  }
-
-  const NEVER = new Map([
-    ['_headers', 'carries the branch-only X-Robots-Tag: noindex, which must never reach main'],
-    ...[...NOT_A_DRAFT].map(([f, why]) => [f, why]),
-  ]);
-
-  /* A COMMIT TOUCHED IT IS NOT THE SAME AS IT STILL DIFFERS. The zine setting was added
-     to queering.css and then taken out again, so that file is byte-identical to main and
-     taking it would be a no-op — but it was listed, because a commit on this draft had
-     touched it. A publish checklist that names files needing nothing is a checklist
-     somebody stops reading. */
-  const differs = (f) => {
-    /* BOTH REFS NAMED, NEVER `main` ALONE. `git diff main -- f` compares main to the
-       WORKING TREE, so run from a checkout of main it reports that nothing differs and
-       the take list comes back EMPTY — which would publish a sheet with no plates and no
-       manifest, the 44-blank-pages failure with a different cause. Caught by running the
-       skill for real rather than by reading it. */
-    try { git('diff', '--quiet', 'main', 'drafts', '--', f); return false; } catch { return true; }
-  };
-
-  const take = [], contested = [], refused = [];
-  for (const f of [...mine].sort()) {
-    if (NEVER.has(f)) refused.push([f, NEVER.get(f)]);
-    else if (others.has(f)) contested.push([f, 'also touched by another draft on this branch']);
-    else if (differs(f)) take.push(f);
-  }
-  const theirs = [...others].filter((f) => !mine.has(f) && !NEVER.has(f)).sort();
-  return { take, contested, refused, theirs };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const [cmd, arg] = process.argv.slice(2);
 
   if (cmd === 'scope') {
-    const file = arg;
-    if (!file) { console.error('\nUsage: node tools/draft.mjs scope <draft>.html\n'); process.exit(2); }
-    const { take, contested, refused, theirs } = scopeFor(file);
-    console.log(`\nPublishing ${file} takes:\n`);
-    for (const f of take) console.log('  take      ' + f);
-    for (const [f, why] of contested) console.log(`  ASK       ${f}  — ${why}`);
-    for (const [f, why] of refused)   console.log(`  never     ${f}  — ${why}`);
-    if (theirs.length) {
-      console.log('\nNot yours — another draft on this branch owns these:\n');
-      for (const f of theirs) console.log('  leave     ' + f);
+    if (!arg) { console.error(`\nUsage: node tools/draft.mjs scope ${PREFIX}<slug>\n`); process.exit(2); }
+    const { take, derived, refused } = scopeFor(arg);
+    if (!take.length && !derived.length && !refused.length) {
+      console.error(`\nNothing differs between main and ${arg} — is that a branch?\n`); process.exit(1);
     }
-    if (contested.length)
-      console.log('\nA contested file is a real collision between two people\'s work.\n' +
-                  'Stop and agree what to do with it rather than picking one side here.');
+    console.log(`\nPublishing ${arg} takes:\n`);
+    for (const f of take) console.log('  take      ' + f);
+    for (const [f, why] of refused) console.log(`  never     ${f}  — ${why}`);
+    if (derived.length) {
+      console.log('\n  Regenerated on main once the sources above are taken — do not take these:\n');
+      for (const f of derived) console.log('  derived   ' + f);
+    }
     console.log();
     process.exit(0);
   }
 
-  const drafts = currentDrafts();
-
-  if (!drafts.length) {
-    console.log('\nNo draft in progress on the drafts branch.');
-    console.log('Start one with the start-draft skill.\n');
+  const branches = draftBranches();
+  if (!branches.length) {
+    console.log(`\nNo draft branches. Start one with the start-draft skill.`);
+    console.log(`(Draft branches are named ${PREFIX}<slug> and cut from ${BASE}.)\n`);
     process.exit(0);
   }
 
-  console.log(`\n${drafts.length} draft${drafts.length > 1 ? 's' : ''} in progress:\n`);
-  for (const f of drafts) {
-    console.log(`  file      ${f}`);
-    console.log(`  kind      ${isRevision(f) ? 'a revision of a page that is already published' : 'a new page'}`);
-    console.log(`  read it   ${HOST}${addressOf(f)}`);
+  console.log(`\n${branches.length} draft branch${branches.length > 1 ? 'es' : ''}:\n`);
+  for (const b of branches) {
+    const page = pageOn(b);
+    console.log(`  branch    ${b}`);
+    console.log(`  page      ${page ?? '(none carrying the draft block)'}`);
+    if (page) console.log(`  read it   ${hostFor(b)}${addressOf(page)}`);
     console.log();
   }
-
-  if (drafts.length > 1)
-    console.log('More than one at a time is allowed and is not the usual case —\n' +
-                'publish-draft must be told which one.\n');
 }

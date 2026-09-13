@@ -1512,74 +1512,42 @@ not a pull-request thread, and both of those are as true for a reviewer who coul
 terminal as for one who would not. What changes is only who the URL gets sent to: it is the
 collaborator who did **not** write the sheet, whichever of them that is.
 
-**Drafts live at the root of a long-lived `drafts` branch, never in a folder on `main`.** A
-`drafts/` folder was measured and it works mechanically — every generator and every gate
-reads `readdir(ROOT)` non-recursively, and `check.mjs` filters `!c.includes('/')`, so a
-subdirectory is invisible with **no `NOT_CONTENT` entries to keep in step**. It was refused
-for two reasons that have nothing to do with the plumbing. It would publish unreviewed
-attributions to **queering.earth** itself, unlisted but public, which is the exposure
-`ATTRIBUTIONS.md` exists around; and a page in a subdirectory needs `../queering.css`, so it
-does not render what will ship and promotion becomes a rewrite of every asset href. On the
-branch the draft is byte-identical to the published page.
+**ONE BRANCH PER DRAFT, `draft/<slug>`, CUT FROM `drafts`.** Since 2026-09-13, on Ryan's
+call, after one afternoon of two people sharing one branch produced three faults that were
+nobody's mistake: their ledger rows conflicted in `ATTRIBUTIONS.md`; `/ledger`, a published
+page, was left stale on the branch by the other person's edit and failed a gate for both;
+and the publish checklist offered one person the other's page and files. **Those are what a
+shared branch is**, not errors anybody made.
 
-**PROMOTION TAKES THE FILE, IT NEVER MERGES THE BRANCH, AND THE FIRST VERSION OF THIS RULE
-SAID THE OPPOSITE.** `git checkout drafts -- on-being-ill.html` from `main`, then the
-accession checklist. *Promotion is a merge* was written down before the branch had more than
-one thing on it, and **a long-lived branch holding three drafts cannot be merged to publish
-one of them** — it publishes all three. Cherry-picking the single file is what you would have
-had to do anyway. **Nothing ever merges out of `drafts`**, which is what makes the header
-below safe.
+**`drafts` IS A BASE AND NOT A PLACE TO WORK.** It carries the branch furniture only — the
+`X-Robots-Tag: noindex` block in `_headers`, which must never reach `main`, and
+`review-practice.html`. **Cutting a draft branch from `main` instead would produce a branch
+deploy that is a fully crawlable copy of the published site**, which is why the cut is from
+`drafts` and why Netlify must list branches individually rather than deploying "all".
 
-**IT IS THE PAGE PLUS WHATEVER SHARED ASSETS THE DRAFT NEEDED, NAMED ONE BY ONE.** The rule
-first shipped as *one file* and that was wrong: a draft that grows a component needs its
-rules in `queering.css`, a draft that quotes anybody needs its entries in `ATTRIBUTIONS.md`,
-and neither lives in the page. Publishing the page alone ships a sheet whose styles do not
-exist — **44 pages that printed blank**, the same failure from a new direction. Ask
-`git diff --stat main...drafts` what moved and take each by name. **Never a wildcard**: the
-branch also carries `_headers`, whose noindex must not reach `main`, and
-`review-practice.html`, which is branch-only for ever.
+**Drafts live at the root of their branch, never in a folder on `main`.** A `drafts/` folder
+was measured and it works mechanically — every generator and gate reads `readdir(ROOT)`
+non-recursively, so a subdirectory is invisible with no exclusion lists to keep in step. It
+was refused for two reasons that are not about plumbing: it would put unreviewed
+attributions on **queering.earth** itself, unlisted but public; and a page one directory
+down needs `../queering.css`, so it does not render what will ship.
 
-**THREE SKILLS DRIVE THIS, AND NEITHER COLLABORATOR SHOULD EVER TYPE A GIT COMMAND FOR IT.**
-`start-draft` puts a page on the branch and prints the URL; `save-draft` commits, pushes and
-hands the URL back; `publish-draft` takes the file onto `main` and walks the accession
-checklist. `tools/draft.mjs` holds the one derivation all three need — **which file is the
-draft** — because written out three times it would be three answers the day one was edited,
-in the one place where being wrong means publishing the wrong page. A draft is identified by
-its marker rather than by a name kept somewhere, which is the same fact check 10 keys on, so
-a page stops being a draft at exactly the moment it is published.
+**THE PER-BRANCH MODEL MADE THE TOOLING SIMPLER, NOT HARDER.** `scope` used to derive
+ownership by commit archaeology — a file belongs to this draft if a commit that touched its
+page also touched it — because two drafts' changes were interleaved. With one draft to a
+branch it is just *what differs from main*, minus the furniture, and the contested-file case
+cannot arise. **Publishing then deletes the branch**, so nothing has to be put back in step.
 
-**`drafts` IS AMBIGUOUS AS A BARE REVISION, PERMANENTLY, BECAUSE `drafts/` IS ALSO A
-DIRECTORY.** `git log drafts` fails with *ambiguous argument 'drafts': both revision and
-filename*, and will for as long as `drafts/review.js` exists. Harmless everywhere the
-workflow actually goes — `git switch drafts` and `git merge main` take a branch
-unambiguously, `git checkout drafts -- <page>` carries the `--`, and `tools/draft.mjs`
-spells it `refs/heads/drafts` throughout. It bites on read commands: write
-`git log refs/heads/drafts` or `git log drafts --`. **Diagnosed wrong the first time** — it
-was blamed on a stray local branch called `origin`, which does not exist; that name in
-`git branch -a` output is `refs/remotes/origin/HEAD`, rendered short, and deleting it would
-have been the wrong repair for a fault it did not cause.
+**IT COMPARES THE TIPS AND NOT THE MERGE BASE.** `git diff main...branch` lists a change
+that has since landed on `main` by another route, because it diffs the merge base — which
+offered `tools/make-whats-new.mjs` when both sides already agreed. Two dots asks the
+question that is actually being asked.
 
-**IT MATCHES THE INCLUDE AND NOT THE NAME, WHICH IS THE THIRD TIME IN ONE DAY.** Check 10
-shipped with the bare string and fired on `/changelog` and `/what-is-settled` the moment the
-feature was written up on them; `draft.mjs` did the same an hour later, from the same
-instinct, and reported both pages as drafts in progress. **On a site that documents its own
-build, anything matching a filename matches the prose about that filename.** Prose writes
-`&lt;script` or wraps the name in a `code` span, so the unescaped tag is the discriminator.
-`review-practice.html` is declared as the one standing exception, with its reason.
-
-**A DRAFT IS A PAGE CARRYING THE MARKER THAT `sitemap.xml` DOES NOT LIST, and both halves
-are load-bearing.** `tools/draft.mjs` holds that definition once and the three generators
-and `check-metadata.mjs` all ask it. The marker-only version was written first and was wrong
-in two directions at once: it **disarmed check 10**, because a published page that kept its
-draft block is exactly what that check exists to catch and a marker-only filter drops it
-before the check can see it; and it made `make-markdown.mjs` throw on that same page with a
-message about `llms.txt` groups, so the error pointed at the wrong thing entirely. Proved by
-putting the block on a published page and watching both happen.
-
-**The generators skip drafts, which is what lets anything run on the branch at all.** A
-draft has no canonical, no group in `pages.mjs` and no accession — all by design — so
-`make-whats-new` threw, `make-markdown` threw, and `check-metadata`, which runs them, went
-down with them. The branch could check nothing but its markup.
+**AND A `.md` IS DERIVED ONLY IF A PAGE OF THAT NAME EXISTS.** `make-markdown.mjs` writes a
+sibling beside every page, so `on-being-ill.md` is generated — but `ATTRIBUTIONS.md`,
+`DECISIONS.md` and `CLAUDE.md` are **sources**, and `ATTRIBUTIONS.md` is the one that
+generates `/ledger`. A bare `\.md$` rule filed it as derived and would have left a draft's
+ledger rows behind at publication, silently, with the sheet shipping and the credit missing.
 
 **The failing gates on that branch are the accession checklist, reported by name.**
 `check-addresses` names the missing `301!`, `check-card-order` the missing card,

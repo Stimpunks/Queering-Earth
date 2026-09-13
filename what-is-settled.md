@@ -344,6 +344,20 @@ Much of the material already exists and is already checkable — cite to the pri
 
 ## Settled
 
+### One branch per draft (2026-09-13)
+
+**Ryan's call, the same day the shared branch produced its third fault.** Each draft now lives on `draft/<slug>`, cut from `drafts`. `drafts` becomes a base carrying only the branch furniture: the `X-Robots-Tag: noindex` block in `\_headers` and `review-practice.html`.
+
+**The three faults are the argument, and none of them was a mistake anybody made.** Two people's ledger rows conflicted in `ATTRIBUTIONS.md` on the day both drafts wanted entries. `/ledger` — a published page generated from that file — was left stale on the branch by one person's edit, so `check-metadata` failed for both. And `publish-draft` offered one person the other person's page and shared files, at the moment somebody is working a checklist and inclined to trust the tool. **A shared branch produces these by construction.** The instinct to write more careful rules for sharing was the wrong instinct; the branch was the thing to change.
+
+**The cut is from `drafts` and not from `main`, and that is the load-bearing detail.** The noindex header cannot be scoped by host — `\_headers` has no host matching and `netlify.toml` headers are not context-specific — so it lives as a branch-only edit. A draft branch cut from `main` would have no noindex, and its deploy would be a fully crawlable duplicate of the published site. For the same reason Netlify must list branches **individually**: "all branches" would publish any stray branch crawlable.
+
+**It made the tooling simpler rather than more complex**, which is the sign it was the right shape. `scopeFor` had grown commit archaeology — a file belongs to this draft if a commit that also touched this draft's page touched it — purely to disentangle two drafts on one branch. With one draft to a branch, scope is *what differs from main* minus the furniture, and the contested-file case cannot occur. Publishing then deletes the branch, so there is no re-sync step and no shared asset left in a draft state to conflict later.
+
+**Two faults found while rewriting it, both in the same fifteen minutes, both from the same habit of asking a slightly wrong question.** `git diff main...branch` diffs the merge base, so it listed `tools/make-whats-new.mjs` — a change that had since reached `main` by another route and was identical on both sides. And a bare `\\.md$` rule for "derived" filed `ATTRIBUTIONS.md` as generated, which would have **left a draft's ledger rows behind at publication**, silently, with the sheet shipping and the credit missing. A `.md` is derived only if a page of that name exists.
+
+**The cost is one Netlify branch-deploy entry per draft**, added when the branch is cut and removed when it is published. That is the price of the isolation and it is paid once per sheet.
+
 ### A publisher's byline does not outrank a living author's name (2026-09-13)
 
 **Ryan's call: never deadname anyone, including in citations of work published under a former name.** Use the name the person uses. Settled, and it closes the open question that the `Held, Not Fixed` draft had been carrying on its own face.
