@@ -148,7 +148,74 @@ export function isRevision(file) {
   } catch { return false; }
 }
 
+/**
+ * What publishing ONE draft may take with it.
+ *
+ * WRITTEN THE DAY A SECOND PERSON STARTED A SECOND DRAFT, which turned a sentence in
+ * `publish-draft` from loose into dangerous. It said: ask `git diff --stat main...drafts`
+ * what moved, and "everything that comes back is in scope". With one draft on the branch
+ * that was true. With two it offers you the other person's page and the other person's
+ * edits to shared files, at the exact moment somebody is working through a checklist and
+ * inclined to trust the tool.
+ *
+ * SCOPE IS DERIVED FROM COMMITS, NOT FROM THE BRANCH DIFF. A file is this draft's if it
+ * was touched by a commit that also touched this draft's page. Everything else on the
+ * branch is somebody else's, or is branch furniture that must never travel.
+ *
+ * IT REPORTS RATHER THAN DECIDES on a file both drafts have touched. That is a genuine
+ * collision between two people's work and the answer is a conversation, not a heuristic.
+ */
+export function scopeFor(file) {
+  const commits = git('log', '--format=%H', 'main..drafts', '--', file).split('\n').filter(Boolean);
+  const filesOf = (c) => git('show', '--pretty=', '--name-only', c).split('\n').filter(Boolean);
+
+  const mine = new Set();
+  for (const c of commits) for (const f of filesOf(c)) mine.add(f);
+
+  const others = new Set();
+  for (const d of currentDrafts()) {
+    if (d === file) continue;
+    for (const c of git('log', '--format=%H', 'main..drafts', '--', d).split('\n').filter(Boolean))
+      for (const f of filesOf(c)) others.add(f);
+  }
+
+  const NEVER = new Map([
+    ['_headers', 'carries the branch-only X-Robots-Tag: noindex, which must never reach main'],
+    ...[...NOT_A_DRAFT].map(([f, why]) => [f, why]),
+  ]);
+
+  const take = [], contested = [], refused = [];
+  for (const f of [...mine].sort()) {
+    if (NEVER.has(f)) refused.push([f, NEVER.get(f)]);
+    else if (others.has(f)) contested.push([f, 'also touched by another draft on this branch']);
+    else take.push(f);
+  }
+  const theirs = [...others].filter((f) => !mine.has(f) && !NEVER.has(f)).sort();
+  return { take, contested, refused, theirs };
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
+  const [cmd, arg] = process.argv.slice(2);
+
+  if (cmd === 'scope') {
+    const file = arg;
+    if (!file) { console.error('\nUsage: node tools/draft.mjs scope <draft>.html\n'); process.exit(2); }
+    const { take, contested, refused, theirs } = scopeFor(file);
+    console.log(`\nPublishing ${file} takes:\n`);
+    for (const f of take) console.log('  take      ' + f);
+    for (const [f, why] of contested) console.log(`  ASK       ${f}  — ${why}`);
+    for (const [f, why] of refused)   console.log(`  never     ${f}  — ${why}`);
+    if (theirs.length) {
+      console.log('\nNot yours — another draft on this branch owns these:\n');
+      for (const f of theirs) console.log('  leave     ' + f);
+    }
+    if (contested.length)
+      console.log('\nA contested file is a real collision between two people\'s work.\n' +
+                  'Stop and agree what to do with it rather than picking one side here.');
+    console.log();
+    process.exit(0);
+  }
+
   const drafts = currentDrafts();
 
   if (!drafts.length) {
