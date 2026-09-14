@@ -107,7 +107,7 @@
   bar.className = 'qe-edit-bar qe-edit-ui';
   bar.innerHTML =
     '<strong>Editing this page.</strong> Click any paragraph and change the words. ' +
-    'Nothing is saved to the site — press <strong>Copy my edits</strong> and paste them to Ryan or into a Claude session.' +
+    'Nothing is saved to the site — press <strong>Copy my edits</strong>, then paste them to Ryan or Helen, or into a Claude session.' +
     '<button type="button" id="qe-edit-copy">Copy my edits</button>' +
     '<button type="button" id="qe-edit-reset">Undo all</button>' +
     '<button type="button" id="qe-edit-stop">Stop editing</button>' +

@@ -307,7 +307,11 @@
   copyBtn.addEventListener('click', function () {
     var text = asText();
     var done = function () {
-      copyBtn.textContent = 'Copied — now paste it to Ryan';
+      /* NEITHER NAME HERE. Whoever is reviewing pastes to whoever is not, and the button
+         does not know which is which — it said "paste it to Ryan" on the control Helen
+         presses most, which is right exactly half the time. The banner above already says
+         where a note goes and that nothing leaves the browser until it is pasted. */
+      copyBtn.textContent = 'Copied — now paste it';
       setTimeout(function () { copyBtn.textContent = 'Copy my notes'; }, 4000);
     };
     /* The clipboard can be refused, and a reviewer who has just typed forty notes must
