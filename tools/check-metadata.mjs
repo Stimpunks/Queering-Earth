@@ -348,6 +348,83 @@ for (const f of [...files, '404.html']) {
   }
 }
 
+/* ── 7c. the recordings list on /privacy accounts for every facade ────────────
+ * 7b asserts that every third-party ORIGIN our scripts can reach is named. That is
+ * the check that matters for what a reader's browser may talk to, and it is
+ * STRUCTURALLY BLIND to how many recordings there are: one origin covers any number
+ * of videos, so a recording added and never listed is invisible to it.
+ *
+ * WHICH IS NOT HYPOTHETICAL. /privacy said there were three embedded recordings and
+ * named three; the site had five. The Glass and the Beethoven shipped with Sheet
+ * No. 12 and were never added, so a binding statement of practice was wrong about its
+ * own subject for two sheets, and every gate here passed it the whole time.
+ *
+ * The list is kept by hand because those sentences are editorial — which page, which
+ * recording, why it is there. That is the right call and it is exactly the kind of
+ * hand-kept list this house keeps warning about, so it gets a gate rather than a rule.
+ *
+ * THE COUNT IS CHECKED TOO, AND SEPARATELY FROM THE ENTRIES. The page says the number
+ * out loud in its own prose, and a list that grew while the sentence above it did not
+ * is the same failure one layer up. */
+{
+  const privacy = await readFile(join(ROOT, 'privacy.html'), 'utf8');
+
+  /* The facades themselves, per page. `data-embed-id` is the thing the other checks
+     key on, so this counts the same objects they do. */
+  const actual = new Map();
+  for (const f of files) {
+    const html = await readFile(join(ROOT, f), 'utf8');
+    const n = [...html.matchAll(/data-embed-id="([^"]+)"/g)].length;
+    if (n) actual.set(f.replace(/\.html$/, ''), n);
+  }
+
+  /* The section, by its authored id — never by its heading, which is a label and may
+     be reworded. Bounded at the next h2 so a later section's list cannot be read. */
+  const sec = privacy.match(/<h2 id="the-embed"[\s\S]*?(?=<h2\b|<\/main>)/);
+  if (!sec) {
+    fail('thirdparty', 'privacy.html has no #the-embed section — the recordings list cannot be checked');
+  } else {
+    const listed = new Map();
+    const ul = sec[0].match(/<ul>[\s\S]*?<\/ul>/);
+    for (const li of ul ? ul[0].matchAll(/<li>([\s\S]*?)<\/li>/g) : []) {
+      const href = li[1].match(/href="\/([^"#]*)/);
+      if (!href) {
+        fail('thirdparty', `a recording on /privacy names no page: ${li[1].replace(/<[^>]+>/g, '').trim().slice(0, 60)}`);
+        continue;
+      }
+      const slug = href[1] === '' ? 'index' : href[1];
+      listed.set(slug, (listed.get(slug) ?? 0) + 1);
+    }
+
+    for (const [slug, n] of actual) {
+      const got = listed.get(slug) ?? 0;
+      if (got < n)
+        fail('thirdparty', `/${slug} carries ${n} click-to-load recording(s) and /privacy lists ${got} — ` +
+          'a policy that undercounts what it describes is false about its own subject');
+    }
+    for (const [slug, n] of listed) {
+      const has = actual.get(slug) ?? 0;
+      if (n > has)
+        fail('thirdparty', `/privacy lists ${n} recording(s) on /${slug} and the page carries ${has} — ` +
+          'the list names something that is no longer there');
+    }
+
+    /* The number the page says out loud, checked against the list under it. */
+    const WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight',
+                   'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen',
+                   'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+    const total = [...actual.values()].reduce((a, b) => a + b, 0);
+    const said = sec[0].match(/There are <strong>([a-z]+) embedded recordings<\/strong>/i);
+    if (!said) {
+      fail('thirdparty', 'privacy.html no longer states how many embedded recordings there are, in the ' +
+        'sentence this check reads — reword the check with the page, not around it');
+    } else if (WORDS[total] !== said[1].toLowerCase()) {
+      fail('thirdparty', `/privacy says there are ${said[1]} embedded recordings and there are ${total} ` +
+        `(${WORDS[total] ?? total})`);
+    }
+  }
+}
+
 /* ── 8. the self-hosted faces ─────────────────────────────────────────────────── */
 try {
   const fonts = JSON.parse(await readFile(join(ROOT, 'tools', 'font-files.json'), 'utf8'));

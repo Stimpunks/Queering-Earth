@@ -326,8 +326,59 @@
        which a derived href would have. -->
   <div class="qe-register" id="latest">
 
+    <section class="qe-accession" aria-labelledby="a-2026-09-14-known-and-felt-and-seen">
+      <p class="qe-accession-date">2026 &middot; 14 September &middot; latest</p>
+      <h2 id="a-2026-09-14-known-and-felt-and-seen">Sheet No.&nbsp;14, and a privacy page that was false by two <a class="qe-anchor" href="#a-2026-09-14-known-and-felt-and-seen"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">A wall, recast from our sibling site&rsquo;s reading of the same life &mdash; and a correction to <a href="/privacy">/privacy</a> that had nothing to do with it and was found on the way past.</p>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="known-and-felt-and-seen">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name"><a href="/known-and-felt-and-seen">Known and Felt and Seen</a>, Sheet No.&nbsp;14 &mdash; Dolly Parton, 1946&ndash;2026, read against Tressie McMillan Cottom</span></div>
+        <div class="qe-entry-body">
+          <p><strong>A wall rather than a reading, because the specimen is a person.</strong> Nine slips in nine hands across forty-seven years &mdash; Lenora Ross in 1974, Parton herself five times between 1984 and 2021, Cottom three &mdash; and they do not agree. The second wall on the plate, after <a href="/monotropa-uniflora">No.&nbsp;8</a>.</p>
+          <p><strong>The hinge is that weed is not a rank.</strong> Taxonomy has no such category, because a weed is not a kind of plant but a verdict about a place, passed in a hand that is never the plant&rsquo;s own. Set beside Cottom&rsquo;s distinction between visibility and legibility &mdash; being a thing that is <em>supposed to exist</em> &mdash; it gives the sheet its whole argument: a weed is perfectly visible and entirely illegible.</p>
+          <p><strong>Cottom&rsquo;s critique sits inside the sheet rather than after it.</strong> Her reading &mdash; that the drag was survivable because the ground under it was unmarked whiteness &mdash; is the sharpest thing written about Parton, and a determination slip that leaves out the awkward reading is not a kinder slip, only a less true one. The sheet does not resolve it and says so.</p>
+          <p><strong>Our sibling site read the same life through physics and this one reads it through taxonomy.</strong> Star Stuff&rsquo;s <a href="https://starstuff.earth/dolly-zine"><cite>No One Had to Qualify</cite></a> turns on a star that cannot aim its light; this turns on a plant that cannot appeal its name. <strong>The quotations were traced to their primaries for that zine and are not re-walked here</strong> &mdash; Ryan&rsquo;s call, recorded in the ledger, along with what this sheet adds that the zine does not.</p>
+          <p>Three click-to-load recordings, one per instance of the argument. No new capability: the facade, the drawn poster and the one named origin were all already here.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name"><a href="/privacy#the-embed">/privacy</a> said there were three embedded recordings when there were five</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The Glass and the Beethoven shipped with <a href="/most-quiet-need">Sheet No.&nbsp;12</a> and were never added to the list.</strong> The page went on naming three, which made a binding statement of practice false about its own subject for as long as that stood. It names all eight now, and says on its own face that two of them sat there unlisted, because quietly correcting a document like that one is the thing this cabinet refuses.</p>
+          <p><strong>Nothing gated the count, and that was structural rather than an oversight.</strong> <code>check-metadata.mjs</code> checks that every third-party <em>origin</em> our scripts can reach is named on that page &mdash; and one origin covers any number of videos, so a missing recording was invisible to it by construction. The list is kept by hand, which is the kind of list this register keeps warning about. <strong>It is gated now</strong>, by the check below, written the same day on Ryan&rsquo;s call.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The recordings list on <a href="/privacy#the-embed">/privacy</a> is checked against the facades that exist</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Check 7c.</strong> Section 7b asserts that every third-party <em>origin</em> our scripts can reach is named, which is the check that matters for what a browser may talk to and is <strong>structurally blind to how many recordings there are</strong> &mdash; one origin covers any number of videos. So it counts the <code>data-embed-id</code> facades on every page, reads the list under <code>#the-embed</code>, and compares them per page. It also reads the number the page says out loud in its own prose, because a list that grew while the sentence above it did not is the same failure one layer up.</p>
+          <p><strong>Made to fail in five shapes before being believed</strong>, each reverted after: the historical bug put back &mdash; the two Sheet No.&nbsp;12 recordings unlisted with the count sentence agreeing with the short list, which is exactly how it shipped; a count word wrong on its own; the list naming a recording no longer on the page; a new facade added to a sheet that had none, which is the case that will actually arrive next; and the two ways the check could be quietly defeated &mdash; rewording the sentence it reads, and renaming the section&rsquo;s <code>id</code>. <strong>Both of those fail loudly rather than going silent</strong>, because a gate that stops applying when somebody edits around it is worse than no gate.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><code>check-markup.mjs</code> stops reporting PASS over a page it never read</span></div>
+        <div class="qe-entry-body">
+          <p><strong>A named target that could not be found printed <code>SKIP not found</code> and the run went on to report <code>PASS</code>, <code>0 problem(s)</code> and exit 0.</strong> It happened here: a page was checked from a branch it did not exist on, and the gate certified it &mdash; 0 tags, 0 ids, 0 elements balanced, and a clean bill of health.</p>
+          <p><strong>This is the empty-pass fault the rendering gates already guard</strong>, arriving in the one gate that had no guard for it. The wording is taken from theirs, because the reasoning is identical: a page that measures nothing reports zero problems, which is indistinguishable from a clean page in every other line of the output. Unread targets are reported in their own block, never mixed into the problem count &mdash; an unmeasured page is a broken run, not a bad page &mdash; and under <code>--check</code> the run fails.</p>
+          <p>Proved in four shapes: the missing file alone; a missing file beside a real one, where the real page must still be measured and the run must still fail; without <code>--check</code>, where it reports and does not gate, which is this tool&rsquo;s stated contract; and a real page, which still passes.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="the-plate">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name"><a href="/the-plate">The plate</a> was counting its own kinds wrong</span></div>
+        <div class="qe-entry-body">
+          <p>It said <em>eight of the ten</em> readings and <em>one so far</em> for essays, against fourteen sheets with four essays on them. Counted off the plate, which is the authority: eight readings, four essays, two walls.</p>
+        </div>
+      </div>
+
+    </section>
+
     <section class="qe-accession" aria-labelledby="a-2026-09-13-anchors">
-      <p class="qe-accession-date">2026 &middot; 13 September &middot; latest</p>
+      <p class="qe-accession-date">2026 &middot; 13 September</p>
       <h2 id="a-2026-09-13-anchors">A link that went nowhere, and the gate that now says so <a class="qe-anchor" href="#a-2026-09-13-anchors"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Written into this register earlier today and caught only because somebody went looking. Nine gates had passed it.</p>
@@ -3344,6 +3395,10 @@
       </div>
       <div class="qe-index-group" data-sheet="held-not-fixed" hidden>
         <h3 class="qe-index-sheet"><a href="/held-not-fixed">Held, Not Fixed</a> <span class="qe-index-kicker">Sheet No.&nbsp;13</span></h3>
+        <ul></ul>
+      </div>
+      <div class="qe-index-group" data-sheet="known-and-felt-and-seen" hidden>
+        <h3 class="qe-index-sheet"><a href="/known-and-felt-and-seen">Known and Felt and Seen</a> <span class="qe-index-kicker">Sheet No.&nbsp;14</span></h3>
         <ul></ul>
       </div>
       <div class="qe-index-group" data-sheet="search" hidden>

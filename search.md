@@ -230,6 +230,22 @@ Helen Edgar, 2026
   - [Bring something forward](https://queering.earth/held-not-fixed#invitation)
   - [Sources](https://queering.earth/held-not-fixed#sources)
 
+-
+
+No. 14 [Known and Felt and Seen](https://queering.earth/known-and-felt-and-seen) Wall
+
+Dolly Parton, 1946–2026, and Tressie McMillan Cottom
+
+  - [Nine hands, and the specimen is a person](https://queering.earth/known-and-felt-and-seen#the-wall)
+  - [A weed is a sentence about a place](https://queering.earth/known-and-felt-and-seen#not-here)
+  - [Visible is not legible](https://queering.earth/known-and-felt-and-seen#legible)
+  - [The book arrives because you exist](https://queering.earth/known-and-felt-and-seen#no-test)
+  - [Claimed, without a test](https://queering.earth/known-and-felt-and-seen#claimed)
+  - [The paper died and the claim did not](https://queering.earth/known-and-felt-and-seen#retracted)
+  - [The drag was an argument, and the ground under it was not neutral](https://queering.earth/known-and-felt-and-seen#the-ground)
+  - [A determination in a loving hand, and wrong](https://queering.earth/known-and-felt-and-seen#the-wrong-slip)
+  - [What this sheet will not tidy](https://queering.earth/known-and-felt-and-seen#untidy)
+
 ### The founding papers
 
 -
@@ -330,7 +346,7 @@ Helen Edgar, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-264 entries across 73 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+269 entries across 74 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

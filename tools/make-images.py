@@ -323,6 +323,8 @@ og_card(REPO/"images"/"og-most-quiet-need.png", "Every Day\u2019s Most Quiet Nee
 
 og_card(REPO/"images"/"og-held-not-fixed.png", "Held, Not Fixed", "Sheet \u00b7 an essay",
         "Emily brings the broken thing forward and the shop looks at it.", LICHEN)
+og_card(REPO/"images"/"og-known-and-felt-and-seen.png", "Known and Felt and Seen", "Sheet \u00b7 a wall",
+        "A weed is not a kind of plant. It is a verdict about a place.", MARIGOLD)
 og_card(REPO/"images"/"og-mission.png", "What this cabinet is for", "The founding papers",
         "Thirteen aims, each with the page where it is already being kept.", VIOLET)
 og_card(REPO/"images"/"og-manifesto.png", "Nothing here was inevitable", "The founding papers",
