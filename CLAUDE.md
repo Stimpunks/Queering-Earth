@@ -1660,10 +1660,24 @@ deploy that is a fully crawlable copy of the published site**, which is why the 
 `drafts`.
 
 **NETLIFY DEPLOYS `draft/*` AS A WILDCARD, AND THE PREFIX IS DOING SAFETY WORK.** One entry
-covers every draft branch: nothing to add when a draft starts, nothing to remove when it is
-published and the branch deleted — the deploy goes with it. **"All branches" is still
-refused**, because it would deploy any branch at all, including one cut from `main` with no
-noindex.
+covers every draft branch, so there is nothing to add when a draft starts. **"All branches"
+is still refused**, because it would deploy any branch at all, including one cut from `main`
+with no noindex.
+
+**DELETING THE BRANCH DOES NOT DELETE THE DEPLOY, AND THIS FILE SAID IT DID.** Measured on
+2026-09-14, minutes after Sheet No. 14 was published and its branch deleted from both ends:
+`draft-known-and-felt-and-seen--queering-earth.netlify.app` answered **200**, still serving
+the pre-publication draft with its review layer attached, and a full copy of the site beside
+it. Netlify keeps the last branch deploy at its subdomain after the branch is gone. The same
+wrong sentence was in `start-draft` and `publish-draft` as well — three copies of one claim,
+none of them ever checked, which is the drift this file spends its length warning about.
+
+**The `noindex` is what makes that survivable, and it is doing more work than we knew.** The
+orphaned deploy sends `X-Robots-Tag: noindex` because it inherited `_headers` from `drafts`,
+so it is not crawlable. **The live risk is a reader, not a crawler**: anybody holding the old
+review link keeps reading a superseded draft, and may annotate a version that no longer
+exists. So **deleting the branch deploy in Netlify is a step in `publish-draft`**, and it is
+a dashboard action — nothing in this repo can do it and no gate can see it.
 
 **THE WILDCARD LEAVES EXACTLY ONE HOLE AND IT IS GUARDED.** A `draft/…` branch cut from
 `main` rather than from `drafts` would deploy without the noindex — a fully crawlable copy

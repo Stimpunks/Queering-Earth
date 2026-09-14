@@ -346,7 +346,7 @@ Dolly Parton, 1946–2026, and Tressie McMillan Cottom
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-269 entries across 74 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+270 entries across 74 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

@@ -144,8 +144,23 @@ draft: nothing has to be put back in step, because nothing is shared.
 git push origin --delete draft/<slug> && git branch -D draft/<slug>
 ```
 
-Netlify deploys `draft/*` as a wildcard, so deleting the branch takes the review URL with
-it. There is nothing to remove in the dashboard.
+**DELETING THE BRANCH DOES NOT DELETE THE DEPLOY. Go and remove it in Netlify.** This skill
+used to say the review URL went with the branch and that there was nothing to do in the
+dashboard. Measured 2026-09-14, minutes after Sheet No. 14 was published and its branch
+deleted from both ends: `draft-known-and-felt-and-seen--queering-earth.netlify.app` answered
+**200**, still serving the pre-publication draft with its review layer, and a full copy of
+the site beside it.
+
+```bash
+curl -s -o /dev/null -w "%{http_code}\n" https://draft-<slug>--queering-earth.netlify.app/<slug>
+```
+
+**404 means it is gone. 200 means a superseded draft is still live at a link people have.**
+It is not a crawling problem — the deploy inherited `X-Robots-Tag: noindex` from `drafts`,
+which is that header earning its keep a second time — it is a *reader* problem: anybody
+holding the review link reads a version that no longer exists and may annotate it. Delete
+that branch deploy in the Netlify UI. **Nothing here can do it and no gate can see it**,
+which puts it in the same small class as the bookmarklet: a check a person has to run.
 
 **Then bring the base forward**, so the next draft is cut from something current:
 
@@ -163,6 +178,25 @@ side is the answer. Clear the marker with either, re-run the four generators and
 matters here more than anywhere, because at publication the draft's ledger rows have just
 moved to `main` and a hand-picked side can leave the two copies disagreeing about who was
 credited.
+
+### Catch the other drafts up
+
+Publishing is the only thing that makes an in-flight draft stale, so this is the moment to
+level them rather than leaving it to whoever opens one next and merges under time pressure.
+
+```bash
+node tools/draft.mjs
+```
+
+For each branch still listed, `save-draft`'s **Bringing main's changes in** is the procedure
+and this skill does not repeat it. The one thing worth knowing before you start: **the
+conflict will be `search-index.json`, and it is generated.** Neither side is the answer — a
+draft's ledger rows live only on its branch, so taking main's copy drops that draft's credits
+silently while every page still reads perfectly. Clear the marker with either side, re-run
+the generators, and commit what they write. **The regeneration is the resolution.**
+
+Check afterwards that both survived: the draft's own rows and the ones the new sheet just
+put on `main`.
 
 ## Verify at the edge
 
