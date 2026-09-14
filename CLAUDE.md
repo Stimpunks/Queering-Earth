@@ -512,6 +512,40 @@ regex cannot tell them apart.
 unclosed `<strong>`, and a mis-nesting that balances numerically — each reverted after.
 **22,709 elements balanced across 27 pages**, and the count prints every run.
 
+### Every fragment link lands on something — check 10 in `check-markup.mjs`
+
+Added 2026-09-13, after a dangling one was written into the register and caught only
+because somebody went looking for it. `/changelog` pointed at
+`/two-cohabitating-modes#what-is-unresolved`, at a block that had the words and no id.
+**All nine other gates passed it.** A fragment naming nothing is not an error: the browser
+does not move, and the reader who clicked concludes the site is broken in a way they cannot
+report. The fix was to give the block an address (`#unresolved`) rather than to aim the link
+at the enclosing section — the register's sentence is about that block, and a less precise
+link would have made a dated record slightly less true.
+
+**THE CROSS-PAGE HALF IS THE HALF THAT MATTERS**, and it is why this cannot be a per-page
+check. Ids here are authored topical anchors *precisely so a reworded heading keeps its
+address*; this file counts seven anchors aimed at `/#what-grows-here` alone, and nothing
+verified that a single one of them landed. So the id map is built from **every page in the
+repo even when the run is scoped to one**, which costs milliseconds and is the difference
+between a scoped run that checks this and one that quietly cannot.
+
+**IT READS ANCHOR ELEMENTS AND NEVER THE STRING `href=`.** A code span documenting a link
+writes `&lt;a href="#x"&gt;` — only the brackets are escaped, so the href survives verbatim
+and a regex would match this repo's own writing about its own links. That is the same fault
+`check-metadata.mjs` check 7 and the review-layer guard both record paying for, arriving a
+third time. Proved by injecting one beside three real faults: the three were reported, the
+documentation was not, and the resolved count moved by four rather than five.
+
+**Links are validated after the walk, not during it** — an anchor near the top of a page
+routinely names an id near the bottom, and checking against a half-filled id map would
+report every forward link on the site.
+
+**The derived lists never appear here.** `.qe-contents`, `.qe-rail` and `.qe-entry-index`
+build their hrefs at runtime from the ids they have just read, so they are correct by
+construction. This sees authored links only, which are the ones that can be wrong. **864 of
+them resolve today**, and the count prints every run.
+
 ### There are two feeds, because there are two lists
 
 **`/feed.xml` is the pages as they arrive. `/register.xml` is the register's accessions.**
@@ -843,8 +877,51 @@ exceptions. `/design` now says drag it, and says why in a sentence a contributor
 run by the browser at the reader's gesture from outside the document, so the page's policy
 does not reach it; the **script it injects does** fall under `script-src`, which is why the
 bookmarklet loads `location.origin + '/edit.js'` rather than naming this site — `'self'` on a
-draft host means the draft host. **Nothing here gates the exemption itself**, and it is the
-one part of this policy that wants a press on a real bookmarks bar after a deploy.
+draft host means the draft host.
+
+**CONFIRMED ON PRODUCTION THE DAY THE POLICY SHIPPED**, 2026-09-13: Ryan pressed the
+bookmarklet from his own bar on queering.earth under the live header and the editor started.
+**Nothing here gates it and nothing can** — the exemption belongs to the browser, not to this
+site, so a browser that stopped honouring it would break the editor silently and no run of
+`check.mjs` would say a word. It is a press on a real bookmarks bar, and it is the one check
+on this list that a person has to do. **Re-press it after any change to `script-src`.**
+
+### What a page may ask the device for is a delegation, not a wall
+
+`_headers` sends a `Permissions-Policy` as of 2026-09-13, added the same day as the real
+CSP and for the same reason — the site sent none and neither did Netlify's defaults.
+**This site calls no gated feature of its own**, checked rather than assumed: no
+`getUserMedia`, no geolocation, no `requestFullscreen`, no payment, no WebUSB, no
+`navigator.share` anywhere in our scripts. So thirty-five denials cost a reader nothing.
+
+**THE FIVE DELEGATIONS ARE THE WHOLE OF THE THOUGHT, AND A DENY-EVERYTHING LIST WOULD HAVE
+BROKEN A READER-FACING CONTROL.** An iframe's `allow` attribute can only **narrow** what the
+page already has; it cannot grant what this header denies. `queering-embed.js` builds its
+player with `allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen"`
+and a `?autoplay=1` URL, so a blanket denial leaves a reader who pressed the facade with a
+player that will not start and a fullscreen button that does nothing. They are delegated to
+the one origin and never to `*`; only `fullscreen` also keeps `self`.
+
+**`clipboard-write` IS NOT NAMED, AND THAT IS THE `sitemap` LESSON ARRIVING AGAIN.** Both
+injected layers copy out through `navigator.clipboard.writeText`, so it looked like the thing
+most in need of protecting — and it is **not a directive in the Permissions Policy registry
+at all**. Writing it would have been a token that reads as standard, is not, and rides along
+on every response saying nothing. Verify a directive against the list before adding one.
+
+**WHAT IS DELIBERATELY LEFT UNNAMED IS THE OTHER HALF OF THE CARE.** `aria-notify` fires
+screen-reader announcements; the translation, summarisation and speech directives are a
+reader's own tools for getting at our words; the cross-origin-isolation and fetch-quota
+directives are plumbing rather than a capability anybody asks a device for. **Denying those
+would have looked more thorough and been less careful.**
+
+**Proved in a browser before it shipped**, behind a throwaway proxy putting the real header
+in front of the real site, because **a `Permissions-Policy` cannot be set by a meta tag** the
+way the CSP was tested. `document.featurePolicy` reported camera, microphone, geolocation,
+payment and USB all false for our own page; all five player features true for
+`youtube-nocookie.com` and false for an unrelated origin; and pressing the facade built the
+player and it played. **Nothing gates this** — a new capability on this site needs its
+directive removed from the denials by hand, and the symptom of forgetting is a feature that
+silently does nothing.
 
 ### Python touches pixels; Node does everything else
 
@@ -1799,7 +1876,7 @@ node tools/make-records.mjs && node tools/make-whats-new.mjs && node tools/make-
 ```
 
 ```bash
-node tools/check-markup.mjs --check      # parser-rewriting markup, duplicate ids, one <main>, every tag closed
+node tools/check-markup.mjs --check      # parser-rewriting markup, duplicate ids, one <main>, every tag closed, every fragment link resolving
 node tools/check-sitemap.mjs --check     # every page listed once, every entry resolves
 node tools/check-contrast.mjs --check   # 7:1 in BOTH grounds and under print emulation, two tiers
 node tools/check-addresses.mjs          # one address per page: a forced 301! per .html twin

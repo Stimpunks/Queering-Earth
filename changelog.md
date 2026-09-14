@@ -37,6 +37,26 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 13 September · latest
 
+## A link that went nowhere, and the gate that now says so
+
+Written into this register earlier today and caught only because somebody went looking. Nine gates had passed it.
+
+Label correctedAn accession pointed at [what is unresolved here](https://queering.earth/two-cohabitating-modes#unresolved), which had no address
+
+The block had the words and no `id`, so the link named nothing. **A fragment that matches no element is not an error** — the browser simply does not move, the console says nothing, and the reader who clicked concludes this site is broken in a way they cannot report.
+
+**The block was given an address rather than the link being aimed at the section around it.** The sentence here is about that block: pointing it one level up would have left a working link and a slightly less true record, which is the trade this register exists to refuse.
+
+CabinetCheck 10: every authored fragment link lands on something
+
+**The cross-page half is the half that matters**, and it is why this could not be a per-page check. Ids here are authored topical anchors *precisely so a reworded heading keeps its address*; seven anchors point at the plate alone, and nothing verified that one of them landed. So the gate builds its map of ids from every page in the cabinet even when the run is scoped to a single one.
+
+**It reads anchor elements and never the string `href=`.** A code span documenting a link writes the tag with only its brackets escaped, so the href survives verbatim and a text search would match this site writing about its own links — [the same fault](#a-2026-09-13-edit-layer) the review-layer guard already records, arriving a third time. Proved by injecting one beside three real faults: the three were reported by name, the documentation was not, and the count of links resolved moved by four rather than five.
+
+The contents list, the rail and the entry index never appear in it: they build their links at runtime from ids they have just read, so they cannot be wrong. What the gate sees is what a person typed. **864 of those resolve today**, and the number prints on every run, because a check that measured nothing looks exactly like a clean one.
+
+2026 · 13 September
+
 ## The header that says what a page may reach, and the hash that has to be generated
 
 Ryan asked how strict the Content-Security-Policy was, and whether tightening it would break the new editor. It had been one directive for months on a reason nobody had measured.
@@ -53,11 +73,23 @@ The snippet it hashes **lists the nine typefaces the picker offers**, so narrowi
 
 **Proved in a browser before it shipped, both ways.** The policy went into a copy of the home page as a `meta` tag with a preference stored: the snippet ran and the cabinet came up. The same copy with one character changed in the hash refused it — **and Chrome’s own message named the hash the generator had computed**, which is the browser confirming the arithmetic rather than us confirming it. The gate was made to fail and then to pass the same way.
 
+CabinetA permissions policy, and the five exceptions that are the whole of it
+
+The site asked the reader’s device for nothing and said so nowhere. It says so now: thirty-five capabilities denied outright — camera, microphone, geolocation, payment, USB, serial, Bluetooth, MIDI, the motion sensors, the credential and attribution APIs. **None of it costs a reader anything**, because this site calls no gated feature of its own, which was checked rather than assumed.
+
+**A deny-everything list would have broken the one control a reader actually presses.** An `iframe`’s `allow` attribute can only narrow what the page already has — it cannot grant what the header denies — so a blanket denial would have left whoever pressed the Eliot facade with a player that would not start and a fullscreen button that did nothing. Five features are delegated to that one origin, never to everything, and only fullscreen also keeps this site itself.
+
+**`clipboard-write` is not named here, and looking it up is what saved it.** Both injected layers copy out through the clipboard, so it seemed the thing most in need of protecting — and it is not a directive in the registry at all. Writing it would have been [the `sitemap` relation](#a-2026-09-11-rels) a second time: a token that reads as standard, is not, and rides along on every response saying nothing.
+
+**What is left unnamed is the other half of the care.** Screen-reader announcements, and a reader’s own translation and speech tools, are not capabilities to take away from somebody trying to get at our words. Denying them would have looked more thorough and been less careful.
+
+Proved behind a throwaway proxy putting the real header in front of the real site, because **a permissions policy cannot be set by a meta tag** the way the content policy was tested: camera, microphone, geolocation, payment and USB all refused for our own pages; all five player features allowed for that one origin and refused for an unrelated one; and the facade pressed, the player built, and Eliot read.
+
 Label correctedThe bookmarklet named this site by name, where it should have asked where it was standing
 
 It loaded the editor from `queering.earth` written out, which worked everywhere because nothing constrained it. **Under `script-src ‘self’` that breaks on exactly the host it was built for** — a draft, where a contributor reads a sheet that has not been mounted. It asks for `location.origin` now, so it fetches the editor from whatever site the reader is on.
 
-A bookmarklet’s own `javascript:` run is the browser acting on your gesture from outside the page, so the page’s policy does not reach it; **the script it injects does**, which is the whole of the fix. That exemption is the one part of this policy nothing here can gate, and it wants a press on a real bookmarks bar after a deploy.
+A bookmarklet’s own `javascript:` run is the browser acting on your gesture from outside the page, so the page’s policy does not reach it; **the script it injects does**, which is the whole of the fix. **Confirmed on production the same day**, pressed from a real bookmarks bar under the live header. That exemption belongs to the browser rather than to this site, so nothing here can gate it: a browser that stopped honouring it would break the editor silently and every gate would still pass. It is the one check on this list a person has to do, and it wants doing again after any change to `script-src`.
 
 **The same policy refused the try-it-now press on [the colophon](https://queering.earth/design#editing), and that was measured rather than guessed.** The bookmark hung there as a link you could drag *or* press where it hung, and a hash does not apply to a `javascript:` navigation without `‘unsafe-hashes’`. Re-opening that site-wide to buy back one convenience on one page is a bad trade on a site with no user input to protect, so the words changed instead: the page says drag it, and says why. A contributor who reads that sentence learns something true about the site rather than being told a rule.
 
@@ -397,7 +429,7 @@ Replaced with a delimiter resolver using CommonMark’s flanking rule cut down t
 
 Label correctedAn open question about a 1922 printing had been bold to the end of its own paragraph
 
-In [what is unresolved](https://queering.earth/two-cohabitating-modes#what-is-unresolved), the item about whether “runts” survives into later printings of *Fifty New Poems for Children* was missing its closing `strong`. Its two siblings set the question in bold and the explanation in ordinary text; this one ran bold to the end. **Visible on the page since the sheet was mounted, and caught by a tag counter rather than by anybody reading it.**
+In [what is unresolved](https://queering.earth/two-cohabitating-modes#unresolved), the item about whether “runts” survives into later printings of *Fifty New Poems for Children* was missing its closing `strong`. Its two siblings set the question in bold and the explanation in ordinary text; this one ran bold to the end. **Visible on the page since the sheet was mounted, and caught by a tag counter rather than by anybody reading it.**
 
 CabinetMade to fail in three shapes before being believed
 

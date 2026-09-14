@@ -326,8 +326,33 @@
        which a derived href would have. -->
   <div class="qe-register" id="latest">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-13-csp">
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-anchors">
       <p class="qe-accession-date">2026 &middot; 13 September &middot; latest</p>
+      <h2 id="a-2026-09-13-anchors">A link that went nowhere, and the gate that now says so <a class="qe-anchor" href="#a-2026-09-13-anchors"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Written into this register earlier today and caught only because somebody went looking. Nine gates had passed it.</p>
+
+      <div class="qe-entry qe-entry--label" data-sheet="two-cohabitating-modes">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">An accession pointed at <a href="/two-cohabitating-modes#unresolved">what is unresolved here</a>, which had no address</span></div>
+        <div class="qe-entry-body">
+          <p>The block had the words and no <code>id</code>, so the link named nothing. <strong>A fragment that matches no element is not an error</strong> &mdash; the browser simply does not move, the console says nothing, and the reader who clicked concludes this site is broken in a way they cannot report.</p>
+          <p><strong>The block was given an address rather than the link being aimed at the section around it.</strong> The sentence here is about that block: pointing it one level up would have left a working link and a slightly less true record, which is the trade this register exists to refuse.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Check 10: every authored fragment link lands on something</span></div>
+        <div class="qe-entry-body">
+          <p><strong>The cross-page half is the half that matters</strong>, and it is why this could not be a per-page check. Ids here are authored topical anchors <em>precisely so a reworded heading keeps its address</em>; seven anchors point at the plate alone, and nothing verified that one of them landed. So the gate builds its map of ids from every page in the cabinet even when the run is scoped to a single one.</p>
+          <p><strong>It reads anchor elements and never the string <code>href=</code>.</strong> A code span documenting a link writes the tag with only its brackets escaped, so the href survives verbatim and a text search would match this site writing about its own links &mdash; <a href="#a-2026-09-13-edit-layer">the same fault</a> the review-layer guard already records, arriving a third time. Proved by injecting one beside three real faults: the three were reported by name, the documentation was not, and the count of links resolved moved by four rather than five.</p>
+          <p>The contents list, the rail and the entry index never appear in it: they build their links at runtime from ids they have just read, so they cannot be wrong. What the gate sees is what a person typed. <strong>864 of those resolve today</strong>, and the number prints on every run, because a check that measured nothing looks exactly like a clean one.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-csp">
+      <p class="qe-accession-date">2026 &middot; 13 September</p>
       <h2 id="a-2026-09-13-csp">The header that says what a page may reach, and the hash that has to be generated <a class="qe-anchor" href="#a-2026-09-13-csp"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Ryan asked how strict the Content-Security-Policy was, and whether tightening it would break the new editor. It had been one directive for months on a reason nobody had measured.</p>
@@ -348,11 +373,22 @@
         </div>
       </div>
 
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">A permissions policy, and the five exceptions that are the whole of it</span></div>
+        <div class="qe-entry-body">
+          <p>The site asked the reader&rsquo;s device for nothing and said so nowhere. It says so now: thirty-five capabilities denied outright &mdash; camera, microphone, geolocation, payment, USB, serial, Bluetooth, MIDI, the motion sensors, the credential and attribution APIs. <strong>None of it costs a reader anything</strong>, because this site calls no gated feature of its own, which was checked rather than assumed.</p>
+          <p><strong>A deny-everything list would have broken the one control a reader actually presses.</strong> An <code>iframe</code>&rsquo;s <code>allow</code> attribute can only narrow what the page already has &mdash; it cannot grant what the header denies &mdash; so a blanket denial would have left whoever pressed the Eliot facade with a player that would not start and a fullscreen button that did nothing. Five features are delegated to that one origin, never to everything, and only fullscreen also keeps this site itself.</p>
+          <p><strong><code>clipboard-write</code> is not named here, and looking it up is what saved it.</strong> Both injected layers copy out through the clipboard, so it seemed the thing most in need of protecting &mdash; and it is not a directive in the registry at all. Writing it would have been <a href="#a-2026-09-11-rels">the <code>sitemap</code> relation</a> a second time: a token that reads as standard, is not, and rides along on every response saying nothing.</p>
+          <p><strong>What is left unnamed is the other half of the care.</strong> Screen-reader announcements, and a reader&rsquo;s own translation and speech tools, are not capabilities to take away from somebody trying to get at our words. Denying them would have looked more thorough and been less careful.</p>
+          <p>Proved behind a throwaway proxy putting the real header in front of the real site, because <strong>a permissions policy cannot be set by a meta tag</strong> the way the content policy was tested: camera, microphone, geolocation, payment and USB all refused for our own pages; all five player features allowed for that one origin and refused for an unrelated one; and the facade pressed, the player built, and Eliot read.</p>
+        </div>
+      </div>
+
       <div class="qe-entry qe-entry--label" data-sheet="the-site">
         <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">The bookmarklet named this site by name, where it should have asked where it was standing</span></div>
         <div class="qe-entry-body">
           <p>It loaded the editor from <code>queering.earth</code> written out, which worked everywhere because nothing constrained it. <strong>Under <code>script-src &lsquo;self&rsquo;</code> that breaks on exactly the host it was built for</strong> &mdash; a draft, where a contributor reads a sheet that has not been mounted. It asks for <code>location.origin</code> now, so it fetches the editor from whatever site the reader is on.</p>
-          <p>A bookmarklet&rsquo;s own <code>javascript:</code> run is the browser acting on your gesture from outside the page, so the page&rsquo;s policy does not reach it; <strong>the script it injects does</strong>, which is the whole of the fix. That exemption is the one part of this policy nothing here can gate, and it wants a press on a real bookmarks bar after a deploy.</p>
+          <p>A bookmarklet&rsquo;s own <code>javascript:</code> run is the browser acting on your gesture from outside the page, so the page&rsquo;s policy does not reach it; <strong>the script it injects does</strong>, which is the whole of the fix. <strong>Confirmed on production the same day</strong>, pressed from a real bookmarks bar under the live header. That exemption belongs to the browser rather than to this site, so nothing here can gate it: a browser that stopped honouring it would break the editor silently and every gate would still pass. It is the one check on this list a person has to do, and it wants doing again after any change to <code>script-src</code>.</p>
           <p><strong>The same policy refused the try-it-now press on <a href="/design#editing">the colophon</a>, and that was measured rather than guessed.</strong> The bookmark hung there as a link you could drag <em>or</em> press where it hung, and a hash does not apply to a <code>javascript:</code> navigation without <code>&lsquo;unsafe-hashes&rsquo;</code>. Re-opening that site-wide to buy back one convenience on one page is a bad trade on a site with no user input to protect, so the words changed instead: the page says drag it, and says why. A contributor who reads that sentence learns something true about the site rather than being told a rule.</p>
         </div>
       </div>
@@ -772,7 +808,7 @@
       <div class="qe-entry qe-entry--label" data-sheet="two-cohabitating-modes">
         <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">An open question about a 1922 printing had been bold to the end of its own paragraph</span></div>
         <div class="qe-entry-body">
-          <p>In <a href="/two-cohabitating-modes#what-is-unresolved">what is unresolved</a>, the item about whether <q>runts</q> survives into later printings of <cite>Fifty New Poems for Children</cite> was missing its closing <code>strong</code>. Its two siblings set the question in bold and the explanation in ordinary text; this one ran bold to the end. <strong>Visible on the page since the sheet was mounted, and caught by a tag counter rather than by anybody reading it.</strong></p>
+          <p>In <a href="/two-cohabitating-modes#unresolved">what is unresolved</a>, the item about whether <q>runts</q> survives into later printings of <cite>Fifty New Poems for Children</cite> was missing its closing <code>strong</code>. Its two siblings set the question in bold and the explanation in ordinary text; this one ran bold to the end. <strong>Visible on the page since the sheet was mounted, and caught by a tag counter rather than by anybody reading it.</strong></p>
         </div>
       </div>
 
