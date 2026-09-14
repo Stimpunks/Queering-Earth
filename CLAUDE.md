@@ -512,6 +512,40 @@ regex cannot tell them apart.
 unclosed `<strong>`, and a mis-nesting that balances numerically — each reverted after.
 **22,709 elements balanced across 27 pages**, and the count prints every run.
 
+### Every fragment link lands on something — check 10 in `check-markup.mjs`
+
+Added 2026-09-13, after a dangling one was written into the register and caught only
+because somebody went looking for it. `/changelog` pointed at
+`/two-cohabitating-modes#what-is-unresolved`, at a block that had the words and no id.
+**All nine other gates passed it.** A fragment naming nothing is not an error: the browser
+does not move, and the reader who clicked concludes the site is broken in a way they cannot
+report. The fix was to give the block an address (`#unresolved`) rather than to aim the link
+at the enclosing section — the register's sentence is about that block, and a less precise
+link would have made a dated record slightly less true.
+
+**THE CROSS-PAGE HALF IS THE HALF THAT MATTERS**, and it is why this cannot be a per-page
+check. Ids here are authored topical anchors *precisely so a reworded heading keeps its
+address*; this file counts seven anchors aimed at `/#what-grows-here` alone, and nothing
+verified that a single one of them landed. So the id map is built from **every page in the
+repo even when the run is scoped to one**, which costs milliseconds and is the difference
+between a scoped run that checks this and one that quietly cannot.
+
+**IT READS ANCHOR ELEMENTS AND NEVER THE STRING `href=`.** A code span documenting a link
+writes `&lt;a href="#x"&gt;` — only the brackets are escaped, so the href survives verbatim
+and a regex would match this repo's own writing about its own links. That is the same fault
+`check-metadata.mjs` check 7 and the review-layer guard both record paying for, arriving a
+third time. Proved by injecting one beside three real faults: the three were reported, the
+documentation was not, and the resolved count moved by four rather than five.
+
+**Links are validated after the walk, not during it** — an anchor near the top of a page
+routinely names an id near the bottom, and checking against a half-filled id map would
+report every forward link on the site.
+
+**The derived lists never appear here.** `.qe-contents`, `.qe-rail` and `.qe-entry-index`
+build their hrefs at runtime from the ids they have just read, so they are correct by
+construction. This sees authored links only, which are the ones that can be wrong. **864 of
+them resolve today**, and the count prints every run.
+
 ### There are two feeds, because there are two lists
 
 **`/feed.xml` is the pages as they arrive. `/register.xml` is the register's accessions.**
@@ -1842,7 +1876,7 @@ node tools/make-records.mjs && node tools/make-whats-new.mjs && node tools/make-
 ```
 
 ```bash
-node tools/check-markup.mjs --check      # parser-rewriting markup, duplicate ids, one <main>, every tag closed
+node tools/check-markup.mjs --check      # parser-rewriting markup, duplicate ids, one <main>, every tag closed, every fragment link resolving
 node tools/check-sitemap.mjs --check     # every page listed once, every entry resolves
 node tools/check-contrast.mjs --check   # 7:1 in BOTH grounds and under print emulation, two tiers
 node tools/check-addresses.mjs          # one address per page: a forced 301! per .html twin

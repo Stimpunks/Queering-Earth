@@ -100,7 +100,7 @@ Reading No. 10 · [Corrected twice on mounting](https://queering.earth/changelog
 
 Why this cabinet has a sibling built on science: the fox and the hedgehog from Archilochus to Berlin to Gould, two public-domain animal poems that end in the same place, and the spiky profile the typology was never written about.
 
-The founding papers · [Corrected once on mounting and twice since](https://queering.earth/changelog#a-2026-09-11-balance)
+The founding papers · [Corrected once on mounting and three times since](https://queering.earth/changelog#a-2026-09-13-anchors)
 
 ### 9 September 2026
 

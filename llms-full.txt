@@ -4369,6 +4369,26 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 13 September · latest
 
+## A link that went nowhere, and the gate that now says so
+
+Written into this register earlier today and caught only because somebody went looking. Nine gates had passed it.
+
+Label correctedAn accession pointed at [what is unresolved here](https://queering.earth/two-cohabitating-modes#unresolved), which had no address
+
+The block had the words and no `id`, so the link named nothing. **A fragment that matches no element is not an error** — the browser simply does not move, the console says nothing, and the reader who clicked concludes this site is broken in a way they cannot report.
+
+**The block was given an address rather than the link being aimed at the section around it.** The sentence here is about that block: pointing it one level up would have left a working link and a slightly less true record, which is the trade this register exists to refuse.
+
+CabinetCheck 10: every authored fragment link lands on something
+
+**The cross-page half is the half that matters**, and it is why this could not be a per-page check. Ids here are authored topical anchors *precisely so a reworded heading keeps its address*; seven anchors point at the plate alone, and nothing verified that one of them landed. So the gate builds its map of ids from every page in the cabinet even when the run is scoped to a single one.
+
+**It reads anchor elements and never the string `href=`.** A code span documenting a link writes the tag with only its brackets escaped, so the href survives verbatim and a text search would match this site writing about its own links — [the same fault](#a-2026-09-13-edit-layer) the review-layer guard already records, arriving a third time. Proved by injecting one beside three real faults: the three were reported by name, the documentation was not, and the count of links resolved moved by four rather than five.
+
+The contents list, the rail and the entry index never appear in it: they build their links at runtime from ids they have just read, so they cannot be wrong. What the gate sees is what a person typed. **864 of those resolve today**, and the number prints on every run, because a check that measured nothing looks exactly like a clean one.
+
+2026 · 13 September
+
 ## The header that says what a page may reach, and the hash that has to be generated
 
 Ryan asked how strict the Content-Security-Policy was, and whether tightening it would break the new editor. It had been one directive for months on a reason nobody had measured.
@@ -4741,7 +4761,7 @@ Replaced with a delimiter resolver using CommonMark’s flanking rule cut down t
 
 Label correctedAn open question about a 1922 printing had been bold to the end of its own paragraph
 
-In [what is unresolved](https://queering.earth/two-cohabitating-modes#what-is-unresolved), the item about whether “runts” survives into later printings of *Fifty New Poems for Children* was missing its closing `strong`. Its two siblings set the question in bold and the explanation in ordinary text; this one ran bold to the end. **Visible on the page since the sheet was mounted, and caught by a tag counter rather than by anybody reading it.**
+In [what is unresolved](https://queering.earth/two-cohabitating-modes#unresolved), the item about whether “runts” survives into later printings of *Fifty New Poems for Children* was missing its closing `strong`. Its two siblings set the question in bold and the explanation in ordinary text; this one ran bold to the end. **Visible on the page since the sheet was mounted, and caught by a tag counter rather than by anybody reading it.**
 
 CabinetMade to fail in three shapes before being believed
 
@@ -7096,7 +7116,7 @@ Reading No. 10 · [Corrected twice on mounting](https://queering.earth/changelog
 
 Why this cabinet has a sibling built on science: the fox and the hedgehog from Archilochus to Berlin to Gould, two public-domain animal poems that end in the same place, and the spiky profile the typology was never written about.
 
-The founding papers · [Corrected once on mounting and twice since](https://queering.earth/changelog#a-2026-09-11-balance)
+The founding papers · [Corrected once on mounting and three times since](https://queering.earth/changelog#a-2026-09-13-anchors)
 
 ### 9 September 2026
 
@@ -7553,7 +7573,7 @@ Helen Edgar, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-262 entries across 72 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+264 entries across 73 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
