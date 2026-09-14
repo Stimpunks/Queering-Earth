@@ -358,10 +358,21 @@ const idsByPage = new Map(
 const pageForPath = (p) =>
   p === '/' ? 'index.html' : p.replace(/^\//, '') + (p.endsWith('.html') ? '' : '.html');
 
+/* A NAMED TARGET THAT CANNOT BE READ IS A BROKEN RUN, NOT A CLEAN ONE.
+   This printed `SKIP  not found` and carried on, so a scoped run naming a file that
+   is not there — a typo, or the right filename on the wrong branch — reported
+   `PASS`, `0 problem(s)` and exit 0. That happened: a page was checked from a branch
+   it did not exist on and the gate certified it, 0 tags and all.
+   Same shape as check-contrast's and check-width's guard, and the same reasoning:
+   a page that measures nothing reports zero failures, which is indistinguishable
+   from a clean page in every other line of this output. Reported in its own block,
+   never mixed into the problem count, because it is not a fault in anybody's markup. */
+const unread = [];
+
 for (const file of targets) {
   const full = path.join(REPO, file);
   if (!fs.existsSync(full)) {
-    console.log(`  ${file.padEnd(42)} SKIP  not found`);
+    unread.push([file, 'not found']);
     continue;
   }
   const src = fs.readFileSync(full, 'utf8');
@@ -989,12 +1000,27 @@ console.log(
     `${totalProblems} problem(s)`
 );
 
+if (unread.length) {
+  console.error(`\n${unread.length} page(s) WERE NOT MEASURED. Nothing above counts for these:`);
+  for (const [f, why] of unread) console.error(`  ${f.padEnd(42)} ${why}`);
+  console.error(
+    'A page that measures nothing reports zero problems, which is indistinguishable\n' +
+      'from a clean page in every other line of this output.'
+  );
+}
+
 if (totalProblems) {
   console.log(
     gating
       ? `\nFAIL — ${totalProblems} silent restructure(s) on ${pagesWithProblems} page(s). The browser will not\n` +
           'error on these; it will quietly hand the reader a different document than the one\n' +
           'in the source. Fix the markup rather than styling around the result.'
+      : '\nRun with --check to make this gate a ship.'
+  );
+} else if (unread.length) {
+  console.log(
+    gating
+      ? `\nFAIL — ${unread.length} page(s) not measured; the run is incomplete.`
       : '\nRun with --check to make this gate a ship.'
   );
 } else {
@@ -1009,4 +1035,4 @@ if (totalProblems) {
   );
 }
 
-process.exit(gating && totalProblems ? 1 : 0);
+process.exit(gating && (totalProblems || unread.length) ? 1 : 0);
