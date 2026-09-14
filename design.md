@@ -233,3 +233,15 @@ A tool does not get a row on the label, because a byline is responsibility and a
 ## How it is built
 
 Static HTML files with no build step, one shared stylesheet, and a few small scripts that check the things we have got wrong before: markup that browsers silently rewrite, pages missing from the sitemap, and contrast measured on screen *and* under print emulation. Everything here is [on GitHub](https://github.com/Stimpunks/Queering-Earth).
+
+## Changing the words, without editing HTML
+
+There is no content management system here and there is not going to be one. The three that would otherwise fit — Decap, Sveltia, TinaCMS — are all editors over a *content model*, a set of files with named fields, and this site has none: a sheet carries a hundred or so hand-drawn shapes, its own foxing seed, its own stamp rotation, and a judgement about who made the thing it reads. There are no fields to put in a schema, which is the same reason stated on [what is settled](https://queering.earth/what-is-settled): the layout is the argument.
+
+What a contributor actually needs is smaller. This is a bookmark. Drag it to your bookmarks bar, then press it on any page here and the words become editable:
+
+[Edit this page](javascript:(function()%7Bvar%20s=document.createElement('script');s.src='https://queering.earth/edit.js';document.body.appendChild(s);%7D)();) Drag me to the bookmarks bar — or press me now, and this page becomes editable.
+
+Change what you like, press **Copy my edits**, and paste the result to whoever is going to apply it. **Nothing is saved to the site and nothing is sent anywhere** — there is no account here and the editor has none either. What you changed stays in your own browser until you paste it out, which [the privacy page](https://queering.earth/privacy#your-browser) describes as the one key it writes.
+
+**It refuses to edit some things, and that is the point of it.** Quotations, their captions and their citations are not editable, and it tells you so where you try. The failure this site is organised against is not an invented source but a *tightened* one — a sentence trimmed to fit with the attribution left attached — and a tool that let anybody reword a mounted quotation in two clicks would be a machine for producing exactly that. The accession stamp and the provenance line are refused in the same spirit: a record you can edit in a browser is not a record.

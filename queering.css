@@ -5706,3 +5706,35 @@ html.plain .qe-arrival-no { font-variation-settings: normal; }
   .qe-arrival-meta, .qe-arrival-kind, .qe-arrival-no,
   .qe-arrival-mend, .qe-arrival-mend--clean { color: #222; }
 }
+
+/* ── The bookmarklet, on the colophon ──────────────────────────────────────────
+ * A link you are meant to DRAG rather than follow, so it has to look grabbable and
+ * not like the prose links around it. Ink on card inside a ruled box: 15.26:1 in
+ * daylight and 13.39:1 in the drawer, both measured. Real padding takes the target
+ * past 44px rather than an ::after box, because it sits inline in a paragraph where a
+ * positioned overlay would cover the words beside it. */
+.qe-bookmarklet {
+  display: inline-block;
+  font-family: var(--qe-display);
+  font-size: 1rem;
+  color: var(--qe-ink);
+  background: var(--qe-card);
+  border: 1px solid var(--qe-rule);
+  border-radius: var(--qe-corner-b);
+  padding: 0.72rem 1.1rem;
+  text-decoration: none;
+  cursor: grab;
+}
+.qe-bookmarklet:hover,
+.qe-bookmarklet:focus { border-color: var(--qe-rust); }
+
+.qe-install { margin: var(--qe-space-4) 0; }
+.qe-install-hint {
+  display: inline-block;
+  margin-left: var(--qe-space-2);
+  font-size: 0.95rem;
+  color: var(--qe-moss);
+}
+
+/* Paper cannot be dragged to anything. */
+@media print { .qe-install { display: none; } }

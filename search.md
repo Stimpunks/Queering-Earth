@@ -324,12 +324,13 @@ Helen Edgar, 2026
   - [Borrowed plates](https://queering.earth/design#plates)
   - [Who reads, and who writes](https://queering.earth/design#who-writes)
   - [How it is built](https://queering.earth/design#built)
+  - [Changing the words, without editing HTML](https://queering.earth/design#editing)
 
 -
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-257 entries across 71 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+258 entries across 71 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

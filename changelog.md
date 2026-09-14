@@ -55,6 +55,14 @@ Nothing on any page loads it — a bookmarklet injects it, so a reader’s visit
 
 **The patch is decoded text and the first version claimed it was the file’s bytes.** `innerHTML` decodes entities, so a before-string matched nothing for any paragraph holding an apostrophe. Re-encoding cannot rescue it either: the sources are mixed — 1,300 raw em dashes beside 1,512 `&mdash;` — and no encoding reproduces a file that is not consistent with itself. So it says what it is, and tells whoever applies it to match on decoded text and stop if nothing matches exactly. Proved both ways before it was believed.
 
+MountedThe editor is distributed from [the colophon](https://queering.earth/design#editing), as something to drag
+
+A bookmark is only useful if somebody can install it, so it hangs at the foot of the colophon where “how this site is made” already lives. **A `javascript:` link runs on a click as well as surviving a drag**, so it is try-it-now and keep-it-later in one control, and the hint beside it says both.
+
+It loads from `queering.earth` whatever page it is pressed on, which means **it works on a draft host as well as the published site** — a contributor can edit a sheet that has not been mounted yet. Verified by pressing it on a page served from somewhere else entirely and watching the editor start.
+
+The section says what the editor refuses to touch and why, because that is the part worth publishing: a quotation, its caption and its citation are not editable, and neither is the accession stamp or the provenance line.
+
 Label corrected[The privacy policy](https://queering.earth/privacy) said “two values” and described seven
 
 Found while adding the editor’s key to it. The sentence had been right when it was written and wrong since the five reading settings arrived beside the two view controls; the list below it had grown and the count above it had not, and the paragraph after it still said “neither.” **A policy that miscounts what it describes is a policy that is wrong about you**, which is the reason this is a correction and not a tidy-up.
