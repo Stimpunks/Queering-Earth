@@ -35,7 +35,35 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Label corrected
 - Cabinet
 
-2026 · 13 September · latest
+2026 · 14 September · latest
+
+## Sheet No. 14, and a privacy page that was false by two
+
+A wall, recast from our sibling site’s reading of the same life — and a correction to [/privacy](https://queering.earth/privacy) that had nothing to do with it and was found on the way past.
+
+Mounted[Known and Felt and Seen](https://queering.earth/known-and-felt-and-seen), Sheet No. 14 — Dolly Parton, 1946–2026, read against Tressie McMillan Cottom
+
+**A wall rather than a reading, because the specimen is a person.** Nine slips in nine hands across forty-seven years — Lenora Ross in 1974, Parton herself five times between 1984 and 2021, Cottom three — and they do not agree. The second wall on the plate, after [No. 8](https://queering.earth/monotropa-uniflora).
+
+**The hinge is that weed is not a rank.** Taxonomy has no such category, because a weed is not a kind of plant but a verdict about a place, passed in a hand that is never the plant’s own. Set beside Cottom’s distinction between visibility and legibility — being a thing that is *supposed to exist* — it gives the sheet its whole argument: a weed is perfectly visible and entirely illegible.
+
+**Cottom’s critique sits inside the sheet rather than after it.** Her reading — that the drag was survivable because the ground under it was unmarked whiteness — is the sharpest thing written about Parton, and a determination slip that leaves out the awkward reading is not a kinder slip, only a less true one. The sheet does not resolve it and says so.
+
+**Our sibling site read the same life through physics and this one reads it through taxonomy.** Star Stuff’s [*No One Had to Qualify*](https://starstuff.earth/dolly-zine) turns on a star that cannot aim its light; this turns on a plant that cannot appeal its name. **The quotations were traced to their primaries for that zine and are not re-walked here** — Ryan’s call, recorded in the ledger, along with what this sheet adds that the zine does not.
+
+Three click-to-load recordings, one per instance of the argument. No new capability: the facade, the drawn poster and the one named origin were all already here.
+
+Label corrected[/privacy](https://queering.earth/privacy#the-embed) said there were three embedded recordings when there were five
+
+**The Glass and the Beethoven shipped with [Sheet No. 12](https://queering.earth/most-quiet-need) and were never added to the list.** The page went on naming three, which made a binding statement of practice false about its own subject for as long as that stood. It names all eight now, and says on its own face that two of them sat there unlisted, because quietly correcting a document like that one is the thing this cabinet refuses.
+
+**Nothing gates the count, and that is structural rather than an oversight.** `check-metadata.mjs` checks that every third-party *origin* our scripts can reach is named on that page — and one origin covers any number of videos, so a missing recording is invisible to it by construction. The list is kept by hand, which is the kind of list this register keeps warning about.
+
+Label corrected[The plate](https://queering.earth/the-plate) was counting its own kinds wrong
+
+It said *eight of the ten* readings and *one so far* for essays, against fourteen sheets with four essays on them. Counted off the plate, which is the authority: eight readings, four essays, two walls.
+
+2026 · 13 September
 
 ## A link that went nowhere, and the gate that now says so
 
@@ -2652,6 +2680,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [Every Day’s Most Quiet Need](https://queering.earth/most-quiet-need) Sheet No. 12
 
 ### [Held, Not Fixed](https://queering.earth/held-not-fixed) Sheet No. 13
+
+### [Known and Felt and Seen](https://queering.earth/known-and-felt-and-seen) Sheet No. 14
 
 ### [Find a word in the cabinet](https://queering.earth/search) the finding aid
 

@@ -7,7 +7,15 @@
     <description>Every page in the cabinet as it arrives — the sheets and the pages that are not sheets, newest first. The register's own accessions, including every correction, are a separate feed at https://queering.earth/register.xml. Generated from the pages themselves by tools/make-whats-new.mjs.</description>
     <language>en</language>
     <copyright>CC BY-SA 4.0</copyright>
-    <lastBuildDate>Sun, 13 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Known and Felt and Seen</title>
+      <link>https://queering.earth/known-and-felt-and-seen</link>
+      <guid isPermaLink="true">https://queering.earth/known-and-felt-and-seen</guid>
+      <pubDate>Mon, 14 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Wall · No. 14</category>
+      <description>Dolly Parton, 1946–2026: a weed is not a kind of plant but a verdict about a place, and sixty years spent handing out legibility without a test — read alongside Tressie McMillan Cottom on what made the drag affordable.</description>
+    </item>
     <item>
       <title>Held, Not Fixed</title>
       <link>https://queering.earth/held-not-fixed</link>

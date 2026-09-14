@@ -73,6 +73,10 @@ In accession order, which is the order they were mounted and not an order to rea
 
 [  Essay No. 13  Held, Not Fixed ](https://queering.earth/held-not-fixed)
 
+-
+
+[  Wall No. 14  Known and Felt and Seen ](https://queering.earth/known-and-felt-and-seen)
+
 The same run sits on the [front of the cabinet](https://queering.earth/#what-grows-here) with a sentence of gloss under each card. **Those sentences live in one place and this is not it.** Ten descriptions copied onto a second page are ten descriptions free to drift from the first, and the copy that drifts is never the one anybody is looking at. What this page has that the front does not is everything below.
 
 ## What a sheet is
@@ -86,13 +90,13 @@ So a sheet is not a summary, and it is not a review. It is one object and one re
 Three kinds so far, and the distinction is not decoration — it tells you what shape the argument on the sheet has.
 
 **[A reading](https://queering.earth/on-being-ill)**
-: Somebody else’s work, read in order and arriving somewhere. Eight of the ten. The specimen is theirs, the argument is ours, and the sheet ends somewhere it could not have started.
+: Somebody else’s work, read in order and arriving somewhere. Eight of the fourteen. The specimen is theirs, the argument is ours, and the sheet ends somewhere it could not have started.
 
 **[An essay](https://queering.earth/coming-to-terms)**
-: Ours, written here, signed. There is no specimen to hold apart from the label because the whole sheet is the label. One so far.
+: Ours, written here, signed. There is no specimen to hold apart from the label because the whole sheet is the label. Four so far.
 
 **[A wall](https://queering.earth/monotropa-uniflora)**
-: A chorus rather than a sequence: labelled slips in many hands, each signed, arguing by accumulation instead of by order. The form is borrowed from a herbarium sheet that has been in a drawer long enough to collect a stack of determination slips. The subject has to deserve it. One so far.
+: A chorus rather than a sequence: labelled slips in many hands, each signed, arguing by accumulation instead of by order. The form is borrowed from a herbarium sheet that has been in a drawer long enough to collect a stack of determination slips. The subject has to deserve it. Two so far.
 
 A Stimpunks zine wall works by unattributed declaration, and that is the one move this cabinet cannot make, because here the citation *is* the product. So a wall here is a chorus of *labelled* slips, and mixing the two would be the failure.
 

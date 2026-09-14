@@ -141,6 +141,10 @@ Every sheet mounted so far, numbered below in the order it was accessioned. [Abo
 
 [  Essay No. 13  Held, Not Fixed Helen Edgar, 2026 A shop, a herbarium sheet and a cabinet of curiosities — three places that hold what is lost without asking it to be fixed first. ](https://queering.earth/held-not-fixed)
 
+-
+
+[  Wall No. 14  Known and Felt and Seen Dolly Parton, 1946–2026, and Tressie McMillan Cottom A weed is not a kind of plant but a verdict about a place, and sixty years spent handing out the opposite verdict. ](https://queering.earth/known-and-felt-and-seen)
+
 The border is four flowers that were once a way of saying it without saying it: *violet*, *pansy*, *green carnation*, *lavender*. Gathered as a set by Sarah Prager in [*Four Flowering Plants That Have Been Decidedly Queered*](https://daily.jstor.org/four-flowering-plants-decidedly-queered/), JSTOR Daily, 29 January 2020.
 
 What follows will be made the way [Star Stuff](https://starstuff.earth/) is made — a piece at a time, in public, with the working-out left in, by [Helen Edgar](https://morerealms.com/) and the [Stimpunks Foundation](https://stimpunks.org/). Come back and watch it fill in.

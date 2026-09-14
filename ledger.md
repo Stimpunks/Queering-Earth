@@ -34,6 +34,28 @@ It is **not** a rule that Ryan's quote collection is unusable. A direct quotatio
 
 ## Verified
 
+### Sheet No. 14 — a zine's sourcing inherited rather than re-walked, and the reading built on top of it, read 14 September 2026
+
+**Quoted on:** [Known and Felt and Seen](https://queering.earth/known-and-felt-and-seen), Sheet No. 14.
+
+**THE PARTON QUOTATIONS WERE TRACED TO THEIR PRIMARIES FOR STAR STUFF AND ARE NOT RE-WALKED HERE.** This is a deliberate departure and it is Ryan's call, 14 September 2026: the same material was primary-sourced thoroughly for [*No One Had to Qualify*](https://starstuff.earth/dolly-zine), Stimpunks Zine No. 67, and re-reading it for a second site in the same house would be ceremony rather than verification. The trail is that zine's *Sources & what is ours*, which names the edition and the page for each. **What is new on this sheet is the reading, not the evidence.** The four quotations inherited that way are the 1984 *Interview* conversation with Andy Warhol; the *USA Today* remark on the response to *Travelin' Thru*; the *Billboard* remark of 2020, taken as Cottom quotes and reads it; and the two passages from *Dolly: My Life and Other Unfinished Business* (HarperCollins, 1994) at pp. 297–298, read in the Internet Archive scan.
+
+**Tressie McMillan Cottom, *The Dolly Moment: Why We Stan A Post-Racism Queen*, *essaying*, 25 February 2021 — re-read at the primary for this sheet, not inherited.** <https://tressie.substack.com/p/the-dolly-moment>. The post is free, so there was no reason not to, and all four quotations were matched against her own text character by character: the *stylized drag of a fallen Southern belle* sentence, the closing *knowing what we love does not diminish who we love, only how we choose to love them*, *a repertoire to triangulate the stigmatization of my blackness*, and *ever the artist of misperception*. A copy is in the SKS inbox. **The essay is not a takedown and the sheet says so**, because quoting only the sharp half of it would be the tightening this ledger exists to catch — she spent months on the piece and says in it what Parton gave her.
+
+**Tressie McMillan Cottom on legibility, *Why I Hate California*, *essaying*, 26 June 2021.** The passage distinguishing legibility from visibility — *a thing that exists but that is also supposed to exist* — is the hinge of the whole reading. **Read by Ryan in the post itself**, which is a subscriber post, and quoted here with the citation attached and his reading named, per this file's own standing rule: a direct quotation he transcribed from something he read, published with a citation to it, is a first-hand reading with the source named. Re-reading is an upgrade, not a precondition. The ellipsis on the sheet closes a gap of two sentences and is marked as ours.
+
+**Dolly Parton at Vanderbilt University Medical Center, 2 March 2021 — the re-tooled couplet she sang in the chair before her first dose.** Two lines, quoted briefly for commentary and criticism, and **no further lyric is reproduced** — the song underneath is in copyright and the sheet says so on its face. Sourced for Zine No. 67 along with the surrounding facts: the million dollars to Vanderbilt in April 2020, and Mark Denison, who led the research, on its role in the critical early stages.
+
+**The Lancet's retraction and the GMC erasure, both 2010.** Matters of public record, and on this sheet they are load-bearing rather than decorative: the whole point of the section is that a determination was formally withdrawn and went on working anyway. **The retracted paper is not cited, named or linked**, and that is deliberate — the sheet's argument is about the claim's persistence after withdrawal, and a citation would be the one thing that puts the old slip back into circulation.
+
+**Lenora Ross on the 1974 disc jockey convention in Nashville**, quoted at [Hillbilly-Music.com](https://hillbilly-music.com/artists/story/index.php?id=17894). A secondary source and named as one. It is on the sheet because it is the smallest instance of the sheet's argument and the only one in the voice of the person it happened to.
+
+**Emily Dickinson, *That Love is all there is* — J1765 in Thomas H. Johnson's numbering, Fr1747 in R. W. Franklin's. Public domain.** Mounted whole, four lines, because a poem cropped is the defect this cabinet is organised against. **The point of mounting it is that Parton misquotes it**, on p. 297, as *The only thing I know about love is that love is all there is* — which keeps the warmth and drops the epistemics. The sheet says plainly that this is an ordinary human thing to do to a sentence somebody loves, and does not use it to score a point.
+
+**THE ARGUMENT THIS SHEET INHERITS IS NAMED RATHER THAN ABSORBED.** The eligibility-criterion reading, the *a gate sorts as well as rations* argument, the observation about the Dickinson paraphrase, and the Nashville property correction are all Star Stuff's, from Zine No. 67. **What is this sheet's own** is the botanical turn: weed as a verdict rather than a rank, the determination slip as the instrument, and the pairing of those with Cottom's legibility distinction. That pairing came out of Ryan's own working note in the Stimpunks Knowledge System, not from any of the sources quoted.
+
+---
+
 ### Sheet No. 13 — a rhyme with no attribution at all, and a reading cited to a paper that does not make it, read 13 September 2026
 
 **Quoted on:** [Held, Not Fixed](https://queering.earth/held-not-fixed), Sheet No. 13.
