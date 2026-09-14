@@ -124,7 +124,12 @@ const AA_ONLY = process.argv.includes('--aa');
 const VIEWPORT = { width: 1280, height: 900 };
 
 import { launchChrome, withPage as withPageOnPort, evaluated, sleep, settle, resolveTargets } from './cdp.mjs';
-const withPage = (url, fn) => withPageOnPort(PORT, url, fn);
+/* PORT above is a PREFERENCE now, not a requirement — Star Stuff wants the same
+   three numbers and two checkouts cannot both have them. launchChrome may hand
+   back a different one, and every page in this run must be driven on THAT port;
+   closing over the constant is how a gate ends up talking to nothing. */
+let ACTIVE_PORT = PORT;
+const withPage = (url, fn) => withPageOnPort(ACTIVE_PORT, url, fn);
 
 /* REVEAL / UNREVEAL live in tools/reveal.mjs, because check-overlap.mjs needs the
  * identical intervention: it asks where the text is rather than what colour it is,
@@ -460,7 +465,8 @@ function detail(f) {
 async function main() {
   const files = resolveTargets(ROOT);
 
-  const { dispose } = await launchChrome(PORT, 'contrast');
+  const { dispose, port } = await launchChrome(PORT, 'contrast');
+  ACTIVE_PORT = port;
 
   const results = [];
   /* Pages that were not validly measured — a page that never settled, or one that

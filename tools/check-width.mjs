@@ -79,7 +79,12 @@ const FACES = [null, ...Object.values(
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PORT = 9414; // 9411 search index, 9412 contrast, 9413 overlap — one each, so they run together
-const withPage = (url, fn) => withPageOnPort(PORT, url, fn);
+/* PORT above is a PREFERENCE now, not a requirement — Star Stuff wants the same
+   three numbers and two checkouts cannot both have them. launchChrome may hand
+   back a different one, and every page in this run must be driven on THAT port;
+   closing over the constant is how a gate ends up talking to nothing. */
+let ACTIVE_PORT = PORT;
+const withPage = (url, fn) => withPageOnPort(ACTIVE_PORT, url, fn);
 
 /* 320 IS THE FLOOR AND IT IS NOT ARBITRARY: WCAG 1.4.10 asks that content reflow to
    320 CSS px without two-dimensional scrolling, which is 1280 at the 400% zoom the
@@ -165,7 +170,8 @@ const SET_FACE = (id) => '(() => {'
 async function main() {
   const files = resolveTargets(ROOT);
 
-  const { dispose } = await launchChrome(PORT, 'width');
+  const { dispose, port } = await launchChrome(PORT, 'width');
+  ACTIVE_PORT = port;
 
   const findings = [];
   const unread = [];

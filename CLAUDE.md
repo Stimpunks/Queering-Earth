@@ -1864,7 +1864,11 @@ Three things made twenty minutes out of six, and the runner removes all three.
 
 - **THE THREE CHROME GATES RUN AT ONCE, WHICH THEY WERE ALWAYS BUILT FOR.** They take
   ports 9412, 9413 and 9414 for exactly this reason and `cdp.mjs` has said so since it was
-  written; running them one after another was never required by anything. Full sweep in
+  written; running them one after another was never required by anything. **Those three
+  numbers are Star Stuff's too** — inherited when the gates were ported, comments included —
+  so they are a *preference* as of 2026-09-14 and a busy one is stepped over in hundreds:
+  9412, 9512, 9612. Disjoint ladders, so the three gates never chase each other onto one
+  another's ports. Full sweep in
   parallel is **4:47 end to end**, because the two cheap gates finish inside width's shadow.
 - **THE SWEEP IS SCOPED TO THE PAGES THAT MOVED.** All three already take positional file
   arguments through `resolveTargets` — nothing had to be written for this, it had to be
@@ -2004,8 +2008,9 @@ with no sign whatsoever.** Five such orphans were up, one per interrupted probe,
 temp profiles behind them.
 
 `cdp.mjs`'s `launchChrome()` is the one place a browser is opened here now, and it refuses
-two ways a sweep can happen in something we did not start: **the port must be free before the
-spawn** — if anything answers, the run stops and names what answered rather than driving it —
+two ways a sweep can happen in something we did not start: **the port is chosen rather than
+assumed, and the listener is then proved to be ours** — walked up its parent chain to the child
+we spawned, so an endpoint that is not ours stops the run —
 and **the process we spawned must still be alive when the endpoint answers**, because the old
 poll swallowed every fetch failure and fell out of its loop silently, so a Chrome that died on
 launch produced a sweep of nothing rather than an error. It also removes the temp profile,
