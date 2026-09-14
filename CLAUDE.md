@@ -45,8 +45,8 @@ it would falsify this file the way renaming an old accession would falsify the r
 the `author` in a JSON-LD block, whose reading a sheet is. It usually does not, and a session
 that opens by asking has spent the first thing it says on plumbing.
 
-**Neither of them should have to type a git command.** The three draft skills run git
-themselves and `tools/check.mjs` runs the whole sweep; the block at the end of an ordinary
+**Neither of them should have to type a git command.** `sync` pulls and rebuilds, the three
+draft skills run git themselves, and `tools/check.mjs` runs the whole sweep; the block at the end of an ordinary
 session is a convenience for a one-file edit, not the workflow. **`ONBOARDING.md` is the way
 in** — a new collaborator opens it in Claude Code and it walks the whole path, from clone to
 first draft.

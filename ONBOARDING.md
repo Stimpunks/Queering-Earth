@@ -38,17 +38,22 @@ Then open the address it prints. **Do not open the HTML files directly** — eve
 
 **You never write HTML and you never type a git command.** You say what a sheet is, what it argues, and which words are quoted; the session writes the markup, runs the generators, runs the checks, and handles every branch and commit. That is the whole arrangement, and it is why this is worth setting up at all.
 
-Five skills do the recurring work. You invoke them by describing what you want, not by name.
+Six skills do the recurring work. You invoke them by describing what you want, not by name.
 
 | skill | say something like |
 |---|---|
+| **sync** | *"Catch me up"* — pulls what Ryan pushed, rebuilds everything derived, and says what landed |
 | **start-draft** | *"Start a draft on Bishop's 'One Art'"* — puts a page on the drafts branch and prints a review URL |
 | **save-draft** | *"Save the draft"* — commits, pushes, and the same URL updates |
 | **publish-draft** | *"Publish the draft"* — accessions the sheet and puts it live |
 | **credit-source** | *"Who actually said this?"* — verifies an attribution against the primary and logs it |
 | **sks-search** | *"Have we written about this before?"* — searches our own library before the open web |
 
-**A sheet's normal life:** start a draft, work on it, send the review URL to the other collaborator, they annotate it in the page itself and send the notes back, save, repeat, publish. The review layer is built into the draft — every block grows a **Note** button, the notes live only in that reader's own browser, and **Copy my notes** hands them back as plain text. No account, no pull request, nothing to install.
+**Sync first, always.** Two people push here, so your checkout is a guess until you ask. It is
+also the one command that repairs what a plain pull leaves broken — every generated file still
+describing the site as it was before the other person's sheet landed.
+
+**A sheet's normal life:** sync, start a draft, work on it, send the review URL to the other collaborator, they annotate it in the page itself and send the notes back, save, repeat, publish. The review layer is built into the draft — every block grows a **Note** button, the notes live only in that reader's own browser, and **Copy my notes** hands them back as plain text. No account, no pull request, nothing to install.
 
 ## The three things this house cares about most
 

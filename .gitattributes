@@ -1,0 +1,50 @@
+# .gitattributes — Queering Earth
+#
+# Two rules, both of which exist because this repository gained a second contributor on
+# 2026-09-13. Before that there was one checkout, so there were no merges, no second
+# machine to disagree with the first, and neither rule could ever have fired.
+
+# ---------------------------------------------------------------------------
+# 1. NEVER NORMALISE LINE ENDINGS. This is not a style preference.
+#
+# The gates here verify derived files by REGENERATING THEM INTO MEMORY AND COMPARING:
+# `check-metadata.mjs` reports a file that "is not what the generator writes today", and
+# `make-csp.mjs --check` compares a hash of the inline snippet in every page's head.
+# Git's `text=auto` rewrites line endings on checkout, per platform — so a file written
+# on one machine and checked out on another could differ by exactly the bytes those gates
+# compare, and every one of them would report stale on a tree nobody had touched.
+#
+# A stale CSP hash does not warn. The browser simply refuses the inline snippet, and every
+# reader who asked for the cabinet or for plain view is shown the other thing before the
+# stylesheet catches up. Store and check out as-is.
+* -text
+
+# ---------------------------------------------------------------------------
+# 2. `search-index.json` IS 1.5 MB ON ONE LINE, and git must not try to merge it.
+#
+# `tools/make-search-index.mjs` writes it from the `main` landmark of all 27 pages, as one
+# line. A textual three-way merge of one 1.5 MB line is not a merge: git either produces a
+# conflict nobody can read or — worse — splices two JSON documents into one that parses
+# and is wrong. That is a finding aid quoting sentences from a page that no longer says
+# them, on the one page of this site whose whole promise is that a quotation is shown
+# whole or not at all.
+#
+# `-merge` makes git refuse and leave the conflict standing; `-diff` stops it rendering a
+# 1.5 MB line as a diff. The resolution is never by hand:
+#
+#     git checkout --ours search-index.json   # either side; both are about to be replaced
+#     node tools/check.mjs                    # regenerates all five, in dependency order
+#     git add search-index.json
+#
+# THE SAME REASONING COVERS EVERY OTHER DERIVED FILE — llms.txt, llms-full.txt, feed.xml,
+# register.xml, the generated blocks of whats-new.html, ledger.html and what-is-settled.html,
+# the CSP block in _headers, and the .md sibling of every page. They merge legibly, so they
+# are left alone here, but a derived file is a COPY: two copies disagreeing is settled by
+# asking the thing they are copies of, never by reading the diff.
+#
+# THE TRAP IS THAT A .md IS DERIVED ONLY IF A PAGE OF THAT NAME EXISTS. `ATTRIBUTIONS.md`,
+# `DECISIONS.md`, `CLAUDE.md`, `README.md` and `ONBOARDING.md` are SOURCES, and
+# `ATTRIBUTIONS.md` is the one that generates `/ledger`. Resolving it as derived drops a
+# draft's credit rows while every page still reads perfectly, which is this house's
+# characteristic failure arriving through a merge nobody looked at.
+search-index.json -merge -diff linguist-generated=true
