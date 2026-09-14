@@ -56,9 +56,26 @@ const git = (...args) =>
 
 const addressOf = (f) => (f === 'index.html' ? '/' : '/' + f.replace(/\.html$/, ''));
 
+const PROJECT = 'queering-earth';
+/* Netlify's own limit, from its branch-deploy dialog: "Your project name and branch name
+ * combined have a character limit of 61." The subdomain is <branch>--<project>, so the
+ * project eats 14 of it and `draft-` another 6 — leaving 39 characters for a slug.
+ * `a-waste-garden-flowering-at-its-will` would be 36, so the real sheet names here fit,
+ * but not by a wide margin. A branch over the limit gets no deploy URL, which would look
+ * exactly like the branch simply not building. */
+const LABEL_LIMIT = 61;
+
 /** Netlify's branch subdomain: every run of non-alphanumerics becomes one dash. */
-export const hostFor = (branch) =>
-  'https://' + branch.replace(/[^A-Za-z0-9]+/g, '-').replace(/^-|-$/g, '') + HOST_SUFFIX;
+export const slugFor = (branch) =>
+  branch.replace(/[^A-Za-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+export const hostFor = (branch) => 'https://' + slugFor(branch) + HOST_SUFFIX;
+
+/** Does this branch name fit in a Netlify subdomain? */
+export function labelFits(branch) {
+  const label = `${slugFor(branch)}--${PROJECT}`;
+  return { ok: label.length <= LABEL_LIMIT, length: label.length, limit: LABEL_LIMIT, label };
+}
 
 /** Every draft branch, local or on the remote, deduplicated. */
 export function draftBranches() {
@@ -72,6 +89,34 @@ export function draftBranches() {
     }
   }
   return [...out].sort();
+}
+
+/**
+ * Does this branch carry the branch-only noindex?
+ *
+ * THE ONE RISK A `draft/*` WILDCARD LEAVES OPEN. Netlify can deploy every branch under a
+ * prefix, which removes the per-draft setup step — but it will then also deploy a
+ * `draft/…` branch somebody cut from `main` instead of from `drafts`, and that branch has
+ * no `X-Robots-Tag: noindex`. Its deploy would be a fully crawlable copy of the published
+ * site, live, with nothing anywhere looking wrong.
+ *
+ * The header cannot be scoped by host — `_headers` has no host matching and
+ * `netlify.toml` headers are not context-specific — so the only defence is to look. This
+ * reads the branch's own `_headers`, finds the rule whose pattern is `/*`, and checks it.
+ * `main`'s `/*` block must NOT have it, which is what makes this a real test rather than a
+ * string count: main carries a `/drafts/*` noindex too, and counting would pass either.
+ */
+export function hasBranchNoindex(branch) {
+  let raw = '';
+  try { raw = git('show', `${branch}:_headers`); } catch { return false; }
+  let inGlobal = false;
+  for (const line of raw.split('\n')) {
+    const bare = line.replace(/#.*$/, '');
+    if (!bare.trim()) continue;
+    if (/^\S/.test(bare)) { inGlobal = bare.trim() === '/*'; continue; }
+    if (inGlobal && /^\s*X-Robots-Tag\s*:\s*noindex/i.test(bare)) return true;
+  }
+  return false;
 }
 
 /** The draft page on a branch: the root page carrying the marker. */
@@ -214,6 +259,16 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     console.log(`  branch    ${b}`);
     console.log(`  page      ${page ?? '(none carrying the draft block)'}`);
     if (page) console.log(`  read it   ${hostFor(b)}${addressOf(page)}`);
+    if (!hasBranchNoindex(b))
+      console.log(`  DANGER    this branch has no X-Robots-Tag: noindex on /* in _headers, so its\n` +
+                  `            deploy is a CRAWLABLE COPY OF THE PUBLISHED SITE. It was cut from\n` +
+                  `            main rather than from ${BASE}. Fix it before anything is pushed:\n` +
+                  `              git switch ${b} && git checkout ${BASE} -- _headers && git commit -m "Take the branch noindex" && git push`);
+    const fit = labelFits(b);
+    if (!fit.ok)
+      console.log(`  WARNING   the Netlify subdomain would be ${fit.length} characters and the ` +
+                  `limit is ${fit.limit} — this branch gets no deploy URL, which looks exactly ` +
+                  `like it simply never built. Rename it shorter.`);
     console.log();
   }
 }

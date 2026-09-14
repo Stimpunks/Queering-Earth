@@ -621,11 +621,13 @@ the first run. Verified with a temp directory before anything was written. **Che
 before adding any page whose slug matches a repo-root file.**
 
 **Run the generators in order: `make-records` → `make-whats-new` → `make-search-index` →
-`make-markdown`.**
+`make-markdown` → `make-csp`.**
 The record pages are an input to the other two, and `search.html`'s manifest is an input
 to its own `.md`. `check-metadata.mjs` checks them in that order for the same reason —
 otherwise a stale record page reports as a stale `.md`, which is the symptom and points
-at the wrong tool.
+at the wrong tool. **`make-csp` is last** for the same argument one step out: it hashes the
+inline snippet in every page's head, so it must run after anything that can rewrite a page,
+and `make-records` and `make-whats-new` both do.
 
 **`tools/html.mjs` and `tools/pages.mjs` are shared, and that is the point of them.**
 **`check-markup.mjs` was not using the shared one and grew a third entity table** — six
@@ -788,6 +790,61 @@ because `search-index.json` is reached from `queering-search.js` and appears in 
 any page — an HTML-only scan would have missed the very file that prompted the gate. **A new
 asset needs a line in one of the two lists**; the gate fails on one in neither, which is the
 reminder. `--live` probes the edge and checks the precedence model rather than the policy.
+
+### The policy that says what a page may reach is generated, and the hash is why
+
+`_headers` sends a Content-Security-Policy written by **`tools/make-csp.mjs`** between
+markers, and **the reason it is generated rather than typed is the one hash in it**. Every
+page runs an inline snippet before first paint — the one that applies the stored ground and
+the stored view — and that snippet **lists the nine typefaces the picker offers**, so
+`make-fonts.mjs` narrowing the picker changes it. A hand-kept hash would go stale in the
+same commit as the change that invalidated it.
+
+**A STALE HASH DOES NOT WARN.** The browser simply refuses the snippet, on every page, and
+every reader who asked for the cabinet or for plain view is shown the other thing before the
+stylesheet catches up — the exact failure the before-first-paint rule exists to prevent,
+arriving silently and visible only to somebody who had a preference stored and was looking
+for it. `check-cache.mjs` shells out to `make-csp.mjs --check` for that reason, and that gate
+was proved both ways before it was believed.
+
+**This header carried `frame-ancestors 'none'` and nothing else until 2026-09-13**, on the
+stated grounds that a `script-src` would kill the snippet. That was never measured. Measured
+when the question was reopened: **one executable inline script on the site, byte-identical on
+all 29 pages**, so one hash covers everything — and the 28 JSON-LD blocks need none, because
+**a data block is never executed** and hashing them would have hidden the hash that matters
+among twenty-eight that do nothing.
+
+- **`style-src` keeps `'unsafe-inline'`, and that is not laziness.** 1,299 inline `style=`
+  attributes carry each sheet's foxing seed, its stamp rotation and its card colours, and
+  **CSP hashes do not cover style ATTRIBUTES**, only `<style>` elements. The alternative is
+  not a stricter policy, it is deleting the per-page palette. Script is the valuable target
+  and it is fully locked.
+- **`frame-src` names the one embed**, which is the click-to-load recording at the foot of
+  the home page. Same origin the privacy page names, and for the same reason.
+- **Proved in a browser before it shipped, both ways.** The policy was pasted into a copy of
+  the home page as a `meta` tag and loaded with a preference stored: the snippet ran and the
+  cabinet came up. The same copy with one character changed in the hash refused it, **and
+  Chrome's own message named the hash the generator had computed** — the browser confirming
+  the arithmetic rather than us confirming it.
+
+**THE POLICY BROKE THE TRY-IT-NOW PATH ON `/design`, AND THAT WAS MEASURED RATHER THAN
+GUESSED.** The bookmarklet hung there as an `<a href="javascript:…">` that could be dragged
+*or* pressed where it hung. Under this policy the press is refused — Chrome: *Running the
+JavaScript URL violates the following Content Security Policy directive* — because **a hash
+does not apply to a `javascript:` navigation** without `'unsafe-hashes'`. Proved both ways on
+a local copy: the guarded page refuses it, the unguarded one starts the editor.
+
+**`'unsafe-hashes'` was refused and the words were changed instead.** Re-opening
+`javascript:` navigation site-wide to buy back one convenience on one page is a bad trade on
+a site with no user input to protect and a policy whose whole value is that it has no
+exceptions. `/design` now says drag it, and says why in a sentence a contributor can act on.
+
+**A BOOKMARK IS DIFFERENT FROM A LINK, AND THAT DIFFERENCE IS THE FEATURE.** A bookmarklet is
+run by the browser at the reader's gesture from outside the document, so the page's policy
+does not reach it; the **script it injects does** fall under `script-src`, which is why the
+bookmarklet loads `location.origin + '/edit.js'` rather than naming this site — `'self'` on a
+draft host means the draft host. **Nothing here gates the exemption itself**, and it is the
+one part of this policy that wants a press on a real bookmarks bar after a deploy.
 
 ### Python touches pixels; Node does everything else
 
@@ -1523,7 +1580,21 @@ shared branch is**, not errors anybody made.
 `X-Robots-Tag: noindex` block in `_headers`, which must never reach `main`, and
 `review-practice.html`. **Cutting a draft branch from `main` instead would produce a branch
 deploy that is a fully crawlable copy of the published site**, which is why the cut is from
-`drafts` and why Netlify must list branches individually rather than deploying "all".
+`drafts`.
+
+**NETLIFY DEPLOYS `draft/*` AS A WILDCARD, AND THE PREFIX IS DOING SAFETY WORK.** One entry
+covers every draft branch: nothing to add when a draft starts, nothing to remove when it is
+published and the branch deleted — the deploy goes with it. **"All branches" is still
+refused**, because it would deploy any branch at all, including one cut from `main` with no
+noindex.
+
+**THE WILDCARD LEAVES EXACTLY ONE HOLE AND IT IS GUARDED.** A `draft/…` branch cut from
+`main` rather than from `drafts` would deploy without the noindex — a fully crawlable copy
+of the published site, live, with nothing anywhere looking wrong. The header cannot be
+scoped by host, so the only defence is to look: `tools/draft.mjs` reads each draft branch's
+own `_headers`, finds the rule whose pattern is `/*`, and reports **DANGER** with the fix if
+it is missing. It is a real test rather than a string count, because `main` carries a
+`/drafts/*` noindex of its own and counting would pass either.
 
 **Drafts live at the root of their branch, never in a folder on `main`.** A `drafts/` folder
 was measured and it works mechanically — every generator and gate reads `readdir(ROOT)`
@@ -1531,6 +1602,15 @@ non-recursively, so a subdirectory is invisible with no exclusion lists to keep 
 was refused for two reasons that are not about plumbing: it would put unreviewed
 attributions on **queering.earth** itself, unlisted but public; and a page one directory
 down needs `../queering.css`, so it does not render what will ship.
+
+**TWO NETLIFY FACTS THAT LOOK LIKE BROKEN SETUPS.** Neither is a fault in this repo and
+both cost a round trip. **A branch is only built on a push made AFTER it is added to the
+deploy list** — a branch pushed first and added second shows *No deploys found* with
+nothing wrong anywhere; an empty commit is the nudge. And **the subdomain has a 61-character
+limit**, `<branch>--queering-earth`, of which the project name and the `draft-` prefix take
+twenty — leaving **39 for a slug**. `a-waste-garden-flowering-at-its-will` is 36, so real
+sheet names fit and not by much. `tools/draft.mjs` warns when a branch is over; a branch
+over the limit gets no deploy URL, which looks exactly like one that never built.
 
 **THE PER-BRANCH MODEL MADE THE TOOLING SIMPLER, NOT HARDER.** `scope` used to derive
 ownership by commit archaeology — a file belongs to this draft if a commit that touched its
@@ -1622,6 +1702,44 @@ rather than trust to memory. Nothing gates it; the live probe would be
 reach a branch host — no `location:` — which is what it looked like it should do and had
 never been checked.
 
+### Changing words without editing HTML is `edit.js`, and it is not a CMS
+
+**Asked on 2026-09-13: could Decap, Sveltia or TinaCMS work here?** No, and for one reason
+shared by all three — they are git-backed CMSes over a **content model**, collections of
+files with named fields, and this site has none. Measured rather than asserted: a sheet
+carries **80 to 120 hand-drawn SVG elements, 8 to 13 authored section ids, 42 to 72 inline
+style attributes** seeding its own foxing and stamp rotation, and JSON-LD whose
+`about.author` is an editorial judgement about who made the thing being read. There are no
+fields to put in a schema. Tina additionally requires React and cannot run on plain static
+HTML at all; Decap has a standing issue where a file collection with an `.html` extension
+is not editable and the same file renamed `.md` works.
+
+**`DECISIONS.md` now rests on reason 1 alone.** Reason 3 was struck on the 12th; reason 2
+said Netlify Identity's git-gateway was being sunset and **Netlify reversed that on
+19 February 2026** — Identity continues. The one remaining leg is the one that was always
+doing the work.
+
+**`edit.js` is the smaller thing the question was really asking for.** Click a paragraph,
+change the words, press *Copy my edits*, paste the patch to somebody who applies it.
+
+- **NOTHING IS SHIPPED TO READERS.** No page includes it; a bookmarklet injects it. A normal
+  visit fetches nothing extra and no page markup changes, which matters on a site that
+  self-hosts its fonts to avoid one third-party request.
+- **IT CANNOT SAVE, AND THAT IS THE DESIGN.** Saving from a browser needs a token in the
+  page, which is the account problem the CMS question was trying to avoid.
+- **WHAT IT REFUSES TO EDIT IS THE IMPORTANT PART.** Quotations, captions and citations are
+  not editable, and the page says why where you try. This site's characteristic failure is
+  a **tightened** source, not an invented one; a tool that let anybody reword a mounted
+  quotation in two clicks would be a machine for producing exactly that. The stamp and the
+  provenance line are refused too — a record you can edit in a browser is not one.
+- **THE PATCH IS DECODED TEXT, NOT THE FILE'S BYTES, AND THE FIRST VERSION CLAIMED
+  OTHERWISE.** `innerHTML` decodes entities, so a before-string matched nothing for any
+  paragraph containing `&rsquo;`. Re-encoding cannot fix it either, because **the sources
+  are mixed**: 1,300 raw em dashes beside 1,512 `&mdash;`, 12 raw right quotes beside 1,579
+  `&rsquo;`. No encoding reproduces a file that is not consistent with itself. So the patch
+  says what it is and tells the applier to match on decoded text and **stop** if there is no
+  exact match. Proved both ways: byte-exact finds nothing, decoded finds exactly one block.
+
 ## The checks
 
 Run before shipping. All nine are browser-free or Chrome-only; nothing needs `npm install`,
@@ -1635,7 +1753,7 @@ node tools/check.mjs --all    # the same, over all 27 pages
 ```
 
 **Written on 2026-09-12 because shipping a move of one block inside one page took over
-twenty minutes.** Timed afterwards: the four generators are 4.8s and the six offline gates
+twenty minutes.** Timed afterwards: the five generators are 4.9s and the six offline gates
 5.6s together, `check-overlap` is 40s, `check-contrast` 53s, and **`check-width` is 4:22 —
 three quarters of the bill**, because it renders 27 pages × 10 typefaces × 4 widths × 2
 papers. Nothing that is not Chrome costs ten seconds.
@@ -1677,7 +1795,7 @@ built, and whenever the answer matters more than the minute.
 Regenerate first, in this order — `check-metadata.mjs` fails on any of them being stale:
 
 ```bash
-node tools/make-records.mjs && node tools/make-whats-new.mjs && node tools/make-search-index.mjs && node tools/make-markdown.mjs
+node tools/make-records.mjs && node tools/make-whats-new.mjs && node tools/make-search-index.mjs && node tools/make-markdown.mjs && node tools/make-csp.mjs
 ```
 
 ```bash
@@ -1686,7 +1804,7 @@ node tools/check-sitemap.mjs --check     # every page listed once, every entry r
 node tools/check-contrast.mjs --check   # 7:1 in BOTH grounds and under print emulation, two tiers
 node tools/check-addresses.mjs          # one address per page: a forced 301! per .html twin
 node tools/check-metadata.mjs           # derived files current, JSON-LD agreeing, credit correct
-node tools/check-cache.mjs              # no markup-coupled asset outliving the markup
+node tools/check-cache.mjs              # no markup-coupled asset outliving the markup, CSP current
 node tools/check-overlap.mjs --check    # no text on text, on screen and on paper, nothing clipped
 node tools/check-card-order.mjs --check # every grid ascends, every card agrees with the plate
 node tools/check-width.mjs             # nothing scrolls sideways, in any typeface, screen or paper

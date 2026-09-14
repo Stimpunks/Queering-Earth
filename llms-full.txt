@@ -3265,7 +3265,11 @@ Paul Klee kept a herbarium of his own for ten years, from 1920 to 1930, across t
 
 Frontispiece, [*Museum Wormianum*](https://www.biodiversitylibrary.org/page/51143811) (Leiden: ex officina Elseviriorum, 1655). Engraved by G. Wingendorp. Public domain, digitised by the [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/) from the copy at Smithsonian Libraries.
 
-Long before natural history collections were sorted into their proper drawers, cabinets of curiosities held the real and the mythical side by side, often with no need to settle which was which. Ole Worm kept what he had been sold as a unicorn horn, doubted it enough to go looking for proof, and in 1638 matched it to a narwhal’s skull. Even once he was right, the courts of Europe went on prizing narwhal tusks as unicorn horns for a long while after, because the wonder of the thing had outgrown its label.
+Long before natural history collections were sorted into their proper drawers, cabinets of curiosities held the real and the mythical side by side, often with no need to settle which was which.
+
+[Ole Worm](https://en.wikipedia.org/wiki/Ole_Worm) (1588–1654) kept one of them. He was a Danish physician and antiquary who taught Greek, Latin, physics and medicine at Copenhagen, served as physician to Christian IV, and spent years reading runestones. The room in the engraving above is his own: the collection he kept at home, catalogued after his death as *Museum Wormianum*.
+
+He kept what he had been sold as a unicorn horn, doubted it enough to go looking for proof, and in 1638 matched it to a narwhal’s skull. Even once he was right, the courts of Europe went on prizing narwhal tusks as unicorn horns for a long while after, because the wonder of the thing had outgrown its label.
 
 ![A woodcut of a narwhal skull seen from above, drawn in fine hatching. The skull is broad and pitted at the back and narrows towards the snout; from its left side a single long tapering tusk runs the width of the page, its surface cut with the close diagonal lines of a spiral. Text from the other side of the leaf shows faintly through the paper.](images/worm-1655-museum-wormianum-narwhal-skull-p283.jpg)
 
@@ -4315,6 +4319,20 @@ A tool does not get a row on the label, because a byline is responsibility and a
 
 Static HTML files with no build step, one shared stylesheet, and a few small scripts that check the things we have got wrong before: markup that browsers silently rewrite, pages missing from the sitemap, and contrast measured on screen *and* under print emulation. Everything here is [on GitHub](https://github.com/Stimpunks/Queering-Earth).
 
+## Changing the words, without editing HTML
+
+There is no content management system here and there is not going to be one. The three that would otherwise fit — Decap, Sveltia, TinaCMS — are all editors over a *content model*, a set of files with named fields, and this site has none: a sheet carries a hundred or so hand-drawn shapes, its own foxing seed, its own stamp rotation, and a judgement about who made the thing it reads. There are no fields to put in a schema, which is the same reason stated on [what is settled](https://queering.earth/what-is-settled): the layout is the argument.
+
+What a contributor actually needs is smaller. This is a bookmark. Drag it to your bookmarks bar, then press it on any page here and the words become editable:
+
+[Edit this page](javascript:(function()%7Bvar%20s=document.createElement('script');s.src=location.origin+'/edit.js';document.body.appendChild(s);%7D)();) Drag me to the bookmarks bar. Pressing me where I hang does nothing, and the paragraph below says why.
+
+**It has to be in your bookmarks, and that is this site’s own security policy talking.** The header every page here is served with refuses to run a script that arrives from a link — which is most of what the policy is for, and it does not make an exception for ours. A bookmark is different: your browser runs it because *you* pressed it, from outside the page, so the page’s policy has no say. That is the whole reason this is a thing to drag rather than a button to click.
+
+Change what you like, press **Copy my edits**, and paste the result to whoever is going to apply it. **Nothing is saved to the site and nothing is sent anywhere** — there is no account here and the editor has none either. What you changed stays in your own browser until you paste it out, which [the privacy page](https://queering.earth/privacy#your-browser) describes as the one key it writes.
+
+**It refuses to edit some things, and that is the point of it.** Quotations, their captions and their citations are not editable, and it tells you so where you try. The failure this site is organised against is not an invented source but a *tightened* one — a sentence trimmed to fit with the attribution left attached — and a tool that let anybody reword a mounted quotation in two clicks would be a machine for producing exactly that. The accession stamp and the provenance line are refused in the same spirit: a record you can edit in a browser is not a record.
+
 
 ---
 
@@ -4351,6 +4369,66 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 13 September · latest
 
+## The header that says what a page may reach, and the hash that has to be generated
+
+Ryan asked how strict the Content-Security-Policy was, and whether tightening it would break the new editor. It had been one directive for months on a reason nobody had measured.
+
+CabinetEleven directives where there had been one
+
+`\_headers` had carried `frame-ancestors ‘none’` and nothing else since the header shipped, with a comment saying a `script-src` would kill the snippet every page runs before first paint. **That was a plausible reason nobody had checked.** Counted instead: **one executable inline script on the site, byte-identical on all twenty-nine pages**, so a single hash covers every page. The twenty-eight JSON-LD blocks need none — a data block is never executed, and hashing them would have buried the one hash that matters among twenty-eight that do nothing.
+
+What is locked now: scripts to this origin and that one hash, no `eval`, no inline handlers, no plugins, no base tag, no form submission anywhere, and frames only from the one embed the privacy policy already names. **`style-src` keeps `‘unsafe-inline’` and that is not laziness** — 1,299 inline `style` attributes carry each sheet’s own foxing seed, stamp rotation and card colours, and **a CSP hash does not cover a style attribute**, only a `<style>` element. The alternative was not a stricter policy; it was deleting the per-page palette.
+
+Cabinet`tools/make-csp.mjs`, because the hash cannot be kept by hand
+
+The snippet it hashes **lists the nine typefaces the picker offers**, so narrowing the picker changes the hash in the same commit — and **a stale hash does not warn.** The browser simply refuses the snippet on every page, and every reader who asked for the cabinet or for plain view is shown the other thing before the stylesheet catches up: the exact failure the before-first-paint rule exists to prevent, arriving silently and visible only to somebody who had a preference stored and was looking for it. So the policy is written between markers by a tool, `check-cache.mjs` fails when the header and the pages disagree, and the generator runs **last** of the five, after everything that can rewrite a page.
+
+**Proved in a browser before it shipped, both ways.** The policy went into a copy of the home page as a `meta` tag with a preference stored: the snippet ran and the cabinet came up. The same copy with one character changed in the hash refused it — **and Chrome’s own message named the hash the generator had computed**, which is the browser confirming the arithmetic rather than us confirming it. The gate was made to fail and then to pass the same way.
+
+Label correctedThe bookmarklet named this site by name, where it should have asked where it was standing
+
+It loaded the editor from `queering.earth` written out, which worked everywhere because nothing constrained it. **Under `script-src ‘self’` that breaks on exactly the host it was built for** — a draft, where a contributor reads a sheet that has not been mounted. It asks for `location.origin` now, so it fetches the editor from whatever site the reader is on.
+
+A bookmarklet’s own `javascript:` run is the browser acting on your gesture from outside the page, so the page’s policy does not reach it; **the script it injects does**, which is the whole of the fix. That exemption is the one part of this policy nothing here can gate, and it wants a press on a real bookmarks bar after a deploy.
+
+**The same policy refused the try-it-now press on [the colophon](https://queering.earth/design#editing), and that was measured rather than guessed.** The bookmark hung there as a link you could drag *or* press where it hung, and a hash does not apply to a `javascript:` navigation without `‘unsafe-hashes’`. Re-opening that site-wide to buy back one convenience on one page is a bad trade on a site with no user input to protect, so the words changed instead: the page says drag it, and says why. A contributor who reads that sentence learns something true about the site rather than being told a rule.
+
+2026 · 13 September
+
+## A way to change words without editing HTML, and a policy that had been miscounting itself
+
+Ryan asked whether Decap, Sveltia or TinaCMS would work here. None of them can, and the reason turned out to be measurable.
+
+CabinetNo CMS fits, because there is no content model to fit one to
+
+All three are git-backed editors over collections of files with named fields. **A sheet here carries eighty to a hundred and twenty hand-drawn SVG elements, eight to thirteen authored section ids, forty to seventy inline style attributes seeding its own foxing and stamp rotation, and JSON-LD whose `about.author` is a judgement about who made the thing being read.** There are no fields to put in a schema. That is [the standing reason](https://queering.earth/what-is-settled) — the layout is the argument — stated as a measurement rather than a conviction.
+
+**The deferral now rests on one leg.** Its third reason was struck yesterday; its second said Netlify Identity’s git-gateway was being sunset, and Netlify reversed that on 19 February 2026. The remaining reason is the one that was always carrying it.
+
+Cabinet`edit.js`: click a paragraph, change the words, copy out a patch
+
+Nothing on any page loads it — a bookmarklet injects it, so a reader’s visit fetches nothing extra and no page markup changed to allow it. It cannot save, which is the design: saving from a browser needs a token in the page, and that is the account problem the CMS question was trying to avoid.
+
+**What it refuses to edit is the important part.** Quotations, captions and citations are not editable, and the page says why where you try. This site’s characteristic failure is a tightened source rather than an invented one, and a tool that let anybody reword a mounted quotation in two clicks would be a machine for producing exactly that. The accession stamp and the provenance line are refused for the same reason in another key: a record you can edit in a browser is not a record.
+
+**The patch is decoded text and the first version claimed it was the file’s bytes.** `innerHTML` decodes entities, so a before-string matched nothing for any paragraph holding an apostrophe. Re-encoding cannot rescue it either: the sources are mixed — 1,300 raw em dashes beside 1,512 `&mdash;` — and no encoding reproduces a file that is not consistent with itself. So it says what it is, and tells whoever applies it to match on decoded text and stop if nothing matches exactly. Proved both ways before it was believed.
+
+MountedThe editor is distributed from [the colophon](https://queering.earth/design#editing), as something to drag
+
+A bookmark is only useful if somebody can install it, so it hangs at the foot of the colophon where “how this site is made” already lives. **A `javascript:` link runs on a click as well as surviving a drag**, so it is try-it-now and keep-it-later in one control, and the hint beside it says both.
+
+It loads from `queering.earth` whatever page it is pressed on, which means **it works on a draft host as well as the published site** — a contributor can edit a sheet that has not been mounted yet. Verified by pressing it on a page served from somewhere else entirely and watching the editor start.
+
+The section says what the editor refuses to touch and why, because that is the part worth publishing: a quotation, its caption and its citation are not editable, and neither is the accession stamp or the provenance line.
+
+Label corrected[The privacy policy](https://queering.earth/privacy) said “two values” and described seven
+
+Found while adding the editor’s key to it. The sentence had been right when it was written and wrong since the five reading settings arrived beside the two view controls; the list below it had grown and the count above it had not, and the paragraph after it still said “neither.” **A policy that miscounts what it describes is a policy that is wrong about you**, which is the reason this is a correction and not a tidy-up.
+
+The new key is named there with the thing that matters about it: it exists only if somebody deliberately starts the editor, it holds only the words changed on one page, and the only way out of the browser is the reader’s own clipboard.
+
+2026 · 13 September
+
 ## Sheet No. 13, and the first sheet written by Helen Edgar
 
 A zine arrived, and what it argued turned out to be about this cabinet. It is mounted as an essay; the zine setting was built, measured and dropped on the way.
@@ -4368,6 +4446,12 @@ MountedTwo plates from *Museum Wormianum*, 1655
 Wingendorp’s frontispiece — the room itself, a polar bear on the shelf and three walls of lettered categories — and the woodcut on printed page 283 of the narwhal skull with the tusk still in it, which is the figure by which Worm showed the horn was a whale’s tooth. **The leaf was found by full-text searching the scan for *Unicornu*** rather than by guessing, and the printed folio confirmed it.
 
 Public domain, digitised by the Biodiversity Heritage Library from the Smithsonian Libraries copy, and the rights were read at the item rather than taken from the blog post that led us to it. **The narwhal is cited to the Internet Archive leaf and not to a BHL page id**, because BHL sits behind a bot wall and the id could not be verified: a guessed citation is worse here than an inconsistent one.
+
+MountedAn introduction to Ole Worm, who had been arriving mid-sentence
+
+Helen’s note after publication: he comes out of nowhere. He did — the sheet named him in the second sentence of a paragraph about cabinets in general and went straight into the unicorn horn, so a reader met the anecdote before the man. Three sentences now say who he was: a Danish physician and antiquary who taught Greek, Latin, physics and medicine at Copenhagen, was physician to Christian IV, and read runestones for years. The engraving above him is identified as his own room.
+
+**One detail was checked rather than copied.** Burkhardt’s *Verzeichnis eponymischer Pflanzennamen*, the authority consulted when this sheet’s plates were sourced, makes him physician to Christian V. It was Christian IV: Worm died in 1654 and Christian V acceded in 1670. The slip is noted in the library copy so nobody takes that detail from there later.
 
 Label correctedThree corrections made while the sheet was being written
 
@@ -7451,12 +7535,13 @@ Helen Edgar, 2026
   - [Borrowed plates](https://queering.earth/design#plates)
   - [Who reads, and who writes](https://queering.earth/design#who-writes)
   - [How it is built](https://queering.earth/design#built)
+  - [Changing the words, without editing HTML](https://queering.earth/design#editing)
 
 -
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-253 entries across 70 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+261 entries across 72 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
@@ -9760,7 +9845,7 @@ Much of the material already exists and is already checkable — cite to the pri
 
 **The three faults are the argument, and none of them was a mistake anybody made.** Two people's ledger rows conflicted in `ATTRIBUTIONS.md` on the day both drafts wanted entries. `/ledger` — a published page generated from that file — was left stale on the branch by one person's edit, so `check-metadata` failed for both. And `publish-draft` offered one person the other person's page and shared files, at the moment somebody is working a checklist and inclined to trust the tool. **A shared branch produces these by construction.** The instinct to write more careful rules for sharing was the wrong instinct; the branch was the thing to change.
 
-**The cut is from `drafts` and not from `main`, and that is the load-bearing detail.** The noindex header cannot be scoped by host — `\_headers` has no host matching and `netlify.toml` headers are not context-specific — so it lives as a branch-only edit. A draft branch cut from `main` would have no noindex, and its deploy would be a fully crawlable duplicate of the published site. For the same reason Netlify must list branches **individually**: "all branches" would publish any stray branch crawlable.
+**The cut is from `drafts` and not from `main`, and that is the load-bearing detail.** The noindex header cannot be scoped by host — `\_headers` has no host matching and `netlify.toml` headers are not context-specific — so it lives as a branch-only edit. A draft branch cut from `main` would have no noindex, and its deploy would be a fully crawlable duplicate of the published site. **Netlify deploys `draft/\*` as a wildcard**, which is why the prefix exists: one entry covers every draft branch, nothing is added when a draft starts and nothing removed when it is published, because deleting the branch takes the deploy with it. "All branches" is still refused — it would publish any stray branch crawlable. **The wildcard leaves exactly one hole**: a `draft/…` branch cut from `main` would deploy with no noindex. `tools/draft.mjs` guards it by reading each branch's own `\_headers` for a noindex on the `/\*` rule and reporting DANGER with the fix. That is a real test and not a string count, because `main` carries a `/drafts/\*` noindex of its own.
 
 **It made the tooling simpler rather than more complex**, which is the sign it was the right shape. `scopeFor` had grown commit archaeology — a file belongs to this draft if a commit that also touched this draft's page touched it — purely to disentangle two drafts on one branch. With one draft to a branch, scope is *what differs from main* minus the furniture, and the contested-file case cannot occur. Publishing then deletes the branch, so there is no re-sync step and no shared asset left in a draft state to conflict later.
 
@@ -11463,7 +11548,7 @@ Last updated 11 September 2026. Any change to this page gets an entry in [the ac
 
 ## What your own browser keeps
 
-Two values, in your browser’s local storage, put there only if you press one of the two controls at the top of every page:
+**Seven keys, in your browser’s local storage, and every one of them only if you ask for it.** This paragraph said “two values” until 13 September 2026, which had been wrong since the reading settings arrived and added five more — a policy that miscounts what it describes is a policy that is wrong about you, so it is corrected here and logged in the register like any other correction.
 
 **`qe-ground`**
 : Which ground you asked for — the daylight sheet or the cabinet. Holds the word `daylight` or `cabinet`, and nothing else.
@@ -11474,7 +11559,10 @@ Two values, in your browser’s local storage, put there only if you press one o
 **`qe-motion`, `qe-contrast`, `qe-spacing`, `qe-textsize`, `qe-font`**
 : The five **reading settings**, under *Reading* at the top of every page. The first three hold `on` or `off`; `qe-textsize` holds `larger` or `largest`; `qe-font` holds the name of one of nine typefaces. Any of them may also be absent — and **absent is the state that matters**: it means we follow whatever your own device asks for, which for text size is the default size your browser is already set to. Only a choice made here overrides that. *Follow my device again* removes all five and hands you back to your device.
 
-**Neither is a cookie and neither is ever sent anywhere.** Local storage is not attached to requests the way a cookie is; these two values stay in the browser that wrote them, on the device that wrote them. We cannot read them, and nothing on this site tries to. Clearing your site data removes them and the page goes back to following your system’s own light or dark preference.
+**`qe-edits:` followed by a page address**
+: **Only if you are one of the two people who edit this site, and only if you deliberately start the editor.** Nothing on any page loads it; it arrives from a bookmark, and until then this key does not exist. While it does, it holds the words you have changed on that one page, so a half-finished edit survives a reload. It goes nowhere — the editor cannot save to the site and has no account to save with, and the only way out is the *Copy my edits* button, which puts the change on your own clipboard for you to paste wherever you choose. *Undo all* removes it.
+
+**None of them is a cookie and none is ever sent anywhere.** Local storage is not attached to requests the way a cookie is; these values stay in the browser that wrote them, on the device that wrote them. We cannot read them, and nothing on this site tries to. Clearing your site data removes them and the page goes back to following your system’s own light or dark preference.
 
 They identify nobody. There is no visitor id here, random or otherwise, and no way to recognise a returning reader.
 

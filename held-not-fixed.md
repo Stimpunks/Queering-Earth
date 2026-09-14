@@ -69,7 +69,11 @@ Paul Klee kept a herbarium of his own for ten years, from 1920 to 1930, across t
 
 Frontispiece, [*Museum Wormianum*](https://www.biodiversitylibrary.org/page/51143811) (Leiden: ex officina Elseviriorum, 1655). Engraved by G. Wingendorp. Public domain, digitised by the [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/) from the copy at Smithsonian Libraries.
 
-Long before natural history collections were sorted into their proper drawers, cabinets of curiosities held the real and the mythical side by side, often with no need to settle which was which. Ole Worm kept what he had been sold as a unicorn horn, doubted it enough to go looking for proof, and in 1638 matched it to a narwhal’s skull. Even once he was right, the courts of Europe went on prizing narwhal tusks as unicorn horns for a long while after, because the wonder of the thing had outgrown its label.
+Long before natural history collections were sorted into their proper drawers, cabinets of curiosities held the real and the mythical side by side, often with no need to settle which was which.
+
+[Ole Worm](https://en.wikipedia.org/wiki/Ole_Worm) (1588–1654) kept one of them. He was a Danish physician and antiquary who taught Greek, Latin, physics and medicine at Copenhagen, served as physician to Christian IV, and spent years reading runestones. The room in the engraving above is his own: the collection he kept at home, catalogued after his death as *Museum Wormianum*.
+
+He kept what he had been sold as a unicorn horn, doubted it enough to go looking for proof, and in 1638 matched it to a narwhal’s skull. Even once he was right, the courts of Europe went on prizing narwhal tusks as unicorn horns for a long while after, because the wonder of the thing had outgrown its label.
 
 ![A woodcut of a narwhal skull seen from above, drawn in fine hatching. The skull is broad and pitted at the back and narrows towards the snout; from its left side a single long tapering tusk runs the width of the page, its surface cut with the close diagonal lines of a spiral. Text from the other side of the leaf shows faintly through the paper.](images/worm-1655-museum-wormianum-narwhal-skull-p283.jpg)
 

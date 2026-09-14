@@ -96,6 +96,11 @@ const COUPLED = new Map([
      against them, so a stale copy on a draft branch would anchor a reviewer's notes to
      markup that has moved. It inherits `max-age=0, must-revalidate` from `/*`. */
   ['/drafts/review.js', 'anchors a reviewer\'s notes to the blocks of the draft it is reading'],
+  /* Injected by a bookmarklet, never by a page, so no page fetches it and this line is
+     dormant — declared anyway because it reads a page's own blocks and quotes them into a
+     patch, so a stale copy would quote markup that has moved. Inherits max-age=0,
+     must-revalidate from /*. */
+  ['/edit.js', 'reads a page\'s own blocks and quotes them into a patch somebody applies'],
 ]);
 const DECOUPLED = new Map([
   ['/fonts/*', 'glyph outlines; a face has no knowledge of structure or class names'],
@@ -283,6 +288,26 @@ if (live) {
       ` (${d.n} path(s), e.g. ${d.example}). Deployed yet?`);
 }
 
+/* ── the CSP hash still matches the pages ──────────────────────────────────────
+ * THE SAME INVARIANT THIS FILE ALREADY ENFORCES, POINTING THE OTHER WAY. Everywhere above
+ * asks whether an ASSET can outlive the markup it belongs to. A script hash in the header
+ * is the markup's fingerprint carried in a response, and it can go stale the same way: the
+ * moment an inline script changes, the header describes a page that no longer exists.
+ *
+ * It fails SILENTLY and it fails for everyone. A wrong hash does not warn anybody — the
+ * browser simply refuses the before-paint snippet on every page, and every reader who had
+ * asked for the cabinet or for plain view is shown the other one until the stylesheet
+ * catches up. That is the failure `_headers` carries a paragraph about. */
+try {
+  const { execFile } = await import('node:child_process');
+  const { promisify } = await import('node:util');
+  const run = promisify(execFile);
+  await run(process.execPath, [join(ROOT, 'tools', 'make-csp.mjs'), '--check'], { cwd: ROOT });
+} catch (e) {
+  fail('csp', 'the Content-Security-Policy in _headers no longer matches the pages — ' +
+    'run: node tools/make-csp.mjs');
+}
+
 /* ── report ───────────────────────────────────────────────────────────────────── */
 const line = (label, value) => console.log(`  ${label.padEnd(38)} ${value}`);
 console.log(`\n  _headers · ${rules.length} rule(s)${live ? ` · ${probed} live probe(s)` : ''}\n`);
@@ -293,6 +318,7 @@ line('mode', live ? 'offline + live' : 'offline (pass --live to probe the site)'
 console.log();
 
 for (const [kind, label] of [
+  ['csp', 'Content-Security-Policy out of date'],
   ['skew', 'assets outliving the markup'],
   ['undeclared', 'assets nobody has ruled on'],
   ['contradiction', 'directives that cancel each other'],

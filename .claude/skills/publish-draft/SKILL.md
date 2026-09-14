@@ -144,9 +144,8 @@ draft: nothing has to be put back in step, because nothing is shared.
 git push origin --delete draft/<slug> && git branch -D draft/<slug>
 ```
 
-Tell Ryan to remove `draft/<slug>` from Netlify's branch deploys in the same pass, so the
-review URL stops answering rather than serving a copy of a page that is now published at its
-real address.
+Netlify deploys `draft/*` as a wildcard, so deleting the branch takes the review URL with
+it. There is nothing to remove in the dashboard.
 
 **Then bring the base forward**, so the next draft is cut from something current:
 

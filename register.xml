@@ -9,12 +9,32 @@
     <copyright>CC BY-SA 4.0</copyright>
     <lastBuildDate>Sun, 13 Sep 2026 12:00:00 GMT</lastBuildDate>
     <item>
+      <title>The header that says what a page may reach, and the hash that has to be generated</title>
+      <link>https://queering.earth/changelog#a-2026-09-13-csp</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-13-csp</guid>
+      <pubDate>Sun, 13 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: Eleven directives where there had been one
+Cabinet: tools/make-csp.mjs, because the hash cannot be kept by hand
+Label corrected: The bookmarklet named this site by name, where it should have asked where it was standing</description>
+    </item>
+    <item>
+      <title>A way to change words without editing HTML, and a policy that had been miscounting itself</title>
+      <link>https://queering.earth/changelog#a-2026-09-13-edit-layer</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-13-edit-layer</guid>
+      <pubDate>Sun, 13 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: No CMS fits, because there is no content model to fit one to
+Cabinet: edit.js: click a paragraph, change the words, copy out a patch
+Mounted: The editor is distributed from the colophon, as something to drag
+Label corrected: The privacy policy said two values and described seven</description>
+    </item>
+    <item>
       <title>Sheet No. 13, and the first sheet written by Helen Edgar</title>
       <link>https://queering.earth/changelog#a-2026-09-13-held-not-fixed</link>
       <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-13-held-not-fixed</guid>
       <pubDate>Sun, 13 Sep 2026 12:00:00 GMT</pubDate>
       <description>Mounted: Held, Not Fixed, Sheet No. 13, an essay
 Mounted: Two plates from Museum Wormianum, 1655
+Mounted: An introduction to Ole Worm, who had been arriving mid-sentence
 Label corrected: Three corrections made while the sheet was being written</description>
     </item>
     <item>

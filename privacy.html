@@ -263,7 +263,7 @@
 
   <h2 id="your-browser">What your own browser keeps <a class="qe-anchor" href="#your-browser"><span class="qe-sr">Link to this section</span></a></h2>
 
-  <p>Two values, in your browser&rsquo;s local storage, put there only if you press one of the two controls at the top of every page:</p>
+  <p><strong>Seven keys, in your browser&rsquo;s local storage, and every one of them only if you ask for it.</strong> This paragraph said <q>two values</q> until 13 September 2026, which had been wrong since the reading settings arrived and added five more &mdash; a policy that miscounts what it describes is a policy that is wrong about you, so it is corrected here and logged in the register like any other correction.</p>
 
   <dl>
     <dt><code>qe-ground</code></dt>
@@ -272,9 +272,11 @@
     <dd>Whether you asked for plain view, which switches off the display faces, the wonk, the rotation and the motion. Holds <code>1</code>, or is absent.</dd>
     <dt><code>qe-motion</code>, <code>qe-contrast</code>, <code>qe-spacing</code>, <code>qe-textsize</code>, <code>qe-font</code></dt>
     <dd>The five <strong>reading settings</strong>, under <em>Reading</em> at the top of every page. The first three hold <code>on</code> or <code>off</code>; <code>qe-textsize</code> holds <code>larger</code> or <code>largest</code>; <code>qe-font</code> holds the name of one of nine typefaces. Any of them may also be absent &mdash; and <strong>absent is the state that matters</strong>: it means we follow whatever your own device asks for, which for text size is the default size your browser is already set to. Only a choice made here overrides that. <em>Follow my device again</em> removes all five and hands you back to your device.</dd>
+    <dt><code>qe-edits:</code> followed by a page address</dt>
+    <dd><strong>Only if you are one of the two people who edit this site, and only if you deliberately start the editor.</strong> Nothing on any page loads it; it arrives from a bookmark, and until then this key does not exist. While it does, it holds the words you have changed on that one page, so a half-finished edit survives a reload. It goes nowhere &mdash; the editor cannot save to the site and has no account to save with, and the only way out is the <em>Copy my edits</em> button, which puts the change on your own clipboard for you to paste wherever you choose. <em>Undo all</em> removes it.</dd>
   </dl>
 
-  <p><strong>Neither is a cookie and neither is ever sent anywhere.</strong> Local storage is not attached to requests the way a cookie is; these two values stay in the browser that wrote them, on the device that wrote them. We cannot read them, and nothing on this site tries to. Clearing your site data removes them and the page goes back to following your system&rsquo;s own light or dark preference.</p>
+  <p><strong>None of them is a cookie and none is ever sent anywhere.</strong> Local storage is not attached to requests the way a cookie is; these values stay in the browser that wrote them, on the device that wrote them. We cannot read them, and nothing on this site tries to. Clearing your site data removes them and the page goes back to following your system&rsquo;s own light or dark preference.</p>
 
   <p>They identify nobody. There is no visitor id here, random or otherwise, and no way to recognise a returning reader.</p>
 

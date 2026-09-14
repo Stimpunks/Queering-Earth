@@ -52,12 +52,32 @@ of the published site.**
    A conflict in that first merge will be in `_headers`: keep both sides — main's changes
    *and* the branch-only noindex block.
 
-4. **Tell Ryan to add `draft/<slug>` to Netlify's branch deploys.** Project configuration →
-   Build & deploy → Branches and deploy contexts → *Let me add individual branches*.
-   **Not "All branches"** — a branch cut from `main` rather than from `drafts` has no
-   noindex, and "all" would publish it crawlable.
+4. **Check the branch name fits a Netlify subdomain**, then tell Ryan to add it.
 
-5. **Decide which kind of draft this is**, and say which you concluded:
+   ```bash
+   node tools/draft.mjs
+   ```
+
+   It warns if the subdomain would exceed Netlify's limit. **The budget is 39 characters
+   for the slug**: the subdomain is `<branch>--queering-earth`, the limit is 61, and the
+   project name and the `draft-` prefix take 20 of it. `a-waste-garden-flowering-at-its-will`
+   is 36, so real sheet names fit — but not by much. **A branch over the limit gets no
+   deploy URL, which looks exactly like a branch that simply never built.**
+
+5. **Confirm the branch carries the noindex.**
+
+   ```bash
+   node tools/draft.mjs
+   ```
+
+   **Netlify deploys `draft/*` as a wildcard**, so there is nothing to add and nobody to
+   ask — the branch builds on its first push and the deploy disappears when the branch is
+   deleted. What the wildcard cannot know is whether a branch was cut from `drafts` or from
+   `main`, and one cut from `main` has no `X-Robots-Tag: noindex`: its deploy would be a
+   crawlable copy of the published site with nothing looking wrong. The tool reports
+   **DANGER** and the one-line fix if so. **Do not push until it is clean.**
+
+6. **Decide which kind of draft this is**, and say which you concluded:
 
    - **A rewrite of a published sheet.** The file already exists on the branch. Edit it in
      place, at its own filename, so the draft is byte-identical to what will ship.
@@ -72,7 +92,7 @@ of the published site.**
    matching a root file — `decisions`, `attributions`, `readme` — would make
    `make-markdown.mjs` overwrite its own source.
 
-6. **Add the draft block**, immediately after the viewport meta:
+7. **Add the draft block**, immediately after the viewport meta:
 
    ```html
    <!-- DRAFT. Delete these three lines to publish. Guarded by check-metadata.mjs check 10. -->
@@ -80,20 +100,20 @@ of the published site.**
    <script src="drafts/review.js" defer></script>
    ```
 
-7. **Check the markup, then commit and push.**
+8. **Check the markup, then commit and push.**
 
    ```bash
    node tools/check-markup.mjs --check <slug>.html
    git add <slug>.html && git commit -m "Draft: <title>" && git push
    ```
 
-8. **Print the URL and hand it over.** Netlify builds in about twenty seconds.
+9. **Print the URL and hand it over.** Netlify builds in about twenty seconds.
 
    ```bash
    node tools/draft.mjs
    ```
 
-9. **Go back to main** so the next session does not start on a draft branch by accident.
+10. **Go back to main** so the next session does not start on a draft branch by accident.
 
 ## What a draft deliberately does not have
 
