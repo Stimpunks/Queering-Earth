@@ -9,12 +9,21 @@
     <copyright>CC BY-SA 4.0</copyright>
     <lastBuildDate>Sun, 13 Sep 2026 12:00:00 GMT</lastBuildDate>
     <item>
+      <title>A link that went nowhere, and the gate that now says so</title>
+      <link>https://queering.earth/changelog#a-2026-09-13-anchors</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-13-anchors</guid>
+      <pubDate>Sun, 13 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Label corrected: An accession pointed at what is unresolved here, which had no address
+Cabinet: Check 10: every authored fragment link lands on something</description>
+    </item>
+    <item>
       <title>The header that says what a page may reach, and the hash that has to be generated</title>
       <link>https://queering.earth/changelog#a-2026-09-13-csp</link>
       <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-13-csp</guid>
       <pubDate>Sun, 13 Sep 2026 12:00:00 GMT</pubDate>
       <description>Cabinet: Eleven directives where there had been one
 Cabinet: tools/make-csp.mjs, because the hash cannot be kept by hand
+Cabinet: A permissions policy, and the five exceptions that are the whole of it
 Label corrected: The bookmarklet named this site by name, where it should have asked where it was standing</description>
     </item>
     <item>

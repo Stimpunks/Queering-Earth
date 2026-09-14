@@ -106,6 +106,34 @@
  * simply missing was previously reported only if the file ENDED with it still open, and
  * check 9 now catches it at whichever tag the browser would close it against.
  *
+ * 10. EVERY AUTHORED FRAGMENT LINK RESOLVES — added 2026-09-13, after one was written
+ *    into the register and caught only because somebody went looking. `/changelog`
+ *    pointed at `/two-cohabitating-modes#what-is-unresolved`, at a block that had the
+ *    words and no id. **All nine other gates passed it**, because a fragment naming
+ *    nothing is not an error: the browser does not move, and a reader who clicks
+ *    concludes the site is broken in a way they cannot report.
+ *
+ *    THE CROSS-PAGE HALF IS THE HALF THAT MATTERS, and it is why this could not be a
+ *    per-page check. Ids here are authored topical anchors precisely so a reworded
+ *    heading keeps its address — CLAUDE.md counts seven anchors aimed at
+ *    `/#what-grows-here` alone — and nothing verified that any of them landed. So the
+ *    id map is built from every page in the repo even when the run is scoped to one.
+ *
+ *    IT READS ANCHOR ELEMENTS, NEVER THE STRING `href=`. A code span documenting a
+ *    link writes `&lt;a href="#x"&gt;`, where only the brackets are escaped and the
+ *    href survives verbatim — so a regex would match this repo's own writing about
+ *    its own links. Proved by injecting one beside three real faults: the three were
+ *    reported, the documentation was not, and the resolved count moved by four rather
+ *    than five.
+ *
+ *    LINKS ARE VALIDATED AFTER THE WALK, NOT DURING IT. An anchor near the top of a
+ *    page routinely names an id near the bottom; checking against a half-filled id map
+ *    would report every forward link on the site.
+ *
+ *    The contents list, the rail and the entry index never appear here: they build
+ *    their hrefs at runtime from the ids they just read, so they are correct by
+ *    construction. This sees authored links only, which are the ones that can be wrong.
+ *
  * USAGE
  *     node tools/check-markup.mjs                       # every root .html
  *     node tools/check-markup.mjs collection-print.html # just these
@@ -295,6 +323,40 @@ let scannedIds = 0;
 let scannedElements = 0;
 let memberPages = 0;
 let badgesSeen = 0;
+let scannedFragments = 0;
+
+/* ── check 10's id map, built from EVERY page and never only from the targets ────
+   A fragment link is the one thing here that cannot be answered from the page it is
+   written on: `/changelog#latest` is a claim about another file. So the ids are
+   collected across the whole repo even when the run is scoped to one page, which
+   costs milliseconds and is the difference between a scoped run that checks this and
+   one that quietly cannot. Uses the same walker as everything else, so an `<a>`
+   written out inside a code span — `&lt;a href="#x"&gt;`, where only the brackets are
+   escaped and the href survives verbatim — is not a tag and is never seen. A regex
+   over `href="` would have matched this repo's own documentation of its links, which
+   is the fault check 7 of check-metadata.mjs and the review-layer guard both record
+   paying for. */
+const idsOf = (src) => {
+  const out = new Set();
+  for (const t of tags(src)) {
+    if (t.closing) continue;
+    const m = t.raw.match(/\bid\s*=\s*("([^"]*)"|'([^']*)'|([^\s"'>]+))/i);
+    const id = m && (m[2] ?? m[3] ?? m[4]);
+    if (id) out.add(id);
+  }
+  return out;
+};
+const idsByPage = new Map(
+  fs.readdirSync(REPO).filter((f) => f.endsWith('.html')).sort()
+    .map((f) => [f, idsOf(fs.readFileSync(path.join(REPO, f), 'utf8'))])
+);
+
+/* An address here is extensionless, so `/on-being-ill` is `on-being-ill.html` and `/`
+   is the home page. A `.html` href is already a fault check-addresses.mjs reports by
+   name; it resolves anyway, so this gate answers the question it was asked instead of
+   adding a second confusing complaint about the same link. */
+const pageForPath = (p) =>
+  p === '/' ? 'index.html' : p.replace(/^\//, '') + (p.endsWith('.html') ? '' : '.html');
 
 for (const file of targets) {
   const full = path.join(REPO, file);
@@ -317,6 +379,12 @@ for (const file of targets) {
   const openStack = [];
   const balance = [];
   let elementCount = 0;
+
+  /* Check 10's links, VALIDATED AFTER THE WALK AND NOT DURING IT. An anchor near the
+     top of a page routinely points at an id near the bottom, so checking one against
+     `ids` while `ids` is still being filled would report every forward link on the
+     site as broken. */
+  const fragLinks = [];
 
   /* The `.ss-nav` span, tracked here rather than by string search so that a nested
      <nav> cannot end it early — zines carry a second `<nav class="nav">` further
@@ -388,6 +456,13 @@ for (const file of targets) {
       const top = wrapStack[wrapStack.length - 1];
       if (top && top.innerDepth === divDepth) top.directCards++;
       else wrapFindings.push(`<a class="card"> at line ${t.line} is not a direct child of any <div class="card-wrap"> — it will render without the box, border or accent rule`);
+    }
+
+    // ── check 10: fragment links ──
+    if (t.name === 'a' && !t.closing) {
+      const h = t.raw.match(/\bhref\s*=\s*("([^"]*)"|'([^']*)')/i);
+      const href = h && (h[2] ?? h[3]);
+      if (href && href.includes('#')) fragLinks.push({ href, line: t.line });
     }
 
     // ── duplicate ids ──
@@ -580,6 +655,41 @@ for (const file of targets) {
   // in its chunk selector and lets the outermost match win, so a nested pair indexes as ONE
   // record covering both cards: index.html measured 151 records nested and 152 separated,
   // meaning the newer card's text was not independently findable.
+  /* ── check 10: every in-page and cross-page fragment link resolves ──────────
+     Added 2026-09-13, and it found a fault on its first honest run: the register
+     linked `/two-cohabitating-modes#what-is-unresolved` at a block that had the
+     words and no id. All nine other gates passed it, because a fragment naming
+     nothing is not an error — the browser simply does not move, and a reader who
+     clicks decides the site is broken in a way they cannot report.
+
+     The cross-page half is the half that matters. This house writes topical ids
+     precisely so a reworded heading keeps its address, and CLAUDE.md counts seven
+     anchors pointing at `/#what-grows-here` alone; nothing checked that any of them
+     landed. The contents list, the rail and the entry index build their hrefs from
+     the ids they just read, so they are correct by construction and never appear
+     here — this sees authored links only, which are the ones that can be wrong. */
+  for (const { href, line } of fragLinks) {
+    let u = href;
+    if (/^https?:\/\/(www\.)?queering\.earth(?=[/?#]|$)/i.test(u)) u = u.replace(/^https?:\/\/[^/]+/i, '') || '/';
+    else if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(u) || u.startsWith('//')) continue;   // offsite, mailto:, javascript:
+    const hash = u.indexOf('#');
+    const rawFrag = u.slice(hash + 1);
+    const where = u.slice(0, hash);
+    if (!rawFrag || rawFrag === 'top') continue;          // "#" is a placeholder; "#top" is browser-defined
+    if (where && !where.startsWith('/')) continue;        // a document-relative path is not an address here
+    let frag;
+    try { frag = decodeURIComponent(rawFrag); } catch { frag = rawFrag; }
+    const target = where === '' ? file : pageForPath(where);
+    scannedFragments++;
+    if (target === file) {
+      if (!ids.has(frag)) problems.push(`href="${href}" at line ${line} names no id on this page — the link goes nowhere and the browser reports nothing`);
+    } else if (!idsByPage.has(target)) {
+      problems.push(`href="${href}" at line ${line} points at ${target}, which does not exist`);
+    } else if (!idsByPage.get(target).has(frag)) {
+      problems.push(`href="${href}" at line ${line} names no id on ${target} — the reader lands at the top of the page instead`);
+    }
+  }
+
   for (const f of wrapFindings) problems.push(f);
   for (const f of balance) problems.push(f);
   for (const open of wrapStack) {
@@ -875,7 +985,8 @@ for (const file of targets) {
 console.log(
   `\n${targets.length} page(s) · ${scannedTags.toLocaleString()} tags · ${scannedIds.toLocaleString()} ids · ` +
     `${badgesSeen}/${memberPages} collection badges across ${collectionFiles.length} collections · ` +
-    `${scannedElements.toLocaleString()} elements balanced · ${totalProblems} problem(s)`
+    `${scannedElements.toLocaleString()} elements balanced · ${scannedFragments.toLocaleString()} fragment links resolved · ` +
+    `${totalProblems} problem(s)`
 );
 
 if (totalProblems) {
@@ -892,8 +1003,9 @@ if (totalProblems) {
       '       no nav outside its content shell, exactly one <main> landmark per page, every\n' +
       '       card in its own wrap, every page titled by exactly one <h1> inside its\n' +
       '       main landmark, every collection member badged to the collection that cards it,\n' +
-      '       and every element closed, in order, so the generators that parse this with\n' +
-      '       regexes cannot swallow one block inside another.'
+      '       every element closed, in order, so the generators that parse this with\n' +
+      '       regexes cannot swallow one block inside another, and every authored\n' +
+      '       fragment link landing on an id that exists, here or on the page it names.'
   );
 }
 
