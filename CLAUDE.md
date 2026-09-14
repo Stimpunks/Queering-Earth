@@ -1645,6 +1645,44 @@ rather than trust to memory. Nothing gates it; the live probe would be
 reach a branch host — no `location:` — which is what it looked like it should do and had
 never been checked.
 
+### Changing words without editing HTML is `edit.js`, and it is not a CMS
+
+**Asked on 2026-09-13: could Decap, Sveltia or TinaCMS work here?** No, and for one reason
+shared by all three — they are git-backed CMSes over a **content model**, collections of
+files with named fields, and this site has none. Measured rather than asserted: a sheet
+carries **80 to 120 hand-drawn SVG elements, 8 to 13 authored section ids, 42 to 72 inline
+style attributes** seeding its own foxing and stamp rotation, and JSON-LD whose
+`about.author` is an editorial judgement about who made the thing being read. There are no
+fields to put in a schema. Tina additionally requires React and cannot run on plain static
+HTML at all; Decap has a standing issue where a file collection with an `.html` extension
+is not editable and the same file renamed `.md` works.
+
+**`DECISIONS.md` now rests on reason 1 alone.** Reason 3 was struck on the 12th; reason 2
+said Netlify Identity's git-gateway was being sunset and **Netlify reversed that on
+19 February 2026** — Identity continues. The one remaining leg is the one that was always
+doing the work.
+
+**`edit.js` is the smaller thing the question was really asking for.** Click a paragraph,
+change the words, press *Copy my edits*, paste the patch to somebody who applies it.
+
+- **NOTHING IS SHIPPED TO READERS.** No page includes it; a bookmarklet injects it. A normal
+  visit fetches nothing extra and no page markup changes, which matters on a site that
+  self-hosts its fonts to avoid one third-party request.
+- **IT CANNOT SAVE, AND THAT IS THE DESIGN.** Saving from a browser needs a token in the
+  page, which is the account problem the CMS question was trying to avoid.
+- **WHAT IT REFUSES TO EDIT IS THE IMPORTANT PART.** Quotations, captions and citations are
+  not editable, and the page says why where you try. This site's characteristic failure is
+  a **tightened** source, not an invented one; a tool that let anybody reword a mounted
+  quotation in two clicks would be a machine for producing exactly that. The stamp and the
+  provenance line are refused too — a record you can edit in a browser is not one.
+- **THE PATCH IS DECODED TEXT, NOT THE FILE'S BYTES, AND THE FIRST VERSION CLAIMED
+  OTHERWISE.** `innerHTML` decodes entities, so a before-string matched nothing for any
+  paragraph containing `&rsquo;`. Re-encoding cannot fix it either, because **the sources
+  are mixed**: 1,300 raw em dashes beside 1,512 `&mdash;`, 12 raw right quotes beside 1,579
+  `&rsquo;`. No encoding reproduces a file that is not consistent with itself. So the patch
+  says what it is and tells the applier to match on decoded text and **stop** if there is no
+  exact match. Proved both ways: byte-exact finds nothing, decoded finds exactly one block.
+
 ## The checks
 
 Run before shipping. All nine are browser-free or Chrome-only; nothing needs `npm install`,

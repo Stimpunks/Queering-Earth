@@ -22,7 +22,7 @@ Last updated 11 September 2026. Any change to this page gets an entry in [the ac
 
 ## What your own browser keeps
 
-Two values, in your browser’s local storage, put there only if you press one of the two controls at the top of every page:
+**Seven keys, in your browser’s local storage, and every one of them only if you ask for it.** This paragraph said “two values” until 13 September 2026, which had been wrong since the reading settings arrived and added five more — a policy that miscounts what it describes is a policy that is wrong about you, so it is corrected here and logged in the register like any other correction.
 
 **`qe-ground`**
 : Which ground you asked for — the daylight sheet or the cabinet. Holds the word `daylight` or `cabinet`, and nothing else.
@@ -33,7 +33,10 @@ Two values, in your browser’s local storage, put there only if you press one o
 **`qe-motion`, `qe-contrast`, `qe-spacing`, `qe-textsize`, `qe-font`**
 : The five **reading settings**, under *Reading* at the top of every page. The first three hold `on` or `off`; `qe-textsize` holds `larger` or `largest`; `qe-font` holds the name of one of nine typefaces. Any of them may also be absent — and **absent is the state that matters**: it means we follow whatever your own device asks for, which for text size is the default size your browser is already set to. Only a choice made here overrides that. *Follow my device again* removes all five and hands you back to your device.
 
-**Neither is a cookie and neither is ever sent anywhere.** Local storage is not attached to requests the way a cookie is; these two values stay in the browser that wrote them, on the device that wrote them. We cannot read them, and nothing on this site tries to. Clearing your site data removes them and the page goes back to following your system’s own light or dark preference.
+**`qe-edits:` followed by a page address**
+: **Only if you are one of the two people who edit this site, and only if you deliberately start the editor.** Nothing on any page loads it; it arrives from a bookmark, and until then this key does not exist. While it does, it holds the words you have changed on that one page, so a half-finished edit survives a reload. It goes nowhere — the editor cannot save to the site and has no account to save with, and the only way out is the *Copy my edits* button, which puts the change on your own clipboard for you to paste wherever you choose. *Undo all* removes it.
+
+**None of them is a cookie and none is ever sent anywhere.** Local storage is not attached to requests the way a cookie is; these values stay in the browser that wrote them, on the device that wrote them. We cannot read them, and nothing on this site tries to. Clearing your site data removes them and the page goes back to following your system’s own light or dark preference.
 
 They identify nobody. There is no visitor id here, random or otherwise, and no way to recognise a returning reader.
 

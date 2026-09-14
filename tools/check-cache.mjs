@@ -96,6 +96,11 @@ const COUPLED = new Map([
      against them, so a stale copy on a draft branch would anchor a reviewer's notes to
      markup that has moved. It inherits `max-age=0, must-revalidate` from `/*`. */
   ['/drafts/review.js', 'anchors a reviewer\'s notes to the blocks of the draft it is reading'],
+  /* Injected by a bookmarklet, never by a page, so no page fetches it and this line is
+     dormant — declared anyway because it reads a page's own blocks and quotes them into a
+     patch, so a stale copy would quote markup that has moved. Inherits max-age=0,
+     must-revalidate from /*. */
+  ['/edit.js', 'reads a page\'s own blocks and quotes them into a patch somebody applies'],
 ]);
 const DECOUPLED = new Map([
   ['/fonts/*', 'glyph outlines; a face has no knowledge of structure or class names'],

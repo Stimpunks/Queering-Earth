@@ -329,7 +329,7 @@ Helen Edgar, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-254 entries across 70 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+257 entries across 71 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

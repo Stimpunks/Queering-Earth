@@ -37,6 +37,32 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 13 September · latest
 
+## A way to change words without editing HTML, and a policy that had been miscounting itself
+
+Ryan asked whether Decap, Sveltia or TinaCMS would work here. None of them can, and the reason turned out to be measurable.
+
+CabinetNo CMS fits, because there is no content model to fit one to
+
+All three are git-backed editors over collections of files with named fields. **A sheet here carries eighty to a hundred and twenty hand-drawn SVG elements, eight to thirteen authored section ids, forty to seventy inline style attributes seeding its own foxing and stamp rotation, and JSON-LD whose `about.author` is a judgement about who made the thing being read.** There are no fields to put in a schema. That is [the standing reason](https://queering.earth/what-is-settled) — the layout is the argument — stated as a measurement rather than a conviction.
+
+**The deferral now rests on one leg.** Its third reason was struck yesterday; its second said Netlify Identity’s git-gateway was being sunset, and Netlify reversed that on 19 February 2026. The remaining reason is the one that was always carrying it.
+
+Cabinet`edit.js`: click a paragraph, change the words, copy out a patch
+
+Nothing on any page loads it — a bookmarklet injects it, so a reader’s visit fetches nothing extra and no page markup changed to allow it. It cannot save, which is the design: saving from a browser needs a token in the page, and that is the account problem the CMS question was trying to avoid.
+
+**What it refuses to edit is the important part.** Quotations, captions and citations are not editable, and the page says why where you try. This site’s characteristic failure is a tightened source rather than an invented one, and a tool that let anybody reword a mounted quotation in two clicks would be a machine for producing exactly that. The accession stamp and the provenance line are refused for the same reason in another key: a record you can edit in a browser is not a record.
+
+**The patch is decoded text and the first version claimed it was the file’s bytes.** `innerHTML` decodes entities, so a before-string matched nothing for any paragraph holding an apostrophe. Re-encoding cannot rescue it either: the sources are mixed — 1,300 raw em dashes beside 1,512 `&mdash;` — and no encoding reproduces a file that is not consistent with itself. So it says what it is, and tells whoever applies it to match on decoded text and stop if nothing matches exactly. Proved both ways before it was believed.
+
+Label corrected[The privacy policy](https://queering.earth/privacy) said “two values” and described seven
+
+Found while adding the editor’s key to it. The sentence had been right when it was written and wrong since the five reading settings arrived beside the two view controls; the list below it had grown and the count above it had not, and the paragraph after it still said “neither.” **A policy that miscounts what it describes is a policy that is wrong about you**, which is the reason this is a correction and not a tidy-up.
+
+The new key is named there with the thing that matters about it: it exists only if somebody deliberately starts the editor, it holds only the words changed on one page, and the only way out of the browser is the reader’s own clipboard.
+
+2026 · 13 September
+
 ## Sheet No. 13, and the first sheet written by Helen Edgar
 
 A zine arrived, and what it argued turned out to be about this cabinet. It is mounted as an essay; the zine setting was built, measured and dropped on the way.
