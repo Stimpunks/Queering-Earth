@@ -4655,6 +4655,14 @@ Label corrected[/privacy](https://queering.earth/privacy#the-embed) said there w
 
 **Nothing gated the count, and that was structural rather than an oversight.** `check-metadata.mjs` checks that every third-party *origin* our scripts can reach is named on that page — and one origin covers any number of videos, so a missing recording was invisible to it by construction. The list is kept by hand, which is the kind of list this register keeps warning about. **It is gated now**, by the check below, written the same day on Ryan’s call.
 
+CabinetDeleting a draft branch does not delete its deploy, and three files said it did
+
+**Measured minutes after this sheet was published**, when the branch had been deleted from both ends: `draft-known-and-felt-and-seen--queering-earth.netlify.app` answered **200**, still serving the pre-publication draft with its review layer attached, and a full copy of the site beside it. Netlify keeps the last branch deploy at its subdomain after the branch is gone.
+
+**The same wrong sentence was in three places** — this site’s own build notes, `start-draft` and `publish-draft` — written once and copied twice, and never checked in any of them. That is the drift this register exists to catch, in the files that describe how the register is kept.
+
+**The `noindex` is what makes it survivable, and it is doing more work than we knew.** The orphaned deploy inherited `X-Robots-Tag: noindex` from the drafts base, so it cannot be crawled. **The live risk is a reader rather than a crawler**: anybody holding the old review link keeps reading a superseded draft and may annotate a version that no longer exists. Removing the deploy is now a step in `publish-draft`, and it is a dashboard action — **nothing in this repository can do it and no gate can see it**, which puts it in the same small class as the bookmarklet: a check a person has to run.
+
 CabinetThe recordings list on [/privacy](https://queering.earth/privacy#the-embed) is checked against the facades that exist
 
 **Check 7c.** Section 7b asserts that every third-party *origin* our scripts can reach is named, which is the check that matters for what a browser may talk to and is **structurally blind to how many recordings there are** — one origin covers any number of videos. So it counts the `data-embed-id` facades on every page, reads the list under `#the-embed`, and compares them per page. It also reads the number the page says out loud in its own prose, because a list that grew while the sentence above it did not is the same failure one layer up.
@@ -7905,7 +7913,7 @@ Dolly Parton, 1946–2026, and Tressie McMillan Cottom
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-269 entries across 74 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+270 entries across 74 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

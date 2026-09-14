@@ -352,6 +352,15 @@
       </div>
 
       <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Deleting a draft branch does not delete its deploy, and three files said it did</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Measured minutes after this sheet was published</strong>, when the branch had been deleted from both ends: <code>draft-known-and-felt-and-seen--queering-earth.netlify.app</code> answered <strong>200</strong>, still serving the pre-publication draft with its review layer attached, and a full copy of the site beside it. Netlify keeps the last branch deploy at its subdomain after the branch is gone.</p>
+          <p><strong>The same wrong sentence was in three places</strong> &mdash; this site&rsquo;s own build notes, <code>start-draft</code> and <code>publish-draft</code> &mdash; written once and copied twice, and never checked in any of them. That is the drift this register exists to catch, in the files that describe how the register is kept.</p>
+          <p><strong>The <code>noindex</code> is what makes it survivable, and it is doing more work than we knew.</strong> The orphaned deploy inherited <code>X-Robots-Tag: noindex</code> from the drafts base, so it cannot be crawled. <strong>The live risk is a reader rather than a crawler</strong>: anybody holding the old review link keeps reading a superseded draft and may annotate a version that no longer exists. Removing the deploy is now a step in <code>publish-draft</code>, and it is a dashboard action &mdash; <strong>nothing in this repository can do it and no gate can see it</strong>, which puts it in the same small class as the bookmarklet: a check a person has to run.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
         <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The recordings list on <a href="/privacy#the-embed">/privacy</a> is checked against the facades that exist</span></div>
         <div class="qe-entry-body">
           <p><strong>Check 7c.</strong> Section 7b asserts that every third-party <em>origin</em> our scripts can reach is named, which is the check that matters for what a browser may talk to and is <strong>structurally blind to how many recordings there are</strong> &mdash; one origin covers any number of videos. So it counts the <code>data-embed-id</code> facades on every page, reads the list under <code>#the-embed</code>, and compares them per page. It also reads the number the page says out loud in its own prose, because a list that grew while the sentence above it did not is the same failure one layer up.</p>

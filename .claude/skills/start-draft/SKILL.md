@@ -78,8 +78,10 @@ of the published site.**
    ```
 
    **Netlify deploys `draft/*` as a wildcard**, so there is nothing to add and nobody to
-   ask — the branch builds on its first push and the deploy disappears when the branch is
-   deleted. What the wildcard cannot know is whether a branch was cut from `drafts` or from
+   ask — the branch builds on its first push. **It does not disappear when the branch is
+   deleted**, which this skill used to claim: measured 2026-09-14, an orphaned branch deploy
+   was still serving its draft at 200 after the branch was gone from both ends. Removing it
+   is a step in `publish-draft` and a dashboard action. What the wildcard cannot know is whether a branch was cut from `drafts` or from
    `main`, and one cut from `main` has no `X-Robots-Tag: noindex`: its deploy would be a
    crawlable copy of the published site with nothing looking wrong. The tool reports
    **DANGER** and the one-line fix if so. **Do not push until it is clean.**
