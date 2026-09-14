@@ -52,6 +52,13 @@ of the published site.**
    A conflict in that first merge will be in `_headers`: keep both sides — main's changes
    *and* the branch-only noindex block.
 
+   **A conflict in a GENERATED file is a different thing and must not be resolved by hand**
+   — `search-index.json` is the usual one, and `/ledger`, `/whats-new`, `register.xml` and
+   the `.md` siblings can all do it. Neither side is the answer. See *Bringing main's
+   changes in* in `save-draft`: clear the marker with either side, re-run the generators,
+   and commit what they write, because **the regeneration is the resolution**. Taking
+   main's copy silently drops a draft's own ledger rows.
+
 4. **Check the branch name fits a Netlify subdomain**, then tell Ryan to add it.
 
    ```bash
