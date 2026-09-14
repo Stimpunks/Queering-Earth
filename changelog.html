@@ -347,7 +347,24 @@
         <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name"><a href="/privacy#the-embed">/privacy</a> said there were three embedded recordings when there were five</span></div>
         <div class="qe-entry-body">
           <p><strong>The Glass and the Beethoven shipped with <a href="/most-quiet-need">Sheet No.&nbsp;12</a> and were never added to the list.</strong> The page went on naming three, which made a binding statement of practice false about its own subject for as long as that stood. It names all eight now, and says on its own face that two of them sat there unlisted, because quietly correcting a document like that one is the thing this cabinet refuses.</p>
-          <p><strong>Nothing gates the count, and that is structural rather than an oversight.</strong> <code>check-metadata.mjs</code> checks that every third-party <em>origin</em> our scripts can reach is named on that page &mdash; and one origin covers any number of videos, so a missing recording is invisible to it by construction. The list is kept by hand, which is the kind of list this register keeps warning about.</p>
+          <p><strong>Nothing gated the count, and that was structural rather than an oversight.</strong> <code>check-metadata.mjs</code> checks that every third-party <em>origin</em> our scripts can reach is named on that page &mdash; and one origin covers any number of videos, so a missing recording was invisible to it by construction. The list is kept by hand, which is the kind of list this register keeps warning about. <strong>It is gated now</strong>, by the check below, written the same day on Ryan&rsquo;s call.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">The recordings list on <a href="/privacy#the-embed">/privacy</a> is checked against the facades that exist</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Check 7c.</strong> Section 7b asserts that every third-party <em>origin</em> our scripts can reach is named, which is the check that matters for what a browser may talk to and is <strong>structurally blind to how many recordings there are</strong> &mdash; one origin covers any number of videos. So it counts the <code>data-embed-id</code> facades on every page, reads the list under <code>#the-embed</code>, and compares them per page. It also reads the number the page says out loud in its own prose, because a list that grew while the sentence above it did not is the same failure one layer up.</p>
+          <p><strong>Made to fail in five shapes before being believed</strong>, each reverted after: the historical bug put back &mdash; the two Sheet No.&nbsp;12 recordings unlisted with the count sentence agreeing with the short list, which is exactly how it shipped; a count word wrong on its own; the list naming a recording no longer on the page; a new facade added to a sheet that had none, which is the case that will actually arrive next; and the two ways the check could be quietly defeated &mdash; rewording the sentence it reads, and renaming the section&rsquo;s <code>id</code>. <strong>Both of those fail loudly rather than going silent</strong>, because a gate that stops applying when somebody edits around it is worse than no gate.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><code>check-markup.mjs</code> stops reporting PASS over a page it never read</span></div>
+        <div class="qe-entry-body">
+          <p><strong>A named target that could not be found printed <code>SKIP not found</code> and the run went on to report <code>PASS</code>, <code>0 problem(s)</code> and exit 0.</strong> It happened here: a page was checked from a branch it did not exist on, and the gate certified it &mdash; 0 tags, 0 ids, 0 elements balanced, and a clean bill of health.</p>
+          <p><strong>This is the empty-pass fault the rendering gates already guard</strong>, arriving in the one gate that had no guard for it. The wording is taken from theirs, because the reasoning is identical: a page that measures nothing reports zero problems, which is indistinguishable from a clean page in every other line of the output. Unread targets are reported in their own block, never mixed into the problem count &mdash; an unmeasured page is a broken run, not a bad page &mdash; and under <code>--check</code> the run fails.</p>
+          <p>Proved in four shapes: the missing file alone; a missing file beside a real one, where the real page must still be measured and the run must still fail; without <code>--check</code>, where it reports and does not gate, which is this tool&rsquo;s stated contract; and a real page, which still passes.</p>
         </div>
       </div>
 

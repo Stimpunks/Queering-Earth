@@ -4653,7 +4653,21 @@ Label corrected[/privacy](https://queering.earth/privacy#the-embed) said there w
 
 **The Glass and the Beethoven shipped with [Sheet No. 12](https://queering.earth/most-quiet-need) and were never added to the list.** The page went on naming three, which made a binding statement of practice false about its own subject for as long as that stood. It names all eight now, and says on its own face that two of them sat there unlisted, because quietly correcting a document like that one is the thing this cabinet refuses.
 
-**Nothing gates the count, and that is structural rather than an oversight.** `check-metadata.mjs` checks that every third-party *origin* our scripts can reach is named on that page — and one origin covers any number of videos, so a missing recording is invisible to it by construction. The list is kept by hand, which is the kind of list this register keeps warning about.
+**Nothing gated the count, and that was structural rather than an oversight.** `check-metadata.mjs` checks that every third-party *origin* our scripts can reach is named on that page — and one origin covers any number of videos, so a missing recording was invisible to it by construction. The list is kept by hand, which is the kind of list this register keeps warning about. **It is gated now**, by the check below, written the same day on Ryan’s call.
+
+CabinetThe recordings list on [/privacy](https://queering.earth/privacy#the-embed) is checked against the facades that exist
+
+**Check 7c.** Section 7b asserts that every third-party *origin* our scripts can reach is named, which is the check that matters for what a browser may talk to and is **structurally blind to how many recordings there are** — one origin covers any number of videos. So it counts the `data-embed-id` facades on every page, reads the list under `#the-embed`, and compares them per page. It also reads the number the page says out loud in its own prose, because a list that grew while the sentence above it did not is the same failure one layer up.
+
+**Made to fail in five shapes before being believed**, each reverted after: the historical bug put back — the two Sheet No. 12 recordings unlisted with the count sentence agreeing with the short list, which is exactly how it shipped; a count word wrong on its own; the list naming a recording no longer on the page; a new facade added to a sheet that had none, which is the case that will actually arrive next; and the two ways the check could be quietly defeated — rewording the sentence it reads, and renaming the section’s `id`. **Both of those fail loudly rather than going silent**, because a gate that stops applying when somebody edits around it is worse than no gate.
+
+Cabinet`check-markup.mjs` stops reporting PASS over a page it never read
+
+**A named target that could not be found printed `SKIP not found` and the run went on to report `PASS`, `0 problem(s)` and exit 0.** It happened here: a page was checked from a branch it did not exist on, and the gate certified it — 0 tags, 0 ids, 0 elements balanced, and a clean bill of health.
+
+**This is the empty-pass fault the rendering gates already guard**, arriving in the one gate that had no guard for it. The wording is taken from theirs, because the reasoning is identical: a page that measures nothing reports zero problems, which is indistinguishable from a clean page in every other line of the output. Unread targets are reported in their own block, never mixed into the problem count — an unmeasured page is a broken run, not a bad page — and under `--check` the run fails.
+
+Proved in four shapes: the missing file alone; a missing file beside a real one, where the real page must still be measured and the run must still fail; without `--check`, where it reports and does not gate, which is this tool’s stated contract; and a real page, which still passes.
 
 Label corrected[The plate](https://queering.earth/the-plate) was counting its own kinds wrong
 
@@ -7891,7 +7905,7 @@ Dolly Parton, 1946–2026, and Tressie McMillan Cottom
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-267 entries across 74 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+269 entries across 74 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 
