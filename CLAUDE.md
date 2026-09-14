@@ -843,8 +843,14 @@ exceptions. `/design` now says drag it, and says why in a sentence a contributor
 run by the browser at the reader's gesture from outside the document, so the page's policy
 does not reach it; the **script it injects does** fall under `script-src`, which is why the
 bookmarklet loads `location.origin + '/edit.js'` rather than naming this site — `'self'` on a
-draft host means the draft host. **Nothing here gates the exemption itself**, and it is the
-one part of this policy that wants a press on a real bookmarks bar after a deploy.
+draft host means the draft host.
+
+**CONFIRMED ON PRODUCTION THE DAY THE POLICY SHIPPED**, 2026-09-13: Ryan pressed the
+bookmarklet from his own bar on queering.earth under the live header and the editor started.
+**Nothing here gates it and nothing can** — the exemption belongs to the browser, not to this
+site, so a browser that stopped honouring it would break the editor silently and no run of
+`check.mjs` would say a word. It is a press on a real bookmarks bar, and it is the one check
+on this list that a person has to do. **Re-press it after any change to `script-src`.**
 
 ### Python touches pixels; Node does everything else
 
