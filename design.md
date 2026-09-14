@@ -240,7 +240,9 @@ There is no content management system here and there is not going to be one. The
 
 What a contributor actually needs is smaller. This is a bookmark. Drag it to your bookmarks bar, then press it on any page here and the words become editable:
 
-[Edit this page](javascript:(function()%7Bvar%20s=document.createElement('script');s.src='https://queering.earth/edit.js';document.body.appendChild(s);%7D)();) Drag me to the bookmarks bar — or press me now, and this page becomes editable.
+[Edit this page](javascript:(function()%7Bvar%20s=document.createElement('script');s.src=location.origin+'/edit.js';document.body.appendChild(s);%7D)();) Drag me to the bookmarks bar. Pressing me where I hang does nothing, and the paragraph below says why.
+
+**It has to be in your bookmarks, and that is this site’s own security policy talking.** The header every page here is served with refuses to run a script that arrives from a link — which is most of what the policy is for, and it does not make an exception for ours. A bookmark is different: your browser runs it because *you* pressed it, from outside the page, so the page’s policy has no say. That is the whole reason this is a thing to drag rather than a button to click.
 
 Change what you like, press **Copy my edits**, and paste the result to whoever is going to apply it. **Nothing is saved to the site and nothing is sent anywhere** — there is no account here and the editor has none either. What you changed stays in your own browser until you paste it out, which [the privacy page](https://queering.earth/privacy#your-browser) describes as the one key it writes.
 

@@ -37,6 +37,32 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 13 September · latest
 
+## The header that says what a page may reach, and the hash that has to be generated
+
+Ryan asked how strict the Content-Security-Policy was, and whether tightening it would break the new editor. It had been one directive for months on a reason nobody had measured.
+
+CabinetEleven directives where there had been one
+
+`\_headers` had carried `frame-ancestors ‘none’` and nothing else since the header shipped, with a comment saying a `script-src` would kill the snippet every page runs before first paint. **That was a plausible reason nobody had checked.** Counted instead: **one executable inline script on the site, byte-identical on all twenty-nine pages**, so a single hash covers every page. The twenty-eight JSON-LD blocks need none — a data block is never executed, and hashing them would have buried the one hash that matters among twenty-eight that do nothing.
+
+What is locked now: scripts to this origin and that one hash, no `eval`, no inline handlers, no plugins, no base tag, no form submission anywhere, and frames only from the one embed the privacy policy already names. **`style-src` keeps `‘unsafe-inline’` and that is not laziness** — 1,299 inline `style` attributes carry each sheet’s own foxing seed, stamp rotation and card colours, and **a CSP hash does not cover a style attribute**, only a `<style>` element. The alternative was not a stricter policy; it was deleting the per-page palette.
+
+Cabinet`tools/make-csp.mjs`, because the hash cannot be kept by hand
+
+The snippet it hashes **lists the nine typefaces the picker offers**, so narrowing the picker changes the hash in the same commit — and **a stale hash does not warn.** The browser simply refuses the snippet on every page, and every reader who asked for the cabinet or for plain view is shown the other thing before the stylesheet catches up: the exact failure the before-first-paint rule exists to prevent, arriving silently and visible only to somebody who had a preference stored and was looking for it. So the policy is written between markers by a tool, `check-cache.mjs` fails when the header and the pages disagree, and the generator runs **last** of the five, after everything that can rewrite a page.
+
+**Proved in a browser before it shipped, both ways.** The policy went into a copy of the home page as a `meta` tag with a preference stored: the snippet ran and the cabinet came up. The same copy with one character changed in the hash refused it — **and Chrome’s own message named the hash the generator had computed**, which is the browser confirming the arithmetic rather than us confirming it. The gate was made to fail and then to pass the same way.
+
+Label correctedThe bookmarklet named this site by name, where it should have asked where it was standing
+
+It loaded the editor from `queering.earth` written out, which worked everywhere because nothing constrained it. **Under `script-src ‘self’` that breaks on exactly the host it was built for** — a draft, where a contributor reads a sheet that has not been mounted. It asks for `location.origin` now, so it fetches the editor from whatever site the reader is on.
+
+A bookmarklet’s own `javascript:` run is the browser acting on your gesture from outside the page, so the page’s policy does not reach it; **the script it injects does**, which is the whole of the fix. That exemption is the one part of this policy nothing here can gate, and it wants a press on a real bookmarks bar after a deploy.
+
+**The same policy refused the try-it-now press on [the colophon](https://queering.earth/design#editing), and that was measured rather than guessed.** The bookmark hung there as a link you could drag *or* press where it hung, and a hash does not apply to a `javascript:` navigation without `‘unsafe-hashes’`. Re-opening that site-wide to buy back one convenience on one page is a bad trade on a site with no user input to protect, so the words changed instead: the page says drag it, and says why. A contributor who reads that sentence learns something true about the site rather than being told a rule.
+
+2026 · 13 September
+
 ## A way to change words without editing HTML, and a policy that had been miscounting itself
 
 Ryan asked whether Decap, Sveltia or TinaCMS would work here. None of them can, and the reason turned out to be measurable.

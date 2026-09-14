@@ -621,11 +621,13 @@ the first run. Verified with a temp directory before anything was written. **Che
 before adding any page whose slug matches a repo-root file.**
 
 **Run the generators in order: `make-records` → `make-whats-new` → `make-search-index` →
-`make-markdown`.**
+`make-markdown` → `make-csp`.**
 The record pages are an input to the other two, and `search.html`'s manifest is an input
 to its own `.md`. `check-metadata.mjs` checks them in that order for the same reason —
 otherwise a stale record page reports as a stale `.md`, which is the symptom and points
-at the wrong tool.
+at the wrong tool. **`make-csp` is last** for the same argument one step out: it hashes the
+inline snippet in every page's head, so it must run after anything that can rewrite a page,
+and `make-records` and `make-whats-new` both do.
 
 **`tools/html.mjs` and `tools/pages.mjs` are shared, and that is the point of them.**
 **`check-markup.mjs` was not using the shared one and grew a third entity table** — six
@@ -788,6 +790,61 @@ because `search-index.json` is reached from `queering-search.js` and appears in 
 any page — an HTML-only scan would have missed the very file that prompted the gate. **A new
 asset needs a line in one of the two lists**; the gate fails on one in neither, which is the
 reminder. `--live` probes the edge and checks the precedence model rather than the policy.
+
+### The policy that says what a page may reach is generated, and the hash is why
+
+`_headers` sends a Content-Security-Policy written by **`tools/make-csp.mjs`** between
+markers, and **the reason it is generated rather than typed is the one hash in it**. Every
+page runs an inline snippet before first paint — the one that applies the stored ground and
+the stored view — and that snippet **lists the nine typefaces the picker offers**, so
+`make-fonts.mjs` narrowing the picker changes it. A hand-kept hash would go stale in the
+same commit as the change that invalidated it.
+
+**A STALE HASH DOES NOT WARN.** The browser simply refuses the snippet, on every page, and
+every reader who asked for the cabinet or for plain view is shown the other thing before the
+stylesheet catches up — the exact failure the before-first-paint rule exists to prevent,
+arriving silently and visible only to somebody who had a preference stored and was looking
+for it. `check-cache.mjs` shells out to `make-csp.mjs --check` for that reason, and that gate
+was proved both ways before it was believed.
+
+**This header carried `frame-ancestors 'none'` and nothing else until 2026-09-13**, on the
+stated grounds that a `script-src` would kill the snippet. That was never measured. Measured
+when the question was reopened: **one executable inline script on the site, byte-identical on
+all 29 pages**, so one hash covers everything — and the 28 JSON-LD blocks need none, because
+**a data block is never executed** and hashing them would have hidden the hash that matters
+among twenty-eight that do nothing.
+
+- **`style-src` keeps `'unsafe-inline'`, and that is not laziness.** 1,299 inline `style=`
+  attributes carry each sheet's foxing seed, its stamp rotation and its card colours, and
+  **CSP hashes do not cover style ATTRIBUTES**, only `<style>` elements. The alternative is
+  not a stricter policy, it is deleting the per-page palette. Script is the valuable target
+  and it is fully locked.
+- **`frame-src` names the one embed**, which is the click-to-load recording at the foot of
+  the home page. Same origin the privacy page names, and for the same reason.
+- **Proved in a browser before it shipped, both ways.** The policy was pasted into a copy of
+  the home page as a `meta` tag and loaded with a preference stored: the snippet ran and the
+  cabinet came up. The same copy with one character changed in the hash refused it, **and
+  Chrome's own message named the hash the generator had computed** — the browser confirming
+  the arithmetic rather than us confirming it.
+
+**THE POLICY BROKE THE TRY-IT-NOW PATH ON `/design`, AND THAT WAS MEASURED RATHER THAN
+GUESSED.** The bookmarklet hung there as an `<a href="javascript:…">` that could be dragged
+*or* pressed where it hung. Under this policy the press is refused — Chrome: *Running the
+JavaScript URL violates the following Content Security Policy directive* — because **a hash
+does not apply to a `javascript:` navigation** without `'unsafe-hashes'`. Proved both ways on
+a local copy: the guarded page refuses it, the unguarded one starts the editor.
+
+**`'unsafe-hashes'` was refused and the words were changed instead.** Re-opening
+`javascript:` navigation site-wide to buy back one convenience on one page is a bad trade on
+a site with no user input to protect and a policy whose whole value is that it has no
+exceptions. `/design` now says drag it, and says why in a sentence a contributor can act on.
+
+**A BOOKMARK IS DIFFERENT FROM A LINK, AND THAT DIFFERENCE IS THE FEATURE.** A bookmarklet is
+run by the browser at the reader's gesture from outside the document, so the page's policy
+does not reach it; the **script it injects does** fall under `script-src`, which is why the
+bookmarklet loads `location.origin + '/edit.js'` rather than naming this site — `'self'` on a
+draft host means the draft host. **Nothing here gates the exemption itself**, and it is the
+one part of this policy that wants a press on a real bookmarks bar after a deploy.
 
 ### Python touches pixels; Node does everything else
 
@@ -1696,7 +1753,7 @@ node tools/check.mjs --all    # the same, over all 27 pages
 ```
 
 **Written on 2026-09-12 because shipping a move of one block inside one page took over
-twenty minutes.** Timed afterwards: the four generators are 4.8s and the six offline gates
+twenty minutes.** Timed afterwards: the five generators are 4.9s and the six offline gates
 5.6s together, `check-overlap` is 40s, `check-contrast` 53s, and **`check-width` is 4:22 —
 three quarters of the bill**, because it renders 27 pages × 10 typefaces × 4 widths × 2
 papers. Nothing that is not Chrome costs ten seconds.
@@ -1738,7 +1795,7 @@ built, and whenever the answer matters more than the minute.
 Regenerate first, in this order — `check-metadata.mjs` fails on any of them being stale:
 
 ```bash
-node tools/make-records.mjs && node tools/make-whats-new.mjs && node tools/make-search-index.mjs && node tools/make-markdown.mjs
+node tools/make-records.mjs && node tools/make-whats-new.mjs && node tools/make-search-index.mjs && node tools/make-markdown.mjs && node tools/make-csp.mjs
 ```
 
 ```bash
@@ -1747,7 +1804,7 @@ node tools/check-sitemap.mjs --check     # every page listed once, every entry r
 node tools/check-contrast.mjs --check   # 7:1 in BOTH grounds and under print emulation, two tiers
 node tools/check-addresses.mjs          # one address per page: a forced 301! per .html twin
 node tools/check-metadata.mjs           # derived files current, JSON-LD agreeing, credit correct
-node tools/check-cache.mjs              # no markup-coupled asset outliving the markup
+node tools/check-cache.mjs              # no markup-coupled asset outliving the markup, CSP current
 node tools/check-overlap.mjs --check    # no text on text, on screen and on paper, nothing clipped
 node tools/check-card-order.mjs --check # every grid ascends, every card agrees with the plate
 node tools/check-width.mjs             # nothing scrolls sideways, in any typeface, screen or paper

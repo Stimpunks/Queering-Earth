@@ -326,9 +326,42 @@
        which a derived href would have. -->
   <div class="qe-register" id="latest">
 
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-csp">
+      <p class="qe-accession-date">2026 &middot; 13 September &middot; latest</p>
+      <h2 id="a-2026-09-13-csp">The header that says what a page may reach, and the hash that has to be generated <a class="qe-anchor" href="#a-2026-09-13-csp"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Ryan asked how strict the Content-Security-Policy was, and whether tightening it would break the new editor. It had been one directive for months on a reason nobody had measured.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Eleven directives where there had been one</span></div>
+        <div class="qe-entry-body">
+          <p><code>_headers</code> had carried <code>frame-ancestors &lsquo;none&rsquo;</code> and nothing else since the header shipped, with a comment saying a <code>script-src</code> would kill the snippet every page runs before first paint. <strong>That was a plausible reason nobody had checked.</strong> Counted instead: <strong>one executable inline script on the site, byte-identical on all twenty-nine pages</strong>, so a single hash covers every page. The twenty-eight JSON-LD blocks need none &mdash; a data block is never executed, and hashing them would have buried the one hash that matters among twenty-eight that do nothing.</p>
+          <p>What is locked now: scripts to this origin and that one hash, no <code>eval</code>, no inline handlers, no plugins, no base tag, no form submission anywhere, and frames only from the one embed the privacy policy already names. <strong><code>style-src</code> keeps <code>&lsquo;unsafe-inline&rsquo;</code> and that is not laziness</strong> &mdash; 1,299 inline <code>style</code> attributes carry each sheet&rsquo;s own foxing seed, stamp rotation and card colours, and <strong>a CSP hash does not cover a style attribute</strong>, only a <code>&lt;style&gt;</code> element. The alternative was not a stricter policy; it was deleting the per-page palette.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><code>tools/make-csp.mjs</code>, because the hash cannot be kept by hand</span></div>
+        <div class="qe-entry-body">
+          <p>The snippet it hashes <strong>lists the nine typefaces the picker offers</strong>, so narrowing the picker changes the hash in the same commit &mdash; and <strong>a stale hash does not warn.</strong> The browser simply refuses the snippet on every page, and every reader who asked for the cabinet or for plain view is shown the other thing before the stylesheet catches up: the exact failure the before-first-paint rule exists to prevent, arriving silently and visible only to somebody who had a preference stored and was looking for it. So the policy is written between markers by a tool, <code>check-cache.mjs</code> fails when the header and the pages disagree, and the generator runs <strong>last</strong> of the five, after everything that can rewrite a page.</p>
+          <p><strong>Proved in a browser before it shipped, both ways.</strong> The policy went into a copy of the home page as a <code>meta</code> tag with a preference stored: the snippet ran and the cabinet came up. The same copy with one character changed in the hash refused it &mdash; <strong>and Chrome&rsquo;s own message named the hash the generator had computed</strong>, which is the browser confirming the arithmetic rather than us confirming it. The gate was made to fail and then to pass the same way.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">The bookmarklet named this site by name, where it should have asked where it was standing</span></div>
+        <div class="qe-entry-body">
+          <p>It loaded the editor from <code>queering.earth</code> written out, which worked everywhere because nothing constrained it. <strong>Under <code>script-src &lsquo;self&rsquo;</code> that breaks on exactly the host it was built for</strong> &mdash; a draft, where a contributor reads a sheet that has not been mounted. It asks for <code>location.origin</code> now, so it fetches the editor from whatever site the reader is on.</p>
+          <p>A bookmarklet&rsquo;s own <code>javascript:</code> run is the browser acting on your gesture from outside the page, so the page&rsquo;s policy does not reach it; <strong>the script it injects does</strong>, which is the whole of the fix. That exemption is the one part of this policy nothing here can gate, and it wants a press on a real bookmarks bar after a deploy.</p>
+          <p><strong>The same policy refused the try-it-now press on <a href="/design#editing">the colophon</a>, and that was measured rather than guessed.</strong> The bookmark hung there as a link you could drag <em>or</em> press where it hung, and a hash does not apply to a <code>javascript:</code> navigation without <code>&lsquo;unsafe-hashes&rsquo;</code>. Re-opening that site-wide to buy back one convenience on one page is a bad trade on a site with no user input to protect, so the words changed instead: the page says drag it, and says why. A contributor who reads that sentence learns something true about the site rather than being told a rule.</p>
+        </div>
+      </div>
+    </section>
+
+
 
     <section class="qe-accession" aria-labelledby="a-2026-09-13-edit-layer">
-      <p class="qe-accession-date">2026 &middot; 13 September &middot; latest</p>
+      <p class="qe-accession-date">2026 &middot; 13 September</p>
       <h2 id="a-2026-09-13-edit-layer">A way to change words without editing HTML, and a policy that had been miscounting itself <a class="qe-anchor" href="#a-2026-09-13-edit-layer"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">Ryan asked whether Decap, Sveltia or TinaCMS would work here. None of them can, and the reason turned out to be measurable.</p>

@@ -537,7 +537,9 @@
 
   <p>What a contributor actually needs is smaller. This is a bookmark. Drag it to your bookmarks bar, then press it on any page here and the words become editable:</p>
 
-  <p class="qe-install"><a class="qe-bookmarklet" href="javascript:(function()%7Bvar%20s=document.createElement('script');s.src='https://queering.earth/edit.js';document.body.appendChild(s);%7D)();">Edit this page</a> <span class="qe-install-hint">Drag me to the bookmarks bar &mdash; or press me now, and this page becomes editable.</span></p>
+  <p class="qe-install"><a class="qe-bookmarklet" href="javascript:(function()%7Bvar%20s=document.createElement('script');s.src=location.origin+'/edit.js';document.body.appendChild(s);%7D)();">Edit this page</a> <span class="qe-install-hint">Drag me to the bookmarks bar. Pressing me where I hang does nothing, and the paragraph below says why.</span></p>
+
+  <p><strong>It has to be in your bookmarks, and that is this site&rsquo;s own security policy talking.</strong> The header every page here is served with refuses to run a script that arrives from a link &mdash; which is most of what the policy is for, and it does not make an exception for ours. A bookmark is different: your browser runs it because <em>you</em> pressed it, from outside the page, so the page&rsquo;s policy has no say. That is the whole reason this is a thing to drag rather than a button to click.</p>
 
   <p>Change what you like, press <strong>Copy my edits</strong>, and paste the result to whoever is going to apply it. <strong>Nothing is saved to the site and nothing is sent anywhere</strong> &mdash; there is no account here and the editor has none either. What you changed stays in your own browser until you paste it out, which <a href="/privacy#your-browser">the privacy page</a> describes as the one key it writes.</p>
 
