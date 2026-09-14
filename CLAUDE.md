@@ -51,6 +51,47 @@ session is a convenience for a one-file edit, not the workflow. **`ONBOARDING.md
 in** — a new collaborator opens it in Claude Code and it walks the whole path, from clone to
 first draft.
 
+## What a session knows on one machine, it does not know on the other
+
+**A session's project memory is machine-local and private. This file is in the repository and
+is shared.** Anything learned here that the other collaborator's session would also need
+belongs in `CLAUDE.md` or `DECISIONS.md` — a memory is the right place for *how Ryan likes a
+proposal formatted*, and the wrong place for *how this repository works*. Written down
+2026-09-14, on Ryan's call, after the onboarding pass found the two failure shapes below in
+the two memories that existed: **one had never been written into the repository at all, and
+the other was here with one machine's path hardcoded into it** while the tool it describes had
+already learned to look in three places.
+
+**Markdown line discipline: match the file you are editing.** `DECISIONS.md` and
+`ATTRIBUTIONS.md` are **one unbroken line per paragraph** — Ryan's editor soft-wraps, so a
+hard-wrapped paragraph renders ragged for him. `CLAUDE.md`, `README.md` and `AUDIT.md` are
+hard-wrapped at about 95 columns from before that was settled, and **stay that way when edited
+in place**; the longest line is 953 characters in `DECISIONS.md` and 203 here, which is the
+measurement rather than a target. List items and table rows are one line each in both styles.
+**Never re-wrap a file wholesale to normalise it** — this register refused content
+fingerprinting to keep its diffs legible, and a reflowed file is a diff nobody can read.
+
+**Four things must be on the machine, and this repository installs none of them**: git, Node
+(the tools are dependency-free ESM — **nothing here ever needs `npm install`**), Chrome or
+Chromium for the three rendering gates, and Python 3 with Pillow ≥ 11 for the two image tools.
+**Every one of them already fails loudly and by name**: `cdp.mjs` prints the list of paths it
+looked in, and the Python tools print the `pip` line to run. **A gate that could not run has
+not passed.** Report which gate did not run and why — a sweep described as clean around a
+missing tool is the eight-percent failure this file keeps warning about, wearing a new hat.
+
+**SKS is a separate repository, optional, and in a different place on each machine.**
+`tools/sks-search.sh` checks `STIMPUNKS_KNOWLEDGE_SYSTEM`, then a sibling of this repo, then
+two known spellings, and **exits 3 listing every path it tried rather than returning nothing**
+— because qmd run from the wrong directory prints `No results found.` and exits 0, and a
+silent empty result makes a caller conclude the library holds nothing. **An absent library is
+not an empty one.** If it is not on this machine, say so and go to the source instead.
+
+**`.claude/settings.json` is the shared permission allowlist**, tracked rather than local, so
+a full sweep is not dozens of prompts in a row — which is the same tooling friction that
+decided the draft review path. **`git push` is deliberately not on it**: it is the one
+outward-facing step and the one that deploys, and one prompt per publish is not friction. **A
+new tool in `tools/` wants a line there**; a new *capability* wants thinking about first.
+
 ## Source of truth & deployment
 
 - **This git repo IS the source of truth.** Cloned at `~/Documents/GitHub/Queering-Earth`.
@@ -1597,7 +1638,8 @@ to tell a checkable fact from a reading. **Re-digest the skill when you edit it*
 `DECISIONS.md` instead.
 
 **`inbox/` is a tray, not a store, which is why writing to it does not breach that rule.** It
-is git-ignored, at `~/Documents/Claude/Projects/Stimpunks Knowledge System/inbox/`, and a file
+is git-ignored, at `inbox/` inside whichever SKS checkout `tools/sks-search.sh` resolves — see
+the machines section above, and never hardcode one spelling of that path — and a file
 sitting in it is *awaiting processing*: nothing joins the library until the **process-inbox**
 skill is run **there**, which reads each file for a real title, copies it into `raw/` and
 clears the tray. Dropping a file in changes no page, no wiki link and no index entry.
