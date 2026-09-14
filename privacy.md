@@ -66,13 +66,20 @@ One thing worth being plain about, since it is the general case and not ours: **
 
 ## The one embedded thing
 
-There are **three embedded recordings** on this site, and they are the only places where another company can learn anything about you. All three are on YouTube, which is Google, and all three behave identically:
+There are **eight embedded recordings** on this site, and they are the only places where another company can learn anything about you. All eight are on YouTube, which is Google, and all eight behave identically:
 
 - T. S. Eliot reading *The Waste Land*, at the foot of [the home page](https://queering.earth/).
 - Townes Van Zandt playing “Waitin’ Around to Die”, on [Sheet No. 11](https://queering.earth/gloomy-sunflowers#galveston).
 - Nirvana’s “Polly”, on [the same sheet](https://queering.earth/gloomy-sunflowers#hi-how-are-you).
+- Philip Glass playing “Mad Rush”, on [Sheet No. 12](https://queering.earth/most-quiet-need#suspension).
+- Beethoven’s Violin Sonata No. 9, played by Renaud Capuçon and Frank Braley, on [the same sheet](https://queering.earth/most-quiet-need#the-carriage).
+- Dolly Parton, *I Believe in You*, on [Sheet No. 14](https://queering.earth/known-and-felt-and-seen#no-test).
+- Dolly Parton, *Travelin’ Thru*, on [the same sheet](https://queering.earth/known-and-felt-and-seen#claimed).
+- Dolly Parton singing for her vaccine at Vanderbilt, on [the same sheet](https://queering.earth/known-and-felt-and-seen#retracted).
 
-**Google is still one party, however many recordings there are**, and that is the fact this section is really about. Adding the second and third did not add a company to this page; it added two more places where you can choose to reach the one that was already here.
+**Google is still one party, however many recordings there are**, and that is the fact this section is really about. Every recording added since the first has added another place where you can choose to reach the company that was already here, and has not added a company.
+
+**Two of them sat on this site unlisted here, and that is worth saying out loud rather than quietly correcting.** The Glass and the Beethoven shipped with Sheet No. 12 and this page went on saying there were three recordings, which made it false about its own subject for as long as that stood. Nothing gates the count — `tools/check-metadata.mjs` checks that every third-party origin our scripts can reach is named on this page, and one origin covers any number of videos, so a missing recording is invisible to it. The list is kept by hand, and a hand-kept list is the kind this site keeps warning about.
 
 **Nothing is fetched from any of them until you press play.** What each page actually contains is a picture we drew and a link. No YouTube script, no YouTube thumbnail, no invisible pixel, no `preconnect` hint — a reader who never presses play makes exactly the same requests as a reader of a page with no recording on it at all, which is to say requests to this domain and no other. That is checked by `tools/check-metadata.mjs` on every run, and the check reads our JavaScript as well as our markup, because a script that quietly reaches a third party would otherwise make this paragraph false while every page looked clean.
 
