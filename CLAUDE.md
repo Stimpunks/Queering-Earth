@@ -852,6 +852,43 @@ site, so a browser that stopped honouring it would break the editor silently and
 `check.mjs` would say a word. It is a press on a real bookmarks bar, and it is the one check
 on this list that a person has to do. **Re-press it after any change to `script-src`.**
 
+### What a page may ask the device for is a delegation, not a wall
+
+`_headers` sends a `Permissions-Policy` as of 2026-09-13, added the same day as the real
+CSP and for the same reason — the site sent none and neither did Netlify's defaults.
+**This site calls no gated feature of its own**, checked rather than assumed: no
+`getUserMedia`, no geolocation, no `requestFullscreen`, no payment, no WebUSB, no
+`navigator.share` anywhere in our scripts. So thirty-five denials cost a reader nothing.
+
+**THE FIVE DELEGATIONS ARE THE WHOLE OF THE THOUGHT, AND A DENY-EVERYTHING LIST WOULD HAVE
+BROKEN A READER-FACING CONTROL.** An iframe's `allow` attribute can only **narrow** what the
+page already has; it cannot grant what this header denies. `queering-embed.js` builds its
+player with `allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen"`
+and a `?autoplay=1` URL, so a blanket denial leaves a reader who pressed the facade with a
+player that will not start and a fullscreen button that does nothing. They are delegated to
+the one origin and never to `*`; only `fullscreen` also keeps `self`.
+
+**`clipboard-write` IS NOT NAMED, AND THAT IS THE `sitemap` LESSON ARRIVING AGAIN.** Both
+injected layers copy out through `navigator.clipboard.writeText`, so it looked like the thing
+most in need of protecting — and it is **not a directive in the Permissions Policy registry
+at all**. Writing it would have been a token that reads as standard, is not, and rides along
+on every response saying nothing. Verify a directive against the list before adding one.
+
+**WHAT IS DELIBERATELY LEFT UNNAMED IS THE OTHER HALF OF THE CARE.** `aria-notify` fires
+screen-reader announcements; the translation, summarisation and speech directives are a
+reader's own tools for getting at our words; the cross-origin-isolation and fetch-quota
+directives are plumbing rather than a capability anybody asks a device for. **Denying those
+would have looked more thorough and been less careful.**
+
+**Proved in a browser before it shipped**, behind a throwaway proxy putting the real header
+in front of the real site, because **a `Permissions-Policy` cannot be set by a meta tag** the
+way the CSP was tested. `document.featurePolicy` reported camera, microphone, geolocation,
+payment and USB all false for our own page; all five player features true for
+`youtube-nocookie.com` and false for an unrelated origin; and pressing the facade built the
+player and it played. **Nothing gates this** — a new capability on this site needs its
+directive removed from the denials by hand, and the symptom of forgetting is a feature that
+silently does nothing.
+
 ### Python touches pixels; Node does everything else
 
 **That boundary replaced "the one Python tool here" on 2026-09-09**, when the plates

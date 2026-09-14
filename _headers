@@ -59,6 +59,40 @@
   # <<< csp
   X-Frame-Options: DENY
 
+  # ── What a page here is allowed to ask the device for ────────────────────────
+  # Added 2026-09-13, the same day the real CSP went up and for the same reason: the
+  # site sent no permissions policy at all, and neither did Netlify's defaults.
+  #
+  # THIS SITE CALLS NO GATED FEATURE OF ITS OWN — checked, not assumed. There is no
+  # getUserMedia, no geolocation, no requestFullscreen, no payment, no WebUSB, no
+  # navigator.share anywhere in our scripts. So every denial below costs a reader
+  # nothing and closes a surface that could only ever be opened by something we did
+  # not write.
+  #
+  # THE FIVE DELEGATIONS ARE THE WHOLE OF THE THOUGHT HERE. An iframe's `allow`
+  # attribute can only NARROW what the page already has; it cannot grant what this
+  # header denies. `queering-embed.js` builds its player with
+  # `allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen"`
+  # and a `?autoplay=1` URL, so a blanket denial would have left a reader who pressed
+  # the facade with a player that would not start and a fullscreen button that did
+  # nothing — a real control broken to tidy a header. They are delegated to the one
+  # origin, never to `*`, and only `fullscreen` also keeps `self`.
+  #
+  # `clipboard-write` IS NOT NAMED HERE AND THAT IS DELIBERATE. Both injected layers
+  # copy out through `navigator.clipboard.writeText`, so it looked like the thing most
+  # in need of protecting — but it is NOT a directive in the Permissions Policy
+  # registry. Writing it would have been the `sitemap` link relation again: a token
+  # that reads as standard, is not, and rides along on every response saying nothing.
+  # Verified against the directive list rather than remembered.
+  #
+  # WHAT IS DELIBERATELY LEFT UNNAMED, because denying it could cost a reader
+  # something and protects nobody: `aria-notify`, which fires screen-reader
+  # announcements; the translation, summarisation and speech APIs, which are a
+  # reader's own tools for getting at our words; and the cross-origin-isolation and
+  # fetch-quota plumbing, which is not a capability anybody asks a device for.
+  # A deny-everything list would have looked more careful and been less so.
+  Permissions-Policy: accelerometer=("https://www.youtube-nocookie.com"), autoplay=("https://www.youtube-nocookie.com"), encrypted-media=("https://www.youtube-nocookie.com"), picture-in-picture=("https://www.youtube-nocookie.com"), fullscreen=(self "https://www.youtube-nocookie.com"), ambient-light-sensor=(), attribution-reporting=(), bluetooth=(), browsing-topics=(), camera=(), captured-surface-control=(), ch-ua-high-entropy-values=(), compute-pressure=(), display-capture=(), gamepad=(), geolocation=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), local-fonts=(), local-network=(), loopback-network=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), private-state-token-issuance=(), private-state-token-redemption=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), speaker-selection=(), storage-access=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()
+
   # HSTS. Netlify's default was max-age=31536000 with no includeSubDomains; the spec
   # asks for two years and the subdomain flag, so this now overrides it.
   #

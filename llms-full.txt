@@ -4385,6 +4385,18 @@ The snippet it hashes **lists the nine typefaces the picker offers**, so narrowi
 
 **Proved in a browser before it shipped, both ways.** The policy went into a copy of the home page as a `meta` tag with a preference stored: the snippet ran and the cabinet came up. The same copy with one character changed in the hash refused it — **and Chrome’s own message named the hash the generator had computed**, which is the browser confirming the arithmetic rather than us confirming it. The gate was made to fail and then to pass the same way.
 
+CabinetA permissions policy, and the five exceptions that are the whole of it
+
+The site asked the reader’s device for nothing and said so nowhere. It says so now: thirty-five capabilities denied outright — camera, microphone, geolocation, payment, USB, serial, Bluetooth, MIDI, the motion sensors, the credential and attribution APIs. **None of it costs a reader anything**, because this site calls no gated feature of its own, which was checked rather than assumed.
+
+**A deny-everything list would have broken the one control a reader actually presses.** An `iframe`’s `allow` attribute can only narrow what the page already has — it cannot grant what the header denies — so a blanket denial would have left whoever pressed the Eliot facade with a player that would not start and a fullscreen button that did nothing. Five features are delegated to that one origin, never to everything, and only fullscreen also keeps this site itself.
+
+**`clipboard-write` is not named here, and looking it up is what saved it.** Both injected layers copy out through the clipboard, so it seemed the thing most in need of protecting — and it is not a directive in the registry at all. Writing it would have been [the `sitemap` relation](#a-2026-09-11-rels) a second time: a token that reads as standard, is not, and rides along on every response saying nothing.
+
+**What is left unnamed is the other half of the care.** Screen-reader announcements, and a reader’s own translation and speech tools, are not capabilities to take away from somebody trying to get at our words. Denying them would have looked more thorough and been less careful.
+
+Proved behind a throwaway proxy putting the real header in front of the real site, because **a permissions policy cannot be set by a meta tag** the way the content policy was tested: camera, microphone, geolocation, payment and USB all refused for our own pages; all five player features allowed for that one origin and refused for an unrelated one; and the facade pressed, the player built, and Eliot read.
+
 Label correctedThe bookmarklet named this site by name, where it should have asked where it was standing
 
 It loaded the editor from `queering.earth` written out, which worked everywhere because nothing constrained it. **Under `script-src ‘self’` that breaks on exactly the host it was built for** — a draft, where a contributor reads a sheet that has not been mounted. It asks for `location.origin` now, so it fetches the editor from whatever site the reader is on.
@@ -7541,7 +7553,7 @@ Helen Edgar, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-261 entries across 72 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+262 entries across 72 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

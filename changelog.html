@@ -348,6 +348,17 @@
         </div>
       </div>
 
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">A permissions policy, and the five exceptions that are the whole of it</span></div>
+        <div class="qe-entry-body">
+          <p>The site asked the reader&rsquo;s device for nothing and said so nowhere. It says so now: thirty-five capabilities denied outright &mdash; camera, microphone, geolocation, payment, USB, serial, Bluetooth, MIDI, the motion sensors, the credential and attribution APIs. <strong>None of it costs a reader anything</strong>, because this site calls no gated feature of its own, which was checked rather than assumed.</p>
+          <p><strong>A deny-everything list would have broken the one control a reader actually presses.</strong> An <code>iframe</code>&rsquo;s <code>allow</code> attribute can only narrow what the page already has &mdash; it cannot grant what the header denies &mdash; so a blanket denial would have left whoever pressed the Eliot facade with a player that would not start and a fullscreen button that did nothing. Five features are delegated to that one origin, never to everything, and only fullscreen also keeps this site itself.</p>
+          <p><strong><code>clipboard-write</code> is not named here, and looking it up is what saved it.</strong> Both injected layers copy out through the clipboard, so it seemed the thing most in need of protecting &mdash; and it is not a directive in the registry at all. Writing it would have been <a href="#a-2026-09-11-rels">the <code>sitemap</code> relation</a> a second time: a token that reads as standard, is not, and rides along on every response saying nothing.</p>
+          <p><strong>What is left unnamed is the other half of the care.</strong> Screen-reader announcements, and a reader&rsquo;s own translation and speech tools, are not capabilities to take away from somebody trying to get at our words. Denying them would have looked more thorough and been less careful.</p>
+          <p>Proved behind a throwaway proxy putting the real header in front of the real site, because <strong>a permissions policy cannot be set by a meta tag</strong> the way the content policy was tested: camera, microphone, geolocation, payment and USB all refused for our own pages; all five player features allowed for that one origin and refused for an unrelated one; and the facade pressed, the player built, and Eliot read.</p>
+        </div>
+      </div>
+
       <div class="qe-entry qe-entry--label" data-sheet="the-site">
         <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">The bookmarklet named this site by name, where it should have asked where it was standing</span></div>
         <div class="qe-entry-body">
