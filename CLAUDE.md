@@ -1700,6 +1700,17 @@ that has since landed on `main` by another route, because it diffs the merge bas
 offered `tools/make-whats-new.mjs` when both sides already agreed. Two dots asks the
 question that is actually being asked.
 
+**MERGING `main` INTO A DRAFT BRANCH CONFLICTS THE GENERATED FILES, AND THE REGENERATION IS
+THE RESOLUTION.** `search-index.json` is the usual one; `/ledger`, `/whats-new`,
+`register.xml` and the `.md` siblings can all do it. **Neither side is the answer and
+picking one is silent**: a draft that quotes anybody has its rows in `ATTRIBUTIONS.md` on
+its branch and nowhere else, so `/ledger` there legitimately differs from `/ledger` on
+`main` — take main's generated copy and **the draft's credit rows vanish while every page
+still reads perfectly.** That is this site's characteristic failure, a missing attribution,
+arriving through a merge nobody looked at. Clear the marker with either side, re-run the
+generators, commit what they write. Happened twice on 2026-09-13; the three draft skills
+carry the instruction, and `save-draft` carries the long version.
+
 **AND A `.md` IS DERIVED ONLY IF A PAGE OF THAT NAME EXISTS.** `make-markdown.mjs` writes a
 sibling beside every page, so `on-being-ill.md` is generated — but `ATTRIBUTIONS.md`,
 `DECISIONS.md` and `CLAUDE.md` are **sources**, and `ATTRIBUTIONS.md` is the one that

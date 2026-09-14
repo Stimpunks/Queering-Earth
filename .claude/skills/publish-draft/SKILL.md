@@ -156,6 +156,14 @@ git switch drafts && git merge main -m "Bring the drafts base up to date with ma
 A conflict there will be in `_headers`: **keep both sides** — main's changes and the
 branch-only noindex block.
 
+**A conflict in a GENERATED file is a different thing and must not be resolved by hand** —
+`search-index.json`, `/ledger`, `/whats-new`, `register.xml`, the `.md` siblings. Neither
+side is the answer. Clear the marker with either, re-run the four generators and
+`make-csp`, and commit what they write: **the regeneration is the resolution**. This one
+matters here more than anywhere, because at publication the draft's ledger rows have just
+moved to `main` and a hand-picked side can leave the two copies disagreeing about who was
+credited.
+
 ## Verify at the edge
 
 ```bash
