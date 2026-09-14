@@ -28,6 +28,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- The web app manifest. Same three icons drawn by the same tool; minimal-ui
+     rather than standalone, because an installed copy of a site whose whole
+     argument is that its addresses are real and citable must not hide the bar
+     the address is in. Guarded by check-metadata.mjs check 11. -->
+<link rel="manifest" href="site.webmanifest">
 
 <!-- The faces are self-hosted and declared in queering.css. Preloading the body
      roman is the one that pays: it is the first thing every page needs, and there

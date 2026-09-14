@@ -37,6 +37,40 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 14 September · latest
 
+## The cabinet can be installed, and the pin Android would have cropped off the mark
+
+A web app manifest, which the site had never had — and a 512px icon that had been generated on every run since the first week and referenced by nothing at all.
+
+Cabinet`site.webmanifest`, and why it says `minimal-ui` rather than `standalone`
+
+**Installed, this site would have had a generic browser icon and its page title.** A manifest is the declarative half of the thing the acronym covers — it runs nothing, caches nothing and makes nothing work offline; it says what the mark is, where the window opens, and what colour the chrome around it should be. The other half is a service worker, and there is still none here.
+
+**`display` is `minimal-ui` on purpose, and that is the one field in it that is an argument rather than a fact.** `standalone` hides the address bar, and this is a site whose whole practice is that [/on-being-ill](https://queering.earth/on-being-ill) is a real address a reader can copy, share and check us against. An installed copy that hides the bar the address sits in would be the cabinet quietly withdrawing the thing the [ledger](https://queering.earth/ledger) exists to make possible. `minimal-ui` is still installable in Chromium and keeps the address in view.
+
+**`start\_url` is a bare `/`, against the spec’s own example.** That example appends a tracking parameter so installed launches can be counted separately; there is nothing here that could read it, [/privacy](https://queering.earth/privacy) says so, and it would mint a second address for the home page on a site whose redirects exist to ensure every page has exactly one.
+
+**`short\_name` is the site’s name and not a nickname.** A home screen may truncate *Queering Earth*, and being truncated by somebody’s launcher is not the same as us keeping a second, shorter name for the site — which is the drift this register refuses everywhere else.
+
+CabinetA maskable icon is not a copy of the 512, and the measurement is what says so
+
+**Android applies its own mask and guarantees only the central 80% of the square.** The mark is a pressed leaf pinned with the wordmark’s rust dot, and at the scale every other icon here is drawn at, the drawing reaches **0.484 of the square from its centre** against a safe radius of 0.400 — measured out of the finished PNG, not calculated. **The pin is the part that goes.** A leaf with no pin is a leaf; the pin is what says *specimen*, and it would have been cropped off on every Android home screen with nothing anywhere looking wrong.
+
+So the maskable one is a separate render at its own scale rather than a `purpose` on an existing icon: an icon declared “any maskable” is used at both jobs, and padded enough to survive the mask it is a small leaf adrift in a field of vellum everywhere the mask is not applied. The ground was already full-bleed paper with no transparency, which is the other half of a maskable icon done right, so only the scale had to move.
+
+**0.33 was the arithmetic and 0.32 is what shipped.** The first re-render measured back at 0.400 of the square exactly — on the line, with no margin for a platform that rounds its mask the other way.
+
+**`images/icon-512.png` had been written on every run since the day the mark was drawn — 7 September, before this register existed to record it — and was referenced by nothing** — not a page, not `\_headers`, not the sitemap. Somebody laid this groundwork in the first week and stopped.
+
+CabinetA manifest fails silently, so three gates learned the word `manifest`
+
+**There is no symptom.** A manifest served as the wrong type, or naming an icon that is not there, is simply ignored: no console error, nothing wrong on the page, and an install affordance that never appears. So `\_headers` types it explicitly — the `.avif` lesson, where production sends `nosniff` and a type the local server guesses is one the live site cannot recover from — and `tools/serve.mjs` learned it too, so local and live agree.
+
+**Two gates had allowlists that would not have seen it.** `check-cache.mjs` and `check-metadata.mjs` each decide whether a `link` is a fetch by matching its `rel` against a list, and neither list held `manifest`. The one asset every page on the site fetches would have gone through the undeclared-asset check unseen, and a manifest pointed one day at somebody else’s CDN would have gone through the third-party check unseen. **An allowlist is only as good as its newest entry**, which is the argument for adding one in the same edit rather than the next.
+
+**Check 11 is the new guard**, and it checks the copies rather than the judgements: the two colours against the `--qe-paper` in the stylesheet’s `:root` block, the name and the description against the home page’s own, every icon against the file on disk *and against the size it claims to be*, and every page for the link. It also guards the one number the pixels cannot give back — Node has no image decoder, so the maskable scale is measured where the drawing happens and the gate only keeps the constant from being tidied back up. **Made to fail in five shapes before being believed**, each reverted after: a page that does not link it, a colour that is not the paper, a `sizes` that lies beside an icon that is not there, the maskable scale raised, and a description typed rather than copied.
+
+2026 · 14 September
+
 ## Sheet No. 14, and a privacy page that was false by two
 
 A wall, recast from our sibling site’s reading of the same life — and a correction to [/privacy](https://queering.earth/privacy) that had nothing to do with it and was found on the way past.

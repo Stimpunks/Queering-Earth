@@ -9,6 +9,15 @@
     <copyright>CC BY-SA 4.0</copyright>
     <lastBuildDate>Mon, 14 Sep 2026 12:00:00 GMT</lastBuildDate>
     <item>
+      <title>The cabinet can be installed, and the pin Android would have cropped off the mark</title>
+      <link>https://queering.earth/changelog#a-2026-09-14-webmanifest</link>
+      <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-14-webmanifest</guid>
+      <pubDate>Mon, 14 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Cabinet: site.webmanifest, and why it says minimal-ui rather than standalone
+Cabinet: A maskable icon is not a copy of the 512, and the measurement is what says so
+Cabinet: A manifest fails silently, so three gates learned the word manifest</description>
+    </item>
+    <item>
       <title>Sheet No. 14, and a privacy page that was false by two</title>
       <link>https://queering.earth/changelog#a-2026-09-14-known-and-felt-and-seen</link>
       <guid isPermaLink="true">https://queering.earth/changelog#a-2026-09-14-known-and-felt-and-seen</guid>
