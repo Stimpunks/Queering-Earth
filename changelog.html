@@ -326,9 +326,84 @@
        which a derived href would have. -->
   <div class="qe-register" id="latest">
 
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-csp">
+      <p class="qe-accession-date">2026 &middot; 13 September &middot; latest</p>
+      <h2 id="a-2026-09-13-csp">The header that says what a page may reach, and the hash that has to be generated <a class="qe-anchor" href="#a-2026-09-13-csp"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Ryan asked how strict the Content-Security-Policy was, and whether tightening it would break the new editor. It had been one directive for months on a reason nobody had measured.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Eleven directives where there had been one</span></div>
+        <div class="qe-entry-body">
+          <p><code>_headers</code> had carried <code>frame-ancestors &lsquo;none&rsquo;</code> and nothing else since the header shipped, with a comment saying a <code>script-src</code> would kill the snippet every page runs before first paint. <strong>That was a plausible reason nobody had checked.</strong> Counted instead: <strong>one executable inline script on the site, byte-identical on all twenty-nine pages</strong>, so a single hash covers every page. The twenty-eight JSON-LD blocks need none &mdash; a data block is never executed, and hashing them would have buried the one hash that matters among twenty-eight that do nothing.</p>
+          <p>What is locked now: scripts to this origin and that one hash, no <code>eval</code>, no inline handlers, no plugins, no base tag, no form submission anywhere, and frames only from the one embed the privacy policy already names. <strong><code>style-src</code> keeps <code>&lsquo;unsafe-inline&rsquo;</code> and that is not laziness</strong> &mdash; 1,299 inline <code>style</code> attributes carry each sheet&rsquo;s own foxing seed, stamp rotation and card colours, and <strong>a CSP hash does not cover a style attribute</strong>, only a <code>&lt;style&gt;</code> element. The alternative was not a stricter policy; it was deleting the per-page palette.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><code>tools/make-csp.mjs</code>, because the hash cannot be kept by hand</span></div>
+        <div class="qe-entry-body">
+          <p>The snippet it hashes <strong>lists the nine typefaces the picker offers</strong>, so narrowing the picker changes the hash in the same commit &mdash; and <strong>a stale hash does not warn.</strong> The browser simply refuses the snippet on every page, and every reader who asked for the cabinet or for plain view is shown the other thing before the stylesheet catches up: the exact failure the before-first-paint rule exists to prevent, arriving silently and visible only to somebody who had a preference stored and was looking for it. So the policy is written between markers by a tool, <code>check-cache.mjs</code> fails when the header and the pages disagree, and the generator runs <strong>last</strong> of the five, after everything that can rewrite a page.</p>
+          <p><strong>Proved in a browser before it shipped, both ways.</strong> The policy went into a copy of the home page as a <code>meta</code> tag with a preference stored: the snippet ran and the cabinet came up. The same copy with one character changed in the hash refused it &mdash; <strong>and Chrome&rsquo;s own message named the hash the generator had computed</strong>, which is the browser confirming the arithmetic rather than us confirming it. The gate was made to fail and then to pass the same way.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name">The bookmarklet named this site by name, where it should have asked where it was standing</span></div>
+        <div class="qe-entry-body">
+          <p>It loaded the editor from <code>queering.earth</code> written out, which worked everywhere because nothing constrained it. <strong>Under <code>script-src &lsquo;self&rsquo;</code> that breaks on exactly the host it was built for</strong> &mdash; a draft, where a contributor reads a sheet that has not been mounted. It asks for <code>location.origin</code> now, so it fetches the editor from whatever site the reader is on.</p>
+          <p>A bookmarklet&rsquo;s own <code>javascript:</code> run is the browser acting on your gesture from outside the page, so the page&rsquo;s policy does not reach it; <strong>the script it injects does</strong>, which is the whole of the fix. That exemption is the one part of this policy nothing here can gate, and it wants a press on a real bookmarks bar after a deploy.</p>
+          <p><strong>The same policy refused the try-it-now press on <a href="/design#editing">the colophon</a>, and that was measured rather than guessed.</strong> The bookmark hung there as a link you could drag <em>or</em> press where it hung, and a hash does not apply to a <code>javascript:</code> navigation without <code>&lsquo;unsafe-hashes&rsquo;</code>. Re-opening that site-wide to buy back one convenience on one page is a bad trade on a site with no user input to protect, so the words changed instead: the page says drag it, and says why. A contributor who reads that sentence learns something true about the site rather than being told a rule.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-13-edit-layer">
+      <p class="qe-accession-date">2026 &middot; 13 September</p>
+      <h2 id="a-2026-09-13-edit-layer">A way to change words without editing HTML, and a policy that had been miscounting itself <a class="qe-anchor" href="#a-2026-09-13-edit-layer"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">Ryan asked whether Decap, Sveltia or TinaCMS would work here. None of them can, and the reason turned out to be measurable.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">No CMS fits, because there is no content model to fit one to</span></div>
+        <div class="qe-entry-body">
+          <p>All three are git-backed editors over collections of files with named fields. <strong>A sheet here carries eighty to a hundred and twenty hand-drawn SVG elements, eight to thirteen authored section ids, forty to seventy inline style attributes seeding its own foxing and stamp rotation, and JSON-LD whose <code>about.author</code> is a judgement about who made the thing being read.</strong> There are no fields to put in a schema. That is <a href="/what-is-settled">the standing reason</a> &mdash; the layout is the argument &mdash; stated as a measurement rather than a conviction.</p>
+          <p><strong>The deferral now rests on one leg.</strong> Its third reason was struck yesterday; its second said Netlify Identity&rsquo;s git-gateway was being sunset, and Netlify reversed that on 19 February 2026. The remaining reason is the one that was always carrying it.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><code>edit.js</code>: click a paragraph, change the words, copy out a patch</span></div>
+        <div class="qe-entry-body">
+          <p>Nothing on any page loads it &mdash; a bookmarklet injects it, so a reader&rsquo;s visit fetches nothing extra and no page markup changed to allow it. It cannot save, which is the design: saving from a browser needs a token in the page, and that is the account problem the CMS question was trying to avoid.</p>
+          <p><strong>What it refuses to edit is the important part.</strong> Quotations, captions and citations are not editable, and the page says why where you try. This site&rsquo;s characteristic failure is a tightened source rather than an invented one, and a tool that let anybody reword a mounted quotation in two clicks would be a machine for producing exactly that. The accession stamp and the provenance line are refused for the same reason in another key: a record you can edit in a browser is not a record.</p>
+          <p><strong>The patch is decoded text and the first version claimed it was the file&rsquo;s bytes.</strong> <code>innerHTML</code> decodes entities, so a before-string matched nothing for any paragraph holding an apostrophe. Re-encoding cannot rescue it either: the sources are mixed &mdash; 1,300 raw em dashes beside 1,512 <code>&amp;mdash;</code> &mdash; and no encoding reproduces a file that is not consistent with itself. So it says what it is, and tells whoever applies it to match on decoded text and stop if nothing matches exactly. Proved both ways before it was believed.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">The editor is distributed from <a href="/design#editing">the colophon</a>, as something to drag</span></div>
+        <div class="qe-entry-body">
+          <p>A bookmark is only useful if somebody can install it, so it hangs at the foot of the colophon where <q>how this site is made</q> already lives. <strong>A <code>javascript:</code> link runs on a click as well as surviving a drag</strong>, so it is try-it-now and keep-it-later in one control, and the hint beside it says both.</p>
+          <p>It loads from <code>queering.earth</code> whatever page it is pressed on, which means <strong>it works on a draft host as well as the published site</strong> &mdash; a contributor can edit a sheet that has not been mounted yet. Verified by pressing it on a page served from somewhere else entirely and watching the editor start.</p>
+          <p>The section says what the editor refuses to touch and why, because that is the part worth publishing: a quotation, its caption and its citation are not editable, and neither is the accession stamp or the provenance line.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--label" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--label">Label corrected</span><span class="qe-entry-name"><a href="/privacy">The privacy policy</a> said <q>two values</q> and described seven</span></div>
+        <div class="qe-entry-body">
+          <p>Found while adding the editor&rsquo;s key to it. The sentence had been right when it was written and wrong since the five reading settings arrived beside the two view controls; the list below it had grown and the count above it had not, and the paragraph after it still said <q>neither.</q> <strong>A policy that miscounts what it describes is a policy that is wrong about you</strong>, which is the reason this is a correction and not a tidy-up.</p>
+          <p>The new key is named there with the thing that matters about it: it exists only if somebody deliberately starts the editor, it holds only the words changed on one page, and the only way out of the browser is the reader&rsquo;s own clipboard.</p>
+        </div>
+      </div>
+    </section>
+
 
     <section class="qe-accession" aria-labelledby="a-2026-09-13-held-not-fixed">
-      <p class="qe-accession-date">2026 &middot; 13 September &middot; latest</p>
+      <p class="qe-accession-date">2026 &middot; 13 September</p>
       <h2 id="a-2026-09-13-held-not-fixed">Sheet No.&nbsp;13, and the first sheet written by Helen Edgar <a class="qe-anchor" href="#a-2026-09-13-held-not-fixed"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">A zine arrived, and what it argued turned out to be about this cabinet. It is mounted as an essay; the zine setting was built, measured and dropped on the way.</p>
@@ -347,6 +422,14 @@
         <div class="qe-entry-body">
           <p>Wingendorp&rsquo;s frontispiece &mdash; the room itself, a polar bear on the shelf and three walls of lettered categories &mdash; and the woodcut on printed page 283 of the narwhal skull with the tusk still in it, which is the figure by which Worm showed the horn was a whale&rsquo;s tooth. <strong>The leaf was found by full-text searching the scan for <i>Unicornu</i></strong> rather than by guessing, and the printed folio confirmed it.</p>
           <p>Public domain, digitised by the Biodiversity Heritage Library from the Smithsonian Libraries copy, and the rights were read at the item rather than taken from the blog post that led us to it. <strong>The narwhal is cited to the Internet Archive leaf and not to a BHL page id</strong>, because BHL sits behind a bot wall and the id could not be verified: a guessed citation is worse here than an inconsistent one.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--mounted" data-sheet="held-not-fixed">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--mounted">Mounted</span><span class="qe-entry-name">An introduction to Ole Worm, who had been arriving mid-sentence</span></div>
+        <div class="qe-entry-body">
+          <p>Helen&rsquo;s note after publication: he comes out of nowhere. He did &mdash; the sheet named him in the second sentence of a paragraph about cabinets in general and went straight into the unicorn horn, so a reader met the anecdote before the man. Three sentences now say who he was: a Danish physician and antiquary who taught Greek, Latin, physics and medicine at Copenhagen, was physician to Christian&nbsp;IV, and read runestones for years. The engraving above him is identified as his own room.</p>
+          <p><strong>One detail was checked rather than copied.</strong> Burkhardt&rsquo;s <cite>Verzeichnis eponymischer Pflanzennamen</cite>, the authority consulted when this sheet&rsquo;s plates were sourced, makes him physician to Christian&nbsp;V. It was Christian&nbsp;IV: Worm died in 1654 and Christian&nbsp;V acceded in 1670. The slip is noted in the library copy so nobody takes that detail from there later.</p>
         </div>
       </div>
 

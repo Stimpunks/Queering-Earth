@@ -1,6 +1,6 @@
 ---
 name: publish-draft
-description: Accession the draft in progress — take the file onto main, strip the draft block, work the accession checklist, run the full sweep, and push it live to queering.earth. Use when Ryan or Helen says "publish the draft", "ship it", "the review is in", "mount the sheet", or "put the draft live". Handles every git step and drives the editorial ones.
+description: Accession a draft — take its files from its draft branch onto main, strip the draft block, work the accession checklist, run the full sweep, push it live to queering.earth, and delete the branch. Use when Ryan or Helen says "publish the draft", "ship it", "the review is in", "mount the sheet", or "put the draft live". Handles every git step and drives the editorial ones.
 ---
 
 # publish-draft
@@ -13,66 +13,46 @@ stamp it, route it, crumb it, group it, rail it*. This skill runs the git and dr
 
 ## Before anything
 
-1. **Which draft, and is it saved?**
+1. **Which branch?**
 
    ```bash
    node tools/draft.mjs && git status --short
    ```
 
-   Two drafts: ask which. Uncommitted changes on `drafts`: run `save-draft` first, so the
-   version being published is the version Helen read.
+   Each draft has its own branch, `draft/<slug>`. Uncommitted changes on it: run
+   `save-draft` first, so what is published is what the reviewer read.
 
-2. **Has Helen actually signed off?** Ask if it has not been said. This skill puts words on a
-   public site under two organisations' names.
+2. **Has the author signed off?** Ask if it has not been said. This puts words on a public
+   site under two organisations' names, and on a sheet written by somebody else it is their
+   call and not the publisher's.
 
 3. **The tree must be clean before switching branches.** `git switch` carries uncommitted
    changes across, which is how edits land on the wrong branch.
 
-## Take the file
+## Take the files
 
 ```bash
-git switch main && git checkout drafts -- <draft>.html
+node tools/draft.mjs scope draft/<slug>
 ```
 
-**THE FILE, NEVER THE BRANCH.** `git merge drafts` is wrong twice: it would publish every
-other draft on the branch at once, and it would carry the branch's `X-Robots-Tag: noindex`
-onto production, dropping every page on the site out of every index. `CLAUDE.md` and the
-comment in `_headers` both say so.
+It prints four things:
 
-**BUT IT IS THE PAGE PLUS WHATEVER SHARED ASSETS THE DRAFT NEEDED, NAMED ONE BY ONE — AND
-THE FIRST VERSION OF THIS SKILL SAID "ONE FILE", WHICH WAS WRONG.** A draft that grew a new
-component needs its rules in `queering.css`; a draft that quotes anybody needs its entries in
-`ATTRIBUTIONS.md`; a new font, plate or card needs its generated output. None of that lives
-in the page. Taking only the page publishes a sheet whose styles do not exist, which is this
-house's characteristic failure — Star Stuff shipped 44 pages that printed blank for exactly
-that reason.
-
-**So ask the draft what it touched, rather than assuming:**
+- **take** — this draft's page and any shared source it grew: `queering.css` for a new
+  component, `ATTRIBUTIONS.md` for its ledger rows, a plate and the manifest for a new
+  figure. **Taking only the page publishes a sheet whose styles do not exist**, which is
+  this house's characteristic failure — 44 pages that printed blank.
+- **derived** — regenerated on `main` once the sources are taken, so do not take them.
+- **never** — branch furniture: `_headers`, whose noindex must never reach `main`, and
+  `review-practice.html`.
 
 ```bash
-node tools/draft.mjs scope <draft>.html
+git switch main && git checkout draft/<slug> -- <each take line, by name>
 ```
 
-**DO NOT USE `git diff main...drafts` FOR THIS.** That was what this skill said until a
-second person started a second draft on the branch, and it turns a loose instruction into
-a dangerous one: the branch diff offers you the *other* draft's page and the other
-person's edits to shared files, at the moment somebody is working a checklist and inclined
-to trust the tool. `scope` derives the answer from commits instead — a file is this
-draft's if a commit that touched this draft's page also touched it — and it prints three
-lists: **take**, **leave** (another draft owns it), and **never** (branch furniture like
-`_headers`).
+**Named one by one and never as a wildcard.** `git checkout draft/<slug> -- .` would take
+`_headers` and drop the whole site out of every index.
 
-**A file marked ASK is touched by both drafts.** That is a real collision between two
-people's work. Stop and agree what to do with it; do not pick a side inside this skill.
-
-Then take each `take` line by name:
-
-```bash
-git checkout drafts -- <draft>.html queering.css tools/plate-variants.json
-```
-
-**Named one by one and never as a wildcard.** `git checkout drafts -- .` would take
-`_headers`, whose noindex must never reach `main`, and every other draft in progress.
+**NEVER `git merge draft/<slug>`.** Publishing takes files. A merge carries the furniture.
 
 Then **delete the three-line draft block** — the comment, the `robots` meta and the
 `review.js` script. `check-metadata.mjs` check 10 will stop the build if you forget, but do
@@ -157,19 +137,23 @@ wrong on the way and corrected. End it with the attribution line the session was
 The draft page still exists on `drafts` in its pre-publication form. Make the branch's copy
 identical to the published one **before** merging, so there is nothing to resolve:
 
+**The branch has done its job, so delete it.** That is the whole gain of one branch per
+draft: nothing has to be put back in step, because nothing is shared.
+
 ```bash
-git switch drafts && git checkout main -- <draft>.html <every other file you took> && git commit -m "Published; take main's version" && git merge main -m "Bring the drafts branch up to date with main" && git push && git switch main
+git push origin --delete draft/<slug> && git branch -D draft/<slug>
 ```
 
-**Every file you took, not just the page** — the same list from the diff above, minus
-`_headers`. A shared asset left in its draft state on the branch is a divergence that will
-conflict on the next merge and be resolved by whoever is least equipped to.
+Netlify deploys `draft/*` as a wildcard, so deleting the branch takes the review URL with
+it. There is nothing to remove in the dashboard.
 
-For a **new** sheet the file is now a published page sitting on the branch, which is correct
-— the branch carries a full copy of the site. For a **rewrite**, the same. Either way
-`tools/draft.mjs` will report no draft in progress, because the marker is gone.
+**Then bring the base forward**, so the next draft is cut from something current:
 
-A conflict in this merge will be in `_headers`: **keep both sides** — main's changes and the
+```bash
+git switch drafts && git merge main -m "Bring the drafts base up to date with main" && git push && git switch main
+```
+
+A conflict there will be in `_headers`: **keep both sides** — main's changes and the
 branch-only noindex block.
 
 ## Verify at the edge

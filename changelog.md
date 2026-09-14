@@ -37,6 +37,66 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 13 September · latest
 
+## The header that says what a page may reach, and the hash that has to be generated
+
+Ryan asked how strict the Content-Security-Policy was, and whether tightening it would break the new editor. It had been one directive for months on a reason nobody had measured.
+
+CabinetEleven directives where there had been one
+
+`\_headers` had carried `frame-ancestors ‘none’` and nothing else since the header shipped, with a comment saying a `script-src` would kill the snippet every page runs before first paint. **That was a plausible reason nobody had checked.** Counted instead: **one executable inline script on the site, byte-identical on all twenty-nine pages**, so a single hash covers every page. The twenty-eight JSON-LD blocks need none — a data block is never executed, and hashing them would have buried the one hash that matters among twenty-eight that do nothing.
+
+What is locked now: scripts to this origin and that one hash, no `eval`, no inline handlers, no plugins, no base tag, no form submission anywhere, and frames only from the one embed the privacy policy already names. **`style-src` keeps `‘unsafe-inline’` and that is not laziness** — 1,299 inline `style` attributes carry each sheet’s own foxing seed, stamp rotation and card colours, and **a CSP hash does not cover a style attribute**, only a `<style>` element. The alternative was not a stricter policy; it was deleting the per-page palette.
+
+Cabinet`tools/make-csp.mjs`, because the hash cannot be kept by hand
+
+The snippet it hashes **lists the nine typefaces the picker offers**, so narrowing the picker changes the hash in the same commit — and **a stale hash does not warn.** The browser simply refuses the snippet on every page, and every reader who asked for the cabinet or for plain view is shown the other thing before the stylesheet catches up: the exact failure the before-first-paint rule exists to prevent, arriving silently and visible only to somebody who had a preference stored and was looking for it. So the policy is written between markers by a tool, `check-cache.mjs` fails when the header and the pages disagree, and the generator runs **last** of the five, after everything that can rewrite a page.
+
+**Proved in a browser before it shipped, both ways.** The policy went into a copy of the home page as a `meta` tag with a preference stored: the snippet ran and the cabinet came up. The same copy with one character changed in the hash refused it — **and Chrome’s own message named the hash the generator had computed**, which is the browser confirming the arithmetic rather than us confirming it. The gate was made to fail and then to pass the same way.
+
+Label correctedThe bookmarklet named this site by name, where it should have asked where it was standing
+
+It loaded the editor from `queering.earth` written out, which worked everywhere because nothing constrained it. **Under `script-src ‘self’` that breaks on exactly the host it was built for** — a draft, where a contributor reads a sheet that has not been mounted. It asks for `location.origin` now, so it fetches the editor from whatever site the reader is on.
+
+A bookmarklet’s own `javascript:` run is the browser acting on your gesture from outside the page, so the page’s policy does not reach it; **the script it injects does**, which is the whole of the fix. That exemption is the one part of this policy nothing here can gate, and it wants a press on a real bookmarks bar after a deploy.
+
+**The same policy refused the try-it-now press on [the colophon](https://queering.earth/design#editing), and that was measured rather than guessed.** The bookmark hung there as a link you could drag *or* press where it hung, and a hash does not apply to a `javascript:` navigation without `‘unsafe-hashes’`. Re-opening that site-wide to buy back one convenience on one page is a bad trade on a site with no user input to protect, so the words changed instead: the page says drag it, and says why. A contributor who reads that sentence learns something true about the site rather than being told a rule.
+
+2026 · 13 September
+
+## A way to change words without editing HTML, and a policy that had been miscounting itself
+
+Ryan asked whether Decap, Sveltia or TinaCMS would work here. None of them can, and the reason turned out to be measurable.
+
+CabinetNo CMS fits, because there is no content model to fit one to
+
+All three are git-backed editors over collections of files with named fields. **A sheet here carries eighty to a hundred and twenty hand-drawn SVG elements, eight to thirteen authored section ids, forty to seventy inline style attributes seeding its own foxing and stamp rotation, and JSON-LD whose `about.author` is a judgement about who made the thing being read.** There are no fields to put in a schema. That is [the standing reason](https://queering.earth/what-is-settled) — the layout is the argument — stated as a measurement rather than a conviction.
+
+**The deferral now rests on one leg.** Its third reason was struck yesterday; its second said Netlify Identity’s git-gateway was being sunset, and Netlify reversed that on 19 February 2026. The remaining reason is the one that was always carrying it.
+
+Cabinet`edit.js`: click a paragraph, change the words, copy out a patch
+
+Nothing on any page loads it — a bookmarklet injects it, so a reader’s visit fetches nothing extra and no page markup changed to allow it. It cannot save, which is the design: saving from a browser needs a token in the page, and that is the account problem the CMS question was trying to avoid.
+
+**What it refuses to edit is the important part.** Quotations, captions and citations are not editable, and the page says why where you try. This site’s characteristic failure is a tightened source rather than an invented one, and a tool that let anybody reword a mounted quotation in two clicks would be a machine for producing exactly that. The accession stamp and the provenance line are refused for the same reason in another key: a record you can edit in a browser is not a record.
+
+**The patch is decoded text and the first version claimed it was the file’s bytes.** `innerHTML` decodes entities, so a before-string matched nothing for any paragraph holding an apostrophe. Re-encoding cannot rescue it either: the sources are mixed — 1,300 raw em dashes beside 1,512 `&mdash;` — and no encoding reproduces a file that is not consistent with itself. So it says what it is, and tells whoever applies it to match on decoded text and stop if nothing matches exactly. Proved both ways before it was believed.
+
+MountedThe editor is distributed from [the colophon](https://queering.earth/design#editing), as something to drag
+
+A bookmark is only useful if somebody can install it, so it hangs at the foot of the colophon where “how this site is made” already lives. **A `javascript:` link runs on a click as well as surviving a drag**, so it is try-it-now and keep-it-later in one control, and the hint beside it says both.
+
+It loads from `queering.earth` whatever page it is pressed on, which means **it works on a draft host as well as the published site** — a contributor can edit a sheet that has not been mounted yet. Verified by pressing it on a page served from somewhere else entirely and watching the editor start.
+
+The section says what the editor refuses to touch and why, because that is the part worth publishing: a quotation, its caption and its citation are not editable, and neither is the accession stamp or the provenance line.
+
+Label corrected[The privacy policy](https://queering.earth/privacy) said “two values” and described seven
+
+Found while adding the editor’s key to it. The sentence had been right when it was written and wrong since the five reading settings arrived beside the two view controls; the list below it had grown and the count above it had not, and the paragraph after it still said “neither.” **A policy that miscounts what it describes is a policy that is wrong about you**, which is the reason this is a correction and not a tidy-up.
+
+The new key is named there with the thing that matters about it: it exists only if somebody deliberately starts the editor, it holds only the words changed on one page, and the only way out of the browser is the reader’s own clipboard.
+
+2026 · 13 September
+
 ## Sheet No. 13, and the first sheet written by Helen Edgar
 
 A zine arrived, and what it argued turned out to be about this cabinet. It is mounted as an essay; the zine setting was built, measured and dropped on the way.
@@ -54,6 +114,12 @@ MountedTwo plates from *Museum Wormianum*, 1655
 Wingendorp’s frontispiece — the room itself, a polar bear on the shelf and three walls of lettered categories — and the woodcut on printed page 283 of the narwhal skull with the tusk still in it, which is the figure by which Worm showed the horn was a whale’s tooth. **The leaf was found by full-text searching the scan for *Unicornu*** rather than by guessing, and the printed folio confirmed it.
 
 Public domain, digitised by the Biodiversity Heritage Library from the Smithsonian Libraries copy, and the rights were read at the item rather than taken from the blog post that led us to it. **The narwhal is cited to the Internet Archive leaf and not to a BHL page id**, because BHL sits behind a bot wall and the id could not be verified: a guessed citation is worse here than an inconsistent one.
+
+MountedAn introduction to Ole Worm, who had been arriving mid-sentence
+
+Helen’s note after publication: he comes out of nowhere. He did — the sheet named him in the second sentence of a paragraph about cabinets in general and went straight into the unicorn horn, so a reader met the anecdote before the man. Three sentences now say who he was: a Danish physician and antiquary who taught Greek, Latin, physics and medicine at Copenhagen, was physician to Christian IV, and read runestones for years. The engraving above him is identified as his own room.
+
+**One detail was checked rather than copied.** Burkhardt’s *Verzeichnis eponymischer Pflanzennamen*, the authority consulted when this sheet’s plates were sourced, makes him physician to Christian V. It was Christian IV: Worm died in 1654 and Christian V acceded in 1670. The slip is noted in the library copy so nobody takes that detail from there later.
 
 Label correctedThree corrections made while the sheet was being written
 

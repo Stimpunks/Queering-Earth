@@ -7,7 +7,7 @@
  * Shipping the lilac coda — a move of one block inside one page — took over twenty
  * minutes of checking. Timed afterwards, on this machine, the whole apparatus is:
  *
- *     four generators          4.8s      six offline gates        5.6s
+ *     five generators          4.9s      six offline gates        5.6s
  *     check-overlap   (27pp)    40s      check-overlap   (4pp)    ~15s
  *     check-contrast  (27pp)    53s      check-contrast  (4pp)    ~20s
  *     check-width     (27pp)   4:22      check-width     (4pp)     48s
@@ -57,8 +57,12 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
    The record pages are an input to the search index and the Markdown; the
    what's-new listing sits inside the landmark both of those read. Out of order, a
    stale record page reports as a stale `.md` — the symptom pointing at the wrong
-   tool. `check-metadata.mjs` checks them in this order for the same reason. */
-const GENERATORS = ['make-records.mjs', 'make-whats-new.mjs', 'make-search-index.mjs', 'make-markdown.mjs'];
+   tool. `check-metadata.mjs` checks them in this order for the same reason.
+
+   `make-csp.mjs` is LAST, and that is the same argument one step further out: it
+   hashes the inline snippet in every page's head, so it must run after anything
+   that can rewrite a page. `make-records` and `make-whats-new` both do. */
+const GENERATORS = ['make-records.mjs', 'make-whats-new.mjs', 'make-search-index.mjs', 'make-markdown.mjs', 'make-csp.mjs'];
 
 /* ── The offline gates ────────────────────────────────────────────────────────
    Six seconds for all six, and every one of them asks a question about the site as
@@ -141,7 +145,7 @@ async function main() {
   const t0 = Date.now();
   let failed = 0;
 
-  console.log('\nGenerating — records, arrivals, search index, Markdown.');
+  console.log('\nGenerating — records, arrivals, search index, Markdown, the policy.');
   for (const g of GENERATORS) {
     const r = await run(g, []);
     if (r.code !== 0) {

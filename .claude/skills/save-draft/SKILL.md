@@ -1,11 +1,11 @@
 ---
 name: save-draft
-description: Commit and push the draft in progress so the review URL updates, without touching the published site. Use when Ryan or Helen says "save the draft", "push the draft", "update the draft", "send it back for review", or has finished a round of edits on a draft. Also covers throwing a draft away.
+description: Commit and push a draft on its own draft branch so the review URL updates, without touching the published site. Use when Ryan or Helen says "save the draft", "push the draft", "update the draft", "send it back for review", or has finished a round of edits on a draft. Also covers throwing a draft away.
 ---
 
 # save-draft
 
-Commits whatever is on the `drafts` branch and pushes it, so the address Helen has
+Commits whatever is on the draft branch and pushes it, so the address Helen has
 bookmarked shows the new version about twenty seconds later. **Nothing here can reach
 queering.earth** — the branch is never merged out.
 
@@ -27,7 +27,11 @@ queering.earth** — the branch is never merged out.
    git branch --show-current && git status --short
    ```
 
-   Already on `drafts` with the draft's own changes uncommitted: that is the normal case,
+   **Each draft has its own branch, named `draft/<slug>`.** `node tools/draft.mjs` lists
+   them all with their pages and URLs. Nothing is drafted on `drafts` itself, which is a
+   base carrying only the noindex header and the practice page.
+
+   Already on the draft branch with the draft's own changes uncommitted: that is the normal case,
    carry on.
 
 3. **Check the markup, and then whatever else is cheap and applies.**
@@ -91,11 +95,12 @@ A draft that is not going to be published should be deleted rather than left on 
 where `tools/draft.mjs` will keep reporting it as in progress.
 
 ```bash
-git switch drafts && git rm <draft>.html && git commit -m "Abandon the draft of <title>" && git push && git switch main
+git push origin --delete draft/<slug> && git branch -D draft/<slug> && git switch main
 ```
 
-**`review-practice.html` is not a draft and must not be deleted this way.** It is the page a
-reviewer learns the tool on; `tools/draft.mjs` declares it as an exception with its reason.
+Deleting the branch takes the draft with it, which is the point of one branch per draft.
+**`review-practice.html` lives on the `drafts` base and is not yours to delete** — it is the
+page a reviewer learns the tool on, and `tools/draft.mjs` declares it as furniture.
 
 ## What this never does
 
