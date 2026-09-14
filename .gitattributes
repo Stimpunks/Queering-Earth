@@ -23,14 +23,22 @@
 # 2. `search-index.json` IS 1.5 MB ON ONE LINE, and git must not try to merge it.
 #
 # `tools/make-search-index.mjs` writes it from the `main` landmark of all 27 pages, as one
-# line. A textual three-way merge of one 1.5 MB line is not a merge: git either produces a
-# conflict nobody can read or — worse — splices two JSON documents into one that parses
-# and is wrong. That is a finding aid quoting sentences from a page that no longer says
-# them, on the one page of this site whose whole promise is that a quotation is shown
-# whole or not at all.
+# line.
 #
-# `-merge` makes git refuse and leave the conflict standing; `-diff` stops it rendering a
-# 1.5 MB line as a diff. The resolution is never by hand:
+# WHAT THIS RULE ACTUALLY DOES WAS MEASURED, IN A THROWAWAY CLONE, ON THE FIRST REAL
+# TWO-WAY COLLISION — because the sentence inherited from Star Stuff's copy of this file
+# said git might "splice two JSON documents into one that parses and is wrong", and that
+# cannot happen to a file with no interior line boundaries. Merging a diverged
+# `draft/*` branch with `main`, both sides having regenerated:
+#
+#   without this rule   git says "Auto-merging", writes CONFLICT MARKERS INTO THE FILE,
+#                       and leaves 5 lines of invalid JSON
+#   with this rule      git says "Cannot merge binary files", leaves the file at one
+#                       line of VALID JSON (ours), and still flags the conflict
+#
+# So the rule does not prevent the conflict — it keeps the working file a usable index
+# instead of a broken one, and `-diff` stops git rendering a 1.5 MB line as a diff.
+# Neither shape is resolvable by reading, and the resolution is never by hand:
 #
 #     git checkout --ours search-index.json   # either side; both are about to be replaced
 #     node tools/check.mjs                    # regenerates all five, in dependency order
