@@ -59,6 +59,18 @@ Label corrected[/privacy](https://queering.earth/privacy#the-embed) said there w
 
 **Nothing gated the count, and that was structural rather than an oversight.** `check-metadata.mjs` checks that every third-party *origin* our scripts can reach is named on that page — and one origin covers any number of videos, so a missing recording was invisible to it by construction. The list is kept by hand, which is the kind of list this register keeps warning about. **It is gated now**, by the check below, written the same day on Ryan’s call.
 
+CabinetThe three debugging ports were Star Stuff’s as well, which is why the original disaster happened
+
+**The rendering gates were ported from our sibling site and the port numbers came with them**, comments and all. 9412 is the contrast gate in both repositories; 9413 is overlap here and `check-sheets` there; 9414 is width here and two gates there. **Two checkouts on one laptop could not run their rendering gates at the same time**, and the symptom read as a broken gate rather than a busy port — which is also the shape of the five-day orphan this file already records.
+
+**The refusal was right about the danger and wrong about the remedy.** `cdp.mjs` refused to run if anything answered on its port, which protected against measuring in a stranger’s browser by declining to measure at all — and fired on a neighbour doing nothing wrong. The number a gate asks for is now a **preference**: a busy port is stepped over in hundreds, 9412 to 9512 to 9612, on ladders that are disjoint so the three gates never chase each other onto one another’s ports.
+
+**And the guarantee got stronger rather than weaker.** Once the endpoint answers, the listening process is walked up its parent chain to the child we spawned — Chrome’s helper holds the socket, so the listening pid is routinely not the one we started, which is what makes this an ownership proof instead of a guess. **The old refusal never proved anything**; it only declined to be in the room.
+
+**A busy port now says which kind of busy it is**, because that is the judgement a person gets wrong under pressure: a headless Chrome whose parent is still running is somebody else’s sweep in progress and must be left alone, and one whose parent is gone is an orphan and safe to kill. **That distinction was got wrong in this very session** — a Chrome was killed on a heuristic that could not tell the two apart, and the parent was checked afterwards rather than before.
+
+**Star Stuff is not edited from this repository, so the whole fix is on our side.** Proved in six shapes and every decoy cleaned up after: a quiet ordinary run on the preferred port; a live holder, correctly named as live with the advice to leave it; an orphaned holder, correctly named with the pid to kill; a full parallel sweep with all three preferred ports blocked, which is the exact case that refused this morning and now passes in 305s; the ladder exhausted, which still refuses and exits 1, because a gate that cannot own its browser must not measure in anybody else’s; and the precedent this follows — `.claude/launch.json` stopped hardcoding 8766 for the same reason, a second session being unable to preview the site at all.
+
 CabinetDeleting a draft branch does not delete its deploy, and three files said it did
 
 **Measured minutes after this sheet was published**, when the branch had been deleted from both ends: `draft-known-and-felt-and-seen--queering-earth.netlify.app` answered **200**, still serving the pre-publication draft with its review layer attached, and a full copy of the site beside it. Netlify keeps the last branch deploy at its subdomain after the branch is gone.

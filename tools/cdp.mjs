@@ -30,10 +30,15 @@
  * So `launchChrome()` is the one place that opens a browser here, and it refuses two
  * ways a sweep can be measured in something we did not start:
  *
- *   - **The port must be free BEFORE the spawn.** If anything answers there, the run
- *     stops and names what answered rather than driving it. A gate that attaches to a
- *     stranger's browser is the house's own recurring fault — a page that checks 8% of
- *     itself reports zero failures and looks exactly like a clean one.
+ *   - **The port is chosen, not assumed, and then OWNERSHIP IS PROVED.** This used to
+ *     read "the port must be free before the spawn" and refuse outright if anything
+ *     answered. That was right about the danger and wrong about the remedy: the three
+ *     numbers this repo asks for are Star Stuff's as well, so the refusal fired on a
+ *     neighbouring checkout doing nothing wrong, and a full sweep here could not run
+ *     while one ran there. Now a busy port is stepped over — see the ladder below — and
+ *     once the endpoint answers, the listening process is walked up its parent chain to
+ *     our own child. A gate that attaches to a stranger's browser is the house's own
+ *     recurring fault, and this proves it has not rather than hoping.
  *   - **The process we spawned must still be alive when the endpoint answers.** The old
  *     poll swallowed every fetch failure and fell out of its loop silently, so a Chrome
  *     that died on launch produced a sweep of nothing rather than an error.
@@ -42,7 +47,8 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { spawn } from 'node:child_process';
+import { spawn, execFileSync } from 'node:child_process';
+import net from 'node:net';
 
 export const CHROME = [
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
@@ -161,20 +167,130 @@ export async function settle(send) {
  * gate carried `ss-` from the day it was ported and that is why a cleanup sweep for
  * this project's leavings had to know a second project's prefix.
  */
-export async function launchChrome(PORT, label) {
-  const held = await portHolder(PORT);
-  if (held) {
+/* ── choosing a port ───────────────────────────────────────────────────────────
+ *
+ * THE THREE PORTS THIS REPO ASKS FOR ARE STAR STUFF'S TOO, AND THAT IS WHY THE
+ * ORIGINAL DISASTER HAPPENED AT ALL. The gates were ported from there and the port
+ * numbers came with them, comments and all: 9412 is check-contrast in both repos,
+ * 9413 is overlap here and check-sheets there, 9414 is width here and both
+ * check-forced-colors and check-overlap there. Two checkouts on one laptop cannot
+ * run their rendering gates at the same time, and the symptom reads as a broken gate
+ * rather than as a busy port. Measured 2026-09-14, when a live Star Stuff run held
+ * 9414 and a full sweep here refused.
+ *
+ * STAR STUFF IS NOT EDITED FROM THIS REPO, so the fix is entirely on our side: the
+ * number a gate passes in is now a PREFERENCE, not a requirement. If it is taken we
+ * step to the next one in this gate's own ladder and say so.
+ *
+ * THE LADDER IS +100 A STEP, SO THE THREE GATES NEVER CHASE EACH OTHER. Scanning
+ * 9412 → 9413 would walk contrast straight onto overlap's port and cascade the whole
+ * row by one; 9412 → 9512 → 9612 keeps each gate in its own column, and the port a
+ * run lands on still says which gate it belongs to.
+ *
+ * THE PRECEDENT IS ALREADY HERE. `.claude/launch.json` stopped hardcoding 8766 for
+ * exactly this reason — a second session could not preview the site at all while the
+ * first held it — and the dev server takes its port from the environment. This is the
+ * same decision for the gates.
+ *
+ * AND THE GUARANTEE GETS STRONGER RATHER THAN WEAKER. The old rule was "refuse if
+ * anything answers", which prevented attaching to a stranger's browser by refusing to
+ * run. Moving to a free port prevents it by never being on a port anybody else holds —
+ * and `ownsPort()` below then PROVES the listener is our own child before a single
+ * page is measured, which the refusal never did. */
+
+/* Can we actually bind it? `portHolder` only answers for something speaking CDP, and
+   a port held by anything else — a dev server, another language's debugger — would
+   pass that test and then defeat the spawn with a confusing error. */
+function bindable(port) {
+  return new Promise((resolve) => {
+    const s = net.createServer();
+    s.once('error', () => resolve(false));
+    s.once('listening', () => s.close(() => resolve(true)));
+    s.listen(port, '127.0.0.1');
+  });
+}
+
+/* Who holds it, and is it a live run or something left behind? THIS IS THE
+   DISTINCTION A HUMAN GETS WRONG UNDER PRESSURE — the difference between a headless
+   Chrome whose parent is still running (somebody else's sweep, in progress, leave it
+   alone) and one whose parent is gone (an orphan, safe to kill). Best effort: if the
+   tools are not there we simply say less rather than guessing. */
+function describeHolder(port) {
+  try {
+    const pid = execFileSync('lsof', ['-nP', `-iTCP:${port}`, '-sTCP:LISTEN', '-t'],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim().split('\n')[0];
+    if (!pid) return null;
+    const ppid = execFileSync('ps', ['-o', 'ppid=', '-p', pid],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+    let parentAlive = false;
+    try {
+      execFileSync('ps', ['-o', 'pid=', '-p', ppid], { stdio: 'ignore' });
+      parentAlive = Number(ppid) > 1;
+    } catch { parentAlive = false; }
+    return { pid, parentAlive };
+  } catch {
+    return null;
+  }
+}
+
+/* Is the thing listening on this port our own child, or a descendant of it? Chrome's
+   --headless=new spawns a helper that holds the socket, so the listening pid is
+   routinely not the pid we spawned — walking up the parent chain is what makes this
+   an ownership proof rather than a guess. */
+function ownsPort(port, ourPid) {
+  try {
+    const listener = execFileSync('lsof', ['-nP', `-iTCP:${port}`, '-sTCP:LISTEN', '-t'],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim().split('\n')[0];
+    if (!listener) return null;
+    for (let pid = Number(listener), hops = 0; pid > 1 && hops < 12; hops++) {
+      if (pid === ourPid) return true;
+      const ppid = execFileSync('ps', ['-o', 'ppid=', '-p', String(pid)],
+        { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+      if (!ppid) return false;
+      pid = Number(ppid);
+    }
+    return false;
+  } catch {
+    return null;   /* tools missing: unknown, not "no" */
+  }
+}
+
+export async function launchChrome(PREFERRED, label) {
+  /* THE NUMBER IS A PREFERENCE. Ten rungs is far more than anybody needs and it is
+     bounded so a laptop with something odd going on fails loudly instead of hanging. */
+  let PORT = null;
+  for (let k = 0; k < 10; k++) {
+    const candidate = PREFERRED + k * 100;
+    if (!(await bindable(candidate))) {
+      if (k === 0) {
+        const held = await portHolder(candidate);
+        const who = describeHolder(candidate);
+        console.error(
+          `\n${label}: 127.0.0.1:${candidate} is busy` +
+          (held ? `, answering CDP as ${held}` : '') + '.'
+        );
+        if (who) {
+          console.error(
+            who.parentAlive
+              ? `  pid ${who.pid}, and its parent is still running — this looks like a LIVE run\n` +
+                '  in another checkout. Leave it alone; this gate is moving to its own port.'
+              : `  pid ${who.pid}, and its parent is gone — this looks like an ORPHAN.\n` +
+                `  Safe to kill if it is headless with a profile under /tmp:  kill ${who.pid}`
+          );
+        }
+        console.error(`  Find it:  lsof -nP -iTCP:${candidate} -sTCP:LISTEN`);
+      }
+      continue;
+    }
+    PORT = candidate;
+    if (k > 0) console.error(`  ${label} is using ${PORT} instead.\n`);
+    break;
+  }
+  if (PORT === null) {
     console.error(
-      `\nREFUSING TO RUN — something is already listening on 127.0.0.1:${PORT}, which is ` +
-      `${label}'s debugging port.\n` +
-      `  It answers as: ${held}\n` +
-      `  This is not our browser. Attaching to it would measure these pages in a browser\n` +
-      `  this run did not launch, at whatever version and state it happens to be in — and\n` +
-      `  the sweep would report PASS regardless. That is exactly how this check was\n` +
-      `  silently driving a five-day-old orphan until 12 September 2026.\n\n` +
-      `  Find it:  lsof -nP -iTCP:${PORT} -sTCP:LISTEN\n` +
-      `  Orphans from an interrupted probe are safe to kill; they are headless and their\n` +
-      `  profiles live in /tmp.`
+      `\nREFUSING TO RUN — ${label} could not find a free debugging port in ten tries,\n` +
+      `  from ${PREFERRED} upward in steps of 100. Nothing was measured, which is the\n` +
+      '  point: a gate that cannot own its browser must not measure in somebody else\'s.'
     );
     process.exit(1);
   }
@@ -211,7 +327,29 @@ export async function launchChrome(PORT, label) {
       console.error(`\nFAIL — ${label}'s Chrome exited before it opened a debugging port. Nothing was measured.`);
       process.exit(1);
     }
-    if (await portHolder(PORT)) return { chrome, dispose };
+    if (await portHolder(PORT)) {
+      /* THE PORT WAS FREE A MOMENT AGO, WHICH IS NOT THE SAME AS THE ANSWER BEING
+         OURS. Between the bind test and the spawn there is a gap, and the whole
+         history of this file is a gate measuring in a browser it did not launch. So
+         the listener is walked up its parent chain to our own child before anything
+         is measured. `null` means lsof or ps was not there to ask — unknown, which
+         is reported and allowed, because refusing on a missing tool would make the
+         gates unrunnable somewhere rather than safer. */
+      const ours = ownsPort(PORT, chrome.pid);
+      if (ours === false) {
+        await dispose();
+        console.error(
+          `\nREFUSING TO RUN — ${label} found something other than its own browser on\n` +
+          `  127.0.0.1:${PORT} after launching. Nothing was measured. This is the exact\n` +
+          '  shape of the five-day orphan: a sweep in a stranger\'s browser reports PASS.'
+        );
+        process.exit(1);
+      }
+      if (ours === null) {
+        console.error(`  ${label}: could not confirm the browser on ${PORT} is ours (lsof/ps unavailable).`);
+      }
+      return { chrome, dispose, port: PORT };
+    }
     await sleep(250);
   }
   await dispose();

@@ -167,7 +167,12 @@ const PAPERS = [
   ['letter', Math.round(7.7 * 96), Math.round(10.2 * 96)],
   ['a4', Math.round(7.47 * 96), Math.round(10.89 * 96)],
 ];
-const withPage = (url, fn) => withPageOnPort(PORT, url, fn);
+/* PORT above is a PREFERENCE now, not a requirement — Star Stuff wants the same
+   three numbers and two checkouts cannot both have them. launchChrome may hand
+   back a different one, and every page in this run must be driven on THAT port;
+   closing over the constant is how a gate ends up talking to nothing. */
+let ACTIVE_PORT = PORT;
+const withPage = (url, fn) => withPageOnPort(ACTIVE_PORT, url, fn);
 
 const MEASURE = String.raw`((cfg) => {
   const { INK_RATIO, MIN_OVERLAP, MIN_PX, CLIP_TOL, OFFSCREEN, INVISIBLE } = cfg;
@@ -471,7 +476,8 @@ const CFG = {
 async function main() {
   const files = resolveTargets(ROOT);
 
-  const { dispose } = await launchChrome(PORT, 'overlap');
+  const { dispose, port } = await launchChrome(PORT, 'overlap');
+  ACTIVE_PORT = port;
 
   const results = [];
   const unread = [];
