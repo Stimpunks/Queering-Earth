@@ -4633,6 +4633,34 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 14 September · latest
 
+## A way back to the front, and the four marks that were not it
+
+The breadcrumb had been a route home on every page since the drawers shipped, and it was not the route anybody reached for. The tray has one now, drawn as a glasshouse.
+
+CabinetA labelled home control, first in the instrument tray
+
+**A trail and a control are different things, and both stay.** .qe-crumbs says where you are; it sits inside the masthead, below the tray, and on a sheet it is the third thing down. A reader in the middle of nine thousand words wants the other one. Ryan kept looking in the top bar and finding nothing there, which is the whole of the case.
+
+**It carries a word, and the unlabelled licence next door does not reach it.** The fox and the hedgehog are allowed to be a picture alone because nothing is withheld — [that page](https://queering.earth/two-cohabitating-modes) is in every footer, in the drawers menu and in the finding aid. The home page is the destination a reader is most likely to want and least likely to hunt for, so hiding it behind a drawing would have been the original complaint arriving again wearing a mark.
+
+**At 320px the tray is three lines now rather than two**, and that was measured rather than discovered later: 133px of tray against 91px, no target under 44×44, no two hit areas touching, and scrollWidth equal to the viewport at 320, 375, 414, 768 and 1280. Both overlay panels hang off the tray rather than off their own summaries, so neither moved — which is the fault the drawers control found the hard way, and the reason that rule exists.
+
+CabinetWhy a glasshouse, and why not a cabinet, a mended cup, or our own leaf
+
+**Four marks were drawn, rasterised at 16, 20 and 27px, and then magnified off a canvas rather than redrawn large.** A vector redrawn large is a lie about what a reader gets — the lesson favicon.svg paid for twice and the pocket lens a third time. What the pixels said was that a pitched roof is the only silhouette that reads as *home* at 16px, and that everything else needed the word to carry the entire meaning.
+
+**The site’s own mark was tried first and lost.** Home as the logo is the oldest convention on the web, and the pressed leaf does not survive the trip: it has a paper ground and a 64px canvas on the icon, and at 20px in moss beside the lens it is a dark blob with less character than the instrument next to it. Its midrib in paper is a white gash that splits the leaf into two lobes and reads as a pea pod. And --qe-rust goes pale pink in the drawer, so the pin that makes the favicon legible becomes a pale bulb at the base.
+
+**A chest of drawers was refused without drawing it.** [The cabinet itself](https://queering.earth/the-cabinet-itself) is a drawer in the menu two controls along. One picture, two destinations.
+
+**So was a mended cup, and that one is a house rule rather than a matter of taste.** Kintsugi is already spent here: --qe-marigold marks a re-determination in this register and the join in a restored attribution, and [a seam requires an actual repair](https://queering.earth/design). A gold-mended mark in the tray would have asserted a correction that never happened, an arm’s length from the real mends on every provenance line on the site.
+
+**The wabi-sabi that survived is the ridge, set off centre.** The apex sits at x 11.2 against a body centred on 12, so the two slopes differ and the bays run 4.8, 5.4 and 4.6. It is visible at 20px, it is the same wonk axis already running on this site’s type and on the rail’s ticks, and it claims nothing — which is the only licence ornament gets here.
+
+**Two versions were drawn wrong first.** A full glazing grid with a transom and one missing pane goes muddy by 20px, and the missing pane does not read as a void at all: it reads as a dark window, and sitting off centre it drags the whole mark sideways. Then a shoot drawn up through the open door — the botanical cue this mark otherwise lacks — **read as a small person standing in the doorway** at the size it ships at. That is the lilac panicle’s lesson in a fourth costume: do not put one small mark where the eye is expecting a figure.
+
+2026 · 14 September
+
 ## The cabinet can be installed, and the pin Android would have cropped off the mark
 
 A web app manifest, which the site had never had — and a 512px icon that had been generated on every run since the first week and referenced by nothing at all.
@@ -7959,7 +7987,7 @@ Dolly Parton, 1946–2026, and Tressie McMillan Cottom
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-274 entries across 75 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+276 entries across 76 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

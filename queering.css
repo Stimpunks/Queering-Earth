@@ -861,6 +861,110 @@ html.qe-spacing-on p + p { margin-top: var(--qe-para-gap, 1.47rem); }
   flex-wrap: wrap;
 }
 
+/* ─── the way back, first in the tray
+ *
+ * THE BREADCRUMB WAS ALREADY A ROUTE HOME AND IT WAS NOT THE ROUTE PEOPLE REACH
+ * FOR. Ryan kept looking in the top bar; .qe-crumbs is inside the masthead, below
+ * the tray, and on a sheet it is the third thing down. Both stay. A trail says
+ * where you are and a control says where you can go, and a reader mid-sheet
+ * wants the second one.
+ *
+ * IT IS LABELLED, AND THE UNLABELLED LICENCE NEXT DOOR DOES NOT REACH IT. The
+ * fox and the hedgehog are allowed to be a picture alone because nothing is
+ * withheld — that page is in every footer, every drawer menu and the finding aid.
+ * The home page is the one destination a reader is most likely to want and least
+ * likely to hunt for, so hiding it behind a drawing would be the exact complaint
+ * that prompted this, wearing a mark. The word does the work; the drawing only
+ * has to be handsome. Same build as the search link beside it, for the same reason.
+ *
+ * WHY A BUILDING, ON A SITE MADE OF SHEETS. Four marks were drawn and rasterised
+ * at 16, 20 and 27px, then magnified off a canvas rather than redrawn large — a
+ * vector redrawn large is a lie about what a reader gets, which is the lesson
+ * favicon.svg paid for twice and the loupe a third time. What the pixels said:
+ *
+ *   · A HOUSE SILHOUETTE IS THE ONLY THING THAT READS AS HOME AT 16px. It is the
+ *     one glyph the web has actually taught people. Every candidate without a
+ *     pitched roof needed the word to carry the whole meaning.
+ *   · THE SITE’S OWN MARK WAS TRIED FIRST AND LOST. The pressed leaf from
+ *     favicon.svg is the obvious answer — home as the logo — and it does not
+ *     survive the trip. It has a paper ground and 64px on the icon; at 20px in
+ *     moss beside the loupe it is a dark blob with less character than the
+ *     instrument next to it. Its midrib in paper is a white gash that splits the
+ *     leaf into two lobes and reads as a pea pod; in lichen it is better and
+ *     still quieter than this. And --qe-rust goes pale pink in the drawer, so the
+ *     pin that makes the favicon legible becomes a pale bulb at the base.
+ *   · A CABINET WAS REFUSED WITHOUT DRAWING IT. /the-cabinet-itself is a drawer
+ *     in the menu two controls along. One picture, two destinations.
+ *   · SO WAS A MENDED VESSEL, AND THAT ONE IS A HOUSE RULE. Kintsugi is spent
+ *     here: --qe-marigold marks a re-determination in the register and a join in a
+ *     restored attribution, and a seam requires an actual repair. A gold-mended
+ *     mark in the tray would assert a correction that never happened, an arm’s
+ *     length from the real mends on every provenance line.
+ *
+ * THREE BAYS AND NO MORE, WHICH TOOK TWO WRONG VERSIONS. A glazing grid with a
+ * transom and a missing pane goes muddy by 20px and the missing pane does not read
+ * as a void at all — it reads as a dark window, and sitting off-centre it drags
+ * the whole mark sideways. So: a gable mullion, two bars, and the centre bay left
+ * full height to be the door. A shoot drawn up through that door — the botanical
+ * cue this mark otherwise lacks — READS AS A SMALL PERSON STANDING IN THE DOORWAY
+ * at the size it ships at, which is the panicle-and-spines lesson arriving in a
+ * fourth costume: do not reach for one small mark where the eye expects a figure.
+ *
+ * THE RIDGE IS OFF CENTRE AND THE BAYS ARE UNEQUAL, AND THAT IS THE AGE ON IT.
+ * The apex is at x 11.2 against a body centred on 12, so the two slopes differ and
+ * the bays run 4.8, 5.4, 4.6. It is visible at 20px, it is the wonk axis this
+ * site already runs on its type and on the rail’s ticks, and it CLAIMS NOTHING —
+ * which is the whole licence for it, the same test the tick lengths have to pass
+ * from the other direction.
+ *
+ * STROKED, LIKE THE LOUPE, BECAUSE A FRAME IS MADE OF THIN PARTS. The animal mark
+ * is filled because an animal at 20px is a silhouette; this is glazing bars and a
+ * roof. Both parts are filled with the paper and occlude what is behind them
+ * rather than crossing it, so the gable does not print through the body — the
+ * loupe’s own finding, and in the cabinet it inverts to dark panes in a moss
+ * frame with no rule of its own.
+ *
+ * IT DOES NOT ANIMATE. Nothing in the instrument tray moves; the drawing-on is for
+ * botanical art, and a building is not a plant. */
+.qe-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  font-family: var(--qe-body);
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: var(--qe-moss);
+  text-decoration: none;
+  border-bottom: 1px solid var(--qe-rule);
+  padding: 0.2rem 0.15rem;
+}
+.qe-home-link:hover { border-bottom-color: var(--qe-moss); }
+.qe-home-link:focus-visible {
+  outline: 3px solid var(--qe-rust);
+  outline-offset: 2px;
+}
+/* On the home page itself. The control stays rather than vanishing on one page out
+   of thirty — the search link’s rule, for the search link’s reason. */
+.qe-home-link[aria-current="page"] {
+  color: var(--qe-ink);
+  border-bottom-color: var(--qe-moss);
+}
+
+/* 1.35rem square, which is the loupe exactly, so the two instruments either side
+   of the ground control weigh the same. */
+.qe-glasshouse {
+  display: block;
+  flex: none;
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.qe-glasshouse .glass { fill: var(--qe-paper); }
+
 /* ─── the finding aid, reachable from the top of every page
  *
  * Search used to live only in the footer, which on /wild-nights is nine thousand
