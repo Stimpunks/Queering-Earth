@@ -108,6 +108,10 @@ const DECOUPLED = new Map([
   ['/favicon.ico', 'a mark, not a document'],
   ['/favicon.svg', 'a mark, not a document'],
   ['/apple-touch-icon.png', 'a mark, not a document'],
+  /* It names icons and a start URL. Neither is markup: no class, no id, no sentence
+     from any page, and nothing in it is derived from one. A stale copy installs an
+     older mark, which is the same kind of staleness as an old favicon. */
+  ['/site.webmanifest', 'names icons and a start URL; it knows nothing about any page\'s markup'],
 ]);
 
 const problems = [];
@@ -156,7 +160,10 @@ function freshness(cc) {
 const NOT_A_PAGE = new Set();
 const files = (await readdir(ROOT)).filter((f) => f.endsWith('.html')).sort();
 const FETCHING = /<(?:link|script|img|source|iframe|video|audio|embed|object)\b[^>]*>/g;
-const FETCHING_REL = /rel="(?:stylesheet|preload|modulepreload|prefetch|prerender|icon|apple-touch-icon)"/;
+// `manifest` was missing until 2026-09-14, so the one asset every page on the site
+// fetches would have gone through check 2 UNDECLARED unseen — a gate's allowlist is
+// as good as its newest entry, which is the argument for adding one in the same edit.
+const FETCHING_REL = /rel="(?:stylesheet|preload|modulepreload|prefetch|prerender|icon|apple-touch-icon|manifest)"/;
 
 /** address of a page file, house style: extensionless, index at the root */
 const addressOf = (f) => (f === 'index.html' ? '/' : '/' + f.replace(/\.html$/, ''));

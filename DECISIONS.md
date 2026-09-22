@@ -684,6 +684,35 @@ sentences. Neither changes the manifesto's argument, which is why it survived th
 
 ## Settled
 
+### A sync skill, and what a one-line file actually does in a merge (2026-09-14)
+
+Ryan: *"I want to avoid git commands for Helen and I as much as possible. Create a sync skill for us to pull from GitHub and update our working directories. See the sync skill for Star Stuff if its helpful."*
+
+**Settled: `.claude/skills/sync/SKILL.md`, ported from Star Stuff and rewritten in three places** — because a port is a rewrite wherever the original encodes an assumption this site does not share, and Star Stuff has one branch where this has three kinds. The new step is merging `main` into a draft branch, where the generated files conflict and **the regeneration is the resolution**; the new prohibition is that **nothing ever merges toward `main`**, because the branch `_headers` carries `X-Robots-Tag: noindex` on `/*` and publication takes files; and the new trap named in the conflict step is that **a `.md` is derived only if a page of that name exists**, so resolving `ATTRIBUTIONS.md` as derived drops a draft's credit rows while every page still reads perfectly.
+
+**`.gitattributes` had to exist first, because the skill's conflict step was advice built on sand without it.** This repository had none. Star Stuff added one the same week and for the same reason — it gained a second contributor — and both of its rules apply here: `* -text`, because the gates verify derived files by regenerating and byte-comparing and a per-platform line-ending rewrite would report every one of them stale on a tree nobody touched; and `search-index.json -merge -diff`, because it is 1.5 MB on one line.
+
+**AND THEN THE SENTENCE THAT JUSTIFIED THE SECOND RULE TURNED OUT TO BE WRONG, WHICH IS THE PART WORTH KEEPING.** The comment inherited from Star Stuff's copy said git might *"splice two JSON documents into one that parses and is wrong"*. **That cannot happen to a file with no interior line boundaries** — a three-way merge has nothing to interleave. Measured in a throwaway clone of the real divergence, then reproduced exactly on the real merge an hour later:
+
+| | what git does |
+|---|---|
+| **without the rule** | says `Auto-merging`, writes **conflict markers into the file**, leaves 5 lines of invalid JSON |
+| **with the rule** | says `Cannot merge binary files`, leaves the file **one line of valid JSON** (ours), conflict still flagged |
+
+**So the rule does not prevent the conflict — it keeps the working file a usable index instead of a broken one**, and `-diff` stops git rendering a 1.5 MB line as a diff. Both shapes need the same fix and neither is resolvable by reading. The rule is worth having and the reason on it was not the reason it was given.
+
+**Star Stuff's own `.gitattributes` carries the same unverified claim, on a 6.1 MB single-line index**, and the same reasoning says it cannot splice there either. **Recorded here rather than fixed there, because Star Stuff is not edited from this repo** — the standing convention, and the third finding filed this way after the three faults in the imported overlap gate.
+
+**The bootstrapping asymmetry is real and is not a problem.** The merge that *delivers* `.gitattributes` to a branch runs under the branch's old rules, so it gets the marker shape; every merge after it gets the binary shape. Watched happening on `draft/time-present-time-past`: `Auto-merging search-index.json`, 5 lines, 3 markers, exactly the clone's numbers.
+
+**Both branches were brought up to date the same afternoon, and the `drafts` base was the one that mattered.** `start-draft` cuts every new draft from it, so while it sat three commits back **every future draft would have been born stale** — without `.gitattributes`, without the machines section in `CLAUDE.md`, without knowing `sync` exists. The draft branch itself needed it less than it looked: none of the three commits touched a page that draft renders, so nothing was stale *for the reviewer* — what was stale was the workshop.
+
+**Both branches fail `check-sitemap` and `check-addresses` afterwards, by name, and that is the design.** `review-practice.html` and `time-present-time-past.html` are not in the manifest because they are not accessioned. All three rendering gates passed on the merged tree, which is the pass that matters when a merge can produce a tree neither person ever had.
+
+**Verified at the edge rather than assumed, because the whole hazard of the operation was one header travelling the wrong way**: `queering.earth` answers with no `X-Robots-Tag`, and the draft deploy answers `200` with `x-robots-tag: noindex`.
+
+**Open: nothing gates branch freshness, and nothing gates the direction of a merge.** `tools/draft.mjs` reports **DANGER** when a draft branch's `_headers` has no `/*` noindex, which covers a branch cut from the wrong base — but a merge *toward* `main` is caught by nothing except the capitals in `CLAUDE.md` and `_headers`. The live probe stays `curl -sI https://queering.earth/ | grep -i x-robots`.
+
 ### One branch per draft (2026-09-13)
 
 **Ryan's call, the same day the shared branch produced its third fault.** Each draft now lives on `draft/<slug>`, cut from `drafts`. `drafts` becomes a base carrying only the branch furniture: the `X-Robots-Tag: noindex` block in `_headers` and `review-practice.html`.

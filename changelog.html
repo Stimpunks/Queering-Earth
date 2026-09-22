@@ -31,6 +31,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- The web app manifest. Same three icons drawn by the same tool; minimal-ui
+     rather than standalone, because an installed copy of a site whose whole
+     argument is that its addresses are real and citable must not hide the bar
+     the address is in. Guarded by check-metadata.mjs check 11. -->
+<link rel="manifest" href="site.webmanifest">
 
 <!-- The faces are self-hosted and declared in queering.css. Preloading the body
      roman is the one that pays: it is the first thing every page needs, and there
@@ -101,6 +106,7 @@
 <a class="qe-skip" href="#main">Skip to the page</a>
 
 <div class="qe-controls">
+  <a class="qe-home-link" href="/"><svg class="qe-glasshouse" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="glass" d="M4.6 11.6 H19.4 V20.6 H4.6 Z"/><path class="glass" d="M3.2 11.6 L11.2 3.4 L20.8 11.6 Z"/><path d="M11.2 4.6 V11.6"/><path d="M9.4 11.6 V20.6"/><path d="M14.8 11.6 V20.6"/></svg>Home</a>
   <a class="qe-search-link" href="/search"><svg class="qe-loupe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 7 10.8 7 14.4 A5 5 0 0 0 17 14.4 C17 10.8 12 6.9 12 3.6 Z"/></g><g transform="rotate(-30 12 3.6)"><path class="shell" d="M12 3.6 C12 6.9 8.1 10 8.1 13.6 A3.9 3.9 0 0 0 15.9 13.6 C15.9 10 12 6.9 12 3.6 Z"/><circle class="lens" cx="12" cy="13.6" r="2.7"/></g><circle class="rivet" cx="12" cy="3.6" r="1.1"/></svg>Search</a>
   <button type="button" class="qe-ground-toggle" id="qe-ground" aria-pressed="false">Cabinet</button>
   <button type="button" class="qe-plain-toggle" id="qe-plain" aria-pressed="false">Plain view</button>
@@ -326,8 +332,72 @@
        which a derived href would have. -->
   <div class="qe-register" id="latest">
 
-    <section class="qe-accession" aria-labelledby="a-2026-09-14-known-and-felt-and-seen">
+    <section class="qe-accession" aria-labelledby="a-2026-09-14-home">
       <p class="qe-accession-date">2026 &middot; 14 September &middot; latest</p>
+      <h2 id="a-2026-09-14-home">A way back to the front, and the four marks that were not it <a class="qe-anchor" href="#a-2026-09-14-home"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">The breadcrumb had been a route home on every page since the drawers shipped, and it was not the route anybody reached for. The tray has one now, drawn as a glasshouse.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">A labelled home control, first in the instrument tray</span></div>
+        <div class="qe-entry-body">
+          <p><strong>A trail and a control are different things, and both stay.</strong> <span class="qe-tk">.qe-crumbs</span> says where you are; it sits inside the masthead, below the tray, and on a sheet it is the third thing down. A reader in the middle of nine thousand words wants the other one. Ryan kept looking in the top bar and finding nothing there, which is the whole of the case.</p>
+          <p><strong>It carries a word, and the unlabelled licence next door does not reach it.</strong> The fox and the hedgehog are allowed to be a picture alone because nothing is withheld &mdash; <a href="/two-cohabitating-modes">that page</a> is in every footer, in the drawers menu and in the finding aid. The home page is the destination a reader is most likely to want and least likely to hunt for, so hiding it behind a drawing would have been the original complaint arriving again wearing a mark.</p>
+          <p><strong>At 320px the tray is three lines now rather than two</strong>, and that was measured rather than discovered later: 133px of tray against 91px, no target under 44&times;44, no two hit areas touching, and <span class="qe-tk">scrollWidth</span> equal to the viewport at 320, 375, 414, 768 and 1280. Both overlay panels hang off the tray rather than off their own summaries, so neither moved &mdash; which is the fault the drawers control found the hard way, and the reason that rule exists.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">Why a glasshouse, and why not a cabinet, a mended cup, or our own leaf</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Four marks were drawn, rasterised at 16, 20 and 27px, and then magnified off a canvas rather than redrawn large.</strong> A vector redrawn large is a lie about what a reader gets &mdash; the lesson <span class="qe-tk">favicon.svg</span> paid for twice and the pocket lens a third time. What the pixels said was that a pitched roof is the only silhouette that reads as <em>home</em> at 16px, and that everything else needed the word to carry the entire meaning.</p>
+          <p><strong>The site&rsquo;s own mark was tried first and lost.</strong> Home as the logo is the oldest convention on the web, and the pressed leaf does not survive the trip: it has a paper ground and a 64px canvas on the icon, and at 20px in moss beside the lens it is a dark blob with less character than the instrument next to it. Its midrib in paper is a white gash that splits the leaf into two lobes and reads as a pea pod. And <span class="qe-tk">--qe-rust</span> goes pale pink in the drawer, so the pin that makes the favicon legible becomes a pale bulb at the base.</p>
+          <p><strong>A chest of drawers was refused without drawing it.</strong> <a href="/the-cabinet-itself">The cabinet itself</a> is a drawer in the menu two controls along. One picture, two destinations.</p>
+          <p><strong>So was a mended cup, and that one is a house rule rather than a matter of taste.</strong> Kintsugi is already spent here: <span class="qe-tk">--qe-marigold</span> marks a re-determination in this register and the join in a restored attribution, and <a href="/design">a seam requires an actual repair</a>. A gold-mended mark in the tray would have asserted a correction that never happened, an arm&rsquo;s length from the real mends on every provenance line on the site.</p>
+          <p><strong>The wabi-sabi that survived is the ridge, set off centre.</strong> The apex sits at x&nbsp;11.2 against a body centred on 12, so the two slopes differ and the bays run 4.8, 5.4 and 4.6. It is visible at 20px, it is the same wonk axis already running on this site&rsquo;s type and on the rail&rsquo;s ticks, and it claims nothing &mdash; which is the only licence ornament gets here.</p>
+          <p><strong>Two versions were drawn wrong first.</strong> A full glazing grid with a transom and one missing pane goes muddy by 20px, and the missing pane does not read as a void at all: it reads as a dark window, and sitting off centre it drags the whole mark sideways. Then a shoot drawn up through the open door &mdash; the botanical cue this mark otherwise lacks &mdash; <strong>read as a small person standing in the doorway</strong> at the size it ships at. That is the lilac panicle&rsquo;s lesson in a fourth costume: do not put one small mark where the eye is expecting a figure.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-14-webmanifest">
+      <p class="qe-accession-date">2026 &middot; 14 September</p>
+      <h2 id="a-2026-09-14-webmanifest">The cabinet can be installed, and the pin Android would have cropped off the mark <a class="qe-anchor" href="#a-2026-09-14-webmanifest"><span class="qe-sr">Link to this section</span></a></h2>
+
+      <p class="qe-accession-note">A web app manifest, which the site had never had &mdash; and a 512px icon that had been generated on every run since the first week and referenced by nothing at all.</p>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name"><code>site.webmanifest</code>, and why it says <code>minimal-ui</code> rather than <code>standalone</code></span></div>
+        <div class="qe-entry-body">
+          <p><strong>Installed, this site would have had a generic browser icon and its page title.</strong> A manifest is the declarative half of the thing the acronym covers &mdash; it runs nothing, caches nothing and makes nothing work offline; it says what the mark is, where the window opens, and what colour the chrome around it should be. The other half is a service worker, and there is still none here.</p>
+          <p><strong><code>display</code> is <code>minimal-ui</code> on purpose, and that is the one field in it that is an argument rather than a fact.</strong> <code>standalone</code> hides the address bar, and this is a site whose whole practice is that <a href="/on-being-ill">/on-being-ill</a> is a real address a reader can copy, share and check us against. An installed copy that hides the bar the address sits in would be the cabinet quietly withdrawing the thing the <a href="/ledger">ledger</a> exists to make possible. <code>minimal-ui</code> is still installable in Chromium and keeps the address in view.</p>
+          <p><strong><code>start_url</code> is a bare <code>/</code>, against the spec&rsquo;s own example.</strong> That example appends a tracking parameter so installed launches can be counted separately; there is nothing here that could read it, <a href="/privacy">/privacy</a> says so, and it would mint a second address for the home page on a site whose redirects exist to ensure every page has exactly one.</p>
+          <p><strong><code>short_name</code> is the site&rsquo;s name and not a nickname.</strong> A home screen may truncate <em>Queering Earth</em>, and being truncated by somebody&rsquo;s launcher is not the same as us keeping a second, shorter name for the site &mdash; which is the drift this register refuses everywhere else.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">A maskable icon is not a copy of the 512, and the measurement is what says so</span></div>
+        <div class="qe-entry-body">
+          <p><strong>Android applies its own mask and guarantees only the central 80% of the square.</strong> The mark is a pressed leaf pinned with the wordmark&rsquo;s rust dot, and at the scale every other icon here is drawn at, the drawing reaches <strong>0.484 of the square from its centre</strong> against a safe radius of 0.400 &mdash; measured out of the finished PNG, not calculated. <strong>The pin is the part that goes.</strong> A leaf with no pin is a leaf; the pin is what says <em>specimen</em>, and it would have been cropped off on every Android home screen with nothing anywhere looking wrong.</p>
+          <p>So the maskable one is a separate render at its own scale rather than a <code>purpose</code> on an existing icon: an icon declared <q>any maskable</q> is used at both jobs, and padded enough to survive the mask it is a small leaf adrift in a field of vellum everywhere the mask is not applied. The ground was already full-bleed paper with no transparency, which is the other half of a maskable icon done right, so only the scale had to move.</p>
+          <p><strong>0.33 was the arithmetic and 0.32 is what shipped.</strong> The first re-render measured back at 0.400 of the square exactly &mdash; on the line, with no margin for a platform that rounds its mask the other way.</p>
+          <p><strong><code>images/icon-512.png</code> had been written on every run since the day the mark was drawn &mdash; 7&nbsp;September, before this register existed to record it &mdash; and was referenced by nothing</strong> &mdash; not a page, not <code>_headers</code>, not the sitemap. Somebody laid this groundwork in the first week and stopped.</p>
+        </div>
+      </div>
+
+      <div class="qe-entry qe-entry--cabinet" data-sheet="the-site">
+        <div class="qe-entry-head"><span class="qe-tag qe-tag--cabinet">Cabinet</span><span class="qe-entry-name">A manifest fails silently, so three gates learned the word <code>manifest</code></span></div>
+        <div class="qe-entry-body">
+          <p><strong>There is no symptom.</strong> A manifest served as the wrong type, or naming an icon that is not there, is simply ignored: no console error, nothing wrong on the page, and an install affordance that never appears. So <code>_headers</code> types it explicitly &mdash; the <code>.avif</code> lesson, where production sends <code>nosniff</code> and a type the local server guesses is one the live site cannot recover from &mdash; and <code>tools/serve.mjs</code> learned it too, so local and live agree.</p>
+          <p><strong>Two gates had allowlists that would not have seen it.</strong> <code>check-cache.mjs</code> and <code>check-metadata.mjs</code> each decide whether a <code>link</code> is a fetch by matching its <code>rel</code> against a list, and neither list held <code>manifest</code>. The one asset every page on the site fetches would have gone through the undeclared-asset check unseen, and a manifest pointed one day at somebody else&rsquo;s CDN would have gone through the third-party check unseen. <strong>An allowlist is only as good as its newest entry</strong>, which is the argument for adding one in the same edit rather than the next.</p>
+          <p><strong>Check&nbsp;11 is the new guard</strong>, and it checks the copies rather than the judgements: the two colours against the <code>--qe-paper</code> in the stylesheet&rsquo;s <code>:root</code> block, the name and the description against the home page&rsquo;s own, every icon against the file on disk <em>and against the size it claims to be</em>, and every page for the link. It also guards the one number the pixels cannot give back &mdash; Node has no image decoder, so the maskable scale is measured where the drawing happens and the gate only keeps the constant from being tidied back up. <strong>Made to fail in five shapes before being believed</strong>, each reverted after: a page that does not link it, a colour that is not the paper, a <code>sizes</code> that lies beside an icon that is not there, the maskable scale raised, and a description typed rather than copied.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qe-accession" aria-labelledby="a-2026-09-14-known-and-felt-and-seen">
+      <p class="qe-accession-date">2026 &middot; 14 September</p>
       <h2 id="a-2026-09-14-known-and-felt-and-seen">Sheet No.&nbsp;14, and a privacy page that was false by two <a class="qe-anchor" href="#a-2026-09-14-known-and-felt-and-seen"><span class="qe-sr">Link to this section</span></a></h2>
 
       <p class="qe-accession-note">A wall, recast from our sibling site&rsquo;s reading of the same life &mdash; and a correction to <a href="/privacy">/privacy</a> that had nothing to do with it and was found on the way past.</p>

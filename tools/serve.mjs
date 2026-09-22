@@ -28,6 +28,10 @@ const TYPES = {
   '.js': 'text/javascript; charset=utf-8',
   '.mjs': 'text/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
+  // Its own type, not application/json. A manifest served as anything else is
+  // ignored with no console error and no sign on the page — the .avif lesson,
+  // where the failure is silent rather than loud.
+  '.webmanifest': 'application/manifest+json; charset=utf-8',
   '.svg': 'image/svg+xml',
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',

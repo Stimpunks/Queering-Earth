@@ -1015,6 +1015,48 @@ falls back to nothing and shares as a bare link.
   small: a tilted leaf reads as a diagonal stroke, and anything filled in `--qe-lichen` has too
   little contrast on `--qe-paper` to be a shape at all. Render candidates at 16 and compare.
 
+### The manifest is installable, and its silence is the reason it is gated
+
+`site.webmanifest` shipped 2026-09-14 and every page links it by **relative** URL, like the
+other shared assets. It is the declarative half of the thing the acronym covers — it runs
+nothing, caches nothing and makes nothing work offline; **there is still no service worker
+here**, and the two are independent despite sharing a label.
+
+**A MANIFEST FAILS SILENTLY AND THAT IS THE WHOLE ARGUMENT FOR CHECK 11.** Served as the
+wrong type, or naming an icon that is not on disk, it is simply ignored: no console error,
+nothing wrong on the page, and an install affordance that never appears. So `_headers` types
+it `application/manifest+json` explicitly and `serve.mjs` learned the extension — the `.avif`
+lesson, where production sends `nosniff` and a type the local server guesses is one the live
+site cannot recover from. `check-metadata.mjs` check 11 compares every copy in it against its
+source: the two colours against `--qe-paper` in the stylesheet's `:root` block, the name and
+description against the home page's own, every icon against the file **and against the size it
+claims**, and every page for the link.
+
+**Two gate allowlists did not know the word `manifest`**, and both were widened in the same
+edit. `check-cache.mjs` and `check-metadata.mjs` each decide whether a `link` is a fetch by
+matching its `rel`, so the one asset every page fetches would have gone through the
+undeclared-asset check and the third-party check unseen. **An allowlist is only as good as its
+newest entry.**
+
+**A MASKABLE ICON IS NOT A COPY OF THE 512, AND THAT IS A MEASUREMENT.** Android guarantees
+only the central 80% — a circle of radius `0.40 × size`. The mark reaches **0.484 × size**
+from the centre at the scale every other icon here is drawn at, so **the rust pin is cropped**
+and nothing anywhere looks wrong. `MASKABLE` in `make-images.py` is the separate scale, and it
+is a separate **file** rather than a `purpose` on an existing icon: an icon declared `any
+maskable` is used at both jobs, and padded enough to survive the mask it is a small leaf adrift
+in a field of vellum everywhere the mask is not applied. **0.33 was the arithmetic and 0.32 is
+what shipped** — the first re-render measured back at 0.400 exactly, on the line, with no
+margin for a platform that rounds the other way. Check 11 guards the constant and **not the
+pixels**, because Node has no image decoder; the extent is measured in the tool that draws it.
+
+**Two fields are arguments rather than facts, and a later pass must not "fix" them.**
+`display` is `minimal-ui` because `standalone` hides the address bar, and an installed copy of
+a site whose practice is that every page has one real citable address must not withdraw the
+bar that address sits in. `start_url` is a bare `/` against the spec's own example, which
+appends a tracking parameter: nothing here could read it, `/privacy` says so, and it would mint
+a second address for the home page. `short_name` is the site's full name — a launcher
+truncating it is not us keeping a second name for the site.
+
 ### A new sheet needs a register entry, too
 
 `changelog.html` is the site's **accession register** — the public log of every sheet as it was
