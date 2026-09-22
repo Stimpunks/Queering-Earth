@@ -106,17 +106,36 @@ def draw_mark(d, cx, cy, s):
     r = s * 0.23
     d.ellipse([cx-r, bot-r, cx+r, bot+r], fill=RUST)
 
-def favicon(size):
+def favicon(size, scale=0.40):
     ss = 4  # supersample, then downsample: PIL has no antialiased polygon
     img = Image.new("RGB", (size*ss, size*ss), PAPER)
     d = ImageDraw.Draw(img)
-    draw_mark(d, size*ss/2, size*ss/2, size*ss*0.40)
+    draw_mark(d, size*ss/2, size*ss/2, size*ss*scale)
     return img.resize((size, size), Image.LANCZOS)
+
+# A MASKABLE ICON IS NOT A COPY OF THE 512, AND THE MEASUREMENT IS WHY. Android
+# applies its own adaptive mask and guarantees only the central 80% — a circle of
+# radius 0.40 x size. At the mark's usual scale the leaf runs s x 1.95 tall and the
+# rust pin adds its own radius at the base, so the drawing reaches s x 1.205 =
+# 0.482 x size from the centre and THE PIN IS CROPPED OFF, which is the spec's own
+# named mistake and the one thing the mark must not lose. The ground is already
+# full-bleed paper with no alpha, which is the other half of maskable done right;
+# only the scale had to move. 0.40 / 1.205 = 0.332, and 0.33 was MEASURED back
+# out of the finished PNG at 0.400 x size exactly — on the line, with no margin
+# at all for a platform that rounds its mask the other way. 0.32 measures 0.388.
+MASKABLE = 0.32
 
 ico_sizes = [16, 32, 48, 64]
 favicon(64).save(REPO / "favicon.ico", sizes=[(s, s) for s in ico_sizes])
 favicon(180).save(REPO / "apple-touch-icon.png")
+# The three the web app manifest names. 192 and 512 are what Chromium asks for;
+# the maskable one is a separate file rather than a `purpose` on the others,
+# because a single icon declared "any maskable" is used at BOTH jobs and this
+# drawing cannot do both — padded enough to survive the mask, it is a small leaf
+# adrift in a field of vellum everywhere the mask is not applied.
+favicon(192).save(REPO / "images" / "icon-192.png")
 favicon(512).save(REPO / "images" / "icon-512.png")
+favicon(512, MASKABLE).save(REPO / "images" / "icon-maskable-512.png")
 
 # ── the Open Graph cards ──────────────────────────────────────────────────────
 W, H = 1200, 630
@@ -366,7 +385,8 @@ og_card(REPO/"images"/"og-the-cabinet-itself.png", "The cabinet itself", "Drawer
 # card generated correctly and went unreported because nobody added a line to it —
 # which means the reverse could also happen: a card silently NOT generated, in a
 # report that looks complete. A new og_card call now reports itself.
-for p in ("favicon.ico", "apple-touch-icon.png", "images/icon-512.png"):
+for p in ("favicon.ico", "apple-touch-icon.png", "images/icon-192.png",
+          "images/icon-512.png", "images/icon-maskable-512.png"):
     f = REPO / p
     print("  %-38s %7d bytes" % (p, f.stat().st_size))
 for f in WROTE:

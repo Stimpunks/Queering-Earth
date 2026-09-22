@@ -37,6 +37,68 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 
 2026 · 14 September · latest
 
+## A way back to the front, and the four marks that were not it
+
+The breadcrumb had been a route home on every page since the drawers shipped, and it was not the route anybody reached for. The tray has one now, drawn as a glasshouse.
+
+CabinetA labelled home control, first in the instrument tray
+
+**A trail and a control are different things, and both stay.** .qe-crumbs says where you are; it sits inside the masthead, below the tray, and on a sheet it is the third thing down. A reader in the middle of nine thousand words wants the other one. Ryan kept looking in the top bar and finding nothing there, which is the whole of the case.
+
+**It carries a word, and the unlabelled licence next door does not reach it.** The fox and the hedgehog are allowed to be a picture alone because nothing is withheld — [that page](https://queering.earth/two-cohabitating-modes) is in every footer, in the drawers menu and in the finding aid. The home page is the destination a reader is most likely to want and least likely to hunt for, so hiding it behind a drawing would have been the original complaint arriving again wearing a mark.
+
+**At 320px the tray is three lines now rather than two**, and that was measured rather than discovered later: 133px of tray against 91px, no target under 44×44, no two hit areas touching, and scrollWidth equal to the viewport at 320, 375, 414, 768 and 1280. Both overlay panels hang off the tray rather than off their own summaries, so neither moved — which is the fault the drawers control found the hard way, and the reason that rule exists.
+
+CabinetWhy a glasshouse, and why not a cabinet, a mended cup, or our own leaf
+
+**Four marks were drawn, rasterised at 16, 20 and 27px, and then magnified off a canvas rather than redrawn large.** A vector redrawn large is a lie about what a reader gets — the lesson favicon.svg paid for twice and the pocket lens a third time. What the pixels said was that a pitched roof is the only silhouette that reads as *home* at 16px, and that everything else needed the word to carry the entire meaning.
+
+**The site’s own mark was tried first and lost.** Home as the logo is the oldest convention on the web, and the pressed leaf does not survive the trip: it has a paper ground and a 64px canvas on the icon, and at 20px in moss beside the lens it is a dark blob with less character than the instrument next to it. Its midrib in paper is a white gash that splits the leaf into two lobes and reads as a pea pod. And --qe-rust goes pale pink in the drawer, so the pin that makes the favicon legible becomes a pale bulb at the base.
+
+**A chest of drawers was refused without drawing it.** [The cabinet itself](https://queering.earth/the-cabinet-itself) is a drawer in the menu two controls along. One picture, two destinations.
+
+**So was a mended cup, and that one is a house rule rather than a matter of taste.** Kintsugi is already spent here: --qe-marigold marks a re-determination in this register and the join in a restored attribution, and [a seam requires an actual repair](https://queering.earth/design). A gold-mended mark in the tray would have asserted a correction that never happened, an arm’s length from the real mends on every provenance line on the site.
+
+**The wabi-sabi that survived is the ridge, set off centre.** The apex sits at x 11.2 against a body centred on 12, so the two slopes differ and the bays run 4.8, 5.4 and 4.6. It is visible at 20px, it is the same wonk axis already running on this site’s type and on the rail’s ticks, and it claims nothing — which is the only licence ornament gets here.
+
+**Two versions were drawn wrong first.** A full glazing grid with a transom and one missing pane goes muddy by 20px, and the missing pane does not read as a void at all: it reads as a dark window, and sitting off centre it drags the whole mark sideways. Then a shoot drawn up through the open door — the botanical cue this mark otherwise lacks — **read as a small person standing in the doorway** at the size it ships at. That is the lilac panicle’s lesson in a fourth costume: do not put one small mark where the eye is expecting a figure.
+
+2026 · 14 September
+
+## The cabinet can be installed, and the pin Android would have cropped off the mark
+
+A web app manifest, which the site had never had — and a 512px icon that had been generated on every run since the first week and referenced by nothing at all.
+
+Cabinet`site.webmanifest`, and why it says `minimal-ui` rather than `standalone`
+
+**Installed, this site would have had a generic browser icon and its page title.** A manifest is the declarative half of the thing the acronym covers — it runs nothing, caches nothing and makes nothing work offline; it says what the mark is, where the window opens, and what colour the chrome around it should be. The other half is a service worker, and there is still none here.
+
+**`display` is `minimal-ui` on purpose, and that is the one field in it that is an argument rather than a fact.** `standalone` hides the address bar, and this is a site whose whole practice is that [/on-being-ill](https://queering.earth/on-being-ill) is a real address a reader can copy, share and check us against. An installed copy that hides the bar the address sits in would be the cabinet quietly withdrawing the thing the [ledger](https://queering.earth/ledger) exists to make possible. `minimal-ui` is still installable in Chromium and keeps the address in view.
+
+**`start\_url` is a bare `/`, against the spec’s own example.** That example appends a tracking parameter so installed launches can be counted separately; there is nothing here that could read it, [/privacy](https://queering.earth/privacy) says so, and it would mint a second address for the home page on a site whose redirects exist to ensure every page has exactly one.
+
+**`short\_name` is the site’s name and not a nickname.** A home screen may truncate *Queering Earth*, and being truncated by somebody’s launcher is not the same as us keeping a second, shorter name for the site — which is the drift this register refuses everywhere else.
+
+CabinetA maskable icon is not a copy of the 512, and the measurement is what says so
+
+**Android applies its own mask and guarantees only the central 80% of the square.** The mark is a pressed leaf pinned with the wordmark’s rust dot, and at the scale every other icon here is drawn at, the drawing reaches **0.484 of the square from its centre** against a safe radius of 0.400 — measured out of the finished PNG, not calculated. **The pin is the part that goes.** A leaf with no pin is a leaf; the pin is what says *specimen*, and it would have been cropped off on every Android home screen with nothing anywhere looking wrong.
+
+So the maskable one is a separate render at its own scale rather than a `purpose` on an existing icon: an icon declared “any maskable” is used at both jobs, and padded enough to survive the mask it is a small leaf adrift in a field of vellum everywhere the mask is not applied. The ground was already full-bleed paper with no transparency, which is the other half of a maskable icon done right, so only the scale had to move.
+
+**0.33 was the arithmetic and 0.32 is what shipped.** The first re-render measured back at 0.400 of the square exactly — on the line, with no margin for a platform that rounds its mask the other way.
+
+**`images/icon-512.png` had been written on every run since the day the mark was drawn — 7 September, before this register existed to record it — and was referenced by nothing** — not a page, not `\_headers`, not the sitemap. Somebody laid this groundwork in the first week and stopped.
+
+CabinetA manifest fails silently, so three gates learned the word `manifest`
+
+**There is no symptom.** A manifest served as the wrong type, or naming an icon that is not there, is simply ignored: no console error, nothing wrong on the page, and an install affordance that never appears. So `\_headers` types it explicitly — the `.avif` lesson, where production sends `nosniff` and a type the local server guesses is one the live site cannot recover from — and `tools/serve.mjs` learned it too, so local and live agree.
+
+**Two gates had allowlists that would not have seen it.** `check-cache.mjs` and `check-metadata.mjs` each decide whether a `link` is a fetch by matching its `rel` against a list, and neither list held `manifest`. The one asset every page on the site fetches would have gone through the undeclared-asset check unseen, and a manifest pointed one day at somebody else’s CDN would have gone through the third-party check unseen. **An allowlist is only as good as its newest entry**, which is the argument for adding one in the same edit rather than the next.
+
+**Check 11 is the new guard**, and it checks the copies rather than the judgements: the two colours against the `--qe-paper` in the stylesheet’s `:root` block, the name and the description against the home page’s own, every icon against the file on disk *and against the size it claims to be*, and every page for the link. It also guards the one number the pixels cannot give back — Node has no image decoder, so the maskable scale is measured where the drawing happens and the gate only keeps the constant from being tidied back up. **Made to fail in five shapes before being believed**, each reverted after: a page that does not link it, a colour that is not the paper, a `sizes` that lies beside an icon that is not there, the maskable scale raised, and a description typed rather than copied.
+
+2026 · 14 September
+
 ## Sheet No. 14, and a privacy page that was false by two
 
 A wall, recast from our sibling site’s reading of the same life — and a correction to [/privacy](https://queering.earth/privacy) that had nothing to do with it and was found on the way past.

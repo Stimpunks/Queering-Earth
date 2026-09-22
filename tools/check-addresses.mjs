@@ -135,7 +135,7 @@ for (const f of files) {
   for (const m of s.matchAll(/(?:href|content)="((?:\/|https:\/\/queering\.earth\/)[^"]*\.html(?:#[^"]*)?)"/g))
     fail('extension', `${f} — ${m[1]} carries .html; addresses are extensionless`);
 
-  for (const m of s.matchAll(/(?:href|src)="(\/[^"]*\.(?:css|js|svg|ico|png|jpg))"/g))
+  for (const m of s.matchAll(/(?:href|src)="(\/[^"]*\.(?:css|js|svg|ico|png|jpg|webmanifest))"/g))
     fail('asset', `${f} — ${m[1]} is root-relative; shared assets are included by relative URL`);
 }
 

@@ -71,6 +71,16 @@
  *    The `noindex` half catches the same edit from the other side — a page the manifest
  *    advertises and the markup hides is two statements that cannot both be true.
  *
+ * 11. MANIFEST — `site.webmanifest` parses, every page links it by relative URL, every
+ *    icon it names exists at the size it claims, and its two colours are still the
+ *    `--qe-paper` in `queering.css`. A manifest fails SILENTLY: a browser that dislikes
+ *    it simply declines to offer installation, with nothing in the console and nothing
+ *    wrong on the page, so there is no symptom to notice. It also holds the one number
+ *    that cannot be recovered from the PNGs here — `MASKABLE` in `tools/make-images.py`,
+ *    which must stay under 0.332 or Android's mask crops the rust pin off the mark.
+ *    **That bound is a check of the tool, not of the pixels**: Node has no image
+ *    decoder, so the ink extent is measured in `make-images.py` and recorded there.
+ *
  * (1), (6) and (8) are all freshness, which is why they live in one gate: every derived
  * artefact here — Markdown, indexes, feed, the search index, the finding aid's manifest,
  * plate variants — is only true until somebody edits a source and does not re-run the
@@ -298,7 +308,9 @@ for (const f of [...files, '404.html']) {
   const html = (await readFile(join(ROOT, f), 'utf8')).replace(/<!--[\s\S]*?-->/g, '');
   for (const tag of html.match(FETCHING) ?? []) {
     // A <link> only fetches for some rel values; canonical/describedby/alternate declare.
-    if (/^<link/.test(tag) && !/rel="(?:stylesheet|preconnect|preload|dns-prefetch|modulepreload|prefetch|prerender)"/.test(tag))
+    // `manifest` joined this list on 2026-09-14 with the manifest itself. It IS a fetch,
+    // and a manifest is exactly the kind of file somebody would one day point at a CDN.
+    if (/^<link/.test(tag) && !/rel="(?:stylesheet|preconnect|preload|dns-prefetch|modulepreload|prefetch|prerender|manifest)"/.test(tag))
       continue;
     for (const m of tag.matchAll(/(?:href|src|srcset|data)="([^"]+)"/g))
       for (const url of m[1].split(/[,\s]+/))
@@ -536,10 +548,81 @@ try {
   fail('draft', `cannot verify the draft furniture against sitemap.xml: ${e.message}`);
 }
 
+/* ── 11. the web app manifest ─────────────────────────────────────────────────
+ * Authored rather than generated, for the reason the JSON-LD is: `display` and
+ * `short_name` are editorial. So the mechanical halves are checked against their
+ * sources instead — the colours against the stylesheet, the icons against the files,
+ * the words against the page they were copied from. */
+let manifestIcons = 0;
+try {
+  const mf = JSON.parse(await readFile(join(ROOT, 'site.webmanifest'), 'utf8'));
+
+  for (const f of [...files, '404.html']) {
+    const html = await readFile(join(ROOT, f), 'utf8');
+    if (!/<link rel="manifest" href="site\.webmanifest">/.test(html))
+      fail('manifest', `${f} does not link site.webmanifest by relative URL — ` +
+        `every page carries it, and root-relative breaks file:// the way the icons did`);
+  }
+
+  /* The colours are a copy of two tokens. ANCHORED TO `:root`, per make-images.py: an
+     unanchored search returns whichever palette appears first in the file, and an
+     installed window is a daylight object the way a social card is. */
+  const css = await readFile(join(ROOT, 'queering.css'), 'utf8');
+  const root = /:root\s*\{([\s\S]*?)\}/.exec(css)?.[1] ?? '';
+  const paper = /--qe-paper:\s*(#[0-9a-fA-F]{3,8})/.exec(root)?.[1];
+  if (!paper) fail('manifest', 'cannot find --qe-paper in the :root block of queering.css');
+  else for (const k of ['background_color', 'theme_color'])
+    if (mf[k]?.toLowerCase() !== paper.toLowerCase())
+      fail('manifest', `site.webmanifest ${k} is ${mf[k]}, but --qe-paper is ${paper}`);
+
+  /* The words are a copy of the home page's own. Same argument as /whats-new: the
+     summary a page already publishes, never a third one typed here. */
+  const index = await readFile(join(ROOT, 'index.html'), 'utf8');
+  const meta = (re) => re.exec(index)?.[1];
+  for (const [k, got] of [
+    ['name', meta(/<meta property="og:site_name" content="([^"]+)"/)],
+    ['description', meta(/<meta name="description" content="([^"]+)"/)],
+  ]) if (got && mf[k] !== got)
+    fail('manifest', `site.webmanifest ${k} disagrees with the home page: ` +
+      `${JSON.stringify(mf[k])} against ${JSON.stringify(got)}`);
+
+  for (const k of ['start_url', 'scope'])
+    if (mf[k] !== '/') fail('manifest', `site.webmanifest ${k} is ${mf[k]}, expected /`);
+
+  /* Chromium installs on a 192 and a 512; Android masks whatever is declared maskable.
+     A `sizes` that lies is the quiet one — the icon loads and is scaled to something
+     nobody drew. PNG carries width and height in the IHDR, at a fixed offset. */
+  for (const icon of mf.icons ?? []) {
+    const rel = icon.src.replace(/^\//, '');
+    let buf;
+    try { buf = await readFile(join(ROOT, rel)); }
+    catch { fail('manifest', `site.webmanifest names ${icon.src}, which is not on disk`); continue; }
+    manifestIcons++;
+    const real = `${buf.readUInt32BE(16)}x${buf.readUInt32BE(20)}`;
+    if (real !== icon.sizes)
+      fail('manifest', `${icon.src} says sizes="${icon.sizes}" and is ${real}`);
+  }
+  for (const want of ['192x192', '512x512'])
+    if (!(mf.icons ?? []).some((i) => i.sizes === want && i.purpose !== 'maskable'))
+      fail('manifest', `site.webmanifest has no ${want} icon — Chromium will not offer to install`);
+  if (!(mf.icons ?? []).some((i) => i.purpose === 'maskable'))
+    fail('manifest', 'site.webmanifest declares no maskable icon — Android will crop the mark');
+
+  /* The bound the pixels cannot tell us. Measured once in make-images.py, where the
+     drawing happens; here we only guard the constant against being tidied back. */
+  const tool = await readFile(join(ROOT, 'tools', 'make-images.py'), 'utf8');
+  const scale = parseFloat(/^MASKABLE = ([\d.]+)/m.exec(tool)?.[1] ?? 'NaN');
+  if (!(scale <= 0.332))
+    fail('manifest', `MASKABLE in tools/make-images.py is ${scale}; above 0.332 the mark ` +
+      `reaches past the maskable safe circle and Android crops the rust pin off`);
+} catch (e) {
+  fail('manifest', `cannot read or parse site.webmanifest: ${e.message}`);
+}
+
 /* ── report ────────────────────────────────────────────────────────────────────── */
 const line = (l, v) => console.log(`  ${l.padEnd(42)} ${v}`);
 if (drafts.length) console.log(`\n  ${drafts.length} draft(s) skipped: ${drafts.join(", ")}`);
-console.log(`\n  ${files.length} page(s) · ${GENERATED.length} generated file(s) · ${plateCount} plate figure(s) · ${storageKeys} storage key(s) · ${draftPages} published address(es)\n`);
+console.log(`\n  ${files.length} page(s) · ${GENERATED.length} generated file(s) · ${plateCount} plate figure(s) · ${storageKeys} storage key(s) · ${draftPages} published address(es) · ${manifestIcons} manifest icon(s)\n`);
 for (const [kind, label] of [
   ['stale', 'generated files out of date'],
   ['digest', 'Agent Skill digest problems'],
@@ -551,6 +634,7 @@ for (const [kind, label] of [
   ['fonts', 'self-hosted face problems'],
   ['storage', 'storage keys not named on /privacy'],
   ['draft', 'draft furniture on a published page'],
+  ['manifest', 'web app manifest problems'],
 ]) {
   const hits = problems.filter((p) => p.kind === kind);
   line(label, hits.length ? `${hits.length}` : 'none');
