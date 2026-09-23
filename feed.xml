@@ -7,7 +7,15 @@
     <description>Every page in the cabinet as it arrives — the sheets and the pages that are not sheets, newest first. The register's own accessions, including every correction, are a separate feed at https://queering.earth/register.xml. Generated from the pages themselves by tools/make-whats-new.mjs.</description>
     <language>en</language>
     <copyright>CC BY-SA 4.0</copyright>
-    <lastBuildDate>Mon, 14 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Metaphoray</title>
+      <link>https://queering.earth/metaphoray</link>
+      <guid isPermaLink="true">https://queering.earth/metaphoray</guid>
+      <pubDate>Wed, 23 Sep 2026 12:00:00 GMT</pubDate>
+      <category>Essay · No. 15</category>
+      <description>Helen Edgar on foraging between ways of knowing: Robin Wall Kimmerer’s word for the writer’s walk, Etuaptmumk and the four aspects a discipline had no room for, and the gap between the label and the plant.</description>
+    </item>
     <item>
       <title>Known and Felt and Seen</title>
       <link>https://queering.earth/known-and-felt-and-seen</link>

@@ -27,7 +27,7 @@ export const GROUPS = [
                  'the-tempest', 'wild-nights', 'flower-codes', 'monotropa-uniflora',
                  'five-unmistakable-marks', 'other-people-who-have-it',
                  'gloomy-sunflowers', 'most-quiet-need', 'held-not-fixed',
-                 'known-and-felt-and-seen']],
+                 'known-and-felt-and-seen', 'metaphoray']],
   ['The founding papers', ['the-founding-papers', 'mission', 'manifesto', 'two-cohabitating-modes']],
   ['The cabinet itself', ['index', 'the-cabinet-itself',
                           'design', 'changelog', 'whats-new', 'search', 'ledger', 'how-we-quote',
