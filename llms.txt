@@ -33,6 +33,7 @@ tools/make-markdown.mjs; nothing here is hand-kept.
 - [Every Day’s Most Quiet Need](https://queering.earth/most-quiet-need): Limerence read as monotropic attention rather than as a disorder — Glass, Beethoven, Huxley and García Márquez held against the line in Browning where a love poem stops climbing and comes down to the level of an ordinary day. [Markdown](https://queering.earth/most-quiet-need.md)
 - [Held, Not Fixed](https://queering.earth/held-not-fixed): Helen Edgar on lost things, wonder, and the cabinets we keep for one another — Emily’s shop, the herbarium type specimen, Ole Worm’s unicorn horn, and attention that refuses to be filed. [Markdown](https://queering.earth/held-not-fixed.md)
 - [Known and Felt and Seen](https://queering.earth/known-and-felt-and-seen): Dolly Parton, 1946–2026: a weed is not a kind of plant but a verdict about a place, and sixty years spent handing out legibility without a test — read alongside Tressie McMillan Cottom on what made the drag affordable. [Markdown](https://queering.earth/known-and-felt-and-seen.md)
+- [Metaphoray](https://queering.earth/metaphoray): Helen Edgar on foraging between ways of knowing: Robin Wall Kimmerer’s word for the writer’s walk, Etuaptmumk and the four aspects a discipline had no room for, and the gap between the label and the plant. [Markdown](https://queering.earth/metaphoray.md)
 
 ## The founding papers
 
