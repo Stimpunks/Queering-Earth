@@ -246,6 +246,24 @@ Dolly Parton, 1946–2026, and Tressie McMillan Cottom
   - [A determination in a loving hand, and wrong](https://queering.earth/known-and-felt-and-seen#the-wrong-slip)
   - [What this sheet will not tidy](https://queering.earth/known-and-felt-and-seen#untidy)
 
+-
+
+No. 15 [Metaphoray](https://queering.earth/metaphoray) Essay
+
+Helen Edgar, 2026
+
+  - [The gap between the label and the plant](https://queering.earth/metaphoray#the-label)
+  - [A word for the walk](https://queering.earth/metaphoray#the-word)
+  - [Two-Eyed Seeing](https://queering.earth/metaphoray#two-eyes)
+  - [What this is not](https://queering.earth/metaphoray#not-a-key)
+  - [The same instrument](https://queering.earth/metaphoray#the-same-instrument)
+  - [The crossing Star Stuff holds open](https://queering.earth/metaphoray#star-stuff)
+  - [What this plate has been doing](https://queering.earth/metaphoray#this-plate)
+  - [Goldenrod and asters](https://queering.earth/metaphoray#reciprocity)
+  - [The next foray](https://queering.earth/metaphoray#the-next-foray)
+  - [What this sheet does not settle](https://queering.earth/metaphoray#untidy)
+  - [Sources](https://queering.earth/metaphoray#sources)
+
 ### The founding papers
 
 -
@@ -346,7 +364,7 @@ Dolly Parton, 1946–2026, and Tressie McMillan Cottom
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-276 entries across 76 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+280 entries across 77 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

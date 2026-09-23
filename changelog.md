@@ -35,7 +35,41 @@ So the errors are entries like any other. A byline that put Helen Edgar’s name
 - Label corrected
 - Cabinet
 
-2026 · 14 September · latest
+2026 · 23 September · latest
+
+## Sheet No. 15, and four words that had been put into an Elder’s mouth
+
+Helen Edgar’s essay on foraging between ways of knowing, mounted with three gaps left open on its own face — and two attributions corrected before it went up, one of them the worst kind this cabinet can ship.
+
+MountedSheet No. 15 — [Metaphoray](https://queering.earth/metaphoray), an essay
+
+**A botanist’s word for the walk, and a writer’s word for the same walk.** Robin Wall Kimmerer coins *metaphoray* on page 46 of *Braiding Sweetgrass*, a few paragraphs after asking whether science and traditional knowledge might be purple and yellow to one another. The sheet takes the word and reads the gap between what a herbarium label can hold and what the plant actually was.
+
+**The masthead is goldenrod and asters**, which is the essay’s own image and Kimmerer’s. The plume is a mass on a stratified grid rather than a chain of puffs, and the asters were drawn wrong first: a violet disc the size of its own rays, so the rays vanished inside it and five flowers read as dark dots. Redrawn as petals rotated about a centre, which is how this house draws a flower. **Looked at rendered rather than trusted from the markup**, which is the only way that fault surfaces.
+
+Label correctedElder Albert Marshall did not say “for the benefit of all who come after”
+
+**The draft had four words in his mouth that are not in the paper.** Bartlett, Marshall and Marshall report Two-Eyed Seeing as using both eyes “for the benefit of all”. The phrase *who come after* appears nowhere in either copy Ryan put in the tray — checked rather than remembered. It is plausible, it is adjacent, it carries a seven-generations sense, and it is an addition to a living Elder’s articulation of his own people’s concept. **On a sheet whose argument is that Indigenous knowledge is not raw material for somebody else’s story, that was the worst available place for it.** The reported wording is now quoted whole.
+
+**And *Etuaptmumk* is not in that paper at all.** Zero occurrences. The draft named the Mi’kmaw word and cited the article for it, which sends a reader somewhere the word is not. The term is Marshall’s and travels with him, but nothing carrying it has been read here, so the sheet names it and cites nothing. **An open gap is honest; a citation that does not contain what it is cited for is not.**
+
+**Two copies, and the difference is format rather than text.** The published first page as the journal serves it, and the authors’ twelve-page e-offprint, which is the only one carrying the body and so the copy actually read. Same DOI, same pagination, abstracts identical character for character — compared rather than assumed, because *two editions* is exactly where a difference hides.
+
+Label correctedA gloss that was ours wearing Kimmerer’s name, and two citations lifted
+
+**Her definition is narrower than the use this sheet makes of it.** A metaphoray is the writer’s walk and what it gathers is metaphors. The draft had it as carrying meaning between registers of knowing — a good reading, and hers only by inheritance. The sheet mounts her sentence whole and then says in its own voice that the extension is the sheet’s. **This is the tightened-source failure running backwards**, broadened rather than trimmed, with the attribution left attached.
+
+**A posthumanism claim was carrying her name and now carries none.** That the human was never a bounded observer outside the systems it studies is real argument and it is not in *Braiding Sweetgrass*. The citation came off rather than being re-pointed at a book nobody here has opened. A stimming claim cited to *Neuroqueer Heresies* came off on the same reasoning; Walker is still cited where the neuroqueer argument is demonstrably his.
+
+**A sentence claiming the masthead phrase comes from Walker’s subtitle was written and then rewritten before it shipped.** That is precisely what [the ledger](https://queering.earth/ledger) refuses to say — Helen wrote the phrase in the founding brainstorm, *post-normal* has its own lineage in Funtowicz and Ravetz, and the settled position claims nothing about how it reached us. **A new sheet restating an old finding is where a settled nuance quietly gets lost**, and it nearly did.
+
+MountedThree gaps published open rather than papered over
+
+**The sheet ships saying what it does not settle**, which is the point of that section rather than an apology for using it: *Etuaptmumk* wants a source of its own, the posthumanism sentence wants one or wants rewriting as ours, and the stimming claim wants checking against the literature it probably belongs to. **Helen signed it off in that state.** The alternative was to invent plausible citations, which is the one thing this cabinet exists to refuse.
+
+**The citation style is still the draft’s own** — parenthetical (Author, Year) rather than naming each source in a sentence. The same question is open on *Time Present, Time Past*, and the two want answering together rather than one at a time.
+
+2026 · 14 September
 
 ## A way back to the front, and the four marks that were not it
 
@@ -2778,6 +2812,8 @@ The register is kept by accession, which is by date. This is the same entries fi
 ### [Held, Not Fixed](https://queering.earth/held-not-fixed) Sheet No. 13
 
 ### [Known and Felt and Seen](https://queering.earth/known-and-felt-and-seen) Sheet No. 14
+
+### [Metaphoray](https://queering.earth/metaphoray) Sheet No. 15
 
 ### [Find a word in the cabinet](https://queering.earth/search) the finding aid
 

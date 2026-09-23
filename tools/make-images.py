@@ -344,6 +344,8 @@ og_card(REPO/"images"/"og-held-not-fixed.png", "Held, Not Fixed", "Sheet \u00b7 
         "Emily brings the broken thing forward and the shop looks at it.", LICHEN)
 og_card(REPO/"images"/"og-known-and-felt-and-seen.png", "Known and Felt and Seen", "Sheet \u00b7 a wall",
         "A weed is not a kind of plant. It is a verdict about a place.", MARIGOLD)
+og_card(REPO/"images"/"og-metaphoray.png", "Metaphoray", "Sheet \u00b7 an essay",
+        "A botanist\u2019s word for the walk, and a writer\u2019s word for the same walk.", MARIGOLD)
 og_card(REPO/"images"/"og-mission.png", "What this cabinet is for", "The founding papers",
         "Thirteen aims, each with the page where it is already being kept.", VIOLET)
 og_card(REPO/"images"/"og-manifesto.png", "Nothing here was inevitable", "The founding papers",

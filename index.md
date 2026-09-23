@@ -145,6 +145,10 @@ Every sheet mounted so far, numbered below in the order it was accessioned. [Abo
 
 [  Wall No. 14  Known and Felt and Seen Dolly Parton, 1946–2026, and Tressie McMillan Cottom A weed is not a kind of plant but a verdict about a place, and sixty years spent handing out the opposite verdict. ](https://queering.earth/known-and-felt-and-seen)
 
+-
+
+[  Essay No. 15  Metaphoray Helen Edgar, 2026 A botanist’s word for the walk, a writer’s word for the same walk, and the gap between what a label can hold and what the plant actually was. ](https://queering.earth/metaphoray)
+
 The border is four flowers that were once a way of saying it without saying it: *violet*, *pansy*, *green carnation*, *lavender*. Gathered as a set by Sarah Prager in [*Four Flowering Plants That Have Been Decidedly Queered*](https://daily.jstor.org/four-flowering-plants-decidedly-queered/), JSTOR Daily, 29 January 2020.
 
 What follows will be made the way [Star Stuff](https://starstuff.earth/) is made — a piece at a time, in public, with the working-out left in, by [Helen Edgar](https://morerealms.com/) and the [Stimpunks Foundation](https://stimpunks.org/). Come back and watch it fill in.
