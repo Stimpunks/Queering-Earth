@@ -3640,15 +3640,13 @@ A foray does not end with the forest fully catalogued. You go out, you notice wh
 
 ## What this sheet does not settle
 
-**The posthumanism sentence has no source and needs one.** The claim that the human was never a bounded observer outside the systems it studies is real posthumanist argument — Barad and Haraway are the obvious places it lives — but the draft carried it attached to *Braiding Sweetgrass*, which is not where it comes from. The citation has been removed rather than corrected to a book nobody here has checked. It wants a real one before this is accessioned, or it wants rewriting as this sheet’s own sentence.
+**The posthumanism sentence carries no source.** The claim that the human was never a bounded observer standing outside the systems it studies is real posthumanist argument — Barad and Haraway are the obvious places it lives — and it is not in *Braiding Sweetgrass*, which is where this sheet had it pointed before it was mounted. The citation came off rather than being re-pointed at a book nobody here has opened. It wants a real one, or it wants rewriting as this sheet’s own sentence; the [accession](https://queering.earth/changelog#a-2026-09-23-metaphoray) records how it got here.
 
-**The stimming claim is not verified against Walker.** The draft cited *Neuroqueer Heresies* for stimming as embodied regulation; that citation has been lifted for now because it has not been checked against the book, and the surrounding paragraph reads without it. Walker is still cited where the neuroqueer argument is actually his. Kapp and colleagues on stimming is the literature this probably wants.
+**The stimming claim is not verified against Walker.** *Neuroqueer Heresies* was cited here for stimming as embodied regulation, has not been checked against the book, and so carries no citation now; the paragraph reads without one. Walker is still cited where the neuroqueer argument is demonstrably his. Kapp and colleagues on stimming is the literature this probably wants.
 
 **Etuaptmumk needs a source of its own.** The paper was read at the primary on 22 September 2026 and the word is not in it, so the sheet now names the term without a citation. It is Elder Albert Marshall’s and is used across the Institute for Integrative Science & Health’s own materials and in later work; one of those wants reading and citing, and until it is the word stands here uncited. **His definition is still at one remove even so**, because the paper reports what he explains rather than printing him in the first person — which matters on a sheet whose own argument is that other people’s knowledge is not raw material.
 
-**The citation style is the original draft’s own** — parenthetical (Author, Year) in the running prose, full references below — rather than naming each source in a sentence the way [The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks) and [Held, Not Fixed](https://queering.earth/held-not-fixed) do. The same question is open on *Time Present, Time Past* and the two should be answered together rather than one at a time.
-
-**No social card, no number, no stamp.** Those are accession and they happen at publication, not here.
+**The citation style is this sheet’s own** — parenthetical (Author, Year) in the running prose, full references below — rather than naming each source in a sentence the way [The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks) and [Held, Not Fixed](https://queering.earth/held-not-fixed) do. The same question is open on *Time Present, Time Past*, and the two want answering together rather than one at a time.
 
 ## Sources
 
@@ -3668,7 +3666,7 @@ The stellar nucleosynthesis is [Star Stuff](https://starstuff.earth/)’s subjec
 
 Queering Earth Sheet No. 15 Accessioned 23 Sep 2026
 
-Provenance Mounted [23 September 2026](https://queering.earth/changelog#a-2026-09-23-metaphoray). Not yet corrected.
+Provenance Mounted [23 September 2026](https://queering.earth/changelog#a-2026-09-23-metaphoray). [Label corrected once, on the mounting day](https://queering.earth/changelog#a-2026-09-23-metaphoray) — this sheet’s own account of what it had not settled was still speaking as a draft, and said it had no number and no stamp while carrying both.
 
 
 ---
@@ -4759,6 +4757,16 @@ Label correctedA gloss that was ours wearing Kimmerer’s name, and two citation
 **A posthumanism claim was carrying her name and now carries none.** That the human was never a bounded observer outside the systems it studies is real argument and it is not in *Braiding Sweetgrass*. The citation came off rather than being re-pointed at a book nobody here has opened. A stimming claim cited to *Neuroqueer Heresies* came off on the same reasoning; Walker is still cited where the neuroqueer argument is demonstrably his.
 
 **A sentence claiming the masthead phrase comes from Walker’s subtitle was written and then rewritten before it shipped.** That is precisely what [the ledger](https://queering.earth/ledger) refuses to say — Helen wrote the phrase in the founding brainstorm, *post-normal* has its own lineage in Funtowicz and Ravetz, and the settled position claims nothing about how it reached us. **A new sheet restating an old finding is where a settled nuance quietly gets lost**, and it nearly did.
+
+Label correctedThe sheet shipped still speaking as a draft, and said it had no number while carrying one
+
+**Caught by Ryan within the hour, on the published page.** *What this sheet does not settle* ended with a paragraph reading “No social card, no number, no stamp. Those are accession and they happen at publication, not here.” — on a sheet with a social card, the number 15, and a stamp two inches below it. The posthumanism paragraph promised a source “before this is accessioned”, which had stopped being true at the moment of accession. Both are gone, and the section now describes what is open rather than what publication would later do about it.
+
+**The cause is worth more than the fix.** Five edits were applied when the draft block came off. Two ran through a loop that asserts each pattern matches exactly once and stops if it does not; three were bare string replacements written inline, with no assertion. **The kicker matched, the Etuaptmumk sentence matched, and the accession paragraph did not** — its whitespace differed from the guess — so it silently did nothing and published a false statement. A replacement that matches nothing and says nothing is indistinguishable from one that worked.
+
+**It cleared every gate, and no gate here could have caught it.** The full sweep over thirty pages passed: the markup was valid, the contrast fine, nothing overlapped or scrolled. **A sheet asserting it has no stamp while rendering one is not a shape a checker can recognise**, which puts it beside the deadname rule and the bookmarklet — an editorial claim somebody has to read. The check that would have caught it is reading the published page, which is what happened.
+
+**The provenance line gains its first correction on its mounting day**, which is the eighth sheet of fifteen to be corrected that fast and the reason --mended was drawn.
 
 MountedThree gaps published open rather than papered over
 
@@ -8150,7 +8158,7 @@ Helen Edgar, 2026
 
 [The accession register](https://queering.earth/changelog) Register · the changelog
 
-280 entries across 77 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
+281 entries across 77 accessions, each one dated on [the register itself](https://queering.earth/changelog) and filed by sheet in [its index](https://queering.earth/changelog#qe-index-h). They are searchable above.
 
 -
 

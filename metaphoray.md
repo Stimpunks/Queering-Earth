@@ -64,15 +64,13 @@ A foray does not end with the forest fully catalogued. You go out, you notice wh
 
 ## What this sheet does not settle
 
-**The posthumanism sentence has no source and needs one.** The claim that the human was never a bounded observer outside the systems it studies is real posthumanist argument — Barad and Haraway are the obvious places it lives — but the draft carried it attached to *Braiding Sweetgrass*, which is not where it comes from. The citation has been removed rather than corrected to a book nobody here has checked. It wants a real one before this is accessioned, or it wants rewriting as this sheet’s own sentence.
+**The posthumanism sentence carries no source.** The claim that the human was never a bounded observer standing outside the systems it studies is real posthumanist argument — Barad and Haraway are the obvious places it lives — and it is not in *Braiding Sweetgrass*, which is where this sheet had it pointed before it was mounted. The citation came off rather than being re-pointed at a book nobody here has opened. It wants a real one, or it wants rewriting as this sheet’s own sentence; the [accession](https://queering.earth/changelog#a-2026-09-23-metaphoray) records how it got here.
 
-**The stimming claim is not verified against Walker.** The draft cited *Neuroqueer Heresies* for stimming as embodied regulation; that citation has been lifted for now because it has not been checked against the book, and the surrounding paragraph reads without it. Walker is still cited where the neuroqueer argument is actually his. Kapp and colleagues on stimming is the literature this probably wants.
+**The stimming claim is not verified against Walker.** *Neuroqueer Heresies* was cited here for stimming as embodied regulation, has not been checked against the book, and so carries no citation now; the paragraph reads without one. Walker is still cited where the neuroqueer argument is demonstrably his. Kapp and colleagues on stimming is the literature this probably wants.
 
 **Etuaptmumk needs a source of its own.** The paper was read at the primary on 22 September 2026 and the word is not in it, so the sheet now names the term without a citation. It is Elder Albert Marshall’s and is used across the Institute for Integrative Science & Health’s own materials and in later work; one of those wants reading and citing, and until it is the word stands here uncited. **His definition is still at one remove even so**, because the paper reports what he explains rather than printing him in the first person — which matters on a sheet whose own argument is that other people’s knowledge is not raw material.
 
-**The citation style is the original draft’s own** — parenthetical (Author, Year) in the running prose, full references below — rather than naming each source in a sentence the way [The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks) and [Held, Not Fixed](https://queering.earth/held-not-fixed) do. The same question is open on *Time Present, Time Past* and the two should be answered together rather than one at a time.
-
-**No social card, no number, no stamp.** Those are accession and they happen at publication, not here.
+**The citation style is this sheet’s own** — parenthetical (Author, Year) in the running prose, full references below — rather than naming each source in a sentence the way [The Five Unmistakable Marks](https://queering.earth/five-unmistakable-marks) and [Held, Not Fixed](https://queering.earth/held-not-fixed) do. The same question is open on *Time Present, Time Past*, and the two want answering together rather than one at a time.
 
 ## Sources
 
@@ -92,4 +90,4 @@ The stellar nucleosynthesis is [Star Stuff](https://starstuff.earth/)’s subjec
 
 Queering Earth Sheet No. 15 Accessioned 23 Sep 2026
 
-Provenance Mounted [23 September 2026](https://queering.earth/changelog#a-2026-09-23-metaphoray). Not yet corrected.
+Provenance Mounted [23 September 2026](https://queering.earth/changelog#a-2026-09-23-metaphoray). [Label corrected once, on the mounting day](https://queering.earth/changelog#a-2026-09-23-metaphoray) — this sheet’s own account of what it had not settled was still speaking as a draft, and said it had no number and no stamp while carrying both.

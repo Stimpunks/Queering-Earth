@@ -63,6 +63,16 @@ Label correctedA gloss that was ours wearing Kimmerer’s name, and two citation
 
 **A sentence claiming the masthead phrase comes from Walker’s subtitle was written and then rewritten before it shipped.** That is precisely what [the ledger](https://queering.earth/ledger) refuses to say — Helen wrote the phrase in the founding brainstorm, *post-normal* has its own lineage in Funtowicz and Ravetz, and the settled position claims nothing about how it reached us. **A new sheet restating an old finding is where a settled nuance quietly gets lost**, and it nearly did.
 
+Label correctedThe sheet shipped still speaking as a draft, and said it had no number while carrying one
+
+**Caught by Ryan within the hour, on the published page.** *What this sheet does not settle* ended with a paragraph reading “No social card, no number, no stamp. Those are accession and they happen at publication, not here.” — on a sheet with a social card, the number 15, and a stamp two inches below it. The posthumanism paragraph promised a source “before this is accessioned”, which had stopped being true at the moment of accession. Both are gone, and the section now describes what is open rather than what publication would later do about it.
+
+**The cause is worth more than the fix.** Five edits were applied when the draft block came off. Two ran through a loop that asserts each pattern matches exactly once and stops if it does not; three were bare string replacements written inline, with no assertion. **The kicker matched, the Etuaptmumk sentence matched, and the accession paragraph did not** — its whitespace differed from the guess — so it silently did nothing and published a false statement. A replacement that matches nothing and says nothing is indistinguishable from one that worked.
+
+**It cleared every gate, and no gate here could have caught it.** The full sweep over thirty pages passed: the markup was valid, the contrast fine, nothing overlapped or scrolled. **A sheet asserting it has no stamp while rendering one is not a shape a checker can recognise**, which puts it beside the deadname rule and the bookmarklet — an editorial claim somebody has to read. The check that would have caught it is reading the published page, which is what happened.
+
+**The provenance line gains its first correction on its mounting day**, which is the eighth sheet of fifteen to be corrected that fast and the reason --mended was drawn.
+
 MountedThree gaps published open rather than papered over
 
 **The sheet ships saying what it does not settle**, which is the point of that section rather than an apology for using it: *Etuaptmumk* wants a source of its own, the posthumanism sentence wants one or wants rewriting as ours, and the stimming claim wants checking against the literature it probably belongs to. **Helen signed it off in that state.** The alternative was to invent plausible citations, which is the one thing this cabinet exists to refuse.
